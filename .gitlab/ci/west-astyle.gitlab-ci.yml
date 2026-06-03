@@ -1,0 +1,37 @@
+# =============================================================================
+# Pipeline: Code Style Check (West / AStyle)
+# =============================================================================
+#
+# Trigger:
+#   - Manually via GitLab UI (web trigger)
+#   - Merge request: on open, synchronize, or reopen targeting any branch
+#   - Push to branches 'main', 'master', or 'dev'
+#
+# Function:
+#   Checks the code style of a Zephyr/West-based repository using
+#   'west format --dry-run'. Reports style violations without modifying files.
+#   Requires a West workspace to be present.
+#
+# Variables:
+#   (none)
+#
+# Secrets:
+#   (none)
+# =============================================================================
+
+west-astyle:check:
+  stage: test
+  image: ubuntu:latest
+
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "web"'
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH =~ /^(main|master|dev)$/ && $CI_PIPELINE_SOURCE == "push"'
+
+  before_script:
+    - apt-get update -qq
+    - apt-get install -y -qq python3 python3-pip git
+    - pip3 install west
+
+  script:
+    - west format --dry-run

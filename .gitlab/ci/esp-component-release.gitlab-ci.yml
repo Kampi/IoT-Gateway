@@ -1,0 +1,169 @@
+# =============================================================================
+# Pipeline: Component Release (ESP-IDF)
+# =============================================================================
+#
+# Trigger:
+#   - Push to branches 'main' or 'master'
+#
+# Function:
+#   Automates the release process for an ESP-IDF component when a development
+#   branch is merged into main/master. Extracts the version from the merge
+#   commit message or branch name, then:
+#     - Updates CHANGELOG.md ([Unreleased] -> [X.Y.Z], adds new [Unreleased])
+#     - Updates version variables in CMakeLists.txt
+#     - Updates the version field in idf_component.yml
+#     - Commits all changes and pushes a new version tag
+#     - Creates a GitLab Release with generated release notes
+#
+# Variables:
+#   (none)
+#
+# Secrets (GitLab CI/CD Variables):
+#   WORKFLOW_PAT        - Personal Access Token with 'api' and 'write_repository' scopes.
+#                         Used to push commits and create the GitLab Release.
+# =============================================================================
+
+esp-component:release:
+  stage: deploy
+  image: ubuntu:latest
+
+  rules:
+    - if: '$CI_COMMIT_BRANCH =~ /^(main|master)$/ && $CI_PIPELINE_SOURCE == "push"'
+
+  before_script:
+    - apt-get update -qq
+    - apt-get install -y -qq git python3 curl
+    - git config --global user.name "gitlab-ci-bot"
+    - git config --global user.email "gitlab-ci-bot@noreply.gitlab.com"
+    - git remote set-url origin "https://oauth2:${WORKFLOW_PAT}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git"
+    - git fetch --tags
+
+  script:
+    # -------------------------------------------------------------------------
+    # Extract version from merged branch name or commit message
+    # -------------------------------------------------------------------------
+    - |
+      COMMIT_MSG=$(git log -1 --pretty=%B)
+      echo "Commit message: $COMMIT_MSG"
+
+      BRANCH_NAME=$(echo "${COMMIT_MSG}" | sed -n "s/.*Merge.*branch '\([^']*\)'.*/\1/p")
+      if [ -z "${BRANCH_NAME}" ]; then
+        BRANCH_NAME=$(echo "${COMMIT_MSG}" | sed -n "s/.*Merge.*branch \"\([^\"]*\)\".*/\1/p")
+      fi
+
+      if [ -z "${BRANCH_NAME}" ]; then
+        echo "Warning: No merge commit detected, trying to extract version from commit message"
+        VERSION=$(echo "${COMMIT_MSG}" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+(_[A-Za-z0-9]+)?' | head -n 1)
+      else
+        echo "Merged branch: ${BRANCH_NAME}"
+        VERSION=$(echo "${BRANCH_NAME}" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+(_[A-Za-z0-9]+)?' | head -n 1)
+      fi
+
+      if [ -z "${VERSION}" ]; then
+        echo "Error: No version found in commit message or branch name"
+        exit 1
+      fi
+
+      VERSION=$(echo "${VERSION}" | sed 's/_Dev$//')
+      echo "VERSION=${VERSION}" >> build.env
+      echo "Extracted version: ${VERSION}"
+
+    # -------------------------------------------------------------------------
+    # Update CHANGELOG.md
+    # -------------------------------------------------------------------------
+    - |
+      source build.env
+      REPO_URL="${CI_PROJECT_URL}"
+      PREVIOUS_TAG=$(git tag --sort=-v:refname | grep -E '^[0-9]+\.[0-9]+\.[0-9]+' | grep -v "^${VERSION}$" | head -n 1 || true)
+
+      sed -i "s/^## \[Unreleased\]/## [${VERSION}] - $(date +'%Y-%m-%d')/" CHANGELOG.md
+      sed -i '/^# CHANGELOG/a\\n## [Unreleased]' CHANGELOG.md
+
+      if grep -q "^\[Unreleased\]:" CHANGELOG.md; then
+        sed -i "s|^\[Unreleased\]:.*|[Unreleased]: $REPO_URL/compare/${VERSION}...HEAD|" CHANGELOG.md
+      else
+        echo "" >> CHANGELOG.md
+        echo "[Unreleased]: $REPO_URL/compare/${VERSION}...HEAD" >> CHANGELOG.md
+      fi
+
+      if [ -n "$PREVIOUS_TAG" ]; then
+        echo "[$VERSION]: $REPO_URL/compare/${PREVIOUS_TAG}...${VERSION}" >> CHANGELOG.md
+      else
+        echo "[$VERSION]: $REPO_URL/-/releases/tag/${VERSION}" >> CHANGELOG.md
+      fi
+
+    # -------------------------------------------------------------------------
+    # Update CMakeLists.txt version variables
+    # -------------------------------------------------------------------------
+    - |
+      source build.env
+      IFS='.' read -r MAJOR MINOR BUILD <<< "${VERSION}"
+      REPO_NAME=$(echo "${CI_PROJECT_NAME}" | tr '[:lower:]' '[:upper:]' | tr '-' '_')
+
+      if ! grep -qF "set(${REPO_NAME}_LIB_MAJOR" CMakeLists.txt; then
+        sed -i "/register_component()/i # Library version\nset(${REPO_NAME}_LIB_MAJOR $MAJOR)\nset(${REPO_NAME}_LIB_MINOR $MINOR)\nset(${REPO_NAME}_LIB_BUILD $BUILD)\n" CMakeLists.txt
+      else
+        sed -i -E "s/set\(${REPO_NAME}_LIB_MAJOR [0-9]+\)/set(${REPO_NAME}_LIB_MAJOR $MAJOR)/" CMakeLists.txt
+        sed -i -E "s/set\(${REPO_NAME}_LIB_MINOR [0-9]+\)/set(${REPO_NAME}_LIB_MINOR $MINOR)/" CMakeLists.txt
+        sed -i -E "s/set\(${REPO_NAME}_LIB_BUILD [0-9]+\)/set(${REPO_NAME}_LIB_BUILD $BUILD)/" CMakeLists.txt
+      fi
+      echo "Updated CMakeLists.txt with version $MAJOR.$MINOR.$BUILD for $REPO_NAME"
+
+    # -------------------------------------------------------------------------
+    # Update idf_component.yml
+    # -------------------------------------------------------------------------
+    - |
+      source build.env
+      sed -i "s/^version: .*/version: \"${VERSION}\"/" idf_component.yml
+
+    # -------------------------------------------------------------------------
+    # Commit, tag, and push
+    # -------------------------------------------------------------------------
+    - |
+      source build.env
+      git add CHANGELOG.md CMakeLists.txt idf_component.yml
+      if git diff --cached --quiet; then
+        echo "No changes to commit"
+      else
+        git commit -m "Release: Update to version ${VERSION}"
+        git push origin ${CI_COMMIT_BRANCH}
+      fi
+
+      if git rev-parse "${VERSION}" >/dev/null 2>&1; then
+        echo "Tag ${VERSION} already exists, skipping"
+      else
+        git tag -a "${VERSION}" -m "Release ${VERSION}"
+        git push origin "${VERSION}"
+        echo "Tag ${VERSION} created and pushed"
+      fi
+
+    # -------------------------------------------------------------------------
+    # Generate release notes and create GitLab Release
+    # -------------------------------------------------------------------------
+    - |
+      source build.env
+      git fetch --tags
+      PREVIOUS_TAG=$(git tag --sort=-v:refname | grep -E '^[0-9]+\.[0-9]+\.[0-9]+' | grep -v "^${VERSION}$" | head -n 1 || true)
+
+      echo "# Release ${VERSION}" > RELEASE_NOTES.md
+      echo "" >> RELEASE_NOTES.md
+      awk -v version="${VERSION}" \
+        '/^## \['"${VERSION}"'\]/ { found=1; next } /^## \[/ { if(found) exit } found { print }' \
+        CHANGELOG.md >> RELEASE_NOTES.md
+
+      if [ -n "$PREVIOUS_TAG" ]; then
+        echo "" >> RELEASE_NOTES.md
+        echo "**Full Changelog**: [${PREVIOUS_TAG}...${VERSION}](${CI_PROJECT_URL}/-/compare/${PREVIOUS_TAG}...${VERSION})" >> RELEASE_NOTES.md
+      fi
+
+      RELEASE_DESCRIPTION=$(cat RELEASE_NOTES.md)
+      curl --fail-with-body \
+        --header "PRIVATE-TOKEN: ${WORKFLOW_PAT}" \
+        --header "Content-Type: application/json" \
+        --data "{
+          \"name\": \"Release ${VERSION}\",
+          \"tag_name\": \"${VERSION}\",
+          \"description\": \"${RELEASE_DESCRIPTION}\"
+        }" \
+        "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/releases" || \
+      echo "Release may already exist"

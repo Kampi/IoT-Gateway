@@ -1,0 +1,30 @@
+# =============================================================================
+# GitLab CI/CD - Root Pipeline
+# =============================================================================
+#
+# This file includes all modular pipeline definitions from .gitlab/ci/.
+# Stages are defined here; individual jobs are defined in the included files.
+#
+# Included pipelines:
+#   - pcb.gitlab-ci.yml              - KiBot PCB outputs, release, and Pages
+#   - changelog.gitlab-ci.yml        - CHANGELOG.md format validation
+#   - init-kibot-release.gitlab-ci.yml - Initialize release on Dev branches
+#   - astyle.gitlab-ci.yml           - AStyle code style check
+#   - west-astyle.gitlab-ci.yml      - West/Zephyr code style check
+#   - documentation.gitlab-ci.yml    - AsciiDoc documentation build and Pages
+#   - esp-component-release.gitlab-ci.yml - ESP-IDF component release
+# =============================================================================
+
+stages:
+  - test
+  - build
+  - deploy
+
+include:
+  - local: ".gitlab/ci/pcb.gitlab-ci.yml"
+  - local: ".gitlab/ci/changelog.gitlab-ci.yml"
+  - local: ".gitlab/ci/init-kibot-release.gitlab-ci.yml"
+  - local: ".gitlab/ci/astyle.gitlab-ci.yml"
+  - local: ".gitlab/ci/west-astyle.gitlab-ci.yml"
+  - local: ".gitlab/ci/documentation.gitlab-ci.yml"
+  - local: ".gitlab/ci/esp-component-release.gitlab-ci.yml"

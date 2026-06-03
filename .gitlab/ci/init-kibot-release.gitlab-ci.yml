@@ -1,0 +1,53 @@
+# =============================================================================
+# Pipeline: Init KiBot Release
+# =============================================================================
+#
+# Trigger:
+#   - First push to a new branch ending with '_Dev'
+#   - GitLab has no native 'create' event; the first push to the branch is used.
+#
+# Function:
+#   Runs once when a new Dev branch is created. Executes the Python script
+#   'init_release.py' which:
+#     - Adds RELEASE_TITLE_X.Y.Z and RELEASE_BODY_X.Y.Z entries to the
+#       KiBot preflight YAML (kibot_pre_set_text_variables.yaml)
+#     - Writes the corresponding text variables to the KiCad project file (.kicad_pro)
+#     - Sets 'KIBOT_VARIANT' in pcb.gitlab-ci.yml to 'PRELIMINARY'
+#   The resulting changes are committed and pushed back to the branch.
+#
+# Variables:
+#   KICAD_BOARD       - Name of the KiCad PCB file (without extension)
+#   KIBOT_INPUT_DIR   - Directory containing the KiCad project and KiBot files
+#
+# Secrets (GitLab CI/CD Variables):
+#   WORKFLOW_PAT      - Personal Access Token with 'api' and 'write_repository' scopes.
+#                       Required to push changes to pipeline files.
+# =============================================================================
+
+init-release:
+  stage: build
+  image: python:3
+
+  variables:
+    KICAD_BOARD: "Gateway"
+    KIBOT_INPUT_DIR: "gateway"
+
+  rules:
+    - if: '$CI_COMMIT_BRANCH =~ /^[0-9]+\.[0-9]+(\.[0-9]+)?_Dev$/ && $CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BEFORE_SHA == "0000000000000000000000000000000000000000"'
+
+  before_script:
+    - pip install pyyaml
+    - git config --global user.name "gitlab-ci-bot"
+    - git config --global user.email "gitlab-ci-bot@noreply.gitlab.com"
+    - git remote set-url origin "https://oauth2:${WORKFLOW_PAT}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git"
+    - git fetch origin
+
+  script:
+    - python ${KIBOT_INPUT_DIR}/scripts/init_release.py ${CI_COMMIT_BRANCH} ${KIBOT_INPUT_DIR}
+
+    - |
+      git add ${KIBOT_INPUT_DIR}/kibot_yaml/kibot_pre_set_text_variables.yaml
+      git add ${KIBOT_INPUT_DIR}/${KICAD_BOARD}.kicad_pro
+      git add .gitlab/ci/pcb.gitlab-ci.yml 2>/dev/null || true
+      git commit -m "Auto: Add release variables for ${CI_COMMIT_BRANCH}" || echo "No changes to commit"
+      git push origin ${CI_COMMIT_BRANCH}
