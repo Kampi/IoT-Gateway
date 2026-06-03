@@ -236,17 +236,28 @@
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
+      "bom_rev": "",
       "dist": "",
       "distpn": "",
       "internal_id": "",
       "mfg": "",
-      "mpn": ""
+      "mpn": "",
+      "sch_revision": "${REVISION}"
     },
     "layer_pairs": [],
     "layer_presets": [],
     "viewports": []
   },
   "boards": [],
+  "component_class_settings": {
+    "assignments": [],
+    "meta": {
+      "version": 0
+    },
+    "sheet_component_classes": {
+      "enabled": false
+    }
+  },
   "cvpcb": {
     "equivalence_files": []
   },
@@ -437,11 +448,14 @@
       "duplicate_sheet_names": "error",
       "endpoint_off_grid": "warning",
       "extra_units": "error",
+      "field_name_whitespace": "warning",
       "footprint_filter": "ignore",
       "footprint_link_issues": "warning",
       "four_way_junction": "ignore",
       "global_label_dangling": "warning",
+      "ground_pin_not_ground": "warning",
       "hier_label_mismatch": "error",
+      "isolated_pin_label": "warning",
       "label_dangling": "error",
       "label_multiple_wires": "warning",
       "lib_symbol_issues": "warning",
@@ -464,6 +478,7 @@
       "similar_power": "warning",
       "simulation_model_issue": "ignore",
       "single_global_label": "ignore",
+      "stacked_pin_name": "warning",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
       "undefined_netclass": "error",
@@ -477,7 +492,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Template - pcbway_1.6mm_4-layer.kicad_pro",
+    "filename": "Gateway.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -496,6 +511,7 @@
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.2,
+        "tuning_profile": "",
         "via_diameter": 0.45,
         "via_drill": 0.25,
         "wire_width": 6
@@ -504,30 +520,54 @@
         "bus_width": 12,
         "clearance": 0.125,
         "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
-        "name": "VBUS",
+        "name": "RGMII_50",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2,
+        "schematic_color": "rgb(194, 0, 194)",
         "track_width": 0.4,
+        "tuning_profile": "",
         "via_diameter": 0.45,
         "via_drill": 0.25,
         "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "name": "SGMII_100",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgb(154, 75, 255)",
+        "tuning_profile": "",
+        "wire_width": 6
+      },
+      {
+        "name": "USB_90",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgb(255, 153, 0)",
+        "tuning_profile": ""
       }
     ],
     "meta": {
-      "version": 4
+      "version": 5
     },
     "net_colors": null,
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "VBUS",
-        "pattern": "VBUS"
+        "netclass": "RGMII_50",
+        "pattern": "*RGMII.TX*_*"
+      },
+      {
+        "netclass": "RGMII_50",
+        "pattern": "*RGMII.RX*_*"
+      },
+      {
+        "netclass": "USB_90",
+        "pattern": "*USB*"
       }
     ]
   },
@@ -547,6 +587,10 @@
   },
   "schematic": {
     "annotate_start_num": 0,
+    "annotation": {
+      "method": 0,
+      "sort_order": 0
+    },
     "bom_export_filename": "",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
@@ -642,6 +686,7 @@
       "sort_asc": true,
       "sort_field": "mouser#"
     },
+    "bus_aliases": {},
     "connection_grid_size": 50.0,
     "drawing": {
       "dashed_lines_dash_length_ratio": 12.0,
@@ -649,6 +694,7 @@
       "default_line_thickness": 6.0,
       "default_text_size": 50.0,
       "field_names": [],
+      "hop_over_size_choice": 0,
       "intersheets_ref_own_page": false,
       "intersheets_ref_prefix": "",
       "intersheets_ref_short": false,
@@ -672,6 +718,7 @@
     "net_format_name": "",
     "page_layout_descr_file": "${KIPRJMOD}/templates/KDT_Template_GIT.kicad_wks",
     "plot_directory": "",
+    "reuse_designators": true,
     "space_save_all_events": true,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
@@ -680,12 +727,21 @@
     "spice_save_all_dissipations": false,
     "spice_save_all_voltages": false,
     "subpart_first_id": 65,
-    "subpart_id_separator": 0
+    "subpart_id_separator": 0,
+    "top_level_sheets": [
+      {
+        "filename": "Gateway.kicad_sch",
+        "name": "Gateway",
+        "uuid": "d5742f03-3b1a-42e5-a384-018bd4b919aa"
+      }
+    ],
+    "used_designators": "L701,L801-802,D702,D801,#PWR701-734,#PWR801-872,C701-703,C709-710,C714,C801-846,TP702,TP707,TP709-711,TP801-811,F801,#FLG701,#FLG703,#FLG802,R701-715,R801-814,IC701,IC703,IC801-807,X1,X701-705,BT701-702,JP701-702,SW701-704,BAT801,Q801-802,TH801",
+    "variants": []
   },
   "sheets": [
     [
       "d5742f03-3b1a-42e5-a384-018bd4b919aa",
-      "Root"
+      "Gateway"
     ],
     [
       "82da9dbf-ba38-4d08-ba35-a220fa2963b1",
@@ -709,32 +765,46 @@
     ],
     [
       "f06537ee-772d-44d3-8c50-e0ba41038c9c",
-      "Section A"
+      "Power"
     ],
     [
-      "e744f3ce-03a6-44a6-8792-1447ef232b9a",
-      "Section B"
+      "a382d3a7-1839-425a-ad98-cfb69b49aae1",
+      "Battery"
     ],
     [
       "6e125bd6-2f99-4e5d-b3ea-4899f4540739",
       "Revision History"
+    ],
+    [
+      "e744f3ce-03a6-44a6-8792-1447ef232b9a",
+      "System on Module"
+    ],
+    [
+      "3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6",
+      "Interfaces"
+    ],
+    [
+      "3f9e85ea-c06e-4d87-98cf-dea3ce3fc587",
+      "Radio"
     ]
   ],
   "text_variables": {
-    "ASSEMBLY_NOTES": "ASSEMBLY NOTES (UNLESS OTHERWISE SPECIFIED)\n\n1)\tDO NOT POPULATE PARTS ARE MARKED WITH A RED CROSS.\n\n2)\tDO NOT POPULATE PARTS ARE NOT PRESENT IN THE BOM.\n\n3)\tIF CONFLICTING INFORMATION IS FOUND BETWEEN THE ASSEMBLY\n\tFILE AND BOM, BOM SHOULD BE USED AS THE MAIN SOURCE.\n\n4)\tCONFORMAL COATING IS NOT REQUIRED.\n\n5)\tDOT IDENTIFIES PIN #1 LOCATION AND DEVICE ORIENTATION\n\tWHEN VIEWED FROM THE TOP.",
+    "ASSEMBLY_NOTES": "",
     "BOARD_NAME": "Gateway",
-    "COMPANY": "",
+    "COMPANY": "null",
     "DESIGNER": "Daniel Kampert",
-    "FABRICATION_NOTES": "FABRICATION NOTES (UNLESS OTHERWISE SPECIFIED)\n\n1)\tFABRICATE PER IPC-6012A CLASS 2.\n\n2)\tOUTLINE DEFINED IN SEPARATE GERBER FILE WITH\n\t\"Edge_Cuts.GBR\" SUFFIX.\n\n\tDIMENSIONS OF CIRCUMSIZED RECTANGLE SHOWN ON THIS\n\tDRAWING FOR REFERENCE ONLY.\n\n3)\tSEE SEPARATE DRILL FILES WITH \".DRL\" SUFFIX \n\tFOR HOLE LOCATIONS.\n\n\tSELECTED HOLE LOCATIONS SHOWN ON THIS DRAWING \n\tFOR REFERENCE ONLY.\n\n4)\tSURFACE FINISH: IMMERSION GOLD\n\n5)\tSOLDERMASK ON BOTH SIDES OF THE BOARD SHALL \n\tBE LPI, COLOR BLUE.\n\n6)\tSILK SCREEN LEGEND TO BE APPLIED PER LAYER \n\tSTACKUP USING WHITE NON-CONDUCTIVE EPOXY INK.\n\n7)\tALL VIAS ARE TENTED ON BOTH SIDES UNLESS \n\tSOLDERMASK OPENED IN GERBER.\n\n8)\tVENDOR SHOULD FOLLOW ROHS COMPLIANT PROCESS \n\tAND Pb FREE FOR MANUFACTURING\n\n9)\tPCB MATERIAL REQUIREMENTS:\n\n\tA.\tFLAMMABILITY RATING MUST MEET OR EXCEED \n\t\tUL94V-0 REQUIREMENTS.\n\tB.\tTg 170 C OR EQUIVALENT.\n\tC.\tEQUIVALENT MATERIAL SHALL BE RoHS COMPLIANT, \n\t\tHALOGEN FREE AND APPROVED BY NULL.\n\n10)\tDESIGN GEOMETRY MINIMUM FEATURE SIZES:\n\n\tBOARD SIZE\t\t\t\t32.000 × 24.000 mm\n\tBOARD THICKNESS\t\t1.600 mm\n\tTRACE WIDTH\t\t\t0.200 mm\n\tTRACE TO TRACE\t\t0.125 mm\n\tMIN. HOLE (PTH)\t\t\t0.250 mm\n\tMIN. HOLE (NPTH)\t\t2.100 mm\n\tANNULAR RING\t\t\t0.100 mm\n\tCOPPER TO HOLE\t\t0.125 mm\n\tCOPPER TO EDGE\t\t0.125 mm\n\tHOLE TO HOLE\t\t\t0.250 mm\n\n11)\tREFER TO IMPEDANCE TABLE FOR IMPEDANCE CONTROL REQUIREMENTS.\n\n12)\tCONFIRM SPACE WIDTHS AND SPACINGS.",
-    "GIT_HASH_PCB": "c0285d5",
-    "GIT_HASH_SCH": "c0285d5",
+    "FABRICATION_NOTES": "",
+    "GIT_HASH_PCB": "2c87805",
+    "GIT_HASH_SCH": "2c87805",
     "GIT_URL": "https://github.com/Kampi/IoT-Gateway",
     "PROJECT_NAME": "IoT-Gateway",
+    "RELEASE_BODY_2.2.0": "Version 2.2.0 not found.",
     "RELEASE_BODY_UNRELEASED": "Version Unreleased not found.",
-    "RELEASE_DATE": "03-Jun-2026",
+    "RELEASE_DATE": "2026-06-03",
     "RELEASE_DATE_NUM": "2026-06-03",
+    "RELEASE_TITLE_2.2.0": "Version 2.2.0 not found.",
     "RELEASE_TITLE_UNRELEASED": "Version Unreleased not found.",
-    "REVISION": "1.0.0",
+    "REVISION": "",
     "SHEET_NAME_1": "Cover Page",
     "SHEET_NAME_10": "......................................",
     "SHEET_NAME_11": "......................................",
@@ -757,7 +827,7 @@
     "SHEET_NAME_27": "......................................",
     "SHEET_NAME_28": "......................................",
     "SHEET_NAME_29": "......................................",
-    "SHEET_NAME_3": "Power-Topology",
+    "SHEET_NAME_3": "Power - Topology",
     "SHEET_NAME_30": "......................................",
     "SHEET_NAME_31": "......................................",
     "SHEET_NAME_32": "......................................",
@@ -772,9 +842,15 @@
     "SHEET_NAME_40": "......................................",
     "SHEET_NAME_5": "Interface - Tree",
     "SHEET_NAME_6": "Project Architecture",
-    "SHEET_NAME_7": "Section A - Title A",
-    "SHEET_NAME_8": "Section B - Title B",
+    "SHEET_NAME_7": "Section A",
+    "SHEET_NAME_8": "Section B",
     "SHEET_NAME_9": "Revision History",
-    "VARIANT": "PRELIMINARY"
+    "VARIANT": "DRAFT"
+  },
+  "tuning_profiles": {
+    "meta": {
+      "version": 0
+    },
+    "tuning_profiles_impedance_geometric": []
   }
 }

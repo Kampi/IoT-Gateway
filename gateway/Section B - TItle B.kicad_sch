@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20250114)
+	(version 20260306)
 	(generator "eeschema")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(uuid "ea8c4f5e-7a49-4faf-a994-dbc85ed86b0a")
 	(paper "A3")
 	(title_block
@@ -22,7 +22,7 @@
 		(fill
 			(type none)
 		)
-		(uuid 1d862d27-55c8-43d9-a1e0-027d1852f163)
+		(uuid "1d862d27-55c8-43d9-a1e0-027d1852f163")
 	)
 	(rectangle
 		(start 317.5 39.37)
@@ -35,7 +35,7 @@
 		(fill
 			(type none)
 		)
-		(uuid 1d9edcfe-b949-46c5-adca-40f822b4bd2a)
+		(uuid "1d9edcfe-b949-46c5-adca-40f822b4bd2a")
 	)
 	(rectangle
 		(start 45.72 172.72)
@@ -48,7 +48,7 @@
 		(fill
 			(type none)
 		)
-		(uuid 5d23fe69-1b57-41a7-86cd-8987bca3e109)
+		(uuid "5d23fe69-1b57-41a7-86cd-8987bca3e109")
 	)
 	(rectangle
 		(start 45.72 210.82)
@@ -61,7 +61,7 @@
 		(fill
 			(type none)
 		)
-		(uuid 8b07e48f-2db7-43ad-80d6-e91fd34b7137)
+		(uuid "8b07e48f-2db7-43ad-80d6-e91fd34b7137")
 	)
 	(rectangle
 		(start 229.87 186.69)
@@ -74,7 +74,7 @@
 		(fill
 			(type none)
 		)
-		(uuid 8fb364d8-7e61-4713-a5cf-4e5bf9a0422c)
+		(uuid "8fb364d8-7e61-4713-a5cf-4e5bf9a0422c")
 	)
 	(rectangle
 		(start 229.87 125.73)
@@ -87,7 +87,7 @@
 		(fill
 			(type none)
 		)
-		(uuid 91e86061-3695-4d86-a73e-d25af3bfe9b8)
+		(uuid "91e86061-3695-4d86-a73e-d25af3bfe9b8")
 	)
 	(rectangle
 		(start 139.7 210.82)
@@ -100,7 +100,7 @@
 		(fill
 			(type none)
 		)
-		(uuid d99cdb64-d2e4-4f1f-8584-4020073b6248)
+		(uuid "d99cdb64-d2e4-4f1f-8584-4020073b6248")
 	)
 	(rectangle
 		(start 45.72 39.37)
@@ -113,7 +113,7 @@
 		(fill
 			(type none)
 		)
-		(uuid ed047b56-79da-45e9-8381-b3465e9473b3)
+		(uuid "ed047b56-79da-45e9-8381-b3465e9473b3")
 	)
 	(rectangle
 		(start 139.7 39.37)
@@ -126,7 +126,7 @@
 		(fill
 			(type none)
 		)
-		(uuid ed78b7e7-9d87-4eba-bb13-ab88d26954ef)
+		(uuid "ed78b7e7-9d87-4eba-bb13-ab88d26954ef")
 	)
 	(rectangle
 		(start 229.87 210.82)
@@ -139,7 +139,7 @@
 		(fill
 			(type none)
 		)
-		(uuid f026768c-915f-4378-b3f2-b0a2f2a348b8)
+		(uuid "f026768c-915f-4378-b3f2-b0a2f2a348b8")
 	)
 	(text "Flexible I/O worked examples"
 		(exclude_from_sim no)
