@@ -282,7 +282,7 @@
 			(color 255 200 0 0.502)
 		)
 		(uuid "3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6")
-		(property "Sheetname" "Interfaces"
+		(property "Sheetname" "LoRa"
 			(at 251.46 75.1709 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -294,7 +294,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "Interfaces.kicad_sch"
+		(property "Sheetfile" "LoRa.kicad_sch"
 			(at 251.46 97.1046 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -330,7 +330,7 @@
 			(color 255 200 0 0.502)
 		)
 		(uuid "3f9e85ea-c06e-4d87-98cf-dea3ce3fc587")
-		(property "Sheetname" "Radio"
+		(property "Sheetname" "Zigbee"
 			(at 298.45 75.1709 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -342,7 +342,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "Radio.kicad_sch"
+		(property "Sheetfile" "Zigbee.kicad_sch"
 			(at 298.45 97.1046 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -358,6 +358,150 @@
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e"
 					(page "10")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 224.79 146.05)
+		(size 36.83 20.32)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 200 0 0.502)
+		)
+		(uuid "7a02d3a8-366e-4fb1-9f54-be0208da73cb")
+		(property "Sheetname" "wMBus"
+			(at 224.79 145.0209 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.905 1.905)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "WmBus.kicad_sch"
+			(at 224.79 166.9546 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Arial")
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Gateway"
+				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e"
+					(page "12")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 271.78 144.78)
+		(size 36.83 20.32)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 200 0 0.502)
+		)
+		(uuid "80a97db3-ff4e-4b40-a5b0-8dd5c51e4d83")
+		(property "Sheetname" "Peripherals"
+			(at 271.78 143.7509 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.905 1.905)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Peripherals.kicad_sch"
+			(at 271.78 165.6846 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Arial")
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Gateway"
+				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e"
+					(page "11")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 271.78 180.34)
+		(size 36.83 20.32)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 200 0 0.502)
+		)
+		(uuid "86891732-a753-4dcc-a58c-71e3fc99b0cd")
+		(property "Sheetname" "Ethernet"
+			(at 271.78 179.3109 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.905 1.905)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Ethernet.kicad_sch"
+			(at 271.78 201.2446 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Arial")
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Gateway"
+				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e"
+					(page "13")
 				)
 			)
 		)
@@ -491,7 +635,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "Power A.kicad_sch"
+		(property "Sheetfile" "Power.kicad_sch"
 			(at 190.5 97.1046 0)
 			(show_name no)
 			(do_not_autoplace no)

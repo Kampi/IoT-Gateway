@@ -426,7 +426,7 @@
 		(effects
 			(font
 				(face "Times New Roman")
-				(size 11 11)
+				(size 8 8)
 				(thickness 1)
 				(bold yes)
 				(color 162 22 34 1)
@@ -630,13 +630,13 @@
 		)
 		(uuid "6b8d090b-e89a-4677-84e9-b64a5fead89e")
 	)
-	(text "Rev ${REVISION}"
+	(text "Revision: ${REVISION}"
 		(exclude_from_sim no)
 		(at 394.97 59.69 0)
 		(effects
 			(font
 				(face "Times New Roman")
-				(size 11 11)
+				(size 8 8)
 				(thickness 1)
 				(bold yes)
 				(color 162 22 34 1)

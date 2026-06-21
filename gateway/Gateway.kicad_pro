@@ -500,12 +500,8 @@
       {
         "bus_width": 12,
         "clearance": 0.125,
-        "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
         "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
@@ -517,37 +513,69 @@
         "wire_width": 6
       },
       {
-        "bus_width": 12,
-        "clearance": 0.125,
-        "diff_pair_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "RGMII_50",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2,
-        "schematic_color": "rgb(194, 0, 194)",
-        "track_width": 0.4,
-        "tuning_profile": "",
-        "via_diameter": 0.45,
-        "via_drill": 0.25,
-        "wire_width": 6
+        "name": "AC",
+        "pcb_color": "rgb(255, 15, 101)",
+        "priority": 3,
+        "schematic_color": "rgb(255, 15, 101)",
+        "tuning_profile": ""
       },
       {
-        "bus_width": 12,
-        "name": "SGMII_100",
+        "diff_pair_gap": 0.24,
+        "diff_pair_width": 0.22,
+        "name": "Ethernet_100",
+        "pcb_color": "rgb(72, 72, 72)",
+        "priority": 5,
+        "schematic_color": "rgb(72, 72, 72)",
+        "tuning_profile": ""
+      },
+      {
+        "name": "GND",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 1,
-        "schematic_color": "rgb(154, 75, 255)",
-        "tuning_profile": "",
-        "wire_width": 6
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.4,
+        "tuning_profile": ""
       },
       {
-        "name": "USB_90",
+        "diff_pair_gap": 0.24,
+        "diff_pair_width": 0.22,
+        "name": "HDMI_100",
+        "pcb_color": "rgb(0, 132, 132)",
+        "priority": 6,
+        "schematic_color": "rgb(0, 132, 132)",
+        "tuning_profile": ""
+      },
+      {
+        "name": "I2C",
+        "pcb_color": "rgb(72, 0, 72)",
+        "priority": 2,
+        "schematic_color": "rgb(72, 0, 72)",
+        "tuning_profile": ""
+      },
+      {
+        "diff_pair_gap": 0.18,
+        "diff_pair_width": 0.239,
+        "name": "PCIe_90",
+        "pcb_color": "rgb(73, 185, 255)",
+        "priority": 4,
+        "schematic_color": "rgb(73, 185, 255)",
+        "tuning_profile": ""
+      },
+      {
+        "name": "PoE",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
-        "schematic_color": "rgb(255, 153, 0)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.4,
+        "tuning_profile": ""
+      },
+      {
+        "diff_pair_gap": 0.18,
+        "diff_pair_width": 0.239,
+        "name": "USB_90",
+        "pcb_color": "rgb(221, 133, 0)",
+        "priority": 7,
+        "schematic_color": "rgb(221, 133, 0)",
         "tuning_profile": ""
       }
     ],
@@ -558,16 +586,56 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "RGMII_50",
-        "pattern": "*RGMII.TX*_*"
+        "netclass": "USB_90",
+        "pattern": "*USB*D_*"
       },
       {
-        "netclass": "RGMII_50",
-        "pattern": "*RGMII.RX*_*"
+        "netclass": "HDMI_100",
+        "pattern": "*HDMI.CLK_*"
+      },
+      {
+        "netclass": "HDMI_100",
+        "pattern": "*HDMI.TX*_*"
+      },
+      {
+        "netclass": "Ethernet_100",
+        "pattern": "*Ethernet.TRD*_P*"
+      },
+      {
+        "netclass": "Ethernet_100",
+        "pattern": "*Ethernet.TRD*_N*"
+      },
+      {
+        "netclass": "PCIe_90",
+        "pattern": "*PCIe.*_*"
+      },
+      {
+        "netclass": "AC",
+        "pattern": "*/N"
+      },
+      {
+        "netclass": "AC",
+        "pattern": "*/L"
       },
       {
         "netclass": "USB_90",
         "pattern": "*USB*"
+      },
+      {
+        "netclass": "I2C",
+        "pattern": "*SCL*"
+      },
+      {
+        "netclass": "I2C",
+        "pattern": "*SDA*"
+      },
+      {
+        "netclass": "GND",
+        "pattern": "*GND*"
+      },
+      {
+        "netclass": "PoE",
+        "pattern": "*PoE*"
       }
     ]
   },
@@ -588,7 +656,7 @@
   "schematic": {
     "annotate_start_num": 0,
     "annotation": {
-      "method": 0,
+      "method": 1,
       "sort_order": 0
     },
     "bom_export_filename": "",
@@ -650,12 +718,6 @@
         },
         {
           "group_by": false,
-          "label": "CONFIG",
-          "name": "CONFIG",
-          "show": true
-        },
-        {
-          "group_by": false,
           "label": "manf",
           "name": "manf",
           "show": true
@@ -684,9 +746,33 @@
       "include_excluded_from_bom": false,
       "name": "",
       "sort_asc": true,
-      "sort_field": "mouser#"
+      "sort_field": ""
     },
-    "bus_aliases": {},
+    "bus_aliases": {
+      "Ethernet": [
+        "LED-Yellow",
+        "LED-Green",
+        "TRD0_P",
+        "TRD0_N",
+        "TRD1_P",
+        "TRD1_N",
+        "TRD2_P",
+        "TRD2_N",
+        "TRD3_P",
+        "TRD3_N"
+      ],
+      "GPIO": [],
+      "PCIe": [
+        "~{CLK-REQ}",
+        "~{RST}",
+        "TX_P",
+        "TX_N",
+        "RX_P",
+        "RX_N",
+        "CLK_P",
+        "CLK_N"
+      ]
+    },
     "connection_grid_size": 50.0,
     "drawing": {
       "dashed_lines_dash_length_ratio": 12.0,
@@ -735,7 +821,7 @@
         "uuid": "d5742f03-3b1a-42e5-a384-018bd4b919aa"
       }
     ],
-    "used_designators": "L701,L801-802,D702,D801,#PWR701-734,#PWR801-872,C701-703,C709-710,C714,C801-846,TP702,TP707,TP709-711,TP801-811,F801,#FLG701,#FLG703,#FLG802,R701-715,R801-814,IC701,IC703,IC801-807,X1,X701-705,BT701-702,JP701-702,SW701-704,BAT801,Q801-802,TH801",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
@@ -781,11 +867,23 @@
     ],
     [
       "3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6",
-      "Interfaces"
+      "LoRa"
     ],
     [
       "3f9e85ea-c06e-4d87-98cf-dea3ce3fc587",
-      "Radio"
+      "Zigbee"
+    ],
+    [
+      "80a97db3-ff4e-4b40-a5b0-8dd5c51e4d83",
+      "Peripherals"
+    ],
+    [
+      "7a02d3a8-366e-4fb1-9f54-be0208da73cb",
+      "wMBus"
+    ],
+    [
+      "86891732-a753-4dcc-a58c-71e3fc99b0cd",
+      "Ethernet"
     ]
   ],
   "text_variables": {
@@ -798,11 +896,9 @@
     "GIT_HASH_SCH": "2c87805",
     "GIT_URL": "https://github.com/Kampi/IoT-Gateway",
     "PROJECT_NAME": "IoT-Gateway",
-    "RELEASE_BODY_2.2.0": "Version 2.2.0 not found.",
     "RELEASE_BODY_UNRELEASED": "Version Unreleased not found.",
     "RELEASE_DATE": "2026-06-03",
     "RELEASE_DATE_NUM": "2026-06-03",
-    "RELEASE_TITLE_2.2.0": "Version 2.2.0 not found.",
     "RELEASE_TITLE_UNRELEASED": "Version Unreleased not found.",
     "REVISION": "",
     "SHEET_NAME_1": "Cover Page",
