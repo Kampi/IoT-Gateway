@@ -1,0 +1,35 @@
+From a4f82050f0b1b9237fa61b569b5c6fba71c2663e Mon Sep 17 00:00:00 2001
+From: build-user-bot <build-user-bot@hannah.com>
+Date: Thu, 19 Dec 2024 07:15:02 +0000
+Subject: [PATCH] set libxml2 cxxflags by pkg-config
+
+---
+ Makefile | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 875249b..92ee004 100644
+--- a/Makefile
++++ b/Makefile
+@@ -130,6 +130,8 @@ CXXFLAGS ?= $(DEBUG_FLAGS) $(FUZZFLAGS) -fPIC -std=c++11 -Wall -Werror=format-se
+ CXXFLAGS += -I$(BUILD)
+ LDFLAGS  ?= $(DEBUG_LDFLAGS)
+
++LIBXML2_CXXFLAGS = $(shell pkg-config --cflags libxml-2.0)
++
+ USBLIB = -lusb-1.0
+
+ ifeq ($(shell uname -s),FreeBSD)
+@@ -148,8 +150,8 @@ $(BUILD)/%.o: src/%.cc $(wildcard src/%.h)
+ 	$(CXX) $(CXXFLAGS) $< -MMD -c -o $@
+
+ $(BUILD)/%.o: src/%.c $(wildcard src/%.h)
+-	$(CXX) -I/usr/include/libxml2 $(CXXFLAGS) $< -c -E > $@.src
+-	$(CXX) -I/usr/include/libxml2 -fpermissive $(CXXFLAGS)  $< -MMD -c -o $@
++	$(CXX) $(LIBXML2_CXXFLAGS) $(CXXFLAGS) $< -c -E > $@.src
++	$(CXX) $(LIBXML2_CXXFLAGS) -fpermissive $(CXXFLAGS)  $< -MMD -c -o $@
+
+ PROG_OBJS:=\
+ 	$(BUILD)/address.o \
+--
+2.34.1

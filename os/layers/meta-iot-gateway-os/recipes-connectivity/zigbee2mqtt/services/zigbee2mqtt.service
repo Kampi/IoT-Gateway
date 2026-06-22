@@ -1,0 +1,15 @@
+[Unit]
+Description=Zigbee2MQTT
+After=network.target mosquitto.service
+Wants=mosquitto.service
+
+[Service]
+Type=simple
+Environment=ZIGBEE2MQTT_DATA=/var/lib/zigbee2mqtt
+ExecStart=/usr/bin/node /usr/lib/node_modules/zigbee2mqtt/index.js
+WorkingDirectory=/usr/lib/node_modules/zigbee2mqtt
+Restart=on-failure
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target

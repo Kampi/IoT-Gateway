@@ -1,0 +1,10 @@
+[Unit]
+Description=Periodic journal sync to eMMC ring buffer
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=15min
+AccuracySec=1min
+
+[Install]
+WantedBy=timers.target

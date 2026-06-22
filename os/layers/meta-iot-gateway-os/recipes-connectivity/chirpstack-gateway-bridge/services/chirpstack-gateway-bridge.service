@@ -1,0 +1,13 @@
+[Unit]
+Description=ChirpStack Gateway Bridge
+Documentation=https://www.chirpstack.io/docs/chirpstack-gateway-bridge/
+After=network.target mosquitto.service
+Wants=mosquitto.service
+
+[Service]
+ExecStart=/usr/bin/chirpstack-gateway-bridge --config /etc/chirpstack-gateway-bridge/chirpstack-gateway-bridge.toml
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

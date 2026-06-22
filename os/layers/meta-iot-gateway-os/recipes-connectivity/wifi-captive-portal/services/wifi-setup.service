@@ -1,0 +1,16 @@
+[Unit]
+Description=WiFi Setup and Captive Portal
+After=network-pre.target
+Before=network.target
+Wants=network-pre.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/wifi-setup
+Restart=always
+RestartSec=5
+# Give processes enough time to release the wlan0 interface between restarts
+TimeoutStopSec=10
+
+[Install]
+WantedBy=multi-user.target

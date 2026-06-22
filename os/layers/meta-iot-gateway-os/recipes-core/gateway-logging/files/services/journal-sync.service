@@ -1,0 +1,8 @@
+[Unit]
+Description=Sync volatile journal to eMMC ring buffer
+After=systemd-journald.service
+Requires=systemd-journald.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/gateway-os/journal-sync

@@ -1,0 +1,20 @@
+[Match]
+Type=ether
+Name=!veth*
+KernelCommandLine=!nfsroot
+KernelCommandLine=!ip
+
+[Network]
+DHCP=yes
+# Static fallback address for direct PC-to-device Ethernet connections.
+# Active immediately — DHCP runs in parallel and is preferred when available.
+# Configure the PC with any address in 192.168.0.0/24 (e.g. 192.168.0.1)
+# to communicate with the gateway when no DHCP server is present.
+Address=192.168.0.2/24
+
+[DHCP]
+UseMTU=yes
+UseDNS=yes
+UseRoutes=yes
+RouteMetric=10
+ClientIdentifier=mac

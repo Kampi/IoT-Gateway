@@ -1,0 +1,135 @@
+// SPDX-License-Identifier: GPL-2.0-or-later OR MIT
+/*
+ * Copyright 2026 Daniel Kampert
+ */
+
+/dts-v1/;
+
+#include "imx8mm-verdin.dtsi"
+#include "imx8mm-verdin-wifi.dtsi"
+#include "imx8mm-verdin-dev.dtsi"
+
+/ {
+	model = "Gateway OS for Toradex Verdin iMX8MM";
+	compatible = "toradex,verdin-imx8mm-wifi-dev",
+				 "toradex,verdin-imx8mm-wifi",
+				 "toradex,verdin-imx8mm",
+				 "fsl,imx8mm";
+};
+
+&pcie0 {
+	status = "disabled";
+};
+
+&pcie_phy {
+	status = "disabled";
+};
+
+/* Version resistors: pull-ups on carrier (SODIMM 216/218/220), pull-down via pad control */
+&iomuxc {
+	pinctrl_version_resistors: versionresistorsgrp {
+		fsl,pins = <
+			MX8MM_IOMUXC_GPIO1_IO00_GPIO1_IO0	0x106	/* SODIMM 216 */
+			MX8MM_IOMUXC_GPIO1_IO11_GPIO1_IO11	0x106	/* SODIMM 218 */
+			MX8MM_IOMUXC_GPIO1_IO08_GPIO1_IO8	0x106	/* SODIMM 220 */
+		>;
+	};
+
+	pinctrl_battery: batterygrp {
+		fsl,pins = <
+			MX8MM_IOMUXC_SAI5_RXD2_GPIO3_IO23	0x106	/* SODIMM 42 - Battery-Charge-Enable (out, pull-down default off) */
+			MX8MM_IOMUXC_SAI5_RXD1_GPIO3_IO22	0x1c6	/* SODIMM 44 - Battery-Charge (in, pull-up) */
+			MX8MM_IOMUXC_SAI5_RXD3_GPIO3_IO24	0x1c6	/* SODIMM 46 - Battery-Alert (in, pull-up) */
+		>;
+	};
+
+	pinctrl_power_enable: powerenablegrp {
+		fsl,pins = <
+			MX8MM_IOMUXC_SAI2_TXC_GPIO4_IO25	0x106	/* SODIMM 30 - LoRa-Power-Enable (out, pull-down default off) */
+			MX8MM_IOMUXC_SAI2_TXFS_GPIO4_IO24	0x106	/* SODIMM 32 - Zigbee-Power-Enable (out, pull-down default off) */
+			MX8MM_IOMUXC_SAI2_TXD0_GPIO4_IO26	0x106	/* SODIMM 34 - WmBus-Power-Enable (out, pull-down default off) */
+		>;
+	};
+};
+
+&gpio1 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&pinctrl_version_resistors>;
+	gpio-line-names = "version-bit0", "", "", "", "", "", "", "",
+	                  "version-bit2", "", "", "version-bit1";
+};
+
+&gpio3 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&pinctrl_battery>;
+	gpio-line-names = "", "", "", "", "", "", "", "",
+	                  "", "", "", "", "", "", "", "",
+	                  "", "", "", "", "", "", "battery-charge",
+	                  "battery-charge-enable", "battery-alert";
+};
+
+&gpio4 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&pinctrl_power_enable>;
+	gpio-line-names = "", "", "", "", "", "", "", "",
+	                  "", "", "", "", "", "", "", "",
+	                  "", "", "", "", "", "", "", "",
+	                  "zigbee-power-enable", "lora-power-enable",
+	                  "wmbus-power-enable";
+};
+
+&i2c4 {
+	atecc608b: atecc608b@60 {
+		compatible = "microchip,atecc608b";
+		reg = <0x60>;
+	};
+
+	max17048: fuel-gauge@36 {
+		compatible = "maxim,max17048";
+		reg = <0x36>;
+	};
+};
+
+&sound_card {
+	status = "disabled";
+};
+
+&nau8822_1a {
+	status = "disabled";
+};
+
+&sai2 {
+	status = "disabled";
+};
+
+&lcdif {
+	status = "disabled";
+};
+
+&backlight {
+	status = "disabled";
+};
+
+&pwm1 {
+	status = "disabled";
+};
+
+&pwm2 {
+	status = "disabled";
+};
+
+&pwm3 {
+	status = "disabled";
+};
+
+&ecspi3 {
+	status = "disabled";
+};
+
+&ecspi2 {
+	status = "disabled";
+};
+
+&verdin_som_adc {
+	status = "disabled";
+};

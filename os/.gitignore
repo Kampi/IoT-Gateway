@@ -1,0 +1,47 @@
+# Yocto build output
+build/
+sstate-cache/
+downloads/
+
+# SSH private keys - public keys (*.pub) are intentionally tracked
+keys/
+!keys/*.pub
+
+# Toradex Easy Installer artifacts
+*.zip
+Verdin-*/
+
+# Export directory (deploy artifacts)
+export/
+
+# Third-party Yocto layers (managed via repo/kas, not tracked in git)
+layers/meta-arm/
+layers/meta-freescale/
+layers/meta-freescale-3rdparty/
+layers/meta-freescale-distro/
+layers/meta-openembedded/
+layers/meta-qt5/
+layers/meta-security/
+layers/meta-ti/
+layers/meta-toradex-bsp-common/
+layers/meta-toradex-demos/
+layers/meta-toradex-distro/
+layers/meta-toradex-nxp/
+layers/meta-toradex-ti/
+layers/meta-yocto/
+layers/openembedded-core/
+
+# Repo tool
+.repo/
+
+# BitBake lockfiles and temporary state
+bitbake.lock
+pseudodone
+
+# Editor and OS artifacts
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db

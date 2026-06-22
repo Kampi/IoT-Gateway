@@ -1,6 +1,6 @@
 # IoT-Gateway
 
-[![License](https://img.shields.io/badge/License-GPL%203.0-blue.svg)](https://opensource.org/license/gpl-3-0/)
+[![License](https://img.shields.io/badge/License-MIT%203.0-blue.svg)](https://opensource.org/license/mit/)
 [![PCB](https://github.com/Kampi/IoT-Gateway/actions/workflows/pcb.yaml/badge.svg)](https://github.com/Kampi/IoT-Gateway/actions/workflows/pcb.yaml)
 [![Documentation](https://img.shields.io/badge/Documentation-HTML-007ec6?longCache=true&style=flat&logo=asciidoctor&colorA=555555)](https://Kampi.github.io/IoT-Gateway/)
 

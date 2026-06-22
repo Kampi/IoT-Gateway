@@ -1,0 +1,36 @@
+#!/bin/sh
+set -e
+
+ARCHIVE_DIR=/var/log/journal-archive
+CURSOR_FILE=${ARCHIVE_DIR}/.cursor
+MAX_MB=256
+STAMP=$(date +%Y%m%d-%H%M%S)
+TMP_LOG=/tmp/journal-sync-$$.log
+
+mkdir -p "${ARCHIVE_DIR}"
+
+# Export only new entries since last sync via stored cursor
+if [ -f "${CURSOR_FILE}" ] && [ -s "${CURSOR_FILE}" ]; then
+    journalctl --no-pager -o short-iso \
+        --after-cursor="$(cat "${CURSOR_FILE}")" \
+        > "${TMP_LOG}" 2>/dev/null || true
+else
+    journalctl --no-pager -o short-iso > "${TMP_LOG}" 2>/dev/null || true
+fi
+
+# Compress and store only if there is new content
+if [ -s "${TMP_LOG}" ]; then
+    gzip -c "${TMP_LOG}" > "${ARCHIVE_DIR}/journal-${STAMP}.log.gz"
+fi
+rm -f "${TMP_LOG}"
+
+# Save current cursor for next run
+journalctl --no-pager -n 0 --show-cursor 2>/dev/null \
+    | sed -n 's/^-- cursor: //p' > "${CURSOR_FILE}" || true
+
+# Ring buffer: delete oldest archive files when total exceeds MAX_MB
+while [ "$(du -sm "${ARCHIVE_DIR}" 2>/dev/null | cut -f1)" -gt "${MAX_MB}" ]; do
+    oldest=$(ls -1 "${ARCHIVE_DIR}"/journal-*.log.gz 2>/dev/null | sort | head -1)
+    [ -z "${oldest}" ] && break
+    rm -f "${oldest}"
+done

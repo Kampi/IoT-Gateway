@@ -1,0 +1,17 @@
+[Unit]
+Description=LoRa Packet Forwarder
+Documentation=https://github.com/Lora-net/sx1302_hal
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/lora-packet-forwarder/config
+ExecStart=/opt/lora-packet-forwarder/lora_pkt_fwd
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
