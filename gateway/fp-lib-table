@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "IMST") (type "KiCad") (uri "${KICAD_LIBRARY}/Footprints/IMST.pretty") (options "") (descr ""))
+)

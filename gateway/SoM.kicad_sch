@@ -9014,7 +9014,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "016fab5f-eb8c-452a-acd1-85141576acaf")
-		(property "Reference" "R904"
+		(property "Reference" "R909"
 			(at 304.8 208.28 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9034,7 +9034,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 304.8 216.408 90)
 			(hide yes)
 			(show_name no)
@@ -9045,7 +9045,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
 			(at 304.8 214.63 0)
 			(hide yes)
 			(show_name no)
@@ -9067,7 +9067,7 @@
 				)
 			)
 		)
-		(property "manf" ""
+		(property "manf" "Bourns"
 			(at 304.8 214.63 0)
 			(hide yes)
 			(show_name no)
@@ -9078,7 +9078,7 @@
 				)
 			)
 		)
-		(property "manf#" ""
+		(property "manf#" "CR0805-FX-1001GLF"
 			(at 304.8 214.63 0)
 			(hide yes)
 			(show_name no)
@@ -9089,7 +9089,7 @@
 				)
 			)
 		)
-		(property "mouser#" ""
+		(property "mouser#" "652-CR0805-FX-1001GLF"
 			(at 304.8 214.63 0)
 			(hide yes)
 			(show_name no)
@@ -9109,7 +9109,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "R904")
+					(reference "R909")
 					(unit 1)
 				)
 			)
@@ -10022,7 +10022,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "15e4b30c-0082-4168-964b-53d96c9a7246")
-		(property "Reference" "#PWR0916"
+		(property "Reference" "#PWR0920"
 			(at 309.88 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -10082,7 +10082,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "#PWR0916")
+					(reference "#PWR0920")
 					(unit 1)
 				)
 			)
@@ -10100,7 +10100,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1aceb0c3-b80e-413e-8842-b6ee7ba71c3a")
-		(property "Reference" "#PWR0925"
+		(property "Reference" "#PWR0917"
 			(at 284.48 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -10160,7 +10160,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "#PWR0925")
+					(reference "#PWR0917")
 					(unit 1)
 				)
 			)
@@ -10178,7 +10178,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "22cef453-9f84-402c-a17d-69c23ba2542e")
-		(property "Reference" "#PWR0920"
+		(property "Reference" "#PWR0925"
 			(at 342.9 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -10238,7 +10238,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "#PWR0920")
+					(reference "#PWR0925")
 					(unit 1)
 				)
 			)
@@ -10250,7 +10250,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files no)
 		(dnp yes)
@@ -10365,12 +10365,12 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files no)
 		(dnp yes)
 		(uuid "396e0da5-a482-43cd-b73e-73bcea2decfe")
-		(property "Reference" "R908"
+		(property "Reference" "R912"
 			(at 317.5 157.4799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10392,7 +10392,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 316.738 158.75 90)
 			(hide yes)
 			(show_name no)
@@ -10403,7 +10403,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
 			(at 314.96 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -10467,7 +10467,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "R908")
+					(reference "R912")
 					(unit 1)
 				)
 			)
@@ -10485,7 +10485,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3c20b63f-319c-4277-88b5-bbc6f81d4754")
-		(property "Reference" "#PWR0910"
+		(property "Reference" "#PWR0915"
 			(at 233.68 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -10545,7 +10545,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "#PWR0910")
+					(reference "#PWR0915")
 					(unit 1)
 				)
 			)
@@ -10563,7 +10563,7 @@
 		(in_pos_files no)
 		(dnp yes)
 		(uuid "42ba89d6-e2fe-42c3-aa06-f4e5d2d5f3eb")
-		(property "Reference" "R911"
+		(property "Reference" "R906"
 			(at 281.94 76.1999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10585,7 +10585,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 286.258 77.47 90)
 			(hide yes)
 			(show_name no)
@@ -10596,7 +10596,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
 			(at 284.48 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -10618,7 +10618,7 @@
 				)
 			)
 		)
-		(property "manf" ""
+		(property "manf" "Bourns"
 			(at 284.48 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -10629,7 +10629,7 @@
 				)
 			)
 		)
-		(property "manf#" ""
+		(property "manf#" "CR0805-FX-1002GLF"
 			(at 284.48 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -10640,7 +10640,7 @@
 				)
 			)
 		)
-		(property "mouser#" ""
+		(property "mouser#" "652-CR0805-FX-1002GLF"
 			(at 284.48 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -10660,7 +10660,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "R911")
+					(reference "R906")
 					(unit 1)
 				)
 			)
@@ -10678,7 +10678,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "481cac14-dd07-4e3a-a0b4-388f1ac6c523")
-		(property "Reference" "#PWR0918"
+		(property "Reference" "#PWR0924"
 			(at 328.93 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -10738,7 +10738,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "#PWR0918")
+					(reference "#PWR0924")
 					(unit 1)
 				)
 			)
@@ -11650,7 +11650,7 @@
 		(in_pos_files no)
 		(dnp yes)
 		(uuid "67faf472-4710-4e06-980b-0ed28d7d98e5")
-		(property "Reference" "R910"
+		(property "Reference" "R905"
 			(at 271.78 76.1999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11672,7 +11672,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 272.542 77.47 90)
 			(hide yes)
 			(show_name no)
@@ -11683,7 +11683,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
 			(at 274.32 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -11705,7 +11705,7 @@
 				)
 			)
 		)
-		(property "manf" ""
+		(property "manf" "Bourns"
 			(at 274.32 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -11716,7 +11716,7 @@
 				)
 			)
 		)
-		(property "manf#" ""
+		(property "manf#" "CR0805-FX-1002GLF"
 			(at 274.32 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -11727,7 +11727,7 @@
 				)
 			)
 		)
-		(property "mouser#" ""
+		(property "mouser#" "652-CR0805-FX-1002GLF"
 			(at 274.32 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -11747,7 +11747,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "R910")
+					(reference "R905")
 					(unit 1)
 				)
 			)
@@ -11765,7 +11765,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7036db7e-0a60-42f0-8a28-fb118cd153e2")
-		(property "Reference" "#PWR0909"
+		(property "Reference" "#PWR0914"
 			(at 226.06 203.2 0)
 			(hide yes)
 			(show_name no)
@@ -11825,7 +11825,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "#PWR0909")
+					(reference "#PWR0914")
 					(unit 1)
 				)
 			)
@@ -11840,11 +11840,11 @@
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "82264d0b-859f-447a-8d19-829b6acf1c61")
-		(property "Reference" "X903"
+		(property "Reference" "X902"
 			(at 110.49 102.8699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11944,7 +11944,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "X903")
+					(reference "X902")
 					(unit 1)
 				)
 			)
@@ -11963,7 +11963,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "932cf423-5101-416f-83ae-0d1219dd6fd7")
-		(property "Reference" "#PWR0914"
+		(property "Reference" "#PWR0918"
 			(at 299.72 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -12023,7 +12023,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "#PWR0914")
+					(reference "#PWR0918")
 					(unit 1)
 				)
 			)
@@ -12041,7 +12041,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "944c6b23-4aa0-4de5-bfd3-d944fe218c10")
-		(property "Reference" "#PWR0922"
+		(property "Reference" "#PWR0923"
 			(at 323.85 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -12101,7 +12101,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "#PWR0922")
+					(reference "#PWR0923")
 					(unit 1)
 				)
 			)
@@ -12119,7 +12119,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9d0facb5-33ba-4a91-ba40-7ff16a7b3dad")
-		(property "Reference" "TP903"
+		(property "Reference" "TP904"
 			(at 306.07 202.6919 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12141,7 +12141,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Testpoints_Kampi:TestPoint_Pad_1.0x1.0mm"
 			(at 298.45 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -12213,7 +12213,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "TP903")
+					(reference "TP904")
 					(unit 1)
 				)
 			)
@@ -12231,7 +12231,7 @@
 		(in_pos_files no)
 		(dnp yes)
 		(uuid "a0138345-b71b-4819-aabd-79508e38b414")
-		(property "Reference" "R912"
+		(property "Reference" "R907"
 			(at 292.1 76.1999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12253,7 +12253,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 296.418 77.47 90)
 			(hide yes)
 			(show_name no)
@@ -12264,7 +12264,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
 			(at 294.64 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -12286,7 +12286,7 @@
 				)
 			)
 		)
-		(property "manf" ""
+		(property "manf" "Bourns"
 			(at 294.64 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -12297,7 +12297,7 @@
 				)
 			)
 		)
-		(property "manf#" ""
+		(property "manf#" "CR0805-FX-1002GLF"
 			(at 294.64 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -12308,7 +12308,7 @@
 				)
 			)
 		)
-		(property "mouser#" ""
+		(property "mouser#" "652-CR0805-FX-1002GLF"
 			(at 294.64 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -12328,7 +12328,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "R912")
+					(reference "R907")
 					(unit 1)
 				)
 			)
@@ -12346,7 +12346,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a8c1ae03-420b-4a12-880c-ee17728611b3")
-		(property "Reference" "#PWR0911"
+		(property "Reference" "#PWR0916"
 			(at 255.27 203.2 0)
 			(hide yes)
 			(show_name no)
@@ -12406,7 +12406,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "#PWR0911")
+					(reference "#PWR0916")
 					(unit 1)
 				)
 			)
@@ -12423,7 +12423,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b0abfdad-6b45-4523-94a3-7ac0706814a4")
-		(property "Reference" "R905"
+		(property "Reference" "R908"
 			(at 300.99 193.0399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12445,7 +12445,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 301.752 194.31 90)
 			(hide yes)
 			(show_name no)
@@ -12456,7 +12456,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
 			(at 303.53 194.31 0)
 			(hide yes)
 			(show_name no)
@@ -12478,7 +12478,7 @@
 				)
 			)
 		)
-		(property "manf" ""
+		(property "manf" "Bourns"
 			(at 303.53 194.31 0)
 			(hide yes)
 			(show_name no)
@@ -12489,7 +12489,7 @@
 				)
 			)
 		)
-		(property "manf#" ""
+		(property "manf#" "CR0805-JW-103GLF"
 			(at 303.53 194.31 0)
 			(hide yes)
 			(show_name no)
@@ -12500,7 +12500,7 @@
 				)
 			)
 		)
-		(property "mouser#" ""
+		(property "mouser#" "652-CR0805-JW-103GLF"
 			(at 303.53 194.31 0)
 			(hide yes)
 			(show_name no)
@@ -12520,7 +12520,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "R905")
+					(reference "R908")
 					(unit 1)
 				)
 			)
@@ -12532,12 +12532,12 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files no)
 		(dnp yes)
 		(uuid "b43d957b-ddd0-48ca-810b-3f2b609c46f5")
-		(property "Reference" "R906"
+		(property "Reference" "R911"
 			(at 312.42 167.6399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12559,7 +12559,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 311.658 168.91 90)
 			(hide yes)
 			(show_name no)
@@ -12570,7 +12570,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
 			(at 309.88 168.91 0)
 			(hide yes)
 			(show_name no)
@@ -12634,7 +12634,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "R906")
+					(reference "R911")
 					(unit 1)
 				)
 			)
@@ -12651,7 +12651,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b6f86f9f-d501-42f5-9e55-6e6914d85a87")
-		(property "Reference" "SW901"
+		(property "Reference" "SW902"
 			(at 332.74 167.6399 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12751,7 +12751,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "SW901")
+					(reference "SW902")
 					(unit 1)
 				)
 			)
@@ -12769,7 +12769,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c172f6ee-8c7b-457a-b05d-cc6351267805")
-		(property "Reference" "#PWR0907"
+		(property "Reference" "#PWR0909"
 			(at 137.16 203.2 0)
 			(hide yes)
 			(show_name no)
@@ -12829,7 +12829,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "#PWR0907")
+					(reference "#PWR0909")
 					(unit 1)
 				)
 			)
@@ -12848,7 +12848,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c7033012-7caa-402d-a980-d62c3d821aa1")
-		(property "Reference" "#PWR0921"
+		(property "Reference" "#PWR0919"
 			(at 304.8 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -12908,7 +12908,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "#PWR0921")
+					(reference "#PWR0919")
 					(unit 1)
 				)
 			)
@@ -13036,13 +13036,13 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board no)
-		(in_pos_files yes)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
 		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "c98f66b2-d54b-4f38-8e2d-4882d62f9b6f")
-		(property "Reference" "R907"
+		(property "Reference" "R910"
 			(at 308.61 193.04 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13062,7 +13062,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 308.61 201.168 90)
 			(hide yes)
 			(show_name no)
@@ -13073,7 +13073,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
 			(at 308.61 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -13137,7 +13137,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "R907")
+					(reference "R910")
 					(unit 1)
 				)
 			)
@@ -13155,7 +13155,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d07402a3-b319-4933-828e-612650a3b4b2")
-		(property "Reference" "SW903"
+		(property "Reference" "SW901"
 			(at 313.69 219.7099 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13255,7 +13255,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "SW903")
+					(reference "SW901")
 					(unit 1)
 				)
 			)
@@ -13273,7 +13273,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "daeaacfd-220c-4e3c-ae4e-d6aacbdcb523")
-		(property "Reference" "#PWR0908"
+		(property "Reference" "#PWR0913"
 			(at 215.9 203.2 0)
 			(hide yes)
 			(show_name no)
@@ -13333,7 +13333,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "#PWR0908")
+					(reference "#PWR0913")
 					(unit 1)
 				)
 			)
@@ -13351,7 +13351,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e1afa89b-b131-41e0-9cd3-9f3c06d67fad")
-		(property "Reference" "#PWR0917"
+		(property "Reference" "#PWR0922"
 			(at 314.96 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -13411,7 +13411,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "#PWR0917")
+					(reference "#PWR0922")
 					(unit 1)
 				)
 			)
@@ -13452,7 +13452,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 298.7548 224.79 0)
 			(hide yes)
 			(show_name no)
@@ -13463,7 +13463,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://datasheets.kyocera-avx.com/KGM_X7R.pdf"
+		(property "Datasheet" "https://datasheets.kyocera-avx.com/AutoMLCC.pdf"
 			(at 299.72 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -13496,7 +13496,7 @@
 				)
 			)
 		)
-		(property "manf#" "04025C104JAT2A"
+		(property "manf#" "08053C104M4T4A"
 			(at 299.72 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -13507,7 +13507,7 @@
 				)
 			)
 		)
-		(property "mouser#" ""
+		(property "mouser#" "581-08053C104M4T4A"
 			(at 299.72 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -13546,7 +13546,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e47d3a87-7d2a-4d0c-b9e8-01c7d41b5fd7")
-		(property "Reference" "#PWR0924"
+		(property "Reference" "#PWR0908"
 			(at 119.38 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -13606,7 +13606,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "#PWR0924")
+					(reference "#PWR0908")
 					(unit 1)
 				)
 			)
@@ -13625,7 +13625,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e7e078f3-995d-460d-a36d-770aa74c94ff")
-		(property "Reference" "#PWR0915"
+		(property "Reference" "#PWR0921"
 			(at 309.88 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -13685,7 +13685,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "#PWR0915")
+					(reference "#PWR0921")
 					(unit 1)
 				)
 			)
@@ -14598,7 +14598,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f7eb1e09-f405-4c31-920e-d77f07f2c691")
-		(property "Reference" "#PWR0901"
+		(property "Reference" "#PWR0903"
 			(at 52.07 203.2 0)
 			(hide yes)
 			(show_name no)
@@ -14658,7 +14658,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "#PWR0901")
+					(reference "#PWR0903")
 					(unit 1)
 				)
 			)

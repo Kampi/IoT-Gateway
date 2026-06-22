@@ -111,7 +111,7 @@
 		)
 		(uuid "7c0a3193-f68c-495e-89ba-c6056c9cecf1")
 	)
-	(text_box "7 - 24 V"
+	(text_box "7 - 16 V"
 		(exclude_from_sim no)
 		(at 381 208.28 0)
 		(size 24.13 9.3123)

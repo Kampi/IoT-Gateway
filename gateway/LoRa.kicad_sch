@@ -2587,7 +2587,7 @@
 	)
 	(rectangle
 		(start 13.97 223.5199)
-		(end 109.22 283.0697)
+		(end 119.38 283.0697)
 		(stroke
 			(width 1)
 			(type default)
@@ -2624,7 +2624,7 @@
 	(text_box "Power supply"
 		(exclude_from_sim no)
 		(at 15.24 273.05 0)
-		(size 92.71 8.89)
+		(size 102.87 8.89)
 		(margins 1.9049 1.9049 1.9049 1.9049)
 		(stroke
 			(width -0.0001)
@@ -2664,7 +2664,7 @@
 		(uuid "2b180639-f3b8-4df3-a835-605cecfff2c2")
 	)
 	(junction
-		(at 95.25 243.84)
+		(at 101.6 243.84)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "58cc529d-61dc-42ec-875f-4fff97ed81b9")
@@ -2830,7 +2830,7 @@
 		(uuid "f8432989-b51e-42b4-9479-23793684becd")
 	)
 	(bus_entry
-		(at 153.67 113.03)
+		(at 115.57 113.03)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -2839,7 +2839,7 @@
 		(uuid "25907719-a6d0-400e-ac6f-87df52df8b94")
 	)
 	(bus_entry
-		(at 153.67 115.57)
+		(at 115.57 115.57)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -2847,19 +2847,18 @@
 		)
 		(uuid "378163f2-aa89-408f-896e-801b0ad2f503")
 	)
-	(wire
-		(pts
-			(xy 156.21 115.57) (xy 182.88 115.57)
-		)
+	(bus_entry
+		(at 115.57 143.51)
+		(size 2.54 2.54)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0055e333-ec58-474b-8744-89a27cf7ec27")
+		(uuid "8ddd26b8-046f-43ea-96ae-3eb2c89dd9e5")
 	)
 	(wire
 		(pts
-			(xy 95.25 262.89) (xy 95.25 261.62)
+			(xy 101.6 262.89) (xy 101.6 261.62)
 		)
 		(stroke
 			(width 0)
@@ -2939,7 +2938,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 243.84) (xy 100.33 243.84)
+			(xy 101.6 243.84) (xy 106.68 243.84)
 		)
 		(stroke
 			(width 0)
@@ -2959,7 +2958,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 118.11) (xy 182.88 118.11)
+			(xy 118.11 118.11) (xy 182.88 118.11)
 		)
 		(stroke
 			(width 0)
@@ -3077,16 +3076,6 @@
 		)
 		(uuid "69049151-ba20-452d-bffc-393f3d946833")
 	)
-	(bus
-		(pts
-			(xy 129.54 106.68) (xy 153.67 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6cbf73cd-c1e0-4451-85ba-0c58c48ead06")
-	)
 	(wire
 		(pts
 			(xy 54.61 246.38) (xy 59.69 246.38)
@@ -3106,6 +3095,16 @@
 			(type default)
 		)
 		(uuid "6dfb3340-7d25-40cb-8b8b-5c7e2e07804c")
+	)
+	(wire
+		(pts
+			(xy 118.11 115.57) (xy 182.88 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e1f0bf0-11f3-4583-bb20-96c587ca7e40")
 	)
 	(wire
 		(pts
@@ -3129,7 +3128,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 243.84) (xy 95.25 243.84)
+			(xy 86.36 243.84) (xy 101.6 243.84)
 		)
 		(stroke
 			(width 0)
@@ -3149,13 +3148,23 @@
 	)
 	(bus
 		(pts
-			(xy 153.67 106.68) (xy 153.67 115.57)
+			(xy 115.57 113.03) (xy 115.57 115.57)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "86e153af-9235-4040-a7c5-b004d8307fa1")
+	)
+	(bus
+		(pts
+			(xy 115.57 115.57) (xy 115.57 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "93e82693-5c42-44e1-b172-d7ccba2273b5")
 	)
 	(wire
 		(pts
@@ -3259,16 +3268,6 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 146.05) (xy 142.24 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bfa8bc0f-ebb8-49bb-9036-31c4efdb785f")
-	)
-	(wire
-		(pts
 			(xy 38.1 246.38) (xy 54.61 246.38)
 		)
 		(stroke
@@ -3289,13 +3288,33 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 254) (xy 95.25 252.73)
+			(xy 101.6 254) (xy 101.6 252.73)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "cb3220f6-d2d2-45c7-99f0-90708d8f0a30")
+	)
+	(wire
+		(pts
+			(xy 118.11 146.05) (xy 142.24 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1885baf-a0f3-47cf-afd6-deebcb5fae48")
+	)
+	(bus
+		(pts
+			(xy 113.03 113.03) (xy 115.57 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd0ce911-8f68-407b-911d-eaf9e40f571f")
 	)
 	(wire
 		(pts
@@ -3319,7 +3338,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 243.84) (xy 95.25 245.11)
+			(xy 101.6 243.84) (xy 101.6 245.11)
 		)
 		(stroke
 			(width 0)
@@ -3338,7 +3357,7 @@
 		(uuid "033fe93c-ed19-440f-be5e-e7651593750c")
 	)
 	(label "+3V3"
-		(at 100.33 243.84 0)
+		(at 106.68 243.84 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3348,7 +3367,7 @@
 		(uuid "9885a180-5c5c-49aa-80d2-7676a4404e36")
 	)
 	(label "LoRa-USB.D_N"
-		(at 156.21 118.11 0)
+		(at 118.11 118.11 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3356,6 +3375,16 @@
 			(justify left bottom)
 		)
 		(uuid "a8835221-4739-47d9-ba01-e74444bed020")
+	)
+	(label "LoRa-USB.Reset"
+		(at 118.11 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e5d084f9-f085-4344-a88e-903761dd3795")
 	)
 	(label "+3V3"
 		(at 195.58 96.52 90)
@@ -3368,7 +3397,7 @@
 		(uuid "f6b00651-a849-40b8-9ee4-16699fb34fd7")
 	)
 	(label "LoRa-USB.D_P"
-		(at 156.21 115.57 0)
+		(at 118.11 115.57 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3388,20 +3417,9 @@
 		)
 		(uuid "0a608b8b-9b73-405d-9365-db1e7b544638")
 	)
-	(hierarchical_label "LoRa-Reset"
-		(shape input)
-		(at 129.54 146.05 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "bfe1259d-3ec1-4ca8-b077-fc80186f29b3")
-	)
-	(hierarchical_label "LoRa-USB{D_P D_N}"
+	(hierarchical_label "LoRa-USB{LoRa}"
 		(shape bidirectional)
-		(at 129.54 106.68 180)
+		(at 113.03 113.03 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3422,7 +3440,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "030ce9fc-6fbb-4b5b-8a7f-8c47b8c40836")
-		(property "Reference" "#PWR0919"
+		(property "Reference" "#PWR0912"
 			(at 201.93 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -3482,7 +3500,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6"
-					(reference "#PWR0919")
+					(reference "#PWR0912")
 					(unit 1)
 				)
 			)
@@ -3500,7 +3518,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0c54d050-3c31-407d-8ef8-0db753f5d86a")
-		(property "Reference" "#PWR0912"
+		(property "Reference" "#PWR0910"
 			(at 142.24 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -3560,7 +3578,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6"
-					(reference "#PWR0912")
+					(reference "#PWR0910")
 					(unit 1)
 				)
 			)
@@ -3568,7 +3586,8 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 95.25 257.81 0)
+		(at 101.6 257.81 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3578,8 +3597,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0d8ea831-5f24-4fac-a963-6e37013f16a5")
-		(property "Reference" "R909"
-			(at 97.79 256.5399 0)
+		(property "Reference" "R902"
+			(at 99.06 256.5399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3590,7 +3609,7 @@
 			)
 		)
 		(property "Value" "68R"
-			(at 97.79 259.0799 0)
+			(at 99.06 259.0799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3601,7 +3620,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 93.472 257.81 90)
+			(at 103.378 257.81 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3612,7 +3631,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
-			(at 95.25 257.81 0)
+			(at 101.6 257.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3623,7 +3642,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 95.25 257.81 0)
+			(at 101.6 257.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3634,7 +3653,7 @@
 			)
 		)
 		(property "manf" "Bourns"
-			(at 95.25 257.81 0)
+			(at 101.6 257.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3644,8 +3663,8 @@
 				)
 			)
 		)
-		(property "manf#" "CR0402-JW-680GLF"
-			(at 95.25 257.81 0)
+		(property "manf#" "CR0805-JW-680GLF"
+			(at 101.6 257.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3655,8 +3674,8 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0402-JW-680GLF"
-			(at 95.25 257.81 0)
+		(property "mouser#" "652-CR0805-JW-680GLF"
+			(at 101.6 257.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3675,7 +3694,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6"
-					(reference "R909")
+					(reference "R902")
 					(unit 1)
 				)
 			)
@@ -3693,7 +3712,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "186abbf7-85d0-4ec2-a866-5620e8fa627c")
-		(property "Reference" "#PWR0913"
+		(property "Reference" "#PWR0911"
 			(at 151.13 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -3753,7 +3772,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6"
-					(reference "#PWR0913")
+					(reference "#PWR0911")
 					(unit 1)
 				)
 			)
@@ -3824,7 +3843,7 @@
 				)
 			)
 		)
-		(property "manf" ""
+		(property "manf" "Microchip Technology"
 			(at 67.31 246.38 0)
 			(hide yes)
 			(show_name no)
@@ -3835,7 +3854,7 @@
 				)
 			)
 		)
-		(property "manf#" ""
+		(property "manf#" "MIC5317-3.3YM5-TR"
 			(at 67.31 246.38 0)
 			(hide yes)
 			(show_name no)
@@ -3846,7 +3865,7 @@
 				)
 			)
 		)
-		(property "mouser#" ""
+		(property "mouser#" "998-MIC5317-3.3YM5-TR"
 			(at 67.31 246.38 0)
 			(hide yes)
 			(show_name no)
@@ -3971,7 +3990,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "28edbbb3-f810-48e1-8fc1-6dd1d68fed38")
-		(property "Reference" "#PWR0902"
+		(property "Reference" "#PWR0901"
 			(at 39.37 246.38 0)
 			(hide yes)
 			(show_name no)
@@ -4031,7 +4050,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6"
-					(reference "#PWR0902")
+					(reference "#PWR0901")
 					(unit 1)
 				)
 			)
@@ -4238,7 +4257,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "31a9d609-98ee-478a-9955-088ee123f7b6")
-		(property "Reference" "R902"
+		(property "Reference" "R903"
 			(at 139.7 149.8599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4260,7 +4279,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 140.462 151.13 90)
 			(hide yes)
 			(show_name no)
@@ -4271,7 +4290,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
 			(at 142.24 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -4293,7 +4312,7 @@
 				)
 			)
 		)
-		(property "manf" ""
+		(property "manf" "Bourns"
 			(at 142.24 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -4304,7 +4323,7 @@
 				)
 			)
 		)
-		(property "manf#" ""
+		(property "manf#" "CR0805-JW-103GLF"
 			(at 142.24 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -4315,7 +4334,7 @@
 				)
 			)
 		)
-		(property "mouser#" ""
+		(property "mouser#" "652-CR0805-JW-103GLF"
 			(at 142.24 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -4335,7 +4354,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6"
-					(reference "R902")
+					(reference "R903")
 					(unit 1)
 				)
 			)
@@ -4375,7 +4394,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Testpoints_Kampi:TestPoint_Pad_1.0x1.0mm"
 			(at 49.53 242.57 0)
 			(hide yes)
 			(show_name no)
@@ -4686,7 +4705,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 40.3352 247.65 0)
 			(hide yes)
 			(show_name no)
@@ -4697,7 +4716,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/5926/1/X7RDielectric.pdf"
 			(at 39.37 251.46 0)
 			(hide yes)
 			(show_name no)
@@ -4719,7 +4738,7 @@
 				)
 			)
 		)
-		(property "manf" ""
+		(property "manf" "KYOCERA AVX"
 			(at 39.37 251.46 0)
 			(hide yes)
 			(show_name no)
@@ -4730,7 +4749,7 @@
 				)
 			)
 		)
-		(property "manf#" ""
+		(property "manf#" "08056C105MAT2A"
 			(at 39.37 251.46 0)
 			(hide yes)
 			(show_name no)
@@ -4741,7 +4760,7 @@
 				)
 			)
 		)
-		(property "mouser#" ""
+		(property "mouser#" "581-08056C105MAT2A"
 			(at 39.37 251.46 0)
 			(hide yes)
 			(show_name no)
@@ -4779,7 +4798,7 @@
 		(in_pos_files no)
 		(dnp no)
 		(uuid "4fb207c5-4e32-466e-b072-a7ca64d2c714")
-		(property "Reference" "TP902"
+		(property "Reference" "TP903"
 			(at 139.7 140.2079 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4801,7 +4820,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Testpoints_Kampi:TestPoint_Pad_1.0x1.0mm"
 			(at 137.16 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -4873,7 +4892,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6"
-					(reference "TP902")
+					(reference "TP903")
 					(unit 1)
 				)
 			)
@@ -4881,7 +4900,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 95.25 262.89 0)
+		(at 101.6 262.89 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4891,8 +4910,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "79f1cee5-9567-4a9f-9032-0becebdae781")
-		(property "Reference" "#PWR0923"
-			(at 95.25 269.24 0)
+		(property "Reference" "#PWR0907"
+			(at 101.6 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4903,7 +4922,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 95.25 267.97 0)
+			(at 101.6 267.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4913,7 +4932,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 95.25 262.89 0)
+			(at 101.6 262.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4924,7 +4943,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 95.25 262.89 0)
+			(at 101.6 262.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4935,7 +4954,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 95.25 262.89 0)
+			(at 101.6 262.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4951,7 +4970,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6"
-					(reference "#PWR0923")
+					(reference "#PWR0907")
 					(unit 1)
 				)
 			)
@@ -4991,7 +5010,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 87.3252 247.65 0)
 			(hide yes)
 			(show_name no)
@@ -5002,7 +5021,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/5926/1/X7RDielectric.pdf"
 			(at 86.36 251.46 0)
 			(hide yes)
 			(show_name no)
@@ -5024,7 +5043,7 @@
 				)
 			)
 		)
-		(property "manf" ""
+		(property "manf" "KYOCERA AVX"
 			(at 86.36 251.46 0)
 			(hide yes)
 			(show_name no)
@@ -5035,7 +5054,7 @@
 				)
 			)
 		)
-		(property "manf#" ""
+		(property "manf#" "08056C105MAT2A"
 			(at 86.36 251.46 0)
 			(hide yes)
 			(show_name no)
@@ -5046,7 +5065,7 @@
 				)
 			)
 		)
-		(property "mouser#" ""
+		(property "mouser#" "581-08056C105MAT2A"
 			(at 86.36 251.46 0)
 			(hide yes)
 			(show_name no)
@@ -5083,7 +5102,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9dee9f43-e657-4c3d-8c8c-64d94d68733c")
-		(property "Reference" "X902"
+		(property "Reference" "X903"
 			(at 185.42 101.6 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5333,7 +5352,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6"
-					(reference "X902")
+					(reference "X903")
 					(unit 1)
 				)
 			)
@@ -5351,7 +5370,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a1483606-0089-4736-a777-9bf036dea8fc")
-		(property "Reference" "#PWR0903"
+		(property "Reference" "#PWR0902"
 			(at 39.37 269.24 0)
 			(hide yes)
 			(show_name no)
@@ -5411,7 +5430,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6"
-					(reference "#PWR0903")
+					(reference "#PWR0902")
 					(unit 1)
 				)
 			)
@@ -5450,7 +5469,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 52.832 251.46 90)
 			(hide yes)
 			(show_name no)
@@ -5461,7 +5480,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
 			(at 54.61 251.46 0)
 			(hide yes)
 			(show_name no)
@@ -5483,7 +5502,7 @@
 				)
 			)
 		)
-		(property "manf" ""
+		(property "manf" "Bourns"
 			(at 54.61 251.46 0)
 			(hide yes)
 			(show_name no)
@@ -5494,7 +5513,7 @@
 				)
 			)
 		)
-		(property "manf#" ""
+		(property "manf#" "CR0805-FX-1002GLF"
 			(at 54.61 251.46 0)
 			(hide yes)
 			(show_name no)
@@ -5505,7 +5524,7 @@
 				)
 			)
 		)
-		(property "mouser#" ""
+		(property "mouser#" "652-CR0805-FX-1002GLF"
 			(at 54.61 251.46 0)
 			(hide yes)
 			(show_name no)
@@ -5542,7 +5561,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cabd82f0-94c2-43c9-a6c2-28021a45d643")
-		(property "Reference" "R903"
+		(property "Reference" "R904"
 			(at 148.59 128.2699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5564,7 +5583,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 149.352 129.54 90)
 			(hide yes)
 			(show_name no)
@@ -5575,7 +5594,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
 			(at 151.13 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -5597,7 +5616,7 @@
 				)
 			)
 		)
-		(property "manf" ""
+		(property "manf" "Bourns"
 			(at 151.13 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -5608,7 +5627,7 @@
 				)
 			)
 		)
-		(property "manf#" ""
+		(property "manf#" "CR0805-JW-103GLF"
 			(at 151.13 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -5619,7 +5638,7 @@
 				)
 			)
 		)
-		(property "mouser#" ""
+		(property "mouser#" "652-CR0805-JW-103GLF"
 			(at 151.13 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -5639,7 +5658,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6"
-					(reference "R903")
+					(reference "R904")
 					(unit 1)
 				)
 			)
@@ -5657,7 +5676,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e96066a6-7d19-497b-8512-cea965674c8c")
-		(property "Reference" "TP904"
+		(property "Reference" "TP902"
 			(at 88.9 237.9979 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5679,7 +5698,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Testpoints_Kampi:TestPoint_Pad_1.0x1.0mm"
 			(at 91.44 242.57 0)
 			(hide yes)
 			(show_name no)
@@ -5751,7 +5770,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6"
-					(reference "TP904")
+					(reference "TP902")
 					(unit 1)
 				)
 			)
@@ -5759,7 +5778,8 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 95.25 248.92 90)
+		(at 101.6 248.92 270)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5770,7 +5790,7 @@
 		(fields_autoplaced yes)
 		(uuid "f31f36d6-5c4b-458c-9ffd-e48015019ad3")
 		(property "Reference" "LED901"
-			(at 99.06 249.2374 90)
+			(at 97.79 249.2374 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5781,7 +5801,7 @@
 			)
 		)
 		(property "Value" "LoRa"
-			(at 99.06 251.7774 90)
+			(at 97.79 251.7774 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5792,7 +5812,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
-			(at 95.25 248.92 0)
+			(at 101.6 248.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5803,7 +5823,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.de/datasheet/3/112/1/SM0805YC.pdf"
-			(at 95.25 248.92 0)
+			(at 101.6 248.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5814,7 +5834,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 95.25 248.92 0)
+			(at 101.6 248.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5825,7 +5845,7 @@
 			)
 		)
 		(property "manf" "Bivar"
-			(at 95.25 248.92 0)
+			(at 101.6 248.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5836,7 +5856,7 @@
 			)
 		)
 		(property "manf#" "SM0805YC"
-			(at 95.25 248.92 0)
+			(at 101.6 248.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5847,7 +5867,7 @@
 			)
 		)
 		(property "mouser#" "749-SM0805YC"
-			(at 95.25 248.92 0)
+			(at 101.6 248.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

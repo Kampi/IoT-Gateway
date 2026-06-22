@@ -3175,8 +3175,8 @@
 	)
 	(text_box "Battery Charger"
 		(exclude_from_sim no)
-		(at 88.9 162.56 0)
-		(size 130.81 7.62)
+		(at 55.88 162.56 0)
+		(size 163.83 7.62)
 		(margins 1.9049 1.9049 1.9049 1.9049)
 		(stroke
 			(width -0.0001)
@@ -5360,7 +5360,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 251.7648 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -5371,7 +5371,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://datasheets.kyocera-avx.com/KGM_X7R.pdf"
+		(property "Datasheet" "https://datasheets.kyocera-avx.com/AutoMLCC.pdf"
 			(at 252.73 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -5404,7 +5404,7 @@
 				)
 			)
 		)
-		(property "manf#" "04025C104JAT2A"
+		(property "manf#" "08053C104M4T4A"
 			(at 252.73 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -5415,7 +5415,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-04025C104JAT2A"
+		(property "mouser#" "581-08053C104M4T4A"
 			(at 252.73 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -5576,7 +5576,7 @@
 		(dnp no)
 		(uuid "0b2450fc-227b-4298-b38d-b1ef3ec098d3")
 		(property "Reference" "IC803"
-			(at 260.35 104.14 0)
+			(at 261.62 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6131,7 +6131,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 192.532 115.57 90)
 			(hide yes)
 			(show_name no)
@@ -6175,7 +6175,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0402-FX-2262GLF"
+		(property "manf#" "CR0805-FX-2262GLF"
 			(at 194.31 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -6186,7 +6186,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0402-FX-2262GLF"
+		(property "mouser#" "652-CR0805-FX-2262GLF"
 			(at 194.31 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -6245,7 +6245,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 192.532 104.14 90)
 			(hide yes)
 			(show_name no)
@@ -6289,7 +6289,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0402-FX-4531GLF"
+		(property "manf#" "CR0805-FX-4531GLF"
 			(at 194.31 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -6300,7 +6300,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0402-FX-4531GLF"
+		(property "mouser#" "652-CR0805-FX-4531GLF"
 			(at 194.31 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -6561,7 +6561,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0402-JW-104GLF"
+		(property "manf#" "CR0805-JW-104GLF"
 			(at 85.09 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -6572,7 +6572,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0402-JW-104GLF"
+		(property "mouser#" "652-CR0805-JW-104GLF"
 			(at 85.09 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -6606,7 +6606,7 @@
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp yes)
 		(uuid "44dff0c6-9134-4176-b841-d3ea535a4d41")
 		(property "Reference" "C808"
@@ -6631,7 +6631,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 332.4352 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -6642,7 +6642,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheets.kyocera-avx.com/cx5r.pdf"
 			(at 331.47 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -6664,7 +6664,7 @@
 				)
 			)
 		)
-		(property "manf" "TAIYO YUDEN"
+		(property "manf" "KYOCERA AVX"
 			(at 331.47 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -6675,7 +6675,7 @@
 				)
 			)
 		)
-		(property "manf#" "MBASE168BB5475KTNA01"
+		(property "manf#" "08055D475KAT4A"
 			(at 331.47 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -6686,7 +6686,7 @@
 				)
 			)
 		)
-		(property "mouser#" "963-BASE168BB5475KT"
+		(property "mouser#" "581-08055D475KAT4A"
 			(at 331.47 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -6861,7 +6861,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 158.242 116.84 90)
 			(hide yes)
 			(show_name no)
@@ -6905,7 +6905,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0402-JW-183GLF"
+		(property "manf#" "CR0805-JW-183GLF"
 			(at 160.02 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -6916,7 +6916,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0402-JW-183GLF"
+		(property "mouser#" "652-CR0805-JW-183GLF"
 			(at 160.02 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -7053,7 +7053,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 172.4152 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -7064,7 +7064,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://datasheets.kyocera-avx.com/KGM_X7R.pdf"
+		(property "Datasheet" "https://datasheets.kyocera-avx.com/AutoMLCC.pdf"
 			(at 171.45 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -7097,7 +7097,7 @@
 				)
 			)
 		)
-		(property "manf#" "04023C473KAT4A"
+		(property "manf#" "08053C473K4T2A"
 			(at 171.45 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -7108,7 +7108,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-04023C473KAT4A"
+		(property "mouser#" "581-08053C473K4T2A"
 			(at 171.45 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -7179,7 +7179,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.com/catalog/specsheets/Taiyo%20Yuden_1102023_MC_mlcc_all_e.pdf"
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/5926/1/X7RDielectric.pdf"
 			(at 129.54 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -7201,7 +7201,7 @@
 				)
 			)
 		)
-		(property "manf" "TAIYO YUDEN"
+		(property "manf" "KYOCERA AVX"
 			(at 129.54 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -7212,7 +7212,7 @@
 				)
 			)
 		)
-		(property "manf#" "MCJCT21GCB7225MTPA1J"
+		(property "manf#" "0805ZC225JAT2A"
 			(at 129.54 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -7223,7 +7223,7 @@
 				)
 			)
 		)
-		(property "mouser#" "963-T21GCB7225MTPA1J"
+		(property "mouser#" "581-0805ZC225JAT2A"
 			(at 129.54 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -7472,7 +7472,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 286.512 100.33 90)
 			(hide yes)
 			(show_name no)
@@ -7516,7 +7516,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0402-JW-331GLF"
+		(property "manf#" "CR0805-JW-331GLF"
 			(at 288.29 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -7527,7 +7527,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0402-JW-331GLF"
+		(property "mouser#" "652-CR0805-JW-331GLF"
 			(at 288.29 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -7853,7 +7853,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 234.188 111.76 90)
 			(hide yes)
 			(show_name no)
@@ -7897,7 +7897,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0402-JW-222GLF"
+		(property "manf#" "CR0805-JW-222GLF"
 			(at 232.41 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -7908,7 +7908,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0402-JW-222GLF"
+		(property "mouser#" "652-CR0805-JW-222GLF"
 			(at 232.41 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -8322,7 +8322,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0402-JW-104GLF"
+		(property "manf#" "CR0805-JW-104GLF"
 			(at 172.72 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -8333,7 +8333,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0402-JW-104GLF"
+		(property "mouser#" "652-CR0805-JW-104GLF"
 			(at 172.72 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -8766,7 +8766,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 289.2552 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -8777,7 +8777,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://datasheets.kyocera-avx.com/KGM_X7R.pdf"
+		(property "Datasheet" "https://datasheets.kyocera-avx.com/AutoMLCC.pdf"
 			(at 288.29 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -8810,7 +8810,7 @@
 				)
 			)
 		)
-		(property "manf#" "04025C104JAT2A"
+		(property "manf#" "08053C104M4T4A"
 			(at 288.29 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -8821,7 +8821,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-04025C104JAT2A"
+		(property "mouser#" "581-08053C104M4T4A"
 			(at 288.29 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -9477,7 +9477,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 209.55 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -9488,7 +9488,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/system/files/dam/doc/product/sensor/ntc/chip-ntc-thermistor/catalog/tpd_automotive_ntc-thermistor_ntcg_en.pdf?ref_disty=mouser"
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
 			(at 209.55 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -9510,7 +9510,7 @@
 				)
 			)
 		)
-		(property "manf" "TDK"
+		(property "manf" "Bourns"
 			(at 209.55 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -9521,7 +9521,7 @@
 				)
 			)
 		)
-		(property "manf#" "NTCG103JF103HTDS"
+		(property "manf#" "CR0805-JW-103GLF"
 			(at 209.55 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -9532,7 +9532,7 @@
 				)
 			)
 		)
-		(property "mouser#" "810-NTCG103JF103HTDS"
+		(property "mouser#" "652-CR0805-JW-103GLF"
 			(at 209.55 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -9636,7 +9636,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0402-JW-104GLF"
+		(property "manf#" "CR0805-JW-104GLF"
 			(at 269.24 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -9647,7 +9647,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0402-JW-104GLF"
+		(property "mouser#" "652-CR0805-JW-104GLF"
 			(at 269.24 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -10223,7 +10223,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.com/catalog/specsheets/Taiyo%20Yuden_1102023_MC_mlcc_all_e.pdf"
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/5926/1/X7RDielectric.pdf"
 			(at 113.03 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -10245,7 +10245,7 @@
 				)
 			)
 		)
-		(property "manf" "TAIYO YUDEN"
+		(property "manf" "KYOCERA AVX"
 			(at 113.03 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -10256,7 +10256,7 @@
 				)
 			)
 		)
-		(property "manf#" "MCJCT21GCB7225MTPA1J"
+		(property "manf#" "0805ZC225JAT2A"
 			(at 113.03 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -10267,7 +10267,7 @@
 				)
 			)
 		)
-		(property "mouser#" "963-T21GCB7225MTPA1J"
+		(property "mouser#" "581-0805ZC225JAT2A"
 			(at 113.03 115.57 0)
 			(hide yes)
 			(show_name no)

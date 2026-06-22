@@ -6660,7 +6660,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 184.4548 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -6671,7 +6671,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://datasheets.kyocera-avx.com/KGM_X7R.pdf"
+		(property "Datasheet" "https://datasheets.kyocera-avx.com/AutoMLCC.pdf"
 			(at 185.42 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -6704,7 +6704,7 @@
 				)
 			)
 		)
-		(property "manf#" "04025C104JAT2A"
+		(property "manf#" "08053C104M4T4A"
 			(at 185.42 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -6715,7 +6715,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-04025C104JAT2A"
+		(property "mouser#" "581-08053C104M4T4A"
 			(at 185.42 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -7039,7 +7039,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 191.4652 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -7050,7 +7050,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://datasheets.kyocera-avx.com/KGM_X7R.pdf"
+		(property "Datasheet" "https://datasheets.kyocera-avx.com/AutoMLCC.pdf"
 			(at 190.5 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -7083,7 +7083,7 @@
 				)
 			)
 		)
-		(property "manf#" "04025C104JAT2A"
+		(property "manf#" "08053C104M4T4A"
 			(at 190.5 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -7094,7 +7094,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-04025C104JAT2A"
+		(property "mouser#" "581-08053C104M4T4A"
 			(at 190.5 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -7197,7 +7197,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0402-JW-471GLF"
+		(property "manf#" "CR0805-JW-471GLF"
 			(at 207.01 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -7208,7 +7208,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0402-JW-471GLF"
+		(property "mouser#" "652-CR0805-JW-471GLF"
 			(at 207.01 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -7312,7 +7312,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0402-JW-471GLF"
+		(property "manf#" "CR0805-JW-471GLF"
 			(at 217.17 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -7323,7 +7323,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0402-JW-471GLF"
+		(property "mouser#" "652-CR0805-JW-471GLF"
 			(at 217.17 107.95 0)
 			(hide yes)
 			(show_name no)
