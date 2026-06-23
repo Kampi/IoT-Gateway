@@ -858,7 +858,7 @@
         "uuid": "d5742f03-3b1a-42e5-a384-018bd4b919aa"
       }
     ],
-    "used_designators": "H903-904,R1406,#FLG703-705,#FLG1001,#FLG1301,#PWR749,#PWR926,#PWR1406",
+    "used_designators": "R911,#PWR1107",
     "variants": []
   },
   "sheets": [
@@ -936,6 +936,7 @@
     "GIT_HASH_PCB": "2c87805",
     "GIT_HASH_SCH": "2c87805",
     "GIT_URL": "https://github.com/Kampi/IoT-Gateway",
+    "PCB_VARIANT": "DRAFT",
     "PROJECT_NAME": "IoT-Gateway",
     "RELEASE_BODY_UNRELEASED": "Version Unreleased not found.",
     "RELEASE_DATE": "2026-06-03",
@@ -981,8 +982,7 @@
     "SHEET_NAME_6": "Project Architecture",
     "SHEET_NAME_7": "Section A",
     "SHEET_NAME_8": "Section B",
-    "SHEET_NAME_9": "Revision History",
-    "VARIANT": "DRAFT"
+    "SHEET_NAME_9": "Revision History"
   },
   "tuning_profiles": {
     "meta": {

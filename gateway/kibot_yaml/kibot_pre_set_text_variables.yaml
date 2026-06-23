@@ -33,7 +33,7 @@ preflight:
       text: '@COMPANY@'
     - variable: 'DESIGNER'
       text: '@DESIGNER@'
-    - variable: 'VARIANT'
+    - variable: 'PCB_VARIANT'
       text: '%V'
 
     # Changelog

@@ -179,6 +179,7 @@
 	(property "GIT_HASH_PCB" "2c87805")
 	(property "GIT_HASH_SCH" "2c87805")
 	(property "GIT_URL" "https://github.com/Kampi/IoT-Gateway")
+	(property "PCB_VARIANT" "DRAFT")
 	(property "PROJECT_NAME" "IoT-Gateway")
 	(property "RELEASE_BODY_UNRELEASED" "Version Unreleased not found.")
 	(property "RELEASE_DATE" "2026-06-03")
@@ -225,7 +226,6 @@
 	(property "SHEET_NAME_7" "Section A")
 	(property "SHEET_NAME_8" "Section B")
 	(property "SHEET_NAME_9" "Revision History")
-	(property "VARIANT" "DRAFT")
 	(footprint "Texas Instruments:LFCSP-10"
 		(layer "F.Cu")
 		(uuid "0096c338-0e83-4ed1-b096-769d0cf4b8a8")

@@ -10,7 +10,7 @@
 		(company "${COMPANY}")
 	)
 	(lib_symbols)
-	(text "Variant: ${VARIANT}"
+	(text "Variant: ${PCB_VARIANT}"
 		(exclude_from_sim no)
 		(at 31.75 59.69 0)
 		(effects
