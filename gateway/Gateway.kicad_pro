@@ -582,7 +582,7 @@
         "name": "USB_90",
         "pcb_color": "rgb(221, 133, 0)",
         "priority": 7,
-        "schematic_color": "rgb(221, 133, 0)",
+        "schematic_color": "rgb(255, 153, 0)",
         "tuning_profile": ""
       }
     ],
@@ -592,10 +592,6 @@
     "net_colors": null,
     "netclass_assignments": null,
     "netclass_patterns": [
-      {
-        "netclass": "USB_90",
-        "pattern": "*USB*D_*"
-      },
       {
         "netclass": "HDMI_100",
         "pattern": "*HDMI.CLK_*"
@@ -625,10 +621,6 @@
         "pattern": "*/L"
       },
       {
-        "netclass": "USB_90",
-        "pattern": "*USB*"
-      },
-      {
         "netclass": "I2C",
         "pattern": "*SCL*"
       },
@@ -643,6 +635,10 @@
       {
         "netclass": "PoE",
         "pattern": "*PoE*"
+      },
+      {
+        "netclass": "USB_90",
+        "pattern": "*D_*"
       }
     ]
   },
@@ -658,7 +654,7 @@
       "svg": "",
       "vrml": "../cad/ZSWatch.wrl"
     },
-    "page_layout_descr_file": "${KIPRJMOD}/templates/KDT_Template_PCB_GIT_A3.kicad_wks"
+    "page_layout_descr_file": ""
   },
   "schematic": {
     "annotate_start_num": 0,
@@ -746,6 +742,12 @@
           "label": "mouser#",
           "name": "mouser#",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -768,7 +770,20 @@
         "TRD3_P",
         "TRD3_N"
       ],
-      "GPIO": [],
+      "GPIO": [
+        "Num0",
+        "Num1",
+        "Num2",
+        "Num3",
+        "Num4",
+        "Num5",
+        "Num6",
+        "Num7"
+      ],
+      "I2C": [
+        "SDA",
+        "SCL"
+      ],
       "LoRa": [
         "D_P",
         "D_N",
@@ -843,7 +858,7 @@
         "uuid": "d5742f03-3b1a-42e5-a384-018bd4b919aa"
       }
     ],
-    "used_designators": "R701-718,R801-809,R901-912,R1001-1009,R1101-1102,R1201-1216,R1301-1303,#FLG701-702,#FLG801,D701,BT901,L701-702,L801,L1001-1002,AE901,AE1001,AE1201-1202,#PWR701-748,#PWR801-820,#PWR901-925,#PWR1001-1029,#PWR1101-1116,#PWR1201-1226,#PWR1301-1306,BAT801,C701-721,C801-808,C901-903,C1001-1023,C1101-1102,C1201-1208,C1301-1303,F701,IC701-705,IC801-803,IC901,IC1001-1003,IC1101-1102,IC1201-1204,JP901,LED901,LED1001,LED1201-1202,M1201-1202,Q701,Q801-802,Q901,Q1001,Q1201-1202,SW901-902,TH801,TP701-712,TP801-805,TP901-904,TP1001-1006,TP1101,TP1201-1212,TP1301-1302,X701,X901-903,X1001,X1101-1104,X1301,Y1001-1002,J701",
+    "used_designators": "H903-904,R1406,#FLG703-705,#FLG1001,#FLG1301,#PWR749,#PWR926,#PWR1406",
     "variants": []
   },
   "sheets": [
@@ -884,12 +899,12 @@
       "Revision History"
     ],
     [
-      "e744f3ce-03a6-44a6-8792-1447ef232b9a",
-      "System on Module"
-    ],
-    [
       "3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6",
       "LoRa"
+    ],
+    [
+      "e744f3ce-03a6-44a6-8792-1447ef232b9a",
+      "System on Module"
     ],
     [
       "3f9e85ea-c06e-4d87-98cf-dea3ce3fc587",

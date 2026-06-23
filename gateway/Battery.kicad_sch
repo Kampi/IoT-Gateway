@@ -5226,7 +5226,7 @@
 		)
 		(uuid "478c3e8e-d50e-4739-a8ff-839a976e470f")
 	)
-	(hierarchical_label "I2C{SDA SCL}"
+	(hierarchical_label "I2C{I2C}"
 		(shape bidirectional)
 		(at 209.55 176.53 180)
 		(effects

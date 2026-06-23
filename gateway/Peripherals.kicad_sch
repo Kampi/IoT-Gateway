@@ -2747,7 +2747,7 @@
 		(uuid "6852c446-0c6a-438a-98d5-c87f353f3df9")
 	)
 	(bus_entry
-		(at 363.22 90.17)
+		(at 355.6 90.17)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -2756,7 +2756,7 @@
 		(uuid "6bb1b8fa-990e-4db6-8aec-2f1d6f8f088b")
 	)
 	(bus_entry
-		(at 363.22 85.09)
+		(at 355.6 85.09)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -2774,7 +2774,7 @@
 		(uuid "914aeb18-f7c2-49aa-b927-d35601ebaead")
 	)
 	(bus_entry
-		(at 363.22 87.63)
+		(at 355.6 87.63)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -2801,7 +2801,7 @@
 		(uuid "afd061b9-995a-4806-b41c-337d454b0cbc")
 	)
 	(bus_entry
-		(at 363.22 74.93)
+		(at 355.6 74.93)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -2810,7 +2810,7 @@
 		(uuid "b1dd8ae5-2458-4083-9a59-c46e4710a443")
 	)
 	(bus_entry
-		(at 363.22 77.47)
+		(at 355.6 77.47)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -2819,7 +2819,7 @@
 		(uuid "ba61d163-d9b8-49d1-82b8-51967f80c353")
 	)
 	(bus_entry
-		(at 363.22 80.01)
+		(at 355.6 80.01)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -2837,7 +2837,7 @@
 		(uuid "d2f8eaab-bd76-417a-9296-5c14f3080ecd")
 	)
 	(bus_entry
-		(at 363.22 92.71)
+		(at 355.6 92.71)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -2846,7 +2846,7 @@
 		(uuid "ea88fa37-609d-43de-8a39-da27b145041c")
 	)
 	(bus_entry
-		(at 363.22 82.55)
+		(at 355.6 82.55)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -2895,7 +2895,7 @@
 	)
 	(wire
 		(pts
-			(xy 365.76 92.71) (xy 374.65 92.71)
+			(xy 358.14 92.71) (xy 374.65 92.71)
 		)
 		(stroke
 			(width 0)
@@ -3075,7 +3075,7 @@
 	)
 	(wire
 		(pts
-			(xy 365.76 90.17) (xy 374.65 90.17)
+			(xy 358.14 90.17) (xy 374.65 90.17)
 		)
 		(stroke
 			(width 0)
@@ -3115,7 +3115,7 @@
 	)
 	(wire
 		(pts
-			(xy 365.76 85.09) (xy 374.65 85.09)
+			(xy 358.14 85.09) (xy 374.65 85.09)
 		)
 		(stroke
 			(width 0)
@@ -3275,7 +3275,7 @@
 	)
 	(wire
 		(pts
-			(xy 365.76 80.01) (xy 374.65 80.01)
+			(xy 358.14 80.01) (xy 374.65 80.01)
 		)
 		(stroke
 			(width 0)
@@ -3305,7 +3305,7 @@
 	)
 	(wire
 		(pts
-			(xy 365.76 95.25) (xy 374.65 95.25)
+			(xy 358.14 95.25) (xy 374.65 95.25)
 		)
 		(stroke
 			(width 0)
@@ -3315,7 +3315,7 @@
 	)
 	(wire
 		(pts
-			(xy 365.76 82.55) (xy 374.65 82.55)
+			(xy 358.14 82.55) (xy 374.65 82.55)
 		)
 		(stroke
 			(width 0)
@@ -3475,7 +3475,7 @@
 	)
 	(bus
 		(pts
-			(xy 363.22 73.66) (xy 363.22 92.71)
+			(xy 355.6 73.66) (xy 355.6 92.71)
 		)
 		(stroke
 			(width 0)
@@ -3485,7 +3485,7 @@
 	)
 	(bus
 		(pts
-			(xy 354.33 73.66) (xy 363.22 73.66)
+			(xy 354.33 73.66) (xy 355.6 73.66)
 		)
 		(stroke
 			(width 0)
@@ -3505,7 +3505,7 @@
 	)
 	(wire
 		(pts
-			(xy 365.76 87.63) (xy 374.65 87.63)
+			(xy 358.14 87.63) (xy 374.65 87.63)
 		)
 		(stroke
 			(width 0)
@@ -3585,7 +3585,7 @@
 	)
 	(wire
 		(pts
-			(xy 365.76 77.47) (xy 374.65 77.47)
+			(xy 358.14 77.47) (xy 374.65 77.47)
 		)
 		(stroke
 			(width 0)
@@ -3693,6 +3693,36 @@
 		)
 		(uuid "4479d9ee-e666-4524-9677-57add3c9dd73")
 	)
+	(label "GPIO.Num6"
+		(at 358.14 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5059e00d-5985-4b41-8dde-bbd4fe614080")
+	)
+	(label "GPIO.Num1"
+		(at 358.14 80.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6c61c0a4-ad47-46be-a789-2cfa343dd19e")
+	)
+	(label "GPIO.Num7"
+		(at 358.14 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7505e87a-ed63-46d4-a040-cff0192db5df")
+	)
 	(label "I2C.SCL"
 		(at 358.14 149.86 0)
 		(effects
@@ -3712,6 +3742,16 @@
 			(justify right bottom)
 		)
 		(uuid "7f012921-ba70-4cbe-b932-ccce5dae1d42")
+	)
+	(label "GPIO.Num2"
+		(at 358.14 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "91ffedcb-d5ae-476b-b8ef-760aa9f58faf")
 	)
 	(label "USB.VBUS"
 		(at 144.78 226.06 180)
@@ -3733,6 +3773,16 @@
 		)
 		(uuid "ba3d1d18-935f-4588-a01b-1dc6c1c94ada")
 	)
+	(label "GPIO.Num4"
+		(at 358.14 87.63 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c648271c-4ffe-497e-9464-a7f62cfa596c")
+	)
 	(label "I2C.SCL"
 		(at 353.06 218.44 0)
 		(effects
@@ -3742,6 +3792,26 @@
 			(justify left bottom)
 		)
 		(uuid "c9ad62d1-4b65-4f45-8755-82a11e0f8098")
+	)
+	(label "GPIO.Num3"
+		(at 358.14 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d29d2023-9e5b-4536-8269-2ad9d657e000")
+	)
+	(label "GPIO.Num0"
+		(at 358.14 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d2ab23b9-7b2f-4c1b-9410-413a744221c6")
 	)
 	(label "USB.D_N"
 		(at 144.78 245.11 180)
@@ -3753,6 +3823,16 @@
 		)
 		(uuid "db630c21-ac79-47dc-8707-b3507e6d9e71")
 	)
+	(label "GPIO.Num5"
+		(at 358.14 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fd561b8e-e289-47f3-b8b8-4e9d00ce7fad")
+	)
 	(label "I2C.SDA"
 		(at 358.14 147.32 0)
 		(effects
@@ -3763,7 +3843,7 @@
 		)
 		(uuid "fd5ddc2e-aaf1-48a7-819c-9c4442510742")
 	)
-	(hierarchical_label "I2C{SDA SCL}"
+	(hierarchical_label "I2C{I2C}"
 		(shape bidirectional)
 		(at 354.33 143.51 180)
 		(effects
@@ -3774,7 +3854,7 @@
 		)
 		(uuid "1fde13e4-1b63-4d2f-9a34-4b1a0a9e5b9b")
 	)
-	(hierarchical_label "GPIO {GPIO}"
+	(hierarchical_label "GPIO{GPIO}"
 		(shape bidirectional)
 		(at 354.33 73.66 180)
 		(effects
@@ -3785,7 +3865,7 @@
 		)
 		(uuid "2d9e6364-775e-4cf2-981e-f5e58654faa4")
 	)
-	(hierarchical_label "I2C{SDA SCL}"
+	(hierarchical_label "I2C{I2C}"
 		(shape bidirectional)
 		(at 349.25 209.55 180)
 		(effects
@@ -3807,7 +3887,7 @@
 		)
 		(uuid "bc7fc806-3036-47b7-a07f-ff3a837ad0af")
 	)
-	(hierarchical_label "I2C{SDA SCL}"
+	(hierarchical_label "I2C{I2C}"
 		(shape bidirectional)
 		(at 354.33 119.38 180)
 		(effects
@@ -4521,7 +4601,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 379.73 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -6079,7 +6159,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 379.73 123.19 0)
 			(hide yes)
 			(show_name no)
