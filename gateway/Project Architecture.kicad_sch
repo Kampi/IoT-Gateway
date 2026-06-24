@@ -192,6 +192,16 @@
 		)
 		(uuid "1625bfa5-23b7-4962-8f5a-bee5e073e991")
 	)
+	(wire
+		(pts
+			(xy 163.83 165.1) (xy 176.53 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1872ea0e-3058-4fd6-afb1-c957a46dcfd8")
+	)
 	(bus
 		(pts
 			(xy 148.59 107.95) (xy 162.56 107.95)
@@ -334,6 +344,16 @@
 	)
 	(wire
 		(pts
+			(xy 148.59 173.99) (xy 163.83 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "92f4cd49-f242-4acf-b322-accf3edb4ad3")
+	)
+	(wire
+		(pts
 			(xy 226.06 78.74) (xy 262.89 78.74)
 		)
 		(stroke
@@ -421,6 +441,16 @@
 			(type default)
 		)
 		(uuid "b71e0ff3-1f66-48b6-bc68-b6e8f5f1d069")
+	)
+	(wire
+		(pts
+			(xy 163.83 173.99) (xy 163.83 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c11f0b48-4ae3-461a-8cac-8613b2426915")
 	)
 	(bus
 		(pts
@@ -641,6 +671,16 @@
 		(pin "SSD-Power" input
 			(at 148.59 171.45 0)
 			(uuid "172a7350-7fce-4481-84f0-a08ccd1570d0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "~{CTRL_WAKE1_MICO}" input
+			(at 148.59 173.99 0)
+			(uuid "89b51931-1a4f-4cd3-b606-8a0f807adaf4")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1196,6 +1236,16 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+		(pin "~{CTRL_WAKE1_MICO}" output
+			(at 176.53 165.1 180)
+			(uuid "30a9505c-f2d7-4850-afef-8d9681355d96")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances

@@ -6500,7 +6500,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 250.19 184.15 0)
 			(hide yes)
 			(show_name no)

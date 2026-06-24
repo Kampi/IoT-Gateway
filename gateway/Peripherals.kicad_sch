@@ -6326,7 +6326,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.com/catalog/specsheets/GCT_USB4110%20Product%20Drawing%20-%2020k%20cycles.pdf?_gl=1*k4ge5a*_gcl_aw*R0NMLjE3ODE2NzU0NTMuQ2p3S0NBanc2TVBSQmhCVEVpd0FkLTdNcnhjTzkzREFsMHFYcThIZ3Z0STNEalNESFJoUEViYlRtaEVoc1BaVTlWZEQzaUs5SlNINnh4b0N4VkFRQXZEX0J3RQ..*_gcl_au*MTUwNjE5MTk5Mi4xNzc1NjM4MTAxLjE2MDgyOTE1NzguMTc4MjEzMjU4OC4xNzgyMTMzNDAz*_ga*MTc4ODYxMjM2LjE3NDQ3MTM4Nzc.*_ga_15W4STQT4T*czE3ODIxMzI1ODEkbzE4NiRnMSR0MTc4MjEzMzQwNiRqMjAkbDAkaDA."
+		(property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip"
 			(at 43.18 241.3 0)
 			(hide yes)
 			(show_name no)

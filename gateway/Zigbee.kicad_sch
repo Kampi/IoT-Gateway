@@ -7693,6 +7693,17 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 101.6 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1af0c7c5-08b3-4d9e-98b2-27d870e9991b")
 		)
@@ -9830,7 +9841,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
 			(at 271.78 105.41 0)
 			(hide yes)
 			(show_name no)
