@@ -758,6 +758,10 @@
       "sort_field": "Reference"
     },
     "bus_aliases": {
+      "CAN": [
+        "Tx",
+        "Rx"
+      ],
       "Ethernet": [
         "LED-Yellow",
         "LED-Green",
@@ -858,7 +862,7 @@
         "uuid": "d5742f03-3b1a-42e5-a384-018bd4b919aa"
       }
     ],
-    "used_designators": "R911,#PWR1107",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [

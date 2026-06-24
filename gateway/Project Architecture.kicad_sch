@@ -232,6 +232,16 @@
 		)
 		(uuid "38c66015-ad6e-46a4-8065-9c93871f049e")
 	)
+	(bus
+		(pts
+			(xy 226.06 142.24) (xy 262.89 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45c4ee6a-03fe-46a0-a158-fd1b135ec643")
+	)
 	(wire
 		(pts
 			(xy 148.59 116.84) (xy 176.53 116.84)
@@ -354,7 +364,7 @@
 	)
 	(bus
 		(pts
-			(xy 260.35 143.51) (xy 262.89 143.51)
+			(xy 260.35 144.78) (xy 262.89 144.78)
 		)
 		(stroke
 			(width 0)
@@ -364,7 +374,7 @@
 	)
 	(bus
 		(pts
-			(xy 260.35 172.72) (xy 260.35 143.51)
+			(xy 260.35 172.72) (xy 260.35 144.78)
 		)
 		(stroke
 			(width 0)
@@ -765,7 +775,7 @@
 			)
 		)
 		(pin "I2C{I2C}" bidirectional
-			(at 262.89 143.51 180)
+			(at 262.89 144.78 180)
 			(uuid "6a129d80-03db-4840-b5b1-5af05c8d2eeb")
 			(effects
 				(font
@@ -777,6 +787,16 @@
 		(pin "USB{D_P D_N ID VBUS}" bidirectional
 			(at 262.89 135.89 180)
 			(uuid "2f6ef1da-6202-4862-837d-0e9b31ec568a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CAN{CAN}" bidirectional
+			(at 262.89 142.24 180)
+			(uuid "f5387f16-dd47-49d8-8042-e6fca0f28857")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1166,6 +1186,16 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(pin "CAN{CAN}" bidirectional
+			(at 226.06 142.24 0)
+			(uuid "5376abb6-8183-4f2e-adbd-4b1a11a0bed1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances
