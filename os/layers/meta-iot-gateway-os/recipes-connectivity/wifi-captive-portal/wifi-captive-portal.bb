@@ -11,7 +11,7 @@ SRC_URI = " \
     file://captive-portal.py \
     file://hostapd.conf \
     file://dnsmasq-captive.conf \
-    file://wpa_supplicant-wlan0.conf \
+    file://wpa_supplicant-mlan0.conf \
     file://services/wifi-setup.service \
 "
 
@@ -47,7 +47,7 @@ do_install() {
 
     # Empty wpa-supplicant config — populated at runtime by the captive portal
     install -d ${D}${sysconfdir}/wpa_supplicant
-    install -m 0600 ${WORKDIR}/wpa_supplicant-wlan0.conf ${D}${sysconfdir}/wpa_supplicant/wpa_supplicant-wlan0.conf
+    install -m 0600 ${WORKDIR}/wpa_supplicant-mlan0.conf ${D}${sysconfdir}/wpa_supplicant/wpa_supplicant-mlan0.conf
 
     install -d ${D}${systemd_system_unitdir}
     install -m 0644 ${WORKDIR}/services/wifi-setup.service ${D}${systemd_system_unitdir}/wifi-setup.service
@@ -58,6 +58,6 @@ FILES:${PN} += " \
     ${bindir}/captive-portal \
     ${sysconfdir}/hostapd/hostapd.conf \
     ${sysconfdir}/dnsmasq-captive.conf \
-    ${sysconfdir}/wpa_supplicant/wpa_supplicant-wlan0.conf \
+    ${sysconfdir}/wpa_supplicant/wpa_supplicant-mlan0.conf \
     ${systemd_system_unitdir}/wifi-setup.service \
 "

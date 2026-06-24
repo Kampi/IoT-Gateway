@@ -17,7 +17,6 @@
 				 "fsl,imx8mm";
 };
 
-/* Version resistors: pull-ups on carrier (SODIMM 216/218/220), pull-down via pad control */
 &iomuxc {
 	pinctrl_version_resistors: versionresistorsgrp {
 		fsl,pins = <
@@ -68,6 +67,25 @@
 	                  "wmbus-power-enable";
 };
 
+/* Verdin I2C_2_DSI */
+&i2c2 {
+	status = "disabled";
+};
+
+/* Verdin I2C_4_CSI */
+&i2c3 {
+	status = "disabled";
+};
+
+/* Verdin PWM_3_DSI */
+&pwm1 {
+	status = "disabled";
+};
+
+&sai2 {
+	status = "disabled";
+};
+
 &i2c4 {
 	atecc608b: atecc608b@60 {
 		compatible = "microchip,atecc608b";
@@ -85,5 +103,29 @@
 };
 
 &backlight {
+	status = "disabled";
+};
+
+&sound_card {
+	status = "disabled";
+};
+
+&verdin_som_adc {
+	status = "disabled";
+};
+
+&gpio_expander_21 {
+	status = "disabled";
+};
+
+&lvds_ti_sn65dsi84 {
+	status = "disabled";
+};
+
+&hdmi_lontium_lt8912 {
+	status = "disabled";
+};
+
+&atmel_mxt_ts {
 	status = "disabled";
 };

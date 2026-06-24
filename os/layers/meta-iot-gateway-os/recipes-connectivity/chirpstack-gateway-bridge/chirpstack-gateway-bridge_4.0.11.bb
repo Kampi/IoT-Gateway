@@ -21,6 +21,8 @@ inherit go-mod systemd
 
 GO_IMPORT = "github.com/chirpstack/chirpstack-gateway-bridge"
 
+CHIRPSTACK_MQTT_SERVER ?= "tcp://localhost:1883"
+
 SYSTEMD_SERVICE:${PN} = "chirpstack-gateway-bridge.service"
 SYSTEMD_AUTO_ENABLE:${PN} = "enable"
 
@@ -39,12 +41,11 @@ do_install() {
     install -m 0755 ${B}/bin/${BPN} ${D}${bindir}/
 
     install -d ${D}${sysconfdir}/chirpstack-gateway-bridge
-    install -m 0644 ${WORKDIR}/chirpstack-gateway-bridge.toml \
-        ${D}${sysconfdir}/chirpstack-gateway-bridge/
+    install -m 0644 ${WORKDIR}/chirpstack-gateway-bridge.toml ${D}${sysconfdir}/chirpstack-gateway-bridge/
+    sed -i 's|@CHIRPSTACK_MQTT_SERVER@|${CHIRPSTACK_MQTT_SERVER}|g' ${D}${sysconfdir}/chirpstack-gateway-bridge/chirpstack-gateway-bridge.toml
 
     install -d ${D}${systemd_system_unitdir}
-    install -m 0644 ${WORKDIR}/services/chirpstack-gateway-bridge.service \
-        ${D}${systemd_system_unitdir}/
+    install -m 0644 ${WORKDIR}/services/chirpstack-gateway-bridge.service ${D}${systemd_system_unitdir}/
 }
 
 FILES:${PN} += " \

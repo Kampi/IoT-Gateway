@@ -23,7 +23,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import parse_qs, urlparse
 
 LISTEN_PORT = 80
-WPA_CONF = "/etc/wpa_supplicant/wpa_supplicant-wlan0.conf"
+WPA_CONF = "/etc/wpa_supplicant/wpa_supplicant-mlan0.conf"
 SCAN_CACHE = "/run/wifi-scan-cache.json"
 COUNTRY = "DE"
 
@@ -109,7 +109,7 @@ def _render(message: str = "") -> bytes:
 
 def _save_credentials(ssid: str, password: str) -> None:
     config = (
-        f"ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev\n"
+        f"ctrl_interface=/var/run/wpa_supplicant\n"
         f"update_config=1\n"
         f"country={COUNTRY}\n\n"
         f"network={{\n"

@@ -4,7 +4,7 @@
 
 set -euo pipefail
 
-IFACE="wlan0"
+IFACE="mlan0"
 AP_IP="192.168.4.1"
 AP_NETWORK="192.168.4.0/24"
 WPA_CONF="/etc/wpa_supplicant/wpa_supplicant-${IFACE}.conf"

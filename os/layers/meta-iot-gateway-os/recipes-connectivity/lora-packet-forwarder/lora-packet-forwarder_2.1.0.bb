@@ -11,7 +11,9 @@ SRC_URI = " \
     git://github.com/Lora-net/sx1302_hal.git;protocol=https;branch=master \
     file://global_conf.json.RAK-USB-EU868 \
     file://99-lora.rules \
+    file://set-gateway-id.sh \
     file://services/lora-packet-forwarder.service \
+    file://services/lora-gateway-id.service \
 "
 
 S = "${WORKDIR}/git"
@@ -46,15 +48,19 @@ do_install() {
     install -d ${D}${sysconfdir}/udev/rules.d
     install -m 0644 ${WORKDIR}/99-lora.rules ${D}${sysconfdir}/udev/rules.d/
 
+    install -m 0755 ${WORKDIR}/set-gateway-id.sh ${D}${LORA_INSTALL_DIR}/
+
     install -d ${D}${systemd_system_unitdir}
     install -m 0644 ${WORKDIR}/services/lora-packet-forwarder.service ${D}${systemd_system_unitdir}/
+    install -m 0644 ${WORKDIR}/services/lora-gateway-id.service ${D}${systemd_system_unitdir}/
 }
 
 FILES:${PN} = " \
     ${LORA_INSTALL_DIR} \
     ${sysconfdir}/udev/rules.d/99-lora.rules \
     ${systemd_system_unitdir}/lora-packet-forwarder.service \
+    ${systemd_system_unitdir}/lora-gateway-id.service \
 "
 
-SYSTEMD_SERVICE:${PN} = "lora-packet-forwarder.service"
+SYSTEMD_SERVICE:${PN} = "lora-packet-forwarder.service lora-gateway-id.service"
 SYSTEMD_AUTO_ENABLE:${PN} = "enable"

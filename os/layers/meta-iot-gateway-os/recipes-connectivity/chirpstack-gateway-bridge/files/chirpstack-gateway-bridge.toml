@@ -1,5 +1,3 @@
-# ChirpStack Gateway Bridge configuration
-
 [backend]
   type = "semtech_udp"
 
@@ -16,4 +14,4 @@
       type = "generic"
 
       [integration.mqtt.auth.generic]
-        servers = ["tcp://localhost:1883"]
+        servers = ["@CHIRPSTACK_MQTT_SERVER@"]

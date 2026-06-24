@@ -3,6 +3,14 @@ LICENSE = "MIT"
 
 inherit core-image
 
+KERNEL_DEVICETREE = "freescale/iot-gateway-imx8mm.dtb"
+
+TEZI_EXTERNAL_KERNEL_DEVICETREE = ""
+TEZI_EXTERNAL_KERNEL_DEVICETREE_BOOT = ""
+
+IMAGE_BOOT_FILES:remove = "overlays/*;overlays/"
+IMAGE_BOOT_FILES:remove = "overlays.txt"
+
 IMAGE_FEATURES += " \
     ssh-server-openssh \
 "
@@ -20,11 +28,12 @@ IMAGE_INSTALL:append = " \
     chirpstack-gateway-bridge \
     cryptoauthlib \
     gateway-logging \
-    wpa-supplicant \
+    networkmanager \
+    networkmanager-nmcli \
     iw \
     linux-firmware \
     bluez5 \
-    wifi-captive-portal \
     libgpiod \
     libgpiod-tools \
+    nano \
 "

@@ -1,0 +1,12 @@
+[Unit]
+Description=Set LoRa Gateway ID from Ethernet MAC
+Before=lora-packet-forwarder.service
+ConditionPathExists=/opt/lora-packet-forwarder/config/global_conf.json
+
+[Service]
+Type=oneshot
+ExecStart=/opt/lora-packet-forwarder/set-gateway-id.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
