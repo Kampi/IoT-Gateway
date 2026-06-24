@@ -2,10 +2,9 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
 SRC_URI:append = " \
     file://iot-gateway-imx8mm.dts \
-    file://peripherals.cfg \
-    file://usb.cfg \
-    file://wireless.cfg \
 "
+
+KERNEL_DEVICETREE = "freescale/iot-gateway-imx8mm.dtb"
 
 do_configure:append() {
     install -m 0644 ${WORKDIR}/iot-gateway-imx8mm.dts ${S}/arch/arm64/boot/dts/freescale/

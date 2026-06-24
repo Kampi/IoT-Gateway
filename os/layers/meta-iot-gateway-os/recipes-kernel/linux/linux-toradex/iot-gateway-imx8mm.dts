@@ -17,14 +17,6 @@
 				 "fsl,imx8mm";
 };
 
-&pcie0 {
-	status = "disabled";
-};
-
-&pcie_phy {
-	status = "disabled";
-};
-
 /* Version resistors: pull-ups on carrier (SODIMM 216/218/220), pull-down via pad control */
 &iomuxc {
 	pinctrl_version_resistors: versionresistorsgrp {
@@ -53,8 +45,6 @@
 };
 
 &gpio1 {
-	pinctrl-names = "default";
-	pinctrl-0 = <&pinctrl_version_resistors>;
 	gpio-line-names = "version-bit0", "", "", "", "", "", "", "",
 	                  "version-bit2", "", "", "version-bit1";
 };
@@ -90,46 +80,10 @@
 	};
 };
 
-&sound_card {
-	status = "disabled";
-};
-
-&nau8822_1a {
-	status = "disabled";
-};
-
-&sai2 {
-	status = "disabled";
-};
-
 &lcdif {
 	status = "disabled";
 };
 
 &backlight {
-	status = "disabled";
-};
-
-&pwm1 {
-	status = "disabled";
-};
-
-&pwm2 {
-	status = "disabled";
-};
-
-&pwm3 {
-	status = "disabled";
-};
-
-&ecspi3 {
-	status = "disabled";
-};
-
-&ecspi2 {
-	status = "disabled";
-};
-
-&verdin_som_adc {
 	status = "disabled";
 };

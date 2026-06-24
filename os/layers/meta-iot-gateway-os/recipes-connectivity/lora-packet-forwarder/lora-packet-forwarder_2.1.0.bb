@@ -41,7 +41,7 @@ do_install() {
     install -m 0755 ${S}/packet_forwarder/lora_pkt_fwd ${D}${LORA_INSTALL_DIR}/
 
     install -d ${D}${LORA_INSTALL_DIR}/config
-    install -m 0644 ${WORKDIR}/global_conf.json.RAK-USB-EU868 ${D}${LORA_INSTALL_DIR}/config/
+    install -m 0644 ${WORKDIR}/global_conf.json.RAK-USB-EU868 ${D}${LORA_INSTALL_DIR}/config/global_conf.json
 
     install -d ${D}${sysconfdir}/udev/rules.d
     install -m 0644 ${WORKDIR}/99-lora.rules ${D}${sysconfdir}/udev/rules.d/

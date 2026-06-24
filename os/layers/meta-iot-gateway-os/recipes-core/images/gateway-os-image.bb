@@ -25,4 +25,6 @@ IMAGE_INSTALL:append = " \
     linux-firmware \
     bluez5 \
     wifi-captive-portal \
+    libgpiod \
+    libgpiod-tools \
 "

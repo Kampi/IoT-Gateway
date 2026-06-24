@@ -1,8 +1,9 @@
 [Unit]
 Description=LoRa Packet Forwarder
 Documentation=https://github.com/Lora-net/sx1302_hal
-After=network-online.target
+After=network-online.target dev-lora.device
 Wants=network-online.target
+BindsTo=dev-lora.device
 
 [Service]
 Type=simple
