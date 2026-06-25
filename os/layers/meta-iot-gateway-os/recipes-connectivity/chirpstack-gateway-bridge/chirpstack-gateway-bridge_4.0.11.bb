@@ -21,6 +21,7 @@ inherit go-mod systemd
 
 GO_IMPORT = "github.com/chirpstack/chirpstack-gateway-bridge"
 
+# @USER_CONFIG: MQTT broker URL for ChirpStack Gateway Bridge (e.g. tcp://192.168.1.10:1883)
 CHIRPSTACK_MQTT_SERVER ?= "tcp://localhost:1883"
 
 SYSTEMD_SERVICE:${PN} = "chirpstack-gateway-bridge.service"

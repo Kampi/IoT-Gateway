@@ -16,15 +16,16 @@ Yocto/OpenEmbedded layer for the IoT Gateway OS. Targets the
 1. [Dependencies](#dependencies)
 2. [Adding the Layer](#adding-the-layer)
 3. [Building](#building)
-4. [Hardware](#hardware)
-5. [Distro Configuration](#distro-configuration)
-6. [Kernel](#kernel)
-7. [Device Tree](#device-tree)
-8. [Image Contents](#image-contents)
-9. [Protocol Stack](#protocol-stack)
-10. [Security](#security)
-11. [Networking](#networking)
-12. [System Logging](#system-logging)
+4. [Configuration Variables](#configuration-variables)
+5. [Hardware](#hardware)
+6. [Distro Configuration](#distro-configuration)
+7. [Kernel](#kernel)
+8. [Device Tree](#device-tree)
+9. [Image Contents](#image-contents)
+10. [Protocol Stack](#protocol-stack)
+11. [Security](#security)
+12. [Networking](#networking)
+13. [System Logging](#system-logging)
 
 ---
 
@@ -61,10 +62,38 @@ The resulting artifacts are located in `build/tmp/deploy/images/verdin-imx8mm/`.
 
 ---
 
+## Configuration Variables
+
+The following variables can be overridden in `build/conf/local.conf` to adapt
+the image to the target infrastructure without modifying any recipe.
+
+```bitbake
+# Example local.conf entries
+CHIRPSTACK_MQTT_SERVER  = "tcp://192.168.1.10:1883"
+ZIGBEE2MQTT_MQTT_SERVER = "mqtt://192.168.1.10"
+WMBUSMETERS_MQTT_SERVER = "192.168.1.10"
+```
+
+> **Updating this table:** run `python3 scripts/update-vars-doc.py` from the
+> layer root after adding a new `# @USER_CONFIG: <description>` marker above
+> any `VARIABLE ?= "default"` line in a recipe.
+
+<!-- USER_CONFIG_START -->
+
+| Variable | Default | Description | Recipe |
+| --- | --- | --- | --- |
+| `CHIRPSTACK_MQTT_SERVER` | `tcp://localhost:1883` | MQTT broker URL for ChirpStack Gateway Bridge (e.g. tcp://192.168.1.10:1883) | `chirpstack-gateway-bridge_4.0.11.bb` |
+| `WMBUSMETERS_MQTT_SERVER` | `localhost` | MQTT broker hostname (or hostname:port) for wmbusmeters (e.g. 192.168.1.10 or 192.168.1.10:1883) | `wmbusmeters_1.18.0.bb` |
+| `ZIGBEE2MQTT_MQTT_SERVER` | `mqtt://localhost` | MQTT broker URL for Zigbee2MQTT (e.g. mqtt://192.168.1.10) | `zigbee2mqtt_2.12.0.bb` |
+
+<!-- USER_CONFIG_END -->
+
+---
+
 ## Hardware
 
-**SoM:** Toradex Verdin iMX8MM (NXP i.MX 8M Mini, Cortex-A53 quad-core, aarch64)
-**Carrier Board:** Toradex Verdin Development Board (non-WiFi variant)
+**SoM**  
+Toradex Verdin iMX8MM (NXP i.MX 8M Mini, Cortex-A53 quad-core, aarch64)
 
 ### SODIMM Pin Mapping (relevant signals)
 
@@ -80,10 +109,6 @@ The resulting artifacts are located in `build/tmp/deploy/images/verdin-imx8mm/`.
 | SODIMM 216 | 216 | GPIO1_IO00 | `gpiochip0` line 0 | Version bit 0 (carrier pull-up, SoM pull-down) |
 | SODIMM 218 | 218 | GPIO1_IO11 | `gpiochip0` line 11 | Version bit 1 (carrier pull-up, SoM pull-down) |
 | SODIMM 220 | 220 | GPIO1_IO08 | `gpiochip0` line 8 | Version bit 2 (carrier pull-up, SoM pull-down) |
-
-> **Note:** PCIE_1_CLK_P (SODIMM 228) is a differential analog SerDes pad driven
-> exclusively by the `pcie_phy` clock output. It cannot be controlled as a GPIO.
-> Both `pcie0` and `pcie_phy` are currently **disabled** in the DTS.
 
 ---
 

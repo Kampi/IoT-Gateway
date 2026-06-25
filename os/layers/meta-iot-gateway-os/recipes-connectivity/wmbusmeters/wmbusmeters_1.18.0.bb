@@ -16,8 +16,11 @@ SRCREV = "2f2720d9d8e043304a366d11d933be9d535e17a5"
 
 S = "${WORKDIR}/git"
 
-DEPENDS = "rtlsdr icu libxml2"
-RDEPENDS:${PN} = "rtlsdr icu"
+DEPENDS = "rtlsdr icu libxml2 mosquitto"
+RDEPENDS:${PN} = "rtlsdr icu libmosquitto"
+
+# @USER_CONFIG: MQTT broker hostname (or hostname:port) for wmbusmeters (e.g. 192.168.1.10 or 192.168.1.10:1883)
+WMBUSMETERS_MQTT_SERVER ?= "localhost"
 
 # The Makefile strips binaries itself; let Yocto handle stripping instead.
 EXTRA_OEMAKE += "STRIP=true"
@@ -38,6 +41,7 @@ do_install () {
     install -d ${D}${sysconfdir}/wmbusmeters.d
     install -d ${D}${sysconfdir}/wmbusmeters.drivers.d
     install -m 0644 ${WORKDIR}/wmbusmeters.conf ${D}${sysconfdir}/wmbusmeters.conf
+    sed -i 's|@WMBUSMETERS_MQTT_SERVER@|${WMBUSMETERS_MQTT_SERVER}|g' ${D}${sysconfdir}/wmbusmeters.conf
 
     # systemd service
     install -d ${D}${systemd_system_unitdir}

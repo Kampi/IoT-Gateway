@@ -225,6 +225,9 @@ S = "${WORKDIR}/npm"
 
 inherit npm systemd
 
+# @USER_CONFIG: MQTT broker URL for Zigbee2MQTT (e.g. mqtt://192.168.1.10)
+ZIGBEE2MQTT_MQTT_SERVER ?= "mqtt://localhost"
+
 SYSTEMD_SERVICE:${PN} = "zigbee2mqtt.service"
 SYSTEMD_AUTO_ENABLE:${PN} = "enable"
 
@@ -247,6 +250,7 @@ do_install:append() {
 
     install -d ${D}/var/lib/zigbee2mqtt
     install -m 0644 ${WORKDIR}/configuration.yaml ${D}/var/lib/zigbee2mqtt/
+    sed -i 's|@ZIGBEE2MQTT_MQTT_SERVER@|${ZIGBEE2MQTT_MQTT_SERVER}|g' ${D}/var/lib/zigbee2mqtt/configuration.yaml
 
     prebuild_dir="${D}${prefix}/lib/node_modules/zigbee2mqtt/node_modules/@serialport/bindings-cpp/prebuilds"
     if [ -d "${prebuild_dir}" ]; then
