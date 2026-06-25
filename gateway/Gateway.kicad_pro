@@ -803,15 +803,26 @@
         "CLK_P",
         "CLK_N"
       ],
+      "Thread": [
+        "Reset",
+        "RTS",
+        "CTS",
+        "TxD",
+        "RxD"
+      ],
       "Zigbee": [
         "RxD",
         "TxD",
-        "Reset"
+        "Reset",
+        "CTS",
+        "RTS"
       ],
       "wM-Bus": [
         "TxD",
         "RxD",
-        "Reset"
+        "Reset",
+        "RTS",
+        "CTS"
       ]
     },
     "connection_grid_size": 50.0,
@@ -862,7 +873,7 @@
         "uuid": "d5742f03-3b1a-42e5-a384-018bd4b919aa"
       }
     ],
-    "used_designators": "",
+    "used_designators": "R1203-1204,R1206-1207,R1503-1506",
     "variants": []
   },
   "sheets": [
@@ -929,6 +940,10 @@
     [
       "527d94e0-3076-40e1-9f59-f07ec93bb0e7",
       "NVMe"
+    ],
+    [
+      "38da7bfd-61a1-4734-9412-ab3ae9cd3f77",
+      "Thread"
     ]
   ],
   "text_variables": {

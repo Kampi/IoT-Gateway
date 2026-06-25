@@ -11,6 +11,76 @@
 		(company "${COMPANY}")
 	)
 	(lib_symbols)
+	(text "I2C1: I2C"
+		(exclude_from_sim no)
+		(at 199.898 176.784 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "1703bdf2-05b6-4e43-a759-51ba6e3e253c")
+	)
+	(text "UART4: Thread"
+		(exclude_from_sim no)
+		(at 203.2 192.278 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "526e2779-dd43-47c6-8efc-5e818d0702a2")
+	)
+	(text "UART_1: Zigbee"
+		(exclude_from_sim no)
+		(at 220.98 171.704 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "58fa8114-2770-4afd-9958-4c21b260c961")
+	)
+	(text "USB1: OTG"
+		(exclude_from_sim no)
+		(at 201.168 185.166 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "78cab92f-b835-4301-8cc0-43fe7a81df68")
+	)
+	(text "UART_3: Console"
+		(exclude_from_sim no)
+		(at 221.742 176.784 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "8682ffba-2877-4bae-a3cf-de6a1d33e87d")
+	)
+	(text "UART_2: wMBus"
+		(exclude_from_sim no)
+		(at 221.488 174.498 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "94c1e81c-72ab-4fe7-a7b3-c2272115b156")
+	)
+	(text "USB2: LoRa"
+		(exclude_from_sim no)
+		(at 201.422 181.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "d733fa93-dee2-4c67-aa46-8d821ab714c7")
+	)
 	(text_box "[${#}] ${TITLE}"
 		(exclude_from_sim no)
 		(at 12.7 12.7 0)

@@ -9469,7 +9469,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Texas Instruments:TPS2121RUXT"
+		(property "Footprint" "Texas Instruments:RUX0012A"
 			(at 298.45 216.84 0)
 			(hide yes)
 			(show_name no)
