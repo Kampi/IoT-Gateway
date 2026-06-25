@@ -1,8 +1,7 @@
 # meta-iot-gateway-os
 
 Yocto/OpenEmbedded layer for the IoT Gateway OS. Targets the
-[Toradex Verdin iMX8MM](https://www.toradex.com/computer-on-modules/verdin-arm-family/nxp-imx-8m-mini-nano)
-(non-WiFi variant) and provides a hardened, multi-protocol IoT gateway image.
+[Toradex Verdin iMX8MM](https://www.toradex.com/computer-on-modules/verdin-arm-family/nxp-imx-8m-mini-nano) and provides a hardened, multi-protocol IoT gateway image.
 
 - **Yocto release:** Scarthgap (5.0)
 - **Distro:** `gateway-os`
