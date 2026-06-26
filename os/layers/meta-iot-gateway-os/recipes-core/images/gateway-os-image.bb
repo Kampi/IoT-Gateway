@@ -8,8 +8,8 @@ KERNEL_DEVICETREE = "freescale/iot-gateway-imx8mm.dtb"
 TEZI_EXTERNAL_KERNEL_DEVICETREE = ""
 TEZI_EXTERNAL_KERNEL_DEVICETREE_BOOT = ""
 
-IMAGE_BOOT_FILES:remove = "overlays/*;overlays/"
-IMAGE_BOOT_FILES:remove = "overlays.txt"
+#IMAGE_BOOT_FILES:remove = "overlays/*;overlays/"
+#IMAGE_BOOT_FILES:remove = "overlays.txt"
 
 IMAGE_FEATURES += " \
     ssh-server-openssh \
@@ -30,6 +30,7 @@ IMAGE_INSTALL:append = " \
     gateway-logging \
     networkmanager \
     networkmanager-nmcli \
+    wifi-captive-portal \
     iw \
     linux-firmware \
     bluez5 \

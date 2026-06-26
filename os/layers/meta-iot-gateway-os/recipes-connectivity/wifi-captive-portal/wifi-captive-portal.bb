@@ -1,8 +1,8 @@
 SUMMARY = "WiFi captive portal for initial network configuration"
-DESCRIPTION = "On boot, tries to connect to a configured WiFi network. \
+DESCRIPTION = "On boot, tries to connect to a configured WiFi network via NetworkManager. \
 If no credentials are stored or the connection fails, raises an open \
-Access Point (Gateway-Setup) with a captive portal that lets the user \
-select a network and enter the password."
+Access Point on uap0 (Gateway-Setup) with a captive portal that lets the user \
+select a network and enter the password. Credentials are saved as an NM connection profile."
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 
@@ -11,7 +11,6 @@ SRC_URI = " \
     file://captive-portal.py \
     file://hostapd.conf \
     file://dnsmasq-captive.conf \
-    file://wpa_supplicant-mlan0.conf \
     file://services/wifi-setup.service \
 "
 
@@ -19,13 +18,12 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/files:${THISDIR}:"
 
 inherit systemd
 
-# hostapd and dnsmasq are pulled in via RDEPENDS so they don't have to be
-# listed separately in IMAGE_INSTALL
 RDEPENDS:${PN} = " \
     bash \
     hostapd \
     dnsmasq \
-    wpa-supplicant \
+    networkmanager \
+    networkmanager-nmcli \
     iw \
     python3-core \
     python3-netclient \
@@ -45,10 +43,6 @@ do_install() {
 
     install -m 0644 ${WORKDIR}/dnsmasq-captive.conf ${D}${sysconfdir}/dnsmasq-captive.conf
 
-    # Empty wpa-supplicant config — populated at runtime by the captive portal
-    install -d ${D}${sysconfdir}/wpa_supplicant
-    install -m 0600 ${WORKDIR}/wpa_supplicant-mlan0.conf ${D}${sysconfdir}/wpa_supplicant/wpa_supplicant-mlan0.conf
-
     install -d ${D}${systemd_system_unitdir}
     install -m 0644 ${WORKDIR}/services/wifi-setup.service ${D}${systemd_system_unitdir}/wifi-setup.service
 }
@@ -58,6 +52,5 @@ FILES:${PN} += " \
     ${bindir}/captive-portal \
     ${sysconfdir}/hostapd/hostapd.conf \
     ${sysconfdir}/dnsmasq-captive.conf \
-    ${sysconfdir}/wpa_supplicant/wpa_supplicant-mlan0.conf \
     ${systemd_system_unitdir}/wifi-setup.service \
 "

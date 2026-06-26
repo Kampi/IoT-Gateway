@@ -17,7 +17,7 @@ SRCREV = "2f2720d9d8e043304a366d11d933be9d535e17a5"
 S = "${WORKDIR}/git"
 
 DEPENDS = "rtlsdr icu libxml2 mosquitto"
-RDEPENDS:${PN} = "rtlsdr icu libmosquitto"
+RDEPENDS:${PN} = "rtlsdr icu libmosquitto1"
 
 # @USER_CONFIG: MQTT broker hostname (or hostname:port) for wmbusmeters (e.g. 192.168.1.10 or 192.168.1.10:1883)
 WMBUSMETERS_MQTT_SERVER ?= "localhost"

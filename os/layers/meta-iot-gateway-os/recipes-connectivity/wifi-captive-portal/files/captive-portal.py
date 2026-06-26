@@ -23,7 +23,8 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import parse_qs, urlparse
 
 LISTEN_PORT = 80
-WPA_CONF = "/etc/wpa_supplicant/wpa_supplicant-mlan0.conf"
+STA_IFACE = "mlan0"
+STA_CON_NAME = "wifi-client"
 SCAN_CACHE = "/run/wifi-scan-cache.json"
 COUNTRY = "DE"
 
@@ -108,20 +109,22 @@ def _render(message: str = "") -> bytes:
 
 
 def _save_credentials(ssid: str, password: str) -> None:
-    config = (
-        f"ctrl_interface=/var/run/wpa_supplicant\n"
-        f"update_config=1\n"
-        f"country={COUNTRY}\n\n"
-        f"network={{\n"
-        f'    ssid="{ssid}"\n'
-        f'    psk="{password}"\n'
-        f"    key_mgmt=WPA-PSK\n"
-        f"}}\n"
-    )
-    os.makedirs(os.path.dirname(WPA_CONF), exist_ok=True)
-    with open(WPA_CONF, "w") as f:
-        f.write(config)
-    os.chmod(WPA_CONF, 0o600)
+    import subprocess
+    subprocess.run(["nmcli", "con", "delete", STA_CON_NAME],
+                   capture_output=True)
+    subprocess.run([
+        "nmcli", "con", "add",
+        "type", "wifi",
+        "ifname", STA_IFACE,
+        "con-name", STA_CON_NAME,
+        "wifi.ssid", ssid,
+        "wifi-sec.key-mgmt", "wpa-psk",
+        "wifi-sec.psk", password,
+        "ipv4.method", "auto",
+        "ipv6.method", "disabled",
+        "connection.autoconnect", "yes",
+        "connection.autoconnect-priority", "20",
+    ], check=True)
 
 
 def _schedule_exit() -> None:

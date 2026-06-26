@@ -1,9 +1,2 @@
 [Match]
-Name=mlan*
-WLANInterfaceType=station
-
-[Network]
-DHCP=yes
-
-[DHCP]
-RouteMetric=20
+Name=disabled_mlan* disabled_wlan*
