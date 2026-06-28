@@ -4972,7 +4972,7 @@
 		)
 		(uuid "7d066515-8ee6-44e7-87c5-d5b120c0232e")
 	)
-	(hierarchical_label "SSD-Power"
+	(hierarchical_label "SSD-Power-Enable"
 		(shape input)
 		(at 64.77 124.46 180)
 		(effects

@@ -10918,7 +10918,7 @@
 		)
 		(uuid "8e1cda28-3f8c-45c0-92db-c38616ca9d1e")
 	)
-	(hierarchical_label "SSD-Power"
+	(hierarchical_label "SSD-Power-Enable"
 		(shape output)
 		(at 140.97 176.53 180)
 		(effects
