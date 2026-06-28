@@ -854,7 +854,7 @@
 				(justify right)
 			)
 		)
-		(pin "SSD-Power" input
+		(pin "SSD-Power-Enable" input
 			(at 148.59 181.61 0)
 			(uuid "172a7350-7fce-4481-84f0-a08ccd1570d0")
 			(effects
@@ -1404,7 +1404,7 @@
 				(justify left)
 			)
 		)
-		(pin "SSD-Power" output
+		(pin "SSD-Power-Enable" output
 			(at 176.53 172.72 180)
 			(uuid "d3968421-70ba-425b-86c7-9d93021baf5b")
 			(effects
