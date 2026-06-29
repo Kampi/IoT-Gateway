@@ -443,9 +443,9 @@
 		<Function name="gpio5.IO[18]" pinid="95" pinname="I2C3_SCL" checked="-1" parentname="GPI_SODIMM_95"></Function>
 		<Function name="gpio4.IO[4]" pinid="96" pinname="SAI1_RXD2" checked="-1" parentname="GPI_SODIMM_96"></Function>
 		<Function name="gpio4.IO[5]" pinid="100" pinname="SAI1_RXD3" checked="-1" parentname="GPIO_SODIMM_100"></Function>
-		<Function name="gpio4.IO[0]" pinid="102" pinname="SAI1_RXFS" checked="-1" parentname="GPIO_SODIMM_102"></Function>
-		<Function name="gpio4.IO[11]" pinid="104" pinname="SAI1_TXC" checked="-1" parentname="GPIO_SODIMM_104"></Function>
-		<Function name="gpio4.IO[12]" pinid="106" pinname="SAI1_TXD0" checked="-1" parentname="GPIO_SODIMM_106"></Function>
+		<Function name="gpio4.IO[0]" pinid="102" pinname="SAI1_RXFS" checked="1" parentname="GPIO_SODIMM_102"></Function>
+		<Function name="gpio4.IO[11]" pinid="104" pinname="SAI1_TXC" checked="1" parentname="GPIO_SODIMM_104"></Function>
+		<Function name="gpio4.IO[12]" pinid="106" pinname="SAI1_TXD0" checked="1" parentname="GPIO_SODIMM_106"></Function>
 		<Function name="gpio4.IO[13]" pinid="108" pinname="SAI1_TXD1" checked="-1" parentname="GPIO_SODIMM_108"></Function>
 		<Function name="gpio4.IO[14]" pinid="112" pinname="SAI1_TXD2" checked="-1" parentname="GPIO_SODIMM_112"></Function>
 		<Function name="gpio4.IO[15]" pinid="114" pinname="SAI1_TXD3" checked="-1" parentname="GPIO_SODIMM_114"></Function>
@@ -472,8 +472,8 @@
 		<Function name="gpio5.IO[3]" pinid="16" pinname="SPDIF_TX" checked="-1" parentname="GPIO_SODIMM_16"></Function>
 		<Function name="gpio4.IO[9]" pinid="174" pinname="SAI1_RXD7" checked="-1" parentname="GPIO_SODIMM_174"></Function>
 		<Function name="gpio3.IO[15]" pinid="17" pinname="NAND_RE_B" checked="1" parentname="GPIO_SODIMM_17[:slash]GPIO_9_DSI"></Function>
-		<Function name="gpio1.IO[14]" pinid="185" pinname="GPIO1_IO14" checked="-1" parentname="GPIO_SODIMM_185"></Function>
-		<Function name="gpio1.IO[15]" pinid="187" pinname="GPIO1_IO15" checked="-1" parentname="GPIO_SODIMM_187"></Function>
+		<Function name="gpio1.IO[14]" pinid="185" pinname="GPIO1_IO14" checked="1" parentname="GPIO_SODIMM_185"></Function>
+		<Function name="gpio1.IO[15]" pinid="187" pinname="GPIO1_IO15" checked="1" parentname="GPIO_SODIMM_187"></Function>
 		<Function name="gpio1.IO[1]" pinid="19" pinname="GPIO1_IO01" checked="1" parentname="GPIO_SODIMM_19"></Function>
 		<Function name="gpio5.IO[10]" pinid="196" pinname="ECSPI2_SCLK" checked="-1" parentname="GPIO_SODIMM_196"></Function>
 		<Function name="gpio5.IO[12]" pinid="198" pinname="ECSPI2_MISO" checked="-1" parentname="GPIO_SODIMM_198"></Function>
@@ -481,10 +481,10 @@
 		<Function name="gpio5.IO[13]" pinid="202" pinname="ECSPI2_SS0" checked="-1" parentname="GPIO_SODIMM_202"></Function>
 		<Function name="gpio3.IO[4]" pinid="206" pinname="NAND_CE3_B" checked="-1" parentname="GPIO_SODIMM_206[:slash]GPIO_1"></Function>
 		<Function name="gpio5.IO[5]" pinid="208" pinname="SPDIF_EXT_CLK" checked="-1" parentname="GPIO_SODIMM_208[:slash]GPIO_2"></Function>
-		<Function name="gpio5.IO[26]" pinid="210" pinname="UART3_RXD" checked="-1" parentname="GPIO_SODIMM_210[:slash]GPIO_3"></Function>
-		<Function name="gpio5.IO[27]" pinid="212" pinname="UART3_TXD" checked="-1" parentname="GPIO_SODIMM_212[:slash]GPIO_4"></Function>
-		<Function name="gpio1.IO[0]" pinid="216" pinname="GPIO1_IO00" checked="-1" parentname="GPIO_SODIMM_216[:slash]GPIO_5_CSI"></Function>
-		<Function name="gpio1.IO[11]" pinid="218" pinname="GPIO1_IO11" checked="-1" parentname="GPIO_SODIMM_218[:slash]GPIO_6_CSI"></Function>
+		<Function name="gpio5.IO[26]" pinid="210" pinname="UART3_RXD" checked="1" parentname="GPIO_SODIMM_210[:slash]GPIO_3"></Function>
+		<Function name="gpio5.IO[27]" pinid="212" pinname="UART3_TXD" checked="1" parentname="GPIO_SODIMM_212[:slash]GPIO_4"></Function>
+		<Function name="gpio1.IO[0]" pinid="216" pinname="GPIO1_IO00" checked="1" parentname="GPIO_SODIMM_216[:slash]GPIO_5_CSI"></Function>
+		<Function name="gpio1.IO[11]" pinid="218" pinname="GPIO1_IO11" checked="1" parentname="GPIO_SODIMM_218[:slash]GPIO_6_CSI"></Function>
 		<Function name="gpio3.IO[3]" pinid="21" pinname="NAND_CE2_B" checked="1" parentname="GPIO_SODIMM_21[:slash]GPIO_10_DSI"></Function>
 		<Function name="gpio1.IO[8]" pinid="220" pinname="GPIO1_IO08" checked="-1" parentname="GPIO_SODIMM_220[:slash]GPIO_7_CSI"></Function>
 		<Function name="gpio1.IO[9]" pinid="222" pinname="GPIO1_IO09" checked="-1" parentname="GPIO_SODIMM_222[:slash]GPIO_8_CSI"></Function>
@@ -891,23 +891,23 @@
 		<Function name="uart1.CTS_B" pinid="210" pinname="UART3_RXD" checked="-1" parentname="UART_3_RTS"></Function>
 		<Function name="uart1.RX" pinid="147" pinname="SAI2_RXC" checked="1" parentname="UART_3_RXD"></Function>
 		<Function name="uart1.TX" pinid="149" pinname="SAI2_RXFS" checked="1" parentname="UART_3_TXD"></Function>
-		<Function name="uart4.RTS_B" pinid="202" pinname="ECSPI2_SS0" checked="-1" parentname="UART_4_CTS"></Function>
-		<Function name="uart4.CTS_B" pinid="198" pinname="ECSPI2_MISO" checked="-1" parentname="UART_4_RTS"></Function>
+		<Function name="uart4.RTS_B" pinid="202" pinname="ECSPI2_SS0" checked="1" parentname="UART_4_CTS"></Function>
+		<Function name="uart4.CTS_B" pinid="198" pinname="ECSPI2_MISO" checked="1" parentname="UART_4_RTS"></Function>
 		<Function name="uart4.RX" pinid="151" pinname="UART4_RXD" checked="-1" parentname="UART_4_RXD"></Function>
-		<Function name="uart4.RX" pinid="196" pinname="ECSPI2_SCLK" checked="-1" parentname="UART_4_RXD"></Function>
+		<Function name="uart4.RX" pinid="196" pinname="ECSPI2_SCLK" checked="1" parentname="UART_4_RXD"></Function>
 		<Function name="uart4.TX" pinid="153" pinname="UART4_TXD" checked="-1" parentname="UART_4_TXD"></Function>
-		<Function name="uart4.TX" pinid="200" pinname="ECSPI2_MOSI" checked="-1" parentname="UART_4_TXD"></Function>
+		<Function name="uart4.TX" pinid="200" pinname="ECSPI2_MOSI" checked="1" parentname="UART_4_TXD"></Function>
 		<Function name="USB1_DN" pinid="163" pinname="USB1_DN" checked="1" parentname="USB_1_D_N"></Function>
 		<Function name="USB1_DP" pinid="165" pinname="USB1_DP" checked="1" parentname="USB_1_D_P"></Function>
-		<Function name="usb1.OTG_PWR" pinid="155" pinname="GPIO1_IO12" checked="1" parentname="USB_1_EN"></Function>
+		<Function name="usb1.OTG_PWR" pinid="155" pinname="GPIO1_IO12" checked="-1" parentname="USB_1_EN"></Function>
 		<Function name="USB1_ID" pinid="161" pinname="USB1_ID" checked="1" parentname="USB_1_ID"></Function>
-		<Function name="usb1.OTG_OC" pinid="157" pinname="GPIO1_IO13" checked="1" parentname="USB_1_OC#"></Function>
+		<Function name="usb1.OTG_OC" pinid="157" pinname="GPIO1_IO13" checked="-1" parentname="USB_1_OC#"></Function>
 		<Function name="USB1_VBUS" pinid="159" pinname="USB1_VBUS" checked="1" parentname="USB_1_VBUS"></Function>
 		<Function name="USB2_DN" pinid="181" pinname="USB2_DN" checked="1" parentname="USB_2_D_N"></Function>
 		<Function name="USB2_DP" pinid="183" pinname="USB2_DP" checked="1" parentname="USB_2_D_P"></Function>
-		<Function name="usb2.OTG_PWR" pinid="185" pinname="GPIO1_IO14" checked="1" parentname="USB_2_EN"></Function>
-		<Function name="usb2.OTG_ID" pinid="218" pinname="GPIO1_IO11" checked="1" parentname="USB_2_ID"></Function>
-		<Function name="usb2.OTG_OC" pinid="187" pinname="GPIO1_IO15" checked="1" parentname="USB_2_OC#"></Function>
+		<Function name="usb2.OTG_PWR" pinid="185" pinname="GPIO1_IO14" checked="-1" parentname="USB_2_EN"></Function>
+		<Function name="usb2.OTG_ID" pinid="218" pinname="GPIO1_IO11" checked="-1" parentname="USB_2_ID"></Function>
+		<Function name="usb2.OTG_OC" pinid="187" pinname="GPIO1_IO15" checked="-1" parentname="USB_2_OC#"></Function>
 		<Function name="AW-CM276_CONFIG_HOST[0]" pinid="144" pinname="" checked="-1" parentname="Wi-Fi_CONFIG_0"></Function>
 		<Function name="AW-CM276_GPIO[3]" pinid="176" pinname="" checked="-1" parentname="Wi-Fi_LED_BT"></Function>
 		<Function name="AW-CM276_GPIO[2]" pinid="188" pinname="" checked="-1" parentname="Wi-Fi_LED_WLAN"></Function>
@@ -1347,9 +1347,9 @@
 		<Category name="GPI_SODIMM_95" checked="-1"></Category>
 		<Category name="GPI_SODIMM_96" checked="-1"></Category>
 		<Category name="GPIO_SODIMM_100" checked="-1"></Category>
-		<Category name="GPIO_SODIMM_102" checked="-1"></Category>
-		<Category name="GPIO_SODIMM_104" checked="-1"></Category>
-		<Category name="GPIO_SODIMM_106" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_102" checked="1"></Category>
+		<Category name="GPIO_SODIMM_104" checked="1"></Category>
+		<Category name="GPIO_SODIMM_106" checked="1"></Category>
 		<Category name="GPIO_SODIMM_108" checked="-1"></Category>
 		<Category name="GPIO_SODIMM_112" checked="-1"></Category>
 		<Category name="GPIO_SODIMM_114" checked="-1"></Category>
@@ -1376,8 +1376,8 @@
 		<Category name="GPIO_SODIMM_16" checked="-1"></Category>
 		<Category name="GPIO_SODIMM_174" checked="-1"></Category>
 		<Category name="GPIO_SODIMM_17[:slash]GPIO_9_DSI" checked="1"></Category>
-		<Category name="GPIO_SODIMM_185" checked="-1"></Category>
-		<Category name="GPIO_SODIMM_187" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_185" checked="1"></Category>
+		<Category name="GPIO_SODIMM_187" checked="1"></Category>
 		<Category name="GPIO_SODIMM_19" checked="1"></Category>
 		<Category name="GPIO_SODIMM_196" checked="-1"></Category>
 		<Category name="GPIO_SODIMM_198" checked="-1"></Category>
@@ -1385,10 +1385,10 @@
 		<Category name="GPIO_SODIMM_202" checked="-1"></Category>
 		<Category name="GPIO_SODIMM_206[:slash]GPIO_1" checked="-1"></Category>
 		<Category name="GPIO_SODIMM_208[:slash]GPIO_2" checked="-1"></Category>
-		<Category name="GPIO_SODIMM_210[:slash]GPIO_3" checked="-1"></Category>
-		<Category name="GPIO_SODIMM_212[:slash]GPIO_4" checked="-1"></Category>
-		<Category name="GPIO_SODIMM_216[:slash]GPIO_5_CSI" checked="-1"></Category>
-		<Category name="GPIO_SODIMM_218[:slash]GPIO_6_CSI" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_210[:slash]GPIO_3" checked="1"></Category>
+		<Category name="GPIO_SODIMM_212[:slash]GPIO_4" checked="1"></Category>
+		<Category name="GPIO_SODIMM_216[:slash]GPIO_5_CSI" checked="1"></Category>
+		<Category name="GPIO_SODIMM_218[:slash]GPIO_6_CSI" checked="1"></Category>
 		<Category name="GPIO_SODIMM_21[:slash]GPIO_10_DSI" checked="1"></Category>
 		<Category name="GPIO_SODIMM_220[:slash]GPIO_7_CSI" checked="-1"></Category>
 		<Category name="GPIO_SODIMM_222[:slash]GPIO_8_CSI" checked="-1"></Category>
@@ -1795,23 +1795,23 @@
 		<Category name="UART_3_RTS" checked="-1"></Category>
 		<Category name="UART_3_RXD" checked="1"></Category>
 		<Category name="UART_3_TXD" checked="1"></Category>
-		<Category name="UART_4_CTS" checked="-1"></Category>
-		<Category name="UART_4_RTS" checked="-1"></Category>
+		<Category name="UART_4_CTS" checked="1"></Category>
+		<Category name="UART_4_RTS" checked="1"></Category>
 		<Category name="UART_4_RXD" checked="-1"></Category>
-		<Category name="UART_4_RXD" checked="-1"></Category>
+		<Category name="UART_4_RXD" checked="1"></Category>
 		<Category name="UART_4_TXD" checked="-1"></Category>
-		<Category name="UART_4_TXD" checked="-1"></Category>
+		<Category name="UART_4_TXD" checked="1"></Category>
 		<Category name="USB_1_D_N" checked="1"></Category>
 		<Category name="USB_1_D_P" checked="1"></Category>
-		<Category name="USB_1_EN" checked="1"></Category>
+		<Category name="USB_1_EN" checked="-1"></Category>
 		<Category name="USB_1_ID" checked="1"></Category>
-		<Category name="USB_1_OC#" checked="1"></Category>
+		<Category name="USB_1_OC#" checked="-1"></Category>
 		<Category name="USB_1_VBUS" checked="1"></Category>
 		<Category name="USB_2_D_N" checked="1"></Category>
 		<Category name="USB_2_D_P" checked="1"></Category>
-		<Category name="USB_2_EN" checked="1"></Category>
-		<Category name="USB_2_ID" checked="1"></Category>
-		<Category name="USB_2_OC#" checked="1"></Category>
+		<Category name="USB_2_EN" checked="-1"></Category>
+		<Category name="USB_2_ID" checked="-1"></Category>
+		<Category name="USB_2_OC#" checked="-1"></Category>
 		<Category name="Wi-Fi_CONFIG_0" checked="-1"></Category>
 		<Category name="Wi-Fi_LED_BT" checked="-1"></Category>
 		<Category name="Wi-Fi_LED_WLAN" checked="-1"></Category>

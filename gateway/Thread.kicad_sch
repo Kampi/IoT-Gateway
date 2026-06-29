@@ -4050,7 +4050,7 @@
 	)
 	(rectangle
 		(start 24.13 38.1)
-		(end 248.92 204.47)
+		(end 266.7 204.47)
 		(stroke
 			(width 1)
 			(type default)
@@ -4200,12 +4200,6 @@
 		(uuid "698c292f-e11b-4eae-bbb8-588c421a104a")
 	)
 	(junction
-		(at 49.53 54.61)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7b8062c4-e9fe-4f8a-bdee-d74119fb4035")
-	)
-	(junction
 		(at 54.61 246.38)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4216,6 +4210,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a8fcf3c5-a170-46e1-9235-18cd8a5e2be0")
+	)
+	(junction
+		(at 49.53 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b54fadba-f9f2-4db1-9f16-47eb8f05579d")
 	)
 	(junction
 		(at 205.74 68.58)
@@ -4436,7 +4436,7 @@
 		(uuid "fb79319c-57eb-4261-85cf-19087fc31b39")
 	)
 	(bus_entry
-		(at 246.38 93.98)
+		(at 257.81 93.98)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -4445,7 +4445,7 @@
 		(uuid "2a564887-0a3a-45e6-80c9-34181216ced3")
 	)
 	(bus_entry
-		(at 246.38 104.14)
+		(at 257.81 104.14)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -4454,7 +4454,7 @@
 		(uuid "3edc542c-82b9-4f23-b123-40213fcb5ca3")
 	)
 	(bus_entry
-		(at 246.38 109.22)
+		(at 257.81 109.22)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -4463,7 +4463,7 @@
 		(uuid "71311e9e-3ab6-4923-8755-f43927f367a3")
 	)
 	(bus_entry
-		(at 246.38 99.06)
+		(at 257.81 99.06)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -4772,16 +4772,6 @@
 	)
 	(wire
 		(pts
-			(xy 218.44 101.6) (xy 222.25 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5d649bce-787e-4ec0-b234-f18d7f74056f")
-	)
-	(wire
-		(pts
 			(xy 77.47 87.63) (xy 78.74 87.63)
 		)
 		(stroke
@@ -4792,7 +4782,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 106.68) (xy 243.84 106.68)
+			(xy 229.87 106.68) (xy 255.27 106.68)
 		)
 		(stroke
 			(width 0)
@@ -4812,7 +4802,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 101.6) (xy 243.84 101.6)
+			(xy 241.3 101.6) (xy 255.27 101.6)
 		)
 		(stroke
 			(width 0)
@@ -4832,7 +4822,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 96.52) (xy 243.84 96.52)
+			(xy 241.3 96.52) (xy 255.27 96.52)
 		)
 		(stroke
 			(width 0)
@@ -4842,7 +4832,7 @@
 	)
 	(bus
 		(pts
-			(xy 246.38 54.61) (xy 246.38 109.22)
+			(xy 257.81 54.61) (xy 257.81 109.22)
 		)
 		(stroke
 			(width 0)
@@ -5092,6 +5082,16 @@
 	)
 	(wire
 		(pts
+			(xy 218.44 101.6) (xy 233.68 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3c76b68-5527-4ac2-b484-7d78f6a2122d")
+	)
+	(wire
+		(pts
 			(xy 142.24 81.28) (xy 142.24 82.55)
 		)
 		(stroke
@@ -5222,7 +5222,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 111.76) (xy 243.84 111.76)
+			(xy 229.87 111.76) (xy 255.27 111.76)
 		)
 		(stroke
 			(width 0)
@@ -5250,9 +5250,19 @@
 		)
 		(uuid "e3ca99dc-7cce-4dc3-9981-9f28ae0cd13b")
 	)
+	(wire
+		(pts
+			(xy 218.44 96.52) (xy 233.68 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4852cce-8267-4aee-bbb2-04e1ab0b0acd")
+	)
 	(bus
 		(pts
-			(xy 49.53 54.61) (xy 246.38 54.61)
+			(xy 49.53 54.61) (xy 257.81 54.61)
 		)
 		(stroke
 			(width 0)
@@ -5279,16 +5289,6 @@
 			(type default)
 		)
 		(uuid "f3fcef06-e6d3-474c-b008-5ac78b80f9d6")
-	)
-	(wire
-		(pts
-			(xy 218.44 96.52) (xy 222.25 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f50a4f1e-49ee-420f-869e-3f5c1a776a3f")
 	)
 	(wire
 		(pts
@@ -5351,7 +5351,7 @@
 		(uuid "fe58f2d7-ce9e-429f-836e-218a4d95c1f2")
 	)
 	(label "Thread.RxD"
-		(at 243.84 111.76 180)
+		(at 255.27 111.76 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5361,7 +5361,7 @@
 		(uuid "01f86251-c9c2-4699-8156-c2a49d0aab6c")
 	)
 	(label "Thread.RTS"
-		(at 243.84 96.52 180)
+		(at 255.27 96.52 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5381,7 +5381,7 @@
 		(uuid "22272f9e-ff6e-4600-b86a-0e838f7d902e")
 	)
 	(label "Thread.TxD"
-		(at 243.84 106.68 180)
+		(at 255.27 106.68 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5481,7 +5481,7 @@
 		(uuid "b158e8b3-17c2-4027-a05f-5cf077ebd727")
 	)
 	(label "Thread.CTS"
-		(at 243.84 101.6 180)
+		(at 255.27 101.6 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6608,7 +6608,7 @@
 		(dnp no)
 		(uuid "3ec7a4ce-bbb2-4718-b3a8-1d233b903540")
 		(property "Reference" "R1506"
-			(at 226.06 130.556 90)
+			(at 226.06 115.316 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6618,7 +6618,7 @@
 			)
 		)
 		(property "Value" "0R"
-			(at 226.06 133.096 90)
+			(at 226.06 117.856 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7290,7 +7290,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 226.06 101.6 270)
+		(at 237.49 101.6 270)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -7301,7 +7301,7 @@
 		(dnp no)
 		(uuid "6f16d67b-5df1-4a13-9171-2b7b8ffeaac6")
 		(property "Reference" "R1504"
-			(at 226.06 120.396 90)
+			(at 237.49 105.41 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7311,7 +7311,7 @@
 			)
 		)
 		(property "Value" "0R"
-			(at 226.06 122.936 90)
+			(at 237.49 107.95 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7321,7 +7321,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 226.06 103.378 90)
+			(at 237.49 103.378 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7332,7 +7332,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
-			(at 226.06 101.6 0)
+			(at 237.49 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7343,7 +7343,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 226.06 101.6 0)
+			(at 237.49 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7354,7 +7354,7 @@
 			)
 		)
 		(property "manf" "Bourns"
-			(at 226.06 101.6 0)
+			(at 237.49 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7365,7 +7365,7 @@
 			)
 		)
 		(property "manf#" "CR0805-J/-000ELF"
-			(at 226.06 101.6 0)
+			(at 237.49 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7376,7 +7376,7 @@
 			)
 		)
 		(property "mouser#" "652-CR0805-J/-000ELF"
-			(at 226.06 101.6 0)
+			(at 237.49 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7949,9 +7949,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "860b6150-0384-4a30-a474-2d1d8afa6f78")
 		(property "Reference" "R1505"
-			(at 226.06 125.476 90)
+			(at 226.06 100.33 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7961,7 +7962,7 @@
 			)
 		)
 		(property "Value" "0R"
-			(at 226.06 128.016 90)
+			(at 226.06 102.87 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9330,7 +9331,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 226.06 96.52 90)
+		(at 237.49 96.52 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9340,7 +9341,7 @@
 		(dnp no)
 		(uuid "d7ad85da-107e-4994-b6f7-5a153803c2c0")
 		(property "Reference" "R1503"
-			(at 226.06 115.316 90)
+			(at 237.49 90.932 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9350,7 +9351,7 @@
 			)
 		)
 		(property "Value" "0R"
-			(at 226.06 117.856 90)
+			(at 237.49 93.472 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9360,7 +9361,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 226.06 98.298 90)
+			(at 237.49 98.298 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9371,7 +9372,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
-			(at 226.06 96.52 0)
+			(at 237.49 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9382,7 +9383,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 226.06 96.52 0)
+			(at 237.49 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9393,7 +9394,7 @@
 			)
 		)
 		(property "manf" "Bourns"
-			(at 226.06 96.52 0)
+			(at 237.49 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9404,7 +9405,7 @@
 			)
 		)
 		(property "manf#" "CR0805-J/-000ELF"
-			(at 226.06 96.52 0)
+			(at 237.49 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9415,7 +9416,7 @@
 			)
 		)
 		(property "mouser#" "652-CR0805-J/-000ELF"
-			(at 226.06 96.52 0)
+			(at 237.49 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

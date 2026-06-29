@@ -11,7 +11,7 @@
 		(company "${COMPANY}")
 	)
 	(lib_symbols)
-	(text "I2C1: I2C"
+	(text "I2C_1: I2C"
 		(exclude_from_sim no)
 		(at 199.898 176.784 0)
 		(effects
@@ -21,9 +21,19 @@
 		)
 		(uuid "1703bdf2-05b6-4e43-a759-51ba6e3e253c")
 	)
-	(text "UART4: Thread"
+	(text "CAN_1: CAN"
 		(exclude_from_sim no)
-		(at 203.2 192.278 0)
+		(at 198.12 171.958 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "1aa54dc9-f4de-45f0-b085-f82192b130da")
+	)
+	(text "UART_4: Thread"
+		(exclude_from_sim no)
+		(at 220.98 179.578 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -41,7 +51,7 @@
 		)
 		(uuid "58fa8114-2770-4afd-9958-4c21b260c961")
 	)
-	(text "USB1: OTG"
+	(text "USB_1: OTG"
 		(exclude_from_sim no)
 		(at 201.168 185.166 0)
 		(effects
@@ -71,7 +81,7 @@
 		)
 		(uuid "94c1e81c-72ab-4fe7-a7b3-c2272115b156")
 	)
-	(text "USB2: LoRa"
+	(text "USB_2: LoRa"
 		(exclude_from_sim no)
 		(at 201.422 181.61 0)
 		(effects
