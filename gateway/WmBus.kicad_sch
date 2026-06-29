@@ -1183,7 +1183,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Logic_LevelTranslator:TXB0104RUT"
+		(symbol "Logic_LevelTranslator:TXB0104PW"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1199,7 +1199,7 @@
 					)
 				)
 			)
-			(property "Value" "TXB0104RUT"
+			(property "Value" "TXB0104PW"
 				(at 3.81 16.51 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1210,7 +1210,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_DFN_QFN:Texas_R-PUQFN-N12"
+			(property "Footprint" "Package_SO:TSSOP-14_4.4x5mm_P0.65mm"
 				(at 0 -19.05 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1232,7 +1232,7 @@
 					)
 				)
 			)
-			(property "Description" "4-Bit Bidirectional Voltage-Level Translator, Auto Direction Sensing and ±15-kV ESD Protection, 1.2 - 3.6V APort, 1.65 - 5.5V BPort, Texas_PUQFN-12"
+			(property "Description" "4-Bit Bidirectional Voltage-Level Translator, Auto Direction Sensing and ±15-kV ESD Protection, 1.2 - 3.6V APort, 1.65 - 5.5V BPort, TSSOP-14"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1254,7 +1254,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "Texas*R*PUQFN*N12*"
+			(property "ki_fp_filters" "TSSOP*14*5mm*P0.65mm*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1265,7 +1265,7 @@
 					)
 				)
 			)
-			(symbol "TXB0104RUT_0_1"
+			(symbol "TXB0104PW_0_1"
 				(rectangle
 					(start -7.62 15.24)
 					(end 7.62 -15.24)
@@ -1275,6 +1275,17 @@
 					)
 					(fill
 						(type background)
+					)
+				)
+				(rectangle
+					(start -7.62 -15.24)
+					(end -7.62 -12.7)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 				(polyline
@@ -1566,7 +1577,7 @@
 					)
 				)
 			)
-			(symbol "TXB0104RUT_1_1"
+			(symbol "TXB0104PW_1_1"
 				(pin power_in line
 					(at -2.54 17.78 270)
 					(length 2.54)
@@ -1585,7 +1596,7 @@
 						)
 					)
 				)
-				(pin tri_state line
+				(pin bidirectional line
 					(at -10.16 7.62 0)
 					(length 2.54)
 					(name "A1"
@@ -1603,7 +1614,7 @@
 						)
 					)
 				)
-				(pin tri_state line
+				(pin bidirectional line
 					(at -10.16 2.54 0)
 					(length 2.54)
 					(name "A2"
@@ -1621,7 +1632,7 @@
 						)
 					)
 				)
-				(pin tri_state line
+				(pin bidirectional line
 					(at -10.16 -2.54 0)
 					(length 2.54)
 					(name "A3"
@@ -1639,7 +1650,7 @@
 						)
 					)
 				)
-				(pin tri_state line
+				(pin bidirectional line
 					(at -10.16 -7.62 0)
 					(length 2.54)
 					(name "A4"
@@ -1657,10 +1668,11 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 0 -17.78 90)
+				(pin no_connect line
+					(at -7.62 -12.7 0)
 					(length 2.54)
-					(name "GND"
+					(hide yes)
+					(name "NC"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1675,10 +1687,10 @@
 						)
 					)
 				)
-				(pin tri_state line
-					(at 10.16 -7.62 180)
+				(pin power_in line
+					(at 0 -17.78 90)
 					(length 2.54)
-					(name "B4"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1686,78 +1698,6 @@
 						)
 					)
 					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin tri_state line
-					(at 10.16 -2.54 180)
-					(length 2.54)
-					(name "B3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin tri_state line
-					(at 10.16 2.54 180)
-					(length 2.54)
-					(name "B2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin tri_state line
-					(at 10.16 7.62 180)
-					(length 2.54)
-					(name "B1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 2.54 17.78 270)
-					(length 2.54)
-					(name "VCCB"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1775,7 +1715,116 @@
 							)
 						)
 					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 7.62 -12.7 180)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 10.16 -7.62 180)
+					(length 2.54)
+					(name "B4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 10.16 -2.54 180)
+					(length 2.54)
+					(name "B3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 10.16 2.54 180)
+					(length 2.54)
+					(name "B2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
 					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 10.16 7.62 180)
+					(length 2.54)
+					(name "B1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 17.78 270)
+					(length 2.54)
+					(name "VCCB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6910,7 +6959,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Logic_LevelTranslator:TXB0104RUT")
+		(lib_id "Logic_LevelTranslator:TXB0104PW")
 		(at 185.42 176.53 0)
 		(unit 1)
 		(body_style 1)
@@ -6931,7 +6980,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TXB0104RUT"
+		(property "Value" "TXB0104PWR"
 			(at 177.8 193.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6942,7 +6991,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:Texas_R-PUQFN-N12"
+		(property "Footprint" "Package_SO:TSSOP-14_4.4x5mm_P0.65mm"
 			(at 185.42 195.58 0)
 			(hide yes)
 			(show_name no)
@@ -6964,7 +7013,7 @@
 				)
 			)
 		)
-		(property "Description" "4-Bit Bidirectional Voltage-Level Translator, Auto Direction Sensing and ±15-kV ESD Protection, 1.2 - 3.6V APort, 1.65 - 5.5V BPort, Texas_PUQFN-12"
+		(property "Description" "4-Bit Bidirectional Voltage-Level Translator, Auto Direction Sensing and ±15-kV ESD Protection, 1.2 - 3.6V APort, 1.65 - 5.5V BPort, TSSOP-14"
 			(at 185.42 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -6986,7 +7035,7 @@
 				)
 			)
 		)
-		(property "manf#" "TXB0104RUTR"
+		(property "manf#" "TXB0104PWR"
 			(at 185.42 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -6997,7 +7046,7 @@
 				)
 			)
 		)
-		(property "mouser#" "595-TXB0104RUTR"
+		(property "mouser#" "595-TXB0104PWR"
 			(at 185.42 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -7054,6 +7103,12 @@
 		)
 		(pin "8"
 			(uuid "0df52243-51b8-4886-8da3-92ba8fc41499")
+		)
+		(pin "13"
+			(uuid "fcbdf327-737c-4371-8fe8-67296c4347d7")
+		)
+		(pin "14"
+			(uuid "da542834-22ba-4b07-987f-9d4ddf28d5d8")
 		)
 		(instances
 			(project "Gateway"

@@ -9350,7 +9350,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 257.81 153.035 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13735,7 +13735,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 46.99 197.485 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14577,7 +14577,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 143.51 205.105 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14923,7 +14923,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 257.81 123.825 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15798,7 +15798,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 290.83 107.315 0)
 			(show_name no)
 			(do_not_autoplace no)
