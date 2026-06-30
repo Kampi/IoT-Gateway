@@ -780,6 +780,10 @@
         "Tx",
         "Rx"
       ],
+      "CC-Debug": [
+        "DC",
+        "DD"
+      ],
       "Ethernet": [
         "LED-Yellow",
         "LED-Green",
@@ -832,15 +836,12 @@
         "RxD",
         "TxD",
         "Reset",
-        "CTS",
-        "RTS"
+        "Boot"
       ],
       "wM-Bus": [
         "TxD",
         "RxD",
-        "Reset",
-        "RTS",
-        "CTS"
+        "Reset"
       ]
     },
     "connection_grid_size": 50.0,

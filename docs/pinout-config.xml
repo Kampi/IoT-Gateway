@@ -446,7 +446,7 @@
 		<Function name="gpio4.IO[0]" pinid="102" pinname="SAI1_RXFS" checked="1" parentname="GPIO_SODIMM_102"></Function>
 		<Function name="gpio4.IO[11]" pinid="104" pinname="SAI1_TXC" checked="1" parentname="GPIO_SODIMM_104"></Function>
 		<Function name="gpio4.IO[12]" pinid="106" pinname="SAI1_TXD0" checked="1" parentname="GPIO_SODIMM_106"></Function>
-		<Function name="gpio4.IO[13]" pinid="108" pinname="SAI1_TXD1" checked="-1" parentname="GPIO_SODIMM_108"></Function>
+		<Function name="gpio4.IO[13]" pinid="108" pinname="SAI1_TXD1" checked="1" parentname="GPIO_SODIMM_108"></Function>
 		<Function name="gpio4.IO[14]" pinid="112" pinname="SAI1_TXD2" checked="-1" parentname="GPIO_SODIMM_112"></Function>
 		<Function name="gpio4.IO[15]" pinid="114" pinname="SAI1_TXD3" checked="-1" parentname="GPIO_SODIMM_114"></Function>
 		<Function name="gpio4.IO[16]" pinid="116" pinname="SAI1_TXD4" checked="-1" parentname="GPIO_SODIMM_116"></Function>
@@ -873,14 +873,14 @@
 		<Function name="gpt1.COMPARE3" pinid="256" pinname="SAI3_TXD" checked="-1" parentname="TIMER_1_COMPARE_3"></Function>
 		<Function name="gpt2.CLK" pinid="95" pinname="I2C3_SCL" checked="-1" parentname="TIMER_2_CLK"></Function>
 		<Function name="gpt3.CLK" pinid="93" pinname="I2C3_SDA" checked="-1" parentname="TIMER_3_CLK"></Function>
-		<Function name="uart2.RTS_B" pinid="135" pinname="SAI3_RXD" checked="1" parentname="UART_1_CTS"></Function>
+		<Function name="uart2.RTS_B" pinid="135" pinname="SAI3_RXD" checked="-1" parentname="UART_1_CTS"></Function>
 		<Function name="uart2.RTS_B" pinid="153" pinname="UART4_TXD" checked="-1" parentname="UART_1_CTS"></Function>
-		<Function name="uart2.CTS_B" pinid="133" pinname="SAI3_RXC" checked="1" parentname="UART_1_RTS"></Function>
+		<Function name="uart2.CTS_B" pinid="133" pinname="SAI3_RXC" checked="-1" parentname="UART_1_RTS"></Function>
 		<Function name="uart2.CTS_B" pinid="151" pinname="UART4_RXD" checked="-1" parentname="UART_1_RTS"></Function>
 		<Function name="uart2.RX" pinid="129" pinname="SAI3_TXFS" checked="1" parentname="UART_1_RXD"></Function>
 		<Function name="uart2.TX" pinid="131" pinname="SAI3_TXC" checked="1" parentname="UART_1_TXD"></Function>
-		<Function name="uart3.RTS_B" pinid="143" pinname="ECSPI1_SS0" checked="1" parentname="UART_2_CTS"></Function>
-		<Function name="uart3.CTS_B" pinid="141" pinname="ECSPI1_MISO" checked="1" parentname="UART_2_RTS"></Function>
+		<Function name="uart3.RTS_B" pinid="143" pinname="ECSPI1_SS0" checked="-1" parentname="UART_2_CTS"></Function>
+		<Function name="uart3.CTS_B" pinid="141" pinname="ECSPI1_MISO" checked="-1" parentname="UART_2_RTS"></Function>
 		<Function name="uart3.RX" pinid="137" pinname="ECSPI1_SCLK" checked="1" parentname="UART_2_RXD"></Function>
 		<Function name="uart3.RX" pinid="210" pinname="UART3_RXD" checked="-1" parentname="UART_2_RXD"></Function>
 		<Function name="uart3.TX" pinid="139" pinname="ECSPI1_MOSI" checked="1" parentname="UART_2_TXD"></Function>
@@ -1350,7 +1350,7 @@
 		<Category name="GPIO_SODIMM_102" checked="1"></Category>
 		<Category name="GPIO_SODIMM_104" checked="1"></Category>
 		<Category name="GPIO_SODIMM_106" checked="1"></Category>
-		<Category name="GPIO_SODIMM_108" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_108" checked="1"></Category>
 		<Category name="GPIO_SODIMM_112" checked="-1"></Category>
 		<Category name="GPIO_SODIMM_114" checked="-1"></Category>
 		<Category name="GPIO_SODIMM_116" checked="-1"></Category>
@@ -1777,14 +1777,14 @@
 		<Category name="TIMER_1_COMPARE_3" checked="-1"></Category>
 		<Category name="TIMER_2_CLK" checked="-1"></Category>
 		<Category name="TIMER_3_CLK" checked="-1"></Category>
-		<Category name="UART_1_CTS" checked="1"></Category>
 		<Category name="UART_1_CTS" checked="-1"></Category>
-		<Category name="UART_1_RTS" checked="1"></Category>
+		<Category name="UART_1_CTS" checked="-1"></Category>
+		<Category name="UART_1_RTS" checked="-1"></Category>
 		<Category name="UART_1_RTS" checked="-1"></Category>
 		<Category name="UART_1_RXD" checked="1"></Category>
 		<Category name="UART_1_TXD" checked="1"></Category>
-		<Category name="UART_2_CTS" checked="1"></Category>
-		<Category name="UART_2_RTS" checked="1"></Category>
+		<Category name="UART_2_CTS" checked="-1"></Category>
+		<Category name="UART_2_RTS" checked="-1"></Category>
 		<Category name="UART_2_RXD" checked="1"></Category>
 		<Category name="UART_2_RXD" checked="-1"></Category>
 		<Category name="UART_2_TXD" checked="1"></Category>

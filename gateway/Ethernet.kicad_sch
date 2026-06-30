@@ -6232,7 +6232,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1a402599-44c3-450b-abe7-18ece45f58b5")
-		(property "Reference" "R1303"
+		(property "Reference" "R1603"
 			(at 257.81 182.8799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6329,7 +6329,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/86891732-a753-4dcc-a58c-71e3fc99b0cd"
-					(reference "R1303")
+					(reference "R1603")
 					(unit 1)
 				)
 			)
@@ -6346,7 +6346,7 @@
 		(in_pos_files no)
 		(dnp no)
 		(uuid "23f038a4-8589-42af-bf7e-595728e9c915")
-		(property "Reference" "TP1302"
+		(property "Reference" "TP1602"
 			(at 227.33 95.25 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6438,7 +6438,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/86891732-a753-4dcc-a58c-71e3fc99b0cd"
-					(reference "TP1302")
+					(reference "TP1602")
 					(unit 1)
 				)
 			)
@@ -6456,7 +6456,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "33b77549-e449-4785-9980-6d90e8451009")
-		(property "Reference" "C1303"
+		(property "Reference" "C1603"
 			(at 246.38 182.8799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6553,7 +6553,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/86891732-a753-4dcc-a58c-71e3fc99b0cd"
-					(reference "C1303")
+					(reference "C1603")
 					(unit 1)
 				)
 			)
@@ -6570,7 +6570,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "36e9366e-93e4-4d3d-a374-322b9712a89d")
-		(property "Reference" "#PWR01301"
+		(property "Reference" "#PWR01601"
 			(at 185.42 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -6663,7 +6663,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/86891732-a753-4dcc-a58c-71e3fc99b0cd"
-					(reference "#PWR01301")
+					(reference "#PWR01601")
 					(unit 1)
 				)
 			)
@@ -6681,7 +6681,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "45a90869-236b-40cf-80ec-6a136d521ea6")
-		(property "Reference" "#PWR01306"
+		(property "Reference" "#PWR01606"
 			(at 269.24 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -6741,7 +6741,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/86891732-a753-4dcc-a58c-71e3fc99b0cd"
-					(reference "#PWR01306")
+					(reference "#PWR01606")
 					(unit 1)
 				)
 			)
@@ -6759,7 +6759,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "608a8646-496d-4052-9d85-d93400d0bb95")
-		(property "Reference" "#FLG01301"
+		(property "Reference" "#FLG01601"
 			(at 269.24 175.895 0)
 			(hide yes)
 			(show_name no)
@@ -6819,7 +6819,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/86891732-a753-4dcc-a58c-71e3fc99b0cd"
-					(reference "#FLG01301")
+					(reference "#FLG01601")
 					(unit 1)
 				)
 			)
@@ -6837,7 +6837,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6b3c0ff3-2a8b-4ad7-8bc4-49f8d528a9f7")
-		(property "Reference" "C1301"
+		(property "Reference" "C1601"
 			(at 181.61 176.5299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6934,7 +6934,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/86891732-a753-4dcc-a58c-71e3fc99b0cd"
-					(reference "C1301")
+					(reference "C1601")
 					(unit 1)
 				)
 			)
@@ -6952,7 +6952,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8ef98bb6-79d7-4c6c-89d0-ad9a067e2da5")
-		(property "Reference" "#PWR01303"
+		(property "Reference" "#PWR01603"
 			(at 207.01 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -7012,7 +7012,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/86891732-a753-4dcc-a58c-71e3fc99b0cd"
-					(reference "#PWR01303")
+					(reference "#PWR01603")
 					(unit 1)
 				)
 			)
@@ -7029,7 +7029,7 @@
 		(in_pos_files no)
 		(dnp no)
 		(uuid "9b9aae4b-9702-46eb-aeb9-c7eb2b0904cc")
-		(property "Reference" "TP1301"
+		(property "Reference" "TP1601"
 			(at 227.33 74.93 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7121,7 +7121,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/86891732-a753-4dcc-a58c-71e3fc99b0cd"
-					(reference "TP1301")
+					(reference "TP1601")
 					(unit 1)
 				)
 			)
@@ -7139,7 +7139,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a3db84ad-07dd-422d-b0d4-faded5098226")
-		(property "Reference" "#PWR01304"
+		(property "Reference" "#PWR01604"
 			(at 217.17 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -7199,7 +7199,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/86891732-a753-4dcc-a58c-71e3fc99b0cd"
-					(reference "#PWR01304")
+					(reference "#PWR01604")
 					(unit 1)
 				)
 			)
@@ -7216,7 +7216,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bab49d72-4939-4522-b0fb-aa26851407a8")
-		(property "Reference" "C1302"
+		(property "Reference" "C1602"
 			(at 194.31 176.5299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7313,7 +7313,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/86891732-a753-4dcc-a58c-71e3fc99b0cd"
-					(reference "C1302")
+					(reference "C1602")
 					(unit 1)
 				)
 			)
@@ -7330,7 +7330,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d926c46b-71e7-425c-b953-8f2cc4dbb5a1")
-		(property "Reference" "R1301"
+		(property "Reference" "R1601"
 			(at 209.55 180.3399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7352,7 +7352,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 205.232 181.61 90)
 			(hide yes)
 			(show_name no)
@@ -7427,7 +7427,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/86891732-a753-4dcc-a58c-71e3fc99b0cd"
-					(reference "R1301")
+					(reference "R1601")
 					(unit 1)
 				)
 			)
@@ -7445,7 +7445,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "db72664f-0619-4b62-97ec-5985aaf686e9")
-		(property "Reference" "R1302"
+		(property "Reference" "R1602"
 			(at 214.63 106.6799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7467,7 +7467,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 218.948 107.95 90)
 			(hide yes)
 			(show_name no)
@@ -7542,7 +7542,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/86891732-a753-4dcc-a58c-71e3fc99b0cd"
-					(reference "R1302")
+					(reference "R1602")
 					(unit 1)
 				)
 			)
@@ -7560,7 +7560,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e17f3907-fcf4-4dea-be8b-b369b7bfd7d4")
-		(property "Reference" "#PWR01305"
+		(property "Reference" "#PWR01605"
 			(at 252.73 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -7653,7 +7653,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/86891732-a753-4dcc-a58c-71e3fc99b0cd"
-					(reference "#PWR01305")
+					(reference "#PWR01605")
 					(unit 1)
 				)
 			)
@@ -7671,7 +7671,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e7dd5bc0-a4ff-40bc-81e5-3704385d7d85")
-		(property "Reference" "#PWR01302"
+		(property "Reference" "#PWR01602"
 			(at 190.5 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -7764,7 +7764,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/86891732-a753-4dcc-a58c-71e3fc99b0cd"
-					(reference "#PWR01302")
+					(reference "#PWR01602")
 					(unit 1)
 				)
 			)
@@ -7782,7 +7782,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fcc712dc-2f7e-437a-8344-186848810fdc")
-		(property "Reference" "X1301"
+		(property "Reference" "X1601"
 			(at 254 138.4299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7936,7 +7936,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/86891732-a753-4dcc-a58c-71e3fc99b0cd"
-					(reference "X1301")
+					(reference "X1601")
 					(unit 1)
 				)
 			)

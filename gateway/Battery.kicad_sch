@@ -6517,7 +6517,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 86.868 115.57 90)
 			(hide yes)
 			(show_name no)
@@ -6675,7 +6675,7 @@
 				)
 			)
 		)
-		(property "manf#" "08055D475KAT4A"
+		(property "manf#" "08053D475MAT2A"
 			(at 331.47 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -8278,7 +8278,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 170.942 116.84 90)
 			(hide yes)
 			(show_name no)
@@ -9592,7 +9592,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 267.462 173.99 90)
 			(hide yes)
 			(show_name no)
