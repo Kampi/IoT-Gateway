@@ -1,6 +1,6 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
-SRC_URI += " \
+SRC_URI:append = " \
     file://gateway.conf \
     file://eth-dhcp.nmconnection \
 "

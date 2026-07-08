@@ -15,66 +15,207 @@
 				 "toradex,verdin-imx8mm-wifi",
 				 "toradex,verdin-imx8mm",
 				 "fsl,imx8mm";
+
+	chosen {
+		stdout-path = &uart1;
+	};
+
+	gpio-leds {
+		compatible = "gpio-leds";
+
+		led-ready {
+			gpios = <&gpio3 4 GPIO_ACTIVE_HIGH>;
+			label = "ready";
+			default-state = "off";
+		};
+	};
 };
 
 &iomuxc {
 	pinctrl_version_resistors: versionresistorsgrp {
 		fsl,pins = <
-			MX8MM_IOMUXC_GPIO1_IO00_GPIO1_IO0	0x106	/* SODIMM 216 */
-			MX8MM_IOMUXC_GPIO1_IO11_GPIO1_IO11	0x106	/* SODIMM 218 */
-			MX8MM_IOMUXC_GPIO1_IO08_GPIO1_IO8	0x106	/* SODIMM 220 */
+			MX8MM_IOMUXC_UART3_TXD_GPIO5_IO27			0x106	/* SODIMM 212 - version-bit0 */
+			MX8MM_IOMUXC_GPIO1_IO00_GPIO1_IO0			0x106	/* SODIMM 216 - version-bit1 */
+			MX8MM_IOMUXC_GPIO1_IO11_GPIO1_IO11			0x106	/* SODIMM 218 - version-bit2 */
 		>;
 	};
 
 	pinctrl_battery: batterygrp {
 		fsl,pins = <
-			MX8MM_IOMUXC_SAI5_RXD2_GPIO3_IO23	0x106	/* SODIMM 42 - Battery-Charge-Enable (out, pull-down default off) */
-			MX8MM_IOMUXC_SAI5_RXD1_GPIO3_IO22	0x1c6	/* SODIMM 44 - Battery-Charge (in, pull-up) */
-			MX8MM_IOMUXC_SAI5_RXD3_GPIO3_IO24	0x1c6	/* SODIMM 46 - Battery-Alert (in, pull-up) */
+			MX8MM_IOMUXC_SAI5_RXD2_GPIO3_IO23			0x106	/* SODIMM 42 - Battery-Charge-Enable (out, pull-down default off) */
+			MX8MM_IOMUXC_SAI5_RXD1_GPIO3_IO22			0x1c6	/* SODIMM 44 - Battery-Charge (in, pull-up) */
+			MX8MM_IOMUXC_SAI5_RXD3_GPIO3_IO24			0x1c6	/* SODIMM 46 - Battery-Alert (in, pull-up) */
 		>;
 	};
 
 	pinctrl_power_enable: powerenablegrp {
 		fsl,pins = <
-			MX8MM_IOMUXC_SAI2_TXC_GPIO4_IO25	0x106	/* SODIMM 30 - LoRa-Power-Enable (out, pull-down default off) */
-			MX8MM_IOMUXC_SAI2_TXFS_GPIO4_IO24	0x106	/* SODIMM 32 - Zigbee-Power-Enable (out, pull-down default off) */
-			MX8MM_IOMUXC_SAI2_TXD0_GPIO4_IO26	0x106	/* SODIMM 34 - WmBus-Power-Enable (out, pull-down default off) */
+			MX8MM_IOMUXC_SAI2_TXC_GPIO4_IO25			0x106	/* SODIMM 30 - LoRa-Power-Enable (out, pull-down default off) */
+			MX8MM_IOMUXC_SAI2_TXFS_GPIO4_IO24			0x106	/* SODIMM 32 - Zigbee-Power-Enable (out, pull-down default off) */
+			MX8MM_IOMUXC_SAI2_TXD0_GPIO4_IO26			0x106	/* SODIMM 34 - wmBus-Power-Enable (out, pull-down default off) */
+			MX8MM_IOMUXC_SAI2_RXD0_GPIO4_IO23			0x106	/* SODIMM 36 - Thread-Power-Enable (out, pull-down default off) */
+		>;
+	};
+
+	pinctrl_zigbee_ctrl: zigbeectrlgrp {
+		fsl,pins = <
+			MX8MM_IOMUXC_SAI1_TXC_GPIO4_IO11			0x106	/* SODIMM 104 - Zigbee-Reset (out, pull-down default off) */
+			MX8MM_IOMUXC_SAI1_TXD0_GPIO4_IO12			0x106	/* SODIMM 106 - Zigbee-Boot (out, pull-down default off) */
+		>;
+	};
+
+	pinctrl_thread_ctrl: threadctrlgrp {
+		fsl,pins = <
+			MX8MM_IOMUXC_SAI1_TXD1_GPIO4_IO13			0x106	/* SODIMM 108 - Thread-Reset (out, pull-down default off) */
+			MX8MM_IOMUXC_SAI1_TXD2_GPIO4_IO14			0x106	/* SODIMM 112 - Thread-Boot (out, pull-down default off) */
+		>;
+	};
+
+	pinctrl_wmbus_ctrl: wmbusctrlgrp {
+		fsl,pins = <
+			MX8MM_IOMUXC_SAI1_RXFS_GPIO4_IO0			0x106	/* SODIMM 102 - wM-Bus-Reset (out, pull-down default off) */
+		>;
+	};
+
+	pinctrl_ssd: ssdgrp {
+		fsl,pins = <
+			MX8MM_IOMUXC_GPIO1_IO15_GPIO1_IO15			0x106	/* SODIMM 187 - SSD-Power-Enable (out, pull-down default off) */
+		>;
+	};
+
+	//pinctrl_powermux: powermuxgrp {
+	//	fsl,pins = <
+	//		MX8MM_IOMUXC_UART3_RXD_GPIO5_IO26			0x1c6	/* SODIMM 210 - PowerMux-Status (in, pull-up) */
+	//	>;
+	//};
+
+	/* Generic bidirectional GPIO breakout header, direction set by whatever consumes it */
+	pinctrl_gpio_header: gpioheadergrp {
+		fsl,pins = <
+			MX8MM_IOMUXC_NAND_RE_B_GPIO3_IO15			0x106	/* SODIMM 17 - GPIO-Num0 (bidir, pull-down) */
+			MX8MM_IOMUXC_GPIO1_IO01_GPIO1_IO1			0x106	/* SODIMM 19 - GPIO-Num1 (bidir, pull-down) */
+			MX8MM_IOMUXC_NAND_CE2_B_GPIO3_IO3			0x106	/* SODIMM 21 - GPIO-Num2 (bidir, pull-down) */
+			MX8MM_IOMUXC_SAI3_MCLK_GPIO5_IO2			0x106	/* SODIMM 91 - GPIO-Num3 (bidir, pull-down) */
+			MX8MM_IOMUXC_I2C3_SDA_GPIO5_IO19			0x106	/* SODIMM 93 - GPIO-Num4 (bidir, pull-down) */
+			MX8MM_IOMUXC_SAI1_RXD1_GPIO4_IO3			0x106	/* SODIMM 94 - GPIO-Num5 (bidir, pull-down) */
+			MX8MM_IOMUXC_I2C3_SCL_GPIO5_IO18			0x106	/* SODIMM 95 - GPIO-Num6 (bidir, pull-down) */
+			MX8MM_IOMUXC_SAI1_RXD2_GPIO4_IO4			0x106	/* SODIMM 96 - GPIO-Num7 (bidir, pull-down) */
+		>;
+	};
+
+	pinctrl_uart1: uart1grp {
+		fsl,pins = <
+			MX8MM_IOMUXC_SAI3_RXC_GPIO4_IO29			0x106	/* SODIMM 133 */
+			MX8MM_IOMUXC_SAI3_RXD_GPIO4_IO30			0x106	/* SODIMM 135 */
+		>;
+	};
+
+	pinctrl_uart2: uart2grp {
+		fsl,pins = <
+			MX8MM_IOMUXC_SAI3_TXC_UART2_DCE_TX			0x146	/* SODIMM 131 */
+			MX8MM_IOMUXC_SAI3_TXFS_UART2_DCE_RX			0x146	/* SODIMM 129 */
+		>;
+	};
+
+	pinctrl_uart4: uart4grp {
+		fsl,pins = <
+			MX8MM_IOMUXC_ECSPI2_SCLK_UART4_DCE_RX		0x146	/* SODIMM 196 */
+			MX8MM_IOMUXC_ECSPI2_MOSI_UART4_DCE_TX		0x146	/* SODIMM 200 */
+			MX8MM_IOMUXC_ECSPI2_MISO_UART4_DCE_CTS_B	0x146	/* SODIMM 198 */
+			MX8MM_IOMUXC_ECSPI2_SS0_UART4_DCE_RTS_B		0x146	/* SODIMM 202 */
 		>;
 	};
 };
 
 &gpio1 {
-	gpio-line-names = "version-bit0", "", "", "", "", "", "", "",
-	                  "version-bit2", "", "", "version-bit1";
+	pinctrl-names = "default";
+	pinctrl-0 = <&pinctrl_gpio_header &pinctrl_ssd>;
+	gpio-line-names = "version-bit1", "gpio-num1", "", "", "", "", "", "",
+	                  "", "", "", "version-bit2", "", "", "",
+	                  "ssd-power-enable";
 };
 
 &gpio3 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_battery>;
-	gpio-line-names = "", "", "", "", "", "", "", "",
-	                  "", "", "", "", "", "", "", "",
+	gpio-line-names = "", "", "", "gpio-num2", "ready-led", "", "", "",
+	                  "", "", "", "", "", "", "", "gpio-num0",
 	                  "", "", "", "", "", "", "battery-charge",
 	                  "battery-charge-enable", "battery-alert";
 };
 
 &gpio4 {
 	pinctrl-names = "default";
-	pinctrl-0 = <&pinctrl_power_enable>;
-	gpio-line-names = "", "", "", "", "", "", "", "",
-	                  "", "", "", "", "", "", "", "",
-	                  "", "", "", "", "", "", "", "",
+	pinctrl-0 = <&pinctrl_power_enable &pinctrl_zigbee_ctrl &pinctrl_thread_ctrl &pinctrl_wmbus_ctrl>;
+	gpio-line-names = "wmbus-reset", "", "", "gpio-num5", "gpio-num7", "", "", "",
+	                  "", "", "", "zigbee-reset", "zigbee-boot", "thread-reset", "thread-boot", "",
+	                  "", "", "", "", "", "", "", "thread-power-enable",
 	                  "zigbee-power-enable", "lora-power-enable",
-	                  "wmbus-power-enable";
+	                  "wmbus-power-enable", "", "";
 };
 
-/* Verdin I2C_2_DSI */
-&i2c2 {
+//&gpio5 {
+//	pinctrl-names = "default";
+//	pinctrl-0 = <&pinctrl_powermux>;
+//	gpio-line-names = "", "", "gpio-num3", "", "", "", "", "",
+//	                  "", "", "", "", "", "", "", "",
+//	                  "", "", "gpio-num6", "gpio-num4", "", "", "", "",
+//	                  "", "", "powermux-status", "version-bit0";
+//};
+
+&sai2 {
 	status = "disabled";
 };
 
-/* Verdin I2C_4_CSI */
-&i2c3 {
+/* Verdin SPI_1, unused - SODIMM 196/198/200/202 are used for UART_4 instead */
+&ecspi2 {
 	status = "disabled";
+};
+
+/* Verdin QSPI_1, unused */
+&flexspi {
+	status = "disabled";
+};
+
+/* Verdin SD_1, unused - no SD card slot on this carrier */
+&usdhc2 {
+	status = "disabled";
+};
+
+/* Used for Console */
+&uart1 {
+	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&pinctrl_uart1>;
+};
+
+/* Used for wM-Bus */
+&uart2 {
+	/delete-property/ linux,rs485-enabled-at-boot-time;
+	/delete-property/ rs485-rts-active-low;
+	/delete-property/ rs485-rx-during-tx;
+	/delete-property/ uart-has-rtscts;
+	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&pinctrl_uart2>;
+};
+
+/* Used for Zigbee */
+&uart3 {
+	/delete-property/ uart-has-rtscts;
+	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&pinctrl_uart3>;
+};
+
+/* Used for Thread
+ * Note: UART_4 is reserved for the Cortex-M4 core.
+ */
+&uart4 {
+	status = "disabled";
+	pinctrl-names = "default";
+	pinctrl-0 = <&pinctrl_uart4>;
+	uart-has-rtscts;
 };
 
 /* Verdin PWM_3_DSI */
@@ -82,11 +223,20 @@
 	status = "disabled";
 };
 
-&sai2 {
+/* Verdin PWM_1 */
+&pwm2 {
 	status = "disabled";
 };
 
+/* Verdin PWM_2 */
+&pwm3 {
+	status = "disabled";
+};
+
+/* Verdin I2C_1 - carrier board bus (ATECC608B + MAX17048) */
 &i2c4 {
+	status = "okay";
+
 	atecc608b: atecc608b@60 {
 		compatible = "microchip,atecc608b";
 		reg = <0x60>;
@@ -98,6 +248,22 @@
 	};
 };
 
+&hwmon {
+	status = "okay";
+};
+
+&verdin_som_adc {
+	status = "okay";
+};
+
+&i2c2 {
+	status = "disabled";
+};
+
+&i2c3 {
+	status = "disabled";
+};
+
 &lcdif {
 	status = "disabled";
 };
@@ -107,10 +273,6 @@
 };
 
 &sound_card {
-	status = "disabled";
-};
-
-&verdin_som_adc {
 	status = "disabled";
 };
 
@@ -127,5 +289,21 @@
 };
 
 &atmel_mxt_ts {
+	status = "disabled";
+};
+
+&eeprom_display_adapter {
+	status = "disabled";
+};
+
+&eeprom_carrier_board {
+	status = "disabled";
+};
+
+&hwmon_temp {
+	status = "disabled";
+};
+
+&nau8822_1a {
 	status = "disabled";
 };

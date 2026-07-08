@@ -1,0 +1,14 @@
+# Auto-discovered Zephyr module Kconfig (default convention: no
+# zephyr/module.yml needed since zephyr/CMakeLists.txt + zephyr/Kconfig
+# both exist - see zephyr/scripts/zephyr_module.py).
+
+config APP_HEARTBEAT_LED
+	bool "Toggle a heartbeat LED every second"
+	select GPIO
+	help
+	  Toggles the devicetree `led0` alias on/off once per second as a
+	  simple visual liveness indicator that the firmware is running.
+	  Overrides the coprocessor sample's own CONFIG_GPIO=n.
+
+	  Not meant for production RCP images - enabled only for nRF5340-DK test builds (TARGET=dk), via
+	  app/boards/nrf5340dk_nrf5340_cpunet.conf. See ../src/heartbeat_led.c.

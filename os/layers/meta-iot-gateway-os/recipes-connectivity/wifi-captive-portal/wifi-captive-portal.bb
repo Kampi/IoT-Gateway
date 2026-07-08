@@ -6,6 +6,8 @@ select a network and enter the password. Credentials are saved as an NM connecti
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:${THISDIR}:"
+
 SRC_URI = " \
     file://wifi-setup.sh \
     file://captive-portal.py \
@@ -13,8 +15,6 @@ SRC_URI = " \
     file://dnsmasq-captive.conf \
     file://services/wifi-setup.service \
 "
-
-FILESEXTRAPATHS:prepend := "${THISDIR}/files:${THISDIR}:"
 
 inherit systemd
 

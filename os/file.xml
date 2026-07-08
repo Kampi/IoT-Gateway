@@ -1,0 +1,1828 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+	<ProjectInfo>
+		<ProjectName></ProjectName>
+		<ProjectVersion></ProjectVersion>
+		<ProjectDescription></ProjectDescription>
+		<CustomerNote></CustomerNote>
+		<Created></Created>
+	</ProjectInfo>
+	<VersionInfo Version="1.1.2" App="WebApp"></VersionInfo>
+	<ModuleInfo>
+		<ModuleGroup>Verdin</ModuleGroup>
+		<SelectedModule>iMX8M Mini Quad 2GB WB IT</SelectedModule>
+	</ModuleInfo>
+	<PinFilterInfo>
+		<HidePins>true</HidePins>
+	</PinFilterInfo>
+	<NodeInfo>
+		<Function name="TLA2024_AIN3" pinid="2" pinname="" checked="-1" parentname="ADC_1"></Function>
+		<Function name="TLA2024_AIN2" pinid="4" pinname="" checked="-1" parentname="ADC_2"></Function>
+		<Function name="TLA2024_AIN1" pinid="6" pinname="" checked="-1" parentname="ADC_3"></Function>
+		<Function name="TLA2024_AIN0" pinid="8" pinname="" checked="-1" parentname="ADC_4"></Function>
+		<Function name="MCP2518_CAN1_RXCAN" pinid="22" pinname="" checked="1" parentname="CAN_1_RX"></Function>
+		<Function name="MCP2518_CAN1_TXCAN" pinid="20" pinname="" checked="1" parentname="CAN_1_TX"></Function>
+		<Function name="anamix.REF_CLK_24M" pinid="19" pinname="GPIO1_IO01" checked="-1" parentname="CLK_24M_REF_OUT"></Function>
+		<Function name="anamix.REF_CLK_32K" pinid="216" pinname="GPIO1_IO00" checked="-1" parentname="CLK_32k_REF_OUT"></Function>
+		<Function name="ccmsrcgpcmix.CLKO1" pinid="185" pinname="GPIO1_IO14" checked="-1" parentname="CLK_CLKO1"></Function>
+		<Function name="ccmsrcgpcmix.CLKO2" pinid="187" pinname="GPIO1_IO15" checked="-1" parentname="CLK_CLKO2"></Function>
+		<Function name="ccmsrcgpcmix.ENET_PHY_REF_CLK_ROOT" pinid="216" pinname="GPIO1_IO00" checked="-1" parentname="CLK_ENET_PHY_REF_CLK_ROOT"></Function>
+		<Function name="ccmsrcgpcmix.EXT_CLK1" pinid="216" pinname="GPIO1_IO00" checked="-1" parentname="CLK_EXT_CLK1"></Function>
+		<Function name="ccmsrcgpcmix.EXT_CLK2" pinid="19" pinname="GPIO1_IO01" checked="-1" parentname="CLK_EXT_CLK2"></Function>
+		<Function name="MIPI_CSI_CLK_N" pinid="113" pinname="MIPI_CSI_CLK_N" checked="-1" parentname="CSI_1_CSI-2[:slash]1x_CLK_N"></Function>
+		<Function name="MIPI_CSI_CLK_P" pinid="111" pinname="MIPI_CSI_CLK_P" checked="-1" parentname="CSI_1_CSI-2[:slash]1x_CLK_P"></Function>
+		<Function name="MIPI_CSI_D0_N" pinid="125" pinname="MIPI_CSI_D0_N" checked="-1" parentname="CSI_1_CSI-2[:slash]1x_D0_N"></Function>
+		<Function name="MIPI_CSI_D0_P" pinid="123" pinname="MIPI_CSI_D0_P" checked="-1" parentname="CSI_1_CSI-2[:slash]1x_D0_P"></Function>
+		<Function name="MIPI_CSI_CLK_N" pinid="113" pinname="MIPI_CSI_CLK_N" checked="-1" parentname="CSI_1_CSI-2[:slash]2x_CLK_N"></Function>
+		<Function name="MIPI_CSI_CLK_P" pinid="111" pinname="MIPI_CSI_CLK_P" checked="-1" parentname="CSI_1_CSI-2[:slash]2x_CLK_P"></Function>
+		<Function name="MIPI_CSI_D0_N" pinid="125" pinname="MIPI_CSI_D0_N" checked="-1" parentname="CSI_1_CSI-2[:slash]2x_D0_N"></Function>
+		<Function name="MIPI_CSI_D0_P" pinid="123" pinname="MIPI_CSI_D0_P" checked="-1" parentname="CSI_1_CSI-2[:slash]2x_D0_P"></Function>
+		<Function name="MIPI_CSI_D1_N" pinid="119" pinname="MIPI_CSI_D1_N" checked="-1" parentname="CSI_1_CSI-2[:slash]2x_D1_N"></Function>
+		<Function name="MIPI_CSI_D1_P" pinid="117" pinname="MIPI_CSI_D1_P" checked="-1" parentname="CSI_1_CSI-2[:slash]2x_D1_P"></Function>
+		<Function name="MIPI_CSI_CLK_N" pinid="113" pinname="MIPI_CSI_CLK_N" checked="-1" parentname="CSI_1_CSI-2[:slash]4x_CLK_N"></Function>
+		<Function name="MIPI_CSI_CLK_P" pinid="111" pinname="MIPI_CSI_CLK_P" checked="-1" parentname="CSI_1_CSI-2[:slash]4x_CLK_P"></Function>
+		<Function name="MIPI_CSI_D0_N" pinid="125" pinname="MIPI_CSI_D0_N" checked="-1" parentname="CSI_1_CSI-2[:slash]4x_D0_N"></Function>
+		<Function name="MIPI_CSI_D0_P" pinid="123" pinname="MIPI_CSI_D0_P" checked="-1" parentname="CSI_1_CSI-2[:slash]4x_D0_P"></Function>
+		<Function name="MIPI_CSI_D1_N" pinid="119" pinname="MIPI_CSI_D1_N" checked="-1" parentname="CSI_1_CSI-2[:slash]4x_D1_N"></Function>
+		<Function name="MIPI_CSI_D1_P" pinid="117" pinname="MIPI_CSI_D1_P" checked="-1" parentname="CSI_1_CSI-2[:slash]4x_D1_P"></Function>
+		<Function name="MIPI_CSI_D2_N" pinid="107" pinname="MIPI_CSI_D2_N" checked="-1" parentname="CSI_1_CSI-2[:slash]4x_D2_N"></Function>
+		<Function name="MIPI_CSI_D2_P" pinid="105" pinname="MIPI_CSI_D2_P" checked="-1" parentname="CSI_1_CSI-2[:slash]4x_D2_P"></Function>
+		<Function name="MIPI_CSI_D3_N" pinid="101" pinname="MIPI_CSI_D3_N" checked="-1" parentname="CSI_1_CSI-2[:slash]4x_D3_N"></Function>
+		<Function name="MIPI_CSI_D3_P" pinid="99" pinname="MIPI_CSI_D3_P" checked="-1" parentname="CSI_1_CSI-2[:slash]4x_D3_P"></Function>
+		<Function name="i2c3.SCL" pinid="95" pinname="I2C3_SCL" checked="-1" parentname="CSI_1_I2C_SCL"></Function>
+		<Function name="i2c3.SDA" pinid="93" pinname="I2C3_SDA" checked="-1" parentname="CSI_1_I2C_SDA"></Function>
+		<Function name="FORCE_OFF_MOCI#" pinid="250" pinname="" checked="-1" parentname="CTRL_FORCE_OFF_MOCI#"></Function>
+		<Function name="snvsmix.ONOFF" pinid="248" pinname="ONOFF" checked="-1" parentname="CTRL_PWR_BTN_MICO#"></Function>
+		<Function name="PWR_EN_MOCI" pinid="254" pinname="" checked="-1" parentname="CTRL_PWR_EN_MOCI"></Function>
+		<Function name="BOOT_MODE0#" pinid="246" pinname="BOOT_MODE0#" checked="-1" parentname="CTRL_RECOVERY_MICO#"></Function>
+		<Function name="RESET_MICO#" pinid="260" pinname="" checked="-1" parentname="CTRL_RESET_MICO#"></Function>
+		<Function name="RESET_MOCI#" pinid="258" pinname="" checked="-1" parentname="CTRL_RESET_MOCI#"></Function>
+		<Function name="gpio5.IO[1]" pinid="256" pinname="SAI3_TXD" checked="-1" parentname="CTRL_SLEEP_MOCI#"></Function>
+		<Function name="gpio4.IO[28]" pinid="252" pinname="SAI3_RXFS" checked="-1" parentname="CTRL_WAKE1_MICO#"></Function>
+		<Function name="sai2.TX_BCLK" pinid="30" pinname="SAI2_TXC" checked="-1" parentname="DIGITAL_AUDIO_1_AC97_BIT_CLK"></Function>
+		<Function name="sai2.MCLK" pinid="38" pinname="SAI2_MCLK" checked="-1" parentname="DIGITAL_AUDIO_1_AC97_MCLK"></Function>
+		<Function name="sai2.RX_DATA[0]" pinid="36" pinname="SAI2_RXD0" checked="-1" parentname="DIGITAL_AUDIO_1_AC97_SDATA_IN"></Function>
+		<Function name="sai2.TX_DATA[0]" pinid="34" pinname="SAI2_TXD0" checked="-1" parentname="DIGITAL_AUDIO_1_AC97_SDATA_OUT"></Function>
+		<Function name="sai2.TX_SYNC" pinid="32" pinname="SAI2_TXFS" checked="-1" parentname="DIGITAL_AUDIO_1_AC97_SYNC"></Function>
+		<Function name="sai2.TX_BCLK" pinid="30" pinname="SAI2_TXC" checked="-1" parentname="DIGITAL_AUDIO_1_I2S_MASTER_BCLK"></Function>
+		<Function name="sai2.RX_DATA[0]" pinid="36" pinname="SAI2_RXD0" checked="-1" parentname="DIGITAL_AUDIO_1_I2S_MASTER_D_IN0"></Function>
+		<Function name="sai2.RX_DATA[1]" pinid="149" pinname="SAI2_RXFS" checked="-1" parentname="DIGITAL_AUDIO_1_I2S_MASTER_D_IN1"></Function>
+		<Function name="sai2.TX_DATA[0]" pinid="34" pinname="SAI2_TXD0" checked="-1" parentname="DIGITAL_AUDIO_1_I2S_MASTER_D_OUT0"></Function>
+		<Function name="sai2.TX_DATA[1]" pinid="32" pinname="SAI2_TXFS" checked="-1" parentname="DIGITAL_AUDIO_1_I2S_MASTER_D_OUT1"></Function>
+		<Function name="sai2.MCLK" pinid="38" pinname="SAI2_MCLK" checked="-1" parentname="DIGITAL_AUDIO_1_I2S_MASTER_MCLK"></Function>
+		<Function name="sai2.TX_SYNC" pinid="32" pinname="SAI2_TXFS" checked="-1" parentname="DIGITAL_AUDIO_1_I2S_MASTER_SYNC"></Function>
+		<Function name="sai2.RX_BCLK" pinid="147" pinname="SAI2_RXC" checked="-1" parentname="DIGITAL_AUDIO_1_I2S_SLAVE_BCLK"></Function>
+		<Function name="sai2.RX_DATA[0]" pinid="36" pinname="SAI2_RXD0" checked="-1" parentname="DIGITAL_AUDIO_1_I2S_SLAVE_D_IN0"></Function>
+		<Function name="sai2.RX_DATA[1]" pinid="149" pinname="SAI2_RXFS" checked="-1" parentname="DIGITAL_AUDIO_1_I2S_SLAVE_D_IN1"></Function>
+		<Function name="sai2.TX_DATA[0]" pinid="34" pinname="SAI2_TXD0" checked="-1" parentname="DIGITAL_AUDIO_1_I2S_SLAVE_D_OUT0"></Function>
+		<Function name="sai2.TX_DATA[1]" pinid="32" pinname="SAI2_TXFS" checked="-1" parentname="DIGITAL_AUDIO_1_I2S_SLAVE_D_OUT1"></Function>
+		<Function name="sai2.MCLK" pinid="38" pinname="SAI2_MCLK" checked="-1" parentname="DIGITAL_AUDIO_1_I2S_SLAVE_MCLK"></Function>
+		<Function name="sai2.RX_SYNC" pinid="149" pinname="SAI2_RXFS" checked="-1" parentname="DIGITAL_AUDIO_1_I2S_SLAVE_SYNC"></Function>
+		<Function name="sai2.MCLK" pinid="38" pinname="SAI2_MCLK" checked="-1" parentname="DIGITAL_AUDIO_1_SAI_MCLK"></Function>
+		<Function name="sai2.RX_BCLK" pinid="147" pinname="SAI2_RXC" checked="-1" parentname="DIGITAL_AUDIO_1_SAI_RX_BCLK"></Function>
+		<Function name="sai2.RX_DATA[0]" pinid="36" pinname="SAI2_RXD0" checked="-1" parentname="DIGITAL_AUDIO_1_SAI_RX_DATA0"></Function>
+		<Function name="sai2.RX_DATA[1]" pinid="149" pinname="SAI2_RXFS" checked="-1" parentname="DIGITAL_AUDIO_1_SAI_RX_DATA1"></Function>
+		<Function name="sai2.RX_SYNC" pinid="149" pinname="SAI2_RXFS" checked="-1" parentname="DIGITAL_AUDIO_1_SAI_RX_SYNC"></Function>
+		<Function name="sai2.TX_BCLK" pinid="30" pinname="SAI2_TXC" checked="-1" parentname="DIGITAL_AUDIO_1_SAI_TX_BCLK"></Function>
+		<Function name="sai2.TX_DATA[0]" pinid="34" pinname="SAI2_TXD0" checked="-1" parentname="DIGITAL_AUDIO_1_SAI_TX_DATA0"></Function>
+		<Function name="sai2.TX_DATA[1]" pinid="32" pinname="SAI2_TXFS" checked="-1" parentname="DIGITAL_AUDIO_1_SAI_TX_DATA1"></Function>
+		<Function name="sai2.TX_SYNC" pinid="32" pinname="SAI2_TXFS" checked="-1" parentname="DIGITAL_AUDIO_1_SAI_TX_SYNC"></Function>
+		<Function name="sai5.TX_BCLK" pinid="147" pinname="SAI2_RXC" checked="-1" parentname="DIGITAL_AUDIO_2_AC97_BIT_CLK"></Function>
+		<Function name="sai5.TX_BCLK" pinid="42" pinname="SAI5_RXD2" checked="-1" parentname="DIGITAL_AUDIO_2_AC97_BIT_CLK"></Function>
+		<Function name="sai5.TX_BCLK" pinid="104" pinname="SAI1_TXC" checked="-1" parentname="DIGITAL_AUDIO_2_AC97_BIT_CLK"></Function>
+		<Function name="sai5.MCLK" pinid="91" pinname="SAI3_MCLK" checked="-1" parentname="DIGITAL_AUDIO_2_AC97_MCLK"></Function>
+		<Function name="sai5.MCLK" pinid="38" pinname="SAI2_MCLK" checked="-1" parentname="DIGITAL_AUDIO_2_AC97_MCLK"></Function>
+		<Function name="sai5.MCLK" pinid="88" pinname="SAI1_MCLK" checked="-1" parentname="DIGITAL_AUDIO_2_AC97_MCLK"></Function>
+		<Function name="sai5.RX_DATA[0]" pinid="135" pinname="SAI3_RXD" checked="-1" parentname="DIGITAL_AUDIO_2_AC97_SDATA_IN"></Function>
+		<Function name="sai5.RX_DATA[0]" pinid="48" pinname="SAI5_RXD0" checked="-1" parentname="DIGITAL_AUDIO_2_AC97_SDATA_IN"></Function>
+		<Function name="sai5.RX_DATA[0]" pinid="92" pinname="SAI1_RXD0" checked="-1" parentname="DIGITAL_AUDIO_2_AC97_SDATA_IN"></Function>
+		<Function name="sai5.TX_DATA[0]" pinid="36" pinname="SAI2_RXD0" checked="-1" parentname="DIGITAL_AUDIO_2_AC97_SDATA_OUT"></Function>
+		<Function name="sai5.TX_DATA[0]" pinid="46" pinname="SAI5_RXD3" checked="-1" parentname="DIGITAL_AUDIO_2_AC97_SDATA_OUT"></Function>
+		<Function name="sai5.TX_DATA[0]" pinid="106" pinname="SAI1_TXD0" checked="-1" parentname="DIGITAL_AUDIO_2_AC97_SDATA_OUT"></Function>
+		<Function name="sai5.TX_SYNC" pinid="149" pinname="SAI2_RXFS" checked="-1" parentname="DIGITAL_AUDIO_2_AC97_SYNC"></Function>
+		<Function name="sai5.TX_SYNC" pinid="44" pinname="SAI5_RXD1" checked="-1" parentname="DIGITAL_AUDIO_2_AC97_SYNC"></Function>
+		<Function name="sai5.TX_SYNC" pinid="120" pinname="SAI1_TXFS" checked="-1" parentname="DIGITAL_AUDIO_2_AC97_SYNC"></Function>
+		<Function name="sai5.TX_BCLK" pinid="147" pinname="SAI2_RXC" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_BCLK"></Function>
+		<Function name="sai5.TX_BCLK" pinid="42" pinname="SAI5_RXD2" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_BCLK"></Function>
+		<Function name="sai5.TX_BCLK" pinid="104" pinname="SAI1_TXC" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_BCLK"></Function>
+		<Function name="sai5.RX_DATA[0]" pinid="135" pinname="SAI3_RXD" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_D_IN0"></Function>
+		<Function name="sai5.RX_DATA[0]" pinid="48" pinname="SAI5_RXD0" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_D_IN0"></Function>
+		<Function name="sai5.RX_DATA[0]" pinid="92" pinname="SAI1_RXD0" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_D_IN0"></Function>
+		<Function name="sai5.RX_DATA[1]" pinid="129" pinname="SAI3_TXFS" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_D_IN1"></Function>
+		<Function name="sai5.RX_DATA[1]" pinid="44" pinname="SAI5_RXD1" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_D_IN1"></Function>
+		<Function name="sai5.RX_DATA[1]" pinid="94" pinname="SAI1_RXD1" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_D_IN1"></Function>
+		<Function name="sai5.RX_DATA[2]" pinid="131" pinname="SAI3_TXC" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_D_IN2"></Function>
+		<Function name="sai5.RX_DATA[2]" pinid="42" pinname="SAI5_RXD2" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_D_IN2"></Function>
+		<Function name="sai5.RX_DATA[2]" pinid="96" pinname="SAI1_RXD2" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_D_IN2"></Function>
+		<Function name="sai5.RX_DATA[3]" pinid="46" pinname="SAI5_RXD3" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_D_IN3"></Function>
+		<Function name="sai5.RX_DATA[3]" pinid="100" pinname="SAI1_RXD3" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_D_IN3"></Function>
+		<Function name="sai5.RX_DATA[3]" pinid="256" pinname="SAI3_TXD" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_D_IN3"></Function>
+		<Function name="sai5.TX_DATA[0]" pinid="36" pinname="SAI2_RXD0" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_D_OUT0"></Function>
+		<Function name="sai5.TX_DATA[0]" pinid="46" pinname="SAI5_RXD3" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_D_OUT0"></Function>
+		<Function name="sai5.TX_DATA[0]" pinid="106" pinname="SAI1_TXD0" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_D_OUT0"></Function>
+		<Function name="sai5.TX_DATA[1]" pinid="149" pinname="SAI2_RXFS" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_D_OUT1"></Function>
+		<Function name="sai5.TX_DATA[1]" pinid="32" pinname="SAI2_TXFS" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_D_OUT1"></Function>
+		<Function name="sai5.TX_DATA[1]" pinid="108" pinname="SAI1_TXD1" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_D_OUT1"></Function>
+		<Function name="sai5.TX_DATA[2]" pinid="30" pinname="SAI2_TXC" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_D_OUT2"></Function>
+		<Function name="sai5.TX_DATA[2]" pinid="112" pinname="SAI1_TXD2" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_D_OUT2"></Function>
+		<Function name="sai5.TX_DATA[3]" pinid="34" pinname="SAI2_TXD0" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_D_OUT3"></Function>
+		<Function name="sai5.TX_DATA[3]" pinid="114" pinname="SAI1_TXD3" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_D_OUT3"></Function>
+		<Function name="sai5.MCLK" pinid="91" pinname="SAI3_MCLK" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_MCLK"></Function>
+		<Function name="sai5.MCLK" pinid="38" pinname="SAI2_MCLK" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_MCLK"></Function>
+		<Function name="sai5.MCLK" pinid="88" pinname="SAI1_MCLK" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_MCLK"></Function>
+		<Function name="sai5.TX_SYNC" pinid="149" pinname="SAI2_RXFS" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_SYNC"></Function>
+		<Function name="sai5.TX_SYNC" pinid="44" pinname="SAI5_RXD1" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_SYNC"></Function>
+		<Function name="sai5.TX_SYNC" pinid="120" pinname="SAI1_TXFS" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_MASTER_SYNC"></Function>
+		<Function name="sai5.RX_BCLK" pinid="133" pinname="SAI3_RXC" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_BCLK"></Function>
+		<Function name="sai5.RX_BCLK" pinid="90" pinname="SAI1_RXC" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_BCLK"></Function>
+		<Function name="sai5.RX_DATA[0]" pinid="135" pinname="SAI3_RXD" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN0"></Function>
+		<Function name="sai5.RX_DATA[0]" pinid="48" pinname="SAI5_RXD0" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN0"></Function>
+		<Function name="sai5.RX_DATA[0]" pinid="92" pinname="SAI1_RXD0" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN0"></Function>
+		<Function name="sai5.RX_DATA[1]" pinid="129" pinname="SAI3_TXFS" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN1"></Function>
+		<Function name="sai5.RX_DATA[1]" pinid="44" pinname="SAI5_RXD1" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN1"></Function>
+		<Function name="sai5.RX_DATA[1]" pinid="94" pinname="SAI1_RXD1" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN1"></Function>
+		<Function name="sai5.RX_DATA[2]" pinid="131" pinname="SAI3_TXC" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN2"></Function>
+		<Function name="sai5.RX_DATA[2]" pinid="42" pinname="SAI5_RXD2" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN2"></Function>
+		<Function name="sai5.RX_DATA[2]" pinid="96" pinname="SAI1_RXD2" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN2"></Function>
+		<Function name="sai5.RX_DATA[3]" pinid="46" pinname="SAI5_RXD3" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN3"></Function>
+		<Function name="sai5.RX_DATA[3]" pinid="100" pinname="SAI1_RXD3" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN3"></Function>
+		<Function name="sai5.RX_DATA[3]" pinid="256" pinname="SAI3_TXD" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN3"></Function>
+		<Function name="sai5.TX_DATA[0]" pinid="36" pinname="SAI2_RXD0" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_D_OUT0"></Function>
+		<Function name="sai5.TX_DATA[0]" pinid="46" pinname="SAI5_RXD3" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_D_OUT0"></Function>
+		<Function name="sai5.TX_DATA[0]" pinid="106" pinname="SAI1_TXD0" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_D_OUT0"></Function>
+		<Function name="sai5.TX_DATA[1]" pinid="149" pinname="SAI2_RXFS" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_D_OUT1"></Function>
+		<Function name="sai5.TX_DATA[1]" pinid="32" pinname="SAI2_TXFS" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_D_OUT1"></Function>
+		<Function name="sai5.TX_DATA[1]" pinid="108" pinname="SAI1_TXD1" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_D_OUT1"></Function>
+		<Function name="sai5.TX_DATA[2]" pinid="30" pinname="SAI2_TXC" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_D_OUT2"></Function>
+		<Function name="sai5.TX_DATA[2]" pinid="112" pinname="SAI1_TXD2" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_D_OUT2"></Function>
+		<Function name="sai5.TX_DATA[3]" pinid="34" pinname="SAI2_TXD0" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_D_OUT3"></Function>
+		<Function name="sai5.TX_DATA[3]" pinid="114" pinname="SAI1_TXD3" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_D_OUT3"></Function>
+		<Function name="sai5.MCLK" pinid="91" pinname="SAI3_MCLK" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_MCLK"></Function>
+		<Function name="sai5.MCLK" pinid="38" pinname="SAI2_MCLK" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_MCLK"></Function>
+		<Function name="sai5.MCLK" pinid="88" pinname="SAI1_MCLK" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_MCLK"></Function>
+		<Function name="sai5.RX_SYNC" pinid="102" pinname="SAI1_RXFS" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_SYNC"></Function>
+		<Function name="sai5.RX_SYNC" pinid="244" pinname="SAI5_RXFS" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_SYNC"></Function>
+		<Function name="sai5.RX_SYNC" pinid="252" pinname="SAI3_RXFS" checked="-1" parentname="DIGITAL_AUDIO_2_I2S_SLAVE_SYNC"></Function>
+		<Function name="sai5.MCLK" pinid="91" pinname="SAI3_MCLK" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_MCLK"></Function>
+		<Function name="sai5.MCLK" pinid="38" pinname="SAI2_MCLK" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_MCLK"></Function>
+		<Function name="sai5.MCLK" pinid="88" pinname="SAI1_MCLK" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_MCLK"></Function>
+		<Function name="sai5.RX_BCLK" pinid="133" pinname="SAI3_RXC" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_RX_BCLK"></Function>
+		<Function name="sai5.RX_BCLK" pinid="90" pinname="SAI1_RXC" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_RX_BCLK"></Function>
+		<Function name="sai5.RX_DATA[0]" pinid="135" pinname="SAI3_RXD" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_RX_DATA0"></Function>
+		<Function name="sai5.RX_DATA[0]" pinid="48" pinname="SAI5_RXD0" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_RX_DATA0"></Function>
+		<Function name="sai5.RX_DATA[0]" pinid="92" pinname="SAI1_RXD0" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_RX_DATA0"></Function>
+		<Function name="sai5.RX_DATA[1]" pinid="129" pinname="SAI3_TXFS" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_RX_DATA1"></Function>
+		<Function name="sai5.RX_DATA[1]" pinid="44" pinname="SAI5_RXD1" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_RX_DATA1"></Function>
+		<Function name="sai5.RX_DATA[1]" pinid="94" pinname="SAI1_RXD1" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_RX_DATA1"></Function>
+		<Function name="sai5.RX_DATA[2]" pinid="131" pinname="SAI3_TXC" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_RX_DATA2"></Function>
+		<Function name="sai5.RX_DATA[2]" pinid="42" pinname="SAI5_RXD2" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_RX_DATA2"></Function>
+		<Function name="sai5.RX_DATA[2]" pinid="96" pinname="SAI1_RXD2" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_RX_DATA2"></Function>
+		<Function name="sai5.RX_DATA[3]" pinid="46" pinname="SAI5_RXD3" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_RX_DATA3"></Function>
+		<Function name="sai5.RX_DATA[3]" pinid="100" pinname="SAI1_RXD3" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_RX_DATA3"></Function>
+		<Function name="sai5.RX_DATA[3]" pinid="256" pinname="SAI3_TXD" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_RX_DATA3"></Function>
+		<Function name="sai5.RX_SYNC" pinid="102" pinname="SAI1_RXFS" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_RX_SYNC"></Function>
+		<Function name="sai5.RX_SYNC" pinid="244" pinname="SAI5_RXFS" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_RX_SYNC"></Function>
+		<Function name="sai5.RX_SYNC" pinid="252" pinname="SAI3_RXFS" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_RX_SYNC"></Function>
+		<Function name="sai5.TX_BCLK" pinid="147" pinname="SAI2_RXC" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_TX_BCLK"></Function>
+		<Function name="sai5.TX_BCLK" pinid="42" pinname="SAI5_RXD2" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_TX_BCLK"></Function>
+		<Function name="sai5.TX_BCLK" pinid="104" pinname="SAI1_TXC" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_TX_BCLK"></Function>
+		<Function name="sai5.TX_DATA[0]" pinid="36" pinname="SAI2_RXD0" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_TX_DATA0"></Function>
+		<Function name="sai5.TX_DATA[0]" pinid="46" pinname="SAI5_RXD3" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_TX_DATA0"></Function>
+		<Function name="sai5.TX_DATA[0]" pinid="106" pinname="SAI1_TXD0" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_TX_DATA0"></Function>
+		<Function name="sai5.TX_DATA[1]" pinid="149" pinname="SAI2_RXFS" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_TX_DATA1"></Function>
+		<Function name="sai5.TX_DATA[1]" pinid="32" pinname="SAI2_TXFS" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_TX_DATA1"></Function>
+		<Function name="sai5.TX_DATA[1]" pinid="108" pinname="SAI1_TXD1" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_TX_DATA1"></Function>
+		<Function name="sai5.TX_DATA[2]" pinid="30" pinname="SAI2_TXC" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_TX_DATA2"></Function>
+		<Function name="sai5.TX_DATA[2]" pinid="112" pinname="SAI1_TXD2" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_TX_DATA2"></Function>
+		<Function name="sai5.TX_DATA[3]" pinid="34" pinname="SAI2_TXD0" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_TX_DATA3"></Function>
+		<Function name="sai5.TX_DATA[3]" pinid="114" pinname="SAI1_TXD3" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_TX_DATA3"></Function>
+		<Function name="sai5.TX_SYNC" pinid="149" pinname="SAI2_RXFS" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_TX_SYNC"></Function>
+		<Function name="sai5.TX_SYNC" pinid="44" pinname="SAI5_RXD1" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_TX_SYNC"></Function>
+		<Function name="sai5.TX_SYNC" pinid="120" pinname="SAI1_TXFS" checked="-1" parentname="DIGITAL_AUDIO_2_SAI_TX_SYNC"></Function>
+		<Function name="sai1.TX_BCLK" pinid="88" pinname="SAI1_MCLK" checked="-1" parentname="DIGITAL_AUDIO_3_AC97_BIT_CLK"></Function>
+		<Function name="sai1.TX_BCLK" pinid="104" pinname="SAI1_TXC" checked="-1" parentname="DIGITAL_AUDIO_3_AC97_BIT_CLK"></Function>
+		<Function name="sai1.MCLK" pinid="88" pinname="SAI1_MCLK" checked="-1" parentname="DIGITAL_AUDIO_3_AC97_MCLK"></Function>
+		<Function name="sai1.RX_DATA[0]" pinid="92" pinname="SAI1_RXD0" checked="-1" parentname="DIGITAL_AUDIO_3_AC97_SDATA_IN"></Function>
+		<Function name="sai1.TX_DATA[0]" pinid="106" pinname="SAI1_TXD0" checked="-1" parentname="DIGITAL_AUDIO_3_AC97_SDATA_OUT"></Function>
+		<Function name="sai1.TX_DATA[0]" pinid="244" pinname="SAI5_RXFS" checked="-1" parentname="DIGITAL_AUDIO_3_AC97_SDATA_OUT"></Function>
+		<Function name="sai1.TX_SYNC" pinid="42" pinname="SAI5_RXD2" checked="-1" parentname="DIGITAL_AUDIO_3_AC97_SYNC"></Function>
+		<Function name="sai1.TX_SYNC" pinid="44" pinname="SAI5_RXD1" checked="-1" parentname="DIGITAL_AUDIO_3_AC97_SYNC"></Function>
+		<Function name="sai1.TX_SYNC" pinid="46" pinname="SAI5_RXD3" checked="-1" parentname="DIGITAL_AUDIO_3_AC97_SYNC"></Function>
+		<Function name="sai1.TX_SYNC" pinid="120" pinname="SAI1_TXFS" checked="-1" parentname="DIGITAL_AUDIO_3_AC97_SYNC"></Function>
+		<Function name="sai1.TX_SYNC" pinid="174" pinname="SAI1_RXD7" checked="-1" parentname="DIGITAL_AUDIO_3_AC97_SYNC"></Function>
+		<Function name="sai1.TX_BCLK" pinid="88" pinname="SAI1_MCLK" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_BCLK"></Function>
+		<Function name="sai1.TX_BCLK" pinid="104" pinname="SAI1_TXC" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_BCLK"></Function>
+		<Function name="sai1.RX_DATA[0]" pinid="92" pinname="SAI1_RXD0" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_D_IN0"></Function>
+		<Function name="sai1.RX_DATA[1]" pinid="94" pinname="SAI1_RXD1" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_D_IN1"></Function>
+		<Function name="sai1.RX_DATA[2]" pinid="96" pinname="SAI1_RXD2" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_D_IN2"></Function>
+		<Function name="sai1.RX_DATA[3]" pinid="100" pinname="SAI1_RXD3" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_D_IN3"></Function>
+		<Function name="sai1.RX_DATA[7]" pinid="174" pinname="SAI1_RXD7" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_D_IN7"></Function>
+		<Function name="sai1.TX_DATA[0]" pinid="106" pinname="SAI1_TXD0" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT0"></Function>
+		<Function name="sai1.TX_DATA[0]" pinid="244" pinname="SAI5_RXFS" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT0"></Function>
+		<Function name="sai1.TX_DATA[1]" pinid="92" pinname="SAI1_RXD0" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT1"></Function>
+		<Function name="sai1.TX_DATA[1]" pinid="108" pinname="SAI1_TXD1" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT1"></Function>
+		<Function name="sai1.TX_DATA[2]" pinid="48" pinname="SAI5_RXD0" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT2"></Function>
+		<Function name="sai1.TX_DATA[2]" pinid="112" pinname="SAI1_TXD2" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT2"></Function>
+		<Function name="sai1.TX_DATA[3]" pinid="44" pinname="SAI5_RXD1" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT3"></Function>
+		<Function name="sai1.TX_DATA[3]" pinid="114" pinname="SAI1_TXD3" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT3"></Function>
+		<Function name="sai1.TX_DATA[4]" pinid="42" pinname="SAI5_RXD2" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT4"></Function>
+		<Function name="sai1.TX_DATA[4]" pinid="116" pinname="SAI1_TXD4" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT4"></Function>
+		<Function name="sai1.TX_DATA[4]" pinid="174" pinname="SAI1_RXD7" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT4"></Function>
+		<Function name="sai1.TX_DATA[5]" pinid="46" pinname="SAI5_RXD3" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT5"></Function>
+		<Function name="sai1.TX_DATA[6]" pinid="118" pinname="SAI1_TXD6" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT6"></Function>
+		<Function name="sai1.MCLK" pinid="88" pinname="SAI1_MCLK" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_MCLK"></Function>
+		<Function name="sai1.TX_SYNC" pinid="42" pinname="SAI5_RXD2" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_SYNC"></Function>
+		<Function name="sai1.TX_SYNC" pinid="44" pinname="SAI5_RXD1" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_SYNC"></Function>
+		<Function name="sai1.TX_SYNC" pinid="46" pinname="SAI5_RXD3" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_SYNC"></Function>
+		<Function name="sai1.TX_SYNC" pinid="120" pinname="SAI1_TXFS" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_SYNC"></Function>
+		<Function name="sai1.TX_SYNC" pinid="174" pinname="SAI1_RXD7" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_MASTER_SYNC"></Function>
+		<Function name="sai1.RX_BCLK" pinid="90" pinname="SAI1_RXC" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_SLAVE_BCLK"></Function>
+		<Function name="sai1.RX_DATA[0]" pinid="92" pinname="SAI1_RXD0" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_SLAVE_D_IN0"></Function>
+		<Function name="sai1.RX_DATA[1]" pinid="94" pinname="SAI1_RXD1" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_SLAVE_D_IN1"></Function>
+		<Function name="sai1.RX_DATA[2]" pinid="96" pinname="SAI1_RXD2" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_SLAVE_D_IN2"></Function>
+		<Function name="sai1.RX_DATA[3]" pinid="100" pinname="SAI1_RXD3" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_SLAVE_D_IN3"></Function>
+		<Function name="sai1.RX_DATA[7]" pinid="174" pinname="SAI1_RXD7" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_SLAVE_D_IN7"></Function>
+		<Function name="sai1.TX_DATA[0]" pinid="106" pinname="SAI1_TXD0" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT0"></Function>
+		<Function name="sai1.TX_DATA[0]" pinid="244" pinname="SAI5_RXFS" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT0"></Function>
+		<Function name="sai1.TX_DATA[1]" pinid="92" pinname="SAI1_RXD0" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT1"></Function>
+		<Function name="sai1.TX_DATA[1]" pinid="108" pinname="SAI1_TXD1" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT1"></Function>
+		<Function name="sai1.TX_DATA[2]" pinid="48" pinname="SAI5_RXD0" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT2"></Function>
+		<Function name="sai1.TX_DATA[2]" pinid="112" pinname="SAI1_TXD2" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT2"></Function>
+		<Function name="sai1.TX_DATA[3]" pinid="44" pinname="SAI5_RXD1" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT3"></Function>
+		<Function name="sai1.TX_DATA[3]" pinid="114" pinname="SAI1_TXD3" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT3"></Function>
+		<Function name="sai1.TX_DATA[4]" pinid="42" pinname="SAI5_RXD2" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT4"></Function>
+		<Function name="sai1.TX_DATA[4]" pinid="116" pinname="SAI1_TXD4" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT4"></Function>
+		<Function name="sai1.TX_DATA[4]" pinid="174" pinname="SAI1_RXD7" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT4"></Function>
+		<Function name="sai1.TX_DATA[5]" pinid="46" pinname="SAI5_RXD3" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT5"></Function>
+		<Function name="sai1.TX_DATA[6]" pinid="118" pinname="SAI1_TXD6" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT6"></Function>
+		<Function name="sai1.MCLK" pinid="88" pinname="SAI1_MCLK" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_SLAVE_MCLK"></Function>
+		<Function name="sai1.RX_SYNC" pinid="102" pinname="SAI1_RXFS" checked="-1" parentname="DIGITAL_AUDIO_3_I2S_SLAVE_SYNC"></Function>
+		<Function name="sai1.MCLK" pinid="88" pinname="SAI1_MCLK" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_MCLK"></Function>
+		<Function name="sai1.RX_BCLK" pinid="90" pinname="SAI1_RXC" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_RX_BCLK"></Function>
+		<Function name="sai1.RX_DATA[0]" pinid="92" pinname="SAI1_RXD0" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_RX_DATA0"></Function>
+		<Function name="sai1.RX_DATA[1]" pinid="94" pinname="SAI1_RXD1" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_RX_DATA1"></Function>
+		<Function name="sai1.RX_DATA[2]" pinid="96" pinname="SAI1_RXD2" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_RX_DATA2"></Function>
+		<Function name="sai1.RX_DATA[3]" pinid="100" pinname="SAI1_RXD3" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_RX_DATA3"></Function>
+		<Function name="sai1.RX_DATA[7]" pinid="174" pinname="SAI1_RXD7" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_RX_DATA7"></Function>
+		<Function name="sai1.RX_SYNC" pinid="102" pinname="SAI1_RXFS" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_RX_SYNC"></Function>
+		<Function name="sai1.TX_BCLK" pinid="88" pinname="SAI1_MCLK" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_TX_BCLK"></Function>
+		<Function name="sai1.TX_BCLK" pinid="104" pinname="SAI1_TXC" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_TX_BCLK"></Function>
+		<Function name="sai1.TX_DATA[0]" pinid="106" pinname="SAI1_TXD0" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_TX_DATA0"></Function>
+		<Function name="sai1.TX_DATA[0]" pinid="244" pinname="SAI5_RXFS" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_TX_DATA0"></Function>
+		<Function name="sai1.TX_DATA[1]" pinid="92" pinname="SAI1_RXD0" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_TX_DATA1"></Function>
+		<Function name="sai1.TX_DATA[1]" pinid="108" pinname="SAI1_TXD1" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_TX_DATA1"></Function>
+		<Function name="sai1.TX_DATA[2]" pinid="48" pinname="SAI5_RXD0" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_TX_DATA2"></Function>
+		<Function name="sai1.TX_DATA[2]" pinid="112" pinname="SAI1_TXD2" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_TX_DATA2"></Function>
+		<Function name="sai1.TX_DATA[3]" pinid="44" pinname="SAI5_RXD1" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_TX_DATA3"></Function>
+		<Function name="sai1.TX_DATA[3]" pinid="114" pinname="SAI1_TXD3" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_TX_DATA3"></Function>
+		<Function name="sai1.TX_DATA[4]" pinid="42" pinname="SAI5_RXD2" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_TX_DATA4"></Function>
+		<Function name="sai1.TX_DATA[4]" pinid="116" pinname="SAI1_TXD4" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_TX_DATA4"></Function>
+		<Function name="sai1.TX_DATA[4]" pinid="174" pinname="SAI1_RXD7" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_TX_DATA4"></Function>
+		<Function name="sai1.TX_DATA[5]" pinid="46" pinname="SAI5_RXD3" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_TX_DATA5"></Function>
+		<Function name="sai1.TX_DATA[6]" pinid="118" pinname="SAI1_TXD6" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_TX_DATA6"></Function>
+		<Function name="sai1.TX_SYNC" pinid="42" pinname="SAI5_RXD2" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_TX_SYNC"></Function>
+		<Function name="sai1.TX_SYNC" pinid="44" pinname="SAI5_RXD1" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_TX_SYNC"></Function>
+		<Function name="sai1.TX_SYNC" pinid="46" pinname="SAI5_RXD3" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_TX_SYNC"></Function>
+		<Function name="sai1.TX_SYNC" pinid="120" pinname="SAI1_TXFS" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_TX_SYNC"></Function>
+		<Function name="sai1.TX_SYNC" pinid="174" pinname="SAI1_RXD7" checked="-1" parentname="DIGITAL_AUDIO_3_SAI_TX_SYNC"></Function>
+		<Function name="sai3.TX_BCLK" pinid="131" pinname="SAI3_TXC" checked="-1" parentname="DIGITAL_AUDIO_4_AC97_BIT_CLK"></Function>
+		<Function name="sai3.MCLK" pinid="91" pinname="SAI3_MCLK" checked="-1" parentname="DIGITAL_AUDIO_4_AC97_MCLK"></Function>
+		<Function name="sai3.RX_DATA[0]" pinid="135" pinname="SAI3_RXD" checked="-1" parentname="DIGITAL_AUDIO_4_AC97_SDATA_IN"></Function>
+		<Function name="sai3.TX_SYNC" pinid="129" pinname="SAI3_TXFS" checked="-1" parentname="DIGITAL_AUDIO_4_AC97_SYNC"></Function>
+		<Function name="sai3.TX_BCLK" pinid="131" pinname="SAI3_TXC" checked="-1" parentname="DIGITAL_AUDIO_4_I2S_MASTER_BCLK"></Function>
+		<Function name="sai3.RX_DATA[0]" pinid="135" pinname="SAI3_RXD" checked="-1" parentname="DIGITAL_AUDIO_4_I2S_MASTER_D_IN0"></Function>
+		<Function name="sai3.RX_DATA[1]" pinid="252" pinname="SAI3_RXFS" checked="-1" parentname="DIGITAL_AUDIO_4_I2S_MASTER_D_IN1"></Function>
+		<Function name="sai3.TX_DATA[0]" pinid="256" pinname="SAI3_TXD" checked="-1" parentname="DIGITAL_AUDIO_4_I2S_MASTER_D_OUT0"></Function>
+		<Function name="sai3.TX_DATA[1]" pinid="129" pinname="SAI3_TXFS" checked="-1" parentname="DIGITAL_AUDIO_4_I2S_MASTER_D_OUT1"></Function>
+		<Function name="sai3.MCLK" pinid="91" pinname="SAI3_MCLK" checked="-1" parentname="DIGITAL_AUDIO_4_I2S_MASTER_MCLK"></Function>
+		<Function name="sai3.TX_SYNC" pinid="129" pinname="SAI3_TXFS" checked="-1" parentname="DIGITAL_AUDIO_4_I2S_MASTER_SYNC"></Function>
+		<Function name="sai3.RX_BCLK" pinid="133" pinname="SAI3_RXC" checked="-1" parentname="DIGITAL_AUDIO_4_I2S_SLAVE_BCLK"></Function>
+		<Function name="sai3.RX_DATA[0]" pinid="135" pinname="SAI3_RXD" checked="-1" parentname="DIGITAL_AUDIO_4_I2S_SLAVE_D_IN0"></Function>
+		<Function name="sai3.RX_DATA[1]" pinid="252" pinname="SAI3_RXFS" checked="-1" parentname="DIGITAL_AUDIO_4_I2S_SLAVE_D_IN1"></Function>
+		<Function name="sai3.TX_DATA[0]" pinid="256" pinname="SAI3_TXD" checked="-1" parentname="DIGITAL_AUDIO_4_I2S_SLAVE_D_OUT0"></Function>
+		<Function name="sai3.TX_DATA[1]" pinid="129" pinname="SAI3_TXFS" checked="-1" parentname="DIGITAL_AUDIO_4_I2S_SLAVE_D_OUT1"></Function>
+		<Function name="sai3.MCLK" pinid="91" pinname="SAI3_MCLK" checked="-1" parentname="DIGITAL_AUDIO_4_I2S_SLAVE_MCLK"></Function>
+		<Function name="sai3.RX_SYNC" pinid="252" pinname="SAI3_RXFS" checked="-1" parentname="DIGITAL_AUDIO_4_I2S_SLAVE_SYNC"></Function>
+		<Function name="sai3.MCLK" pinid="91" pinname="SAI3_MCLK" checked="-1" parentname="DIGITAL_AUDIO_4_SAI_MCLK"></Function>
+		<Function name="sai3.RX_BCLK" pinid="133" pinname="SAI3_RXC" checked="-1" parentname="DIGITAL_AUDIO_4_SAI_RX_BCLK"></Function>
+		<Function name="sai3.RX_DATA[0]" pinid="135" pinname="SAI3_RXD" checked="-1" parentname="DIGITAL_AUDIO_4_SAI_RX_DATA0"></Function>
+		<Function name="sai3.RX_DATA[1]" pinid="252" pinname="SAI3_RXFS" checked="-1" parentname="DIGITAL_AUDIO_4_SAI_RX_DATA1"></Function>
+		<Function name="sai3.RX_SYNC" pinid="252" pinname="SAI3_RXFS" checked="-1" parentname="DIGITAL_AUDIO_4_SAI_RX_SYNC"></Function>
+		<Function name="sai3.TX_BCLK" pinid="131" pinname="SAI3_TXC" checked="-1" parentname="DIGITAL_AUDIO_4_SAI_TX_BCLK"></Function>
+		<Function name="sai3.TX_DATA[0]" pinid="256" pinname="SAI3_TXD" checked="-1" parentname="DIGITAL_AUDIO_4_SAI_TX_DATA0"></Function>
+		<Function name="sai3.TX_DATA[1]" pinid="129" pinname="SAI3_TXFS" checked="-1" parentname="DIGITAL_AUDIO_4_SAI_TX_DATA1"></Function>
+		<Function name="sai3.TX_SYNC" pinid="129" pinname="SAI3_TXFS" checked="-1" parentname="DIGITAL_AUDIO_4_SAI_TX_SYNC"></Function>
+		<Function name="sai6.MCLK" pinid="174" pinname="SAI1_RXD7" checked="-1" parentname="DIGITAL_AUDIO_UNUSABLE_SAI_6_MCLK"></Function>
+		<Function name="sai6.RX_BCLK" pinid="116" pinname="SAI1_TXD4" checked="-1" parentname="DIGITAL_AUDIO_UNUSABLE_SAI_6_RX_BCLK"></Function>
+		<Function name="sai6.RX_SYNC" pinid="118" pinname="SAI1_TXD6" checked="-1" parentname="DIGITAL_AUDIO_UNUSABLE_SAI_6_RX_SYNC"></Function>
+		<Function name="sai6.TX_BCLK" pinid="116" pinname="SAI1_TXD4" checked="-1" parentname="DIGITAL_AUDIO_UNUSABLE_SAI_6_TX_BCLK"></Function>
+		<Function name="sai6.TX_SYNC" pinid="118" pinname="SAI1_TXD6" checked="-1" parentname="DIGITAL_AUDIO_UNUSABLE_SAI_6_TX_SYNC"></Function>
+		<Function name="gpio3.IO[3]" pinid="21" pinname="NAND_CE2_B" checked="-1" parentname="DSI_1_BKL_EN"></Function>
+		<Function name="MIPI_DSI_CLK_N" pinid="35" pinname="MIPI_DSI_CLK_N" checked="-1" parentname="DSI_1_DSI[:slash]1x_CLK_N"></Function>
+		<Function name="MIPI_DSI_CLK_P" pinid="37" pinname="MIPI_DSI_CLK_P" checked="-1" parentname="DSI_1_DSI[:slash]1x_CLK_P"></Function>
+		<Function name="MIPI_DSI_D0_N" pinid="47" pinname="MIPI_DSI_D0_N" checked="-1" parentname="DSI_1_DSI[:slash]1x_D0_N"></Function>
+		<Function name="MIPI_DSI_D0_P" pinid="49" pinname="MIPI_DSI_D0_P" checked="-1" parentname="DSI_1_DSI[:slash]1x_D0_P"></Function>
+		<Function name="MIPI_DSI_CLK_N" pinid="35" pinname="MIPI_DSI_CLK_N" checked="-1" parentname="DSI_1_DSI[:slash]2x_CLK_N"></Function>
+		<Function name="MIPI_DSI_CLK_P" pinid="37" pinname="MIPI_DSI_CLK_P" checked="-1" parentname="DSI_1_DSI[:slash]2x_CLK_P"></Function>
+		<Function name="MIPI_DSI_D0_N" pinid="47" pinname="MIPI_DSI_D0_N" checked="-1" parentname="DSI_1_DSI[:slash]2x_D0_N"></Function>
+		<Function name="MIPI_DSI_D0_P" pinid="49" pinname="MIPI_DSI_D0_P" checked="-1" parentname="DSI_1_DSI[:slash]2x_D0_P"></Function>
+		<Function name="MIPI_DSI_D1_N" pinid="41" pinname="MIPI_DSI_D1_N" checked="-1" parentname="DSI_1_DSI[:slash]2x_D1_N"></Function>
+		<Function name="MIPI_DSI_D1_P" pinid="43" pinname="MIPI_DSI_D1_P" checked="-1" parentname="DSI_1_DSI[:slash]2x_D1_P"></Function>
+		<Function name="MIPI_DSI_CLK_N" pinid="35" pinname="MIPI_DSI_CLK_N" checked="-1" parentname="DSI_1_DSI[:slash]4x_CLK_N"></Function>
+		<Function name="MIPI_DSI_CLK_P" pinid="37" pinname="MIPI_DSI_CLK_P" checked="-1" parentname="DSI_1_DSI[:slash]4x_CLK_P"></Function>
+		<Function name="MIPI_DSI_D0_N" pinid="47" pinname="MIPI_DSI_D0_N" checked="-1" parentname="DSI_1_DSI[:slash]4x_D0_N"></Function>
+		<Function name="MIPI_DSI_D0_P" pinid="49" pinname="MIPI_DSI_D0_P" checked="-1" parentname="DSI_1_DSI[:slash]4x_D0_P"></Function>
+		<Function name="MIPI_DSI_D1_N" pinid="41" pinname="MIPI_DSI_D1_N" checked="-1" parentname="DSI_1_DSI[:slash]4x_D1_N"></Function>
+		<Function name="MIPI_DSI_D1_P" pinid="43" pinname="MIPI_DSI_D1_P" checked="-1" parentname="DSI_1_DSI[:slash]4x_D1_P"></Function>
+		<Function name="MIPI_DSI_D2_N" pinid="29" pinname="MIPI_DSI_D2_N" checked="-1" parentname="DSI_1_DSI[:slash]4x_D2_N"></Function>
+		<Function name="MIPI_DSI_D2_P" pinid="31" pinname="MIPI_DSI_D2_P" checked="-1" parentname="DSI_1_DSI[:slash]4x_D2_P"></Function>
+		<Function name="MIPI_DSI_D3_N" pinid="23" pinname="MIPI_DSI_D3_N" checked="-1" parentname="DSI_1_DSI[:slash]4x_D3_N"></Function>
+		<Function name="MIPI_DSI_D3_P" pinid="25" pinname="MIPI_DSI_D3_P" checked="-1" parentname="DSI_1_DSI[:slash]4x_D3_P"></Function>
+		<Function name="i2c2.SCL" pinid="55" pinname="I2C2_SCL" checked="-1" parentname="DSI_1_I2C_SCL"></Function>
+		<Function name="i2c2.SDA" pinid="53" pinname="I2C2_SDA" checked="-1" parentname="DSI_1_I2C_SDA"></Function>
+		<Function name="gpio3.IO[15]" pinid="17" pinname="NAND_RE_B" checked="-1" parentname="DSI_1_INT#"></Function>
+		<Function name="pwm1.OUT" pinid="19" pinname="GPIO1_IO01" checked="-1" parentname="DSI_1_PWM"></Function>
+		<Function name="pwm1.OUT" pinid="12" pinname="I2C4_SDA" checked="-1" parentname="DSI_1_PWM"></Function>
+		<Function name="pwm1.OUT" pinid="208" pinname="SPDIF_EXT_CLK" checked="-1" parentname="DSI_1_PWM"></Function>
+		<Function name="enet1.1588_EVENT0_IN" pinid="220" pinname="GPIO1_IO08" checked="1" parentname="ETH_1_1588_EVENT0_IN"></Function>
+		<Function name="enet1.1588_EVENT0_OUT" pinid="222" pinname="GPIO1_IO09" checked="1" parentname="ETH_1_1588_EVENT0_OUT"></Function>
+		<Function name="enet1.1588_EVENT1_IN" pinid="55" pinname="I2C2_SCL" checked="1" parentname="ETH_1_1588_EVENT1_IN"></Function>
+		<Function name="enet1.1588_EVENT1_OUT" pinid="53" pinname="I2C2_SDA" checked="1" parentname="ETH_1_1588_EVENT1_OUT"></Function>
+		<Function name="KSZ9131_LED1" pinid="235" pinname="" checked="1" parentname="ETH_1_LED_1"></Function>
+		<Function name="KSZ9131_LED2" pinid="237" pinname="" checked="1" parentname="ETH_1_LED_2"></Function>
+		<Function name="KSZ9131_TXRXM_A" pinid="227" pinname="" checked="1" parentname="ETH_1_MDI0_N"></Function>
+		<Function name="KSZ9131_TXRXP_A" pinid="225" pinname="" checked="1" parentname="ETH_1_MDI0_P"></Function>
+		<Function name="KSZ9131_TXRXM_B" pinid="231" pinname="" checked="1" parentname="ETH_1_MDI1_N"></Function>
+		<Function name="KSZ9131_TXRXP_B" pinid="233" pinname="" checked="1" parentname="ETH_1_MDI1_P"></Function>
+		<Function name="KSZ9131_TXRXM_C" pinid="241" pinname="" checked="1" parentname="ETH_1_MDI2_N"></Function>
+		<Function name="KSZ9131_TXRXP_C" pinid="239" pinname="" checked="1" parentname="ETH_1_MDI2_P"></Function>
+		<Function name="KSZ9131_TXRXM_D" pinid="245" pinname="" checked="1" parentname="ETH_1_MDI3_N"></Function>
+		<Function name="KSZ9131_TXRXP_D" pinid="247" pinname="" checked="1" parentname="ETH_1_MDI3_P"></Function>
+		<Function name="gpio4.IO[5]" pinid="100" pinname="SAI1_RXD3" checked="-1" parentname="GPI_SODIMM_100"></Function>
+		<Function name="gpio4.IO[0]" pinid="102" pinname="SAI1_RXFS" checked="-1" parentname="GPI_SODIMM_102"></Function>
+		<Function name="gpio4.IO[11]" pinid="104" pinname="SAI1_TXC" checked="-1" parentname="GPI_SODIMM_104"></Function>
+		<Function name="gpio4.IO[12]" pinid="106" pinname="SAI1_TXD0" checked="-1" parentname="GPI_SODIMM_106"></Function>
+		<Function name="gpio4.IO[13]" pinid="108" pinname="SAI1_TXD1" checked="-1" parentname="GPI_SODIMM_108"></Function>
+		<Function name="gpio4.IO[14]" pinid="112" pinname="SAI1_TXD2" checked="-1" parentname="GPI_SODIMM_112"></Function>
+		<Function name="gpio4.IO[15]" pinid="114" pinname="SAI1_TXD3" checked="-1" parentname="GPI_SODIMM_114"></Function>
+		<Function name="gpio4.IO[16]" pinid="116" pinname="SAI1_TXD4" checked="-1" parentname="GPI_SODIMM_116"></Function>
+		<Function name="gpio4.IO[18]" pinid="118" pinname="SAI1_TXD6" checked="-1" parentname="GPI_SODIMM_118"></Function>
+		<Function name="gpio5.IO[21]" pinid="12" pinname="I2C4_SDA" checked="-1" parentname="GPI_SODIMM_12"></Function>
+		<Function name="gpio4.IO[10]" pinid="120" pinname="SAI1_TXFS" checked="-1" parentname="GPI_SODIMM_120"></Function>
+		<Function name="gpio4.IO[31]" pinid="129" pinname="SAI3_TXFS" checked="-1" parentname="GPI_SODIMM_129"></Function>
+		<Function name="gpio5.IO[0]" pinid="131" pinname="SAI3_TXC" checked="-1" parentname="GPI_SODIMM_131"></Function>
+		<Function name="gpio4.IO[29]" pinid="133" pinname="SAI3_RXC" checked="-1" parentname="GPI_SODIMM_133"></Function>
+		<Function name="gpio4.IO[30]" pinid="135" pinname="SAI3_RXD" checked="-1" parentname="GPI_SODIMM_135"></Function>
+		<Function name="gpio5.IO[6]" pinid="137" pinname="ECSPI1_SCLK" checked="-1" parentname="GPI_SODIMM_137"></Function>
+		<Function name="gpio5.IO[7]" pinid="139" pinname="ECSPI1_MOSI" checked="-1" parentname="GPI_SODIMM_139"></Function>
+		<Function name="gpio5.IO[20]" pinid="14" pinname="I2C4_SCL" checked="-1" parentname="GPI_SODIMM_14"></Function>
+		<Function name="gpio5.IO[8]" pinid="141" pinname="ECSPI1_MISO" checked="-1" parentname="GPI_SODIMM_141"></Function>
+		<Function name="gpio5.IO[9]" pinid="143" pinname="ECSPI1_SS0" checked="-1" parentname="GPI_SODIMM_143"></Function>
+		<Function name="gpio4.IO[22]" pinid="147" pinname="SAI2_RXC" checked="-1" parentname="GPI_SODIMM_147"></Function>
+		<Function name="gpio4.IO[21]" pinid="149" pinname="SAI2_RXFS" checked="-1" parentname="GPI_SODIMM_149"></Function>
+		<Function name="gpio5.IO[4]" pinid="15" pinname="SPDIF_RX" checked="-1" parentname="GPI_SODIMM_15"></Function>
+		<Function name="gpio5.IO[28]" pinid="151" pinname="UART4_RXD" checked="-1" parentname="GPI_SODIMM_151"></Function>
+		<Function name="gpio5.IO[29]" pinid="153" pinname="UART4_TXD" checked="-1" parentname="GPI_SODIMM_153"></Function>
+		<Function name="gpio1.IO[12]" pinid="155" pinname="GPIO1_IO12" checked="-1" parentname="GPI_SODIMM_155"></Function>
+		<Function name="gpio1.IO[13]" pinid="157" pinname="GPIO1_IO13" checked="-1" parentname="GPI_SODIMM_157"></Function>
+		<Function name="gpio5.IO[3]" pinid="16" pinname="SPDIF_TX" checked="-1" parentname="GPI_SODIMM_16"></Function>
+		<Function name="gpio3.IO[15]" pinid="17" pinname="NAND_RE_B" checked="-1" parentname="GPI_SODIMM_17"></Function>
+		<Function name="gpio4.IO[9]" pinid="174" pinname="SAI1_RXD7" checked="-1" parentname="GPI_SODIMM_174"></Function>
+		<Function name="gpio1.IO[14]" pinid="185" pinname="GPIO1_IO14" checked="-1" parentname="GPI_SODIMM_185"></Function>
+		<Function name="gpio1.IO[15]" pinid="187" pinname="GPIO1_IO15" checked="-1" parentname="GPI_SODIMM_187"></Function>
+		<Function name="gpio1.IO[1]" pinid="19" pinname="GPIO1_IO01" checked="-1" parentname="GPI_SODIMM_19"></Function>
+		<Function name="gpio5.IO[10]" pinid="196" pinname="ECSPI2_SCLK" checked="-1" parentname="GPI_SODIMM_196"></Function>
+		<Function name="gpio5.IO[12]" pinid="198" pinname="ECSPI2_MISO" checked="-1" parentname="GPI_SODIMM_198"></Function>
+		<Function name="gpio5.IO[11]" pinid="200" pinname="ECSPI2_MOSI" checked="-1" parentname="GPI_SODIMM_200"></Function>
+		<Function name="gpio5.IO[13]" pinid="202" pinname="ECSPI2_SS0" checked="-1" parentname="GPI_SODIMM_202"></Function>
+		<Function name="gpio3.IO[4]" pinid="206" pinname="NAND_CE3_B" checked="-1" parentname="GPI_SODIMM_206"></Function>
+		<Function name="gpio5.IO[5]" pinid="208" pinname="SPDIF_EXT_CLK" checked="-1" parentname="GPI_SODIMM_208"></Function>
+		<Function name="gpio3.IO[3]" pinid="21" pinname="NAND_CE2_B" checked="-1" parentname="GPI_SODIMM_21"></Function>
+		<Function name="gpio5.IO[26]" pinid="210" pinname="UART3_RXD" checked="-1" parentname="GPI_SODIMM_210"></Function>
+		<Function name="gpio5.IO[27]" pinid="212" pinname="UART3_TXD" checked="-1" parentname="GPI_SODIMM_212"></Function>
+		<Function name="gpio1.IO[0]" pinid="216" pinname="GPIO1_IO00" checked="-1" parentname="GPI_SODIMM_216"></Function>
+		<Function name="gpio1.IO[11]" pinid="218" pinname="GPIO1_IO11" checked="-1" parentname="GPI_SODIMM_218"></Function>
+		<Function name="gpio1.IO[8]" pinid="220" pinname="GPIO1_IO08" checked="-1" parentname="GPI_SODIMM_220"></Function>
+		<Function name="gpio1.IO[9]" pinid="222" pinname="GPIO1_IO09" checked="-1" parentname="GPI_SODIMM_222"></Function>
+		<Function name="gpio3.IO[19]" pinid="244" pinname="SAI5_RXFS" checked="-1" parentname="GPI_SODIMM_244"></Function>
+		<Function name="gpio4.IO[28]" pinid="252" pinname="SAI3_RXFS" checked="-1" parentname="GPI_SODIMM_252"></Function>
+		<Function name="gpio5.IO[1]" pinid="256" pinname="SAI3_TXD" checked="-1" parentname="GPI_SODIMM_256"></Function>
+		<Function name="gpio4.IO[25]" pinid="30" pinname="SAI2_TXC" checked="-1" parentname="GPI_SODIMM_30"></Function>
+		<Function name="gpio4.IO[24]" pinid="32" pinname="SAI2_TXFS" checked="-1" parentname="GPI_SODIMM_32"></Function>
+		<Function name="gpio4.IO[26]" pinid="34" pinname="SAI2_TXD0" checked="-1" parentname="GPI_SODIMM_34"></Function>
+		<Function name="gpio4.IO[23]" pinid="36" pinname="SAI2_RXD0" checked="-1" parentname="GPI_SODIMM_36"></Function>
+		<Function name="gpio4.IO[27]" pinid="38" pinname="SAI2_MCLK" checked="-1" parentname="GPI_SODIMM_38"></Function>
+		<Function name="gpio3.IO[23]" pinid="42" pinname="SAI5_RXD2" checked="-1" parentname="GPI_SODIMM_42"></Function>
+		<Function name="gpio3.IO[22]" pinid="44" pinname="SAI5_RXD1" checked="-1" parentname="GPI_SODIMM_44"></Function>
+		<Function name="gpio3.IO[24]" pinid="46" pinname="SAI5_RXD3" checked="-1" parentname="GPI_SODIMM_46"></Function>
+		<Function name="gpio3.IO[21]" pinid="48" pinname="SAI5_RXD0" checked="-1" parentname="GPI_SODIMM_48"></Function>
+		<Function name="gpio3.IO[0]" pinid="52" pinname="NAND_ALE" checked="-1" parentname="GPI_SODIMM_52"></Function>
+		<Function name="gpio5.IO[17]" pinid="53" pinname="I2C2_SDA" checked="-1" parentname="GPI_SODIMM_53"></Function>
+		<Function name="gpio3.IO[1]" pinid="54" pinname="NAND_CE0_B" checked="-1" parentname="GPI_SODIMM_54"></Function>
+		<Function name="gpio5.IO[16]" pinid="55" pinname="I2C2_SCL" checked="-1" parentname="GPI_SODIMM_55"></Function>
+		<Function name="gpio3.IO[6]" pinid="56" pinname="NAND_DATA00" checked="-1" parentname="GPI_SODIMM_56"></Function>
+		<Function name="gpio3.IO[7]" pinid="58" pinname="NAND_DATA01" checked="-1" parentname="GPI_SODIMM_58"></Function>
+		<Function name="gpio3.IO[8]" pinid="60" pinname="NAND_DATA02" checked="-1" parentname="GPI_SODIMM_60"></Function>
+		<Function name="gpio3.IO[9]" pinid="62" pinname="NAND_DATA03" checked="-1" parentname="GPI_SODIMM_62"></Function>
+		<Function name="gpio3.IO[2]" pinid="64" pinname="NAND_CE1_B" checked="-1" parentname="GPI_SODIMM_64"></Function>
+		<Function name="gpio3.IO[14]" pinid="66" pinname="NAND_DQS" checked="-1" parentname="GPI_SODIMM_66"></Function>
+		<Function name="gpio2.IO[17]" pinid="70" pinname="SD2_DATA2" checked="-1" parentname="GPI_SODIMM_70"></Function>
+		<Function name="gpio2.IO[18]" pinid="72" pinname="SD2_DATA3" checked="-1" parentname="GPI_SODIMM_72"></Function>
+		<Function name="gpio2.IO[14]" pinid="74" pinname="SD2_CMD" checked="-1" parentname="GPI_SODIMM_74"></Function>
+		<Function name="gpio3.IO[5]" pinid="76" pinname="NAND_CLE" checked="-1" parentname="GPI_SODIMM_76"></Function>
+		<Function name="gpio2.IO[13]" pinid="78" pinname="SD2_CLK" checked="-1" parentname="GPI_SODIMM_78"></Function>
+		<Function name="gpio2.IO[15]" pinid="80" pinname="SD2_DATA0" checked="-1" parentname="GPI_SODIMM_80"></Function>
+		<Function name="gpio2.IO[16]" pinid="82" pinname="SD2_DATA1" checked="-1" parentname="GPI_SODIMM_82"></Function>
+		<Function name="gpio2.IO[12]" pinid="84" pinname="SD2_CD_B" checked="-1" parentname="GPI_SODIMM_84"></Function>
+		<Function name="gpio4.IO[20]" pinid="88" pinname="SAI1_MCLK" checked="-1" parentname="GPI_SODIMM_88"></Function>
+		<Function name="gpio4.IO[1]" pinid="90" pinname="SAI1_RXC" checked="-1" parentname="GPI_SODIMM_90"></Function>
+		<Function name="gpio5.IO[2]" pinid="91" pinname="SAI3_MCLK" checked="-1" parentname="GPI_SODIMM_91"></Function>
+		<Function name="gpio4.IO[2]" pinid="92" pinname="SAI1_RXD0" checked="-1" parentname="GPI_SODIMM_92"></Function>
+		<Function name="gpio5.IO[19]" pinid="93" pinname="I2C3_SDA" checked="-1" parentname="GPI_SODIMM_93"></Function>
+		<Function name="gpio4.IO[3]" pinid="94" pinname="SAI1_RXD1" checked="-1" parentname="GPI_SODIMM_94"></Function>
+		<Function name="gpio5.IO[18]" pinid="95" pinname="I2C3_SCL" checked="-1" parentname="GPI_SODIMM_95"></Function>
+		<Function name="gpio4.IO[4]" pinid="96" pinname="SAI1_RXD2" checked="-1" parentname="GPI_SODIMM_96"></Function>
+		<Function name="gpio4.IO[5]" pinid="100" pinname="SAI1_RXD3" checked="-1" parentname="GPIO_SODIMM_100"></Function>
+		<Function name="gpio4.IO[0]" pinid="102" pinname="SAI1_RXFS" checked="1" parentname="GPIO_SODIMM_102"></Function>
+		<Function name="gpio4.IO[11]" pinid="104" pinname="SAI1_TXC" checked="1" parentname="GPIO_SODIMM_104"></Function>
+		<Function name="gpio4.IO[12]" pinid="106" pinname="SAI1_TXD0" checked="1" parentname="GPIO_SODIMM_106"></Function>
+		<Function name="gpio4.IO[13]" pinid="108" pinname="SAI1_TXD1" checked="1" parentname="GPIO_SODIMM_108"></Function>
+		<Function name="gpio4.IO[14]" pinid="112" pinname="SAI1_TXD2" checked="-1" parentname="GPIO_SODIMM_112"></Function>
+		<Function name="gpio4.IO[15]" pinid="114" pinname="SAI1_TXD3" checked="-1" parentname="GPIO_SODIMM_114"></Function>
+		<Function name="gpio4.IO[16]" pinid="116" pinname="SAI1_TXD4" checked="-1" parentname="GPIO_SODIMM_116"></Function>
+		<Function name="gpio4.IO[18]" pinid="118" pinname="SAI1_TXD6" checked="-1" parentname="GPIO_SODIMM_118"></Function>
+		<Function name="gpio5.IO[21]" pinid="12" pinname="I2C4_SDA" checked="-1" parentname="GPIO_SODIMM_12"></Function>
+		<Function name="gpio4.IO[10]" pinid="120" pinname="SAI1_TXFS" checked="-1" parentname="GPIO_SODIMM_120"></Function>
+		<Function name="gpio4.IO[31]" pinid="129" pinname="SAI3_TXFS" checked="-1" parentname="GPIO_SODIMM_129"></Function>
+		<Function name="gpio5.IO[0]" pinid="131" pinname="SAI3_TXC" checked="-1" parentname="GPIO_SODIMM_131"></Function>
+		<Function name="gpio4.IO[29]" pinid="133" pinname="SAI3_RXC" checked="-1" parentname="GPIO_SODIMM_133"></Function>
+		<Function name="gpio4.IO[30]" pinid="135" pinname="SAI3_RXD" checked="-1" parentname="GPIO_SODIMM_135"></Function>
+		<Function name="gpio5.IO[6]" pinid="137" pinname="ECSPI1_SCLK" checked="-1" parentname="GPIO_SODIMM_137"></Function>
+		<Function name="gpio5.IO[7]" pinid="139" pinname="ECSPI1_MOSI" checked="-1" parentname="GPIO_SODIMM_139"></Function>
+		<Function name="gpio5.IO[20]" pinid="14" pinname="I2C4_SCL" checked="-1" parentname="GPIO_SODIMM_14"></Function>
+		<Function name="gpio5.IO[8]" pinid="141" pinname="ECSPI1_MISO" checked="-1" parentname="GPIO_SODIMM_141"></Function>
+		<Function name="gpio5.IO[9]" pinid="143" pinname="ECSPI1_SS0" checked="-1" parentname="GPIO_SODIMM_143"></Function>
+		<Function name="gpio4.IO[22]" pinid="147" pinname="SAI2_RXC" checked="-1" parentname="GPIO_SODIMM_147"></Function>
+		<Function name="gpio4.IO[21]" pinid="149" pinname="SAI2_RXFS" checked="-1" parentname="GPIO_SODIMM_149"></Function>
+		<Function name="gpio5.IO[4]" pinid="15" pinname="SPDIF_RX" checked="-1" parentname="GPIO_SODIMM_15"></Function>
+		<Function name="gpio5.IO[28]" pinid="151" pinname="UART4_RXD" checked="-1" parentname="GPIO_SODIMM_151"></Function>
+		<Function name="gpio5.IO[29]" pinid="153" pinname="UART4_TXD" checked="-1" parentname="GPIO_SODIMM_153"></Function>
+		<Function name="gpio1.IO[12]" pinid="155" pinname="GPIO1_IO12" checked="-1" parentname="GPIO_SODIMM_155"></Function>
+		<Function name="gpio1.IO[13]" pinid="157" pinname="GPIO1_IO13" checked="-1" parentname="GPIO_SODIMM_157"></Function>
+		<Function name="gpio5.IO[3]" pinid="16" pinname="SPDIF_TX" checked="-1" parentname="GPIO_SODIMM_16"></Function>
+		<Function name="gpio4.IO[9]" pinid="174" pinname="SAI1_RXD7" checked="-1" parentname="GPIO_SODIMM_174"></Function>
+		<Function name="gpio3.IO[15]" pinid="17" pinname="NAND_RE_B" checked="1" parentname="GPIO_SODIMM_17[:slash]GPIO_9_DSI"></Function>
+		<Function name="gpio1.IO[14]" pinid="185" pinname="GPIO1_IO14" checked="1" parentname="GPIO_SODIMM_185"></Function>
+		<Function name="gpio1.IO[15]" pinid="187" pinname="GPIO1_IO15" checked="1" parentname="GPIO_SODIMM_187"></Function>
+		<Function name="gpio1.IO[1]" pinid="19" pinname="GPIO1_IO01" checked="1" parentname="GPIO_SODIMM_19"></Function>
+		<Function name="gpio5.IO[10]" pinid="196" pinname="ECSPI2_SCLK" checked="-1" parentname="GPIO_SODIMM_196"></Function>
+		<Function name="gpio5.IO[12]" pinid="198" pinname="ECSPI2_MISO" checked="-1" parentname="GPIO_SODIMM_198"></Function>
+		<Function name="gpio5.IO[11]" pinid="200" pinname="ECSPI2_MOSI" checked="-1" parentname="GPIO_SODIMM_200"></Function>
+		<Function name="gpio5.IO[13]" pinid="202" pinname="ECSPI2_SS0" checked="-1" parentname="GPIO_SODIMM_202"></Function>
+		<Function name="gpio3.IO[4]" pinid="206" pinname="NAND_CE3_B" checked="-1" parentname="GPIO_SODIMM_206[:slash]GPIO_1"></Function>
+		<Function name="gpio5.IO[5]" pinid="208" pinname="SPDIF_EXT_CLK" checked="-1" parentname="GPIO_SODIMM_208[:slash]GPIO_2"></Function>
+		<Function name="gpio5.IO[26]" pinid="210" pinname="UART3_RXD" checked="1" parentname="GPIO_SODIMM_210[:slash]GPIO_3"></Function>
+		<Function name="gpio5.IO[27]" pinid="212" pinname="UART3_TXD" checked="1" parentname="GPIO_SODIMM_212[:slash]GPIO_4"></Function>
+		<Function name="gpio1.IO[0]" pinid="216" pinname="GPIO1_IO00" checked="1" parentname="GPIO_SODIMM_216[:slash]GPIO_5_CSI"></Function>
+		<Function name="gpio1.IO[11]" pinid="218" pinname="GPIO1_IO11" checked="1" parentname="GPIO_SODIMM_218[:slash]GPIO_6_CSI"></Function>
+		<Function name="gpio3.IO[3]" pinid="21" pinname="NAND_CE2_B" checked="1" parentname="GPIO_SODIMM_21[:slash]GPIO_10_DSI"></Function>
+		<Function name="gpio1.IO[8]" pinid="220" pinname="GPIO1_IO08" checked="-1" parentname="GPIO_SODIMM_220[:slash]GPIO_7_CSI"></Function>
+		<Function name="gpio1.IO[9]" pinid="222" pinname="GPIO1_IO09" checked="-1" parentname="GPIO_SODIMM_222[:slash]GPIO_8_CSI"></Function>
+		<Function name="gpio3.IO[19]" pinid="244" pinname="SAI5_RXFS" checked="-1" parentname="GPIO_SODIMM_244"></Function>
+		<Function name="gpio4.IO[28]" pinid="252" pinname="SAI3_RXFS" checked="-1" parentname="GPIO_SODIMM_252"></Function>
+		<Function name="gpio5.IO[1]" pinid="256" pinname="SAI3_TXD" checked="-1" parentname="GPIO_SODIMM_256"></Function>
+		<Function name="gpio4.IO[25]" pinid="30" pinname="SAI2_TXC" checked="1" parentname="GPIO_SODIMM_30"></Function>
+		<Function name="gpio4.IO[24]" pinid="32" pinname="SAI2_TXFS" checked="1" parentname="GPIO_SODIMM_32"></Function>
+		<Function name="gpio4.IO[26]" pinid="34" pinname="SAI2_TXD0" checked="1" parentname="GPIO_SODIMM_34"></Function>
+		<Function name="gpio4.IO[23]" pinid="36" pinname="SAI2_RXD0" checked="1" parentname="GPIO_SODIMM_36"></Function>
+		<Function name="gpio4.IO[27]" pinid="38" pinname="SAI2_MCLK" checked="-1" parentname="GPIO_SODIMM_38"></Function>
+		<Function name="gpio3.IO[23]" pinid="42" pinname="SAI5_RXD2" checked="1" parentname="GPIO_SODIMM_42"></Function>
+		<Function name="gpio3.IO[22]" pinid="44" pinname="SAI5_RXD1" checked="1" parentname="GPIO_SODIMM_44"></Function>
+		<Function name="gpio3.IO[24]" pinid="46" pinname="SAI5_RXD3" checked="1" parentname="GPIO_SODIMM_46"></Function>
+		<Function name="gpio3.IO[21]" pinid="48" pinname="SAI5_RXD0" checked="-1" parentname="GPIO_SODIMM_48"></Function>
+		<Function name="gpio3.IO[0]" pinid="52" pinname="NAND_ALE" checked="-1" parentname="GPIO_SODIMM_52"></Function>
+		<Function name="gpio5.IO[17]" pinid="53" pinname="I2C2_SDA" checked="-1" parentname="GPIO_SODIMM_53"></Function>
+		<Function name="gpio3.IO[1]" pinid="54" pinname="NAND_CE0_B" checked="-1" parentname="GPIO_SODIMM_54"></Function>
+		<Function name="gpio5.IO[16]" pinid="55" pinname="I2C2_SCL" checked="-1" parentname="GPIO_SODIMM_55"></Function>
+		<Function name="gpio3.IO[6]" pinid="56" pinname="NAND_DATA00" checked="-1" parentname="GPIO_SODIMM_56"></Function>
+		<Function name="gpio3.IO[7]" pinid="58" pinname="NAND_DATA01" checked="-1" parentname="GPIO_SODIMM_58"></Function>
+		<Function name="gpio3.IO[8]" pinid="60" pinname="NAND_DATA02" checked="-1" parentname="GPIO_SODIMM_60"></Function>
+		<Function name="gpio3.IO[9]" pinid="62" pinname="NAND_DATA03" checked="-1" parentname="GPIO_SODIMM_62"></Function>
+		<Function name="gpio3.IO[2]" pinid="64" pinname="NAND_CE1_B" checked="-1" parentname="GPIO_SODIMM_64"></Function>
+		<Function name="gpio3.IO[14]" pinid="66" pinname="NAND_DQS" checked="-1" parentname="GPIO_SODIMM_66"></Function>
+		<Function name="gpio2.IO[17]" pinid="70" pinname="SD2_DATA2" checked="-1" parentname="GPIO_SODIMM_70"></Function>
+		<Function name="gpio2.IO[18]" pinid="72" pinname="SD2_DATA3" checked="-1" parentname="GPIO_SODIMM_72"></Function>
+		<Function name="gpio2.IO[14]" pinid="74" pinname="SD2_CMD" checked="-1" parentname="GPIO_SODIMM_74"></Function>
+		<Function name="gpio3.IO[5]" pinid="76" pinname="NAND_CLE" checked="-1" parentname="GPIO_SODIMM_76"></Function>
+		<Function name="gpio2.IO[13]" pinid="78" pinname="SD2_CLK" checked="-1" parentname="GPIO_SODIMM_78"></Function>
+		<Function name="gpio2.IO[15]" pinid="80" pinname="SD2_DATA0" checked="-1" parentname="GPIO_SODIMM_80"></Function>
+		<Function name="gpio2.IO[16]" pinid="82" pinname="SD2_DATA1" checked="-1" parentname="GPIO_SODIMM_82"></Function>
+		<Function name="gpio2.IO[12]" pinid="84" pinname="SD2_CD_B" checked="-1" parentname="GPIO_SODIMM_84"></Function>
+		<Function name="gpio4.IO[20]" pinid="88" pinname="SAI1_MCLK" checked="-1" parentname="GPIO_SODIMM_88"></Function>
+		<Function name="gpio4.IO[1]" pinid="90" pinname="SAI1_RXC" checked="-1" parentname="GPIO_SODIMM_90"></Function>
+		<Function name="gpio5.IO[2]" pinid="91" pinname="SAI3_MCLK" checked="1" parentname="GPIO_SODIMM_91"></Function>
+		<Function name="gpio4.IO[2]" pinid="92" pinname="SAI1_RXD0" checked="-1" parentname="GPIO_SODIMM_92"></Function>
+		<Function name="gpio5.IO[19]" pinid="93" pinname="I2C3_SDA" checked="1" parentname="GPIO_SODIMM_93"></Function>
+		<Function name="gpio4.IO[3]" pinid="94" pinname="SAI1_RXD1" checked="1" parentname="GPIO_SODIMM_94"></Function>
+		<Function name="gpio5.IO[18]" pinid="95" pinname="I2C3_SCL" checked="1" parentname="GPIO_SODIMM_95"></Function>
+		<Function name="gpio4.IO[4]" pinid="96" pinname="SAI1_RXD2" checked="1" parentname="GPIO_SODIMM_96"></Function>
+		<Function name="gpio4.IO[5]" pinid="100" pinname="SAI1_RXD3" checked="-1" parentname="GPO_SODIMM_100"></Function>
+		<Function name="gpio4.IO[0]" pinid="102" pinname="SAI1_RXFS" checked="-1" parentname="GPO_SODIMM_102"></Function>
+		<Function name="gpio4.IO[11]" pinid="104" pinname="SAI1_TXC" checked="-1" parentname="GPO_SODIMM_104"></Function>
+		<Function name="gpio4.IO[12]" pinid="106" pinname="SAI1_TXD0" checked="-1" parentname="GPO_SODIMM_106"></Function>
+		<Function name="gpio4.IO[13]" pinid="108" pinname="SAI1_TXD1" checked="-1" parentname="GPO_SODIMM_108"></Function>
+		<Function name="gpio4.IO[14]" pinid="112" pinname="SAI1_TXD2" checked="-1" parentname="GPO_SODIMM_112"></Function>
+		<Function name="gpio4.IO[15]" pinid="114" pinname="SAI1_TXD3" checked="-1" parentname="GPO_SODIMM_114"></Function>
+		<Function name="gpio4.IO[16]" pinid="116" pinname="SAI1_TXD4" checked="-1" parentname="GPO_SODIMM_116"></Function>
+		<Function name="gpio4.IO[18]" pinid="118" pinname="SAI1_TXD6" checked="-1" parentname="GPO_SODIMM_118"></Function>
+		<Function name="gpio5.IO[21]" pinid="12" pinname="I2C4_SDA" checked="-1" parentname="GPO_SODIMM_12"></Function>
+		<Function name="gpio4.IO[10]" pinid="120" pinname="SAI1_TXFS" checked="-1" parentname="GPO_SODIMM_120"></Function>
+		<Function name="gpio4.IO[31]" pinid="129" pinname="SAI3_TXFS" checked="-1" parentname="GPO_SODIMM_129"></Function>
+		<Function name="gpio5.IO[0]" pinid="131" pinname="SAI3_TXC" checked="-1" parentname="GPO_SODIMM_131"></Function>
+		<Function name="gpio4.IO[29]" pinid="133" pinname="SAI3_RXC" checked="-1" parentname="GPO_SODIMM_133"></Function>
+		<Function name="gpio4.IO[30]" pinid="135" pinname="SAI3_RXD" checked="-1" parentname="GPO_SODIMM_135"></Function>
+		<Function name="gpio5.IO[6]" pinid="137" pinname="ECSPI1_SCLK" checked="-1" parentname="GPO_SODIMM_137"></Function>
+		<Function name="gpio5.IO[7]" pinid="139" pinname="ECSPI1_MOSI" checked="-1" parentname="GPO_SODIMM_139"></Function>
+		<Function name="gpio5.IO[20]" pinid="14" pinname="I2C4_SCL" checked="-1" parentname="GPO_SODIMM_14"></Function>
+		<Function name="gpio5.IO[8]" pinid="141" pinname="ECSPI1_MISO" checked="-1" parentname="GPO_SODIMM_141"></Function>
+		<Function name="gpio5.IO[9]" pinid="143" pinname="ECSPI1_SS0" checked="-1" parentname="GPO_SODIMM_143"></Function>
+		<Function name="gpio4.IO[22]" pinid="147" pinname="SAI2_RXC" checked="-1" parentname="GPO_SODIMM_147"></Function>
+		<Function name="gpio4.IO[21]" pinid="149" pinname="SAI2_RXFS" checked="-1" parentname="GPO_SODIMM_149"></Function>
+		<Function name="gpio5.IO[4]" pinid="15" pinname="SPDIF_RX" checked="-1" parentname="GPO_SODIMM_15"></Function>
+		<Function name="gpio5.IO[28]" pinid="151" pinname="UART4_RXD" checked="-1" parentname="GPO_SODIMM_151"></Function>
+		<Function name="gpio5.IO[29]" pinid="153" pinname="UART4_TXD" checked="-1" parentname="GPO_SODIMM_153"></Function>
+		<Function name="gpio1.IO[12]" pinid="155" pinname="GPIO1_IO12" checked="-1" parentname="GPO_SODIMM_155"></Function>
+		<Function name="gpio1.IO[13]" pinid="157" pinname="GPIO1_IO13" checked="-1" parentname="GPO_SODIMM_157"></Function>
+		<Function name="gpio5.IO[3]" pinid="16" pinname="SPDIF_TX" checked="-1" parentname="GPO_SODIMM_16"></Function>
+		<Function name="gpio3.IO[15]" pinid="17" pinname="NAND_RE_B" checked="-1" parentname="GPO_SODIMM_17"></Function>
+		<Function name="gpio4.IO[9]" pinid="174" pinname="SAI1_RXD7" checked="-1" parentname="GPO_SODIMM_174"></Function>
+		<Function name="gpio1.IO[14]" pinid="185" pinname="GPIO1_IO14" checked="-1" parentname="GPO_SODIMM_185"></Function>
+		<Function name="gpio1.IO[15]" pinid="187" pinname="GPIO1_IO15" checked="-1" parentname="GPO_SODIMM_187"></Function>
+		<Function name="gpio1.IO[1]" pinid="19" pinname="GPIO1_IO01" checked="-1" parentname="GPO_SODIMM_19"></Function>
+		<Function name="gpio5.IO[10]" pinid="196" pinname="ECSPI2_SCLK" checked="-1" parentname="GPO_SODIMM_196"></Function>
+		<Function name="gpio5.IO[12]" pinid="198" pinname="ECSPI2_MISO" checked="-1" parentname="GPO_SODIMM_198"></Function>
+		<Function name="gpio5.IO[11]" pinid="200" pinname="ECSPI2_MOSI" checked="-1" parentname="GPO_SODIMM_200"></Function>
+		<Function name="gpio5.IO[13]" pinid="202" pinname="ECSPI2_SS0" checked="-1" parentname="GPO_SODIMM_202"></Function>
+		<Function name="gpio3.IO[4]" pinid="206" pinname="NAND_CE3_B" checked="-1" parentname="GPO_SODIMM_206"></Function>
+		<Function name="gpio5.IO[5]" pinid="208" pinname="SPDIF_EXT_CLK" checked="-1" parentname="GPO_SODIMM_208"></Function>
+		<Function name="gpio3.IO[3]" pinid="21" pinname="NAND_CE2_B" checked="-1" parentname="GPO_SODIMM_21"></Function>
+		<Function name="gpio5.IO[26]" pinid="210" pinname="UART3_RXD" checked="-1" parentname="GPO_SODIMM_210"></Function>
+		<Function name="gpio5.IO[27]" pinid="212" pinname="UART3_TXD" checked="-1" parentname="GPO_SODIMM_212"></Function>
+		<Function name="gpio1.IO[0]" pinid="216" pinname="GPIO1_IO00" checked="-1" parentname="GPO_SODIMM_216"></Function>
+		<Function name="gpio1.IO[11]" pinid="218" pinname="GPIO1_IO11" checked="-1" parentname="GPO_SODIMM_218"></Function>
+		<Function name="gpio1.IO[8]" pinid="220" pinname="GPIO1_IO08" checked="-1" parentname="GPO_SODIMM_220"></Function>
+		<Function name="gpio1.IO[9]" pinid="222" pinname="GPIO1_IO09" checked="-1" parentname="GPO_SODIMM_222"></Function>
+		<Function name="gpio3.IO[19]" pinid="244" pinname="SAI5_RXFS" checked="-1" parentname="GPO_SODIMM_244"></Function>
+		<Function name="gpio4.IO[28]" pinid="252" pinname="SAI3_RXFS" checked="-1" parentname="GPO_SODIMM_252"></Function>
+		<Function name="gpio5.IO[1]" pinid="256" pinname="SAI3_TXD" checked="-1" parentname="GPO_SODIMM_256"></Function>
+		<Function name="gpio4.IO[25]" pinid="30" pinname="SAI2_TXC" checked="-1" parentname="GPO_SODIMM_30"></Function>
+		<Function name="gpio4.IO[24]" pinid="32" pinname="SAI2_TXFS" checked="-1" parentname="GPO_SODIMM_32"></Function>
+		<Function name="gpio4.IO[26]" pinid="34" pinname="SAI2_TXD0" checked="-1" parentname="GPO_SODIMM_34"></Function>
+		<Function name="gpio4.IO[23]" pinid="36" pinname="SAI2_RXD0" checked="-1" parentname="GPO_SODIMM_36"></Function>
+		<Function name="gpio4.IO[27]" pinid="38" pinname="SAI2_MCLK" checked="-1" parentname="GPO_SODIMM_38"></Function>
+		<Function name="gpio3.IO[23]" pinid="42" pinname="SAI5_RXD2" checked="-1" parentname="GPO_SODIMM_42"></Function>
+		<Function name="gpio3.IO[22]" pinid="44" pinname="SAI5_RXD1" checked="-1" parentname="GPO_SODIMM_44"></Function>
+		<Function name="gpio3.IO[24]" pinid="46" pinname="SAI5_RXD3" checked="-1" parentname="GPO_SODIMM_46"></Function>
+		<Function name="gpio3.IO[21]" pinid="48" pinname="SAI5_RXD0" checked="-1" parentname="GPO_SODIMM_48"></Function>
+		<Function name="gpio3.IO[0]" pinid="52" pinname="NAND_ALE" checked="-1" parentname="GPO_SODIMM_52"></Function>
+		<Function name="gpio5.IO[17]" pinid="53" pinname="I2C2_SDA" checked="-1" parentname="GPO_SODIMM_53"></Function>
+		<Function name="gpio3.IO[1]" pinid="54" pinname="NAND_CE0_B" checked="-1" parentname="GPO_SODIMM_54"></Function>
+		<Function name="gpio5.IO[16]" pinid="55" pinname="I2C2_SCL" checked="-1" parentname="GPO_SODIMM_55"></Function>
+		<Function name="gpio3.IO[6]" pinid="56" pinname="NAND_DATA00" checked="-1" parentname="GPO_SODIMM_56"></Function>
+		<Function name="gpio3.IO[7]" pinid="58" pinname="NAND_DATA01" checked="-1" parentname="GPO_SODIMM_58"></Function>
+		<Function name="gpio3.IO[8]" pinid="60" pinname="NAND_DATA02" checked="-1" parentname="GPO_SODIMM_60"></Function>
+		<Function name="gpio3.IO[9]" pinid="62" pinname="NAND_DATA03" checked="-1" parentname="GPO_SODIMM_62"></Function>
+		<Function name="gpio3.IO[2]" pinid="64" pinname="NAND_CE1_B" checked="-1" parentname="GPO_SODIMM_64"></Function>
+		<Function name="gpio3.IO[14]" pinid="66" pinname="NAND_DQS" checked="-1" parentname="GPO_SODIMM_66"></Function>
+		<Function name="gpio2.IO[17]" pinid="70" pinname="SD2_DATA2" checked="-1" parentname="GPO_SODIMM_70"></Function>
+		<Function name="gpio2.IO[18]" pinid="72" pinname="SD2_DATA3" checked="-1" parentname="GPO_SODIMM_72"></Function>
+		<Function name="gpio2.IO[14]" pinid="74" pinname="SD2_CMD" checked="-1" parentname="GPO_SODIMM_74"></Function>
+		<Function name="gpio3.IO[5]" pinid="76" pinname="NAND_CLE" checked="-1" parentname="GPO_SODIMM_76"></Function>
+		<Function name="gpio2.IO[13]" pinid="78" pinname="SD2_CLK" checked="-1" parentname="GPO_SODIMM_78"></Function>
+		<Function name="gpio2.IO[15]" pinid="80" pinname="SD2_DATA0" checked="-1" parentname="GPO_SODIMM_80"></Function>
+		<Function name="gpio2.IO[16]" pinid="82" pinname="SD2_DATA1" checked="-1" parentname="GPO_SODIMM_82"></Function>
+		<Function name="gpio2.IO[12]" pinid="84" pinname="SD2_CD_B" checked="-1" parentname="GPO_SODIMM_84"></Function>
+		<Function name="gpio4.IO[20]" pinid="88" pinname="SAI1_MCLK" checked="-1" parentname="GPO_SODIMM_88"></Function>
+		<Function name="gpio4.IO[1]" pinid="90" pinname="SAI1_RXC" checked="-1" parentname="GPO_SODIMM_90"></Function>
+		<Function name="gpio5.IO[2]" pinid="91" pinname="SAI3_MCLK" checked="-1" parentname="GPO_SODIMM_91"></Function>
+		<Function name="gpio4.IO[2]" pinid="92" pinname="SAI1_RXD0" checked="-1" parentname="GPO_SODIMM_92"></Function>
+		<Function name="gpio5.IO[19]" pinid="93" pinname="I2C3_SDA" checked="-1" parentname="GPO_SODIMM_93"></Function>
+		<Function name="gpio4.IO[3]" pinid="94" pinname="SAI1_RXD1" checked="-1" parentname="GPO_SODIMM_94"></Function>
+		<Function name="gpio5.IO[18]" pinid="95" pinname="I2C3_SCL" checked="-1" parentname="GPO_SODIMM_95"></Function>
+		<Function name="gpio4.IO[4]" pinid="96" pinname="SAI1_RXD2" checked="-1" parentname="GPO_SODIMM_96"></Function>
+		<Function name="i2c4.SCL" pinid="14" pinname="I2C4_SCL" checked="1" parentname="I2C_1_SCL"></Function>
+		<Function name="i2c4.SDA" pinid="12" pinname="I2C4_SDA" checked="1" parentname="I2C_1_SDA"></Function>
+		<Function name="i2c2.SCL" pinid="55" pinname="I2C2_SCL" checked="-1" parentname="I2C_2_DSI_SCL"></Function>
+		<Function name="i2c2.SDA" pinid="53" pinname="I2C2_SDA" checked="-1" parentname="I2C_2_DSI_SDA"></Function>
+		<Function name="i2c3.SCL" pinid="95" pinname="I2C3_SCL" checked="-1" parentname="I2C_4_CSI_SCL"></Function>
+		<Function name="i2c3.SDA" pinid="93" pinname="I2C3_SDA" checked="-1" parentname="I2C_4_CSI_SDA"></Function>
+		<Function name="sjc.ACTIVE" pinid="19" pinname="GPIO1_IO01" checked="-1" parentname="JTAG_1_SJC_ACTIVE"></Function>
+		<Function name="sjc.FAIL" pinid="216" pinname="GPIO1_IO00" checked="-1" parentname="JTAG_1_SJC_FAIL"></Function>
+		<Function name="sjc.sjc_gpucr3_reg[14]" pinid="72" pinname="SD2_DATA3" checked="-1" parentname="JTAG_1_SJC_GPUCR3_REG14"></Function>
+		<Function name="cjtag_wrapper.TCK" pinid="9" pinname="JTAG_TCK" checked="-1" parentname="JTAG_1_TCK"></Function>
+		<Function name="cjtag_wrapper.TDI" pinid="1" pinname="JTAG_TDI" checked="-1" parentname="JTAG_1_TDI"></Function>
+		<Function name="cjtag_wrapper.TDO" pinid="5" pinname="JTAG_TDO" checked="-1" parentname="JTAG_1_TDO"></Function>
+		<Function name="cjtag_wrapper.TMS" pinid="13" pinname="JTAG_TMS" checked="-1" parentname="JTAG_1_TMS"></Function>
+		<Function name="cjtag_wrapper.TRST_B" pinid="3" pinname="JTAG_TRST_B" checked="-1" parentname="JTAG_1_TRST#"></Function>
+		<Function name="1.8V_REF_OUT" pinid="7" pinname="" checked="-1" parentname="JTAG_1_VREF"></Function>
+		<Function name="pdm.BIT_STREAM[0]" pinid="48" pinname="SAI5_RXD0" checked="-1" parentname="MISC_BDM_MICROPHONE_BIT_STREAM0"></Function>
+		<Function name="pdm.BIT_STREAM[0]" pinid="92" pinname="SAI1_RXD0" checked="-1" parentname="MISC_BDM_MICROPHONE_BIT_STREAM0"></Function>
+		<Function name="pdm.BIT_STREAM[1]" pinid="44" pinname="SAI5_RXD1" checked="-1" parentname="MISC_BDM_MICROPHONE_BIT_STREAM1"></Function>
+		<Function name="pdm.BIT_STREAM[1]" pinid="94" pinname="SAI1_RXD1" checked="-1" parentname="MISC_BDM_MICROPHONE_BIT_STREAM1"></Function>
+		<Function name="pdm.BIT_STREAM[2]" pinid="42" pinname="SAI5_RXD2" checked="-1" parentname="MISC_BDM_MICROPHONE_BIT_STREAM2"></Function>
+		<Function name="pdm.BIT_STREAM[2]" pinid="96" pinname="SAI1_RXD2" checked="-1" parentname="MISC_BDM_MICROPHONE_BIT_STREAM2"></Function>
+		<Function name="pdm.BIT_STREAM[3]" pinid="46" pinname="SAI5_RXD3" checked="-1" parentname="MISC_BDM_MICROPHONE_BIT_STREAM3"></Function>
+		<Function name="pdm.BIT_STREAM[3]" pinid="100" pinname="SAI1_RXD3" checked="-1" parentname="MISC_BDM_MICROPHONE_BIT_STREAM3"></Function>
+		<Function name="pdm.CLK" pinid="88" pinname="SAI1_MCLK" checked="-1" parentname="MISC_BDM_MICROPHONE_CLK"></Function>
+		<Function name="csu.CSU_ALARM_AUT[0]" pinid="155" pinname="GPIO1_IO12" checked="-1" parentname="MISC_CSU_ALARM_AUT0"></Function>
+		<Function name="csu.CSU_ALARM_AUT[1]" pinid="157" pinname="GPIO1_IO13" checked="-1" parentname="MISC_CSU_ALARM_AUT1"></Function>
+		<Function name="csu.CSU_ALARM_AUT[2]" pinid="185" pinname="GPIO1_IO14" checked="-1" parentname="MISC_CSU_ALARM_AUT2"></Function>
+		<Function name="csu.CSU_INT_DEB" pinid="187" pinname="GPIO1_IO15" checked="-1" parentname="MISC_CSU_INT_DEB"></Function>
+		<Function name="rawnand.ALE" pinid="52" pinname="NAND_ALE" checked="-1" parentname="MISC_NAND_1_ALE"></Function>
+		<Function name="rawnand.CE0_B" pinid="54" pinname="NAND_CE0_B" checked="-1" parentname="MISC_NAND_1_CE0_B"></Function>
+		<Function name="rawnand.CE1_B" pinid="64" pinname="NAND_CE1_B" checked="-1" parentname="MISC_NAND_1_CE1_B"></Function>
+		<Function name="rawnand.CE2_B" pinid="21" pinname="NAND_CE2_B" checked="-1" parentname="MISC_NAND_1_CE2_B"></Function>
+		<Function name="rawnand.CE3_B" pinid="206" pinname="NAND_CE3_B" checked="-1" parentname="MISC_NAND_1_CE3_B"></Function>
+		<Function name="rawnand.CLE" pinid="76" pinname="NAND_CLE" checked="-1" parentname="MISC_NAND_1_CLE"></Function>
+		<Function name="rawnand.DATA00" pinid="56" pinname="NAND_DATA00" checked="-1" parentname="MISC_NAND_1_DATA00"></Function>
+		<Function name="rawnand.DATA01" pinid="58" pinname="NAND_DATA01" checked="-1" parentname="MISC_NAND_1_DATA01"></Function>
+		<Function name="rawnand.DATA02" pinid="60" pinname="NAND_DATA02" checked="-1" parentname="MISC_NAND_1_DATA02"></Function>
+		<Function name="rawnand.DATA03" pinid="62" pinname="NAND_DATA03" checked="-1" parentname="MISC_NAND_1_DATA03"></Function>
+		<Function name="rawnand.DQS" pinid="66" pinname="NAND_DQS" checked="-1" parentname="MISC_NAND_1_DQS"></Function>
+		<Function name="rawnand.RE_B" pinid="17" pinname="NAND_RE_B" checked="-1" parentname="MISC_NAND_1_READY"></Function>
+		<Function name="rawnand.TEST_TRIG" pinid="222" pinname="GPIO1_IO09" checked="-1" parentname="MISC_NAND_1_RE_B"></Function>
+		<Function name="observe_mux.OUT[0]" pinid="78" pinname="SD2_CLK" checked="-1" parentname="MISC_OBSERVE_MUX_OUT0"></Function>
+		<Function name="observe_mux.OUT[1]" pinid="74" pinname="SD2_CMD" checked="-1" parentname="MISC_OBSERVE_MUX_OUT1"></Function>
+		<Function name="observe_mux.OUT[2]" pinid="80" pinname="SD2_DATA0" checked="-1" parentname="MISC_OBSERVE_MUX_OUT2"></Function>
+		<Function name="observe_mux.OUT[3]" pinid="82" pinname="SD2_DATA1" checked="-1" parentname="MISC_OBSERVE_MUX_OUT3"></Function>
+		<Function name="observe_mux.OUT[4]" pinid="70" pinname="SD2_DATA2" checked="-1" parentname="MISC_OBSERVE_MUX_OUT4"></Function>
+		<Function name="caam_wrapper.RNG_OSC_OBS" pinid="218" pinname="GPIO1_IO11" checked="-1" parentname="MISC_RANDOM_GENERATOR_OSC_OBS"></Function>
+		<Function name="RX8130CE_IRQ#" pinid="140" pinname="" checked="-1" parentname="MISC_RTC_IRQ#"></Function>
+		<Function name="sdma2.EXT_EVENT[0]" pinid="222" pinname="GPIO1_IO09" checked="-1" parentname="MISC_SDMA2_EXT_EVENT0"></Function>
+		<Function name="sdma2.EXT_EVENT[1]" pinid="155" pinname="GPIO1_IO12" checked="-1" parentname="MISC_SDMA2_EXT_EVENT1"></Function>
+		<Function name="sim_m.HADDR[0]" pinid="206" pinname="NAND_CE3_B" checked="-1" parentname="MISC_SIM_M_HADDR0"></Function>
+		<Function name="sim_m.HADDR[1]" pinid="76" pinname="NAND_CLE" checked="-1" parentname="MISC_SIM_M_HADDR1"></Function>
+		<Function name="sim_m.HADDR[10]" pinid="66" pinname="NAND_DQS" checked="-1" parentname="MISC_SIM_M_HADDR10"></Function>
+		<Function name="sim_m.HADDR[11]" pinid="17" pinname="NAND_RE_B" checked="-1" parentname="MISC_SIM_M_HADDR11"></Function>
+		<Function name="sim_m.HADDR[15]" pinid="102" pinname="SAI1_RXFS" checked="-1" parentname="MISC_SIM_M_HADDR15"></Function>
+		<Function name="sim_m.HADDR[16]" pinid="90" pinname="SAI1_RXC" checked="-1" parentname="MISC_SIM_M_HADDR16"></Function>
+		<Function name="sim_m.HADDR[17]" pinid="92" pinname="SAI1_RXD0" checked="-1" parentname="MISC_SIM_M_HADDR17"></Function>
+		<Function name="sim_m.HADDR[18]" pinid="94" pinname="SAI1_RXD1" checked="-1" parentname="MISC_SIM_M_HADDR18"></Function>
+		<Function name="sim_m.HADDR[19]" pinid="96" pinname="SAI1_RXD2" checked="-1" parentname="MISC_SIM_M_HADDR19"></Function>
+		<Function name="sim_m.HADDR[2]" pinid="56" pinname="NAND_DATA00" checked="-1" parentname="MISC_SIM_M_HADDR2"></Function>
+		<Function name="sim_m.HADDR[20]" pinid="100" pinname="SAI1_RXD3" checked="-1" parentname="MISC_SIM_M_HADDR20"></Function>
+		<Function name="sim_m.HADDR[24]" pinid="174" pinname="SAI1_RXD7" checked="-1" parentname="MISC_SIM_M_HADDR24"></Function>
+		<Function name="sim_m.HADDR[25]" pinid="120" pinname="SAI1_TXFS" checked="-1" parentname="MISC_SIM_M_HADDR25"></Function>
+		<Function name="sim_m.HADDR[26]" pinid="104" pinname="SAI1_TXC" checked="-1" parentname="MISC_SIM_M_HADDR26"></Function>
+		<Function name="sim_m.HADDR[27]" pinid="106" pinname="SAI1_TXD0" checked="-1" parentname="MISC_SIM_M_HADDR27"></Function>
+		<Function name="sim_m.HADDR[28]" pinid="108" pinname="SAI1_TXD1" checked="-1" parentname="MISC_SIM_M_HADDR28"></Function>
+		<Function name="sim_m.HADDR[29]" pinid="112" pinname="SAI1_TXD2" checked="-1" parentname="MISC_SIM_M_HADDR29"></Function>
+		<Function name="sim_m.HADDR[3]" pinid="58" pinname="NAND_DATA01" checked="-1" parentname="MISC_SIM_M_HADDR3"></Function>
+		<Function name="sim_m.HADDR[30]" pinid="114" pinname="SAI1_TXD3" checked="-1" parentname="MISC_SIM_M_HADDR30"></Function>
+		<Function name="sim_m.HADDR[31]" pinid="116" pinname="SAI1_TXD4" checked="-1" parentname="MISC_SIM_M_HADDR31"></Function>
+		<Function name="sim_m.HADDR[4]" pinid="60" pinname="NAND_DATA02" checked="-1" parentname="MISC_SIM_M_HADDR4"></Function>
+		<Function name="sim_m.HADDR[5]" pinid="62" pinname="NAND_DATA03" checked="-1" parentname="MISC_SIM_M_HADDR5"></Function>
+		<Function name="sim_m.HBURST[1]" pinid="118" pinname="SAI1_TXD6" checked="-1" parentname="MISC_SIM_M_HBURST1"></Function>
+		<Function name="sim_m.HPROT[0]" pinid="52" pinname="NAND_ALE" checked="-1" parentname="MISC_SIM_M_HPROT0"></Function>
+		<Function name="sim_m.HPROT[1]" pinid="54" pinname="NAND_CE0_B" checked="-1" parentname="MISC_SIM_M_HPROT1"></Function>
+		<Function name="sim_m.HPROT[2]" pinid="64" pinname="NAND_CE1_B" checked="-1" parentname="MISC_SIM_M_HPROT2"></Function>
+		<Function name="sim_m.HPROT[3]" pinid="21" pinname="NAND_CE2_B" checked="-1" parentname="MISC_SIM_M_HPROT3"></Function>
+		<Function name="sim_m.HREADYOUT" pinid="30" pinname="SAI2_TXC" checked="-1" parentname="MISC_SIM_M_HREADYOUT"></Function>
+		<Function name="sim_m.HRESP" pinid="88" pinname="SAI1_MCLK" checked="-1" parentname="MISC_SIM_M_HRESP"></Function>
+		<Function name="sim_m.HSIZE[0]" pinid="149" pinname="SAI2_RXFS" checked="-1" parentname="MISC_SIM_M_HSIZE0"></Function>
+		<Function name="sim_m.HSIZE[1]" pinid="147" pinname="SAI2_RXC" checked="-1" parentname="MISC_SIM_M_HSIZE1"></Function>
+		<Function name="sim_m.HSIZE[2]" pinid="36" pinname="SAI2_RXD0" checked="-1" parentname="MISC_SIM_M_HSIZE2"></Function>
+		<Function name="sim_m.HWRITE" pinid="32" pinname="SAI2_TXFS" checked="-1" parentname="MISC_SIM_M_HWRITE"></Function>
+		<Function name="ccmsrcgpcmix.EARLY_RESET" pinid="72" pinname="SD2_DATA3" checked="-1" parentname="MISC_SRC_EARLY_RESET"></Function>
+		<Function name="ccmsrcgpcmix.OBSERVE0" pinid="78" pinname="SD2_CLK" checked="-1" parentname="MISC_SRC_OBSERVE0"></Function>
+		<Function name="ccmsrcgpcmix.OBSERVE1" pinid="74" pinname="SD2_CMD" checked="-1" parentname="MISC_SRC_OBSERVE1"></Function>
+		<Function name="ccmsrcgpcmix.OBSERVE2" pinid="80" pinname="SD2_DATA0" checked="-1" parentname="MISC_SRC_OBSERVE2"></Function>
+		<Function name="ccmsrcgpcmix.OUT0" pinid="218" pinname="GPIO1_IO11" checked="-1" parentname="MISC_SRC_OUT0"></Function>
+		<Function name="ccmsrcgpcmix.OUT1" pinid="155" pinname="GPIO1_IO12" checked="-1" parentname="MISC_SRC_OUT1"></Function>
+		<Function name="ccmsrcgpcmix.OUT2" pinid="157" pinname="GPIO1_IO13" checked="-1" parentname="MISC_SRC_OUT2"></Function>
+		<Function name="ccmsrcgpcmix.PMIC_READY" pinid="218" pinname="GPIO1_IO11" checked="-1" parentname="MISC_SRC_PMIC_READY"></Function>
+		<Function name="ccmsrcgpcmix.STOP" pinid="70" pinname="SD2_DATA2" checked="-1" parentname="MISC_SRC_STOP"></Function>
+		<Function name="ccmsrcgpcmix.STOP" pinid="222" pinname="GPIO1_IO09" checked="-1" parentname="MISC_SRC_STOP"></Function>
+		<Function name="ccmsrcgpcmix.src_system_rst" pinid="92" pinname="SAI1_RXD0" checked="-1" parentname="MISC_SRC_SYSTEM_RST"></Function>
+		<Function name="ccmsrcgpcmix.src_system_rst" pinid="94" pinname="SAI1_RXD1" checked="-1" parentname="MISC_SRC_SYSTEM_RST"></Function>
+		<Function name="ccmsrcgpcmix.src_system_rst" pinid="96" pinname="SAI1_RXD2" checked="-1" parentname="MISC_SRC_SYSTEM_RST"></Function>
+		<Function name="ccmsrcgpcmix.src_system_rst" pinid="100" pinname="SAI1_RXD3" checked="-1" parentname="MISC_SRC_SYSTEM_RST"></Function>
+		<Function name="ccmsrcgpcmix.src_system_rst" pinid="106" pinname="SAI1_TXD0" checked="-1" parentname="MISC_SRC_SYSTEM_RST"></Function>
+		<Function name="ccmsrcgpcmix.src_system_rst" pinid="108" pinname="SAI1_TXD1" checked="-1" parentname="MISC_SRC_SYSTEM_RST"></Function>
+		<Function name="ccmsrcgpcmix.src_system_rst" pinid="112" pinname="SAI1_TXD2" checked="-1" parentname="MISC_SRC_SYSTEM_RST"></Function>
+		<Function name="ccmsrcgpcmix.src_system_rst" pinid="114" pinname="SAI1_TXD3" checked="-1" parentname="MISC_SRC_SYSTEM_RST"></Function>
+		<Function name="ccmsrcgpcmix.src_system_rst" pinid="116" pinname="SAI1_TXD4" checked="-1" parentname="MISC_SRC_SYSTEM_RST"></Function>
+		<Function name="ccmsrcgpcmix.src_system_rst" pinid="118" pinname="SAI1_TXD6" checked="-1" parentname="MISC_SRC_SYSTEM_RST"></Function>
+		<Function name="ccmsrcgpcmix.src_system_rst" pinid="174" pinname="SAI1_RXD7" checked="-1" parentname="MISC_SRC_SYSTEM_RST"></Function>
+		<Function name="ccmsrcgpcmix.WAIT" pinid="82" pinname="SD2_DATA1" checked="-1" parentname="MISC_SRC_WAIT"></Function>
+		<Function name="ccmsrcgpcmix.WAIT" pinid="220" pinname="GPIO1_IO08" checked="-1" parentname="MISC_SRC_WAIT"></Function>
+		<Function name="ccmsrcgpcmix.BOOT_CFG[0]" pinid="92" pinname="SAI1_RXD0" checked="-1" parentname="MISC_STRAPPING_iMX8MM_BOOT_CFG00"></Function>
+		<Function name="ccmsrcgpcmix.BOOT_CFG[1]" pinid="94" pinname="SAI1_RXD1" checked="-1" parentname="MISC_STRAPPING_iMX8MM_BOOT_CFG01"></Function>
+		<Function name="ccmsrcgpcmix.BOOT_CFG[2]" pinid="96" pinname="SAI1_RXD2" checked="-1" parentname="MISC_STRAPPING_iMX8MM_BOOT_CFG02"></Function>
+		<Function name="ccmsrcgpcmix.BOOT_CFG[3]" pinid="100" pinname="SAI1_RXD3" checked="-1" parentname="MISC_STRAPPING_iMX8MM_BOOT_CFG03"></Function>
+		<Function name="ccmsrcgpcmix.BOOT_CFG[7]" pinid="174" pinname="SAI1_RXD7" checked="-1" parentname="MISC_STRAPPING_iMX8MM_BOOT_CFG07"></Function>
+		<Function name="ccmsrcgpcmix.BOOT_CFG[8]" pinid="106" pinname="SAI1_TXD0" checked="-1" parentname="MISC_STRAPPING_iMX8MM_BOOT_CFG08"></Function>
+		<Function name="ccmsrcgpcmix.BOOT_CFG[9]" pinid="108" pinname="SAI1_TXD1" checked="-1" parentname="MISC_STRAPPING_iMX8MM_BOOT_CFG09"></Function>
+		<Function name="ccmsrcgpcmix.BOOT_CFG[10]" pinid="112" pinname="SAI1_TXD2" checked="-1" parentname="MISC_STRAPPING_iMX8MM_BOOT_CFG10"></Function>
+		<Function name="ccmsrcgpcmix.BOOT_CFG[11]" pinid="114" pinname="SAI1_TXD3" checked="-1" parentname="MISC_STRAPPING_iMX8MM_BOOT_CFG11"></Function>
+		<Function name="ccmsrcgpcmix.BOOT_CFG[12]" pinid="116" pinname="SAI1_TXD4" checked="-1" parentname="MISC_STRAPPING_iMX8MM_BOOT_CFG12"></Function>
+		<Function name="ccmsrcgpcmix.BOOT_CFG[14]" pinid="118" pinname="SAI1_TXD6" checked="-1" parentname="MISC_STRAPPING_iMX8MM_BOOT_CFG14"></Function>
+		<Function name="tpsmp.CLK" pinid="34" pinname="SAI2_TXD0" checked="-1" parentname="MISC_TPSMP_CLK"></Function>
+		<Function name="tpsmp.HDATA[0]" pinid="135" pinname="SAI3_RXD" checked="-1" parentname="MISC_TPSMP_HDATA0"></Function>
+		<Function name="tpsmp.HDATA[1]" pinid="129" pinname="SAI3_TXFS" checked="-1" parentname="MISC_TPSMP_HDATA1"></Function>
+		<Function name="tpsmp.HDATA[10]" pinid="141" pinname="ECSPI1_MISO" checked="-1" parentname="MISC_TPSMP_HDATA10"></Function>
+		<Function name="tpsmp.HDATA[11]" pinid="143" pinname="ECSPI1_SS0" checked="-1" parentname="MISC_TPSMP_HDATA11"></Function>
+		<Function name="tpsmp.HDATA[12]" pinid="196" pinname="ECSPI2_SCLK" checked="-1" parentname="MISC_TPSMP_HDATA12"></Function>
+		<Function name="tpsmp.HDATA[13]" pinid="200" pinname="ECSPI2_MOSI" checked="-1" parentname="MISC_TPSMP_HDATA13"></Function>
+		<Function name="tpsmp.HDATA[14]" pinid="198" pinname="ECSPI2_MISO" checked="-1" parentname="MISC_TPSMP_HDATA14"></Function>
+		<Function name="tpsmp.HDATA[15]" pinid="202" pinname="ECSPI2_SS0" checked="-1" parentname="MISC_TPSMP_HDATA15"></Function>
+		<Function name="tpsmp.HDATA[18]" pinid="55" pinname="I2C2_SCL" checked="-1" parentname="MISC_TPSMP_HDATA18"></Function>
+		<Function name="tpsmp.HDATA[19]" pinid="53" pinname="I2C2_SDA" checked="-1" parentname="MISC_TPSMP_HDATA19"></Function>
+		<Function name="tpsmp.HDATA[2]" pinid="131" pinname="SAI3_TXC" checked="-1" parentname="MISC_TPSMP_HDATA2"></Function>
+		<Function name="tpsmp.HDATA[20]" pinid="95" pinname="I2C3_SCL" checked="-1" parentname="MISC_TPSMP_HDATA20"></Function>
+		<Function name="tpsmp.HDATA[21]" pinid="93" pinname="I2C3_SDA" checked="-1" parentname="MISC_TPSMP_HDATA21"></Function>
+		<Function name="tpsmp.HDATA[22]" pinid="14" pinname="I2C4_SCL" checked="-1" parentname="MISC_TPSMP_HDATA22"></Function>
+		<Function name="tpsmp.HDATA[23]" pinid="12" pinname="I2C4_SDA" checked="-1" parentname="MISC_TPSMP_HDATA23"></Function>
+		<Function name="tpsmp.HDATA[28]" pinid="210" pinname="UART3_RXD" checked="-1" parentname="MISC_TPSMP_HDATA28"></Function>
+		<Function name="tpsmp.HDATA[29]" pinid="212" pinname="UART3_TXD" checked="-1" parentname="MISC_TPSMP_HDATA29"></Function>
+		<Function name="tpsmp.HDATA[3]" pinid="256" pinname="SAI3_TXD" checked="-1" parentname="MISC_TPSMP_HDATA3"></Function>
+		<Function name="tpsmp.HDATA[30]" pinid="151" pinname="UART4_RXD" checked="-1" parentname="MISC_TPSMP_HDATA30"></Function>
+		<Function name="tpsmp.HDATA[31]" pinid="153" pinname="UART4_TXD" checked="-1" parentname="MISC_TPSMP_HDATA31"></Function>
+		<Function name="tpsmp.HDATA[4]" pinid="91" pinname="SAI3_MCLK" checked="-1" parentname="MISC_TPSMP_HDATA4"></Function>
+		<Function name="tpsmp.HDATA[5]" pinid="16" pinname="SPDIF_TX" checked="-1" parentname="MISC_TPSMP_HDATA5"></Function>
+		<Function name="tpsmp.HDATA[6]" pinid="15" pinname="SPDIF_RX" checked="-1" parentname="MISC_TPSMP_HDATA6"></Function>
+		<Function name="tpsmp.HDATA[7]" pinid="208" pinname="SPDIF_EXT_CLK" checked="-1" parentname="MISC_TPSMP_HDATA7"></Function>
+		<Function name="tpsmp.HDATA[8]" pinid="137" pinname="ECSPI1_SCLK" checked="-1" parentname="MISC_TPSMP_HDATA8"></Function>
+		<Function name="tpsmp.HDATA[9]" pinid="139" pinname="ECSPI1_MOSI" checked="-1" parentname="MISC_TPSMP_HDATA9"></Function>
+		<Function name="tpsmp.HDATA_DIR" pinid="38" pinname="SAI2_MCLK" checked="-1" parentname="MISC_TPSMP_HDATA_DIR"></Function>
+		<Function name="tpsmp.HTRANS[0]" pinid="252" pinname="SAI3_RXFS" checked="-1" parentname="MISC_TPSMP_HTRANS0"></Function>
+		<Function name="tpsmp.HTRANS[1]" pinid="133" pinname="SAI3_RXC" checked="-1" parentname="MISC_TPSMP_HTRANS1"></Function>
+		<Function name="coresight.TRACE_CLK" pinid="102" pinname="SAI1_RXFS" checked="-1" parentname="MISC_UNUSABLE_DEBUG_TRACE_CLK"></Function>
+		<Function name="coresight.TRACE_CTL" pinid="90" pinname="SAI1_RXC" checked="-1" parentname="MISC_UNUSABLE_DEBUG_TRACE_CTL"></Function>
+		<Function name="coresight.TRACE[0]" pinid="92" pinname="SAI1_RXD0" checked="-1" parentname="MISC_UNUSABLE_DEBUG_TRACE_D00"></Function>
+		<Function name="coresight.TRACE[1]" pinid="94" pinname="SAI1_RXD1" checked="-1" parentname="MISC_UNUSABLE_DEBUG_TRACE_D01"></Function>
+		<Function name="coresight.TRACE[2]" pinid="96" pinname="SAI1_RXD2" checked="-1" parentname="MISC_UNUSABLE_DEBUG_TRACE_D02"></Function>
+		<Function name="coresight.TRACE[3]" pinid="100" pinname="SAI1_RXD3" checked="-1" parentname="MISC_UNUSABLE_DEBUG_TRACE_D03"></Function>
+		<Function name="coresight.TRACE[7]" pinid="174" pinname="SAI1_RXD7" checked="-1" parentname="MISC_UNUSABLE_DEBUG_TRACE_D07"></Function>
+		<Function name="coresight.TRACE[8]" pinid="106" pinname="SAI1_TXD0" checked="-1" parentname="MISC_UNUSABLE_DEBUG_TRACE_D08"></Function>
+		<Function name="coresight.TRACE[9]" pinid="108" pinname="SAI1_TXD1" checked="-1" parentname="MISC_UNUSABLE_DEBUG_TRACE_D09"></Function>
+		<Function name="coresight.TRACE[10]" pinid="112" pinname="SAI1_TXD2" checked="-1" parentname="MISC_UNUSABLE_DEBUG_TRACE_D10"></Function>
+		<Function name="coresight.TRACE[11]" pinid="114" pinname="SAI1_TXD3" checked="-1" parentname="MISC_UNUSABLE_DEBUG_TRACE_D11"></Function>
+		<Function name="coresight.TRACE[12]" pinid="116" pinname="SAI1_TXD4" checked="-1" parentname="MISC_UNUSABLE_DEBUG_TRACE_D12"></Function>
+		<Function name="coresight.TRACE[14]" pinid="118" pinname="SAI1_TXD6" checked="-1" parentname="MISC_UNUSABLE_DEBUG_TRACE_D14"></Function>
+		<Function name="coresight.EVENTI" pinid="104" pinname="SAI1_TXC" checked="-1" parentname="MISC_UNUSABLE_DEBUG_TRACE_EVENTI"></Function>
+		<Function name="coresight.EVENTO" pinid="120" pinname="SAI1_TXFS" checked="-1" parentname="MISC_UNUSABLE_DEBUG_TRACE_EVENTO"></Function>
+		<Function name="gpio3.IO[19]" pinid="244" pinname="SAI5_RXFS" checked="1" parentname="PCIE_1_RESET# "></Function>
+		<Function name="pcie1.CLKREQ_B" pinid="151" pinname="UART4_RXD" checked="1" parentname="PCIE_1_x1_CLKREQ#"></Function>
+		<Function name="pcie1.CLKREQ_B" pinid="14" pinname="I2C4_SCL" checked="-1" parentname="PCIE_1_x1_CLKREQ#"></Function>
+		<Function name="PCIE_CLK_N" pinid="226" pinname="PCIE_CLK_N" checked="1" parentname="PCIE_1_x1_CLK_N"></Function>
+		<Function name="PCIE_CLK_P" pinid="228" pinname="PCIE_CLK_P" checked="1" parentname="PCIE_1_x1_CLK_P"></Function>
+		<Function name="PCIE_RXN_N" pinid="232" pinname="PCIE_RXN_N" checked="1" parentname="PCIE_1_x1_L0_RX_N"></Function>
+		<Function name="PCIE_RXN_P" pinid="234" pinname="PCIE_RXN_P" checked="1" parentname="PCIE_1_x1_L0_RX_P"></Function>
+		<Function name="PCIE_TXN_N" pinid="238" pinname="PCIE_TXN_N" checked="1" parentname="PCIE_1_x1_L0_TX_N"></Function>
+		<Function name="PCIE_TXN_P" pinid="240" pinname="PCIE_TXN_P" checked="1" parentname="PCIE_1_x1_L0_TX_P"></Function>
+		<Function name="pwm2.OUT" pinid="15" pinname="SPDIF_RX" checked="-1" parentname="PWM_1"></Function>
+		<Function name="pwm2.OUT" pinid="157" pinname="GPIO1_IO13" checked="-1" parentname="PWM_1"></Function>
+		<Function name="pwm2.OUT" pinid="14" pinname="I2C4_SCL" checked="-1" parentname="PWM_1"></Function>
+		<Function name="pwm3.OUT" pinid="93" pinname="I2C3_SDA" checked="-1" parentname="PWM_2"></Function>
+		<Function name="pwm3.OUT" pinid="185" pinname="GPIO1_IO14" checked="-1" parentname="PWM_2"></Function>
+		<Function name="pwm3.OUT" pinid="16" pinname="SPDIF_TX" checked="-1" parentname="PWM_2"></Function>
+		<Function name="pwm1.OUT" pinid="19" pinname="GPIO1_IO01" checked="-1" parentname="PWM_3_DSI"></Function>
+		<Function name="pwm1.OUT" pinid="12" pinname="I2C4_SDA" checked="-1" parentname="PWM_3_DSI"></Function>
+		<Function name="pwm1.OUT" pinid="208" pinname="SPDIF_EXT_CLK" checked="-1" parentname="PWM_3_DSI"></Function>
+		<Function name="pwm4.OUT" pinid="91" pinname="SAI3_MCLK" checked="-1" parentname="PWM_4"></Function>
+		<Function name="pwm4.OUT" pinid="95" pinname="I2C3_SCL" checked="-1" parentname="PWM_4"></Function>
+		<Function name="pwm4.OUT" pinid="187" pinname="GPIO1_IO15" checked="-1" parentname="PWM_4"></Function>
+		<Function name="1.8V_OUT" pinid="214" pinname="" checked="-1" parentname="PWR_1V8_MOCI"></Function>
+		<Function name="qspi.A_SCLK" pinid="52" pinname="NAND_ALE" checked="-1" parentname="QSPI_1_1x_CLK"></Function>
+		<Function name="qspi.A_SS0_B" pinid="54" pinname="NAND_CE0_B" checked="-1" parentname="QSPI_1_1x_CS#"></Function>
+		<Function name="qspi.A_SS1_B" pinid="64" pinname="NAND_CE1_B" checked="-1" parentname="QSPI_1_1x_CS2#"></Function>
+		<Function name="qspi.A_DQS" pinid="66" pinname="NAND_DQS" checked="-1" parentname="QSPI_1_1x_DQS"></Function>
+		<Function name="qspi.A_DATA[1]" pinid="58" pinname="NAND_DATA01" checked="-1" parentname="QSPI_1_1x_MISO"></Function>
+		<Function name="qspi.A_DATA[0]" pinid="56" pinname="NAND_DATA00" checked="-1" parentname="QSPI_1_1x_MOSI"></Function>
+		<Function name="qspi.TEST_TRIG" pinid="220" pinname="GPIO1_IO08" checked="-1" parentname="QSPI_1_1x_TEST_TRIG"></Function>
+		<Function name="qspi.A_SCLK" pinid="52" pinname="NAND_ALE" checked="-1" parentname="QSPI_1_2x_CLK"></Function>
+		<Function name="qspi.A_SS0_B" pinid="54" pinname="NAND_CE0_B" checked="-1" parentname="QSPI_1_2x_CS#"></Function>
+		<Function name="qspi.A_SS1_B" pinid="64" pinname="NAND_CE1_B" checked="-1" parentname="QSPI_1_2x_CS2#"></Function>
+		<Function name="qspi.A_DQS" pinid="66" pinname="NAND_DQS" checked="-1" parentname="QSPI_1_2x_DQS"></Function>
+		<Function name="qspi.A_DATA[0]" pinid="56" pinname="NAND_DATA00" checked="-1" parentname="QSPI_1_2x_IO0"></Function>
+		<Function name="qspi.A_DATA[1]" pinid="58" pinname="NAND_DATA01" checked="-1" parentname="QSPI_1_2x_IO1"></Function>
+		<Function name="qspi.TEST_TRIG" pinid="220" pinname="GPIO1_IO08" checked="-1" parentname="QSPI_1_2x_TEST_TRIG"></Function>
+		<Function name="qspi.A_SCLK" pinid="52" pinname="NAND_ALE" checked="-1" parentname="QSPI_1_4x_CLK"></Function>
+		<Function name="qspi.A_SS0_B" pinid="54" pinname="NAND_CE0_B" checked="-1" parentname="QSPI_1_4x_CS#"></Function>
+		<Function name="qspi.A_SS1_B" pinid="64" pinname="NAND_CE1_B" checked="-1" parentname="QSPI_1_4x_CS2#"></Function>
+		<Function name="qspi.A_DQS" pinid="66" pinname="NAND_DQS" checked="-1" parentname="QSPI_1_4x_DQS"></Function>
+		<Function name="qspi.A_DATA[0]" pinid="56" pinname="NAND_DATA00" checked="-1" parentname="QSPI_1_4x_IO0"></Function>
+		<Function name="qspi.A_DATA[1]" pinid="58" pinname="NAND_DATA01" checked="-1" parentname="QSPI_1_4x_IO1"></Function>
+		<Function name="qspi.A_DATA[2]" pinid="60" pinname="NAND_DATA02" checked="-1" parentname="QSPI_1_4x_IO2"></Function>
+		<Function name="qspi.A_DATA[3]" pinid="62" pinname="NAND_DATA03" checked="-1" parentname="QSPI_1_4x_IO3"></Function>
+		<Function name="qspi.TEST_TRIG" pinid="220" pinname="GPIO1_IO08" checked="-1" parentname="QSPI_1_4x_TEST_TRIG"></Function>
+		<Function name="qspi.B_DQS" pinid="17" pinname="NAND_RE_B" checked="-1" parentname="QSPI_UNUSABLE_B_DQS"></Function>
+		<Function name="qspi.B_SCLK" pinid="76" pinname="NAND_CLE" checked="-1" parentname="QSPI_UNUSABLE_B_SCLK"></Function>
+		<Function name="qspi.B_SS0_B" pinid="21" pinname="NAND_CE2_B" checked="-1" parentname="QSPI_UNUSABLE_B_SS0_B"></Function>
+		<Function name="qspi.B_SS1_B" pinid="206" pinname="NAND_CE3_B" checked="-1" parentname="QSPI_UNUSABLE_B_SS1_B"></Function>
+		<Function name="usdhc2.CD_B" pinid="84" pinname="SD2_CD_B" checked="-1" parentname="SD_1_CD#"></Function>
+		<Function name="usdhc2.CLK" pinid="78" pinname="SD2_CLK" checked="-1" parentname="SD_1_CLK"></Function>
+		<Function name="usdhc2.CMD" pinid="74" pinname="SD2_CMD" checked="-1" parentname="SD_1_CMD"></Function>
+		<Function name="usdhc2.DATA0" pinid="80" pinname="SD2_DATA0" checked="-1" parentname="SD_1_D0"></Function>
+		<Function name="usdhc2.DATA1" pinid="82" pinname="SD2_DATA1" checked="-1" parentname="SD_1_D1"></Function>
+		<Function name="usdhc2.DATA2" pinid="70" pinname="SD2_DATA2" checked="-1" parentname="SD_1_D2"></Function>
+		<Function name="usdhc2.DATA3" pinid="72" pinname="SD2_DATA3" checked="-1" parentname="SD_1_D3"></Function>
+		<Function name="gpio3.IO[5]" pinid="76" pinname="NAND_CLE" checked="-1" parentname="SD_1_PWR_EN"></Function>
+		<Function name="usdhc2.RESET_B" pinid="220" pinname="GPIO1_IO08" checked="-1" parentname="SD_1_RESET#"></Function>
+		<Function name="usdhc3.CD_B" pinid="55" pinname="I2C2_SCL" checked="-1" parentname="SD_UNUSABLE_2_CD#"></Function>
+		<Function name="usdhc3.CD_B" pinid="185" pinname="GPIO1_IO14" checked="-1" parentname="SD_UNUSABLE_2_CD#"></Function>
+		<Function name="usdhc3.CD_B" pinid="60" pinname="NAND_DATA02" checked="-1" parentname="SD_UNUSABLE_2_CD#"></Function>
+		<Function name="usdhc3.DATA4" pinid="17" pinname="NAND_RE_B" checked="-1" parentname="SD_UNUSABLE_2_D4"></Function>
+		<Function name="usdhc3.DATA5" pinid="21" pinname="NAND_CE2_B" checked="-1" parentname="SD_UNUSABLE_2_D5"></Function>
+		<Function name="usdhc3.DATA6" pinid="206" pinname="NAND_CE3_B" checked="-1" parentname="SD_UNUSABLE_2_D6"></Function>
+		<Function name="usdhc3.DATA7" pinid="76" pinname="NAND_CLE" checked="-1" parentname="SD_UNUSABLE_2_D7"></Function>
+		<Function name="usdhc3.RESET_B" pinid="210" pinname="UART3_RXD" checked="-1" parentname="SD_UNUSABLE_2_RESET#"></Function>
+		<Function name="usdhc3.RESET_B" pinid="222" pinname="GPIO1_IO09" checked="-1" parentname="SD_UNUSABLE_2_RESET#"></Function>
+		<Function name="usdhc3.STROBE" pinid="64" pinname="NAND_CE1_B" checked="-1" parentname="SD_UNUSABLE_2_STROBE"></Function>
+		<Function name="usdhc3.VSELECT" pinid="212" pinname="UART3_TXD" checked="-1" parentname="SD_UNUSABLE_2_VSELECT"></Function>
+		<Function name="usdhc3.VSELECT" pinid="218" pinname="GPIO1_IO11" checked="-1" parentname="SD_UNUSABLE_2_VSELECT"></Function>
+		<Function name="usdhc3.WP" pinid="53" pinname="I2C2_SDA" checked="-1" parentname="SD_UNUSABLE_2_WP"></Function>
+		<Function name="usdhc3.WP" pinid="187" pinname="GPIO1_IO15" checked="-1" parentname="SD_UNUSABLE_2_WP"></Function>
+		<Function name="usdhc3.WP" pinid="62" pinname="NAND_DATA03" checked="-1" parentname="SD_UNUSABLE_2_WP"></Function>
+		<Function name="spdif1.EXT_CLK" pinid="208" pinname="SPDIF_EXT_CLK" checked="-1" parentname="SPDIF_1_EXT_CLK"></Function>
+		<Function name="spdif1.IN" pinid="15" pinname="SPDIF_RX" checked="-1" parentname="SPDIF_1_IN"></Function>
+		<Function name="spdif1.OUT" pinid="16" pinname="SPDIF_TX" checked="-1" parentname="SPDIF_1_OUT"></Function>
+		<Function name="ecspi2.SS0" pinid="202" pinname="ECSPI2_SS0" checked="-1" parentname="SPI_1_MASTER_CS0"></Function>
+		<Function name="ecspi2.MISO" pinid="198" pinname="ECSPI2_MISO" checked="-1" parentname="SPI_1_MASTER_MISO"></Function>
+		<Function name="ecspi2.MOSI" pinid="200" pinname="ECSPI2_MOSI" checked="-1" parentname="SPI_1_MASTER_MOSI"></Function>
+		<Function name="ecspi2.SCLK" pinid="196" pinname="ECSPI2_SCLK" checked="-1" parentname="SPI_1_MASTER_SCLK"></Function>
+		<Function name="ecspi2.SS0" pinid="202" pinname="ECSPI2_SS0" checked="-1" parentname="SPI_1_SLAVE_CS"></Function>
+		<Function name="ecspi2.MISO" pinid="198" pinname="ECSPI2_MISO" checked="-1" parentname="SPI_1_SLAVE_MISO"></Function>
+		<Function name="ecspi2.MOSI" pinid="200" pinname="ECSPI2_MOSI" checked="-1" parentname="SPI_1_SLAVE_MOSI"></Function>
+		<Function name="ecspi2.SCLK" pinid="196" pinname="ECSPI2_SCLK" checked="-1" parentname="SPI_1_SLAVE_SCLK"></Function>
+		<Function name="ecspi1.SS0" pinid="143" pinname="ECSPI1_SS0" checked="-1" parentname="SPI_2_MASTER_CS0"></Function>
+		<Function name="ecspi1.MISO" pinid="141" pinname="ECSPI1_MISO" checked="-1" parentname="SPI_2_MASTER_MISO"></Function>
+		<Function name="ecspi1.MOSI" pinid="139" pinname="ECSPI1_MOSI" checked="-1" parentname="SPI_2_MASTER_MOSI"></Function>
+		<Function name="ecspi1.SCLK" pinid="137" pinname="ECSPI1_SCLK" checked="-1" parentname="SPI_2_MASTER_SCLK"></Function>
+		<Function name="ecspi1.SS0" pinid="143" pinname="ECSPI1_SS0" checked="-1" parentname="SPI_2_SLAVE_CS"></Function>
+		<Function name="ecspi1.MISO" pinid="141" pinname="ECSPI1_MISO" checked="-1" parentname="SPI_2_SLAVE_MISO"></Function>
+		<Function name="ecspi1.MOSI" pinid="139" pinname="ECSPI1_MOSI" checked="-1" parentname="SPI_2_SLAVE_MOSI"></Function>
+		<Function name="ecspi1.SCLK" pinid="137" pinname="ECSPI1_SCLK" checked="-1" parentname="SPI_2_SLAVE_SCLK"></Function>
+		<Function name="ecspi3.TEST_TRIG" pinid="244" pinname="SAI5_RXFS" checked="-1" parentname="SPI_UNUSABLE_SPI_3_TEST_TRIG"></Function>
+		<Function name="gpt1.CAPTURE1" pinid="252" pinname="SAI3_RXFS" checked="-1" parentname="TIMER_1_CAPTURE_1"></Function>
+		<Function name="gpt1.CAPTURE2" pinid="129" pinname="SAI3_TXFS" checked="-1" parentname="TIMER_1_CAPTURE_2"></Function>
+		<Function name="gpt1.CLK" pinid="133" pinname="SAI3_RXC" checked="-1" parentname="TIMER_1_CLK"></Function>
+		<Function name="gpt1.COMPARE1" pinid="135" pinname="SAI3_RXD" checked="-1" parentname="TIMER_1_COMPARE_1"></Function>
+		<Function name="gpt1.COMPARE2" pinid="131" pinname="SAI3_TXC" checked="-1" parentname="TIMER_1_COMPARE_2"></Function>
+		<Function name="gpt1.COMPARE3" pinid="256" pinname="SAI3_TXD" checked="-1" parentname="TIMER_1_COMPARE_3"></Function>
+		<Function name="gpt2.CLK" pinid="95" pinname="I2C3_SCL" checked="-1" parentname="TIMER_2_CLK"></Function>
+		<Function name="gpt3.CLK" pinid="93" pinname="I2C3_SDA" checked="-1" parentname="TIMER_3_CLK"></Function>
+		<Function name="uart2.RTS_B" pinid="135" pinname="SAI3_RXD" checked="-1" parentname="UART_1_CTS"></Function>
+		<Function name="uart2.RTS_B" pinid="153" pinname="UART4_TXD" checked="-1" parentname="UART_1_CTS"></Function>
+		<Function name="uart2.CTS_B" pinid="133" pinname="SAI3_RXC" checked="-1" parentname="UART_1_RTS"></Function>
+		<Function name="uart2.CTS_B" pinid="151" pinname="UART4_RXD" checked="-1" parentname="UART_1_RTS"></Function>
+		<Function name="uart2.RX" pinid="129" pinname="SAI3_TXFS" checked="1" parentname="UART_1_RXD"></Function>
+		<Function name="uart2.TX" pinid="131" pinname="SAI3_TXC" checked="1" parentname="UART_1_TXD"></Function>
+		<Function name="uart3.RTS_B" pinid="143" pinname="ECSPI1_SS0" checked="-1" parentname="UART_2_CTS"></Function>
+		<Function name="uart3.CTS_B" pinid="141" pinname="ECSPI1_MISO" checked="-1" parentname="UART_2_RTS"></Function>
+		<Function name="uart3.RX" pinid="137" pinname="ECSPI1_SCLK" checked="1" parentname="UART_2_RXD"></Function>
+		<Function name="uart3.RX" pinid="210" pinname="UART3_RXD" checked="-1" parentname="UART_2_RXD"></Function>
+		<Function name="uart3.TX" pinid="139" pinname="ECSPI1_MOSI" checked="1" parentname="UART_2_TXD"></Function>
+		<Function name="uart3.TX" pinid="212" pinname="UART3_TXD" checked="-1" parentname="UART_2_TXD"></Function>
+		<Function name="uart1.RTS_B" pinid="36" pinname="SAI2_RXD0" checked="-1" parentname="UART_3_CTS"></Function>
+		<Function name="uart1.RTS_B" pinid="212" pinname="UART3_TXD" checked="-1" parentname="UART_3_CTS"></Function>
+		<Function name="uart1.CTS_B" pinid="32" pinname="SAI2_TXFS" checked="-1" parentname="UART_3_RTS"></Function>
+		<Function name="uart1.CTS_B" pinid="210" pinname="UART3_RXD" checked="-1" parentname="UART_3_RTS"></Function>
+		<Function name="uart1.RX" pinid="147" pinname="SAI2_RXC" checked="1" parentname="UART_3_RXD"></Function>
+		<Function name="uart1.TX" pinid="149" pinname="SAI2_RXFS" checked="1" parentname="UART_3_TXD"></Function>
+		<Function name="uart4.RTS_B" pinid="202" pinname="ECSPI2_SS0" checked="1" parentname="UART_4_CTS"></Function>
+		<Function name="uart4.CTS_B" pinid="198" pinname="ECSPI2_MISO" checked="1" parentname="UART_4_RTS"></Function>
+		<Function name="uart4.RX" pinid="151" pinname="UART4_RXD" checked="-1" parentname="UART_4_RXD"></Function>
+		<Function name="uart4.RX" pinid="196" pinname="ECSPI2_SCLK" checked="1" parentname="UART_4_RXD"></Function>
+		<Function name="uart4.TX" pinid="153" pinname="UART4_TXD" checked="-1" parentname="UART_4_TXD"></Function>
+		<Function name="uart4.TX" pinid="200" pinname="ECSPI2_MOSI" checked="1" parentname="UART_4_TXD"></Function>
+		<Function name="USB1_DN" pinid="163" pinname="USB1_DN" checked="1" parentname="USB_1_D_N"></Function>
+		<Function name="USB1_DP" pinid="165" pinname="USB1_DP" checked="1" parentname="USB_1_D_P"></Function>
+		<Function name="usb1.OTG_PWR" pinid="155" pinname="GPIO1_IO12" checked="-1" parentname="USB_1_EN"></Function>
+		<Function name="USB1_ID" pinid="161" pinname="USB1_ID" checked="1" parentname="USB_1_ID"></Function>
+		<Function name="usb1.OTG_OC" pinid="157" pinname="GPIO1_IO13" checked="-1" parentname="USB_1_OC#"></Function>
+		<Function name="USB1_VBUS" pinid="159" pinname="USB1_VBUS" checked="1" parentname="USB_1_VBUS"></Function>
+		<Function name="USB2_DN" pinid="181" pinname="USB2_DN" checked="1" parentname="USB_2_D_N"></Function>
+		<Function name="USB2_DP" pinid="183" pinname="USB2_DP" checked="1" parentname="USB_2_D_P"></Function>
+		<Function name="usb2.OTG_PWR" pinid="185" pinname="GPIO1_IO14" checked="-1" parentname="USB_2_EN"></Function>
+		<Function name="usb2.OTG_ID" pinid="218" pinname="GPIO1_IO11" checked="-1" parentname="USB_2_ID"></Function>
+		<Function name="usb2.OTG_OC" pinid="187" pinname="GPIO1_IO15" checked="-1" parentname="USB_2_OC#"></Function>
+		<Function name="AW-CM276_CONFIG_HOST[0]" pinid="144" pinname="" checked="-1" parentname="Wi-Fi_CONFIG_0"></Function>
+		<Function name="AW-CM276_GPIO[3]" pinid="176" pinname="" checked="-1" parentname="Wi-Fi_LED_BT"></Function>
+		<Function name="AW-CM276_GPIO[2]" pinid="188" pinname="" checked="-1" parentname="Wi-Fi_LED_WLAN"></Function>
+		<Function name="AW-CM276_GPIO[16]" pinid="178" pinname="" checked="-1" parentname="Wi-Fi_LTE_COEX_IN"></Function>
+		<Function name="AW-CM276_GPIO[17]" pinid="180" pinname="" checked="-1" parentname="Wi-Fi_LTE_COEX_OUT"></Function>
+		<Function name="AW-CM276_GPIO[10]" pinid="184" pinname="" checked="-1" parentname="Wi-Fi_UART_CTS"></Function>
+		<Function name="AW-CM276_GPIO[11]" pinid="186" pinname="" checked="-1" parentname="Wi-Fi_UART_RTS"></Function>
+		<Function name="AW-CM276_GPIO[9]" pinid="190" pinname="" checked="-1" parentname="Wi-Fi_UART_RXD"></Function>
+		<Function name="AW-CM276_GPIO[8]" pinid="192" pinname="" checked="-1" parentname="Wi-Fi_UART_TXD"></Function>
+		<Function name="AW-CM276_GPIO[13]" pinid="172" pinname="" checked="-1" parentname="Wi-Fi_WAKE_BT_WAKE_HOST"></Function>
+		<Function name="AW-CM276_GPIO[14]" pinid="174" pinname="" checked="-1" parentname="Wi-Fi_WAKE_Wi-Fi_WAKE_HOST"></Function>
+		<Function name="AW-CM276_GPIO[22]" pinid="142" pinname="" checked="-1" parentname="Wi-Fi_WIRELESS_DISABLE"></Function>
+		<Category name="ADC_1" checked="-1"></Category>
+		<Category name="ADC_2" checked="-1"></Category>
+		<Category name="ADC_3" checked="-1"></Category>
+		<Category name="ADC_4" checked="-1"></Category>
+		<Category name="CAN_1_RX" checked="1"></Category>
+		<Category name="CAN_1_TX" checked="1"></Category>
+		<Category name="CLK_24M_REF_OUT" checked="-1"></Category>
+		<Category name="CLK_32k_REF_OUT" checked="-1"></Category>
+		<Category name="CLK_CLKO1" checked="-1"></Category>
+		<Category name="CLK_CLKO2" checked="-1"></Category>
+		<Category name="CLK_ENET_PHY_REF_CLK_ROOT" checked="-1"></Category>
+		<Category name="CLK_EXT_CLK1" checked="-1"></Category>
+		<Category name="CLK_EXT_CLK2" checked="-1"></Category>
+		<Category name="CSI_1_CSI-2[:slash]1x_CLK_N" checked="-1"></Category>
+		<Category name="CSI_1_CSI-2[:slash]1x_CLK_P" checked="-1"></Category>
+		<Category name="CSI_1_CSI-2[:slash]1x_D0_N" checked="-1"></Category>
+		<Category name="CSI_1_CSI-2[:slash]1x_D0_P" checked="-1"></Category>
+		<Category name="CSI_1_CSI-2[:slash]2x_CLK_N" checked="-1"></Category>
+		<Category name="CSI_1_CSI-2[:slash]2x_CLK_P" checked="-1"></Category>
+		<Category name="CSI_1_CSI-2[:slash]2x_D0_N" checked="-1"></Category>
+		<Category name="CSI_1_CSI-2[:slash]2x_D0_P" checked="-1"></Category>
+		<Category name="CSI_1_CSI-2[:slash]2x_D1_N" checked="-1"></Category>
+		<Category name="CSI_1_CSI-2[:slash]2x_D1_P" checked="-1"></Category>
+		<Category name="CSI_1_CSI-2[:slash]4x_CLK_N" checked="-1"></Category>
+		<Category name="CSI_1_CSI-2[:slash]4x_CLK_P" checked="-1"></Category>
+		<Category name="CSI_1_CSI-2[:slash]4x_D0_N" checked="-1"></Category>
+		<Category name="CSI_1_CSI-2[:slash]4x_D0_P" checked="-1"></Category>
+		<Category name="CSI_1_CSI-2[:slash]4x_D1_N" checked="-1"></Category>
+		<Category name="CSI_1_CSI-2[:slash]4x_D1_P" checked="-1"></Category>
+		<Category name="CSI_1_CSI-2[:slash]4x_D2_N" checked="-1"></Category>
+		<Category name="CSI_1_CSI-2[:slash]4x_D2_P" checked="-1"></Category>
+		<Category name="CSI_1_CSI-2[:slash]4x_D3_N" checked="-1"></Category>
+		<Category name="CSI_1_CSI-2[:slash]4x_D3_P" checked="-1"></Category>
+		<Category name="CSI_1_I2C_SCL" checked="-1"></Category>
+		<Category name="CSI_1_I2C_SDA" checked="-1"></Category>
+		<Category name="CTRL_FORCE_OFF_MOCI#" checked="-1"></Category>
+		<Category name="CTRL_PWR_BTN_MICO#" checked="-1"></Category>
+		<Category name="CTRL_PWR_EN_MOCI" checked="-1"></Category>
+		<Category name="CTRL_RECOVERY_MICO#" checked="-1"></Category>
+		<Category name="CTRL_RESET_MICO#" checked="-1"></Category>
+		<Category name="CTRL_RESET_MOCI#" checked="-1"></Category>
+		<Category name="CTRL_SLEEP_MOCI#" checked="-1"></Category>
+		<Category name="CTRL_WAKE1_MICO#" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_AC97_BIT_CLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_AC97_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_AC97_SDATA_IN" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_AC97_SDATA_OUT" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_AC97_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_I2S_MASTER_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_I2S_MASTER_D_IN0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_I2S_MASTER_D_IN1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_I2S_MASTER_D_OUT0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_I2S_MASTER_D_OUT1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_I2S_MASTER_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_I2S_MASTER_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_I2S_SLAVE_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_I2S_SLAVE_D_IN0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_I2S_SLAVE_D_IN1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_I2S_SLAVE_D_OUT0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_I2S_SLAVE_D_OUT1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_I2S_SLAVE_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_I2S_SLAVE_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_SAI_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_SAI_RX_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_SAI_RX_DATA0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_SAI_RX_DATA1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_SAI_RX_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_SAI_TX_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_SAI_TX_DATA0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_SAI_TX_DATA1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_1_SAI_TX_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_AC97_BIT_CLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_AC97_BIT_CLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_AC97_BIT_CLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_AC97_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_AC97_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_AC97_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_AC97_SDATA_IN" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_AC97_SDATA_IN" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_AC97_SDATA_IN" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_AC97_SDATA_OUT" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_AC97_SDATA_OUT" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_AC97_SDATA_OUT" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_AC97_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_AC97_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_AC97_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_D_IN0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_D_IN0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_D_IN0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_D_IN1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_D_IN1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_D_IN1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_D_IN2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_D_IN2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_D_IN2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_D_IN3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_D_IN3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_D_IN3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_D_OUT0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_D_OUT0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_D_OUT0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_D_OUT1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_D_OUT1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_D_OUT1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_D_OUT2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_D_OUT2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_D_OUT3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_D_OUT3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_MASTER_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_D_IN3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_D_OUT0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_D_OUT0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_D_OUT0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_D_OUT1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_D_OUT1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_D_OUT1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_D_OUT2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_D_OUT2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_D_OUT3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_D_OUT3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_I2S_SLAVE_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_RX_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_RX_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_RX_DATA0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_RX_DATA0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_RX_DATA0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_RX_DATA1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_RX_DATA1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_RX_DATA1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_RX_DATA2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_RX_DATA2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_RX_DATA2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_RX_DATA3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_RX_DATA3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_RX_DATA3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_RX_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_RX_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_RX_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_TX_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_TX_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_TX_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_TX_DATA0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_TX_DATA0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_TX_DATA0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_TX_DATA1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_TX_DATA1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_TX_DATA1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_TX_DATA2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_TX_DATA2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_TX_DATA3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_TX_DATA3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_TX_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_TX_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_2_SAI_TX_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_AC97_BIT_CLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_AC97_BIT_CLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_AC97_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_AC97_SDATA_IN" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_AC97_SDATA_OUT" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_AC97_SDATA_OUT" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_AC97_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_AC97_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_AC97_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_AC97_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_AC97_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_D_IN0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_D_IN1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_D_IN2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_D_IN3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_D_IN7" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT4" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT4" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT4" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT5" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_D_OUT6" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_MASTER_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_SLAVE_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_SLAVE_D_IN0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_SLAVE_D_IN1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_SLAVE_D_IN2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_SLAVE_D_IN3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_SLAVE_D_IN7" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT4" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT4" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT4" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT5" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_SLAVE_D_OUT6" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_SLAVE_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_I2S_SLAVE_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_RX_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_RX_DATA0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_RX_DATA1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_RX_DATA2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_RX_DATA3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_RX_DATA7" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_RX_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_TX_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_TX_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_TX_DATA0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_TX_DATA0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_TX_DATA1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_TX_DATA1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_TX_DATA2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_TX_DATA2" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_TX_DATA3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_TX_DATA3" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_TX_DATA4" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_TX_DATA4" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_TX_DATA4" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_TX_DATA5" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_TX_DATA6" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_TX_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_TX_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_TX_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_TX_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_3_SAI_TX_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_AC97_BIT_CLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_AC97_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_AC97_SDATA_IN" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_AC97_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_I2S_MASTER_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_I2S_MASTER_D_IN0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_I2S_MASTER_D_IN1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_I2S_MASTER_D_OUT0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_I2S_MASTER_D_OUT1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_I2S_MASTER_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_I2S_MASTER_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_I2S_SLAVE_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_I2S_SLAVE_D_IN0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_I2S_SLAVE_D_IN1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_I2S_SLAVE_D_OUT0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_I2S_SLAVE_D_OUT1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_I2S_SLAVE_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_I2S_SLAVE_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_SAI_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_SAI_RX_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_SAI_RX_DATA0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_SAI_RX_DATA1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_SAI_RX_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_SAI_TX_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_SAI_TX_DATA0" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_SAI_TX_DATA1" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_4_SAI_TX_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_UNUSABLE_SAI_6_MCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_UNUSABLE_SAI_6_RX_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_UNUSABLE_SAI_6_RX_SYNC" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_UNUSABLE_SAI_6_TX_BCLK" checked="-1"></Category>
+		<Category name="DIGITAL_AUDIO_UNUSABLE_SAI_6_TX_SYNC" checked="-1"></Category>
+		<Category name="DSI_1_BKL_EN" checked="-1"></Category>
+		<Category name="DSI_1_DSI[:slash]1x_CLK_N" checked="-1"></Category>
+		<Category name="DSI_1_DSI[:slash]1x_CLK_P" checked="-1"></Category>
+		<Category name="DSI_1_DSI[:slash]1x_D0_N" checked="-1"></Category>
+		<Category name="DSI_1_DSI[:slash]1x_D0_P" checked="-1"></Category>
+		<Category name="DSI_1_DSI[:slash]2x_CLK_N" checked="-1"></Category>
+		<Category name="DSI_1_DSI[:slash]2x_CLK_P" checked="-1"></Category>
+		<Category name="DSI_1_DSI[:slash]2x_D0_N" checked="-1"></Category>
+		<Category name="DSI_1_DSI[:slash]2x_D0_P" checked="-1"></Category>
+		<Category name="DSI_1_DSI[:slash]2x_D1_N" checked="-1"></Category>
+		<Category name="DSI_1_DSI[:slash]2x_D1_P" checked="-1"></Category>
+		<Category name="DSI_1_DSI[:slash]4x_CLK_N" checked="-1"></Category>
+		<Category name="DSI_1_DSI[:slash]4x_CLK_P" checked="-1"></Category>
+		<Category name="DSI_1_DSI[:slash]4x_D0_N" checked="-1"></Category>
+		<Category name="DSI_1_DSI[:slash]4x_D0_P" checked="-1"></Category>
+		<Category name="DSI_1_DSI[:slash]4x_D1_N" checked="-1"></Category>
+		<Category name="DSI_1_DSI[:slash]4x_D1_P" checked="-1"></Category>
+		<Category name="DSI_1_DSI[:slash]4x_D2_N" checked="-1"></Category>
+		<Category name="DSI_1_DSI[:slash]4x_D2_P" checked="-1"></Category>
+		<Category name="DSI_1_DSI[:slash]4x_D3_N" checked="-1"></Category>
+		<Category name="DSI_1_DSI[:slash]4x_D3_P" checked="-1"></Category>
+		<Category name="DSI_1_I2C_SCL" checked="-1"></Category>
+		<Category name="DSI_1_I2C_SDA" checked="-1"></Category>
+		<Category name="DSI_1_INT#" checked="-1"></Category>
+		<Category name="DSI_1_PWM" checked="-1"></Category>
+		<Category name="DSI_1_PWM" checked="-1"></Category>
+		<Category name="DSI_1_PWM" checked="-1"></Category>
+		<Category name="ETH_1_1588_EVENT0_IN" checked="1"></Category>
+		<Category name="ETH_1_1588_EVENT0_OUT" checked="1"></Category>
+		<Category name="ETH_1_1588_EVENT1_IN" checked="1"></Category>
+		<Category name="ETH_1_1588_EVENT1_OUT" checked="1"></Category>
+		<Category name="ETH_1_LED_1" checked="1"></Category>
+		<Category name="ETH_1_LED_2" checked="1"></Category>
+		<Category name="ETH_1_MDI0_N" checked="1"></Category>
+		<Category name="ETH_1_MDI0_P" checked="1"></Category>
+		<Category name="ETH_1_MDI1_N" checked="1"></Category>
+		<Category name="ETH_1_MDI1_P" checked="1"></Category>
+		<Category name="ETH_1_MDI2_N" checked="1"></Category>
+		<Category name="ETH_1_MDI2_P" checked="1"></Category>
+		<Category name="ETH_1_MDI3_N" checked="1"></Category>
+		<Category name="ETH_1_MDI3_P" checked="1"></Category>
+		<Category name="GPI_SODIMM_100" checked="-1"></Category>
+		<Category name="GPI_SODIMM_102" checked="-1"></Category>
+		<Category name="GPI_SODIMM_104" checked="-1"></Category>
+		<Category name="GPI_SODIMM_106" checked="-1"></Category>
+		<Category name="GPI_SODIMM_108" checked="-1"></Category>
+		<Category name="GPI_SODIMM_112" checked="-1"></Category>
+		<Category name="GPI_SODIMM_114" checked="-1"></Category>
+		<Category name="GPI_SODIMM_116" checked="-1"></Category>
+		<Category name="GPI_SODIMM_118" checked="-1"></Category>
+		<Category name="GPI_SODIMM_12" checked="-1"></Category>
+		<Category name="GPI_SODIMM_120" checked="-1"></Category>
+		<Category name="GPI_SODIMM_129" checked="-1"></Category>
+		<Category name="GPI_SODIMM_131" checked="-1"></Category>
+		<Category name="GPI_SODIMM_133" checked="-1"></Category>
+		<Category name="GPI_SODIMM_135" checked="-1"></Category>
+		<Category name="GPI_SODIMM_137" checked="-1"></Category>
+		<Category name="GPI_SODIMM_139" checked="-1"></Category>
+		<Category name="GPI_SODIMM_14" checked="-1"></Category>
+		<Category name="GPI_SODIMM_141" checked="-1"></Category>
+		<Category name="GPI_SODIMM_143" checked="-1"></Category>
+		<Category name="GPI_SODIMM_147" checked="-1"></Category>
+		<Category name="GPI_SODIMM_149" checked="-1"></Category>
+		<Category name="GPI_SODIMM_15" checked="-1"></Category>
+		<Category name="GPI_SODIMM_151" checked="-1"></Category>
+		<Category name="GPI_SODIMM_153" checked="-1"></Category>
+		<Category name="GPI_SODIMM_155" checked="-1"></Category>
+		<Category name="GPI_SODIMM_157" checked="-1"></Category>
+		<Category name="GPI_SODIMM_16" checked="-1"></Category>
+		<Category name="GPI_SODIMM_17" checked="-1"></Category>
+		<Category name="GPI_SODIMM_174" checked="-1"></Category>
+		<Category name="GPI_SODIMM_185" checked="-1"></Category>
+		<Category name="GPI_SODIMM_187" checked="-1"></Category>
+		<Category name="GPI_SODIMM_19" checked="-1"></Category>
+		<Category name="GPI_SODIMM_196" checked="-1"></Category>
+		<Category name="GPI_SODIMM_198" checked="-1"></Category>
+		<Category name="GPI_SODIMM_200" checked="-1"></Category>
+		<Category name="GPI_SODIMM_202" checked="-1"></Category>
+		<Category name="GPI_SODIMM_206" checked="-1"></Category>
+		<Category name="GPI_SODIMM_208" checked="-1"></Category>
+		<Category name="GPI_SODIMM_21" checked="-1"></Category>
+		<Category name="GPI_SODIMM_210" checked="-1"></Category>
+		<Category name="GPI_SODIMM_212" checked="-1"></Category>
+		<Category name="GPI_SODIMM_216" checked="-1"></Category>
+		<Category name="GPI_SODIMM_218" checked="-1"></Category>
+		<Category name="GPI_SODIMM_220" checked="-1"></Category>
+		<Category name="GPI_SODIMM_222" checked="-1"></Category>
+		<Category name="GPI_SODIMM_244" checked="-1"></Category>
+		<Category name="GPI_SODIMM_252" checked="-1"></Category>
+		<Category name="GPI_SODIMM_256" checked="-1"></Category>
+		<Category name="GPI_SODIMM_30" checked="-1"></Category>
+		<Category name="GPI_SODIMM_32" checked="-1"></Category>
+		<Category name="GPI_SODIMM_34" checked="-1"></Category>
+		<Category name="GPI_SODIMM_36" checked="-1"></Category>
+		<Category name="GPI_SODIMM_38" checked="-1"></Category>
+		<Category name="GPI_SODIMM_42" checked="-1"></Category>
+		<Category name="GPI_SODIMM_44" checked="-1"></Category>
+		<Category name="GPI_SODIMM_46" checked="-1"></Category>
+		<Category name="GPI_SODIMM_48" checked="-1"></Category>
+		<Category name="GPI_SODIMM_52" checked="-1"></Category>
+		<Category name="GPI_SODIMM_53" checked="-1"></Category>
+		<Category name="GPI_SODIMM_54" checked="-1"></Category>
+		<Category name="GPI_SODIMM_55" checked="-1"></Category>
+		<Category name="GPI_SODIMM_56" checked="-1"></Category>
+		<Category name="GPI_SODIMM_58" checked="-1"></Category>
+		<Category name="GPI_SODIMM_60" checked="-1"></Category>
+		<Category name="GPI_SODIMM_62" checked="-1"></Category>
+		<Category name="GPI_SODIMM_64" checked="-1"></Category>
+		<Category name="GPI_SODIMM_66" checked="-1"></Category>
+		<Category name="GPI_SODIMM_70" checked="-1"></Category>
+		<Category name="GPI_SODIMM_72" checked="-1"></Category>
+		<Category name="GPI_SODIMM_74" checked="-1"></Category>
+		<Category name="GPI_SODIMM_76" checked="-1"></Category>
+		<Category name="GPI_SODIMM_78" checked="-1"></Category>
+		<Category name="GPI_SODIMM_80" checked="-1"></Category>
+		<Category name="GPI_SODIMM_82" checked="-1"></Category>
+		<Category name="GPI_SODIMM_84" checked="-1"></Category>
+		<Category name="GPI_SODIMM_88" checked="-1"></Category>
+		<Category name="GPI_SODIMM_90" checked="-1"></Category>
+		<Category name="GPI_SODIMM_91" checked="-1"></Category>
+		<Category name="GPI_SODIMM_92" checked="-1"></Category>
+		<Category name="GPI_SODIMM_93" checked="-1"></Category>
+		<Category name="GPI_SODIMM_94" checked="-1"></Category>
+		<Category name="GPI_SODIMM_95" checked="-1"></Category>
+		<Category name="GPI_SODIMM_96" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_100" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_102" checked="1"></Category>
+		<Category name="GPIO_SODIMM_104" checked="1"></Category>
+		<Category name="GPIO_SODIMM_106" checked="1"></Category>
+		<Category name="GPIO_SODIMM_108" checked="1"></Category>
+		<Category name="GPIO_SODIMM_112" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_114" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_116" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_118" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_12" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_120" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_129" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_131" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_133" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_135" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_137" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_139" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_14" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_141" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_143" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_147" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_149" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_15" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_151" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_153" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_155" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_157" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_16" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_174" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_17[:slash]GPIO_9_DSI" checked="1"></Category>
+		<Category name="GPIO_SODIMM_185" checked="1"></Category>
+		<Category name="GPIO_SODIMM_187" checked="1"></Category>
+		<Category name="GPIO_SODIMM_19" checked="1"></Category>
+		<Category name="GPIO_SODIMM_196" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_198" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_200" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_202" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_206[:slash]GPIO_1" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_208[:slash]GPIO_2" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_210[:slash]GPIO_3" checked="1"></Category>
+		<Category name="GPIO_SODIMM_212[:slash]GPIO_4" checked="1"></Category>
+		<Category name="GPIO_SODIMM_216[:slash]GPIO_5_CSI" checked="1"></Category>
+		<Category name="GPIO_SODIMM_218[:slash]GPIO_6_CSI" checked="1"></Category>
+		<Category name="GPIO_SODIMM_21[:slash]GPIO_10_DSI" checked="1"></Category>
+		<Category name="GPIO_SODIMM_220[:slash]GPIO_7_CSI" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_222[:slash]GPIO_8_CSI" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_244" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_252" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_256" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_30" checked="1"></Category>
+		<Category name="GPIO_SODIMM_32" checked="1"></Category>
+		<Category name="GPIO_SODIMM_34" checked="1"></Category>
+		<Category name="GPIO_SODIMM_36" checked="1"></Category>
+		<Category name="GPIO_SODIMM_38" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_42" checked="1"></Category>
+		<Category name="GPIO_SODIMM_44" checked="1"></Category>
+		<Category name="GPIO_SODIMM_46" checked="1"></Category>
+		<Category name="GPIO_SODIMM_48" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_52" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_53" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_54" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_55" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_56" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_58" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_60" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_62" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_64" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_66" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_70" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_72" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_74" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_76" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_78" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_80" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_82" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_84" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_88" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_90" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_91" checked="1"></Category>
+		<Category name="GPIO_SODIMM_92" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_93" checked="1"></Category>
+		<Category name="GPIO_SODIMM_94" checked="1"></Category>
+		<Category name="GPIO_SODIMM_95" checked="1"></Category>
+		<Category name="GPIO_SODIMM_96" checked="1"></Category>
+		<Category name="GPO_SODIMM_100" checked="-1"></Category>
+		<Category name="GPO_SODIMM_102" checked="-1"></Category>
+		<Category name="GPO_SODIMM_104" checked="-1"></Category>
+		<Category name="GPO_SODIMM_106" checked="-1"></Category>
+		<Category name="GPO_SODIMM_108" checked="-1"></Category>
+		<Category name="GPO_SODIMM_112" checked="-1"></Category>
+		<Category name="GPO_SODIMM_114" checked="-1"></Category>
+		<Category name="GPO_SODIMM_116" checked="-1"></Category>
+		<Category name="GPO_SODIMM_118" checked="-1"></Category>
+		<Category name="GPO_SODIMM_12" checked="-1"></Category>
+		<Category name="GPO_SODIMM_120" checked="-1"></Category>
+		<Category name="GPO_SODIMM_129" checked="-1"></Category>
+		<Category name="GPO_SODIMM_131" checked="-1"></Category>
+		<Category name="GPO_SODIMM_133" checked="-1"></Category>
+		<Category name="GPO_SODIMM_135" checked="-1"></Category>
+		<Category name="GPO_SODIMM_137" checked="-1"></Category>
+		<Category name="GPO_SODIMM_139" checked="-1"></Category>
+		<Category name="GPO_SODIMM_14" checked="-1"></Category>
+		<Category name="GPO_SODIMM_141" checked="-1"></Category>
+		<Category name="GPO_SODIMM_143" checked="-1"></Category>
+		<Category name="GPO_SODIMM_147" checked="-1"></Category>
+		<Category name="GPO_SODIMM_149" checked="-1"></Category>
+		<Category name="GPO_SODIMM_15" checked="-1"></Category>
+		<Category name="GPO_SODIMM_151" checked="-1"></Category>
+		<Category name="GPO_SODIMM_153" checked="-1"></Category>
+		<Category name="GPO_SODIMM_155" checked="-1"></Category>
+		<Category name="GPO_SODIMM_157" checked="-1"></Category>
+		<Category name="GPO_SODIMM_16" checked="-1"></Category>
+		<Category name="GPO_SODIMM_17" checked="-1"></Category>
+		<Category name="GPO_SODIMM_174" checked="-1"></Category>
+		<Category name="GPO_SODIMM_185" checked="-1"></Category>
+		<Category name="GPO_SODIMM_187" checked="-1"></Category>
+		<Category name="GPO_SODIMM_19" checked="-1"></Category>
+		<Category name="GPO_SODIMM_196" checked="-1"></Category>
+		<Category name="GPO_SODIMM_198" checked="-1"></Category>
+		<Category name="GPO_SODIMM_200" checked="-1"></Category>
+		<Category name="GPO_SODIMM_202" checked="-1"></Category>
+		<Category name="GPO_SODIMM_206" checked="-1"></Category>
+		<Category name="GPO_SODIMM_208" checked="-1"></Category>
+		<Category name="GPO_SODIMM_21" checked="-1"></Category>
+		<Category name="GPO_SODIMM_210" checked="-1"></Category>
+		<Category name="GPO_SODIMM_212" checked="-1"></Category>
+		<Category name="GPO_SODIMM_216" checked="-1"></Category>
+		<Category name="GPO_SODIMM_218" checked="-1"></Category>
+		<Category name="GPO_SODIMM_220" checked="-1"></Category>
+		<Category name="GPO_SODIMM_222" checked="-1"></Category>
+		<Category name="GPO_SODIMM_244" checked="-1"></Category>
+		<Category name="GPO_SODIMM_252" checked="-1"></Category>
+		<Category name="GPO_SODIMM_256" checked="-1"></Category>
+		<Category name="GPO_SODIMM_30" checked="-1"></Category>
+		<Category name="GPO_SODIMM_32" checked="-1"></Category>
+		<Category name="GPO_SODIMM_34" checked="-1"></Category>
+		<Category name="GPO_SODIMM_36" checked="-1"></Category>
+		<Category name="GPO_SODIMM_38" checked="-1"></Category>
+		<Category name="GPO_SODIMM_42" checked="-1"></Category>
+		<Category name="GPO_SODIMM_44" checked="-1"></Category>
+		<Category name="GPO_SODIMM_46" checked="-1"></Category>
+		<Category name="GPO_SODIMM_48" checked="-1"></Category>
+		<Category name="GPO_SODIMM_52" checked="-1"></Category>
+		<Category name="GPO_SODIMM_53" checked="-1"></Category>
+		<Category name="GPO_SODIMM_54" checked="-1"></Category>
+		<Category name="GPO_SODIMM_55" checked="-1"></Category>
+		<Category name="GPO_SODIMM_56" checked="-1"></Category>
+		<Category name="GPO_SODIMM_58" checked="-1"></Category>
+		<Category name="GPO_SODIMM_60" checked="-1"></Category>
+		<Category name="GPO_SODIMM_62" checked="-1"></Category>
+		<Category name="GPO_SODIMM_64" checked="-1"></Category>
+		<Category name="GPO_SODIMM_66" checked="-1"></Category>
+		<Category name="GPO_SODIMM_70" checked="-1"></Category>
+		<Category name="GPO_SODIMM_72" checked="-1"></Category>
+		<Category name="GPO_SODIMM_74" checked="-1"></Category>
+		<Category name="GPO_SODIMM_76" checked="-1"></Category>
+		<Category name="GPO_SODIMM_78" checked="-1"></Category>
+		<Category name="GPO_SODIMM_80" checked="-1"></Category>
+		<Category name="GPO_SODIMM_82" checked="-1"></Category>
+		<Category name="GPO_SODIMM_84" checked="-1"></Category>
+		<Category name="GPO_SODIMM_88" checked="-1"></Category>
+		<Category name="GPO_SODIMM_90" checked="-1"></Category>
+		<Category name="GPO_SODIMM_91" checked="-1"></Category>
+		<Category name="GPO_SODIMM_92" checked="-1"></Category>
+		<Category name="GPO_SODIMM_93" checked="-1"></Category>
+		<Category name="GPO_SODIMM_94" checked="-1"></Category>
+		<Category name="GPO_SODIMM_95" checked="-1"></Category>
+		<Category name="GPO_SODIMM_96" checked="-1"></Category>
+		<Category name="I2C_1_SCL" checked="1"></Category>
+		<Category name="I2C_1_SDA" checked="1"></Category>
+		<Category name="I2C_2_DSI_SCL" checked="-1"></Category>
+		<Category name="I2C_2_DSI_SDA" checked="-1"></Category>
+		<Category name="I2C_4_CSI_SCL" checked="-1"></Category>
+		<Category name="I2C_4_CSI_SDA" checked="-1"></Category>
+		<Category name="JTAG_1_SJC_ACTIVE" checked="-1"></Category>
+		<Category name="JTAG_1_SJC_FAIL" checked="-1"></Category>
+		<Category name="JTAG_1_SJC_GPUCR3_REG14" checked="-1"></Category>
+		<Category name="JTAG_1_TCK" checked="-1"></Category>
+		<Category name="JTAG_1_TDI" checked="-1"></Category>
+		<Category name="JTAG_1_TDO" checked="-1"></Category>
+		<Category name="JTAG_1_TMS" checked="-1"></Category>
+		<Category name="JTAG_1_TRST#" checked="-1"></Category>
+		<Category name="JTAG_1_VREF" checked="-1"></Category>
+		<Category name="MISC_BDM_MICROPHONE_BIT_STREAM0" checked="-1"></Category>
+		<Category name="MISC_BDM_MICROPHONE_BIT_STREAM0" checked="-1"></Category>
+		<Category name="MISC_BDM_MICROPHONE_BIT_STREAM1" checked="-1"></Category>
+		<Category name="MISC_BDM_MICROPHONE_BIT_STREAM1" checked="-1"></Category>
+		<Category name="MISC_BDM_MICROPHONE_BIT_STREAM2" checked="-1"></Category>
+		<Category name="MISC_BDM_MICROPHONE_BIT_STREAM2" checked="-1"></Category>
+		<Category name="MISC_BDM_MICROPHONE_BIT_STREAM3" checked="-1"></Category>
+		<Category name="MISC_BDM_MICROPHONE_BIT_STREAM3" checked="-1"></Category>
+		<Category name="MISC_BDM_MICROPHONE_CLK" checked="-1"></Category>
+		<Category name="MISC_CSU_ALARM_AUT0" checked="-1"></Category>
+		<Category name="MISC_CSU_ALARM_AUT1" checked="-1"></Category>
+		<Category name="MISC_CSU_ALARM_AUT2" checked="-1"></Category>
+		<Category name="MISC_CSU_INT_DEB" checked="-1"></Category>
+		<Category name="MISC_NAND_1_ALE" checked="-1"></Category>
+		<Category name="MISC_NAND_1_CE0_B" checked="-1"></Category>
+		<Category name="MISC_NAND_1_CE1_B" checked="-1"></Category>
+		<Category name="MISC_NAND_1_CE2_B" checked="-1"></Category>
+		<Category name="MISC_NAND_1_CE3_B" checked="-1"></Category>
+		<Category name="MISC_NAND_1_CLE" checked="-1"></Category>
+		<Category name="MISC_NAND_1_DATA00" checked="-1"></Category>
+		<Category name="MISC_NAND_1_DATA01" checked="-1"></Category>
+		<Category name="MISC_NAND_1_DATA02" checked="-1"></Category>
+		<Category name="MISC_NAND_1_DATA03" checked="-1"></Category>
+		<Category name="MISC_NAND_1_DQS" checked="-1"></Category>
+		<Category name="MISC_NAND_1_READY" checked="-1"></Category>
+		<Category name="MISC_NAND_1_RE_B" checked="-1"></Category>
+		<Category name="MISC_OBSERVE_MUX_OUT0" checked="-1"></Category>
+		<Category name="MISC_OBSERVE_MUX_OUT1" checked="-1"></Category>
+		<Category name="MISC_OBSERVE_MUX_OUT2" checked="-1"></Category>
+		<Category name="MISC_OBSERVE_MUX_OUT3" checked="-1"></Category>
+		<Category name="MISC_OBSERVE_MUX_OUT4" checked="-1"></Category>
+		<Category name="MISC_RANDOM_GENERATOR_OSC_OBS" checked="-1"></Category>
+		<Category name="MISC_RTC_IRQ#" checked="-1"></Category>
+		<Category name="MISC_SDMA2_EXT_EVENT0" checked="-1"></Category>
+		<Category name="MISC_SDMA2_EXT_EVENT1" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HADDR0" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HADDR1" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HADDR10" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HADDR11" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HADDR15" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HADDR16" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HADDR17" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HADDR18" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HADDR19" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HADDR2" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HADDR20" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HADDR24" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HADDR25" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HADDR26" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HADDR27" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HADDR28" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HADDR29" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HADDR3" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HADDR30" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HADDR31" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HADDR4" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HADDR5" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HBURST1" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HPROT0" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HPROT1" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HPROT2" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HPROT3" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HREADYOUT" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HRESP" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HSIZE0" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HSIZE1" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HSIZE2" checked="-1"></Category>
+		<Category name="MISC_SIM_M_HWRITE" checked="-1"></Category>
+		<Category name="MISC_SRC_EARLY_RESET" checked="-1"></Category>
+		<Category name="MISC_SRC_OBSERVE0" checked="-1"></Category>
+		<Category name="MISC_SRC_OBSERVE1" checked="-1"></Category>
+		<Category name="MISC_SRC_OBSERVE2" checked="-1"></Category>
+		<Category name="MISC_SRC_OUT0" checked="-1"></Category>
+		<Category name="MISC_SRC_OUT1" checked="-1"></Category>
+		<Category name="MISC_SRC_OUT2" checked="-1"></Category>
+		<Category name="MISC_SRC_PMIC_READY" checked="-1"></Category>
+		<Category name="MISC_SRC_STOP" checked="-1"></Category>
+		<Category name="MISC_SRC_STOP" checked="-1"></Category>
+		<Category name="MISC_SRC_SYSTEM_RST" checked="-1"></Category>
+		<Category name="MISC_SRC_SYSTEM_RST" checked="-1"></Category>
+		<Category name="MISC_SRC_SYSTEM_RST" checked="-1"></Category>
+		<Category name="MISC_SRC_SYSTEM_RST" checked="-1"></Category>
+		<Category name="MISC_SRC_SYSTEM_RST" checked="-1"></Category>
+		<Category name="MISC_SRC_SYSTEM_RST" checked="-1"></Category>
+		<Category name="MISC_SRC_SYSTEM_RST" checked="-1"></Category>
+		<Category name="MISC_SRC_SYSTEM_RST" checked="-1"></Category>
+		<Category name="MISC_SRC_SYSTEM_RST" checked="-1"></Category>
+		<Category name="MISC_SRC_SYSTEM_RST" checked="-1"></Category>
+		<Category name="MISC_SRC_SYSTEM_RST" checked="-1"></Category>
+		<Category name="MISC_SRC_WAIT" checked="-1"></Category>
+		<Category name="MISC_SRC_WAIT" checked="-1"></Category>
+		<Category name="MISC_STRAPPING_iMX8MM_BOOT_CFG00" checked="-1"></Category>
+		<Category name="MISC_STRAPPING_iMX8MM_BOOT_CFG01" checked="-1"></Category>
+		<Category name="MISC_STRAPPING_iMX8MM_BOOT_CFG02" checked="-1"></Category>
+		<Category name="MISC_STRAPPING_iMX8MM_BOOT_CFG03" checked="-1"></Category>
+		<Category name="MISC_STRAPPING_iMX8MM_BOOT_CFG07" checked="-1"></Category>
+		<Category name="MISC_STRAPPING_iMX8MM_BOOT_CFG08" checked="-1"></Category>
+		<Category name="MISC_STRAPPING_iMX8MM_BOOT_CFG09" checked="-1"></Category>
+		<Category name="MISC_STRAPPING_iMX8MM_BOOT_CFG10" checked="-1"></Category>
+		<Category name="MISC_STRAPPING_iMX8MM_BOOT_CFG11" checked="-1"></Category>
+		<Category name="MISC_STRAPPING_iMX8MM_BOOT_CFG12" checked="-1"></Category>
+		<Category name="MISC_STRAPPING_iMX8MM_BOOT_CFG14" checked="-1"></Category>
+		<Category name="MISC_TPSMP_CLK" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA0" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA1" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA10" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA11" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA12" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA13" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA14" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA15" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA18" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA19" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA2" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA20" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA21" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA22" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA23" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA28" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA29" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA3" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA30" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA31" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA4" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA5" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA6" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA7" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA8" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA9" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HDATA_DIR" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HTRANS0" checked="-1"></Category>
+		<Category name="MISC_TPSMP_HTRANS1" checked="-1"></Category>
+		<Category name="MISC_UNUSABLE_DEBUG_TRACE_CLK" checked="-1"></Category>
+		<Category name="MISC_UNUSABLE_DEBUG_TRACE_CTL" checked="-1"></Category>
+		<Category name="MISC_UNUSABLE_DEBUG_TRACE_D00" checked="-1"></Category>
+		<Category name="MISC_UNUSABLE_DEBUG_TRACE_D01" checked="-1"></Category>
+		<Category name="MISC_UNUSABLE_DEBUG_TRACE_D02" checked="-1"></Category>
+		<Category name="MISC_UNUSABLE_DEBUG_TRACE_D03" checked="-1"></Category>
+		<Category name="MISC_UNUSABLE_DEBUG_TRACE_D07" checked="-1"></Category>
+		<Category name="MISC_UNUSABLE_DEBUG_TRACE_D08" checked="-1"></Category>
+		<Category name="MISC_UNUSABLE_DEBUG_TRACE_D09" checked="-1"></Category>
+		<Category name="MISC_UNUSABLE_DEBUG_TRACE_D10" checked="-1"></Category>
+		<Category name="MISC_UNUSABLE_DEBUG_TRACE_D11" checked="-1"></Category>
+		<Category name="MISC_UNUSABLE_DEBUG_TRACE_D12" checked="-1"></Category>
+		<Category name="MISC_UNUSABLE_DEBUG_TRACE_D14" checked="-1"></Category>
+		<Category name="MISC_UNUSABLE_DEBUG_TRACE_EVENTI" checked="-1"></Category>
+		<Category name="MISC_UNUSABLE_DEBUG_TRACE_EVENTO" checked="-1"></Category>
+		<Category name="PCIE_1_RESET# " checked="1"></Category>
+		<Category name="PCIE_1_x1_CLKREQ#" checked="1"></Category>
+		<Category name="PCIE_1_x1_CLKREQ#" checked="-1"></Category>
+		<Category name="PCIE_1_x1_CLK_N" checked="1"></Category>
+		<Category name="PCIE_1_x1_CLK_P" checked="1"></Category>
+		<Category name="PCIE_1_x1_L0_RX_N" checked="1"></Category>
+		<Category name="PCIE_1_x1_L0_RX_P" checked="1"></Category>
+		<Category name="PCIE_1_x1_L0_TX_N" checked="1"></Category>
+		<Category name="PCIE_1_x1_L0_TX_P" checked="1"></Category>
+		<Category name="PWM_1" checked="-1"></Category>
+		<Category name="PWM_1" checked="-1"></Category>
+		<Category name="PWM_1" checked="-1"></Category>
+		<Category name="PWM_2" checked="-1"></Category>
+		<Category name="PWM_2" checked="-1"></Category>
+		<Category name="PWM_2" checked="-1"></Category>
+		<Category name="PWM_3_DSI" checked="-1"></Category>
+		<Category name="PWM_3_DSI" checked="-1"></Category>
+		<Category name="PWM_3_DSI" checked="-1"></Category>
+		<Category name="PWM_4" checked="-1"></Category>
+		<Category name="PWM_4" checked="-1"></Category>
+		<Category name="PWM_4" checked="-1"></Category>
+		<Category name="PWR_1V8_MOCI" checked="-1"></Category>
+		<Category name="QSPI_1_1x_CLK" checked="-1"></Category>
+		<Category name="QSPI_1_1x_CS#" checked="-1"></Category>
+		<Category name="QSPI_1_1x_CS2#" checked="-1"></Category>
+		<Category name="QSPI_1_1x_DQS" checked="-1"></Category>
+		<Category name="QSPI_1_1x_MISO" checked="-1"></Category>
+		<Category name="QSPI_1_1x_MOSI" checked="-1"></Category>
+		<Category name="QSPI_1_1x_TEST_TRIG" checked="-1"></Category>
+		<Category name="QSPI_1_2x_CLK" checked="-1"></Category>
+		<Category name="QSPI_1_2x_CS#" checked="-1"></Category>
+		<Category name="QSPI_1_2x_CS2#" checked="-1"></Category>
+		<Category name="QSPI_1_2x_DQS" checked="-1"></Category>
+		<Category name="QSPI_1_2x_IO0" checked="-1"></Category>
+		<Category name="QSPI_1_2x_IO1" checked="-1"></Category>
+		<Category name="QSPI_1_2x_TEST_TRIG" checked="-1"></Category>
+		<Category name="QSPI_1_4x_CLK" checked="-1"></Category>
+		<Category name="QSPI_1_4x_CS#" checked="-1"></Category>
+		<Category name="QSPI_1_4x_CS2#" checked="-1"></Category>
+		<Category name="QSPI_1_4x_DQS" checked="-1"></Category>
+		<Category name="QSPI_1_4x_IO0" checked="-1"></Category>
+		<Category name="QSPI_1_4x_IO1" checked="-1"></Category>
+		<Category name="QSPI_1_4x_IO2" checked="-1"></Category>
+		<Category name="QSPI_1_4x_IO3" checked="-1"></Category>
+		<Category name="QSPI_1_4x_TEST_TRIG" checked="-1"></Category>
+		<Category name="QSPI_UNUSABLE_B_DQS" checked="-1"></Category>
+		<Category name="QSPI_UNUSABLE_B_SCLK" checked="-1"></Category>
+		<Category name="QSPI_UNUSABLE_B_SS0_B" checked="-1"></Category>
+		<Category name="QSPI_UNUSABLE_B_SS1_B" checked="-1"></Category>
+		<Category name="SD_1_CD#" checked="-1"></Category>
+		<Category name="SD_1_CLK" checked="-1"></Category>
+		<Category name="SD_1_CMD" checked="-1"></Category>
+		<Category name="SD_1_D0" checked="-1"></Category>
+		<Category name="SD_1_D1" checked="-1"></Category>
+		<Category name="SD_1_D2" checked="-1"></Category>
+		<Category name="SD_1_D3" checked="-1"></Category>
+		<Category name="SD_1_PWR_EN" checked="-1"></Category>
+		<Category name="SD_1_RESET#" checked="-1"></Category>
+		<Category name="SD_UNUSABLE_2_CD#" checked="-1"></Category>
+		<Category name="SD_UNUSABLE_2_CD#" checked="-1"></Category>
+		<Category name="SD_UNUSABLE_2_CD#" checked="-1"></Category>
+		<Category name="SD_UNUSABLE_2_D4" checked="-1"></Category>
+		<Category name="SD_UNUSABLE_2_D5" checked="-1"></Category>
+		<Category name="SD_UNUSABLE_2_D6" checked="-1"></Category>
+		<Category name="SD_UNUSABLE_2_D7" checked="-1"></Category>
+		<Category name="SD_UNUSABLE_2_RESET#" checked="-1"></Category>
+		<Category name="SD_UNUSABLE_2_RESET#" checked="-1"></Category>
+		<Category name="SD_UNUSABLE_2_STROBE" checked="-1"></Category>
+		<Category name="SD_UNUSABLE_2_VSELECT" checked="-1"></Category>
+		<Category name="SD_UNUSABLE_2_VSELECT" checked="-1"></Category>
+		<Category name="SD_UNUSABLE_2_WP" checked="-1"></Category>
+		<Category name="SD_UNUSABLE_2_WP" checked="-1"></Category>
+		<Category name="SD_UNUSABLE_2_WP" checked="-1"></Category>
+		<Category name="SPDIF_1_EXT_CLK" checked="-1"></Category>
+		<Category name="SPDIF_1_IN" checked="-1"></Category>
+		<Category name="SPDIF_1_OUT" checked="-1"></Category>
+		<Category name="SPI_1_MASTER_CS0" checked="-1"></Category>
+		<Category name="SPI_1_MASTER_MISO" checked="-1"></Category>
+		<Category name="SPI_1_MASTER_MOSI" checked="-1"></Category>
+		<Category name="SPI_1_MASTER_SCLK" checked="-1"></Category>
+		<Category name="SPI_1_SLAVE_CS" checked="-1"></Category>
+		<Category name="SPI_1_SLAVE_MISO" checked="-1"></Category>
+		<Category name="SPI_1_SLAVE_MOSI" checked="-1"></Category>
+		<Category name="SPI_1_SLAVE_SCLK" checked="-1"></Category>
+		<Category name="SPI_2_MASTER_CS0" checked="-1"></Category>
+		<Category name="SPI_2_MASTER_MISO" checked="-1"></Category>
+		<Category name="SPI_2_MASTER_MOSI" checked="-1"></Category>
+		<Category name="SPI_2_MASTER_SCLK" checked="-1"></Category>
+		<Category name="SPI_2_SLAVE_CS" checked="-1"></Category>
+		<Category name="SPI_2_SLAVE_MISO" checked="-1"></Category>
+		<Category name="SPI_2_SLAVE_MOSI" checked="-1"></Category>
+		<Category name="SPI_2_SLAVE_SCLK" checked="-1"></Category>
+		<Category name="SPI_UNUSABLE_SPI_3_TEST_TRIG" checked="-1"></Category>
+		<Category name="TIMER_1_CAPTURE_1" checked="-1"></Category>
+		<Category name="TIMER_1_CAPTURE_2" checked="-1"></Category>
+		<Category name="TIMER_1_CLK" checked="-1"></Category>
+		<Category name="TIMER_1_COMPARE_1" checked="-1"></Category>
+		<Category name="TIMER_1_COMPARE_2" checked="-1"></Category>
+		<Category name="TIMER_1_COMPARE_3" checked="-1"></Category>
+		<Category name="TIMER_2_CLK" checked="-1"></Category>
+		<Category name="TIMER_3_CLK" checked="-1"></Category>
+		<Category name="UART_1_CTS" checked="-1"></Category>
+		<Category name="UART_1_CTS" checked="-1"></Category>
+		<Category name="UART_1_RTS" checked="-1"></Category>
+		<Category name="UART_1_RTS" checked="-1"></Category>
+		<Category name="UART_1_RXD" checked="1"></Category>
+		<Category name="UART_1_TXD" checked="1"></Category>
+		<Category name="UART_2_CTS" checked="-1"></Category>
+		<Category name="UART_2_RTS" checked="-1"></Category>
+		<Category name="UART_2_RXD" checked="1"></Category>
+		<Category name="UART_2_RXD" checked="-1"></Category>
+		<Category name="UART_2_TXD" checked="1"></Category>
+		<Category name="UART_2_TXD" checked="-1"></Category>
+		<Category name="UART_3_CTS" checked="-1"></Category>
+		<Category name="UART_3_CTS" checked="-1"></Category>
+		<Category name="UART_3_RTS" checked="-1"></Category>
+		<Category name="UART_3_RTS" checked="-1"></Category>
+		<Category name="UART_3_RXD" checked="1"></Category>
+		<Category name="UART_3_TXD" checked="1"></Category>
+		<Category name="UART_4_CTS" checked="1"></Category>
+		<Category name="UART_4_RTS" checked="1"></Category>
+		<Category name="UART_4_RXD" checked="-1"></Category>
+		<Category name="UART_4_RXD" checked="1"></Category>
+		<Category name="UART_4_TXD" checked="-1"></Category>
+		<Category name="UART_4_TXD" checked="1"></Category>
+		<Category name="USB_1_D_N" checked="1"></Category>
+		<Category name="USB_1_D_P" checked="1"></Category>
+		<Category name="USB_1_EN" checked="-1"></Category>
+		<Category name="USB_1_ID" checked="1"></Category>
+		<Category name="USB_1_OC#" checked="-1"></Category>
+		<Category name="USB_1_VBUS" checked="1"></Category>
+		<Category name="USB_2_D_N" checked="1"></Category>
+		<Category name="USB_2_D_P" checked="1"></Category>
+		<Category name="USB_2_EN" checked="-1"></Category>
+		<Category name="USB_2_ID" checked="-1"></Category>
+		<Category name="USB_2_OC#" checked="-1"></Category>
+		<Category name="Wi-Fi_CONFIG_0" checked="-1"></Category>
+		<Category name="Wi-Fi_LED_BT" checked="-1"></Category>
+		<Category name="Wi-Fi_LED_WLAN" checked="-1"></Category>
+		<Category name="Wi-Fi_LTE_COEX_IN" checked="-1"></Category>
+		<Category name="Wi-Fi_LTE_COEX_OUT" checked="-1"></Category>
+		<Category name="Wi-Fi_UART_CTS" checked="-1"></Category>
+		<Category name="Wi-Fi_UART_RTS" checked="-1"></Category>
+		<Category name="Wi-Fi_UART_RXD" checked="-1"></Category>
+		<Category name="Wi-Fi_UART_TXD" checked="-1"></Category>
+		<Category name="Wi-Fi_WAKE_BT_WAKE_HOST" checked="-1"></Category>
+		<Category name="Wi-Fi_WAKE_Wi-Fi_WAKE_HOST" checked="-1"></Category>
+		<Category name="Wi-Fi_WIRELESS_DISABLE" checked="-1"></Category>
+	</NodeInfo>
+</Settings>

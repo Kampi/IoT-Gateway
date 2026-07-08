@@ -1,12 +1,12 @@
 SUMMARY = "LoRa Packet Forwarder for SX1302/SX1303 concentrators (USB and SPI)"
 HOMEPAGE = "https://github.com/Lora-net/sx1302_hal"
-
 LICENSE = "BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE.TXT;md5=d2119120bd616e725f4580070bd9ee19"
 
+SRCREV = "4b42025d1751e04632c0b04160e0d29dbbb222a5"
+
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:${THISDIR}:"
 
-SRCREV = "4b42025d1751e04632c0b04160e0d29dbbb222a5"
 SRC_URI = " \
     git://github.com/Lora-net/sx1302_hal.git;protocol=https;branch=master \
     file://global_conf.json.RAK-USB-EU868 \
@@ -18,12 +18,15 @@ SRC_URI = " \
 
 S = "${WORKDIR}/git"
 
+inherit systemd
+
 LORA_INSTALL_DIR = "/opt/lora-packet-forwarder"
 
 # @USER_CONFIG: Address of the ChirpStack Gateway Bridge (Semtech UDP server)
 LORA_SERVER_ADDRESS ?= "localhost"
 
-inherit systemd
+SYSTEMD_SERVICE:${PN} = "lora-packet-forwarder.service lora-gateway-id.service"
+SYSTEMD_AUTO_ENABLE:${PN} = "enable"
 
 do_configure:append() {
     sed -i 's|$(CC) -L$(LGW_PATH) -L$(LIB_PATH) $< $(OBJDIR)/jitqueue.o -o $@ $(LIBS)|$(CC) -L$(LGW_PATH) -L$(LIB_PATH) $(LDFLAGS) $< $(OBJDIR)/jitqueue.o -o $@ $(LIBS)|' \
@@ -65,6 +68,3 @@ FILES:${PN} = " \
     ${systemd_system_unitdir}/lora-packet-forwarder.service \
     ${systemd_system_unitdir}/lora-gateway-id.service \
 "
-
-SYSTEMD_SERVICE:${PN} = "lora-packet-forwarder.service lora-gateway-id.service"
-SYSTEMD_AUTO_ENABLE:${PN} = "enable"

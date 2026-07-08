@@ -1,0 +1,17 @@
+manifest:
+  version: "1.2"
+
+  remotes:
+    - name: nordicsemi
+      url-base: https://github.com/nrfconnect
+
+  projects:
+    - name: sdk-nrf
+      remote: nordicsemi
+      repo-path: sdk-nrf
+      revision: v2.7.0
+      import: true
+      path: nrf
+
+  self:
+    path: app

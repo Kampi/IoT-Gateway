@@ -4,6 +4,8 @@ SRC_URI:append = " \
     file://iot-gateway-imx8mm.dts \
     file://wireless.cfg \
     file://peripherals.cfg \
+    file://multimedia.cfg \
+    file://networking.cfg \
 "
 
 KERNEL_DEVICETREE:append = " freescale/iot-gateway-imx8mm.dtb"

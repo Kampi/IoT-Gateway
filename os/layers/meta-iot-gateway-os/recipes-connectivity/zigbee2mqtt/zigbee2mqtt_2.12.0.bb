@@ -219,7 +219,7 @@ SRC_URI = " \
     file://services/zigbee2mqtt.service \
     file://99-zigbee.rules \
     file://configuration.yaml \
-    "
+"
 
 S = "${WORKDIR}/npm"
 
@@ -230,11 +230,6 @@ ZIGBEE2MQTT_MQTT_SERVER ?= "mqtt://localhost"
 
 SYSTEMD_SERVICE:${PN} = "zigbee2mqtt.service"
 SYSTEMD_AUTO_ENABLE:${PN} = "enable"
-
-FILES:${PN} += " \
-    ${sysconfdir}/udev/rules.d/99-zigbee.rules \
-    /var/lib/zigbee2mqtt \
-"
 
 # @serialport/bindings-cpp ships pre-built native .node binaries for multiple
 # architectures/libcs. These arrive already stripped; suppress the QA error
@@ -270,6 +265,11 @@ do_install:append() {
         fi
     fi
 }
+
+FILES:${PN} += " \
+    ${sysconfdir}/udev/rules.d/99-zigbee.rules \
+    /var/lib/zigbee2mqtt \
+"
 
 LICENSE:${PN} = "GPL-3.0-only"
 LICENSE:${PN}-babel-runtime = "MIT"

@@ -1,0 +1,50 @@
+/*
+ * Single-slot MCUboot partition table for the net core's 256 KiB flash.
+ *
+ * The board's stock layout (mcuboot + image-0 + image-1 + storage, each
+ * ~92 KiB for image-0/image-1) assumes classic two-slot A/B swap/
+ * overwrite DFU. Measured, the RCP application alone is ~125 KiB
+ * (build with `west build -b nrf5340dk/nrf5340/cpunet -s
+ * nrf/samples/openthread/coprocessor`, no sysbuild: "FLASH: 125308 B"),
+ * ~139 KiB once signed with the MCUboot header/trailer - it does not fit
+ * in a 92 KiB slot, and two ~139 KiB slots (278 KiB) do not fit in
+ * 256 KiB flash at any partition split.
+ *
+ * Single-slot mode (CONFIG_SINGLE_APPLICATION_SLOT=y in app/mcuboot.conf)
+ * needs only one application partition - MCUboot's serial recovery
+ * writes a new image directly into it instead of staging it in a
+ * secondary slot. That single slot can then be the size of both former
+ * slots combined:
+ *
+ *   mcuboot  (boot_partition):  0x00000 - 0x0c000 ( 48 KiB, unchanged)
+ *   image-0  (slot0_partition): 0x0c000 - 0x3a000 (184 KiB)
+ *   storage  (storage_partition): 0x3a000 - 0x40000 ( 24 KiB, unchanged)
+ *
+ * This is applied to both the app image and the MCUboot child image (see
+ * ../../Makefile) - both must agree on the same flash layout.
+ */
+
+&flash1 {
+	/delete-node/ partitions;
+
+	partitions {
+		compatible = "fixed-partitions";
+		#address-cells = <1>;
+		#size-cells = <1>;
+
+		boot_partition: partition@0 {
+			label = "mcuboot";
+			reg = <0x00000000 0x0000c000>;
+		};
+
+		slot0_partition: partition@c000 {
+			label = "image-0";
+			reg = <0x0000c000 0x0002e000>;
+		};
+
+		storage_partition: partition@3a000 {
+			label = "storage";
+			reg = <0x0003a000 0x00006000>;
+		};
+	};
+};

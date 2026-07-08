@@ -1,3 +1,3 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
-SRC_URI += "file://fstab"
+SRC_URI:append = " file://fstab"

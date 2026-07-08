@@ -1,0 +1,11 @@
+[Unit]
+Description=Form/attach the gateway's Thread network
+After=dbus.service otbr-agent.service
+Requires=otbr-agent.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/gateway-os/thread-network-init.sh
+
+[Install]
+WantedBy=multi-user.target

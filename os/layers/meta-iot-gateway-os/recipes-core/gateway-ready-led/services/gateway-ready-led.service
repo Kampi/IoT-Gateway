@@ -1,0 +1,11 @@
+[Unit]
+Description=Switch on READY LED (SODIMM 206 / Verdin GPIO_1) once boot has completed
+After=multi-user.target
+Requires=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/gateway-os/gateway-ready-led.sh
+
+[Install]
+WantedBy=multi-user.target

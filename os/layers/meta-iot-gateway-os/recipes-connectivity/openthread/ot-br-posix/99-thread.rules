@@ -1,0 +1,1 @@
+SUBSYSTEM=="tty", KERNELS=="30a60000.serial", SYMLINK+="thread", MODE="0660"

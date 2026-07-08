@@ -1,0 +1,10 @@
+[Unit]
+Description=Generate the gateway-backup SSH key (first boot only)
+ConditionPathExists=!/etc/gateway-backup/id_ed25519
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/gateway-os/gateway-backup-keygen.sh
+
+[Install]
+WantedBy=multi-user.target

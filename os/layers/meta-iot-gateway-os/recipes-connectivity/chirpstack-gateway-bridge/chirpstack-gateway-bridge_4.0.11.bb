@@ -5,6 +5,9 @@ LIC_FILES_CHKSUM = "file://src/${GO_IMPORT}/LICENSE;md5=bc4546f147d6f9892ca1b7d2
 
 PV = "4.0.11"
 SRCREV = "6897fe56c2b8e631632fe2ed37e4d6dbd903f563"
+
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:${THISDIR}:"
+
 SRC_URI = " \
     git://github.com/chirpstack/chirpstack-gateway-bridge.git;protocol=https;nobranch=1 \
     file://vendor.tar.gz;subdir=${BPN}/src/${GO_IMPORT} \
@@ -14,8 +17,6 @@ SRC_URI = " \
 
 # go.bbclass unpacks git source to ${WORKDIR}/${BPN}/src/${GO_IMPORT}/
 S = "${WORKDIR}/${BPN}"
-
-FILESEXTRAPATHS:prepend := "${THISDIR}/files:${THISDIR}:"
 
 inherit go-mod systemd
 

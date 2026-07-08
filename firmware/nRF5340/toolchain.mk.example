@@ -1,0 +1,47 @@
+# Template for toolchain.mk (gitignored, machine-local - copy this file to
+# toolchain.mk and adjust NCS_TC below).
+#
+# Why this exists: nRF Connect SDK's own CMake boilerplate
+# (nrf/share/ncs-package/cmake/NcsConfig.cmake) auto-detects any NCS
+# Toolchain Manager install registered in the CMake user package registry
+# (~/.cmake/packages/NcsToolchain) and forces every sysbuild child image
+# (including MCUboot) to use it - overriding ZEPHYR_SDK_INSTALL_DIR /
+# ZEPHYR_TOOLCHAIN_VARIANT env vars set any other way. If that toolchain's
+# own bundled Python can't find its shared library at runtime (missing
+# LD_LIBRARY_PATH), every `make build` fails with something like:
+#
+#   CMake Error ... Could NOT find Python3 (missing: Interpreter)
+#   Reason given by package:
+#       Interpreter: Cannot run the interpreter ".../usr/local/bin/python3"
+#
+# The fix is to properly activate that toolchain's environment (normally
+# done for you by the nRF Connect VS Code extension / Toolchain Manager
+# GUI) before running `make build`. This file does that automatically via
+# `-include toolchain.mk` at the top of the Makefile.
+#
+# Find NCS_TC on your machine with:
+#   find ~/ncs/toolchains -maxdepth 1 -mindepth 1 -type d
+# (or check ~/.cmake/packages/NcsToolchain for the exact path already
+# registered). The variable list below matches that toolchain's own
+# environment.json.
+#
+# Separately: `make flash` uses the "nrfjprog" west runner, which is NOT
+# part of the NCS toolchain above - it's the system-wide "nrf-command-line-
+# tools" package (a .deb from Nordic, installed independently, typically
+# under /opt/nrf-command-line-tools/bin). If `make flash` fails with
+# "required program nrfjprog not found", check where it's installed
+# (`dpkg -L nrf-command-line-tools | grep bin/nrfjprog`) and adjust
+# NRF_CMD_TOOLS_BIN below.
+
+NCS_TC := /home/YOUR_USER/ncs/toolchains/REPLACE_WITH_YOUR_TOOLCHAIN_HASH
+NRF_CMD_TOOLS_BIN := /opt/nrf-command-line-tools/bin
+
+export PATH := $(NCS_TC)/bin:$(NCS_TC)/usr/bin:$(NCS_TC)/usr/local/bin:$(NCS_TC)/opt/bin:$(NCS_TC)/opt/nanopb/generator-bin:$(NCS_TC)/nrfutil/bin:$(NCS_TC)/opt/zephyr-sdk/arm-zephyr-eabi/bin:$(NCS_TC)/opt/zephyr-sdk/riscv64-zephyr-elf/bin:$(NRF_CMD_TOOLS_BIN):$(PATH)
+export LD_LIBRARY_PATH := $(NCS_TC)/lib:$(NCS_TC)/lib/x86_64-linux-gnu:$(NCS_TC)/usr/local/lib:$(LD_LIBRARY_PATH)
+export GIT_EXEC_PATH := $(NCS_TC)/usr/local/libexec/git-core
+export GIT_TEMPLATE_DIR := $(NCS_TC)/usr/local/share/git-core/templates
+export PYTHONHOME := $(NCS_TC)/usr/local
+export PYTHONPATH := $(NCS_TC)/usr/local/lib/python3.12:$(NCS_TC)/usr/local/lib/python3.12/site-packages
+export NRFUTIL_HOME := $(NCS_TC)/nrfutil/home
+export ZEPHYR_TOOLCHAIN_VARIANT := zephyr
+export ZEPHYR_SDK_INSTALL_DIR := $(NCS_TC)/opt/zephyr-sdk

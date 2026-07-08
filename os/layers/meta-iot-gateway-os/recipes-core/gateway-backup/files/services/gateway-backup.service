@@ -1,0 +1,10 @@
+[Unit]
+Description=Back up Zigbee/Thread state to the remote backup host
+After=network-online.target zigbee2mqtt.service otbr-agent.service gateway-backup-keygen.service
+Wants=network-online.target
+Requires=gateway-backup-keygen.service
+
+[Service]
+Type=oneshot
+EnvironmentFile=-/etc/default/gateway-backup
+ExecStart=/usr/libexec/gateway-os/gateway-backup.sh
