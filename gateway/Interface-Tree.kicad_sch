@@ -41,7 +41,7 @@
 		)
 		(uuid "526e2779-dd43-47c6-8efc-5e818d0702a2")
 	)
-	(text "UART_1: Zigbee"
+	(text "UART_3: Zigbee"
 		(exclude_from_sim no)
 		(at 220.98 171.704 0)
 		(effects
@@ -61,7 +61,7 @@
 		)
 		(uuid "78cab92f-b835-4301-8cc0-43fe7a81df68")
 	)
-	(text "UART_3: Console"
+	(text "UART_1: Console"
 		(exclude_from_sim no)
 		(at 221.742 176.784 0)
 		(effects
@@ -1678,7 +1678,7 @@
 			2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54
 			2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54
 			2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54
-			2.54
+			2.54 2.54
 		)
 		(uuid "34661447-e3c9-454f-8f20-dc3d07dd8700")
 		(cells
@@ -3881,7 +3881,7 @@
 				)
 				(uuid "c7976004-a68c-43e3-b3f6-c45bf7e106a3")
 			)
-			(table_cell "PowerMux-Status"
+			(table_cell "LED Ready"
 				(exclude_from_sim no)
 				(at 13.97 215.9 0)
 				(size 29.21 2.54)
@@ -3896,9 +3896,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "59dfd1e5-fdcc-478c-9dff-7c756053c7ca")
+				(uuid "3e80e6dd-6140-4fce-972c-ba2a6bfe8341")
 			)
-			(table_cell "210"
+			(table_cell "206"
 				(exclude_from_sim no)
 				(at 43.18 215.9 0)
 				(size 22.86 2.54)
@@ -3913,7 +3913,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "c22f7914-c4eb-4be9-9392-e4fdcd14e475")
+				(uuid "1a3c2a41-843e-4a02-be9d-93a30053e515")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -3930,9 +3930,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "44fd7b29-2107-4357-bdd1-13824a40104d")
+				(uuid "7e90f29b-cf12-442b-a6d5-2e77bba5b003")
 			)
-			(table_cell "PWR_1V8_MOCI"
+			(table_cell "PowerMux-Status"
 				(exclude_from_sim no)
 				(at 13.97 218.44 0)
 				(size 29.21 2.54)
@@ -3947,9 +3947,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "4c183bbc-d7ce-481e-b6a4-e7de735c37a1")
+				(uuid "59dfd1e5-fdcc-478c-9dff-7c756053c7ca")
 			)
-			(table_cell "214"
+			(table_cell "210"
 				(exclude_from_sim no)
 				(at 43.18 218.44 0)
 				(size 22.86 2.54)
@@ -3964,7 +3964,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "e80ef01b-6edb-4b90-9f2b-25a0a8dec947")
+				(uuid "c22f7914-c4eb-4be9-9392-e4fdcd14e475")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -3981,9 +3981,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "70622a19-9cb0-4282-b5b8-b7880b4a9bae")
+				(uuid "44fd7b29-2107-4357-bdd1-13824a40104d")
 			)
-			(table_cell "Ethernet.TRD0_P"
+			(table_cell "PWR_1V8_MOCI"
 				(exclude_from_sim no)
 				(at 13.97 220.98 0)
 				(size 29.21 2.54)
@@ -3998,9 +3998,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "e04267d5-5edf-4902-ab9b-a9822ce3e050")
+				(uuid "4c183bbc-d7ce-481e-b6a4-e7de735c37a1")
 			)
-			(table_cell "225"
+			(table_cell "214"
 				(exclude_from_sim no)
 				(at 43.18 220.98 0)
 				(size 22.86 2.54)
@@ -4015,7 +4015,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "d05c94b8-7341-4e5d-a28e-f4f4b766ca49")
+				(uuid "e80ef01b-6edb-4b90-9f2b-25a0a8dec947")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -4032,9 +4032,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "4db7b131-57dc-49e9-9cad-a3b4719c701c")
+				(uuid "70622a19-9cb0-4282-b5b8-b7880b4a9bae")
 			)
-			(table_cell "PCIe.CLK_N"
+			(table_cell "Ethernet.TRD0_P"
 				(exclude_from_sim no)
 				(at 13.97 223.52 0)
 				(size 29.21 2.54)
@@ -4049,9 +4049,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "16db7d2e-969d-4f46-816e-be3481a467ee")
+				(uuid "e04267d5-5edf-4902-ab9b-a9822ce3e050")
 			)
-			(table_cell "226"
+			(table_cell "225"
 				(exclude_from_sim no)
 				(at 43.18 223.52 0)
 				(size 22.86 2.54)
@@ -4066,7 +4066,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "982529e0-a884-4c72-8718-6572406abb41")
+				(uuid "d05c94b8-7341-4e5d-a28e-f4f4b766ca49")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -4083,9 +4083,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "b64206e9-0dba-41ff-a9a0-1c3a0e6ea141")
+				(uuid "4db7b131-57dc-49e9-9cad-a3b4719c701c")
 			)
-			(table_cell "Ethernet.TRD0_N"
+			(table_cell "PCIe.CLK_N"
 				(exclude_from_sim no)
 				(at 13.97 226.06 0)
 				(size 29.21 2.54)
@@ -4100,9 +4100,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "19e3a905-fb6e-40e5-b053-3a24e839f081")
+				(uuid "16db7d2e-969d-4f46-816e-be3481a467ee")
 			)
-			(table_cell "227"
+			(table_cell "226"
 				(exclude_from_sim no)
 				(at 43.18 226.06 0)
 				(size 22.86 2.54)
@@ -4117,7 +4117,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "558102ff-6960-49eb-8d1c-956f9e50a405")
+				(uuid "982529e0-a884-4c72-8718-6572406abb41")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -4134,9 +4134,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "4da10b40-da2f-496f-a97d-b92a73c01de9")
+				(uuid "b64206e9-0dba-41ff-a9a0-1c3a0e6ea141")
 			)
-			(table_cell "PCIe.CLK_P"
+			(table_cell "Ethernet.TRD0_N"
 				(exclude_from_sim no)
 				(at 13.97 228.6 0)
 				(size 29.21 2.54)
@@ -4151,9 +4151,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "27216ebb-0345-4cef-bd31-fb122cded987")
+				(uuid "19e3a905-fb6e-40e5-b053-3a24e839f081")
 			)
-			(table_cell "228"
+			(table_cell "227"
 				(exclude_from_sim no)
 				(at 43.18 228.6 0)
 				(size 22.86 2.54)
@@ -4168,7 +4168,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "e87d045c-3c34-42f2-9f4c-2956f9922770")
+				(uuid "558102ff-6960-49eb-8d1c-956f9e50a405")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -4185,9 +4185,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "f7d8e2c1-d94c-4062-b926-d71480d5ecce")
+				(uuid "4da10b40-da2f-496f-a97d-b92a73c01de9")
 			)
-			(table_cell "Ethernet.TRD1_N"
+			(table_cell "PCIe.CLK_P"
 				(exclude_from_sim no)
 				(at 13.97 231.14 0)
 				(size 29.21 2.54)
@@ -4202,9 +4202,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "6365c290-61a4-4b94-8a88-a3f78b3d0513")
+				(uuid "27216ebb-0345-4cef-bd31-fb122cded987")
 			)
-			(table_cell "231"
+			(table_cell "228"
 				(exclude_from_sim no)
 				(at 43.18 231.14 0)
 				(size 22.86 2.54)
@@ -4219,7 +4219,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "31e9a95a-439f-465f-9a24-35459484106a")
+				(uuid "e87d045c-3c34-42f2-9f4c-2956f9922770")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -4236,9 +4236,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "d7d76ad0-9210-4d77-8d9f-cfdcaa6466a0")
+				(uuid "f7d8e2c1-d94c-4062-b926-d71480d5ecce")
 			)
-			(table_cell "PCIe.RX_P"
+			(table_cell "Ethernet.TRD1_N"
 				(exclude_from_sim no)
 				(at 13.97 233.68 0)
 				(size 29.21 2.54)
@@ -4253,9 +4253,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "fe98ff99-00c1-4864-b91f-ce09d949ad7f")
+				(uuid "6365c290-61a4-4b94-8a88-a3f78b3d0513")
 			)
-			(table_cell "234"
+			(table_cell "231"
 				(exclude_from_sim no)
 				(at 43.18 233.68 0)
 				(size 22.86 2.54)
@@ -4270,7 +4270,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "7a7d7beb-bacc-423d-afd3-2ad84af81b5b")
+				(uuid "31e9a95a-439f-465f-9a24-35459484106a")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -4287,9 +4287,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "c1817b65-09c3-4018-aef9-0bdae407b0aa")
+				(uuid "d7d76ad0-9210-4d77-8d9f-cfdcaa6466a0")
 			)
-			(table_cell "Ethernet.TRD1_P"
+			(table_cell "PCIe.RX_P"
 				(exclude_from_sim no)
 				(at 13.97 236.22 0)
 				(size 29.21 2.54)
@@ -4304,9 +4304,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "a1d12e89-d1ac-40af-9013-33260a74aacb")
+				(uuid "fe98ff99-00c1-4864-b91f-ce09d949ad7f")
 			)
-			(table_cell "233"
+			(table_cell "234"
 				(exclude_from_sim no)
 				(at 43.18 236.22 0)
 				(size 22.86 2.54)
@@ -4321,7 +4321,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "10807780-d5d7-4b38-a520-c7d3c3a3f5d2")
+				(uuid "7a7d7beb-bacc-423d-afd3-2ad84af81b5b")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -4338,9 +4338,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "1a32a7a1-6939-4fbe-8abe-b5c3ac1c855c")
+				(uuid "c1817b65-09c3-4018-aef9-0bdae407b0aa")
 			)
-			(table_cell "Ethernet.LED-Yellow"
+			(table_cell "Ethernet.TRD1_P"
 				(exclude_from_sim no)
 				(at 13.97 238.76 0)
 				(size 29.21 2.54)
@@ -4355,9 +4355,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "85205153-24dd-4124-a896-da992a6f3eae")
+				(uuid "a1d12e89-d1ac-40af-9013-33260a74aacb")
 			)
-			(table_cell "235"
+			(table_cell "233"
 				(exclude_from_sim no)
 				(at 43.18 238.76 0)
 				(size 22.86 2.54)
@@ -4372,7 +4372,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "9a753c4b-e47e-42d3-84d8-e11851c4b09a")
+				(uuid "10807780-d5d7-4b38-a520-c7d3c3a3f5d2")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -4389,9 +4389,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "0edc44ad-4aa9-4f66-af28-4e072dea12f5")
+				(uuid "1a32a7a1-6939-4fbe-8abe-b5c3ac1c855c")
 			)
-			(table_cell "PCIe.RX_N"
+			(table_cell "Ethernet.LED-Yellow"
 				(exclude_from_sim no)
 				(at 13.97 241.3 0)
 				(size 29.21 2.54)
@@ -4406,9 +4406,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "54c88c34-65ba-4efd-832e-4079b544bb4f")
+				(uuid "85205153-24dd-4124-a896-da992a6f3eae")
 			)
-			(table_cell "236"
+			(table_cell "235"
 				(exclude_from_sim no)
 				(at 43.18 241.3 0)
 				(size 22.86 2.54)
@@ -4423,7 +4423,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "e56f46ef-bbe1-459e-81ff-52a462e60cb2")
+				(uuid "9a753c4b-e47e-42d3-84d8-e11851c4b09a")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -4440,9 +4440,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "3c87f219-92c6-4a86-a999-71196ef28678")
+				(uuid "0edc44ad-4aa9-4f66-af28-4e072dea12f5")
 			)
-			(table_cell "Ethernet.LED-Green"
+			(table_cell "PCIe.RX_N"
 				(exclude_from_sim no)
 				(at 13.97 243.84 0)
 				(size 29.21 2.54)
@@ -4457,9 +4457,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "e731e2d4-5e8b-4fe6-b41e-6b3ae8dfe971")
+				(uuid "54c88c34-65ba-4efd-832e-4079b544bb4f")
 			)
-			(table_cell "237"
+			(table_cell "236"
 				(exclude_from_sim no)
 				(at 43.18 243.84 0)
 				(size 22.86 2.54)
@@ -4474,7 +4474,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "04eb7a75-e862-41a9-8ee2-87f6c2238147")
+				(uuid "e56f46ef-bbe1-459e-81ff-52a462e60cb2")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -4491,9 +4491,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "a8cc3899-4649-434c-9a18-d1432102f2dc")
+				(uuid "3c87f219-92c6-4a86-a999-71196ef28678")
 			)
-			(table_cell "PCIe.TX_P"
+			(table_cell "Ethernet.LED-Green"
 				(exclude_from_sim no)
 				(at 13.97 246.38 0)
 				(size 29.21 2.54)
@@ -4508,9 +4508,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "7ef021fa-ef87-41ca-afb1-06b2f031b254")
+				(uuid "e731e2d4-5e8b-4fe6-b41e-6b3ae8dfe971")
 			)
-			(table_cell "238"
+			(table_cell "237"
 				(exclude_from_sim no)
 				(at 43.18 246.38 0)
 				(size 22.86 2.54)
@@ -4525,7 +4525,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "ee43aa55-10a0-4cc9-8999-4b425f7c9d33")
+				(uuid "04eb7a75-e862-41a9-8ee2-87f6c2238147")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -4542,9 +4542,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "901c974c-c5cd-4e43-aece-903ce066bb4c")
+				(uuid "a8cc3899-4649-434c-9a18-d1432102f2dc")
 			)
-			(table_cell "Ethernet.TRD2_P"
+			(table_cell "PCIe.TX_P"
 				(exclude_from_sim no)
 				(at 13.97 248.92 0)
 				(size 29.21 2.54)
@@ -4559,9 +4559,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "7e1dcd53-ca57-4228-9f99-3602d870d661")
+				(uuid "7ef021fa-ef87-41ca-afb1-06b2f031b254")
 			)
-			(table_cell "239"
+			(table_cell "238"
 				(exclude_from_sim no)
 				(at 43.18 248.92 0)
 				(size 22.86 2.54)
@@ -4576,7 +4576,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "8c0c0438-efb2-445c-b865-a8039ac6b744")
+				(uuid "ee43aa55-10a0-4cc9-8999-4b425f7c9d33")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -4593,9 +4593,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "8018b16f-b2e8-4916-9242-e77fb2d6813a")
+				(uuid "901c974c-c5cd-4e43-aece-903ce066bb4c")
 			)
-			(table_cell "PCIe.TX_N"
+			(table_cell "Ethernet.TRD2_P"
 				(exclude_from_sim no)
 				(at 13.97 251.46 0)
 				(size 29.21 2.54)
@@ -4610,9 +4610,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "dab406f8-7fe1-427a-ba02-c9bedeb5842b")
+				(uuid "7e1dcd53-ca57-4228-9f99-3602d870d661")
 			)
-			(table_cell "240"
+			(table_cell "239"
 				(exclude_from_sim no)
 				(at 43.18 251.46 0)
 				(size 22.86 2.54)
@@ -4627,7 +4627,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "7d8fa582-352f-4456-93ce-2066b9969cb1")
+				(uuid "8c0c0438-efb2-445c-b865-a8039ac6b744")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -4644,9 +4644,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "c4ff9aef-a2a8-43ff-94c6-93a34c8a95d7")
+				(uuid "8018b16f-b2e8-4916-9242-e77fb2d6813a")
 			)
-			(table_cell "Ethernet.TRD2_N"
+			(table_cell "PCIe.TX_N"
 				(exclude_from_sim no)
 				(at 13.97 254 0)
 				(size 29.21 2.54)
@@ -4661,9 +4661,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "860c095c-83a3-4d6e-83bd-7f1045734de8")
+				(uuid "dab406f8-7fe1-427a-ba02-c9bedeb5842b")
 			)
-			(table_cell "241"
+			(table_cell "240"
 				(exclude_from_sim no)
 				(at 43.18 254 0)
 				(size 22.86 2.54)
@@ -4678,7 +4678,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "3a6b98ff-33d7-4879-898d-c9b3fc87e549")
+				(uuid "7d8fa582-352f-4456-93ce-2066b9969cb1")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -4695,9 +4695,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "1a694a88-24bf-4957-97e5-4a83b60f286a")
+				(uuid "c4ff9aef-a2a8-43ff-94c6-93a34c8a95d7")
 			)
-			(table_cell "PCIe.RST"
+			(table_cell "Ethernet.TRD2_N"
 				(exclude_from_sim no)
 				(at 13.97 256.54 0)
 				(size 29.21 2.54)
@@ -4712,9 +4712,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "22e27ac4-4a81-4025-9bea-64cc646319cd")
+				(uuid "860c095c-83a3-4d6e-83bd-7f1045734de8")
 			)
-			(table_cell "244"
+			(table_cell "241"
 				(exclude_from_sim no)
 				(at 43.18 256.54 0)
 				(size 22.86 2.54)
@@ -4729,7 +4729,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "8ff0885c-936e-47fb-8078-32c1e95458b6")
+				(uuid "3a6b98ff-33d7-4879-898d-c9b3fc87e549")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -4746,9 +4746,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "825469ba-fa3e-42d2-b33d-c96b3998d57d")
+				(uuid "1a694a88-24bf-4957-97e5-4a83b60f286a")
 			)
-			(table_cell "Ethernet.TRD3_N"
+			(table_cell "PCIe.RST"
 				(exclude_from_sim no)
 				(at 13.97 259.08 0)
 				(size 29.21 2.54)
@@ -4763,9 +4763,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "48c6cfd0-3695-4807-bfac-93c95894dbed")
+				(uuid "22e27ac4-4a81-4025-9bea-64cc646319cd")
 			)
-			(table_cell "245"
+			(table_cell "244"
 				(exclude_from_sim no)
 				(at 43.18 259.08 0)
 				(size 22.86 2.54)
@@ -4780,7 +4780,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "bc9fd354-a1ba-4b4e-83be-fabf4bf67d85")
+				(uuid "8ff0885c-936e-47fb-8078-32c1e95458b6")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -4797,9 +4797,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "a78a929f-c8e0-4303-b746-f8f197ec3c19")
+				(uuid "825469ba-fa3e-42d2-b33d-c96b3998d57d")
 			)
-			(table_cell "CTRL_RECOVERY_MICO"
+			(table_cell "Ethernet.TRD3_N"
 				(exclude_from_sim no)
 				(at 13.97 261.62 0)
 				(size 29.21 2.54)
@@ -4814,9 +4814,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "399d2356-1720-46b1-93c6-39026dd21c97")
+				(uuid "48c6cfd0-3695-4807-bfac-93c95894dbed")
 			)
-			(table_cell "246"
+			(table_cell "245"
 				(exclude_from_sim no)
 				(at 43.18 261.62 0)
 				(size 22.86 2.54)
@@ -4831,7 +4831,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "9c794388-b365-4ee3-8b58-e491e80103d9")
+				(uuid "bc9fd354-a1ba-4b4e-83be-fabf4bf67d85")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -4848,9 +4848,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "679a4a0b-df71-4ff3-9e59-d82a6e2ada91")
+				(uuid "a78a929f-c8e0-4303-b746-f8f197ec3c19")
 			)
-			(table_cell "Ethernet.TRD3_P"
+			(table_cell "CTRL_RECOVERY_MICO"
 				(exclude_from_sim no)
 				(at 13.97 264.16 0)
 				(size 29.21 2.54)
@@ -4865,9 +4865,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "1371ee55-46e0-4fde-8778-278178ef5b7d")
+				(uuid "399d2356-1720-46b1-93c6-39026dd21c97")
 			)
-			(table_cell "247"
+			(table_cell "246"
 				(exclude_from_sim no)
 				(at 43.18 264.16 0)
 				(size 22.86 2.54)
@@ -4882,7 +4882,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "8d5ad946-cf20-4ab9-917e-c6f8c6812334")
+				(uuid "9c794388-b365-4ee3-8b58-e491e80103d9")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -4899,9 +4899,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "6edd1c96-d71c-4570-b8c0-238fa012d61f")
+				(uuid "679a4a0b-df71-4ff3-9e59-d82a6e2ada91")
 			)
-			(table_cell "CTRL_PWR_BTN_MICO"
+			(table_cell "Ethernet.TRD3_P"
 				(exclude_from_sim no)
 				(at 13.97 266.7 0)
 				(size 29.21 2.54)
@@ -4916,9 +4916,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "1ed1f0e7-be15-4fa9-b58e-873b15fafb93")
+				(uuid "1371ee55-46e0-4fde-8778-278178ef5b7d")
 			)
-			(table_cell "248"
+			(table_cell "247"
 				(exclude_from_sim no)
 				(at 43.18 266.7 0)
 				(size 22.86 2.54)
@@ -4933,7 +4933,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "fb2b63b8-efad-446a-8a94-8818abde058a")
+				(uuid "8d5ad946-cf20-4ab9-917e-c6f8c6812334")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -4950,9 +4950,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "db0b4f32-ce99-42c0-a2b3-b00cea215f8d")
+				(uuid "6edd1c96-d71c-4570-b8c0-238fa012d61f")
 			)
-			(table_cell "CTRL_FORCE_OFF_MOCI"
+			(table_cell "CTRL_PWR_BTN_MICO"
 				(exclude_from_sim no)
 				(at 13.97 269.24 0)
 				(size 29.21 2.54)
@@ -4967,9 +4967,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "bff91954-46e0-4d5a-ae24-8b927fd26393")
+				(uuid "1ed1f0e7-be15-4fa9-b58e-873b15fafb93")
 			)
-			(table_cell "250"
+			(table_cell "248"
 				(exclude_from_sim no)
 				(at 43.18 269.24 0)
 				(size 22.86 2.54)
@@ -4984,7 +4984,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "94044aee-c59e-4c80-b9fd-75a93b626e3a")
+				(uuid "fb2b63b8-efad-446a-8a94-8818abde058a")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -5001,9 +5001,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "03a8e5ef-03e3-41d0-b32c-107dae694cfd")
+				(uuid "db0b4f32-ce99-42c0-a2b3-b00cea215f8d")
 			)
-			(table_cell "CTRL_WAKE1_MICO"
+			(table_cell "CTRL_FORCE_OFF_MOCI"
 				(exclude_from_sim no)
 				(at 13.97 271.78 0)
 				(size 29.21 2.54)
@@ -5018,9 +5018,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "31cf3720-d367-45fa-a547-da73c597528a")
+				(uuid "bff91954-46e0-4d5a-ae24-8b927fd26393")
 			)
-			(table_cell "252"
+			(table_cell "250"
 				(exclude_from_sim no)
 				(at 43.18 271.78 0)
 				(size 22.86 2.54)
@@ -5035,7 +5035,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "4d1da9e6-b774-48f8-909d-095411d15003")
+				(uuid "94044aee-c59e-4c80-b9fd-75a93b626e3a")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -5052,9 +5052,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "dd9f7de5-9857-49c6-8207-0cbc6600b640")
+				(uuid "03a8e5ef-03e3-41d0-b32c-107dae694cfd")
 			)
-			(table_cell "SoM-Power-Enable"
+			(table_cell "CTRL_WAKE1_MICO"
 				(exclude_from_sim no)
 				(at 13.97 274.32 0)
 				(size 29.21 2.54)
@@ -5069,9 +5069,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "3937d7e5-96d2-4a17-8316-057001c8798a")
+				(uuid "31cf3720-d367-45fa-a547-da73c597528a")
 			)
-			(table_cell "254"
+			(table_cell "252"
 				(exclude_from_sim no)
 				(at 43.18 274.32 0)
 				(size 22.86 2.54)
@@ -5086,7 +5086,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "23ea6e0d-4658-4633-9c35-0519504e0c4e")
+				(uuid "4d1da9e6-b774-48f8-909d-095411d15003")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -5103,9 +5103,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "b3db3d9f-de01-4de7-8560-981d18977aa2")
+				(uuid "dd9f7de5-9857-49c6-8207-0cbc6600b640")
 			)
-			(table_cell "CTRL_RESET_MOCI"
+			(table_cell "SoM-Power-Enable"
 				(exclude_from_sim no)
 				(at 13.97 276.86 0)
 				(size 29.21 2.54)
@@ -5120,9 +5120,9 @@
 					)
 					(justify left top)
 				)
-				(uuid "3f1fa9d2-ad69-4f31-8e86-07f0b3dcf517")
+				(uuid "3937d7e5-96d2-4a17-8316-057001c8798a")
 			)
-			(table_cell "258"
+			(table_cell "254"
 				(exclude_from_sim no)
 				(at 43.18 276.86 0)
 				(size 22.86 2.54)
@@ -5137,7 +5137,7 @@
 					)
 					(justify left top)
 				)
-				(uuid "7978bd62-80eb-4fd0-af3d-536a2a493a0e")
+				(uuid "23ea6e0d-4658-4633-9c35-0519504e0c4e")
 			)
 			(table_cell ""
 				(exclude_from_sim no)
@@ -5154,11 +5154,62 @@
 					)
 					(justify left top)
 				)
+				(uuid "b3db3d9f-de01-4de7-8560-981d18977aa2")
+			)
+			(table_cell "CTRL_RESET_MOCI"
+				(exclude_from_sim no)
+				(at 13.97 279.4 0)
+				(size 29.21 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "3f1fa9d2-ad69-4f31-8e86-07f0b3dcf517")
+			)
+			(table_cell "258"
+				(exclude_from_sim no)
+				(at 43.18 279.4 0)
+				(size 22.86 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "7978bd62-80eb-4fd0-af3d-536a2a493a0e")
+			)
+			(table_cell ""
+				(exclude_from_sim no)
+				(at 66.04 279.4 0)
+				(size 0 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
 				(uuid "bb48c70e-9138-4ab4-a02c-d7dce080004e")
 			)
 			(table_cell "CTRL_RESET_MICO"
 				(exclude_from_sim no)
-				(at 13.97 279.4 0)
+				(at 13.97 281.94 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5175,7 +5226,7 @@
 			)
 			(table_cell "260"
 				(exclude_from_sim no)
-				(at 43.18 279.4 0)
+				(at 43.18 281.94 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5192,7 +5243,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 279.4 0)
+				(at 66.04 281.94 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
