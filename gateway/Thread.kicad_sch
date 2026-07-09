@@ -6,7 +6,7 @@
 	(paper "A3")
 	(title_block
 		(title "Thread Router")
-		(date "2025-06-05")
+		(date "2026-07-09")
 		(rev "${REVISION}")
 		(company "${COMPANY}")
 	)
@@ -5780,7 +5780,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "18ea3c1f-708f-40d3-b483-4d71cf4fdf8d")
-		(property "Reference" "R1310"
+		(property "Reference" "R1306"
 			(at 205.74 92.202 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5875,7 +5875,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/38da7bfd-61a1-4734-9412-ab3ae9cd3f77"
-					(reference "R1310")
+					(reference "R1306")
 					(unit 1)
 				)
 			)
@@ -6724,7 +6724,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3ec7a4ce-bbb2-4718-b3a8-1d233b903540")
-		(property "Reference" "R1305"
+		(property "Reference" "R1309"
 			(at 241.3 116.586 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6819,7 +6819,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/38da7bfd-61a1-4734-9412-ab3ae9cd3f77"
-					(reference "R1305")
+					(reference "R1309")
 					(unit 1)
 				)
 			)
@@ -7339,7 +7339,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6f16d67b-5df1-4a13-9171-2b7b8ffeaac6")
-		(property "Reference" "R1307"
+		(property "Reference" "R1311"
 			(at 252.73 106.68 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7434,7 +7434,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/38da7bfd-61a1-4734-9412-ab3ae9cd3f77"
-					(reference "R1307")
+					(reference "R1311")
 					(unit 1)
 				)
 			)
@@ -7451,7 +7451,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "70e8ffe3-722b-4926-8d5f-2834a1c64ca0")
-		(property "Reference" "R1309"
+		(property "Reference" "R1305"
 			(at 194.31 116.586 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7546,7 +7546,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/38da7bfd-61a1-4734-9412-ab3ae9cd3f77"
-					(reference "R1309")
+					(reference "R1305")
 					(unit 1)
 				)
 			)
@@ -8024,7 +8024,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "860b6150-0384-4a30-a474-2d1d8afa6f78")
-		(property "Reference" "R1304"
+		(property "Reference" "R1308"
 			(at 241.3 101.6 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8119,7 +8119,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/38da7bfd-61a1-4734-9412-ab3ae9cd3f77"
-					(reference "R1304")
+					(reference "R1308")
 					(unit 1)
 				)
 			)
@@ -9504,7 +9504,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d7ad85da-107e-4994-b6f7-5a153803c2c0")
-		(property "Reference" "R1306"
+		(property "Reference" "R1310"
 			(at 252.73 92.202 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9599,7 +9599,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/38da7bfd-61a1-4734-9412-ab3ae9cd3f77"
-					(reference "R1306")
+					(reference "R1310")
 					(unit 1)
 				)
 			)
@@ -9695,7 +9695,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d9c25396-bea7-4007-872a-cac197e7d458")
-		(property "Reference" "R1308"
+		(property "Reference" "R1304"
 			(at 194.31 101.6 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9790,7 +9790,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/38da7bfd-61a1-4734-9412-ab3ae9cd3f77"
-					(reference "R1308")
+					(reference "R1304")
 					(unit 1)
 				)
 			)
@@ -10001,7 +10001,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dfc13954-f370-438d-98ec-acc55ffa741c")
-		(property "Reference" "R1311"
+		(property "Reference" "R1307"
 			(at 205.74 106.68 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10096,7 +10096,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/38da7bfd-61a1-4734-9412-ab3ae9cd3f77"
-					(reference "R1311")
+					(reference "R1307")
 					(unit 1)
 				)
 			)
