@@ -3247,7 +3247,7 @@
 	)
 	(rectangle
 		(start 13.97 186.69)
-		(end 148.59 283.21)
+		(end 167.64 283.21)
 		(stroke
 			(width 1)
 			(type default)
@@ -3309,19 +3309,6 @@
 			(type none)
 		)
 		(uuid "796ef479-a231-43f9-9241-88e14364f267")
-	)
-	(rectangle
-		(start 82.55 226.06)
-		(end 95.25 247.65)
-		(stroke
-			(width 0.254)
-			(type dot)
-			(color 255 0 0 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "8580fa1a-87b7-40fa-9830-972416ae1761")
 	)
 	(rectangle
 		(start 13.97 82.55)
@@ -3398,29 +3385,6 @@
 			(justify bottom)
 		)
 		(uuid "05bfacc9-a60b-4ba5-beb9-fd6b724d07f0")
-	)
-	(text_box "DESIGN NOTE:\nThe current limit is fix at 3 A for the selected variant.\nUse the resistor to select the 650 kHz frequency."
-		(exclude_from_sim no)
-		(at 62.23 251.46 0)
-		(size 40.64 19.05)
-		(margins 2 2 2 2)
-		(stroke
-			(width 1)
-			(type solid)
-			(color 200 200 200 1)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(face "Arial")
-				(size 2 2)
-				(color 0 0 0 1)
-			)
-			(justify left top)
-		)
-		(uuid "34f6722b-0ca4-4fa4-8b4b-09f612361778")
 	)
 	(text_box "DESIGN NOTE:\nUse the PowerMux-Status signal to detect a switch to the backup and enter a low power mode."
 		(exclude_from_sim no)
@@ -3633,7 +3597,7 @@
 	(text_box "V_{Backup} power supply"
 		(exclude_from_sim no)
 		(at 15.24 274.32 0)
-		(size 132.08 7.62)
+		(size 151.13 7.62)
 		(margins 1.9049 1.9049 1.9049 1.9049)
 		(stroke
 			(width -0.0001)
@@ -3722,12 +3686,6 @@
 			(justify bottom)
 		)
 		(uuid "e296dbe9-b6d7-40b7-9c66-b4fb54d8712e")
-	)
-	(junction
-		(at 133.35 212.09)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "000f1623-2be3-4866-a17c-6ed45bb54c90")
 	)
 	(junction
 		(at 246.38 135.89)
@@ -3926,6 +3884,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7e5906d2-81dc-4957-b48f-29e91eef7459")
+	)
+	(junction
+		(at 154.94 212.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7f786b93-0143-4745-aa74-adea6bc2fbc8")
 	)
 	(junction
 		(at 236.22 120.65)
@@ -4213,7 +4177,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 168.91) (xy 241.3 168.91)
+			(xy 162.56 168.91) (xy 241.3 168.91)
 		)
 		(stroke
 			(width 0)
@@ -4351,16 +4315,15 @@
 		)
 		(uuid "31da48e8-bcab-4a02-9a66-6d58a116e6af")
 	)
-	(polyline
+	(wire
 		(pts
-			(xy 82.55 247.65) (xy 81.28 251.46)
+			(xy 154.94 212.09) (xy 162.56 212.09)
 		)
 		(stroke
-			(width 0.254)
-			(type dot)
-			(color 255 0 0 1)
+			(width 0)
+			(type default)
 		)
-		(uuid "3326a437-9bab-42c3-be1b-a451aad03e9f")
+		(uuid "34d22378-1094-492f-9523-a54e0fbf2c0d")
 	)
 	(wire
 		(pts
@@ -4381,26 +4344,6 @@
 			(type default)
 		)
 		(uuid "372e9772-23a6-44c9-8d3c-664281539b9a")
-	)
-	(wire
-		(pts
-			(xy 142.24 212.09) (xy 147.32 212.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "38371bcb-8048-446f-b247-4b9e9f43afd4")
-	)
-	(wire
-		(pts
-			(xy 142.24 210.82) (xy 142.24 212.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "395f52a6-50fa-4901-b166-3a5522a8f348")
 	)
 	(wire
 		(pts
@@ -4734,16 +4677,6 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 210.82) (xy 133.35 212.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "51b0e3b6-3701-4021-87ff-f0bae959e149")
-	)
-	(wire
-		(pts
 			(xy 274.32 151.13) (xy 274.32 156.21)
 		)
 		(stroke
@@ -4751,6 +4684,16 @@
 			(type default)
 		)
 		(uuid "54ce468f-1c46-4428-aaed-3e52357f0f2a")
+	)
+	(wire
+		(pts
+			(xy 154.94 220.98) (xy 154.94 222.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "550d9b46-3fc5-4e25-8673-a92726d034e4")
 	)
 	(wire
 		(pts
@@ -4914,6 +4857,16 @@
 	)
 	(wire
 		(pts
+			(xy 142.24 220.98) (xy 142.24 222.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "648b108d-9c02-4768-b0fe-d37b35a1fc48")
+	)
+	(wire
+		(pts
 			(xy 350.52 151.13) (xy 350.52 146.05)
 		)
 		(stroke
@@ -4961,6 +4914,16 @@
 			(type default)
 		)
 		(uuid "6ae4b3d7-23e8-458e-8072-9d4f7b455123")
+	)
+	(wire
+		(pts
+			(xy 142.24 210.82) (xy 142.24 212.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d7f3fba-5fda-4cc3-825a-6b7e827ede79")
 	)
 	(wire
 		(pts
@@ -5243,6 +5206,16 @@
 			(type default)
 		)
 		(uuid "917e3f8a-2edc-4b44-8579-fabc49f52594")
+	)
+	(wire
+		(pts
+			(xy 142.24 212.09) (xy 154.94 212.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91a1945a-5fb3-4e6e-8a92-302d02562709")
 	)
 	(wire
 		(pts
@@ -5579,6 +5552,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 212.09) (xy 154.94 213.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b72d87b6-599e-422c-8dad-4cfb4060c693")
+	)
+	(wire
+		(pts
 			(xy 290.83 140.97) (xy 290.83 146.05)
 		)
 		(stroke
@@ -5586,6 +5569,16 @@
 			(type default)
 		)
 		(uuid "b788b593-918d-43a8-b627-cb16b8550b14")
+	)
+	(wire
+		(pts
+			(xy 142.24 212.09) (xy 142.24 213.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b97c374f-ac9f-43ef-969d-b8d55f85f616")
 	)
 	(wire
 		(pts
@@ -5799,7 +5792,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 212.09) (xy 133.35 212.09)
+			(xy 127 212.09) (xy 142.24 212.09)
 		)
 		(stroke
 			(width 0)
@@ -5920,6 +5913,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 210.82) (xy 154.94 212.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd4c5722-b65d-436f-8166-67677b926e38")
+	)
+	(wire
+		(pts
 			(xy 52.07 92.71) (xy 39.37 92.71)
 		)
 		(stroke
@@ -5960,7 +5963,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 212.09) (xy 147.32 168.91)
+			(xy 162.56 212.09) (xy 162.56 168.91)
 		)
 		(stroke
 			(width 0)
@@ -6037,16 +6040,6 @@
 			(type default)
 		)
 		(uuid "e925796f-4e55-46d9-9c35-d619273ded04")
-	)
-	(wire
-		(pts
-			(xy 133.35 212.09) (xy 142.24 212.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ec038ff5-eb34-4552-8fe1-7b3c97971a17")
 	)
 	(wire
 		(pts
@@ -6509,6 +6502,84 @@
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c"
 					(reference "#PWR0823")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 154.94 222.25 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0a13d887-960d-419c-a7fe-594d19e35d30")
+		(property "Reference" "#PWR0847"
+			(at 154.94 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 154.94 227.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 154.94 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 154.94 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ccd6b436-d986-43db-b937-5853c106ff47")
+		)
+		(instances
+			(project "Gateway"
+				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c"
+					(reference "#PWR0847")
 					(unit 1)
 				)
 			)
@@ -7186,8 +7257,8 @@
 				)
 			)
 		)
-		(property "Value" "ADP1614ACPZ-R7"
-			(at 59.69 231.14 0)
+		(property "Value" "ADP1614ACPZ-650-R7"
+			(at 61.595 231.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7240,7 +7311,7 @@
 				)
 			)
 		)
-		(property "manf#" "ADP1614ACPZ-R7"
+		(property "manf#" "ADP1614ACPZ-650-R7"
 			(at 66.04 218.44 0)
 			(hide yes)
 			(show_name no)
@@ -7251,7 +7322,7 @@
 				)
 			)
 		)
-		(property "mouser#" "584-ADP1614ACPZ-R7"
+		(property "mouser#" "584-ADP1614ACPZ-650-R7"
 			(at 66.04 218.44 0)
 			(hide yes)
 			(show_name no)
@@ -8141,84 +8212,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 142.24 210.82 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "400ecdfc-f8d8-4339-b48c-cd7b13dc52d5")
-		(property "Reference" "#FLG0804"
-			(at 142.24 208.915 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 142.24 205.74 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 142.24 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 142.24 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 142.24 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "15d440a0-b207-4d50-ad5b-b0ee25d2e4e1")
-		)
-		(instances
-			(project "Gateway"
-				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c"
-					(reference "#FLG0804")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 257.81 147.32 180)
 		(unit 1)
@@ -8322,6 +8315,120 @@
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c"
 					(reference "TP807")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 154.94 217.17 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "41f7be08-6473-41ac-b4d1-3a5008549d85")
+		(property "Reference" "C823"
+			(at 158.75 215.8999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 158.75 218.4399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 155.9052 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://datasheets.kyocera-avx.com/General-Purpose-Capacitors.pdf"
+			(at 154.94 217.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 154.94 217.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "manf" "KYOCERA AVX"
+			(at 154.94 217.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "manf#" "0805X7R106KT1AT"
+			(at 154.94 217.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "mouser#" "581-0805X7R106KT1AT"
+			(at 154.94 217.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "111c1b1b-c5e8-4c0a-aa5d-683f645d10cc")
+		)
+		(pin "2"
+			(uuid "6a371685-00e3-4872-8b0b-03c88a28e06e")
+		)
+		(instances
+			(project "Gateway"
+				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c"
+					(reference "C823")
 					(unit 1)
 				)
 			)
@@ -8464,120 +8571,6 @@
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c"
 					(reference "IC803")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 86.36 231.14 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "45a02aa3-cc92-4eb9-86c8-ce728aceb1a5")
-		(property "Reference" "R802"
-			(at 88.9 229.8699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0R"
-			(at 88.9 232.4099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 84.582 231.14 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
-			(at 86.36 231.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 86.36 231.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manf" "Bourns"
-			(at 86.36 231.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manf#" "CR0805-J/-000ELF"
-			(at 86.36 231.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "mouser#" "652-CR0805-J/-000ELF"
-			(at 86.36 231.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "46f528aa-9fc9-44f2-a14c-9ac4aafd9301")
-		)
-		(pin "2"
-			(uuid "91ba66d2-404f-42b6-be21-5cb8376f0b9e")
-		)
-		(instances
-			(project "Gateway"
-				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c"
-					(reference "R802")
 					(unit 1)
 				)
 			)
@@ -8770,6 +8763,84 @@
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c"
 					(reference "R801")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 154.94 210.82 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4a33039f-6dbd-4201-9c94-1662e66ae27a")
+		(property "Reference" "#FLG0806"
+			(at 154.94 208.915 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 154.94 205.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 154.94 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 154.94 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fe4754e0-e723-48f2-80fa-bbfc5ef014e9")
+		)
+		(instances
+			(project "Gateway"
+				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c"
+					(reference "#FLG0806")
 					(unit 1)
 				)
 			)
@@ -9497,6 +9568,84 @@
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c"
 					(reference "#PWR0812")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 142.24 222.25 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "61838777-512c-4427-ac5a-4986bf0316e3")
+		(property "Reference" "#PWR0846"
+			(at 142.24 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 142.24 227.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 142.24 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2cc0bf5d-89e9-46b3-9342-4d8ad71e0b77")
+		)
+		(instances
+			(project "Gateway"
+				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c"
+					(reference "#PWR0846")
 					(unit 1)
 				)
 			)
@@ -13055,115 +13204,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 133.35 210.82 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files no)
-		(dnp no)
-		(uuid "acbf531d-2b8a-4086-9440-3a7bc12d8dd1")
-		(property "Reference" "TP805"
-			(at 133.35 203.2 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "~"
-			(at 133.35 205.105 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Testpoints_Kampi:TestPoint_Pad_1.0x1.0mm"
-			(at 138.43 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 138.43 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 133.35 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manf" ""
-			(at 133.35 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manf#" ""
-			(at 133.35 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "mouser#" ""
-			(at 133.35 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "33bc8f4e-c894-4f81-aa8f-e99907be4297")
-		)
-		(instances
-			(project "Gateway"
-				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c"
-					(reference "TP805")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Regulator_Linear:MIC5317-3.3xM5")
 		(at 292.1 209.55 0)
 		(unit 1)
@@ -13280,6 +13320,120 @@
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c"
 					(reference "IC804")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 86.36 231.14 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ae5cb05d-17c1-4f5e-a0ca-f1d130bac531")
+		(property "Reference" "R802"
+			(at 88.9 229.8699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "66k5"
+			(at 88.9 232.4099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 84.582 231.14 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/72/1/PYU_RT_1_TO_0_01_ROHS_L.pdf"
+			(at 86.36 231.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 86.36 231.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "manf" "YAGEO"
+			(at 86.36 231.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "manf#" "RT0805BRD0766K5L"
+			(at 86.36 231.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "mouser#" "603-RT0805BRD0766K5L"
+			(at 86.36 231.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "676bba2f-7e55-465b-b494-d672dc939dc5")
+		)
+		(pin "2"
+			(uuid "3c826c76-24a8-4401-aaba-e1112d6d6366")
+		)
+		(instances
+			(project "Gateway"
+				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c"
+					(reference "R802")
 					(unit 1)
 				)
 			)
@@ -14535,6 +14689,120 @@
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c"
 					(reference "#PWR0814")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 142.24 217.17 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c29e56ef-68aa-4709-abc3-9dfd85badc6c")
+		(property "Reference" "C822"
+			(at 146.05 215.8999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 146.05 218.4399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 143.2052 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://datasheets.kyocera-avx.com/General-Purpose-Capacitors.pdf"
+			(at 142.24 217.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 142.24 217.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "manf" "KYOCERA AVX"
+			(at 142.24 217.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "manf#" "0805X7R106KT1AT"
+			(at 142.24 217.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "mouser#" "581-0805X7R106KT1AT"
+			(at 142.24 217.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1840004d-5427-4917-902f-68dfef91cb6f")
+		)
+		(pin "2"
+			(uuid "f9920dff-c5d6-4b5b-ac2a-073d6466eb29")
+		)
+		(instances
+			(project "Gateway"
+				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c"
+					(reference "C822")
 					(unit 1)
 				)
 			)
@@ -16196,6 +16464,115 @@
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c"
 					(reference "#PWR0845")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 142.24 210.82 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "e7a92e46-4ac1-416b-b263-08367701fa3b")
+		(property "Reference" "TP812"
+			(at 142.24 203.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" ""
+			(at 142.24 205.105 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Testpoints_Kampi:TestPoint_Pad_1.0x1.0mm"
+			(at 147.32 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 142.24 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "manf" ""
+			(at 142.24 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "manf#" ""
+			(at 142.24 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "mouser#" ""
+			(at 142.24 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fb47b411-5bd2-4fde-8c03-a7c2218f617f")
+		)
+		(instances
+			(project "Gateway"
+				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c"
+					(reference "TP812")
 					(unit 1)
 				)
 			)
