@@ -5,7 +5,7 @@
 	(uuid "d5742f03-3b1a-42e5-a384-018bd4b919aa")
 	(paper "A3")
 	(title_block
-		(date "2025-06-05")
+		(date "2026-07-09")
 		(rev "${REVISION}")
 		(company "${COMPANY}")
 	)
@@ -1880,7 +1880,7 @@
 			)
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa"
-					(page "17")
+					(page "18")
 				)
 			)
 		)

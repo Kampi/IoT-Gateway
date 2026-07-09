@@ -776,6 +776,12 @@
       "sort_field": "Reference"
     },
     "bus_aliases": {
+      "ADC": [
+        "ADC_1",
+        "ADC_2",
+        "ADC_3",
+        "ADC_4"
+      ],
       "CAN": [
         "Tx",
         "Rx"
@@ -921,6 +927,10 @@
       "Project Architecture"
     ],
     [
+      "277a9678-4850-4629-990a-e464d709b0b0",
+      "Power Input"
+    ],
+    [
       "f06537ee-772d-44d3-8c50-e0ba41038c9c",
       "Power"
     ],
@@ -941,12 +951,12 @@
       "Zigbee"
     ],
     [
-      "7a02d3a8-366e-4fb1-9f54-be0208da73cb",
-      "wMBus"
-    ],
-    [
       "38da7bfd-61a1-4734-9412-ab3ae9cd3f77",
       "Thread"
+    ],
+    [
+      "7a02d3a8-366e-4fb1-9f54-be0208da73cb",
+      "wMBus"
     ],
     [
       "80a97db3-ff4e-4b40-a5b0-8dd5c51e4d83",
@@ -971,26 +981,28 @@
     "COMPANY": "null",
     "DESIGNER": "Daniel Kampert",
     "FABRICATION_NOTES": "",
-    "GIT_HASH_PCB": "2c87805",
-    "GIT_HASH_SCH": "2c87805",
+    "GIT_HASH_PCB": "20c7ac5",
+    "GIT_HASH_SCH": "20c7ac5",
     "GIT_URL": "https://github.com/Kampi/IoT-Gateway",
     "PCB_VARIANT": "DRAFT",
     "PROJECT_NAME": "IoT-Gateway",
+    "RELEASE_BODY_2.2.0": "Version 2.2.0 not found.",
     "RELEASE_BODY_UNRELEASED": "Version Unreleased not found.",
-    "RELEASE_DATE": "2026-06-03",
-    "RELEASE_DATE_NUM": "2026-06-03",
+    "RELEASE_DATE": "2026-07-09",
+    "RELEASE_DATE_NUM": "2026-07-09",
+    "RELEASE_TITLE_2.2.0": "Version 2.2.0 not found.",
     "RELEASE_TITLE_UNRELEASED": "Version Unreleased not found.",
     "REVISION": "",
     "SHEET_NAME_1": "Cover Page",
-    "SHEET_NAME_10": "LoRa",
-    "SHEET_NAME_11": "Zigbee",
-    "SHEET_NAME_12": "wMBus",
+    "SHEET_NAME_10": "System on Module",
+    "SHEET_NAME_11": "LoRa",
+    "SHEET_NAME_12": "Zigbee",
     "SHEET_NAME_13": "Thread",
-    "SHEET_NAME_14": "Pripherals",
-    "SHEET_NAME_15": "NVMe",
-    "SHEET_NAME_16": "Ethernet",
-    "SHEET_NAME_17": "Revision History",
-    "SHEET_NAME_18": "......................................",
+    "SHEET_NAME_14": "wMBus",
+    "SHEET_NAME_15": "Peripherals",
+    "SHEET_NAME_16": "NVMe",
+    "SHEET_NAME_17": "Ethernet",
+    "SHEET_NAME_18": "Revision History",
     "SHEET_NAME_19": "......................................",
     "SHEET_NAME_2": "Block Diagram",
     "SHEET_NAME_20": "......................................",
@@ -1018,9 +1030,9 @@
     "SHEET_NAME_40": "......................................",
     "SHEET_NAME_5": "Interface - Tree",
     "SHEET_NAME_6": "Project Architecture",
-    "SHEET_NAME_7": "Power",
-    "SHEET_NAME_8": "Battery",
-    "SHEET_NAME_9": "System on Module"
+    "SHEET_NAME_7": "Power Input",
+    "SHEET_NAME_8": "Power",
+    "SHEET_NAME_9": "Battery"
   },
   "tuning_profiles": {
     "meta": {

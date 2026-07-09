@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "Power - Sequencing")
-		(date "2025-06-05")
+		(date "2026-07-09")
 		(rev "${REVISION}")
 		(company "${COMPANY}")
 	)
