@@ -7740,10 +7740,6 @@
 		(uuid "89e85dd4-c6d9-4205-a189-6c86ac871c01")
 	)
 	(no_connect
-		(at 173.99 80.01)
-		(uuid "8b6d38ae-a4cb-4d48-bbec-2b4d39c3d4a3")
-	)
-	(no_connect
 		(at 52.07 118.11)
 		(uuid "8b80f39f-48bf-46bc-a319-f88f8660809f")
 	)
@@ -8444,6 +8440,15 @@
 		(uuid "d7cf9668-f117-4e94-acb9-7be537d892ec")
 	)
 	(bus_entry
+		(at 196.85 77.47)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8c40b10-f348-4b13-858b-b51f29dcbd0f")
+	)
+	(bus_entry
 		(at 124.46 166.37)
 		(size 2.54 2.54)
 		(stroke
@@ -9083,6 +9088,16 @@
 			(type default)
 		)
 		(uuid "3725f254-ba35-462a-87f8-402c6f6dad75")
+	)
+	(wire
+		(pts
+			(xy 173.99 80.01) (xy 194.31 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "376f1d64-8580-41eb-9a7b-37af225c8102")
 	)
 	(wire
 		(pts
@@ -11556,6 +11571,16 @@
 			(justify left bottom)
 		)
 		(uuid "f0d29373-8f01-4c3a-82e7-162911c3f9bb")
+	)
+	(label "Thread.Boot"
+		(at 189.23 80.01 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f1d3742f-1259-4966-907a-576133280837")
 	)
 	(label "Thread.RxD"
 		(at 194.31 186.69 180)
