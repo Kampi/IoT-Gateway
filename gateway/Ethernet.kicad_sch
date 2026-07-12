@@ -6356,7 +6356,7 @@
 				)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" ""
 			(at 227.33 93.345 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7039,7 +7039,7 @@
 				)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" ""
 			(at 227.33 76.835 0)
 			(show_name no)
 			(do_not_autoplace no)

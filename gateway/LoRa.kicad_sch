@@ -2868,6 +2868,19 @@
 		)
 	)
 	(rectangle
+		(start 86.36 74.93)
+		(end 261.62 203.2)
+		(stroke
+			(width 1)
+			(type default)
+			(color 200 200 200 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "26b7ee78-078f-4f2e-99eb-3df7b8b50095")
+	)
+	(rectangle
 		(start 13.97 223.5199)
 		(end 119.38 283.0697)
 		(stroke
@@ -2926,6 +2939,30 @@
 			(justify bottom)
 		)
 		(uuid "725c7cfc-2465-44af-93dd-f4d8f795210a")
+	)
+	(text_box "LoRa Concentrator"
+		(exclude_from_sim no)
+		(at 87.63 193.04 0)
+		(size 172.72 8.89)
+		(margins 1.9049 1.9049 1.9049 1.9049)
+		(stroke
+			(width -0.0001)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(face "Times New Roman")
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 162 22 34 1)
+			)
+			(justify bottom)
+		)
+		(uuid "dfff3322-9d54-4755-b814-dcebcd4e790b")
 	)
 	(junction
 		(at 39.37 243.84)
@@ -4395,7 +4432,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" ""
 			(at 52.07 240.5379 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4699,7 +4736,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" ""
 			(at 128.27 162.0521 0)
 			(hide yes)
 			(show_name no)
@@ -6074,7 +6111,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" ""
 			(at 88.9 240.5379 0)
 			(show_name no)
 			(do_not_autoplace no)

@@ -4221,7 +4221,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" ""
 			(at 228.6 129.0321 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4333,7 +4333,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" ""
 			(at 57.15 240.5379 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5062,7 +5062,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" ""
 			(at 93.98 240.5379 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6155,7 +6155,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "wm-Bus"
+		(property "Value" "wM-Bus"
 			(at 105.41 251.7774 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6437,7 +6437,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" ""
 			(at 146.05 100.8379 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6549,7 +6549,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" ""
 			(at 228.6 100.8379 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6661,7 +6661,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" ""
 			(at 228.6 119.8879 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6773,7 +6773,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "wm-Bus-Antenna"
+		(property "Value" "wM-Bus-Antenna"
 			(at 201.93 276.2249 0)
 			(show_name no)
 			(do_not_autoplace no)

@@ -27,7 +27,7 @@
 	)
 	(text "Page 12"
 		(exclude_from_sim no)
-		(at 298.45 101.6 0)
+		(at 298.45 102.87 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -41,7 +41,7 @@
 	)
 	(text "Page 13"
 		(exclude_from_sim no)
-		(at 298.45 72.39 0)
+		(at 298.45 73.66 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -232,7 +232,7 @@
 	)
 	(bus
 		(pts
-			(xy 234.95 57.15) (xy 262.89 57.15)
+			(xy 234.95 58.42) (xy 262.89 58.42)
 		)
 		(stroke
 			(width 0)
@@ -312,7 +312,7 @@
 	)
 	(wire
 		(pts
-			(xy 237.49 59.69) (xy 237.49 88.9)
+			(xy 237.49 60.96) (xy 237.49 88.9)
 		)
 		(stroke
 			(width 0)
@@ -332,7 +332,7 @@
 	)
 	(wire
 		(pts
-			(xy 262.89 59.69) (xy 237.49 59.69)
+			(xy 262.89 60.96) (xy 237.49 60.96)
 		)
 		(stroke
 			(width 0)
@@ -552,7 +552,7 @@
 	)
 	(wire
 		(pts
-			(xy 247.65 88.9) (xy 262.89 88.9)
+			(xy 247.65 90.17) (xy 262.89 90.17)
 		)
 		(stroke
 			(width 0)
@@ -672,7 +672,7 @@
 	)
 	(bus
 		(pts
-			(xy 245.11 86.36) (xy 262.89 86.36)
+			(xy 245.11 87.63) (xy 262.89 87.63)
 		)
 		(stroke
 			(width 0)
@@ -732,7 +732,7 @@
 	)
 	(wire
 		(pts
-			(xy 247.65 101.6) (xy 247.65 88.9)
+			(xy 247.65 101.6) (xy 247.65 90.17)
 		)
 		(stroke
 			(width 0)
@@ -762,7 +762,7 @@
 	)
 	(bus
 		(pts
-			(xy 245.11 99.06) (xy 245.11 86.36)
+			(xy 245.11 99.06) (xy 245.11 87.63)
 		)
 		(stroke
 			(width 0)
@@ -772,7 +772,7 @@
 	)
 	(bus
 		(pts
-			(xy 234.95 86.36) (xy 234.95 57.15)
+			(xy 234.95 86.36) (xy 234.95 58.42)
 		)
 		(stroke
 			(width 0)
@@ -869,7 +869,7 @@
 		)
 	)
 	(sheet
-		(at 262.89 53.34)
+		(at 262.89 54.61)
 		(size 36.83 20.32)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -885,7 +885,7 @@
 		)
 		(uuid "38da7bfd-61a1-4734-9412-ab3ae9cd3f77")
 		(property "Sheetname" "Thread"
-			(at 262.89 52.3109 0)
+			(at 262.89 53.5809 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -897,7 +897,7 @@
 			)
 		)
 		(property "Sheetfile" "Thread.kicad_sch"
-			(at 262.89 74.2446 0)
+			(at 262.89 75.5146 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -909,7 +909,7 @@
 			)
 		)
 		(pin "Thread{Thread}" bidirectional
-			(at 262.89 57.15 180)
+			(at 262.89 58.42 180)
 			(uuid "ff1bdaa6-66ac-41c5-adc3-eaa9e61aacb1")
 			(effects
 				(font
@@ -919,7 +919,7 @@
 			)
 		)
 		(pin "Thread-Power-Enable" input
-			(at 262.89 59.69 180)
+			(at 262.89 60.96 180)
 			(uuid "c5550f30-b598-41e1-83d9-4db41a5b1b1d")
 			(effects
 				(font
@@ -1005,7 +1005,7 @@
 		)
 	)
 	(sheet
-		(at 262.89 82.55)
+		(at 262.89 83.82)
 		(size 36.83 20.32)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1021,7 +1021,7 @@
 		)
 		(uuid "3f9e85ea-c06e-4d87-98cf-dea3ce3fc587")
 		(property "Sheetname" "Zigbee"
-			(at 262.89 81.5209 0)
+			(at 262.89 82.7909 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1033,7 +1033,7 @@
 			)
 		)
 		(property "Sheetfile" "Zigbee.kicad_sch"
-			(at 262.89 103.4546 0)
+			(at 262.89 104.7246 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1045,7 +1045,7 @@
 			)
 		)
 		(pin "Zigbee{Zigbee}" bidirectional
-			(at 262.89 86.36 180)
+			(at 262.89 87.63 180)
 			(uuid "130b0260-d07e-4dc0-92a1-5065437f9de8")
 			(effects
 				(font
@@ -1055,7 +1055,7 @@
 			)
 		)
 		(pin "Zigbee-Power-Enable" input
-			(at 262.89 88.9 180)
+			(at 262.89 90.17 180)
 			(uuid "d14d1ea3-1dd9-4a12-b7da-08527b0bcad7")
 			(effects
 				(font

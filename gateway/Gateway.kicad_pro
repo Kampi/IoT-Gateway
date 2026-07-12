@@ -899,7 +899,7 @@
         "uuid": "d5742f03-3b1a-42e5-a384-018bd4b919aa"
       }
     ],
-    "used_designators": "#PWR1318-1319,R1312,IC1304,TP1309",
+    "used_designators": "LED501,C501-509,L501,D501,R501-505,R1006,R1508,#FLG501,IC501,TP501-503,#PWR501-513",
     "variants": []
   },
   "sheets": [
@@ -989,8 +989,8 @@
     "PROJECT_NAME": "IoT-Gateway",
     "RELEASE_BODY_2.2.0": "Version 2.2.0 not found.",
     "RELEASE_BODY_UNRELEASED": "Version Unreleased not found.",
-    "RELEASE_DATE": "2026-07-12",
-    "RELEASE_DATE_NUM": "2026-07-12",
+    "RELEASE_DATE": "2026-07-14",
+    "RELEASE_DATE_NUM": "2026-07-14",
     "RELEASE_TITLE_2.2.0": "Version 2.2.0 not found.",
     "RELEASE_TITLE_UNRELEASED": "Version Unreleased not found.",
     "REVISION": "",
