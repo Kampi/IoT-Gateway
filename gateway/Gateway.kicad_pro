@@ -836,7 +836,8 @@
         "RTS",
         "CTS",
         "TxD",
-        "RxD"
+        "RxD",
+        "Boot"
       ],
       "Zigbee": [
         "RxD",
@@ -898,7 +899,7 @@
         "uuid": "d5742f03-3b1a-42e5-a384-018bd4b919aa"
       }
     ],
-    "used_designators": "#PWR1317,X1302",
+    "used_designators": "#PWR1318-1319,R1312,IC1304,TP1309",
     "variants": []
   },
   "sheets": [

@@ -447,7 +447,7 @@
 		<Function name="gpio4.IO[11]" pinid="104" pinname="SAI1_TXC" checked="1" parentname="GPIO_SODIMM_104"></Function>
 		<Function name="gpio4.IO[12]" pinid="106" pinname="SAI1_TXD0" checked="1" parentname="GPIO_SODIMM_106"></Function>
 		<Function name="gpio4.IO[13]" pinid="108" pinname="SAI1_TXD1" checked="1" parentname="GPIO_SODIMM_108"></Function>
-		<Function name="gpio4.IO[14]" pinid="112" pinname="SAI1_TXD2" checked="-1" parentname="GPIO_SODIMM_112"></Function>
+		<Function name="gpio4.IO[14]" pinid="112" pinname="SAI1_TXD2" checked="1" parentname="GPIO_SODIMM_112"></Function>
 		<Function name="gpio4.IO[15]" pinid="114" pinname="SAI1_TXD3" checked="-1" parentname="GPIO_SODIMM_114"></Function>
 		<Function name="gpio4.IO[16]" pinid="116" pinname="SAI1_TXD4" checked="-1" parentname="GPIO_SODIMM_116"></Function>
 		<Function name="gpio4.IO[18]" pinid="118" pinname="SAI1_TXD6" checked="-1" parentname="GPIO_SODIMM_118"></Function>
@@ -1351,7 +1351,7 @@
 		<Category name="GPIO_SODIMM_104" checked="1"></Category>
 		<Category name="GPIO_SODIMM_106" checked="1"></Category>
 		<Category name="GPIO_SODIMM_108" checked="1"></Category>
-		<Category name="GPIO_SODIMM_112" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_112" checked="1"></Category>
 		<Category name="GPIO_SODIMM_114" checked="-1"></Category>
 		<Category name="GPIO_SODIMM_116" checked="-1"></Category>
 		<Category name="GPIO_SODIMM_118" checked="-1"></Category>

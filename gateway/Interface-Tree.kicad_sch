@@ -11,16 +11,6 @@
 		(company "${COMPANY}")
 	)
 	(lib_symbols)
-	(text "TODO: I2C Adresses"
-		(exclude_from_sim no)
-		(at 275.336 209.55 0)
-		(effects
-			(font
-				(size 6 6)
-			)
-		)
-		(uuid "03f931ae-7697-4ecc-bfa7-220f6e28bc0a")
-	)
 	(text "I2C_1: I2C"
 		(exclude_from_sim no)
 		(at 199.898 176.784 0)
@@ -1688,13 +1678,13 @@
 			2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54
 			2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54
 			2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54
-			2.54 2.54
+			2.54 2.54 2.54
 		)
 		(uuid "34661447-e3c9-454f-8f20-dc3d07dd8700")
 		(cells
 			(table_cell "Netzname"
 				(exclude_from_sim no)
-				(at 13.97 105.41 0)
+				(at 13.97 101.6 0)
 				(size 29.21 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1713,7 +1703,7 @@
 			)
 			(table_cell "SoM Pin"
 				(exclude_from_sim no)
-				(at 43.18 105.41 0)
+				(at 43.18 101.6 0)
 				(size 22.86 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1732,7 +1722,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 105.41 0)
+				(at 66.04 101.6 0)
 				(size 0 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1751,7 +1741,7 @@
 			)
 			(table_cell "I2C.SDA"
 				(exclude_from_sim no)
-				(at 13.97 109.22 0)
+				(at 13.97 105.41 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1768,7 +1758,7 @@
 			)
 			(table_cell "12"
 				(exclude_from_sim no)
-				(at 43.18 109.22 0)
+				(at 43.18 105.41 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1785,7 +1775,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 109.22 0)
+				(at 66.04 105.41 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1802,7 +1792,7 @@
 			)
 			(table_cell "I2C.SCL"
 				(exclude_from_sim no)
-				(at 13.97 111.76 0)
+				(at 13.97 107.95 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1819,7 +1809,7 @@
 			)
 			(table_cell "14"
 				(exclude_from_sim no)
-				(at 43.18 111.76 0)
+				(at 43.18 107.95 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1836,7 +1826,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 111.76 0)
+				(at 66.04 107.95 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1853,7 +1843,7 @@
 			)
 			(table_cell "GPIO.Num0"
 				(exclude_from_sim no)
-				(at 13.97 114.3 0)
+				(at 13.97 110.49 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1870,7 +1860,7 @@
 			)
 			(table_cell "17"
 				(exclude_from_sim no)
-				(at 43.18 114.3 0)
+				(at 43.18 110.49 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1887,7 +1877,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 114.3 0)
+				(at 66.04 110.49 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1904,7 +1894,7 @@
 			)
 			(table_cell "GPIO.Num1"
 				(exclude_from_sim no)
-				(at 13.97 116.84 0)
+				(at 13.97 113.03 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1921,7 +1911,7 @@
 			)
 			(table_cell "19"
 				(exclude_from_sim no)
-				(at 43.18 116.84 0)
+				(at 43.18 113.03 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1938,7 +1928,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 116.84 0)
+				(at 66.04 113.03 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1955,7 +1945,7 @@
 			)
 			(table_cell "GPIO.Num2"
 				(exclude_from_sim no)
-				(at 13.97 119.38 0)
+				(at 13.97 115.57 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1972,7 +1962,7 @@
 			)
 			(table_cell "21"
 				(exclude_from_sim no)
-				(at 43.18 119.38 0)
+				(at 43.18 115.57 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1989,7 +1979,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 119.38 0)
+				(at 66.04 115.57 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2006,7 +1996,7 @@
 			)
 			(table_cell "CAN.Tx"
 				(exclude_from_sim no)
-				(at 13.97 121.92 0)
+				(at 13.97 118.11 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2023,7 +2013,7 @@
 			)
 			(table_cell "20"
 				(exclude_from_sim no)
-				(at 43.18 121.92 0)
+				(at 43.18 118.11 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2040,7 +2030,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 121.92 0)
+				(at 66.04 118.11 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2057,7 +2047,7 @@
 			)
 			(table_cell "CAN.Rx"
 				(exclude_from_sim no)
-				(at 13.97 124.46 0)
+				(at 13.97 120.65 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2074,7 +2064,7 @@
 			)
 			(table_cell "22"
 				(exclude_from_sim no)
-				(at 43.18 124.46 0)
+				(at 43.18 120.65 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2091,7 +2081,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 124.46 0)
+				(at 66.04 120.65 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2108,7 +2098,7 @@
 			)
 			(table_cell "LoRa-Power-Enable"
 				(exclude_from_sim no)
-				(at 13.97 127 0)
+				(at 13.97 123.19 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2125,7 +2115,7 @@
 			)
 			(table_cell "30"
 				(exclude_from_sim no)
-				(at 43.18 127 0)
+				(at 43.18 123.19 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2142,7 +2132,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 127 0)
+				(at 66.04 123.19 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2159,7 +2149,7 @@
 			)
 			(table_cell "Zigbee-Power-Enable"
 				(exclude_from_sim no)
-				(at 13.97 129.54 0)
+				(at 13.97 125.73 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2176,7 +2166,7 @@
 			)
 			(table_cell "32"
 				(exclude_from_sim no)
-				(at 43.18 129.54 0)
+				(at 43.18 125.73 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2193,7 +2183,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 129.54 0)
+				(at 66.04 125.73 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2210,7 +2200,7 @@
 			)
 			(table_cell "wM-Bus-Power-Enable"
 				(exclude_from_sim no)
-				(at 13.97 132.08 0)
+				(at 13.97 128.27 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2227,7 +2217,7 @@
 			)
 			(table_cell "34"
 				(exclude_from_sim no)
-				(at 43.18 132.08 0)
+				(at 43.18 128.27 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2244,7 +2234,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 132.08 0)
+				(at 66.04 128.27 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2261,7 +2251,7 @@
 			)
 			(table_cell "Thread-Power-Enable"
 				(exclude_from_sim no)
-				(at 13.97 134.62 0)
+				(at 13.97 130.81 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2278,7 +2268,7 @@
 			)
 			(table_cell "36"
 				(exclude_from_sim no)
-				(at 43.18 134.62 0)
+				(at 43.18 130.81 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2295,7 +2285,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 134.62 0)
+				(at 66.04 130.81 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2312,7 +2302,7 @@
 			)
 			(table_cell "Battery-Charge-Enable"
 				(exclude_from_sim no)
-				(at 13.97 137.16 0)
+				(at 13.97 133.35 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2329,7 +2319,7 @@
 			)
 			(table_cell "42"
 				(exclude_from_sim no)
-				(at 43.18 137.16 0)
+				(at 43.18 133.35 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2346,7 +2336,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 137.16 0)
+				(at 66.04 133.35 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2363,7 +2353,7 @@
 			)
 			(table_cell "Battery-Charge"
 				(exclude_from_sim no)
-				(at 13.97 139.7 0)
+				(at 13.97 135.89 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2380,7 +2370,7 @@
 			)
 			(table_cell "44"
 				(exclude_from_sim no)
-				(at 43.18 139.7 0)
+				(at 43.18 135.89 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2397,7 +2387,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 139.7 0)
+				(at 66.04 135.89 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2414,7 +2404,7 @@
 			)
 			(table_cell "Battery-Alert"
 				(exclude_from_sim no)
-				(at 13.97 142.24 0)
+				(at 13.97 138.43 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2431,7 +2421,7 @@
 			)
 			(table_cell "46"
 				(exclude_from_sim no)
-				(at 43.18 142.24 0)
+				(at 43.18 138.43 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2448,7 +2438,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 142.24 0)
+				(at 66.04 138.43 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2465,7 +2455,7 @@
 			)
 			(table_cell "GPIO.Num5"
 				(exclude_from_sim no)
-				(at 13.97 144.78 0)
+				(at 13.97 140.97 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2482,7 +2472,7 @@
 			)
 			(table_cell "91"
 				(exclude_from_sim no)
-				(at 43.18 144.78 0)
+				(at 43.18 140.97 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2499,7 +2489,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 144.78 0)
+				(at 66.04 140.97 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2516,7 +2506,7 @@
 			)
 			(table_cell "GPIO.Num6"
 				(exclude_from_sim no)
-				(at 13.97 147.32 0)
+				(at 13.97 143.51 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2533,7 +2523,7 @@
 			)
 			(table_cell "93"
 				(exclude_from_sim no)
-				(at 43.18 147.32 0)
+				(at 43.18 143.51 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2550,7 +2540,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 147.32 0)
+				(at 66.04 143.51 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2567,7 +2557,7 @@
 			)
 			(table_cell "GPIO.Num3"
 				(exclude_from_sim no)
-				(at 13.97 149.86 0)
+				(at 13.97 146.05 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2584,7 +2574,7 @@
 			)
 			(table_cell "94"
 				(exclude_from_sim no)
-				(at 43.18 149.86 0)
+				(at 43.18 146.05 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2601,7 +2591,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 149.86 0)
+				(at 66.04 146.05 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2618,7 +2608,7 @@
 			)
 			(table_cell "GPIO.Num7"
 				(exclude_from_sim no)
-				(at 13.97 152.4 0)
+				(at 13.97 148.59 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2635,7 +2625,7 @@
 			)
 			(table_cell "95"
 				(exclude_from_sim no)
-				(at 43.18 152.4 0)
+				(at 43.18 148.59 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2652,7 +2642,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 152.4 0)
+				(at 66.04 148.59 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2669,7 +2659,7 @@
 			)
 			(table_cell "GPIO.Num4"
 				(exclude_from_sim no)
-				(at 13.97 154.94 0)
+				(at 13.97 151.13 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2686,7 +2676,7 @@
 			)
 			(table_cell "96"
 				(exclude_from_sim no)
-				(at 43.18 154.94 0)
+				(at 43.18 151.13 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2703,7 +2693,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 154.94 0)
+				(at 66.04 151.13 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2720,7 +2710,7 @@
 			)
 			(table_cell "wM-Bus.Reset"
 				(exclude_from_sim no)
-				(at 13.97 157.48 0)
+				(at 13.97 153.67 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2737,7 +2727,7 @@
 			)
 			(table_cell "102"
 				(exclude_from_sim no)
-				(at 43.18 157.48 0)
+				(at 43.18 153.67 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2754,7 +2744,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 157.48 0)
+				(at 66.04 153.67 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2771,7 +2761,7 @@
 			)
 			(table_cell "Zigbee.Reset"
 				(exclude_from_sim no)
-				(at 13.97 160.02 0)
+				(at 13.97 156.21 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2788,7 +2778,7 @@
 			)
 			(table_cell "104"
 				(exclude_from_sim no)
-				(at 43.18 160.02 0)
+				(at 43.18 156.21 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2805,7 +2795,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 160.02 0)
+				(at 66.04 156.21 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2822,7 +2812,7 @@
 			)
 			(table_cell "Zigbee.Boot"
 				(exclude_from_sim no)
-				(at 13.97 162.56 0)
+				(at 13.97 158.75 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2839,7 +2829,7 @@
 			)
 			(table_cell "106"
 				(exclude_from_sim no)
-				(at 43.18 162.56 0)
+				(at 43.18 158.75 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2856,7 +2846,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 162.56 0)
+				(at 66.04 158.75 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2873,7 +2863,7 @@
 			)
 			(table_cell "Thread.Reset"
 				(exclude_from_sim no)
-				(at 13.97 165.1 0)
+				(at 13.97 161.29 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2890,7 +2880,7 @@
 			)
 			(table_cell "108"
 				(exclude_from_sim no)
-				(at 43.18 165.1 0)
+				(at 43.18 161.29 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2907,7 +2897,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 165.1 0)
+				(at 66.04 161.29 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2922,9 +2912,60 @@
 				)
 				(uuid "8985ca6b-7919-4a8b-a19b-e36035f8dab6")
 			)
+			(table_cell "Thread.Boot"
+				(exclude_from_sim no)
+				(at 13.97 163.83 0)
+				(size 29.21 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "c67495f5-a9c8-4a0f-9ec0-dd705ea186ac")
+			)
+			(table_cell "112"
+				(exclude_from_sim no)
+				(at 43.18 163.83 0)
+				(size 22.86 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "e44beeec-9cd7-4e33-993b-21d66b150e83")
+			)
+			(table_cell ""
+				(exclude_from_sim no)
+				(at 66.04 163.83 0)
+				(size 0 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "c9d18b8e-29d5-4463-bab4-0a16c776fc70")
+			)
 			(table_cell "Console-RxD"
 				(exclude_from_sim no)
-				(at 13.97 167.64 0)
+				(at 13.97 166.37 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2941,7 +2982,7 @@
 			)
 			(table_cell "129"
 				(exclude_from_sim no)
-				(at 43.18 167.64 0)
+				(at 43.18 166.37 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2958,7 +2999,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 167.64 0)
+				(at 66.04 166.37 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2975,7 +3016,7 @@
 			)
 			(table_cell "Console-TxD"
 				(exclude_from_sim no)
-				(at 13.97 170.18 0)
+				(at 13.97 168.91 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2992,7 +3033,7 @@
 			)
 			(table_cell "131"
 				(exclude_from_sim no)
-				(at 43.18 170.18 0)
+				(at 43.18 168.91 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3009,7 +3050,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 170.18 0)
+				(at 66.04 168.91 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3026,7 +3067,7 @@
 			)
 			(table_cell "wM-Bus.RxD"
 				(exclude_from_sim no)
-				(at 13.97 172.72 0)
+				(at 13.97 171.45 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3043,7 +3084,7 @@
 			)
 			(table_cell "137"
 				(exclude_from_sim no)
-				(at 43.18 172.72 0)
+				(at 43.18 171.45 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3060,7 +3101,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 172.72 0)
+				(at 66.04 171.45 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3077,7 +3118,7 @@
 			)
 			(table_cell "wM-Bus.TxD"
 				(exclude_from_sim no)
-				(at 13.97 175.26 0)
+				(at 13.97 173.99 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3094,7 +3135,7 @@
 			)
 			(table_cell "139"
 				(exclude_from_sim no)
-				(at 43.18 175.26 0)
+				(at 43.18 173.99 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3111,7 +3152,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 175.26 0)
+				(at 66.04 173.99 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3128,7 +3169,7 @@
 			)
 			(table_cell "Zigbee.RxD"
 				(exclude_from_sim no)
-				(at 13.97 177.8 0)
+				(at 13.97 176.53 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3145,7 +3186,7 @@
 			)
 			(table_cell "147"
 				(exclude_from_sim no)
-				(at 43.18 177.8 0)
+				(at 43.18 176.53 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3162,7 +3203,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 177.8 0)
+				(at 66.04 176.53 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3179,7 +3220,7 @@
 			)
 			(table_cell "Zigbee.TxD"
 				(exclude_from_sim no)
-				(at 13.97 180.34 0)
+				(at 13.97 179.07 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3196,7 +3237,7 @@
 			)
 			(table_cell "149"
 				(exclude_from_sim no)
-				(at 43.18 180.34 0)
+				(at 43.18 179.07 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3213,7 +3254,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 180.34 0)
+				(at 66.04 179.07 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3230,7 +3271,7 @@
 			)
 			(table_cell "PCIe.CLK-REQ"
 				(exclude_from_sim no)
-				(at 13.97 182.88 0)
+				(at 13.97 181.61 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3247,7 +3288,7 @@
 			)
 			(table_cell "151"
 				(exclude_from_sim no)
-				(at 43.18 182.88 0)
+				(at 43.18 181.61 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3264,7 +3305,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 182.88 0)
+				(at 66.04 181.61 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3281,7 +3322,7 @@
 			)
 			(table_cell "USB.VBUS"
 				(exclude_from_sim no)
-				(at 13.97 185.42 0)
+				(at 13.97 184.15 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3298,7 +3339,7 @@
 			)
 			(table_cell "159"
 				(exclude_from_sim no)
-				(at 43.18 185.42 0)
+				(at 43.18 184.15 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3315,7 +3356,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 185.42 0)
+				(at 66.04 184.15 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3332,7 +3373,7 @@
 			)
 			(table_cell "USB.ID"
 				(exclude_from_sim no)
-				(at 13.97 187.96 0)
+				(at 13.97 186.69 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3349,7 +3390,7 @@
 			)
 			(table_cell "161"
 				(exclude_from_sim no)
-				(at 43.18 187.96 0)
+				(at 43.18 186.69 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3366,7 +3407,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 187.96 0)
+				(at 66.04 186.69 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3383,7 +3424,7 @@
 			)
 			(table_cell "USB.D_N"
 				(exclude_from_sim no)
-				(at 13.97 190.5 0)
+				(at 13.97 189.23 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3400,7 +3441,7 @@
 			)
 			(table_cell "163"
 				(exclude_from_sim no)
-				(at 43.18 190.5 0)
+				(at 43.18 189.23 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3417,7 +3458,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 190.5 0)
+				(at 66.04 189.23 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3434,7 +3475,7 @@
 			)
 			(table_cell "USB.D_P"
 				(exclude_from_sim no)
-				(at 13.97 193.04 0)
+				(at 13.97 191.77 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3451,7 +3492,7 @@
 			)
 			(table_cell "165"
 				(exclude_from_sim no)
-				(at 43.18 193.04 0)
+				(at 43.18 191.77 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3468,7 +3509,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 193.04 0)
+				(at 66.04 191.77 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3485,7 +3526,7 @@
 			)
 			(table_cell "LoRa.D_N"
 				(exclude_from_sim no)
-				(at 13.97 195.58 0)
+				(at 13.97 194.31 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3502,7 +3543,7 @@
 			)
 			(table_cell "181"
 				(exclude_from_sim no)
-				(at 43.18 195.58 0)
+				(at 43.18 194.31 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3519,7 +3560,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 195.58 0)
+				(at 66.04 194.31 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3536,7 +3577,7 @@
 			)
 			(table_cell "LoRa.D_P"
 				(exclude_from_sim no)
-				(at 13.97 198.12 0)
+				(at 13.97 196.85 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3553,7 +3594,7 @@
 			)
 			(table_cell "183"
 				(exclude_from_sim no)
-				(at 43.18 198.12 0)
+				(at 43.18 196.85 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3570,7 +3611,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 198.12 0)
+				(at 66.04 196.85 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3587,7 +3628,7 @@
 			)
 			(table_cell "LoRa.Reset"
 				(exclude_from_sim no)
-				(at 13.97 200.66 0)
+				(at 13.97 199.39 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3604,7 +3645,7 @@
 			)
 			(table_cell "185"
 				(exclude_from_sim no)
-				(at 43.18 200.66 0)
+				(at 43.18 199.39 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3621,7 +3662,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 200.66 0)
+				(at 66.04 199.39 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3638,7 +3679,7 @@
 			)
 			(table_cell "SSD-Power-Enable"
 				(exclude_from_sim no)
-				(at 13.97 203.2 0)
+				(at 13.97 201.93 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3655,7 +3696,7 @@
 			)
 			(table_cell "187"
 				(exclude_from_sim no)
-				(at 43.18 203.2 0)
+				(at 43.18 201.93 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3672,7 +3713,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 203.2 0)
+				(at 66.04 201.93 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3689,7 +3730,7 @@
 			)
 			(table_cell "Thread.RxD"
 				(exclude_from_sim no)
-				(at 13.97 205.74 0)
+				(at 13.97 204.47 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3706,7 +3747,7 @@
 			)
 			(table_cell "196"
 				(exclude_from_sim no)
-				(at 43.18 205.74 0)
+				(at 43.18 204.47 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3723,7 +3764,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 205.74 0)
+				(at 66.04 204.47 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3740,7 +3781,7 @@
 			)
 			(table_cell "Thread.RTS"
 				(exclude_from_sim no)
-				(at 13.97 208.28 0)
+				(at 13.97 207.01 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3757,7 +3798,7 @@
 			)
 			(table_cell "198"
 				(exclude_from_sim no)
-				(at 43.18 208.28 0)
+				(at 43.18 207.01 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3774,7 +3815,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 208.28 0)
+				(at 66.04 207.01 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3791,7 +3832,7 @@
 			)
 			(table_cell "Thread.TxD"
 				(exclude_from_sim no)
-				(at 13.97 210.82 0)
+				(at 13.97 209.55 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3808,7 +3849,7 @@
 			)
 			(table_cell "200"
 				(exclude_from_sim no)
-				(at 43.18 210.82 0)
+				(at 43.18 209.55 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3825,7 +3866,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 210.82 0)
+				(at 66.04 209.55 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3842,7 +3883,7 @@
 			)
 			(table_cell "Thread.CTS"
 				(exclude_from_sim no)
-				(at 13.97 213.36 0)
+				(at 13.97 212.09 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3859,7 +3900,7 @@
 			)
 			(table_cell "202"
 				(exclude_from_sim no)
-				(at 43.18 213.36 0)
+				(at 43.18 212.09 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3876,7 +3917,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 213.36 0)
+				(at 66.04 212.09 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3893,7 +3934,7 @@
 			)
 			(table_cell "LED Ready"
 				(exclude_from_sim no)
-				(at 13.97 215.9 0)
+				(at 13.97 214.63 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3910,7 +3951,7 @@
 			)
 			(table_cell "206"
 				(exclude_from_sim no)
-				(at 43.18 215.9 0)
+				(at 43.18 214.63 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3927,7 +3968,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 215.9 0)
+				(at 66.04 214.63 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3944,7 +3985,7 @@
 			)
 			(table_cell "PowerMux-Status"
 				(exclude_from_sim no)
-				(at 13.97 218.44 0)
+				(at 13.97 217.17 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3961,7 +4002,7 @@
 			)
 			(table_cell "210"
 				(exclude_from_sim no)
-				(at 43.18 218.44 0)
+				(at 43.18 217.17 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3978,7 +4019,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 218.44 0)
+				(at 66.04 217.17 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3995,7 +4036,7 @@
 			)
 			(table_cell "PWR_1V8_MOCI"
 				(exclude_from_sim no)
-				(at 13.97 220.98 0)
+				(at 13.97 219.71 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4012,7 +4053,7 @@
 			)
 			(table_cell "214"
 				(exclude_from_sim no)
-				(at 43.18 220.98 0)
+				(at 43.18 219.71 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4029,7 +4070,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 220.98 0)
+				(at 66.04 219.71 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4046,7 +4087,7 @@
 			)
 			(table_cell "Ethernet.TRD0_P"
 				(exclude_from_sim no)
-				(at 13.97 223.52 0)
+				(at 13.97 222.25 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4063,7 +4104,7 @@
 			)
 			(table_cell "225"
 				(exclude_from_sim no)
-				(at 43.18 223.52 0)
+				(at 43.18 222.25 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4080,7 +4121,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 223.52 0)
+				(at 66.04 222.25 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4097,7 +4138,7 @@
 			)
 			(table_cell "PCIe.CLK_N"
 				(exclude_from_sim no)
-				(at 13.97 226.06 0)
+				(at 13.97 224.79 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4114,7 +4155,7 @@
 			)
 			(table_cell "226"
 				(exclude_from_sim no)
-				(at 43.18 226.06 0)
+				(at 43.18 224.79 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4131,7 +4172,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 226.06 0)
+				(at 66.04 224.79 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4148,7 +4189,7 @@
 			)
 			(table_cell "Ethernet.TRD0_N"
 				(exclude_from_sim no)
-				(at 13.97 228.6 0)
+				(at 13.97 227.33 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4165,7 +4206,7 @@
 			)
 			(table_cell "227"
 				(exclude_from_sim no)
-				(at 43.18 228.6 0)
+				(at 43.18 227.33 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4182,7 +4223,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 228.6 0)
+				(at 66.04 227.33 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4199,7 +4240,7 @@
 			)
 			(table_cell "PCIe.CLK_P"
 				(exclude_from_sim no)
-				(at 13.97 231.14 0)
+				(at 13.97 229.87 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4216,7 +4257,7 @@
 			)
 			(table_cell "228"
 				(exclude_from_sim no)
-				(at 43.18 231.14 0)
+				(at 43.18 229.87 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4233,7 +4274,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 231.14 0)
+				(at 66.04 229.87 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4250,7 +4291,7 @@
 			)
 			(table_cell "Ethernet.TRD1_N"
 				(exclude_from_sim no)
-				(at 13.97 233.68 0)
+				(at 13.97 232.41 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4267,7 +4308,7 @@
 			)
 			(table_cell "231"
 				(exclude_from_sim no)
-				(at 43.18 233.68 0)
+				(at 43.18 232.41 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4284,7 +4325,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 233.68 0)
+				(at 66.04 232.41 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4301,7 +4342,7 @@
 			)
 			(table_cell "PCIe.RX_P"
 				(exclude_from_sim no)
-				(at 13.97 236.22 0)
+				(at 13.97 234.95 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4318,7 +4359,7 @@
 			)
 			(table_cell "234"
 				(exclude_from_sim no)
-				(at 43.18 236.22 0)
+				(at 43.18 234.95 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4335,7 +4376,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 236.22 0)
+				(at 66.04 234.95 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4352,7 +4393,7 @@
 			)
 			(table_cell "Ethernet.TRD1_P"
 				(exclude_from_sim no)
-				(at 13.97 238.76 0)
+				(at 13.97 237.49 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4369,7 +4410,7 @@
 			)
 			(table_cell "233"
 				(exclude_from_sim no)
-				(at 43.18 238.76 0)
+				(at 43.18 237.49 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4386,7 +4427,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 238.76 0)
+				(at 66.04 237.49 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4403,7 +4444,7 @@
 			)
 			(table_cell "Ethernet.LED-Yellow"
 				(exclude_from_sim no)
-				(at 13.97 241.3 0)
+				(at 13.97 240.03 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4420,7 +4461,7 @@
 			)
 			(table_cell "235"
 				(exclude_from_sim no)
-				(at 43.18 241.3 0)
+				(at 43.18 240.03 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4437,7 +4478,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 241.3 0)
+				(at 66.04 240.03 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4454,7 +4495,7 @@
 			)
 			(table_cell "PCIe.RX_N"
 				(exclude_from_sim no)
-				(at 13.97 243.84 0)
+				(at 13.97 242.57 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4471,7 +4512,7 @@
 			)
 			(table_cell "236"
 				(exclude_from_sim no)
-				(at 43.18 243.84 0)
+				(at 43.18 242.57 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4488,7 +4529,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 243.84 0)
+				(at 66.04 242.57 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4505,7 +4546,7 @@
 			)
 			(table_cell "Ethernet.LED-Green"
 				(exclude_from_sim no)
-				(at 13.97 246.38 0)
+				(at 13.97 245.11 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4522,7 +4563,7 @@
 			)
 			(table_cell "237"
 				(exclude_from_sim no)
-				(at 43.18 246.38 0)
+				(at 43.18 245.11 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4539,7 +4580,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 246.38 0)
+				(at 66.04 245.11 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4556,7 +4597,7 @@
 			)
 			(table_cell "PCIe.TX_P"
 				(exclude_from_sim no)
-				(at 13.97 248.92 0)
+				(at 13.97 247.65 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4573,7 +4614,7 @@
 			)
 			(table_cell "238"
 				(exclude_from_sim no)
-				(at 43.18 248.92 0)
+				(at 43.18 247.65 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4590,7 +4631,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 248.92 0)
+				(at 66.04 247.65 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4607,7 +4648,7 @@
 			)
 			(table_cell "Ethernet.TRD2_P"
 				(exclude_from_sim no)
-				(at 13.97 251.46 0)
+				(at 13.97 250.19 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4624,7 +4665,7 @@
 			)
 			(table_cell "239"
 				(exclude_from_sim no)
-				(at 43.18 251.46 0)
+				(at 43.18 250.19 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4641,7 +4682,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 251.46 0)
+				(at 66.04 250.19 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4658,7 +4699,7 @@
 			)
 			(table_cell "PCIe.TX_N"
 				(exclude_from_sim no)
-				(at 13.97 254 0)
+				(at 13.97 252.73 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4675,7 +4716,7 @@
 			)
 			(table_cell "240"
 				(exclude_from_sim no)
-				(at 43.18 254 0)
+				(at 43.18 252.73 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4692,7 +4733,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 254 0)
+				(at 66.04 252.73 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4709,7 +4750,7 @@
 			)
 			(table_cell "Ethernet.TRD2_N"
 				(exclude_from_sim no)
-				(at 13.97 256.54 0)
+				(at 13.97 255.27 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4726,7 +4767,7 @@
 			)
 			(table_cell "241"
 				(exclude_from_sim no)
-				(at 43.18 256.54 0)
+				(at 43.18 255.27 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4743,7 +4784,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 256.54 0)
+				(at 66.04 255.27 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4760,7 +4801,7 @@
 			)
 			(table_cell "PCIe.RST"
 				(exclude_from_sim no)
-				(at 13.97 259.08 0)
+				(at 13.97 257.81 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4777,7 +4818,7 @@
 			)
 			(table_cell "244"
 				(exclude_from_sim no)
-				(at 43.18 259.08 0)
+				(at 43.18 257.81 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4794,7 +4835,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 259.08 0)
+				(at 66.04 257.81 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4811,7 +4852,7 @@
 			)
 			(table_cell "Ethernet.TRD3_N"
 				(exclude_from_sim no)
-				(at 13.97 261.62 0)
+				(at 13.97 260.35 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4828,7 +4869,7 @@
 			)
 			(table_cell "245"
 				(exclude_from_sim no)
-				(at 43.18 261.62 0)
+				(at 43.18 260.35 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4845,7 +4886,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 261.62 0)
+				(at 66.04 260.35 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4862,7 +4903,7 @@
 			)
 			(table_cell "CTRL_RECOVERY_MICO"
 				(exclude_from_sim no)
-				(at 13.97 264.16 0)
+				(at 13.97 262.89 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4879,7 +4920,7 @@
 			)
 			(table_cell "246"
 				(exclude_from_sim no)
-				(at 43.18 264.16 0)
+				(at 43.18 262.89 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4896,7 +4937,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 264.16 0)
+				(at 66.04 262.89 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4913,7 +4954,7 @@
 			)
 			(table_cell "Ethernet.TRD3_P"
 				(exclude_from_sim no)
-				(at 13.97 266.7 0)
+				(at 13.97 265.43 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4930,7 +4971,7 @@
 			)
 			(table_cell "247"
 				(exclude_from_sim no)
-				(at 43.18 266.7 0)
+				(at 43.18 265.43 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4947,7 +4988,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 266.7 0)
+				(at 66.04 265.43 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4964,7 +5005,7 @@
 			)
 			(table_cell "CTRL_PWR_BTN_MICO"
 				(exclude_from_sim no)
-				(at 13.97 269.24 0)
+				(at 13.97 267.97 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4981,7 +5022,7 @@
 			)
 			(table_cell "248"
 				(exclude_from_sim no)
-				(at 43.18 269.24 0)
+				(at 43.18 267.97 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4998,7 +5039,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 269.24 0)
+				(at 66.04 267.97 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5015,7 +5056,7 @@
 			)
 			(table_cell "CTRL_FORCE_OFF_MOCI"
 				(exclude_from_sim no)
-				(at 13.97 271.78 0)
+				(at 13.97 270.51 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5032,7 +5073,7 @@
 			)
 			(table_cell "250"
 				(exclude_from_sim no)
-				(at 43.18 271.78 0)
+				(at 43.18 270.51 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5049,7 +5090,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 271.78 0)
+				(at 66.04 270.51 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5066,7 +5107,7 @@
 			)
 			(table_cell "CTRL_WAKE1_MICO"
 				(exclude_from_sim no)
-				(at 13.97 274.32 0)
+				(at 13.97 273.05 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5083,7 +5124,7 @@
 			)
 			(table_cell "252"
 				(exclude_from_sim no)
-				(at 43.18 274.32 0)
+				(at 43.18 273.05 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5100,7 +5141,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 274.32 0)
+				(at 66.04 273.05 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5117,7 +5158,7 @@
 			)
 			(table_cell "SoM-Power-Enable"
 				(exclude_from_sim no)
-				(at 13.97 276.86 0)
+				(at 13.97 275.59 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5134,7 +5175,7 @@
 			)
 			(table_cell "254"
 				(exclude_from_sim no)
-				(at 43.18 276.86 0)
+				(at 43.18 275.59 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5151,7 +5192,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 276.86 0)
+				(at 66.04 275.59 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5168,7 +5209,7 @@
 			)
 			(table_cell "CTRL_RESET_MOCI"
 				(exclude_from_sim no)
-				(at 13.97 279.4 0)
+				(at 13.97 278.13 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5185,7 +5226,7 @@
 			)
 			(table_cell "258"
 				(exclude_from_sim no)
-				(at 43.18 279.4 0)
+				(at 43.18 278.13 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5202,7 +5243,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 279.4 0)
+				(at 66.04 278.13 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5219,7 +5260,7 @@
 			)
 			(table_cell "CTRL_RESET_MICO"
 				(exclude_from_sim no)
-				(at 13.97 281.94 0)
+				(at 13.97 280.67 0)
 				(size 29.21 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5236,7 +5277,7 @@
 			)
 			(table_cell "260"
 				(exclude_from_sim no)
-				(at 43.18 281.94 0)
+				(at 43.18 280.67 0)
 				(size 22.86 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5253,7 +5294,7 @@
 			)
 			(table_cell ""
 				(exclude_from_sim no)
-				(at 66.04 281.94 0)
+				(at 66.04 280.67 0)
 				(size 0 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5267,6 +5308,170 @@
 					(justify left top)
 				)
 				(uuid "0d116078-82cb-43a2-ac25-391bd64e2721")
+			)
+		)
+	)
+	(table
+		(column_count 2)
+		(border
+			(external yes)
+			(header yes)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+		)
+		(separators
+			(rows yes)
+			(cols yes)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+		)
+		(column_widths 21.59 21.59)
+		(row_heights 3.81 2.54 2.54 2.54)
+		(uuid "459bff3e-24c7-4c0d-84fd-3277898beafd")
+		(cells
+			(table_cell "Device"
+				(exclude_from_sim no)
+				(at 13.97 82.55 0)
+				(size 21.59 3.81)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.905 1.905)
+						(thickness 0.381)
+						(bold yes)
+					)
+					(justify left top)
+				)
+				(uuid "80e4f963-8009-4df2-8d09-2adb9bfde63a")
+			)
+			(table_cell "I2C Adress"
+				(exclude_from_sim no)
+				(at 35.56 82.55 0)
+				(size 21.59 3.81)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.905 1.905)
+						(thickness 0.381)
+						(bold yes)
+					)
+					(justify left top)
+				)
+				(uuid "f6c486e3-572f-4f58-929f-211a706f272a")
+			)
+			(table_cell "INA219BIDR"
+				(exclude_from_sim no)
+				(at 13.97 86.36 0)
+				(size 21.59 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "dacc6303-4564-4658-ac71-2248c075dac2")
+			)
+			(table_cell "0x40"
+				(exclude_from_sim no)
+				(at 35.56 86.36 0)
+				(size 21.59 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "de14a699-e956-43a0-8089-11eeac4faeba")
+			)
+			(table_cell "MAX17048"
+				(exclude_from_sim no)
+				(at 13.97 88.9 0)
+				(size 21.59 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "928fa9cc-8f43-47fa-8ea5-701b569a92ea")
+			)
+			(table_cell "0x36"
+				(exclude_from_sim no)
+				(at 35.56 88.9 0)
+				(size 21.59 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "3e635774-948c-4531-a1d8-da007a41b4f9")
+			)
+			(table_cell "ATECC608B-SSHDA"
+				(exclude_from_sim no)
+				(at 13.97 91.44 0)
+				(size 21.59 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "868a8146-d530-4fd5-b4f7-669b8f1eb42c")
+			)
+			(table_cell "0x60"
+				(exclude_from_sim no)
+				(at 35.56 91.44 0)
+				(size 21.59 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "4a018ddb-915d-4e85-a284-16f8ee6e9bfa")
 			)
 		)
 	)
