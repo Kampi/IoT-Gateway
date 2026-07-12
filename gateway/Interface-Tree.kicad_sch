@@ -11,86 +11,6 @@
 		(company "${COMPANY}")
 	)
 	(lib_symbols)
-	(text "I2C_1: I2C"
-		(exclude_from_sim no)
-		(at 199.898 176.784 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "1703bdf2-05b6-4e43-a759-51ba6e3e253c")
-	)
-	(text "CAN_1: CAN"
-		(exclude_from_sim no)
-		(at 198.12 171.958 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "1aa54dc9-f4de-45f0-b085-f82192b130da")
-	)
-	(text "UART_4: Thread"
-		(exclude_from_sim no)
-		(at 220.98 179.578 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "526e2779-dd43-47c6-8efc-5e818d0702a2")
-	)
-	(text "UART_3: Zigbee"
-		(exclude_from_sim no)
-		(at 220.98 171.704 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "58fa8114-2770-4afd-9958-4c21b260c961")
-	)
-	(text "USB_1: OTG"
-		(exclude_from_sim no)
-		(at 201.168 185.166 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "78cab92f-b835-4301-8cc0-43fe7a81df68")
-	)
-	(text "UART_1: Console"
-		(exclude_from_sim no)
-		(at 221.742 176.784 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "8682ffba-2877-4bae-a3cf-de6a1d33e87d")
-	)
-	(text "UART_2: wMBus"
-		(exclude_from_sim no)
-		(at 221.488 174.498 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "94c1e81c-72ab-4fe7-a7b3-c2272115b156")
-	)
-	(text "USB_2: LoRa"
-		(exclude_from_sim no)
-		(at 201.422 181.61 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "d733fa93-dee2-4c67-aa46-8d821ab714c7")
-	)
 	(text_box "[${#}] ${TITLE}"
 		(exclude_from_sim no)
 		(at 12.7 12.7 0)
@@ -5472,6 +5392,340 @@
 					(justify left top)
 				)
 				(uuid "4a018ddb-915d-4e85-a284-16f8ee6e9bfa")
+			)
+		)
+	)
+	(table
+		(column_count 2)
+		(border
+			(external yes)
+			(header yes)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+		)
+		(separators
+			(rows yes)
+			(cols yes)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+		)
+		(column_widths 21.59 26.67)
+		(row_heights 3.81 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54)
+		(uuid "d0b73fae-69f9-43ec-88a5-591665f2f9b5")
+		(cells
+			(table_cell "Interface"
+				(exclude_from_sim no)
+				(at 68.58 259.08 0)
+				(size 21.59 3.81)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.905 1.905)
+						(thickness 0.381)
+						(bold yes)
+					)
+					(justify left top)
+				)
+				(uuid "80e4f963-8009-4df2-8d09-2adb9bfde63a")
+			)
+			(table_cell "Description"
+				(exclude_from_sim no)
+				(at 90.17 259.08 0)
+				(size 26.67 3.81)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.905 1.905)
+						(thickness 0.381)
+						(bold yes)
+					)
+					(justify left top)
+				)
+				(uuid "f6c486e3-572f-4f58-929f-211a706f272a")
+			)
+			(table_cell "CAN_1"
+				(exclude_from_sim no)
+				(at 68.58 262.89 0)
+				(size 21.59 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "dacc6303-4564-4658-ac71-2248c075dac2")
+			)
+			(table_cell "General CAN interface"
+				(exclude_from_sim no)
+				(at 90.17 262.89 0)
+				(size 26.67 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "de14a699-e956-43a0-8089-11eeac4faeba")
+			)
+			(table_cell "I2C_1"
+				(exclude_from_sim no)
+				(at 68.58 265.43 0)
+				(size 21.59 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "928fa9cc-8f43-47fa-8ea5-701b569a92ea")
+			)
+			(table_cell "General I2C interface"
+				(exclude_from_sim no)
+				(at 90.17 265.43 0)
+				(size 26.67 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "3e635774-948c-4531-a1d8-da007a41b4f9")
+			)
+			(table_cell "USB_1"
+				(exclude_from_sim no)
+				(at 68.58 267.97 0)
+				(size 21.59 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "868a8146-d530-4fd5-b4f7-669b8f1eb42c")
+			)
+			(table_cell "OTG"
+				(exclude_from_sim no)
+				(at 90.17 267.97 0)
+				(size 26.67 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "4a018ddb-915d-4e85-a284-16f8ee6e9bfa")
+			)
+			(table_cell "USB_2"
+				(exclude_from_sim no)
+				(at 68.58 270.51 0)
+				(size 21.59 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "c877d42e-796f-4ecd-896b-e10a3493f443")
+			)
+			(table_cell "LoRa"
+				(exclude_from_sim no)
+				(at 90.17 270.51 0)
+				(size 26.67 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "2f3c4be8-cf41-40d8-9619-50cfd35b1787")
+			)
+			(table_cell "UART_1"
+				(exclude_from_sim no)
+				(at 68.58 273.05 0)
+				(size 21.59 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "3b92e099-7811-42df-a9ce-9d0ae5bc8a4d")
+			)
+			(table_cell "Console"
+				(exclude_from_sim no)
+				(at 90.17 273.05 0)
+				(size 26.67 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "072aa6d7-f80b-40e1-8d9f-2897be682342")
+			)
+			(table_cell "UART_2"
+				(exclude_from_sim no)
+				(at 68.58 275.59 0)
+				(size 21.59 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "34606fae-5760-4c2f-9c82-16739ec81d59")
+			)
+			(table_cell "wM-Bus"
+				(exclude_from_sim no)
+				(at 90.17 275.59 0)
+				(size 26.67 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "8ab2fccb-4956-4cc9-8623-a3b59e44e093")
+			)
+			(table_cell "UART_3"
+				(exclude_from_sim no)
+				(at 68.58 278.13 0)
+				(size 21.59 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "9be9410c-ea98-433f-a965-00bec100747d")
+			)
+			(table_cell "Zigbee"
+				(exclude_from_sim no)
+				(at 90.17 278.13 0)
+				(size 26.67 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "956c292c-55bc-48a7-897e-d918bf4c2c71")
+			)
+			(table_cell "UART_4"
+				(exclude_from_sim no)
+				(at 68.58 280.67 0)
+				(size 21.59 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "b353e284-516c-4513-983a-b275ee87ddc1")
+			)
+			(table_cell "Thread"
+				(exclude_from_sim no)
+				(at 90.17 280.67 0)
+				(size 26.67 2.54)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+				(uuid "ca6bb732-3c4a-4ef4-8f7a-ca39b48af8a8")
 			)
 		)
 	)

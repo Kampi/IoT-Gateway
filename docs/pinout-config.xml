@@ -894,9 +894,9 @@
 		<Function name="uart4.RTS_B" pinid="202" pinname="ECSPI2_SS0" checked="1" parentname="UART_4_CTS"></Function>
 		<Function name="uart4.CTS_B" pinid="198" pinname="ECSPI2_MISO" checked="1" parentname="UART_4_RTS"></Function>
 		<Function name="uart4.RX" pinid="151" pinname="UART4_RXD" checked="-1" parentname="UART_4_RXD"></Function>
-		<Function name="uart4.RX" pinid="196" pinname="ECSPI2_SCLK" checked="-1" parentname="UART_4_RXD"></Function>
+		<Function name="uart4.RX" pinid="196" pinname="ECSPI2_SCLK" checked="1" parentname="UART_4_RXD"></Function>
 		<Function name="uart4.TX" pinid="153" pinname="UART4_TXD" checked="-1" parentname="UART_4_TXD"></Function>
-		<Function name="uart4.TX" pinid="200" pinname="ECSPI2_MOSI" checked="-1" parentname="UART_4_TXD"></Function>
+		<Function name="uart4.TX" pinid="200" pinname="ECSPI2_MOSI" checked="1" parentname="UART_4_TXD"></Function>
 		<Function name="USB1_DN" pinid="163" pinname="USB1_DN" checked="1" parentname="USB_1_D_N"></Function>
 		<Function name="USB1_DP" pinid="165" pinname="USB1_DP" checked="1" parentname="USB_1_D_P"></Function>
 		<Function name="usb1.OTG_PWR" pinid="155" pinname="GPIO1_IO12" checked="-1" parentname="USB_1_EN"></Function>
@@ -1798,9 +1798,9 @@
 		<Category name="UART_4_CTS" checked="1"></Category>
 		<Category name="UART_4_RTS" checked="1"></Category>
 		<Category name="UART_4_RXD" checked="-1"></Category>
-		<Category name="UART_4_RXD" checked="-1"></Category>
+		<Category name="UART_4_RXD" checked="1"></Category>
 		<Category name="UART_4_TXD" checked="-1"></Category>
-		<Category name="UART_4_TXD" checked="-1"></Category>
+		<Category name="UART_4_TXD" checked="1"></Category>
 		<Category name="USB_1_D_N" checked="1"></Category>
 		<Category name="USB_1_D_P" checked="1"></Category>
 		<Category name="USB_1_EN" checked="-1"></Category>
