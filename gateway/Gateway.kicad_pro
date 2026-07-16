@@ -732,7 +732,7 @@
           "show": true
         },
         {
-          "group_by": false,
+          "group_by": true,
           "label": "Beschreibung",
           "name": "Description",
           "show": false
@@ -742,30 +742,6 @@
           "label": "mouser#",
           "name": "mouser#",
           "show": true
-        },
-        {
-          "group_by": false,
-          "label": "Sim.Pins",
-          "name": "Sim.Pins",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Sim.Device",
-          "name": "Sim.Device",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Sim.Type",
-          "name": "Sim.Type",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "CONFIG",
-          "name": "CONFIG",
-          "show": false
         }
       ],
       "filter_string": "",
@@ -899,7 +875,7 @@
         "uuid": "d5742f03-3b1a-42e5-a384-018bd4b919aa"
       }
     ],
-    "used_designators": "LED501,C501-509,L501,D501,R501-505,R1006,R1508,#FLG501,IC501,TP501-503,#PWR501-513",
+    "used_designators": "C1601-1605,C1608,R1601,R1607",
     "variants": []
   },
   "sheets": [

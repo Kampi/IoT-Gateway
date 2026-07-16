@@ -1468,7 +1468,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Regulator_Linear:MIC5317-3.3xM5"
+		(symbol "Regulator_Linear:TLV75733PDBV"
 			(pin_names
 				(offset 0.254)
 			)
@@ -1478,7 +1478,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U"
-				(at -6.35 6.35 0)
+				(at -3.81 5.715 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -1487,8 +1487,8 @@
 					)
 				)
 			)
-			(property "Value" "MIC5317-3.3xM5"
-				(at 0 6.35 0)
+			(property "Value" "TLV75733PDBV"
+				(at 0 5.715 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -1499,7 +1499,19 @@
 				)
 			)
 			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-				(at 0 8.89 0)
+				(at 0 8.255 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv757p.pdf"
+				(at 0 1.27 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1509,18 +1521,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MIC5317-High-Performance-Single-150mA-LDO-DS20006195B.pdf"
-				(at -7.62 20.32 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "150mA Low-dropout Voltage Regulator, Vout 3.3V, Vin up to 6V, SOT23-5"
+			(property "Description" "1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1531,7 +1532,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "LDO voltage regulator"
+			(property "ki_keywords" "LDO Regulator Fixed Positive"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1553,7 +1554,7 @@
 					)
 				)
 			)
-			(symbol "MIC5317-3.3xM5_0_1"
+			(symbol "TLV75733PDBV_0_1"
 				(rectangle
 					(start -5.08 4.445)
 					(end 5.08 -5.08)
@@ -1566,11 +1567,11 @@
 					)
 				)
 			)
-			(symbol "MIC5317-3.3xM5_1_1"
+			(symbol "TLV75733PDBV_1_1"
 				(pin power_in line
 					(at -7.62 2.54 0)
 					(length 2.54)
-					(name "VIN"
+					(name "IN"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1643,7 +1644,7 @@
 				(pin power_out line
 					(at 7.62 2.54 180)
 					(length 2.54)
-					(name "VOUT"
+					(name "OUT"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2822,12 +2823,6 @@
 		(uuid "4b1cf5fd-c3bf-4760-8c51-8526107127f8")
 	)
 	(junction
-		(at 182.88 125.73)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4b3b2e55-1a79-4c75-9ad9-85bbf7876b00")
-	)
-	(junction
 		(at 128.27 129.54)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2880,12 +2875,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e62e6627-100b-430e-9501-b2a8b5de4e6c")
-	)
-	(junction
-		(at 165.1 123.19)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fd744ce5-4b5d-464a-a6e3-891b5450db94")
 	)
 	(junction
 		(at 113.03 129.54)
@@ -3157,16 +3146,6 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 125.73) (xy 167.64 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "22120d63-a5ea-41b2-b069-5798dbd55687")
-	)
-	(wire
-		(pts
 			(xy 101.6 254) (xy 101.6 252.73)
 		)
 		(stroke
@@ -3368,16 +3347,6 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 125.73) (xy 182.88 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5c112d09-b3b6-4386-a64c-b39caa8d528f")
-	)
-	(wire
-		(pts
 			(xy 83.82 243.84) (xy 74.93 243.84)
 		)
 		(stroke
@@ -3468,7 +3437,7 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 125.73) (xy 182.88 125.73)
+			(xy 167.64 125.73) (xy 185.42 125.73)
 		)
 		(stroke
 			(width 0)
@@ -3778,16 +3747,6 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 115.57) (xy 165.1 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e9c3851a-d305-49e9-aa9e-9581eab6197a")
-	)
-	(wire
-		(pts
 			(xy 314.96 97.79) (xy 330.2 97.79)
 		)
 		(stroke
@@ -4048,7 +4007,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "086c1c63-7d76-4e70-95ef-21d57900b195")
-		(property "Reference" "#PWR01208"
+		(property "Reference" "#PWR01209"
 			(at 124.46 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -4108,7 +4067,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3f9e85ea-c06e-4d87-98cf-dea3ce3fc587"
-					(reference "#PWR01208")
+					(reference "#PWR01209")
 					(unit 1)
 				)
 			)
@@ -4249,7 +4208,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "15b815df-48f3-4ca2-b713-c7ae7e24c49f")
-		(property "Reference" "C1203"
+		(property "Reference" "C1204"
 			(at 135.89 133.3499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4346,7 +4305,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3f9e85ea-c06e-4d87-98cf-dea3ce3fc587"
-					(reference "C1203")
+					(reference "C1204")
 					(unit 1)
 				)
 			)
@@ -4914,17 +4873,6 @@
 				)
 			)
 		)
-		(property "CONFIG" ""
-			(at 125.73 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "027aa5dd-3021-4a2f-b561-5fedcda3625e")
 		)
@@ -5151,40 +5099,51 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 165.1 115.57 0)
+		(lib_id "Regulator_Linear:TLV75733PDBV")
+		(at 67.31 246.38 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
-		(in_pos_files no)
+		(in_pos_files yes)
 		(dnp no)
-		(uuid "38e2ef7a-2f87-4204-a1b8-cc03a3ea9856")
-		(property "Reference" "TP1204"
-			(at 167.64 110.9979 0)
+		(fields_autoplaced yes)
+		(uuid "39896a9c-a4a8-41d5-a411-a1ff8ed52fe5")
+		(property "Reference" "IC1201"
+			(at 67.31 237.49 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" ""
-			(at 167.64 113.5379 0)
+		(property "Value" "TLV75733PDBV"
+			(at 67.31 240.03 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "Testpoints_Kampi:TestPoint_Pad_1.0x1.0mm"
-			(at 170.18 115.57 0)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+			(at 67.31 238.125 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv757p.pdf"
+			(at 67.31 245.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5194,8 +5153,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 170.18 115.57 0)
+		(property "Description" "1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5"
+			(at 67.31 246.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5205,8 +5164,8 @@
 				)
 			)
 		)
-		(property "Description" "test point"
-			(at 165.1 115.57 0)
+		(property "manf" "Texas Instruments"
+			(at 67.31 246.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5216,8 +5175,8 @@
 				)
 			)
 		)
-		(property "manf" ""
-			(at 165.1 115.57 0)
+		(property "manf#" "TLV75733PDBVR"
+			(at 67.31 246.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5227,8 +5186,8 @@
 				)
 			)
 		)
-		(property "manf#" ""
-			(at 165.1 115.57 0)
+		(property "mouser#" "595-TLV75733PDBVR"
+			(at 67.31 246.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5238,24 +5197,25 @@
 				)
 			)
 		)
-		(property "mouser#" ""
-			(at 165.1 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
+		(pin "2"
+			(uuid "5659433a-b579-4407-bced-50c3d144beb4")
+		)
+		(pin "3"
+			(uuid "9eb94f57-af13-4b1b-841a-e73c23565819")
+		)
+		(pin "5"
+			(uuid "f0ba6153-d0ee-4a8a-8516-f93cf47a5f0b")
 		)
 		(pin "1"
-			(uuid "c5e26871-c3c0-47c9-b5f0-f571d19270fc")
+			(uuid "716e7362-8a78-4247-9aa4-a56ca3440c63")
+		)
+		(pin "4"
+			(uuid "313708c2-61fc-436b-9d43-1f723f0b927b")
 		)
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3f9e85ea-c06e-4d87-98cf-dea3ce3fc587"
-					(reference "TP1204")
+					(reference "IC1201")
 					(unit 1)
 				)
 			)
@@ -5493,7 +5453,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4f6df9c4-7351-45d4-9c51-ffe97eb5be14")
-		(property "Reference" "C1204"
+		(property "Reference" "C1203"
 			(at 105.41 133.3499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5590,7 +5550,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3f9e85ea-c06e-4d87-98cf-dea3ce3fc587"
-					(reference "C1204")
+					(reference "C1203")
 					(unit 1)
 				)
 			)
@@ -5619,7 +5579,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 86.36 240.5379 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5782,128 +5742,6 @@
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3f9e85ea-c06e-4d87-98cf-dea3ce3fc587"
 					(reference "#PWR01217")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Regulator_Linear:MIC5317-3.3xM5")
-		(at 67.31 246.38 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6774aa78-b4c4-4939-8d17-1b2d16c6c1e4")
-		(property "Reference" "IC1201"
-			(at 67.31 237.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "MIC5317-3.3xM5"
-			(at 67.31 240.03 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-			(at 67.31 237.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/MIC5317-High-Performance-Single-150mA-LDO-DS20006195B.pdf"
-			(at 59.69 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "150mA Low-dropout Voltage Regulator, Vout 3.3V, Vin up to 6V, SOT23-5"
-			(at 67.31 246.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manf" "Microchip Technology"
-			(at 67.31 246.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manf#" "MIC5317-3.3YM5-TR"
-			(at 67.31 246.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "mouser#" "998-MIC5317-3.3YM5-TR"
-			(at 67.31 246.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "94e3a6bb-fb7e-419f-8913-58d74afac5e8")
-		)
-		(pin "3"
-			(uuid "85395574-9740-4384-a285-6f86303c048d")
-		)
-		(pin "2"
-			(uuid "33ddcd10-6514-4abf-a7d7-5d8057e7c7ed")
-		)
-		(pin "4"
-			(uuid "e30b293a-3d79-45d0-863e-fdae014b0a34")
-		)
-		(pin "5"
-			(uuid "7f6089dc-e2d9-4253-9bc3-a3c9eaf7970e")
-		)
-		(instances
-			(project "Gateway"
-				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3f9e85ea-c06e-4d87-98cf-dea3ce3fc587"
-					(reference "IC1201")
 					(unit 1)
 				)
 			)
@@ -6380,7 +6218,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "960a2765-9099-4ec4-ac54-e1c5ce657407")
-		(property "Reference" "#PWR01207"
+		(property "Reference" "#PWR01212"
 			(at 132.08 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -6440,7 +6278,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3f9e85ea-c06e-4d87-98cf-dea3ce3fc587"
-					(reference "#PWR01207")
+					(reference "#PWR01212")
 					(unit 1)
 				)
 			)
@@ -6469,7 +6307,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 52.07 240.5379 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6570,7 +6408,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a03b2d77-ad80-4758-968a-568581bc7881")
-		(property "Reference" "#PWR01210"
+		(property "Reference" "#PWR01211"
 			(at 125.73 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -6630,7 +6468,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3f9e85ea-c06e-4d87-98cf-dea3ce3fc587"
-					(reference "#PWR01210")
+					(reference "#PWR01211")
 					(unit 1)
 				)
 			)
@@ -6648,7 +6486,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a08b535f-738d-4844-b8f1-5255cef29b43")
-		(property "Reference" "#PWR01209"
+		(property "Reference" "#PWR01210"
 			(at 124.46 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -6708,7 +6546,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3f9e85ea-c06e-4d87-98cf-dea3ce3fc587"
-					(reference "#PWR01209")
+					(reference "#PWR01210")
 					(unit 1)
 				)
 			)
@@ -6737,7 +6575,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 96.52 85.5979 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7119,17 +6957,6 @@
 				)
 			)
 		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 101.6 248.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "9c220c34-21ae-4f80-974b-cba70360606b")
 		)
@@ -7315,7 +7142,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c4b35bee-d5f5-49d8-b14f-9f01d4b923f0")
-		(property "Reference" "#PWR01212"
+		(property "Reference" "#PWR01207"
 			(at 109.22 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -7375,7 +7202,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3f9e85ea-c06e-4d87-98cf-dea3ce3fc587"
-					(reference "#PWR01212")
+					(reference "#PWR01207")
 					(unit 1)
 				)
 			)
@@ -7517,7 +7344,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 318.77 101.0921 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8278,117 +8105,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 182.88 127 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files no)
-		(dnp no)
-		(uuid "ed79cfcd-2ae2-4cd3-a554-7f13d0edc92e")
-		(property "Reference" "TP1205"
-			(at 180.34 131.5721 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" ""
-			(at 180.34 129.0321 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Testpoints_Kampi:TestPoint_Pad_1.0x1.0mm"
-			(at 177.8 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 177.8 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 182.88 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manf" ""
-			(at 182.88 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manf#" ""
-			(at 182.88 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "mouser#" ""
-			(at 182.88 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7db57328-eef1-4652-aba6-ac19da85b429")
-		)
-		(instances
-			(project "Gateway"
-				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3f9e85ea-c06e-4d87-98cf-dea3ce3fc587"
-					(reference "TP1205")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+1V8")
 		(at 113.03 128.27 0)
 		(mirror y)
@@ -8401,7 +8117,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f004c626-db59-4edf-933b-00d9e88b2c7d")
-		(property "Reference" "#PWR01211"
+		(property "Reference" "#PWR01208"
 			(at 113.03 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -8461,7 +8177,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/3f9e85ea-c06e-4d87-98cf-dea3ce3fc587"
-					(reference "#PWR01211")
+					(reference "#PWR01208")
 					(unit 1)
 				)
 			)

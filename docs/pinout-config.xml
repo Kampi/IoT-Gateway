@@ -495,11 +495,11 @@
 		<Function name="gpio4.IO[24]" pinid="32" pinname="SAI2_TXFS" checked="1" parentname="GPIO_SODIMM_32"></Function>
 		<Function name="gpio4.IO[26]" pinid="34" pinname="SAI2_TXD0" checked="1" parentname="GPIO_SODIMM_34"></Function>
 		<Function name="gpio4.IO[23]" pinid="36" pinname="SAI2_RXD0" checked="1" parentname="GPIO_SODIMM_36"></Function>
-		<Function name="gpio4.IO[27]" pinid="38" pinname="SAI2_MCLK" checked="-1" parentname="GPIO_SODIMM_38"></Function>
+		<Function name="gpio4.IO[27]" pinid="38" pinname="SAI2_MCLK" checked="1" parentname="GPIO_SODIMM_38"></Function>
 		<Function name="gpio3.IO[23]" pinid="42" pinname="SAI5_RXD2" checked="1" parentname="GPIO_SODIMM_42"></Function>
 		<Function name="gpio3.IO[22]" pinid="44" pinname="SAI5_RXD1" checked="1" parentname="GPIO_SODIMM_44"></Function>
 		<Function name="gpio3.IO[24]" pinid="46" pinname="SAI5_RXD3" checked="1" parentname="GPIO_SODIMM_46"></Function>
-		<Function name="gpio3.IO[21]" pinid="48" pinname="SAI5_RXD0" checked="-1" parentname="GPIO_SODIMM_48"></Function>
+		<Function name="gpio3.IO[21]" pinid="48" pinname="SAI5_RXD0" checked="1" parentname="GPIO_SODIMM_48"></Function>
 		<Function name="gpio3.IO[0]" pinid="52" pinname="NAND_ALE" checked="-1" parentname="GPIO_SODIMM_52"></Function>
 		<Function name="gpio5.IO[17]" pinid="53" pinname="I2C2_SDA" checked="-1" parentname="GPIO_SODIMM_53"></Function>
 		<Function name="gpio3.IO[1]" pinid="54" pinname="NAND_CE0_B" checked="-1" parentname="GPIO_SODIMM_54"></Function>
@@ -894,9 +894,9 @@
 		<Function name="uart4.RTS_B" pinid="202" pinname="ECSPI2_SS0" checked="1" parentname="UART_4_CTS"></Function>
 		<Function name="uart4.CTS_B" pinid="198" pinname="ECSPI2_MISO" checked="1" parentname="UART_4_RTS"></Function>
 		<Function name="uart4.RX" pinid="151" pinname="UART4_RXD" checked="-1" parentname="UART_4_RXD"></Function>
-		<Function name="uart4.RX" pinid="196" pinname="ECSPI2_SCLK" checked="1" parentname="UART_4_RXD"></Function>
+		<Function name="uart4.RX" pinid="196" pinname="ECSPI2_SCLK" checked="-1" parentname="UART_4_RXD"></Function>
 		<Function name="uart4.TX" pinid="153" pinname="UART4_TXD" checked="-1" parentname="UART_4_TXD"></Function>
-		<Function name="uart4.TX" pinid="200" pinname="ECSPI2_MOSI" checked="1" parentname="UART_4_TXD"></Function>
+		<Function name="uart4.TX" pinid="200" pinname="ECSPI2_MOSI" checked="-1" parentname="UART_4_TXD"></Function>
 		<Function name="USB1_DN" pinid="163" pinname="USB1_DN" checked="1" parentname="USB_1_D_N"></Function>
 		<Function name="USB1_DP" pinid="165" pinname="USB1_DP" checked="1" parentname="USB_1_D_P"></Function>
 		<Function name="usb1.OTG_PWR" pinid="155" pinname="GPIO1_IO12" checked="-1" parentname="USB_1_EN"></Function>
@@ -1399,11 +1399,11 @@
 		<Category name="GPIO_SODIMM_32" checked="1"></Category>
 		<Category name="GPIO_SODIMM_34" checked="1"></Category>
 		<Category name="GPIO_SODIMM_36" checked="1"></Category>
-		<Category name="GPIO_SODIMM_38" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_38" checked="1"></Category>
 		<Category name="GPIO_SODIMM_42" checked="1"></Category>
 		<Category name="GPIO_SODIMM_44" checked="1"></Category>
 		<Category name="GPIO_SODIMM_46" checked="1"></Category>
-		<Category name="GPIO_SODIMM_48" checked="-1"></Category>
+		<Category name="GPIO_SODIMM_48" checked="1"></Category>
 		<Category name="GPIO_SODIMM_52" checked="-1"></Category>
 		<Category name="GPIO_SODIMM_53" checked="-1"></Category>
 		<Category name="GPIO_SODIMM_54" checked="-1"></Category>
@@ -1798,9 +1798,9 @@
 		<Category name="UART_4_CTS" checked="1"></Category>
 		<Category name="UART_4_RTS" checked="1"></Category>
 		<Category name="UART_4_RXD" checked="-1"></Category>
-		<Category name="UART_4_RXD" checked="1"></Category>
+		<Category name="UART_4_RXD" checked="-1"></Category>
 		<Category name="UART_4_TXD" checked="-1"></Category>
-		<Category name="UART_4_TXD" checked="1"></Category>
+		<Category name="UART_4_TXD" checked="-1"></Category>
 		<Category name="USB_1_D_N" checked="1"></Category>
 		<Category name="USB_1_D_P" checked="1"></Category>
 		<Category name="USB_1_EN" checked="-1"></Category>

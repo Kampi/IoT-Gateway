@@ -3903,7 +3903,7 @@
 				)
 				(uuid "7e90f29b-cf12-442b-a6d5-2e77bba5b003")
 			)
-			(table_cell "PowerMux-Status"
+			(table_cell "Backup-Status"
 				(exclude_from_sim no)
 				(at 13.97 217.17 0)
 				(size 29.21 2.54)
