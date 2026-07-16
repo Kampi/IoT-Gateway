@@ -6660,7 +6660,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_10-G-5,08_1x10_P5.08mm_Horizontal"
+		(property "Footprint" "Phoenix:MSTBA_2,5_10-G-5,08_1x10_P5.08mm_Horizontal"
 			(at 281.94 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -6715,7 +6715,7 @@
 				)
 			)
 		)
-		(property "mouser#" "51-1757323"
+		(property "mouser#" "651-1757323"
 			(at 281.94 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -8529,7 +8529,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_4-G-5,08_1x04_P5.08mm_Horizontal"
+		(property "Footprint" "Phoenix:MSTBA_2,5_4-G-5,08_1x04_P5.08mm_Horizontal"
 			(at 391.16 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -9121,7 +9121,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 123.19 216.4079 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9323,7 +9323,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_4-G-5,08_1x04_P5.08mm_Horizontal"
+		(property "Footprint" "Phoenix:MSTBA_2,5_4-G-5,08_1x04_P5.08mm_Horizontal"
 			(at 391.16 209.55 0)
 			(hide yes)
 			(show_name no)
@@ -11465,7 +11465,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_4-G-5,08_1x04_P5.08mm_Horizontal"
+		(property "Footprint" "Phoenix:MSTBA_2,5_4-G-5,08_1x04_P5.08mm_Horizontal"
 			(at 391.16 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -11951,7 +11951,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c7b12dba-f7ae-4198-abbb-be37a900c812")
-		(property "Reference" "R1508"
+		(property "Reference" "R1502"
 			(at 100.33 209.5499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12048,7 +12048,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/80a97db3-ff4e-4b40-a5b0-8dd5c51e4d83"
-					(reference "R1508")
+					(reference "R1502")
 					(unit 1)
 				)
 			)
