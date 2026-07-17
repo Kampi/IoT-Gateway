@@ -7,7 +7,6 @@ set -euo pipefail
 STA_IFACE="mlan0"
 AP_IFACE="uap0"
 AP_IP="192.168.4.1"
-STA_CON_NAME="wifi-client"
 SCAN_CACHE="/run/wifi-scan-cache.json"
 DNSMASQ_PID="/run/dnsmasq-captive.pid"
 PORTAL_PID="/run/captive-portal.pid"
@@ -60,10 +59,25 @@ start_ap_mode() {
 # Scan first while mlan0 is in STA mode
 scan_networks
 
-# Try existing profile
-if nmcli con show "$STA_CON_NAME" 2>/dev/null | grep -q "connection.id"; then
-    log "WiFi profile found, connecting via NM..."
-    if nmcli con up "$STA_CON_NAME" 2>/dev/null; then
+# Already connected under whatever profile name (e.g. set up manually via
+# `nmcli device wifi connect <SSID>`, which names the profile after the
+# SSID, not any name this script controls) - nothing to do but watch it.
+active_con="$(nmcli -t -f GENERAL.CONNECTION dev show "$STA_IFACE" 2>/dev/null | cut -d: -f2-)"
+if [ -n "$active_con" ] && [ "$active_con" != "--" ]; then
+    log "Already connected via profile '$active_con'."
+    while nmcli -t -f GENERAL.STATE dev show "$STA_IFACE" 2>/dev/null \
+            | grep -q "100 (connected)"; do
+        sleep 15
+    done
+    log "WiFi connection lost."
+    exit 1
+fi
+
+# Not connected - try any saved WiFi profile, regardless of its name.
+saved_con="$(nmcli -t -f NAME,TYPE con show 2>/dev/null | awk -F: '$2 == "802-11-wireless" {print $1; exit}')"
+if [ -n "$saved_con" ]; then
+    log "Saved WiFi profile '$saved_con' found, connecting via NM..."
+    if nmcli con up "$saved_con" 2>/dev/null; then
         log "WiFi connected."
         while nmcli -t -f GENERAL.STATE dev show "$STA_IFACE" 2>/dev/null \
                 | grep -q "100 (connected)"; do

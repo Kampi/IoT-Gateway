@@ -1,9 +1,15 @@
 SHELL := /bin/bash
 
-.PHONY: clean repo setup
+.PHONY: clean repo setup dtb
 
 CONFIG_FILE := ${PWD}/build/conf/auto.conf
 LAYERS_DIR := ${PWD}/layers/
+KERNEL_PV := 6.6.142+git
+KERNEL_SRC := ${PWD}/build/tmp/work-shared/verdin-imx8mm/kernel-source
+KERNEL_BUILD := ${PWD}/build/tmp/work/verdin_imx8mm-poky-linux/linux-toradex/${KERNEL_PV}/build
+DTS_FILE := iot-gateway-imx8mm.dts
+DTS_LAYER_PATH := ${PWD}/layers/meta-iot-gateway-os/recipes-kernel/linux/linux-toradex/${DTS_FILE}
+DTB_TARGET := freescale/iot-gateway-imx8mm.dtb
 
 setup:
 	@echo "Installing Yocto/OpenEmbedded (Scarthgap) build dependencies..." && \
@@ -30,6 +36,13 @@ clean:
 		rm -rf ./build/tmp*;\
 		rm -rf ./build/deploy*;\
 	fi
+
+dtb:
+	@echo "Syncing ${DTS_FILE} into the kernel source tree..." && \
+	cp ${DTS_LAYER_PATH} ${KERNEL_SRC}/arch/arm64/boot/dts/freescale/ && \
+	echo "Building ${DTB_TARGET}..." && \
+	DTC_FLAGS=-@ $(MAKE) -C ${KERNEL_SRC} ARCH=arm64 O=${KERNEL_BUILD} ${DTB_TARGET} && \
+	echo "Done: ${KERNEL_BUILD}/arch/arm64/boot/dts/${DTB_TARGET}"
 
 repo:
 	@echo "Cloning Toradex BSP..." && \

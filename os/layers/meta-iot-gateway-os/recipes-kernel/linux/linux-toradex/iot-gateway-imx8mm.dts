@@ -32,6 +32,14 @@
 };
 
 &iomuxc {
+	pinctrl-names = "default";
+	pinctrl-0 = <&pinctrl_gpio1>, <&pinctrl_gpio2>, <&pinctrl_gpio4>,
+				<&pinctrl_gpio5>, <&pinctrl_gpio6>, <&pinctrl_gpio7>,
+				<&pinctrl_gpio8>, <&pinctrl_battery>, <&pinctrl_power_enable>,
+		    	<&pinctrl_zigbee_ctrl>, <&pinctrl_thread_ctrl>,
+		    	<&pinctrl_wmbus_ctrl>, <&pinctrl_ssd>,
+		    	<&pinctrl_powermux>, <&pinctrl_gpio_header>;
+
 	pinctrl_version_resistors: versionresistorsgrp {
 		fsl,pins = <
 			MX8MM_IOMUXC_UART3_TXD_GPIO5_IO27			0x106	/* SODIMM 212 - version-bit0 */
@@ -83,11 +91,11 @@
 		>;
 	};
 
-	//pinctrl_powermux: powermuxgrp {
-	//	fsl,pins = <
-	//		MX8MM_IOMUXC_UART3_RXD_GPIO5_IO26			0x1c6	/* SODIMM 210 - PowerMux-Status (in, pull-up) */
-	//	>;
-	//};
+	pinctrl_powermux: powermuxgrp {
+		fsl,pins = <
+			MX8MM_IOMUXC_UART3_RXD_GPIO5_IO26			0x1c6	/* SODIMM 210 - PowerMux-Status (in, pull-up) */
+		>;
+	};
 
 	/* Generic bidirectional GPIO breakout header, direction set by whatever consumes it */
 	pinctrl_gpio_header: gpioheadergrp {
@@ -128,16 +136,12 @@
 };
 
 &gpio1 {
-	pinctrl-names = "default";
-	pinctrl-0 = <&pinctrl_gpio_header &pinctrl_ssd>;
 	gpio-line-names = "version-bit1", "gpio-num1", "", "", "", "", "", "",
 	                  "", "", "", "version-bit2", "", "", "",
 	                  "ssd-power-enable";
 };
 
 &gpio3 {
-	pinctrl-names = "default";
-	pinctrl-0 = <&pinctrl_battery>;
 	gpio-line-names = "", "", "", "gpio-num2", "ready-led", "", "", "",
 	                  "", "", "", "", "", "", "", "gpio-num0",
 	                  "", "", "", "", "", "", "battery-charge",
@@ -145,41 +149,18 @@
 };
 
 &gpio4 {
-	pinctrl-names = "default";
-	pinctrl-0 = <&pinctrl_power_enable &pinctrl_zigbee_ctrl &pinctrl_thread_ctrl &pinctrl_wmbus_ctrl>;
 	gpio-line-names = "wmbus-reset", "", "", "gpio-num5", "gpio-num7", "", "", "",
 	                  "", "", "", "zigbee-reset", "zigbee-boot", "thread-reset", "thread-boot", "",
-	                  "", "", "", "", "", "", "", "thread-power-enable",
+	                  "", "", "", "s", "", "", "", "thread-power-enable",
 	                  "zigbee-power-enable", "lora-power-enable",
 	                  "wmbus-power-enable", "", "";
 };
 
-//&gpio5 {
-//	pinctrl-names = "default";
-//	pinctrl-0 = <&pinctrl_powermux>;
-//	gpio-line-names = "", "", "gpio-num3", "", "", "", "", "",
-//	                  "", "", "", "", "", "", "", "",
-//	                  "", "", "gpio-num6", "gpio-num4", "", "", "", "",
-//	                  "", "", "powermux-status", "version-bit0";
-//};
-
-&sai2 {
-	status = "disabled";
-};
-
-/* Verdin SPI_1, unused - SODIMM 196/198/200/202 are used for UART_4 instead */
-&ecspi2 {
-	status = "disabled";
-};
-
-/* Verdin QSPI_1, unused */
-&flexspi {
-	status = "disabled";
-};
-
-/* Verdin SD_1, unused - no SD card slot on this carrier */
-&usdhc2 {
-	status = "disabled";
+&gpio5 {
+	gpio-line-names = "", "", "gpio-num3", "", "", "", "", "",
+	                  "", "", "", "", "", "", "", "",
+	                  "", "", "gpio-num6", "gpio-num4", "", "", "", "",
+	                  "", "", "powermux-status", "version-bit0";
 };
 
 /* Used for Console */
@@ -216,6 +197,25 @@
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_uart4>;
 	uart-has-rtscts;
+};
+
+&sai2 {
+	status = "disabled";
+};
+
+/* Verdin SPI_1, unused - SODIMM 196/198/200/202 are used for UART_4 instead */
+&ecspi2 {
+	status = "disabled";
+};
+
+/* Verdin QSPI_1, unused */
+&flexspi {
+	status = "disabled";
+};
+
+/* Verdin SD_1, unused - no SD card slot on this carrier */
+&usdhc2 {
+	status = "disabled";
 };
 
 /* Verdin PWM_3_DSI */
@@ -265,10 +265,6 @@
 };
 
 &lcdif {
-	status = "disabled";
-};
-
-&backlight {
 	status = "disabled";
 };
 

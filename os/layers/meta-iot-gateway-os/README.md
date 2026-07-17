@@ -362,7 +362,6 @@ Includes the Toradex base overlays:
 | `sound_card` | No audio hardware |
 | `nau8822_1a` | No audio codec |
 | `lcdif` | No display |
-| `backlight` | No display |
 | `gpio_expander_21` | No GPIO expander on carrier |
 | `lvds_ti_sn65dsi84` | No DSI display adapter |
 | `hdmi_lontium_lt8912` | No HDMI adapter |
