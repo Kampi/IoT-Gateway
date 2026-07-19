@@ -8,9 +8,11 @@ KERNEL_DEVICETREE = "freescale/iot-gateway-imx8mm.dtb"
 TEZI_EXTERNAL_KERNEL_DEVICETREE = ""
 TEZI_EXTERNAL_KERNEL_DEVICETREE_BOOT = ""
 
-# TODO: We need to remove the loading of "overlays.txt" in the boot.scr file
-#IMAGE_BOOT_FILES:remove = "overlays/*;overlays/"
-#IMAGE_BOOT_FILES:remove = "overlays.txt"
+# The boot script's overlay-loading step is disabled
+# to match (see recipes-bsp/u-boot/u-boot-distro-boot.bbappend, which sets
+# skip_fdt_overlays=1 in boot.scr).
+IMAGE_BOOT_FILES:remove = "overlays/*;overlays/"
+IMAGE_BOOT_FILES:remove = "overlays.txt"
 
 IMAGE_FEATURES += " \
     ssh-server-openssh \
