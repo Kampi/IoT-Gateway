@@ -189,11 +189,14 @@
 	pinctrl-0 = <&pinctrl_uart3>;
 };
 
-/* Used for Thread
- * Note: UART_4 is reserved for the Cortex-M4 core.
+/* Used for Thread (nRF5340 RCP)
+ * UART_4 was reserved for the Cortex-M4 core by default; the ATF RDC
+ * config now assigns it to the A53 instead (see
+ * meta-iot-gateway-os/recipes-bsp/imx-atf), since M4 firmware isn't
+ * used on this board.
  */
 &uart4 {
-	status = "disabled";
+	status = "okay";
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_uart4>;
 	uart-has-rtscts;

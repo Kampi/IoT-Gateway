@@ -1,0 +1,56 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Daniel Kampert <DanielKampert@kampis-elektroecke.de>
+Date: Sun, 19 Jul 2026 00:00:00 +0200
+Subject: [PATCH] imx8mm: assign UART4 RDC domain to A53
+
+By default the i.MX8MM RDC (Resource Domain Controller) config in
+imx8mm_bl31_setup.c assigns UART4's master domain and peripheral
+access permission to the Cortex-M4 (DID1), independent of whatever
+the Linux devicetree says. Without this change, setting `&uart4 {
+status = "okay"; }` in the kernel devicetree is not sufficient - the
+A53/Linux side is blocked from the peripheral's registers at the
+hardware RDC level regardless, since M4 firmware is never actually
+used on this board and the M4-only lock just leaves UART4 unusable.
+
+Reassigns both the master domain assignment and the UART4 peripheral
+domain access permission (RDC_PDAP) from the M4 (D1R|D1W) to the A53
+(D0R|D0W), matching NXP's own documented procedure:
+https://community.nxp.com/t5/i-MX-Processors-Knowledge-Base/Enable-UART4-on-i-MX8M-Mini-A53/ta-p/1967129
+
+Required for the Thread RCP (nRF5340) link on UART_4, see
+meta-iot-gateway-os/recipes-kernel/linux/linux-toradex/iot-gateway-imx8mm.dts.
+---
+ plat/imx/imx8m/imx8mm/imx8mm_bl31_setup.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/plat/imx/imx8m/imx8mm/imx8mm_bl31_setup.c b/plat/imx/imx8m/imx8mm/imx8mm_bl31_setup.c
+--- a/plat/imx/imx8m/imx8mm/imx8mm_bl31_setup.c
++++ b/plat/imx/imx8m/imx8mm/imx8mm_bl31_setup.c
+@@ -67,10 +67,10 @@
+ #ifdef IMX_ANDROID_BUILD
+ static const struct imx_rdc_cfg rdc[] = {
+ 	/* Master domain assignment */
+-	RDC_MDAn(RDC_MDA_M4, DID1),
++	RDC_MDAn(RDC_MDA_A53, DID0),
+
+ 	/* peripherals domain permission */
+-	RDC_PDAPn(RDC_PDAP_UART4, D1R | D1W),
++	RDC_PDAPn(RDC_PDAP_UART4, D0R | D0W),
+ 	RDC_PDAPn(RDC_PDAP_UART2, D0R | D0W),
+ 	RDC_PDAPn(RDC_PDAP_UART1, D0R | D0W),
+
+@@ -114,10 +114,10 @@
+ #else
+ static const struct imx_rdc_cfg rdc[] = {
+ 	/* Master domain assignment */
+-	RDC_MDAn(RDC_MDA_M4, DID1),
++	RDC_MDAn(RDC_MDA_A53, DID0),
+
+ 	/* peripherals domain permission */
+-	RDC_PDAPn(RDC_PDAP_UART4, D1R | D1W),
++	RDC_PDAPn(RDC_PDAP_UART4, D0R | D0W),
+ 	RDC_PDAPn(RDC_PDAP_UART2, D0R | D0W),
+ 	RDC_PDAPn(RDC_PDAP_UART1, D0R | D0W),
+
+--
+2.43.0
