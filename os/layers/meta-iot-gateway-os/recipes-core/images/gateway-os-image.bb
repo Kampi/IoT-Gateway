@@ -18,6 +18,16 @@ IMAGE_FEATURES += " \
     ssh-server-openssh \
 "
 
+# Custom services
+IMAGE_INSTALL:append = " \
+    thread-network-init \
+    wifi-captive-portal \
+    gateway-logging \
+    gateway-ready-led \
+    gateway-backup \
+    gateway-telemetry \
+"
+
 IMAGE_INSTALL:append = " \
     htop \
     curl \
@@ -26,18 +36,13 @@ IMAGE_INSTALL:append = " \
     mosquitto \
     mosquitto-clients \
     ot-br-posix \
-    thread-network-init \
     wmbusmeters \
     zigbee2mqtt \
     lora-packet-forwarder \
     chirpstack-gateway-bridge \
     cryptoauthlib \
-    gateway-logging \
-    gateway-ready-led \
-    gateway-backup \
     networkmanager \
     networkmanager-nmcli \
-    wifi-captive-portal \
     iw \
     linux-firmware \
     bluez5 \
@@ -46,4 +51,11 @@ IMAGE_INSTALL:append = " \
     i2c-tools \
     nano \
     mcumgr \
+"
+
+# Python packages
+IMAGE_INSTALL:append = " \
+    python3 \
+    python3-requests \
+    python3-paho-mqtt \
 "

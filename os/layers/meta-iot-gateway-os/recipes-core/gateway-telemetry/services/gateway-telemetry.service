@@ -1,0 +1,15 @@
+[Unit]
+Description=Publish gateway telemetry to Home Assistant via MQTT discovery
+After=network-online.target mosquitto.service
+Wants=network-online.target
+Requires=mosquitto.service
+
+[Service]
+Type=simple
+EnvironmentFile=-/etc/default/gateway-telemetry
+ExecStart=/usr/bin/python3 /usr/libexec/gateway-os/gateway-telemetry.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
