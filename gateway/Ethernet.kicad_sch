@@ -6173,8 +6173,8 @@
 		)
 	)
 	(rectangle
-		(start 34.29 113.03)
-		(end 52.07 140.97)
+		(start 34.29 209.55)
+		(end 52.07 237.49)
 		(stroke
 			(width 0.254)
 			(type dot)
@@ -6197,6 +6197,19 @@
 			(type none)
 		)
 		(uuid "bf7d31a2-749a-4322-bf4a-afb6487ef12b")
+	)
+	(rectangle
+		(start 15.24 175.26)
+		(end 207.01 283.21)
+		(stroke
+			(width 1)
+			(type default)
+			(color 200 200 200 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "eed77801-8939-4b66-aaa3-03a374b16036")
 	)
 	(text_box "LAYOUT NOTE:\nAs close as possible to the RJ45 jack."
 		(exclude_from_sim no)
@@ -6246,9 +6259,32 @@
 		)
 		(uuid "2f5f432f-71de-4bc5-919e-7a634c3d9cf4")
 	)
+	(text_box "Power-over-Ethernet+ Converter"
+		(exclude_from_sim no)
+		(at 16.51 274.32 0)
+		(size 189.23 7.7603)
+		(margins 1.9049 1.9049 1.9049 1.9049)
+		(stroke
+			(width -0.0001)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(face "Times New Roman")
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 162 22 34 1)
+			)
+		)
+		(uuid "377d6b70-f15d-4fac-b998-70e0f37c09e4")
+	)
 	(text_box "DESIGN NOTE:\nUse one of these to increase / decrease the output voltage (see the datasheet)."
 		(exclude_from_sim no)
-		(at 21.59 152.4 0)
+		(at 21.59 248.92 0)
 		(size 49.53 17.214)
 		(margins 2 2 2 2)
 		(stroke
@@ -6270,13 +6306,13 @@
 		(uuid "bd67e14b-7376-4d78-96f3-fe0fe57e288a")
 	)
 	(junction
-		(at 187.96 97.79)
+		(at 187.96 194.31)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "08e0ecc9-2501-4e28-b056-d37b1b1ff9ed")
 	)
 	(junction
-		(at 185.42 110.49)
+		(at 185.42 207.01)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0a30fe67-2ce8-49ac-8713-6cde8a87eeff")
@@ -6288,43 +6324,43 @@
 		(uuid "1fa48f19-aff8-4a69-95fe-e401f64e9ffb")
 	)
 	(junction
-		(at 190.5 107.95)
+		(at 190.5 204.47)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "20731a89-1a50-46d9-98cb-999055efa9b5")
 	)
 	(junction
-		(at 105.41 88.9)
+		(at 105.41 185.42)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "22d011bf-ab72-4589-ad65-ea21adb5f9e2")
 	)
 	(junction
-		(at 90.17 95.25)
+		(at 90.17 191.77)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2491399e-c8bf-444f-9777-0fc1e2cc6caa")
 	)
 	(junction
-		(at 99.06 92.71)
+		(at 99.06 189.23)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "325aa19b-097f-4bd7-a107-a469c159ab62")
 	)
 	(junction
-		(at 36.83 102.87)
+		(at 36.83 199.39)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3ceadca9-ceb4-46a8-9023-fb28bbe4234a")
 	)
 	(junction
-		(at 187.96 120.65)
+		(at 187.96 217.17)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "52a7cbb1-15e2-4822-9577-12dc4b3447e1")
 	)
 	(junction
-		(at 105.41 99.06)
+		(at 105.41 195.58)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5d9f0f55-a4e4-4a61-8913-3dc5bc55b63f")
@@ -6336,7 +6372,7 @@
 		(uuid "800f56d7-95b1-49de-8565-a378cde51e71")
 	)
 	(junction
-		(at 170.18 107.95)
+		(at 170.18 204.47)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8c859ed8-36ac-4cf2-a56b-4de59b62e549")
@@ -6348,43 +6384,43 @@
 		(uuid "8d4b9c61-14df-420a-a550-df022a4e92ca")
 	)
 	(junction
-		(at 187.96 121.92)
+		(at 187.96 218.44)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8f2decf5-9c1b-4668-aa7f-a381ec234657")
 	)
 	(junction
-		(at 44.45 96.52)
+		(at 44.45 193.04)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "91af24a7-c33e-4676-bf0e-78a28c6c78d9")
 	)
 	(junction
-		(at 55.88 127)
+		(at 55.88 223.52)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a3735d10-8ff1-4549-b85e-d55e088ee154")
 	)
 	(junction
-		(at 83.82 92.71)
+		(at 83.82 189.23)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a79faab1-3df7-4f43-a458-7c563e498bdb")
 	)
 	(junction
-		(at 36.83 92.71)
+		(at 36.83 189.23)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "afea4bc0-b25f-40f6-a720-3d41b4bcb002")
 	)
 	(junction
-		(at 44.45 124.46)
+		(at 44.45 220.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c583096a-2d9e-4986-b3bc-89eeac0b4b76")
 	)
 	(junction
-		(at 55.88 99.06)
+		(at 55.88 195.58)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c9105838-b5b0-4aa6-acec-89febb53c1f2")
@@ -6396,13 +6432,13 @@
 		(uuid "cc07f289-1c7c-4122-bba2-409e27ad8d63")
 	)
 	(junction
-		(at 170.18 110.49)
+		(at 170.18 207.01)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "de666373-a9ac-4806-ad72-6472fa84d32b")
 	)
 	(junction
-		(at 147.32 88.9)
+		(at 147.32 185.42)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e24d3ab3-0593-4389-badd-85608d65479c")
@@ -6414,7 +6450,7 @@
 		(uuid "ed1fadb4-a590-4432-9fbb-d6a9eda7ec03")
 	)
 	(junction
-		(at 187.96 96.52)
+		(at 187.96 193.04)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f79b6c74-8cc6-479f-bbdb-0fc56c01b373")
@@ -6517,7 +6553,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 127) (xy 73.66 127)
+			(xy 83.82 223.52) (xy 73.66 223.52)
 		)
 		(stroke
 			(width 0)
@@ -6527,7 +6563,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 101.6) (xy 49.53 101.6)
+			(xy 58.42 198.12) (xy 49.53 198.12)
 		)
 		(stroke
 			(width 0)
@@ -6547,7 +6583,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 93.98) (xy 36.83 92.71)
+			(xy 36.83 190.5) (xy 36.83 189.23)
 		)
 		(stroke
 			(width 0)
@@ -6557,7 +6593,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 100.33) (xy 93.98 119.38)
+			(xy 93.98 196.85) (xy 93.98 215.9)
 		)
 		(stroke
 			(width 0)
@@ -6587,7 +6623,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 100.33) (xy 93.98 100.33)
+			(xy 81.28 196.85) (xy 93.98 196.85)
 		)
 		(stroke
 			(width 0)
@@ -6597,7 +6633,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 97.79) (xy 190.5 97.79)
+			(xy 187.96 194.31) (xy 190.5 194.31)
 		)
 		(stroke
 			(width 0)
@@ -6647,7 +6683,7 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 99.06) (xy 55.88 99.06)
+			(xy 40.64 195.58) (xy 55.88 195.58)
 		)
 		(stroke
 			(width 0)
@@ -6667,7 +6703,7 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 92.71) (xy 36.83 92.71)
+			(xy 24.13 189.23) (xy 36.83 189.23)
 		)
 		(stroke
 			(width 0)
@@ -6717,7 +6753,7 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 99.06) (xy 40.64 102.87)
+			(xy 40.64 195.58) (xy 40.64 199.39)
 		)
 		(stroke
 			(width 0)
@@ -6737,7 +6773,7 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 106.68) (xy 185.42 110.49)
+			(xy 185.42 203.2) (xy 185.42 207.01)
 		)
 		(stroke
 			(width 0)
@@ -6747,7 +6783,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 110.49) (xy 170.18 110.49)
+			(xy 144.78 207.01) (xy 170.18 207.01)
 		)
 		(stroke
 			(width 0)
@@ -6757,7 +6793,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 133.35) (xy 55.88 133.35)
+			(xy 66.04 229.87) (xy 55.88 229.87)
 		)
 		(stroke
 			(width 0)
@@ -6787,7 +6823,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 124.46) (xy 49.53 124.46)
+			(xy 44.45 220.98) (xy 49.53 220.98)
 		)
 		(stroke
 			(width 0)
@@ -6797,7 +6833,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 120.65) (xy 185.42 120.65)
+			(xy 187.96 217.17) (xy 185.42 217.17)
 		)
 		(stroke
 			(width 0)
@@ -6807,7 +6843,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 95.25) (xy 187.96 96.52)
+			(xy 187.96 191.77) (xy 187.96 193.04)
 		)
 		(stroke
 			(width 0)
@@ -6817,7 +6853,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 119.38) (xy 101.6 119.38)
+			(xy 93.98 215.9) (xy 101.6 215.9)
 		)
 		(stroke
 			(width 0)
@@ -6827,7 +6863,7 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 101.6) (xy 49.53 124.46)
+			(xy 49.53 198.12) (xy 49.53 220.98)
 		)
 		(stroke
 			(width 0)
@@ -6837,7 +6873,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 120.65) (xy 187.96 120.65)
+			(xy 190.5 217.17) (xy 187.96 217.17)
 		)
 		(stroke
 			(width 0)
@@ -6877,7 +6913,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 99.06) (xy 144.78 110.49)
+			(xy 144.78 195.58) (xy 144.78 207.01)
 		)
 		(stroke
 			(width 0)
@@ -6887,7 +6923,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 97.79) (xy 190.5 99.06)
+			(xy 190.5 194.31) (xy 190.5 195.58)
 		)
 		(stroke
 			(width 0)
@@ -6907,7 +6943,7 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 120.65) (xy 185.42 119.38)
+			(xy 185.42 217.17) (xy 185.42 215.9)
 		)
 		(stroke
 			(width 0)
@@ -6917,7 +6953,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 121.92) (xy 193.04 127)
+			(xy 193.04 218.44) (xy 193.04 223.52)
 		)
 		(stroke
 			(width 0)
@@ -6937,7 +6973,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 92.71) (xy 83.82 92.71)
+			(xy 81.28 189.23) (xy 83.82 189.23)
 		)
 		(stroke
 			(width 0)
@@ -6947,7 +6983,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 110.49) (xy 170.18 111.76)
+			(xy 170.18 207.01) (xy 170.18 208.28)
 		)
 		(stroke
 			(width 0)
@@ -6957,7 +6993,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 96.52) (xy 58.42 96.52)
+			(xy 44.45 193.04) (xy 58.42 193.04)
 		)
 		(stroke
 			(width 0)
@@ -6997,7 +7033,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 127) (xy 66.04 127)
+			(xy 55.88 223.52) (xy 66.04 223.52)
 		)
 		(stroke
 			(width 0)
@@ -7027,7 +7063,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 92.71) (xy 99.06 114.3)
+			(xy 99.06 189.23) (xy 99.06 210.82)
 		)
 		(stroke
 			(width 0)
@@ -7047,7 +7083,7 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 97.79) (xy 187.96 97.79)
+			(xy 185.42 194.31) (xy 187.96 194.31)
 		)
 		(stroke
 			(width 0)
@@ -7057,7 +7093,7 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 96.52) (xy 44.45 96.52)
+			(xy 40.64 193.04) (xy 44.45 193.04)
 		)
 		(stroke
 			(width 0)
@@ -7067,7 +7103,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 107.95) (xy 190.5 107.95)
+			(xy 170.18 204.47) (xy 190.5 204.47)
 		)
 		(stroke
 			(width 0)
@@ -7117,7 +7153,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 133.35) (xy 55.88 127)
+			(xy 55.88 229.87) (xy 55.88 223.52)
 		)
 		(stroke
 			(width 0)
@@ -7137,7 +7173,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 121.92) (xy 187.96 120.65)
+			(xy 187.96 218.44) (xy 187.96 217.17)
 		)
 		(stroke
 			(width 0)
@@ -7167,7 +7203,7 @@
 	)
 	(polyline
 		(pts
-			(xy 44.45 152.4) (xy 43.18 140.97)
+			(xy 44.45 248.92) (xy 43.18 237.49)
 		)
 		(stroke
 			(width 0.254)
@@ -7198,6 +7234,16 @@
 	)
 	(wire
 		(pts
+			(xy 36.83 187.96) (xy 36.83 189.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79f19dba-a202-4ca9-98be-e6e200b8c323")
+	)
+	(wire
+		(pts
 			(xy 337.82 170.18) (xy 337.82 179.07)
 		)
 		(stroke
@@ -7208,7 +7254,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 107.95) (xy 190.5 111.76)
+			(xy 190.5 204.47) (xy 190.5 208.28)
 		)
 		(stroke
 			(width 0)
@@ -7218,7 +7264,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 88.9) (xy 147.32 107.95)
+			(xy 147.32 185.42) (xy 147.32 204.47)
 		)
 		(stroke
 			(width 0)
@@ -7228,7 +7274,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 119.38) (xy 190.5 120.65)
+			(xy 190.5 215.9) (xy 190.5 217.17)
 		)
 		(stroke
 			(width 0)
@@ -7238,7 +7284,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 99.06) (xy 58.42 99.06)
+			(xy 55.88 195.58) (xy 58.42 195.58)
 		)
 		(stroke
 			(width 0)
@@ -7258,7 +7304,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 95.25) (xy 101.6 95.25)
+			(xy 90.17 191.77) (xy 101.6 191.77)
 		)
 		(stroke
 			(width 0)
@@ -7268,7 +7314,7 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 92.71) (xy 40.64 96.52)
+			(xy 40.64 189.23) (xy 40.64 193.04)
 		)
 		(stroke
 			(width 0)
@@ -7278,7 +7324,7 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 99.06) (xy 185.42 97.79)
+			(xy 185.42 195.58) (xy 185.42 194.31)
 		)
 		(stroke
 			(width 0)
@@ -7288,7 +7334,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 96.52) (xy 193.04 96.52)
+			(xy 187.96 193.04) (xy 193.04 193.04)
 		)
 		(stroke
 			(width 0)
@@ -7298,7 +7344,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 99.06) (xy 144.78 99.06)
+			(xy 105.41 195.58) (xy 144.78 195.58)
 		)
 		(stroke
 			(width 0)
@@ -7308,7 +7354,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 96.52) (xy 44.45 115.57)
+			(xy 44.45 193.04) (xy 44.45 212.09)
 		)
 		(stroke
 			(width 0)
@@ -7318,7 +7364,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 106.68) (xy 170.18 107.95)
+			(xy 170.18 203.2) (xy 170.18 204.47)
 		)
 		(stroke
 			(width 0)
@@ -7368,7 +7414,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 92.71) (xy 83.82 127)
+			(xy 83.82 189.23) (xy 83.82 223.52)
 		)
 		(stroke
 			(width 0)
@@ -7378,7 +7424,7 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 133.35) (xy 90.17 133.35)
+			(xy 73.66 229.87) (xy 90.17 229.87)
 		)
 		(stroke
 			(width 0)
@@ -7388,7 +7434,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 88.9) (xy 147.32 88.9)
+			(xy 105.41 185.42) (xy 147.32 185.42)
 		)
 		(stroke
 			(width 0)
@@ -7398,7 +7444,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 114.3) (xy 119.38 114.3)
+			(xy 116.84 210.82) (xy 119.38 210.82)
 		)
 		(stroke
 			(width 0)
@@ -7408,7 +7454,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 102.87) (xy 36.83 101.6)
+			(xy 36.83 199.39) (xy 36.83 198.12)
 		)
 		(stroke
 			(width 0)
@@ -7438,7 +7484,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 114.3) (xy 101.6 114.3)
+			(xy 99.06 210.82) (xy 101.6 210.82)
 		)
 		(stroke
 			(width 0)
@@ -7478,7 +7524,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 133.35) (xy 44.45 134.62)
+			(xy 44.45 229.87) (xy 44.45 231.14)
 		)
 		(stroke
 			(width 0)
@@ -7488,7 +7534,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 88.9) (xy 105.41 90.17)
+			(xy 105.41 185.42) (xy 105.41 186.69)
 		)
 		(stroke
 			(width 0)
@@ -7498,7 +7544,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 121.92) (xy 193.04 121.92)
+			(xy 187.96 218.44) (xy 193.04 218.44)
 		)
 		(stroke
 			(width 0)
@@ -7508,7 +7554,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 92.71) (xy 101.6 88.9)
+			(xy 101.6 189.23) (xy 101.6 185.42)
 		)
 		(stroke
 			(width 0)
@@ -7518,7 +7564,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 119.38) (xy 118.11 120.65)
+			(xy 118.11 215.9) (xy 118.11 217.17)
 		)
 		(stroke
 			(width 0)
@@ -7528,7 +7574,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 99.06) (xy 101.6 99.06)
+			(xy 105.41 195.58) (xy 101.6 195.58)
 		)
 		(stroke
 			(width 0)
@@ -7538,7 +7584,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 99.06) (xy 101.6 95.25)
+			(xy 101.6 195.58) (xy 101.6 191.77)
 		)
 		(stroke
 			(width 0)
@@ -7548,7 +7594,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 96.52) (xy 193.04 92.71)
+			(xy 193.04 193.04) (xy 193.04 189.23)
 		)
 		(stroke
 			(width 0)
@@ -7558,7 +7604,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 87.63) (xy 147.32 88.9)
+			(xy 147.32 184.15) (xy 147.32 185.42)
 		)
 		(stroke
 			(width 0)
@@ -7568,7 +7614,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 133.35) (xy 90.17 95.25)
+			(xy 90.17 229.87) (xy 90.17 191.77)
 		)
 		(stroke
 			(width 0)
@@ -7578,7 +7624,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 107.95) (xy 170.18 107.95)
+			(xy 147.32 204.47) (xy 170.18 204.47)
 		)
 		(stroke
 			(width 0)
@@ -7588,7 +7634,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 92.71) (xy 101.6 92.71)
+			(xy 99.06 189.23) (xy 101.6 189.23)
 		)
 		(stroke
 			(width 0)
@@ -7598,7 +7644,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 88.9) (xy 105.41 88.9)
+			(xy 101.6 185.42) (xy 105.41 185.42)
 		)
 		(stroke
 			(width 0)
@@ -7629,7 +7675,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 123.19) (xy 44.45 124.46)
+			(xy 44.45 219.71) (xy 44.45 220.98)
 		)
 		(stroke
 			(width 0)
@@ -7659,7 +7705,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 119.38) (xy 118.11 119.38)
+			(xy 116.84 215.9) (xy 118.11 215.9)
 		)
 		(stroke
 			(width 0)
@@ -7689,7 +7735,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 92.71) (xy 99.06 92.71)
+			(xy 83.82 189.23) (xy 99.06 189.23)
 		)
 		(stroke
 			(width 0)
@@ -7699,7 +7745,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 97.79) (xy 105.41 99.06)
+			(xy 105.41 194.31) (xy 105.41 195.58)
 		)
 		(stroke
 			(width 0)
@@ -7709,7 +7755,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 96.52) (xy 187.96 97.79)
+			(xy 187.96 193.04) (xy 187.96 194.31)
 		)
 		(stroke
 			(width 0)
@@ -7719,7 +7765,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 106.68) (xy 190.5 107.95)
+			(xy 190.5 203.2) (xy 190.5 204.47)
 		)
 		(stroke
 			(width 0)
@@ -7729,7 +7775,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 92.71) (xy 40.64 92.71)
+			(xy 36.83 189.23) (xy 40.64 189.23)
 		)
 		(stroke
 			(width 0)
@@ -7739,7 +7785,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 110.49) (xy 185.42 110.49)
+			(xy 170.18 207.01) (xy 185.42 207.01)
 		)
 		(stroke
 			(width 0)
@@ -7759,7 +7805,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 95.25) (xy 90.17 95.25)
+			(xy 81.28 191.77) (xy 90.17 191.77)
 		)
 		(stroke
 			(width 0)
@@ -7769,7 +7815,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 102.87) (xy 36.83 104.14)
+			(xy 36.83 199.39) (xy 36.83 200.66)
 		)
 		(stroke
 			(width 0)
@@ -7829,7 +7875,7 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 110.49) (xy 185.42 111.76)
+			(xy 185.42 207.01) (xy 185.42 208.28)
 		)
 		(stroke
 			(width 0)
@@ -7839,7 +7885,7 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 102.87) (xy 36.83 102.87)
+			(xy 40.64 199.39) (xy 36.83 199.39)
 		)
 		(stroke
 			(width 0)
@@ -7849,7 +7895,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 123.19) (xy 187.96 121.92)
+			(xy 187.96 219.71) (xy 187.96 218.44)
 		)
 		(stroke
 			(width 0)
@@ -7859,7 +7905,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 99.06) (xy 55.88 127)
+			(xy 55.88 195.58) (xy 55.88 223.52)
 		)
 		(stroke
 			(width 0)
@@ -7869,7 +7915,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 125.73) (xy 44.45 124.46)
+			(xy 44.45 222.25) (xy 44.45 220.98)
 		)
 		(stroke
 			(width 0)
@@ -7878,7 +7924,7 @@
 		(uuid "fc5e3296-dc85-4aa4-bb39-6cc28709f5b9")
 	)
 	(label "PoE-A"
-		(at 187.96 95.25 90)
+		(at 187.96 191.77 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7958,7 +8004,7 @@
 		(uuid "73f2997e-e4b4-43f7-ac91-3e9f6346d01a")
 	)
 	(label "PoE-B"
-		(at 187.96 123.19 270)
+		(at 187.96 219.71 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8039,7 +8085,7 @@
 	)
 	(hierarchical_label "PoE"
 		(shape output)
-		(at 24.13 92.71 180)
+		(at 24.13 189.23 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8061,7 +8107,7 @@
 	)
 	(hierarchical_label "AT-DET"
 		(shape output)
-		(at 119.38 114.3 0)
+		(at 119.38 210.82 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8072,7 +8118,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 44.45 134.62 0)
+		(at 44.45 231.14 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -8083,7 +8129,7 @@
 		(dnp no)
 		(uuid "0019cef0-a70d-4790-97f4-35198b8f7e38")
 		(property "Reference" "#PWR01702"
-			(at 44.45 140.97 0)
+			(at 44.45 237.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8094,7 +8140,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 44.323 139.0142 0)
+			(at 44.323 235.5342 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8104,7 +8150,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 44.45 134.62 0)
+			(at 44.45 231.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8115,7 +8161,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 44.45 134.62 0)
+			(at 44.45 231.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8126,7 +8172,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 44.45 134.62 0)
+			(at 44.45 231.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8137,7 +8183,7 @@
 			)
 		)
 		(property "manf" ""
-			(at 44.45 134.62 0)
+			(at 44.45 231.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8148,7 +8194,7 @@
 			)
 		)
 		(property "manf#" ""
-			(at 44.45 134.62 0)
+			(at 44.45 231.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8159,7 +8205,7 @@
 			)
 		)
 		(property "mouser#" ""
-			(at 44.45 134.62 0)
+			(at 44.45 231.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8183,7 +8229,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 118.11 120.65 0)
+		(at 118.11 217.17 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -8194,7 +8240,7 @@
 		(dnp no)
 		(uuid "00687bc6-8141-465b-8697-e5af002ea4f5")
 		(property "Reference" "#PWR01703"
-			(at 118.11 127 0)
+			(at 118.11 223.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8205,7 +8251,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 117.983 125.0442 0)
+			(at 117.983 221.5642 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8215,7 +8261,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 118.11 120.65 0)
+			(at 118.11 217.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8226,7 +8272,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 118.11 120.65 0)
+			(at 118.11 217.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8237,7 +8283,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 118.11 120.65 0)
+			(at 118.11 217.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8248,7 +8294,7 @@
 			)
 		)
 		(property "manf" ""
-			(at 118.11 120.65 0)
+			(at 118.11 217.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8259,7 +8305,7 @@
 			)
 		)
 		(property "manf#" ""
-			(at 118.11 120.65 0)
+			(at 118.11 217.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8270,7 +8316,7 @@
 			)
 		)
 		(property "mouser#" ""
-			(at 118.11 120.65 0)
+			(at 118.11 217.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8294,7 +8340,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 170.18 111.76 180)
+		(at 170.18 208.28 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8304,7 +8350,7 @@
 		(dnp no)
 		(uuid "0dac2b0a-4f94-4985-a9ae-649ba86bcade")
 		(property "Reference" "TP1702"
-			(at 170.18 119.38 0)
+			(at 170.18 215.9 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8314,7 +8360,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 170.18 117.475 0)
+			(at 170.18 213.995 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8324,7 +8370,7 @@
 			)
 		)
 		(property "Footprint" "Testpoints_Kampi:TestPoint_Pad_1.0x1.0mm"
-			(at 165.1 111.76 0)
+			(at 165.1 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8335,7 +8381,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 165.1 111.76 0)
+			(at 165.1 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8346,7 +8392,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 170.18 111.76 0)
+			(at 170.18 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8357,7 +8403,7 @@
 			)
 		)
 		(property "manf" ""
-			(at 170.18 111.76 0)
+			(at 170.18 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8368,7 +8414,7 @@
 			)
 		)
 		(property "manf#" ""
-			(at 170.18 111.76 0)
+			(at 170.18 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8379,7 +8425,7 @@
 			)
 		)
 		(property "mouser#" ""
-			(at 170.18 111.76 0)
+			(at 170.18 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8403,7 +8449,7 @@
 	)
 	(symbol
 		(lib_id "Diode:SS36")
-		(at 185.42 102.87 90)
+		(at 185.42 199.39 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -8414,7 +8460,7 @@
 		(dnp no)
 		(uuid "124ba340-beb8-4114-9a8b-fca481f31459")
 		(property "Reference" "D1701"
-			(at 182.88 101.2824 90)
+			(at 182.88 197.8024 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8425,7 +8471,7 @@
 			)
 		)
 		(property "Value" "SS36"
-			(at 182.88 103.8224 90)
+			(at 182.88 200.3424 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8436,7 +8482,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SMA"
-			(at 189.865 102.87 0)
+			(at 189.865 199.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8447,7 +8493,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/88751/ss32.pdf"
-			(at 185.42 102.87 0)
+			(at 185.42 199.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8458,7 +8504,7 @@
 			)
 		)
 		(property "Description" "60V 3A Schottky Diode, SMA"
-			(at 185.42 102.87 0)
+			(at 185.42 199.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8469,7 +8515,7 @@
 			)
 		)
 		(property "manf" "Vishay Semiconductors"
-			(at 185.42 102.87 0)
+			(at 185.42 199.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8480,7 +8526,7 @@
 			)
 		)
 		(property "manf#" "SS36-E3/57T"
-			(at 185.42 102.87 0)
+			(at 185.42 199.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8491,7 +8537,7 @@
 			)
 		)
 		(property "mouser#" "625-SS36-E3"
-			(at 185.42 102.87 0)
+			(at 185.42 199.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8632,7 +8678,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 44.45 119.38 0)
+		(at 44.45 215.9 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -8643,7 +8689,7 @@
 		(dnp yes)
 		(uuid "2611d087-ae0c-4f29-8eac-85894a5fea2e")
 		(property "Reference" "R1701"
-			(at 41.91 118.1099 0)
+			(at 41.91 214.6299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8654,7 +8700,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 41.91 120.6499 0)
+			(at 41.91 217.1699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8665,7 +8711,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 46.228 119.38 90)
+			(at 46.228 215.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8676,7 +8722,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 44.45 119.38 0)
+			(at 44.45 215.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8687,7 +8733,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 44.45 119.38 0)
+			(at 44.45 215.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8698,7 +8744,7 @@
 			)
 		)
 		(property "manf" ""
-			(at 44.45 119.38 0)
+			(at 44.45 215.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8709,7 +8755,7 @@
 			)
 		)
 		(property "manf#" ""
-			(at 44.45 119.38 0)
+			(at 44.45 215.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8720,7 +8766,7 @@
 			)
 		)
 		(property "mouser#" ""
-			(at 44.45 119.38 0)
+			(at 44.45 215.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8747,7 +8793,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 44.45 129.54 0)
+		(at 44.45 226.06 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -8758,7 +8804,7 @@
 		(dnp yes)
 		(uuid "29949c59-940d-4e1b-9540-04802cc18dae")
 		(property "Reference" "R1702"
-			(at 41.91 128.2699 0)
+			(at 41.91 224.7899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8769,7 +8815,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 41.91 130.8099 0)
+			(at 41.91 227.3299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8780,7 +8826,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 46.228 129.54 90)
+			(at 46.228 226.06 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8791,7 +8837,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 44.45 129.54 0)
+			(at 44.45 226.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8802,7 +8848,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 44.45 129.54 0)
+			(at 44.45 226.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8813,7 +8859,7 @@
 			)
 		)
 		(property "manf" ""
-			(at 44.45 129.54 0)
+			(at 44.45 226.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8824,7 +8870,7 @@
 			)
 		)
 		(property "manf#" ""
-			(at 44.45 129.54 0)
+			(at 44.45 226.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8835,7 +8881,7 @@
 			)
 		)
 		(property "mouser#" ""
-			(at 44.45 129.54 0)
+			(at 44.45 226.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9087,7 +9133,7 @@
 	)
 	(symbol
 		(lib_id "Isolator:TLP293")
-		(at 109.22 116.84 0)
+		(at 109.22 213.36 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9098,7 +9144,7 @@
 		(fields_autoplaced yes)
 		(uuid "384088c5-728d-4ff4-b64a-cdedf6123e7c")
 		(property "Reference" "IC1701"
-			(at 109.22 107.95 0)
+			(at 109.22 204.47 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9108,7 +9154,7 @@
 			)
 		)
 		(property "Value" "TLP293"
-			(at 109.22 110.49 0)
+			(at 109.22 207.01 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9118,7 +9164,7 @@
 			)
 		)
 		(property "Footprint" "Toshiba:TLP293(TPL,E"
-			(at 104.14 121.92 0)
+			(at 104.14 218.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9131,7 +9177,7 @@
 			)
 		)
 		(property "Datasheet" "https://toshiba.semicon-storage.com/info/TLP293_datasheet_en_20191129.pdf?did=14419&prodName=TLP293"
-			(at 109.22 124.46 0)
+			(at 109.22 220.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9143,7 +9189,7 @@
 			)
 		)
 		(property "Description" "DC Optocoupler, Vce 80V, CTR 50-100%, SOP4"
-			(at 109.22 116.84 0)
+			(at 109.22 213.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9154,7 +9200,7 @@
 			)
 		)
 		(property "manf" "Toshiba"
-			(at 109.22 116.84 0)
+			(at 109.22 213.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9165,7 +9211,7 @@
 			)
 		)
 		(property "manf#" "TLP293(Y-TPL,E"
-			(at 109.22 116.84 0)
+			(at 109.22 213.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9176,7 +9222,7 @@
 			)
 		)
 		(property "mouser#" "757-TLP293(Y-TPLE"
-			(at 109.22 116.84 0)
+			(at 109.22 213.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9209,7 +9255,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 170.18 106.68 0)
+		(at 170.18 203.2 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9219,7 +9265,7 @@
 		(dnp no)
 		(uuid "3f01db4c-4d71-4fd2-98e4-f67558bdb0a8")
 		(property "Reference" "TP1701"
-			(at 170.18 99.06 0)
+			(at 170.18 195.58 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9229,7 +9275,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 170.18 100.965 0)
+			(at 170.18 197.485 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9239,7 +9285,7 @@
 			)
 		)
 		(property "Footprint" "Testpoints_Kampi:TestPoint_Pad_1.0x1.0mm"
-			(at 175.26 106.68 0)
+			(at 175.26 203.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9250,7 +9296,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 175.26 106.68 0)
+			(at 175.26 203.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9261,7 +9307,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 170.18 106.68 0)
+			(at 170.18 203.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9272,7 +9318,7 @@
 			)
 		)
 		(property "manf" ""
-			(at 170.18 106.68 0)
+			(at 170.18 203.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9283,7 +9329,7 @@
 			)
 		)
 		(property "manf#" ""
-			(at 170.18 106.68 0)
+			(at 170.18 203.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9294,7 +9340,7 @@
 			)
 		)
 		(property "mouser#" ""
-			(at 170.18 106.68 0)
+			(at 170.18 203.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9396,7 +9442,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 69.85 127 90)
+		(at 69.85 223.52 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -9408,7 +9454,7 @@
 		(fields_autoplaced yes)
 		(uuid "4f4b1768-eab8-40fa-9a63-71e1f1f1f57f")
 		(property "Reference" "C1702"
-			(at 69.85 119.38 90)
+			(at 69.85 215.9 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9418,7 +9464,7 @@
 			)
 		)
 		(property "Value" "4n7"
-			(at 69.85 121.92 90)
+			(at 69.85 218.44 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9428,7 +9474,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
-			(at 73.66 127.9652 0)
+			(at 73.66 224.4852 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9439,7 +9485,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.de/datasheet/3/72/1/C1206C472KFRACTU.pdf"
-			(at 69.85 127 0)
+			(at 69.85 223.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9450,7 +9496,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, 1.5 kV"
-			(at 69.85 127 0)
+			(at 69.85 223.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9461,7 +9507,7 @@
 			)
 		)
 		(property "manf" "KEMET"
-			(at 69.85 127 0)
+			(at 69.85 223.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9472,7 +9518,7 @@
 			)
 		)
 		(property "manf#" "C1206C472KFRACTU"
-			(at 69.85 127 0)
+			(at 69.85 223.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9483,7 +9529,7 @@
 			)
 		)
 		(property "mouser#" "80-C1206C472KFRACTU"
-			(at 69.85 127 0)
+			(at 69.85 223.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9510,7 +9556,7 @@
 	)
 	(symbol
 		(lib_id "Silvertel:Ag5400")
-		(at 69.85 99.06 0)
+		(at 69.85 195.58 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -9521,7 +9567,7 @@
 		(dnp no)
 		(uuid "56aefba4-98ea-4c45-a66b-f5de932fe2ac")
 		(property "Reference" "M1701"
-			(at 69.85 85.09 0)
+			(at 69.85 181.61 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9531,7 +9577,7 @@
 			)
 		)
 		(property "Value" "Ag5400"
-			(at 69.85 87.63 0)
+			(at 69.85 184.15 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9541,7 +9587,7 @@
 			)
 		)
 		(property "Footprint" "Silvertel:Ag5400"
-			(at 69.85 99.06 0)
+			(at 69.85 195.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9552,7 +9598,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.de/datasheet/3/3726/1/Ag5400-datasheet-high%20Efficiency-30W-Power-Over-Ethernet-Plus-Module-PoE+PD.pdf"
-			(at 69.85 99.06 0)
+			(at 69.85 195.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9563,7 +9609,7 @@
 			)
 		)
 		(property "Description" "Power-over-Ethernet - PoE - Open Frame Module"
-			(at 69.85 99.06 0)
+			(at 69.85 195.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9574,7 +9620,7 @@
 			)
 		)
 		(property "manf" "Silvertel"
-			(at 69.85 99.06 0)
+			(at 69.85 195.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9585,7 +9631,7 @@
 			)
 		)
 		(property "manf#" "AG5412"
-			(at 69.85 99.06 0)
+			(at 69.85 195.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9596,7 +9642,7 @@
 			)
 		)
 		(property "mouser#" "480-AG5412"
-			(at 69.85 99.06 0)
+			(at 69.85 195.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9725,7 +9771,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 193.04 127 180)
+		(at 193.04 223.52 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9735,7 +9781,7 @@
 		(dnp no)
 		(uuid "634e33cf-0fec-4a91-b266-68c17b8ba896")
 		(property "Reference" "TP1704"
-			(at 193.04 134.62 0)
+			(at 193.04 231.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9745,7 +9791,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 193.04 132.715 0)
+			(at 193.04 229.235 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9755,7 +9801,7 @@
 			)
 		)
 		(property "Footprint" "Testpoints_Kampi:TestPoint_Pad_1.0x1.0mm"
-			(at 187.96 127 0)
+			(at 187.96 223.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9766,7 +9812,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 187.96 127 0)
+			(at 187.96 223.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9777,7 +9823,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 193.04 127 0)
+			(at 193.04 223.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9788,7 +9834,7 @@
 			)
 		)
 		(property "manf" ""
-			(at 193.04 127 0)
+			(at 193.04 223.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9799,7 +9845,7 @@
 			)
 		)
 		(property "manf#" ""
-			(at 193.04 127 0)
+			(at 193.04 223.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9810,7 +9856,7 @@
 			)
 		)
 		(property "mouser#" ""
-			(at 193.04 127 0)
+			(at 193.04 223.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9948,8 +9994,120 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 36.83 187.96 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "76d965be-7f80-4b9f-9b55-ceaacbd05b0f")
+		(property "Reference" "TP1705"
+			(at 34.29 183.3879 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 34.29 185.9279 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Testpoints_Kampi:TestPoint_Pad_1.0x1.0mm"
+			(at 31.75 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 31.75 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 36.83 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "manf" ""
+			(at 36.83 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "manf#" ""
+			(at 36.83 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "mouser#" ""
+			(at 36.83 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "72590fc7-b58f-4114-ae5a-4924cebd4149")
+		)
+		(instances
+			(project "Gateway"
+				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/86891732-a753-4dcc-a58c-71e3fc99b0cd"
+					(reference "TP1705")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Diode:SS36")
-		(at 185.42 115.57 90)
+		(at 185.42 212.09 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -9960,7 +10118,7 @@
 		(dnp no)
 		(uuid "7c7f5061-9d52-4ffd-bd26-4ac6fac93192")
 		(property "Reference" "D1702"
-			(at 182.88 113.9824 90)
+			(at 182.88 210.5024 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9971,7 +10129,7 @@
 			)
 		)
 		(property "Value" "SS36"
-			(at 182.88 116.5224 90)
+			(at 182.88 213.0424 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9982,7 +10140,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SMA"
-			(at 189.865 115.57 0)
+			(at 189.865 212.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9993,7 +10151,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/88751/ss32.pdf"
-			(at 185.42 115.57 0)
+			(at 185.42 212.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10004,7 +10162,7 @@
 			)
 		)
 		(property "Description" "60V 3A Schottky Diode, SMA"
-			(at 185.42 115.57 0)
+			(at 185.42 212.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10015,7 +10173,7 @@
 			)
 		)
 		(property "manf" "Vishay Semiconductors"
-			(at 185.42 115.57 0)
+			(at 185.42 212.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10026,7 +10184,7 @@
 			)
 		)
 		(property "manf#" "SS36-E3/57T"
-			(at 185.42 115.57 0)
+			(at 185.42 212.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10037,7 +10195,7 @@
 			)
 		)
 		(property "mouser#" "625-SS36-E3"
-			(at 185.42 115.57 0)
+			(at 185.42 212.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10064,7 +10222,7 @@
 	)
 	(symbol
 		(lib_id "Diode:SS36")
-		(at 190.5 102.87 270)
+		(at 190.5 199.39 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10075,7 +10233,7 @@
 		(fields_autoplaced yes)
 		(uuid "80435f52-81eb-4d3a-b53a-58a0f62b7995")
 		(property "Reference" "D1703"
-			(at 193.04 101.2824 90)
+			(at 193.04 197.8024 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10086,7 +10244,7 @@
 			)
 		)
 		(property "Value" "SS36"
-			(at 193.04 103.8224 90)
+			(at 193.04 200.3424 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10097,7 +10255,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SMA"
-			(at 186.055 102.87 0)
+			(at 186.055 199.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10108,7 +10266,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/88751/ss32.pdf"
-			(at 190.5 102.87 0)
+			(at 190.5 199.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10119,7 +10277,7 @@
 			)
 		)
 		(property "Description" "60V 3A Schottky Diode, SMA"
-			(at 190.5 102.87 0)
+			(at 190.5 199.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10130,7 +10288,7 @@
 			)
 		)
 		(property "manf" "Vishay Semiconductors"
-			(at 190.5 102.87 0)
+			(at 190.5 199.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10141,7 +10299,7 @@
 			)
 		)
 		(property "manf#" "SS36-E3/57T"
-			(at 190.5 102.87 0)
+			(at 190.5 199.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10152,7 +10310,7 @@
 			)
 		)
 		(property "mouser#" "625-SS36-E3"
-			(at 190.5 102.87 0)
+			(at 190.5 199.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10257,7 +10415,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 193.04 92.71 0)
+		(at 193.04 189.23 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10267,7 +10425,7 @@
 		(dnp no)
 		(uuid "96264c6a-b1ca-402a-a839-bd04ded3a74b")
 		(property "Reference" "TP1703"
-			(at 193.04 85.09 0)
+			(at 193.04 181.61 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10277,7 +10435,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 193.04 86.995 0)
+			(at 193.04 183.515 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10287,7 +10445,7 @@
 			)
 		)
 		(property "Footprint" "Testpoints_Kampi:TestPoint_Pad_1.0x1.0mm"
-			(at 198.12 92.71 0)
+			(at 198.12 189.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10298,7 +10456,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 198.12 92.71 0)
+			(at 198.12 189.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10309,7 +10467,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 193.04 92.71 0)
+			(at 193.04 189.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10320,7 +10478,7 @@
 			)
 		)
 		(property "manf" ""
-			(at 193.04 92.71 0)
+			(at 193.04 189.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10331,7 +10489,7 @@
 			)
 		)
 		(property "manf#" ""
-			(at 193.04 92.71 0)
+			(at 193.04 189.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10342,7 +10500,7 @@
 			)
 		)
 		(property "mouser#" ""
-			(at 193.04 92.71 0)
+			(at 193.04 189.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10366,7 +10524,7 @@
 	)
 	(symbol
 		(lib_id "Diode:SS36")
-		(at 190.5 115.57 270)
+		(at 190.5 212.09 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10377,7 +10535,7 @@
 		(fields_autoplaced yes)
 		(uuid "a33ed2c1-9f60-44f1-a182-83a9af8b706e")
 		(property "Reference" "D1704"
-			(at 193.04 113.9824 90)
+			(at 193.04 210.5024 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10388,7 +10546,7 @@
 			)
 		)
 		(property "Value" "SS36"
-			(at 193.04 116.5224 90)
+			(at 193.04 213.0424 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10399,7 +10557,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SMA"
-			(at 186.055 115.57 0)
+			(at 186.055 212.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10410,7 +10568,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/88751/ss32.pdf"
-			(at 190.5 115.57 0)
+			(at 190.5 212.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10421,7 +10579,7 @@
 			)
 		)
 		(property "Description" "60V 3A Schottky Diode, SMA"
-			(at 190.5 115.57 0)
+			(at 190.5 212.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10432,7 +10590,7 @@
 			)
 		)
 		(property "manf" "Vishay Semiconductors"
-			(at 190.5 115.57 0)
+			(at 190.5 212.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10443,7 +10601,7 @@
 			)
 		)
 		(property "manf#" "SS36-E3/57T"
-			(at 190.5 115.57 0)
+			(at 190.5 212.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10454,7 +10612,7 @@
 			)
 		)
 		(property "mouser#" "625-SS36-E3"
-			(at 190.5 115.57 0)
+			(at 190.5 212.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10559,7 +10717,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 36.83 104.14 0)
+		(at 36.83 200.66 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -10570,7 +10728,7 @@
 		(dnp no)
 		(uuid "abb4b30f-7628-45ab-8363-446b422f629b")
 		(property "Reference" "#PWR01701"
-			(at 36.83 110.49 0)
+			(at 36.83 207.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10581,7 +10739,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 36.703 108.5342 0)
+			(at 36.703 205.0542 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10591,7 +10749,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 36.83 104.14 0)
+			(at 36.83 200.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10602,7 +10760,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 36.83 104.14 0)
+			(at 36.83 200.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10613,7 +10771,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 36.83 104.14 0)
+			(at 36.83 200.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10624,7 +10782,7 @@
 			)
 		)
 		(property "manf" ""
-			(at 36.83 104.14 0)
+			(at 36.83 200.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10635,7 +10793,7 @@
 			)
 		)
 		(property "manf#" ""
-			(at 36.83 104.14 0)
+			(at 36.83 200.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10646,7 +10804,7 @@
 			)
 		)
 		(property "mouser#" ""
-			(at 36.83 104.14 0)
+			(at 36.83 200.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10784,7 +10942,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 147.32 87.63 0)
+		(at 147.32 184.15 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10795,7 +10953,7 @@
 		(fields_autoplaced yes)
 		(uuid "bddd9a57-4c75-48fe-b617-cfa4b48a6c42")
 		(property "Reference" "#FLG01702"
-			(at 147.32 85.725 0)
+			(at 147.32 182.245 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10806,7 +10964,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 147.32 82.55 0)
+			(at 147.32 179.07 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10816,7 +10974,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 147.32 87.63 0)
+			(at 147.32 184.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10827,7 +10985,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 147.32 87.63 0)
+			(at 147.32 184.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10838,7 +10996,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 147.32 87.63 0)
+			(at 147.32 184.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10862,7 +11020,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized")
-		(at 36.83 97.79 0)
+		(at 36.83 194.31 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -10873,7 +11031,7 @@
 		(dnp no)
 		(uuid "c23b6dd2-73f3-4c63-9490-19f17f65d8a2")
 		(property "Reference" "C1701"
-			(at 33.02 96.5199 0)
+			(at 33.02 193.0399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10884,7 +11042,7 @@
 			)
 		)
 		(property "Value" "470u"
-			(at 33.02 99.0599 0)
+			(at 33.02 195.5799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10895,7 +11053,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:CP_Elec_6.3x7.7"
-			(at 35.8648 101.6 0)
+			(at 35.8648 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10906,7 +11064,7 @@
 			)
 		)
 		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/RDE0000C1266.pdf"
-			(at 36.83 97.79 0)
+			(at 36.83 194.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10917,7 +11075,7 @@
 			)
 		)
 		(property "Description" "Polarized capacitor"
-			(at 36.83 97.79 0)
+			(at 36.83 194.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10928,7 +11086,7 @@
 			)
 		)
 		(property "manf" "Panasonic"
-			(at 36.83 97.79 0)
+			(at 36.83 194.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10939,7 +11097,7 @@
 			)
 		)
 		(property "manf#" "EEE-FNJ471XUL"
-			(at 36.83 97.79 0)
+			(at 36.83 194.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10950,7 +11108,7 @@
 			)
 		)
 		(property "mouser#" "667-EEE-FNJ471XUL"
-			(at 36.83 97.79 0)
+			(at 36.83 194.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10977,7 +11135,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 105.41 93.98 0)
+		(at 105.41 190.5 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10987,7 +11145,7 @@
 		(dnp no)
 		(uuid "d2e8b569-e549-44c4-951e-b0954267ad10")
 		(property "Reference" "C1704"
-			(at 109.22 92.7099 0)
+			(at 109.22 189.2299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10998,7 +11156,7 @@
 			)
 		)
 		(property "Value" "10n"
-			(at 109.22 95.2499 0)
+			(at 109.22 191.7699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11009,7 +11167,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 106.3752 97.79 0)
+			(at 106.3752 194.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11020,7 +11178,7 @@
 			)
 		)
 		(property "Datasheet" "https://datasheets.kyocera-avx.com/KGM_X7R.pdf"
-			(at 105.41 93.98 0)
+			(at 105.41 190.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11031,7 +11189,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, 200 V"
-			(at 105.41 93.98 0)
+			(at 105.41 190.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11042,7 +11200,7 @@
 			)
 		)
 		(property "manf" "KYOCERA AVX"
-			(at 105.41 93.98 0)
+			(at 105.41 190.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11053,7 +11211,7 @@
 			)
 		)
 		(property "manf#" "08052C103MAT2A"
-			(at 105.41 93.98 0)
+			(at 105.41 190.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11064,7 +11222,7 @@
 			)
 		)
 		(property "mouser#" "581-08052C103MAT2A"
-			(at 105.41 93.98 0)
+			(at 105.41 190.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11320,7 +11478,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 69.85 133.35 90)
+		(at 69.85 229.87 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11331,7 +11489,7 @@
 		(fields_autoplaced yes)
 		(uuid "e13c4447-3e98-4bca-b615-4268ad6603df")
 		(property "Reference" "C1703"
-			(at 69.85 138.43 90)
+			(at 69.85 234.95 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11341,7 +11499,7 @@
 			)
 		)
 		(property "Value" "4n7"
-			(at 69.85 140.97 90)
+			(at 69.85 237.49 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11351,7 +11509,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
-			(at 73.66 132.3848 0)
+			(at 73.66 228.9048 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11362,7 +11520,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.de/datasheet/3/72/1/C1206C472KFRACTU.pdf"
-			(at 69.85 133.35 0)
+			(at 69.85 229.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11373,7 +11531,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, 1.5 kV"
-			(at 69.85 133.35 0)
+			(at 69.85 229.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11384,7 +11542,7 @@
 			)
 		)
 		(property "manf" "KEMET"
-			(at 69.85 133.35 0)
+			(at 69.85 229.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11395,7 +11553,7 @@
 			)
 		)
 		(property "manf#" "C1206C472KFRACTU"
-			(at 69.85 133.35 0)
+			(at 69.85 229.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11406,7 +11564,7 @@
 			)
 		)
 		(property "mouser#" "80-C1206C472KFRACTU"
-			(at 69.85 133.35 0)
+			(at 69.85 229.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

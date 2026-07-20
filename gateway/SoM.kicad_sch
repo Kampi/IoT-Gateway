@@ -17087,7 +17087,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Keystone:3034"
 			(at 215.9 167.386 90)
 			(hide yes)
 			(show_name no)
@@ -17098,7 +17098,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/201/1/3034.pdf"
 			(at 215.9 167.386 90)
 			(hide yes)
 			(show_name no)
@@ -17120,7 +17120,7 @@
 				)
 			)
 		)
-		(property "manf" ""
+		(property "manf" "Keystone Electronics"
 			(at 215.9 168.91 0)
 			(hide yes)
 			(show_name no)
@@ -17131,7 +17131,7 @@
 				)
 			)
 		)
-		(property "manf#" ""
+		(property "manf#" "3034"
 			(at 215.9 168.91 0)
 			(hide yes)
 			(show_name no)
@@ -17142,7 +17142,7 @@
 				)
 			)
 		)
-		(property "mouser#" ""
+		(property "mouser#" "534-3034"
 			(at 215.9 168.91 0)
 			(hide yes)
 			(show_name no)
