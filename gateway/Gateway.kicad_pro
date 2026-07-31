@@ -875,7 +875,7 @@
         "uuid": "d5742f03-3b1a-42e5-a384-018bd4b919aa"
       }
     ],
-    "used_designators": "",
+    "used_designators": "#PWR817,#PWR825-826,#PWR829,#PWR831-832,#PWR834-835,#PWR838-839,#PWR842-843,#PWR913,Q801,Q901-902,IC803,R804-805,R809-812,R814-816,R820-824,R907,R910-911,C820,C824-825,TP802-803,TP806",
     "variants": []
   },
   "sheets": [
