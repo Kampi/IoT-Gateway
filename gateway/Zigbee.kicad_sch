@@ -3785,16 +3785,6 @@
 		)
 		(uuid "05fcd8ef-891e-44ae-a880-9c53fbdaffab")
 	)
-	(label "CC2652-Boot"
-		(at 250.19 97.79 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "54597203-f34d-47ed-9317-bd75ba30e4c3")
-	)
 	(label "Zigbee.RxD"
 		(at 80.01 162.56 0)
 		(effects

@@ -319,6 +319,8 @@ jobs:
         with:
           name: Log-${{ env.kibot_variant }}.zip
           path: log
+		  retention-days: 7
+		  compression-level: 6
 
       - name: Clean up
         shell: bash
@@ -336,6 +338,8 @@ jobs:
           name: ${{ env.kibot_variant }}.zip
           path: production
           if-no-files-found: ignore
+		  retention-days: 7
+		  compression-level: 6
 
       - name: Upload updated CHANGELOG
         if: ${{ github.ref_type == 'tag' }}
@@ -343,6 +347,8 @@ jobs:
         with:
           name: CHANGELOG.md
           path: ${{ env.kibot_input_dir }}/CHANGELOG.md
+		  retention-days: 7
+		  compression-level: 6
 
       - name: Pull latest changes
         shell: bash

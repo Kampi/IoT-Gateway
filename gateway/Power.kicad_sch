@@ -3716,7 +3716,7 @@
 	(text_box "Priority Power MUX"
 		(exclude_from_sim no)
 		(at 217.17 176.53 0)
-		(size 195.58 7.62)
+		(size 186.69 7.62)
 		(margins 1.9049 1.9049 1.9049 1.9049)
 		(stroke
 			(width -0.0001)
@@ -8001,7 +8001,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 295.91 78.232 90)
 			(hide yes)
 			(show_name no)
@@ -8045,7 +8045,7 @@
 				)
 			)
 		)
-		(property "manf#" "RC0402FR-071ML"
+		(property "manf#" "RC0805FR-071ML"
 			(at 295.91 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -8056,7 +8056,7 @@
 				)
 			)
 		)
-		(property "mouser#" "603-RC0402FR-071ML"
+		(property "mouser#" "603-RC0805FR-071ML"
 			(at 295.91 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -8115,7 +8115,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 320.802 135.89 90)
 			(hide yes)
 			(show_name no)
@@ -8159,7 +8159,7 @@
 				)
 			)
 		)
-		(property "manf#" "RT0402BRE0723K2L"
+		(property "manf#" "RT0805BRD0723K2L"
 			(at 322.58 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -8170,7 +8170,7 @@
 				)
 			)
 		)
-		(property "mouser#" "603-RT0402BRE0723K2L"
+		(property "mouser#" "603-RT0805BRD0723K2L"
 			(at 322.58 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -8386,7 +8386,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 272.288 138.43 90)
 			(hide yes)
 			(show_name no)
@@ -8419,7 +8419,7 @@
 				)
 			)
 		)
-		(property "manf#" "RT0402BRD0722K1L"
+		(property "manf#" "RT0805BRD0722K1L"
 			(at 270.51 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -8430,7 +8430,7 @@
 				)
 			)
 		)
-		(property "mouser#" "603-RT0402BRD0722K1L"
+		(property "mouser#" "603-RT0805BRD0722K1L"
 			(at 270.51 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -10060,7 +10060,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0805-JW-202GLF"
+		(property "manf#" "CR0805-FX-2001ELF"
 			(at 100.33 226.06 0)
 			(hide yes)
 			(show_name no)
@@ -10071,7 +10071,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805-JW-202GLF"
+		(property "mouser#" "652-CR0805-FX-2001ELF"
 			(at 100.33 226.06 0)
 			(hide yes)
 			(show_name no)
@@ -10322,7 +10322,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 365.252 111.76 90)
 			(hide yes)
 			(show_name no)
@@ -10366,7 +10366,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0402-JW-103GLF"
+		(property "manf#" "CR0805-JW-103GLF"
 			(at 367.03 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -10377,7 +10377,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0402-JW-103GLF"
+		(property "mouser#" "652-CR0805-JW-103GLF"
 			(at 367.03 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -10744,7 +10744,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 272.288 148.59 90)
 			(hide yes)
 			(show_name no)
@@ -10788,7 +10788,7 @@
 				)
 			)
 		)
-		(property "manf#" "RT0402BRD0793K1L"
+		(property "manf#" "RT0805BRD0793K1L"
 			(at 270.51 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -10799,7 +10799,7 @@
 				)
 			)
 		)
-		(property "mouser#" "603-RT0402BRD0793K1L"
+		(property "mouser#" "603-RT0805BRD0793K1L"
 			(at 270.51 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -11722,7 +11722,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 245.618 138.43 90)
 			(hide yes)
 			(show_name no)
@@ -11766,7 +11766,7 @@
 				)
 			)
 		)
-		(property "manf#" "RT0402BRD075K36L"
+		(property "manf#" "RT0805BRD075K36L"
 			(at 243.84 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -11777,7 +11777,7 @@
 				)
 			)
 		)
-		(property "mouser#" "603-RT0402BRD075K36L"
+		(property "mouser#" "603-RT0805BRD075K36L"
 			(at 243.84 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -12411,7 +12411,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 274.828 85.09 90)
 			(hide yes)
 			(show_name no)
@@ -12455,7 +12455,7 @@
 				)
 			)
 		)
-		(property "manf#" "RT0402BRD0793K1L"
+		(property "manf#" "RT0805BRD0793K1L"
 			(at 273.05 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -12466,7 +12466,7 @@
 				)
 			)
 		)
-		(property "mouser#" "603-RT0402BRD0793K1L"
+		(property "mouser#" "603-RT0805BRD0793K1L"
 			(at 273.05 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -12760,7 +12760,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 334.518 102.87 90)
 			(hide yes)
 			(show_name no)
@@ -12804,7 +12804,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0402-JW-103GLF"
+		(property "manf#" "CR0805-JW-103GLF"
 			(at 332.74 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -12815,7 +12815,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0402-JW-103GLF"
+		(property "mouser#" "652-CR0805-JW-103GLF"
 			(at 332.74 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -13264,7 +13264,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 231.648 113.03 90)
 			(hide yes)
 			(show_name no)
@@ -13308,7 +13308,7 @@
 				)
 			)
 		)
-		(property "manf#" "RC0402FR-0723K7L"
+		(property "manf#" "RC0805FR-0723K7L"
 			(at 229.87 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -13319,7 +13319,7 @@
 				)
 			)
 		)
-		(property "mouser#" "603-RC0402FR-0723K7L"
+		(property "mouser#" "603-RC0805FR-0723K7L"
 			(at 229.87 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -13379,7 +13379,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 231.648 128.27 90)
 			(hide yes)
 			(show_name no)
@@ -13423,7 +13423,7 @@
 				)
 			)
 		)
-		(property "manf#" "RT0402BRD075K36L"
+		(property "manf#" "RT0805BRD075K36L"
 			(at 229.87 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -13434,7 +13434,7 @@
 				)
 			)
 		)
-		(property "mouser#" "603-RT0402BRD075K36L"
+		(property "mouser#" "603-RT0805BRD075K36L"
 			(at 229.87 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -13571,7 +13571,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 309.5752 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -13582,7 +13582,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://datasheets.kyocera-avx.com/KGM_X7R.pdf"
+		(property "Datasheet" "https://datasheets.kyocera-avx.com/AutoMLCC.pdf"
 			(at 308.61 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -13615,7 +13615,7 @@
 				)
 			)
 		)
-		(property "manf#" "04025C104JAT2A"
+		(property "manf#" "08053C104M4T4A"
 			(at 308.61 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -13626,7 +13626,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-04025C104JAT2A"
+		(property "mouser#" "581-08053C104M4T4A"
 			(at 308.61 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -14454,7 +14454,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 245.618 128.27 90)
 			(hide yes)
 			(show_name no)
@@ -14498,7 +14498,7 @@
 				)
 			)
 		)
-		(property "manf#" "RC0402FR-0723K7L"
+		(property "manf#" "RC0805FR-0723K7L"
 			(at 243.84 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -14509,7 +14509,7 @@
 				)
 			)
 		)
-		(property "mouser#" "603-RC0402FR-0723K7L"
+		(property "mouser#" "603-RC0805FR-0723K7L"
 			(at 243.84 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -16059,7 +16059,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 274.828 74.93 90)
 			(hide yes)
 			(show_name no)
@@ -16103,7 +16103,7 @@
 				)
 			)
 		)
-		(property "manf#" "RT0402BRD0716K5L"
+		(property "manf#" "RT0805BRD0716K5L"
 			(at 273.05 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -16114,7 +16114,7 @@
 				)
 			)
 		)
-		(property "mouser#" "603-RT0402BRD0716K5L"
+		(property "mouser#" "603-RT0805BRD0716K5L"
 			(at 273.05 74.93 0)
 			(hide yes)
 			(show_name no)

@@ -2169,7 +2169,7 @@
 	)
 	(text_box "DESIGN NOTE:\nDefault is IN1."
 		(exclude_from_sim no)
-		(at 92.71 138.43 0)
+		(at 66.04 138.43 0)
 		(size 25.4 10.16)
 		(margins 2 2 2 2)
 		(stroke

@@ -1041,7 +1041,7 @@
 						(type background)
 					)
 				)
-				(pin bidirectional line
+				(pin no_connect line
 					(at -17.78 -13.97 0)
 					(length 2.54)
 					(hide yes)
@@ -1060,7 +1060,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin no_connect line
 					(at -17.78 -13.97 0)
 					(length 2.54)
 					(hide yes)
@@ -1079,7 +1079,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin no_connect line
 					(at -17.78 -13.97 0)
 					(length 2.54)
 					(hide yes)
@@ -1098,7 +1098,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin no_connect line
 					(at -17.78 -13.97 0)
 					(length 2.54)
 					(hide yes)
@@ -1136,7 +1136,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin no_connect line
 					(at -17.78 -13.97 0)
 					(length 2.54)
 					(hide yes)
@@ -1173,7 +1173,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin no_connect line
 					(at -17.78 -13.97 0)
 					(length 2.54)
 					(hide yes)
@@ -1192,7 +1192,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin no_connect line
 					(at -17.78 -13.97 0)
 					(length 2.54)
 					(hide yes)
@@ -1211,7 +1211,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin no_connect line
 					(at -17.78 -13.97 0)
 					(length 2.54)
 					(hide yes)
@@ -1230,7 +1230,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin no_connect line
 					(at -17.78 -13.97 0)
 					(length 2.54)
 					(hide yes)
@@ -1249,7 +1249,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin no_connect line
 					(at -17.78 -13.97 0)
 					(length 2.54)
 					(hide yes)
@@ -1268,7 +1268,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin no_connect line
 					(at -17.78 -13.97 0)
 					(length 2.54)
 					(hide yes)
@@ -1287,7 +1287,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin no_connect line
 					(at -17.78 -13.97 0)
 					(length 2.54)
 					(hide yes)
@@ -1398,7 +1398,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin no_connect line
 					(at -17.78 -13.97 0)
 					(length 2.54)
 					(hide yes)
@@ -1417,7 +1417,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin no_connect line
 					(at -17.78 -13.97 0)
 					(length 2.54)
 					(hide yes)
@@ -1436,7 +1436,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin no_connect line
 					(at -17.78 -13.97 0)
 					(length 2.54)
 					(hide yes)
@@ -1455,7 +1455,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin no_connect line
 					(at -17.78 -13.97 0)
 					(length 2.54)
 					(hide yes)

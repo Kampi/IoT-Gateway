@@ -4835,129 +4835,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:TestPoint"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.762)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "TP"
-				(at 0 6.858 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TestPoint"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "test point"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "test point tp"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Pin* Test*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "TestPoint_0_1"
-				(circle
-					(center 0 3.302)
-					(radius 0.762)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "TestPoint_1_1"
-				(pin passive line
-					(at 0 0 90)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Connector_Generic:Conn_01x03"
 			(pin_names
 				(offset 1.016)
@@ -6026,6 +5903,117 @@
 								(size 1.27 1.27)
 							)
 						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Mechanical_Kampi:Light_Pipe"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "MP"
+				(at -2.032 2.286 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Light_Pipe_1_1"
+				(rectangle
+					(start -3.175 1.27)
+					(end 2.54 -1.27)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.175 -1.27) (xy -3.175 -3.175) (xy -1.905 -3.175) (xy -1.905 -1.27) (xy 1.27 -1.27) (xy 1.27 -3.175)
+						(xy 2.54 -3.175) (xy 2.54 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(arc
+					(start 2.54 1.27)
+					(mid 3.438 0.898)
+					(end 3.81 0)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(arc
+					(start 3.81 0)
+					(mid 3.438 -0.898)
+					(end 2.54 -1.27)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type background)
 					)
 				)
 			)
@@ -7354,12 +7342,6 @@
 		(uuid "8ec3f9c0-85b3-46ae-bac4-222fd6d9dcfa")
 	)
 	(junction
-		(at 241.3 163.83)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9a20617d-7884-4cc2-bd6c-f234cf019f25")
-	)
-	(junction
 		(at 50.8 156.21)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7424,6 +7406,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e9ba7a36-4d43-4c07-99fa-a884bbc8ece2")
+	)
+	(junction
+		(at 241.3 163.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f1f986ef-9c95-4111-b573-f5d7a1ea618a")
 	)
 	(junction
 		(at 226.06 146.05)
@@ -9448,6 +9436,16 @@
 		)
 		(uuid "60fb16d1-0686-4acf-81d7-5002307eeb60")
 	)
+	(wire
+		(pts
+			(xy 241.3 163.83) (xy 241.3 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6156dc33-fc9b-47e0-a082-1fd124b05470")
+	)
 	(bus
 		(pts
 			(xy 33.02 48.26) (xy 119.38 48.26)
@@ -9607,6 +9605,16 @@
 			(type default)
 		)
 		(uuid "70a7fb04-e519-4cc8-8ce4-cc8f92c73748")
+	)
+	(wire
+		(pts
+			(xy 241.3 163.83) (xy 242.57 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7138c304-4092-47a8-9438-ea18701c8884")
 	)
 	(wire
 		(pts
@@ -9809,16 +9817,6 @@
 		)
 		(uuid "81f0007f-b272-4ffa-97c9-7074bbfbf5a4")
 	)
-	(wire
-		(pts
-			(xy 142.24 265.43) (xy 142.24 266.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "82667272-68e4-467c-b314-2574c7ca8824")
-	)
 	(bus
 		(pts
 			(xy 33.02 45.72) (xy 127 45.72)
@@ -9938,16 +9936,6 @@
 			(type default)
 		)
 		(uuid "90e47533-f5ca-43c0-8e9a-8d343fc309b3")
-	)
-	(wire
-		(pts
-			(xy 241.3 163.83) (xy 241.3 161.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "90f45916-9f38-44d6-b534-4f4dc147799c")
 	)
 	(wire
 		(pts
@@ -10078,16 +10066,6 @@
 			(type default)
 		)
 		(uuid "a4044d75-abaa-471e-98ef-ba27da03726f")
-	)
-	(wire
-		(pts
-			(xy 303.53 195.58) (xy 303.53 196.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a410bd3e-9a87-4478-9416-c809e6d1ddf6")
 	)
 	(wire
 		(pts
@@ -10462,7 +10440,7 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 163.83) (xy 241.3 166.37)
+			(xy 241.3 161.29) (xy 241.3 163.83)
 		)
 		(stroke
 			(width 0)
@@ -10942,16 +10920,6 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 163.83) (xy 241.3 163.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f91e5f4c-3f99-4f6b-b8ab-415ba6d7c533")
-	)
-	(wire
-		(pts
 			(xy 304.8 220.98) (xy 304.8 227.33)
 		)
 		(stroke
@@ -11111,7 +11079,7 @@
 		(uuid "2a46b1d2-272b-4336-a0b0-20b0653c23f7")
 	)
 	(label "GPIO.Num4"
-		(at 95.25 186.69 180)
+		(at 95.25 184.15 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11451,7 +11419,7 @@
 		(uuid "9d2e6b8f-2c39-4240-ad6e-e5eb0d7cfdfd")
 	)
 	(label "GPIO.Num2"
-		(at 39.37 92.71 0)
+		(at 39.37 87.63 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11491,7 +11459,7 @@
 		(uuid "a4c9e729-3f0a-4954-84f8-674ea3fc426f")
 	)
 	(label "GPIO.Num3"
-		(at 95.25 184.15 180)
+		(at 95.25 186.69 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11601,7 +11569,7 @@
 		(uuid "e6fa83b9-afa0-4b24-9785-1097a0a70b2c")
 	)
 	(label "GPIO.Num0"
-		(at 39.37 87.63 0)
+		(at 39.37 92.71 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -13618,118 +13586,6 @@
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
 					(reference "R1004")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 142.24 265.43 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files no)
-		(dnp no)
-		(uuid "34ee1e93-c83d-4e6a-8f20-3467d488e8d1")
-		(property "Reference" "TP1001"
-			(at 139.7 260.8579 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "~"
-			(at 139.7 263.3979 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Testpoints_Kampi:TestPoint_Pad_1.0x1.0mm"
-			(at 137.16 265.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 137.16 265.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 142.24 265.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manf" ""
-			(at 142.24 265.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manf#" ""
-			(at 142.24 265.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "mouser#" ""
-			(at 142.24 265.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2e0815ae-15ba-40b7-80ae-5b7b38ad146e")
-		)
-		(instances
-			(project "Gateway"
-				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "TP1001")
 					(unit 1)
 				)
 			)
@@ -16169,41 +16025,39 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 303.53 196.85 180)
+		(lib_id "Mechanical_Kampi:Light_Pipe")
+		(at 172.72 278.13 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files no)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9d0facb5-33ba-4a91-ba40-7ff16a7b3dad")
-		(property "Reference" "TP1002"
-			(at 306.07 198.8819 0)
+		(uuid "9c61efc4-2bb5-457c-a949-a9faadb7341f")
+		(property "Reference" "MP1001"
+			(at 169.164 275.59 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Value" "~"
-			(at 306.07 201.4219 0)
+		(property "Value" ""
+			(at 172.72 278.13 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "Testpoints_Kampi:TestPoint_Pad_1.0x1.0mm"
-			(at 298.45 196.85 0)
+		(property "Footprint" "Bivar:SLP3-300-100-F"
+			(at 172.72 278.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16213,8 +16067,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 298.45 196.85 0)
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/112/1/SLP3_XXX_XXX_X.pdf"
+			(at 172.72 278.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16224,8 +16078,8 @@
 				)
 			)
 		)
-		(property "Description" "test point"
-			(at 303.53 196.85 0)
+		(property "Description" ""
+			(at 172.72 278.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16235,8 +16089,8 @@
 				)
 			)
 		)
-		(property "manf" ""
-			(at 303.53 196.85 0)
+		(property "manf" "Bivar"
+			(at 172.72 278.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16246,8 +16100,8 @@
 				)
 			)
 		)
-		(property "manf#" ""
-			(at 303.53 196.85 0)
+		(property "manf#" "SLP3-300-100-F"
+			(at 172.72 278.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16257,8 +16111,8 @@
 				)
 			)
 		)
-		(property "mouser#" ""
-			(at 303.53 196.85 0)
+		(property "mouser#" "749-SLP3-300-100-F"
+			(at 172.72 278.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16267,14 +16121,11 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(pin "1"
-			(uuid "7dcaa94f-a045-4183-873a-83d10c254c9d")
 		)
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a"
-					(reference "TP1002")
+					(reference "MP1001")
 					(unit 1)
 				)
 			)
@@ -17087,7 +16938,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Keystone:3034"
+		(property "Footprint" "Keystone:3030TR"
 			(at 215.9 167.386 90)
 			(hide yes)
 			(show_name no)
@@ -17098,7 +16949,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.de/datasheet/3/201/1/3034.pdf"
+		(property "Datasheet" "https://www.keyelco.com/product-pdf.cfm?p=14595"
 			(at 215.9 167.386 90)
 			(hide yes)
 			(show_name no)
@@ -17131,7 +16982,7 @@
 				)
 			)
 		)
-		(property "manf#" "3034"
+		(property "manf#" "3030KTR"
 			(at 215.9 168.91 0)
 			(hide yes)
 			(show_name no)
@@ -17142,7 +16993,7 @@
 				)
 			)
 		)
-		(property "mouser#" "534-3034"
+		(property "mouser#" "534-3030KTR"
 			(at 215.9 168.91 0)
 			(hide yes)
 			(show_name no)

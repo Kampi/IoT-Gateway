@@ -39,9 +39,9 @@
         "other_text_thickness": 0.12,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.25,
-          "height": 0.5,
-          "width": 0.5
+          "drill": 0.0,
+          "height": 1.0,
+          "width": 1.0
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -50,7 +50,23 @@
         "silk_text_thickness": 0.12,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.125
+          "border_display_style": 2,
+          "border_hatch_pitch": 0.5,
+          "corner_radius": 0.0,
+          "corner_smoothing": 0,
+          "fill_mode": 0,
+          "hatch_gap": 1.5,
+          "hatch_orientation": 0.0,
+          "hatch_smoothing_level": 0,
+          "hatch_smoothing_value": 0.1,
+          "hatch_thickness": 1.0,
+          "min_clearance": 0.125,
+          "min_island_area": 10.0,
+          "min_thickness": 0.125,
+          "pad_connection": 2,
+          "remove_islands": 0,
+          "thermal_relief_gap": 0.125,
+          "thermal_relief_spoke_width": 0.125
         }
       },
       "diff_pair_dimensions": [
@@ -536,12 +552,15 @@
         "tuning_profile": ""
       },
       {
+        "clearance": 0.125,
         "name": "GND",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.4,
-        "tuning_profile": ""
+        "tuning_profile": "",
+        "via_diameter": 0.45,
+        "via_drill": 0.25
       },
       {
         "diff_pair_gap": 0.24,
@@ -875,7 +894,7 @@
         "uuid": "d5742f03-3b1a-42e5-a384-018bd4b919aa"
       }
     ],
-    "used_designators": "#PWR817,#PWR825-826,#PWR829,#PWR831-832,#PWR834-835,#PWR838-839,#PWR842-843,#PWR913,Q801,Q901-902,IC803,R804-805,R809-812,R814-816,R820-824,R907,R910-911,C820,C824-825,TP802-803,TP806",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
