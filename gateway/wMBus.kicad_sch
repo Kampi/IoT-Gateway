@@ -3775,6 +3775,16 @@
 				)
 			)
 		)
+		(property "Config" "+WMBUS"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "2814d318-d7c2-4c1d-b35a-3318b00fceff")
 		)
@@ -3986,6 +3996,16 @@
 				)
 			)
 		)
+		(property "Config" "+WMBUS"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "489a6fc5-8f86-402a-8b5b-81cf7e704a2e")
 		)
@@ -4091,6 +4111,17 @@
 			)
 		)
 		(property "mouser#" "581-08056C105MAT2A"
+			(at 44.45 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" "+WMBUS"
 			(at 44.45 251.46 0)
 			(hide yes)
 			(show_name no)
@@ -4216,6 +4247,17 @@
 				)
 			)
 		)
+		(property "Config" "+WMBUS"
+			(at 0 502.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "1fc06015-8b60-41ee-8af9-0c1ff062f7a4")
 		)
@@ -4324,6 +4366,16 @@
 		(property "mouser#" "581-08053C104M4T4A"
 			(at 191.77 146.05 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" "+WMBUS"
+			(at 383.54 0 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4792,6 +4844,16 @@
 				)
 			)
 		)
+		(property "Config" "+WMBUS"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9ddd0c20-7a30-4160-92e0-82d537193f01")
 		)
@@ -4983,6 +5045,17 @@
 				)
 			)
 		)
+		(property "Config" "+WMBUS"
+			(at 27.94 375.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3748e631-3ad8-4475-bb75-a8bb032ebe36")
 		)
@@ -5088,6 +5161,17 @@
 		)
 		(property "mouser#" "595-TLV75733PDBVR"
 			(at 72.39 246.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" "+WMBUS"
+			(at 0 0 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5564,6 +5648,16 @@
 				)
 			)
 		)
+		(property "Config" "+WMBUS"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "5"
 			(uuid "bed8c267-3806-432b-b000-4bfe0ff4ac4c")
 		)
@@ -5932,6 +6026,16 @@
 				)
 			)
 		)
+		(property "Config" "+WMBUS"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b948314e-8d96-4eae-a3c9-08bca06b4225")
 		)
@@ -6054,6 +6158,17 @@
 				)
 			)
 		)
+		(property "Config" "+WMBUS"
+			(at 33.02 370.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2b4c4142-207f-48a1-a7ba-534d7c17506a")
 		)
@@ -6158,6 +6273,17 @@
 		)
 		(property "mouser#" "652-CR0805-J/-000ELF"
 			(at 161.29 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" "+WMBUS"
+			(at -12.7 335.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6280,6 +6406,17 @@
 				)
 			)
 		)
+		(property "Config" "+WMBUS"
+			(at -7.62 330.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "cf504965-f6ec-47cb-b4b7-04bc1f59827b")
 		)
@@ -6387,6 +6524,17 @@
 		)
 		(property "mouser#" "749-SM0805YC"
 			(at 109.22 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" "+WMBUS"
+			(at 358.14 358.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6779,6 +6927,17 @@
 				)
 			)
 		)
+		(property "Config" "+WMBUS"
+			(at 199.39 274.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "359f58b0-868f-4072-8fe7-6317c3fdc942")
 		)
@@ -6879,6 +7038,17 @@
 			)
 		)
 		(property "mouser#" "749-SLP3-300-100-F"
+			(at 187.96 276.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
 			(at 187.96 276.86 0)
 			(hide yes)
 			(show_name no)
@@ -6999,6 +7169,16 @@
 				)
 			)
 		)
+		(property "Config" "+WMBUS"
+			(at 218.44 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7baa657b-7e63-4c6c-b48d-98c2599a6905")
 		)
@@ -7104,6 +7284,17 @@
 		)
 		(property "mouser#" "652-CR0805-FX-1002GLF"
 			(at 59.69 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" "+WMBUS"
+			(at 0 0 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
