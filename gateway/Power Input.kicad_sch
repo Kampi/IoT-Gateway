@@ -2075,8 +2075,8 @@
 	)
 	(text_box "Input selection"
 		(exclude_from_sim no)
-		(at 91.44 231.14 0)
-		(size 137.16 8.89)
+		(at 64.77 231.14 0)
+		(size 163.83 8.89)
 		(margins 1.9049 1.9049 1.9049 1.9049)
 		(stroke
 			(width -0.0001)

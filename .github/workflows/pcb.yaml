@@ -12,6 +12,10 @@
 #   3D models, cost estimation, etc.) and handles the full release process:
 #     - generate_outputs: Runs KiBot to produce all documents and artifacts,
 #       updates the CHANGELOG on tag pushes, and commits outputs back to the branch.
+#       The generated BoM (CSV / XLSX) is compared with the schematic. A mismatch
+#       (e.g. a fitted component that is missing in the BoM) is reported as
+#       error, but does not stop the job or the release. The result is stored as
+#       checklist '<board>-bom_check.md' next to the BoM.
 #     - release: Creates a GitHub Release with the generated ZIP artifact.
 #       Only runs on tag pushes.
 #     - deploy: Publishes the generated outputs to GitHub Pages.
@@ -195,7 +199,7 @@ jobs:
           # Get the previous tag (all SemVer tags, excluding the current one)
           prev_tag=$(git tag --sort=-version:refname | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | grep -v "^${current_tag}$" | head -1)
 
-          python3 ./scripts/python/update_changelog_links.py \
+          python3 ./scripts/python/update-changelog-links.py \
             --file "${changelog_file}" \
             --tag "${current_tag}" \
             --prev-tag "${prev_tag}" \
@@ -331,6 +335,34 @@ jobs:
           find . -type f -iname \*.kicad_pro-bak -delete
           rm -f ${{ env.kibot_input_dir }}/kibot_*.kicad_pro
           rm -f ${{ env.kibot_input_dir }}/kibot_*.kicad_pcb
+
+      # A failed check is reported as error, but does not stop the job or the release.
+      # The checklist is stored next to the BoM, so it is part of the artifact and the release.
+      - name: Check BoM against schematic
+        continue-on-error: true
+        shell: bash
+        run: |
+          output_dir="${{ env.kibot_input_dir }}/${{ env.kibot_output_path }}/${{ env.kibot_output_dir }}-${{ env.kibot_variant }}"
+
+          bom_args=()
+          while IFS= read -r file; do
+            bom_args+=(-b "${file}")
+          done < <(find "${output_dir}" -type f \( -name '${{ env.kicad_board }}-bom*.csv' -o -name '${{ env.kicad_board }}-bom*.xlsx' \) | sort)
+
+          if [[ ${#bom_args[@]} -eq 0 ]]; then
+            echo "::error title=BoM check failed::No BoM found in ${output_dir}"
+            exit 1
+          fi
+
+          if ! python3 ./scripts/python/check-bom.py \
+            --schematic "${{ env.kibot_input_dir }}/${{ env.kicad_board }}.kicad_sch" \
+            --variant "${{ env.kibot_variant }}" \
+            --report "${GITHUB_STEP_SUMMARY}" \
+            --checklist "$(dirname "${bom_args[1]}")/${{ env.kicad_board }}-bom_check.md" \
+            "${bom_args[@]}"; then
+            echo "::error title=BoM check failed::The BoM does not match the schematic. See the job summary for the report."
+            exit 1
+          fi
 
       - name: Upload artifacts (results)
         uses: actions/upload-artifact@v4

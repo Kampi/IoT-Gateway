@@ -1,9 +1,9 @@
 """
-update_changelog_links.py - Manage the 'Full Changelog' comparison link block
+update-changelog-links.py - Manage the 'Full Changelog' comparison link block
 in CHANGELOG.md.
 
 Usage:
-    python update_changelog_links.py -f CHANGELOG.md -t <tag> [-p <prev-tag>] -r <repo-url>
+    python update-changelog-links.py -f CHANGELOG.md -t <tag> [-p <prev-tag>] -r <repo-url>
 
 Arguments:
     -f, --file      Path to the CHANGELOG.md file.

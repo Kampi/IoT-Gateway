@@ -1,9 +1,9 @@
 #!/bin/bash
 #
-# format.sh - C/C++ code style checker using Artistic Style (AStyle)
+# check-format.sh - C/C++ code style checker using Artistic Style (AStyle)
 #
 # Usage:
-#   ./scripts/format.sh
+#   ./scripts/bash/check-format.sh
 #
 # Description:
 #   Scans the src/ and include/ directories for all *.cpp and *.h files and
