@@ -8742,8 +8742,9 @@
 				)
 			)
 		)
-		(property "Config" ""
+		(property "Config" "+POE"
 			(at -13.97 13.97 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9437,8 +9438,9 @@
 				)
 			)
 		)
-		(property "Config" ""
+		(property "Config" "+POE"
 			(at 0 0 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9756,6 +9758,7 @@
 		)
 		(property "Config" "+POE"
 			(at -153.67 153.67 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9879,6 +9882,7 @@
 		)
 		(property "Config" "+POE"
 			(at 139.7 0 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10442,6 +10446,7 @@
 		)
 		(property "Config" "+POE"
 			(at -26.67 26.67 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10567,6 +10572,7 @@
 		)
 		(property "Config" "+POE"
 			(at 389.89 8.89 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10879,6 +10885,7 @@
 		)
 		(property "Config" "+POE"
 			(at 402.59 21.59 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11715,6 +11722,7 @@
 		)
 		(property "Config" "+POE"
 			(at 0 0 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12067,6 +12075,7 @@
 		)
 		(property "Config" "+POE"
 			(at -160.02 299.72 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

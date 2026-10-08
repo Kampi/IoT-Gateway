@@ -2129,7 +2129,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Mechanical_Kampi:MountingHole"
+		(symbol "Mechanical:Spacer"
 			(pin_names
 				(offset 1.016)
 			)
@@ -2149,7 +2149,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "MountingHole"
+			(property "Value" "Spacer"
 				(at 2.54 -1.2699 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2226,7 +2226,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "mounting hole"
+			(property "ki_keywords" "spacer"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2237,7 +2237,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "MountingHole*"
+			(property "ki_fp_filters" "Spacer*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2248,7 +2248,7 @@
 					)
 				)
 			)
-			(symbol "MountingHole_0_1"
+			(symbol "Spacer_0_1"
 				(circle
 					(center 0 0)
 					(radius 1.27)
@@ -6598,19 +6598,18 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical_Kampi:MountingHole")
+		(lib_id "Mechanical:Spacer")
 		(at 201.93 278.13 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
-		(in_pos_files no)
+		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "93dc651f-97f9-4a14-9ad8-0e58bf1f637c")
 		(property "Reference" "H1601"
-			(at 204.47 276.8599 0)
+			(at 204.724 278.1299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6620,8 +6619,9 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MountingHole"
+		(property "Value" "2230"
 			(at 204.47 279.3999 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6653,7 +6653,7 @@
 				)
 			)
 		)
-		(property "Description" "Mounting Hole without connection"
+		(property "Description" ""
 			(at 201.93 278.13 0)
 			(hide yes)
 			(show_name no)

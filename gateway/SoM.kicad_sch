@@ -5908,6 +5908,140 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Mechanical:Spacer"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files no)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "H1004"
+				(at 2.54 1.2701 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Spacer"
+				(at 2.54 -1.2699 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Wuerth:9774015151R"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.we-online.com/components/products/datasheet/9774015151R.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf" "Wurth Elektronik"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf#" "9774015151R"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "mouser#" "710-9774015151R"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "spacer"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Spacer*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Spacer_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Mechanical_Kampi:Light_Pipe"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -6014,140 +6148,6 @@
 					)
 					(fill
 						(type background)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Mechanical_Kampi:MountingHole"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom no)
-			(on_board yes)
-			(in_pos_files no)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "H1004"
-				(at 2.54 1.2701 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "MountingHole"
-				(at 2.54 -1.2699 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Wuerth:9774015151R"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.we-online.com/components/products/datasheet/9774015151R.pdf"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Mounting Hole without connection"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "manf" "Wurth Elektronik"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "manf#" "9774015151R"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "mouser#" "710-9774015151R"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "mounting hole"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "MountingHole*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "MountingHole_0_1"
-				(circle
-					(center 0 0)
-					(radius 1.27)
-					(stroke
-						(width 1.27)
-						(type default)
-					)
-					(fill
-						(type none)
 					)
 				)
 			)
@@ -7246,7 +7246,7 @@
 		(uuid "2ac33e8b-3c84-4a52-8986-2e64ee820cdd")
 	)
 	(junction
-		(at 142.24 266.7)
+		(at 64.77 265.43)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3a4bc907-2050-440f-8157-07a3269f51d1")
@@ -8591,7 +8591,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 266.7) (xy 142.24 266.7)
+			(xy 63.5 265.43) (xy 64.77 265.43)
 		)
 		(stroke
 			(width 0)
@@ -8681,7 +8681,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 240.03) (xy 151.13 241.3)
+			(xy 73.66 238.76) (xy 73.66 240.03)
 		)
 		(stroke
 			(width 0)
@@ -8711,7 +8711,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 266.7) (xy 143.51 266.7)
+			(xy 64.77 265.43) (xy 66.04 265.43)
 		)
 		(stroke
 			(width 0)
@@ -9091,7 +9091,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 276.86) (xy 151.13 271.78)
+			(xy 73.66 275.59) (xy 73.66 270.51)
 		)
 		(stroke
 			(width 0)
@@ -9162,7 +9162,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 275.59) (xy 142.24 276.86)
+			(xy 64.77 274.32) (xy 64.77 275.59)
 		)
 		(stroke
 			(width 0)
@@ -9823,7 +9823,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 251.46) (xy 151.13 248.92)
+			(xy 73.66 250.19) (xy 73.66 247.65)
 		)
 		(stroke
 			(width 0)
@@ -10314,7 +10314,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 266.7) (xy 142.24 267.97)
+			(xy 64.77 265.43) (xy 64.77 266.7)
 		)
 		(stroke
 			(width 0)
@@ -10594,7 +10594,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 259.08) (xy 151.13 261.62)
+			(xy 73.66 257.81) (xy 73.66 260.35)
 		)
 		(stroke
 			(width 0)
@@ -11473,7 +11473,7 @@
 		(uuid "c67aeb53-d830-444b-9f42-0d6a04812021")
 	)
 	(label "Ready"
-		(at 140.97 266.7 180)
+		(at 63.5 265.43 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12785,7 +12785,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 151.13 276.86 0)
+		(at 73.66 275.59 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12796,7 +12796,7 @@
 		(fields_autoplaced yes)
 		(uuid "19e81800-2d37-4cea-94ee-4b97036b6def")
 		(property "Reference" "#PWR01008"
-			(at 151.13 283.21 0)
+			(at 73.66 281.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12807,7 +12807,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 151.13 281.94 0)
+			(at 73.66 280.67 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12817,7 +12817,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 151.13 276.86 0)
+			(at 73.66 275.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12828,7 +12828,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 151.13 276.86 0)
+			(at 73.66 275.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12839,7 +12839,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 151.13 276.86 0)
+			(at 73.66 275.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13249,7 +13249,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 142.24 271.78 0)
+		(at 64.77 270.51 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13259,7 +13259,7 @@
 		(dnp no)
 		(uuid "34d7c153-3478-4ef2-a5f9-20b2232d4aa9")
 		(property "Reference" "R1004"
-			(at 139.7 270.5099 0)
+			(at 62.23 269.2399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13270,7 +13270,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 139.7 273.0499 0)
+			(at 62.23 271.7799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13281,7 +13281,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 140.462 271.78 90)
+			(at 62.992 270.51 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13292,7 +13292,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
-			(at 142.24 271.78 0)
+			(at 64.77 270.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13303,7 +13303,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 142.24 271.78 0)
+			(at 64.77 270.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13314,7 +13314,7 @@
 			)
 		)
 		(property "manf" "Bourns"
-			(at 142.24 271.78 0)
+			(at 64.77 270.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13325,7 +13325,7 @@
 			)
 		)
 		(property "manf#" "CR0805-JW-103GLF"
-			(at 142.24 271.78 0)
+			(at 64.77 270.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13336,7 +13336,7 @@
 			)
 		)
 		(property "mouser#" "652-CR0805-JW-103GLF"
-			(at 142.24 271.78 0)
+			(at 64.77 270.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13477,7 +13477,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:BSS123")
-		(at 148.59 266.7 0)
+		(at 71.12 265.43 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13488,7 +13488,7 @@
 		(fields_autoplaced yes)
 		(uuid "3b8120db-5294-4bb0-a8ab-65eb97286b26")
 		(property "Reference" "Q1001"
-			(at 154.94 265.4299 0)
+			(at 77.47 264.1599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13499,7 +13499,7 @@
 			)
 		)
 		(property "Value" "BSS123"
-			(at 154.94 267.9699 0)
+			(at 77.47 266.6999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13510,7 +13510,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 153.67 268.605 0)
+			(at 76.2 267.335 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13523,7 +13523,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.diodes.com/assets/Datasheets/ds30366.pdf"
-			(at 153.67 270.51 0)
+			(at 76.2 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13535,7 +13535,7 @@
 			)
 		)
 		(property "Description" "0.17A Id, 100V Vds, N-Channel MOSFET, SOT-23"
-			(at 148.59 266.7 0)
+			(at 71.12 265.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13546,7 +13546,7 @@
 			)
 		)
 		(property "manf" "onsemi"
-			(at 148.59 266.7 0)
+			(at 71.12 265.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13557,7 +13557,7 @@
 			)
 		)
 		(property "manf#" "BSS123"
-			(at 148.59 266.7 0)
+			(at 71.12 265.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13568,7 +13568,7 @@
 			)
 		)
 		(property "mouser#" "512-BSS123"
-			(at 148.59 266.7 0)
+			(at 71.12 265.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13868,19 +13868,18 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical_Kampi:MountingHole")
+		(lib_id "Mechanical:Spacer")
 		(at 201.93 279.4 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
-		(in_pos_files no)
+		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "515d80ae-7eee-4ce8-86cd-d410b1a67d18")
 		(property "Reference" "H1002"
-			(at 204.47 278.1299 0)
+			(at 204.978 279.3999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13890,8 +13889,9 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MountingHole"
+		(property "Value" "Spacer"
 			(at 204.47 280.6699 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13923,7 +13923,7 @@
 				)
 			)
 		)
-		(property "Description" "Mounting Hole without connection"
+		(property "Description" ""
 			(at 201.93 279.4 0)
 			(hide yes)
 			(show_name no)
@@ -14873,7 +14873,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 151.13 245.11 90)
+		(at 73.66 243.84 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14883,7 +14883,7 @@
 		(dnp no)
 		(uuid "53cc494f-2ff8-4467-9c19-3a7b11b38e33")
 		(property "Reference" "LED1001"
-			(at 154.94 245.4274 90)
+			(at 77.47 244.1574 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14894,7 +14894,7 @@
 			)
 		)
 		(property "Value" "Ready"
-			(at 154.94 247.9674 90)
+			(at 77.47 246.6974 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14905,7 +14905,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
-			(at 151.13 245.11 0)
+			(at 73.66 243.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14916,7 +14916,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.de/datasheet/3/112/1/SM0805YC.pdf"
-			(at 151.13 245.11 0)
+			(at 73.66 243.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14927,7 +14927,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 151.13 245.11 0)
+			(at 73.66 243.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14938,7 +14938,7 @@
 			)
 		)
 		(property "manf" "Bivar"
-			(at 151.13 245.11 0)
+			(at 73.66 243.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14949,7 +14949,7 @@
 			)
 		)
 		(property "manf#" "SM0805YC"
-			(at 151.13 245.11 0)
+			(at 73.66 243.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14960,7 +14960,7 @@
 			)
 		)
 		(property "mouser#" "749-SM0805YC"
-			(at 151.13 245.11 0)
+			(at 73.66 243.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15682,7 +15682,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 151.13 255.27 0)
+		(at 73.66 254 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15692,7 +15692,7 @@
 		(dnp no)
 		(uuid "9465ea02-8955-4a05-a1e2-f80ca90575e1")
 		(property "Reference" "R1005"
-			(at 153.67 253.9999 0)
+			(at 76.2 252.7299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15703,7 +15703,7 @@
 			)
 		)
 		(property "Value" "1k5"
-			(at 153.67 256.5399 0)
+			(at 76.2 255.2699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15714,7 +15714,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 149.352 255.27 90)
+			(at 71.882 254 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15725,7 +15725,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
-			(at 151.13 255.27 0)
+			(at 73.66 254 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15736,7 +15736,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 151.13 255.27 0)
+			(at 73.66 254 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15747,7 +15747,7 @@
 			)
 		)
 		(property "manf" "Bourns"
-			(at 151.13 255.27 0)
+			(at 73.66 254 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15758,7 +15758,7 @@
 			)
 		)
 		(property "manf#" "CR0805-JW-152GLF"
-			(at 151.13 255.27 0)
+			(at 73.66 254 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15769,7 +15769,7 @@
 			)
 		)
 		(property "mouser#" "652-CR0805-JW-152GLF"
-			(at 151.13 255.27 0)
+			(at 73.66 254 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17453,7 +17453,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 151.13 240.03 0)
+		(at 73.66 238.76 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17464,7 +17464,7 @@
 		(fields_autoplaced yes)
 		(uuid "eb2ab0ab-6c8b-4ca1-b068-d0faf3439c9f")
 		(property "Reference" "#PWR01007"
-			(at 151.13 243.84 0)
+			(at 73.66 242.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17475,7 +17475,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 151.13 234.95 0)
+			(at 73.66 233.68 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17485,7 +17485,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 151.13 240.03 0)
+			(at 73.66 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17496,7 +17496,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 151.13 240.03 0)
+			(at 73.66 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17507,7 +17507,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 151.13 240.03 0)
+			(at 73.66 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18425,19 +18425,19 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical_Kampi:MountingHole")
+		(lib_id "Mechanical:Spacer")
 		(at 195.58 279.4 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
-		(in_pos_files no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "f4b89cd7-8183-4d1a-a697-48b623ccb045")
 		(property "Reference" "H1001"
-			(at 193.04 278.1299 0)
+			(at 192.786 279.3999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18447,8 +18447,9 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MountingHole"
+		(property "Value" "Spacer"
 			(at 193.04 280.6699 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18480,7 +18481,7 @@
 				)
 			)
 		)
-		(property "Description" "Mounting Hole without connection"
+		(property "Description" ""
 			(at 195.58 279.4 0)
 			(hide yes)
 			(show_name no)
@@ -18691,7 +18692,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 142.24 276.86 0)
+		(at 64.77 275.59 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -18702,7 +18703,7 @@
 		(fields_autoplaced yes)
 		(uuid "fec55a06-a102-49d4-ad56-d73421b8a2e9")
 		(property "Reference" "#PWR01005"
-			(at 142.24 283.21 0)
+			(at 64.77 281.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18713,7 +18714,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 142.24 281.94 0)
+			(at 64.77 280.67 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18723,7 +18724,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 142.24 276.86 0)
+			(at 64.77 275.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18734,7 +18735,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 142.24 276.86 0)
+			(at 64.77 275.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18745,7 +18746,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 142.24 276.86 0)
+			(at 64.77 275.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
