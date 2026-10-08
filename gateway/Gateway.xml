@@ -2,22 +2,22 @@
 <export version="E">
   <design>
     <source>/__w/IoT-Gateway/IoT-Gateway/gateway/Gateway.kicad_sch</source>
-    <date>2026-10-08T03:35:10</date>
+    <date>2026-10-08T12:40:03</date>
     <tool>Eeschema 10.0.1-10.0.1~ubuntu25.10.1</tool>
     <textvar name="ASSEMBLY_NOTES"/>
     <textvar name="BOARD_NAME">Gateway</textvar>
     <textvar name="COMPANY">null</textvar>
     <textvar name="DESIGNER">Daniel Kampert</textvar>
     <textvar name="FABRICATION_NOTES"/>
-    <textvar name="GIT_HASH_PCB">9feab25</textvar>
+    <textvar name="GIT_HASH_PCB">6504e44</textvar>
     <textvar name="GIT_HASH_SCH">11bb27a</textvar>
     <textvar name="GIT_URL">https://github.com/Kampi/IoT-Gateway</textvar>
     <textvar name="PCB_VARIANT">PRELIMINARY</textvar>
     <textvar name="PROJECT_NAME">IoT-Gateway</textvar>
     <textvar name="RELEASE_BODY_2.2.0">Version 2.2.0 not found.</textvar>
     <textvar name="RELEASE_BODY_UNRELEASED">Version Unreleased not found.</textvar>
-    <textvar name="RELEASE_DATE">2026-08-06</textvar>
-    <textvar name="RELEASE_DATE_NUM">2026-08-06</textvar>
+    <textvar name="RELEASE_DATE">2026-10-08</textvar>
+    <textvar name="RELEASE_DATE_NUM">2026-10-08</textvar>
     <textvar name="RELEASE_TITLE_2.2.0">Version 2.2.0 not found.</textvar>
     <textvar name="RELEASE_TITLE_UNRELEASED">Version Unreleased not found.</textvar>
     <textvar name="REVISION"/>
@@ -3533,24 +3533,25 @@
       </units>
     </comp>
     <comp ref="IC901">
-      <value>BQ25308</value>
+      <value>BQ25300</value>
       <footprint>Package_DFN_QFN:WQFN-16-1EP_3x3mm_P0.5mm_EP1.68x1.68mm</footprint>
-      <datasheet>https://www.ti.com/lit/ds/symlink/bq25308.pdf?ts=1719898702995&amp;ref_url=https%253A%252F%252Fwww.mouser.in%252F</datasheet>
-      <description>Battery Management Standalone, 1-cell 17V 3A battery charger with dead-battery charge inhibit feature</description>
+      <datasheet>https://www.ti.com/lit/ds/symlink/bq25300.pdf</datasheet>
+      <description>Battery Management Standalone, 1-cell 17V 3A battery charger</description>
       <fields>
         <field name="manf">Texas Instruments</field>
-        <field name="manf#">BQ25308RTER</field>
-        <field name="mouser#">595-BQ25308RTER</field>
+        <field name="manf#">BQ25300RTER</field>
+        <field name="mouser#">595-BQ25300RTER</field>
         <field name="Footprint">Package_DFN_QFN:WQFN-16-1EP_3x3mm_P0.5mm_EP1.68x1.68mm</field>
-        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/bq25308.pdf?ts=1719898702995&amp;ref_url=https%253A%252F%252Fwww.mouser.in%252F</field>
-        <field name="Description">Battery Management Standalone, 1-cell 17V 3A battery charger with dead-battery charge inhibit feature</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/bq25300.pdf</field>
+        <field name="Description">Battery Management Standalone, 1-cell 17V 3A battery charger</field>
       </fields>
-      <libsource lib="Texas Instruments" part="BQ25308" description="Battery Management Standalone, 1-cell 17V 3A battery charger with dead-battery charge inhibit feature"/>
+      <libsource lib="Texas Instruments" part="BQ25300" description="Battery Management Standalone, 1-cell 17V 3A battery charger"/>
       <property name="manf" value="Texas Instruments"/>
-      <property name="manf#" value="BQ25308RTER"/>
-      <property name="mouser#" value="595-BQ25308RTER"/>
+      <property name="manf#" value="BQ25300RTER"/>
+      <property name="mouser#" value="595-BQ25300RTER"/>
       <property name="Sheetname" value="Battery"/>
       <property name="Sheetfile" value="Battery.kicad_sch"/>
+      <property name="ki_fp_filters" value="WQFN-16-1EP_3x3mm*"/>
       <sheetpath names="/Project Architecture/Battery/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/a382d3a7-1839-425a-ad98-cfb69b49aae1/"/>
       <tstamps>429f2726-df9d-4268-9d28-447aa8fef549</tstamps>
       <units>
@@ -4342,28 +4343,25 @@
       </units>
     </comp>
     <comp ref="H1001">
-      <value>MountingHole</value>
+      <value>Spacer</value>
       <footprint>Wuerth:9774015151R</footprint>
       <datasheet>https://www.we-online.com/components/products/datasheet/9774015151R.pdf</datasheet>
-      <description>Mounting Hole without connection</description>
       <fields>
         <field name="manf">Wurth Elektronik</field>
         <field name="manf#">9774015151R</field>
         <field name="mouser#">710-9774015151R</field>
         <field name="Footprint">Wuerth:9774015151R</field>
         <field name="Datasheet">https://www.we-online.com/components/products/datasheet/9774015151R.pdf</field>
-        <field name="Description">Mounting Hole without connection</field>
+        <field name="Description"/>
       </fields>
-      <libsource lib="Mechanical_Kampi" part="MountingHole" description="Mounting Hole without connection"/>
+      <libsource lib="Mechanical" part="Spacer" description="Mounting Hole without connection"/>
       <property name="manf" value="Wurth Elektronik"/>
       <property name="manf#" value="9774015151R"/>
       <property name="mouser#" value="710-9774015151R"/>
       <property name="Sheetname" value="System on Module"/>
       <property name="Sheetfile" value="SoM.kicad_sch"/>
-      <property name="exclude_from_bom"/>
-      <property name="exclude_from_pos_files"/>
-      <property name="ki_keywords" value="mounting hole"/>
-      <property name="ki_fp_filters" value="MountingHole*"/>
+      <property name="ki_keywords" value="spacer"/>
+      <property name="ki_fp_filters" value="Spacer*"/>
       <sheetpath names="/Project Architecture/System on Module/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a/"/>
       <tstamps>f4b89cd7-8183-4d1a-a697-48b623ccb045</tstamps>
       <units>
@@ -4373,28 +4371,25 @@
       </units>
     </comp>
     <comp ref="H1002">
-      <value>MountingHole</value>
+      <value>Spacer</value>
       <footprint>Wuerth:9774015151R</footprint>
       <datasheet>https://www.we-online.com/components/products/datasheet/9774015151R.pdf</datasheet>
-      <description>Mounting Hole without connection</description>
       <fields>
         <field name="manf">Wurth Elektronik</field>
         <field name="manf#">9774015151R</field>
         <field name="mouser#">710-9774015151R</field>
         <field name="Footprint">Wuerth:9774015151R</field>
         <field name="Datasheet">https://www.we-online.com/components/products/datasheet/9774015151R.pdf</field>
-        <field name="Description">Mounting Hole without connection</field>
+        <field name="Description"/>
       </fields>
-      <libsource lib="Mechanical_Kampi" part="MountingHole" description="Mounting Hole without connection"/>
+      <libsource lib="Mechanical" part="Spacer" description="Mounting Hole without connection"/>
       <property name="manf" value="Wurth Elektronik"/>
       <property name="manf#" value="9774015151R"/>
       <property name="mouser#" value="710-9774015151R"/>
       <property name="Sheetname" value="System on Module"/>
       <property name="Sheetfile" value="SoM.kicad_sch"/>
-      <property name="exclude_from_bom"/>
-      <property name="exclude_from_pos_files"/>
-      <property name="ki_keywords" value="mounting hole"/>
-      <property name="ki_fp_filters" value="MountingHole*"/>
+      <property name="ki_keywords" value="spacer"/>
+      <property name="ki_fp_filters" value="Spacer*"/>
       <sheetpath names="/Project Architecture/System on Module/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a/"/>
       <tstamps>515d80ae-7eee-4ce8-86cd-d410b1a67d18</tstamps>
       <units>
@@ -5426,7 +5421,7 @@
         <field name="Datasheet">https://www.we-online.com/components/products/datasheet/9774015151R.pdf</field>
         <field name="Description">Mounting Hole without connection</field>
       </fields>
-      <libsource lib="Mechanical_Kampi" part="MountingHole" description="Mounting Hole without connection"/>
+      <libsource lib="Mechanical" part="Spacer" description="Mounting Hole without connection"/>
       <property name="manf" value="Wurth Elektronik"/>
       <property name="manf#" value="9774015151R"/>
       <property name="mouser#" value="710-9774015151R"/>
@@ -5434,8 +5429,8 @@
       <property name="Sheetfile" value="LoRa.kicad_sch"/>
       <property name="exclude_from_bom"/>
       <property name="exclude_from_pos_files"/>
-      <property name="ki_keywords" value="mounting hole"/>
-      <property name="ki_fp_filters" value="MountingHole*"/>
+      <property name="ki_keywords" value="spacer"/>
+      <property name="ki_fp_filters" value="Spacer*"/>
       <sheetpath names="/Project Architecture/LoRa/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6/"/>
       <tstamps>d1721bf2-8993-4b05-a47b-2544a3b9516e</tstamps>
       <units>
@@ -5457,7 +5452,7 @@
         <field name="Datasheet">https://www.we-online.com/components/products/datasheet/9774015151R.pdf</field>
         <field name="Description">Mounting Hole without connection</field>
       </fields>
-      <libsource lib="Mechanical_Kampi" part="MountingHole" description="Mounting Hole without connection"/>
+      <libsource lib="Mechanical" part="Spacer" description="Mounting Hole without connection"/>
       <property name="manf" value="Wurth Elektronik"/>
       <property name="manf#" value="9774015151R"/>
       <property name="mouser#" value="710-9774015151R"/>
@@ -5465,8 +5460,8 @@
       <property name="Sheetfile" value="LoRa.kicad_sch"/>
       <property name="exclude_from_bom"/>
       <property name="exclude_from_pos_files"/>
-      <property name="ki_keywords" value="mounting hole"/>
-      <property name="ki_fp_filters" value="MountingHole*"/>
+      <property name="ki_keywords" value="spacer"/>
+      <property name="ki_fp_filters" value="Spacer*"/>
       <sheetpath names="/Project Architecture/LoRa/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6/"/>
       <tstamps>9b5c3aec-3d15-4835-87d5-171a23147c03</tstamps>
       <units>
@@ -10066,28 +10061,25 @@
       </units>
     </comp>
     <comp ref="H1601">
-      <value>MountingHole</value>
+      <value>2230</value>
       <footprint>Wuerth:9774015151R</footprint>
       <datasheet>https://www.we-online.com/components/products/datasheet/9774015151R.pdf</datasheet>
-      <description>Mounting Hole without connection</description>
       <fields>
         <field name="manf">Wurth Elektronik</field>
         <field name="manf#">9774015151R</field>
         <field name="mouser#">710-9774015151R</field>
         <field name="Footprint">Wuerth:9774015151R</field>
         <field name="Datasheet">https://www.we-online.com/components/products/datasheet/9774015151R.pdf</field>
-        <field name="Description">Mounting Hole without connection</field>
+        <field name="Description"/>
       </fields>
-      <libsource lib="Mechanical_Kampi" part="MountingHole" description="Mounting Hole without connection"/>
+      <libsource lib="Mechanical" part="Spacer" description="Mounting Hole without connection"/>
       <property name="manf" value="Wurth Elektronik"/>
       <property name="manf#" value="9774015151R"/>
       <property name="mouser#" value="710-9774015151R"/>
       <property name="Sheetname" value="NVMe"/>
       <property name="Sheetfile" value="NVMe.kicad_sch"/>
-      <property name="exclude_from_bom"/>
-      <property name="exclude_from_pos_files"/>
-      <property name="ki_keywords" value="mounting hole"/>
-      <property name="ki_fp_filters" value="MountingHole*"/>
+      <property name="ki_keywords" value="spacer"/>
+      <property name="ki_fp_filters" value="Spacer*"/>
       <sheetpath names="/Project Architecture/NVMe/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7/"/>
       <tstamps>93dc651f-97f9-4a14-9ad8-0e58bf1f637c</tstamps>
       <units>
@@ -10760,7 +10752,7 @@
         <field name="manf">Vishay Semiconductors</field>
         <field name="manf#">SS36-E3/57T</field>
         <field name="mouser#">625-SS36-E3</field>
-        <field name="Config"/>
+        <field name="Config">+POE</field>
         <field name="Footprint">Diode_SMD:D_SMA</field>
         <field name="Datasheet">https://www.vishay.com/docs/88751/ss32.pdf</field>
         <field name="Description">60V 3A Schottky Diode, SMA</field>
@@ -10769,7 +10761,7 @@
       <property name="manf" value="Vishay Semiconductors"/>
       <property name="manf#" value="SS36-E3/57T"/>
       <property name="mouser#" value="625-SS36-E3"/>
-      <property name="Config" value=""/>
+      <property name="Config" value="+POE"/>
       <property name="Sheetname" value="Ethernet"/>
       <property name="Sheetfile" value="Ethernet.kicad_sch"/>
       <property name="ki_keywords" value="diode Schottky"/>
@@ -10896,7 +10888,7 @@
         <field name="manf">Toshiba</field>
         <field name="manf#">TLP293(Y-TPL,E</field>
         <field name="mouser#">757-TLP293(Y-TPLE</field>
-        <field name="Config"/>
+        <field name="Config">+POE</field>
         <field name="Footprint">Toshiba:TLP293(TPL,E</field>
         <field name="Datasheet">https://toshiba.semicon-storage.com/info/TLP293_datasheet_en_20191129.pdf?did=14419&amp;prodName=TLP293</field>
         <field name="Description">DC Optocoupler, Vce 80V, CTR 50-100%, SOP4</field>
@@ -10905,7 +10897,7 @@
       <property name="manf" value="Toshiba"/>
       <property name="manf#" value="TLP293(Y-TPL,E"/>
       <property name="mouser#" value="757-TLP293(Y-TPLE"/>
-      <property name="Config" value=""/>
+      <property name="Config" value="+POE"/>
       <property name="Sheetname" value="Ethernet"/>
       <property name="Sheetfile" value="Ethernet.kicad_sch"/>
       <property name="ki_keywords" value="NPN DC Optocoupler"/>
@@ -12598,6 +12590,23 @@
         <pin num="9" name="EP" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Mechanical" part="Spacer">
+      <description>Mounting Hole without connection</description>
+      <docs>https://www.we-online.com/components/products/datasheet/9774015151R.pdf</docs>
+      <footprints>
+        <fp>Spacer*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H1004</field>
+        <field name="Value">Spacer</field>
+        <field name="Footprint">Wuerth:9774015151R</field>
+        <field name="Datasheet">https://www.we-online.com/components/products/datasheet/9774015151R.pdf</field>
+        <field name="Description">Mounting Hole without connection</field>
+        <field name="manf">Wurth Elektronik</field>
+        <field name="manf#">9774015151R</field>
+        <field name="mouser#">710-9774015151R</field>
+      </fields>
+    </libpart>
     <libpart lib="Mechanical_Kampi" part="Light_Pipe">
       <fields>
         <field name="Reference">MP</field>
@@ -12605,23 +12614,6 @@
         <field name="Footprint"/>
         <field name="Datasheet"/>
         <field name="Description"/>
-      </fields>
-    </libpart>
-    <libpart lib="Mechanical_Kampi" part="MountingHole">
-      <description>Mounting Hole without connection</description>
-      <docs>https://www.we-online.com/components/products/datasheet/9774015151R.pdf</docs>
-      <footprints>
-        <fp>MountingHole*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">H1004</field>
-        <field name="Value">MountingHole</field>
-        <field name="Footprint">Wuerth:9774015151R</field>
-        <field name="Datasheet">https://www.we-online.com/components/products/datasheet/9774015151R.pdf</field>
-        <field name="Description">Mounting Hole without connection</field>
-        <field name="manf">Wurth Elektronik</field>
-        <field name="manf#">9774015151R</field>
-        <field name="mouser#">710-9774015151R</field>
       </fields>
     </libpart>
     <libpart lib="Regulator_Linear" part="TLV75733PDBV">
@@ -12816,15 +12808,18 @@
         <pin num="SH" name="B" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Texas Instruments" part="BQ25308">
-      <description>Battery Management Standalone, 1-cell 17V 3A battery charger with dead-battery charge inhibit feature</description>
+    <libpart lib="Texas Instruments" part="BQ25300">
+      <description>Battery Management Standalone, 1-cell 17V 3A battery charger</description>
       <docs>https://www.ti.com/lit/ds/symlink/bq25308.pdf?ts=1719898702995&amp;ref_url=https%253A%252F%252Fwww.mouser.in%252F</docs>
+      <footprints>
+        <fp>WQFN-16-1EP_3x3mm*</fp>
+      </footprints>
       <fields>
         <field name="Reference">IC</field>
-        <field name="Value">BQ25308</field>
+        <field name="Value">BQ25300</field>
         <field name="Footprint">Package_DFN_QFN:WQFN-16-1EP_3x3mm_P0.5mm_EP1.68x1.68mm</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/bq25308.pdf?ts=1719898702995&amp;ref_url=https%253A%252F%252Fwww.mouser.in%252F</field>
-        <field name="Description">Battery Management Standalone, 1-cell 17V 3A battery charger with dead-battery charge inhibit feature</field>
+        <field name="Description">Battery Management Standalone, 1-cell 17V 3A battery charger</field>
       </fields>
       <pins>
         <pin num="1" name="VBUS" type="passive"/>
@@ -12978,6 +12973,9 @@
     <library logical="Logic_LevelTranslator">
       <uri>${KICAD10_SYMBOL_DIR}/Logic_LevelTranslator.kicad_sym</uri>
     </library>
+    <library logical="Mechanical">
+      <uri>${KICAD10_SYMBOL_DIR}/Mechanical.kicad_sym</uri>
+    </library>
     <library logical="Regulator_Linear">
       <uri>${KICAD10_SYMBOL_DIR}/Regulator_Linear.kicad_sym</uri>
     </library>
@@ -13085,7 +13083,12 @@
       <node ref="X1002" pin="257" pinfunction="257_257" pintype="passive"/>
       <node ref="X1002" pin="259" pinfunction="259_259" pintype="passive"/>
     </net>
-    <net code="7" name="/Project Architecture/Battery/I2C.SCL" class="Default">
+    <net code="7" name="/Project Architecture/Battery/Battery-Charge-Enable" class="Default">
+      <node ref="IC901" pin="6" pinfunction="~{EN}_6" pintype="input"/>
+      <node ref="R901" pin="1" pintype="passive"/>
+      <node ref="X1002" pin="42" pinfunction="42_42" pintype="passive"/>
+    </net>
+    <net code="8" name="/Project Architecture/Battery/I2C.SCL" class="Default">
       <node ref="IC1501" pin="6" pinfunction="SCL_6" pintype="input"/>
       <node ref="IC1504" pin="4" pinfunction="A2_4" pintype="bidirectional"/>
       <node ref="IC1506" pin="4" pinfunction="A2_4" pintype="bidirectional"/>
@@ -13094,7 +13097,7 @@
       <node ref="R1002" pin="2" pintype="passive"/>
       <node ref="X1002" pin="14" pinfunction="14_14" pintype="passive"/>
     </net>
-    <net code="8" name="/Project Architecture/Battery/I2C.SDA" class="Default">
+    <net code="9" name="/Project Architecture/Battery/I2C.SDA" class="Default">
       <node ref="IC1501" pin="5" pinfunction="SDA_5" pintype="bidirectional"/>
       <node ref="IC1504" pin="5" pinfunction="A1_5" pintype="bidirectional"/>
       <node ref="IC1506" pin="5" pinfunction="A1_5" pintype="bidirectional"/>
@@ -13103,12 +13106,12 @@
       <node ref="R1001" pin="2" pintype="passive"/>
       <node ref="X1002" pin="12" pinfunction="12_12" pintype="passive"/>
     </net>
-    <net code="10" name="/Project Architecture/Battery/REGN" class="Default">
+    <net code="11" name="/Project Architecture/Battery/REGN" class="Default">
       <node ref="C902" pin="1" pintype="passive"/>
       <node ref="IC901" pin="2" pinfunction="REGN_2" pintype="passive"/>
       <node ref="R905" pin="1" pintype="passive"/>
     </net>
-    <net code="11" name="/Project Architecture/Battery/V_{Batt}" class="Default">
+    <net code="12" name="/Project Architecture/Battery/V_{Batt}" class="Default">
       <node ref="BAT901" pin="1" pinfunction="+_1" pintype="passive"/>
       <node ref="C801" pin="1" pintype="passive"/>
       <node ref="C905" pin="1" pintype="passive"/>
@@ -13124,16 +13127,11 @@
       <node ref="R909" pin="1" pintype="passive"/>
       <node ref="TP903" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="12" name="/Project Architecture/Battery/~{Battery-Alert}" class="Default">
+    <net code="13" name="/Project Architecture/Battery/~{Battery-Alert}" class="Default">
       <node ref="IC902" pin="5" pinfunction="~{ALERT}_5" pintype="output"/>
       <node ref="R908" pin="1" pintype="passive"/>
       <node ref="TP905" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="X1002" pin="46" pinfunction="46_46" pintype="passive"/>
-    </net>
-    <net code="13" name="/Project Architecture/Battery/~{Battery-Charge-Enable}" class="Default">
-      <node ref="IC901" pin="6" pinfunction="~{EN}_6" pintype="input"/>
-      <node ref="R901" pin="1" pintype="passive"/>
-      <node ref="X1002" pin="42" pinfunction="42_42" pintype="passive"/>
     </net>
     <net code="14" name="/Project Architecture/Battery/~{Battery-Charge}" class="Default">
       <node ref="IC901" pin="3" pinfunction="STAT_3" pintype="passive"/>
