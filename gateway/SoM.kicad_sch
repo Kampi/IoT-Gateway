@@ -11657,7 +11657,7 @@
 		)
 		(uuid "3eaa0750-92cd-4495-9ac1-c51ab91518ad")
 	)
-	(hierarchical_label "~{Battery-Charge-Enable}"
+	(hierarchical_label "Battery-Charge-Enable"
 		(shape output)
 		(at 78.74 118.11 0)
 		(effects

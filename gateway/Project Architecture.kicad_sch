@@ -1594,7 +1594,7 @@
 				(justify right)
 			)
 		)
-		(pin "~{Battery-Charge-Enable}" input
+		(pin "Battery-Charge-Enable" input
 			(at 148.59 127 0)
 			(uuid "d18c9b46-d146-4ba7-b577-468f102c0dde")
 			(effects
@@ -1722,7 +1722,7 @@
 				(justify left)
 			)
 		)
-		(pin "~{Battery-Charge-Enable}" output
+		(pin "Battery-Charge-Enable" output
 			(at 176.53 127 180)
 			(uuid "ddc02d63-ce9d-4346-b1e0-a949468a72db")
 			(effects

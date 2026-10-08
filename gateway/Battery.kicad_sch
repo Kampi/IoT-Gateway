@@ -1552,7 +1552,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Texas Instruments:BQ25308"
+		(symbol "Texas Instruments:BQ25300"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1568,7 +1568,7 @@
 					)
 				)
 			)
-			(property "Value" "BQ25308"
+			(property "Value" "BQ25300"
 				(at -6.096 -15.24 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1600,7 +1600,7 @@
 					)
 				)
 			)
-			(property "Description" "Battery Management Standalone, 1-cell 17V 3A battery charger with dead-battery charge inhibit feature"
+			(property "Description" "Battery Management Standalone, 1-cell 17V 3A battery charger"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1611,7 +1611,18 @@
 					)
 				)
 			)
-			(symbol "BQ25308_1_1"
+			(property "ki_fp_filters" "WQFN-16-1EP_3x3mm*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "BQ25300_1_1"
 				(rectangle
 					(start -10.16 16.51)
 					(end 10.16 -13.97)
@@ -5139,7 +5150,7 @@
 		)
 		(uuid "353d3f7e-76a4-4e15-9b43-f8273f29cfb8")
 	)
-	(hierarchical_label "~{Battery-Charge-Enable}"
+	(hierarchical_label "Battery-Charge-Enable"
 		(shape input)
 		(at 50.8 93.98 180)
 		(effects
@@ -6290,7 +6301,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Texas Instruments:BQ25308")
+		(lib_id "Texas Instruments:BQ25300")
 		(at 100.33 107.95 0)
 		(unit 1)
 		(body_style 1)
@@ -6310,7 +6321,7 @@
 				)
 			)
 		)
-		(property "Value" "BQ25308"
+		(property "Value" "BQ25300"
 			(at 94.615 123.19 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6331,7 +6342,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/bq25308.pdf?ts=1719898702995&ref_url=https%253A%252F%252Fwww.mouser.in%252F"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/bq25300.pdf"
 			(at 127 292.71 0)
 			(hide yes)
 			(show_name no)
@@ -6342,7 +6353,7 @@
 				)
 			)
 		)
-		(property "Description" "Battery Management Standalone, 1-cell 17V 3A battery charger with dead-battery charge inhibit feature"
+		(property "Description" "Battery Management Standalone, 1-cell 17V 3A battery charger"
 			(at 100.33 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -6364,7 +6375,7 @@
 				)
 			)
 		)
-		(property "manf#" "BQ25308RTER"
+		(property "manf#" "BQ25300RTER"
 			(at 100.33 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -6375,7 +6386,7 @@
 				)
 			)
 		)
-		(property "mouser#" "595-BQ25308RTER"
+		(property "mouser#" "595-BQ25300RTER"
 			(at 100.33 107.95 0)
 			(hide yes)
 			(show_name no)
