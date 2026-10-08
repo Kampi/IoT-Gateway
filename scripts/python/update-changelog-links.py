@@ -24,7 +24,7 @@ Description:
       previous URLs below it in chronological-descending order.
 
     This script is typically called from the GitHub Actions release workflow
-    (pcb.yaml) after a version tag is pushed.
+    (hw-pcb.yaml) after a version tag is pushed.
 
 Example output block in CHANGELOG.md:
     **Full Changelog**:

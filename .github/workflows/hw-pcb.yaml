@@ -60,7 +60,7 @@ on:
     # Not evaluated for tag pushes, a version tag always starts the release
     paths:
       - 'gateway/**'
-      - '.github/workflows/pcb.yaml'
+      - '.github/workflows/hw-pcb.yaml'
 
 env:
   # Name of the KiCad PCB file

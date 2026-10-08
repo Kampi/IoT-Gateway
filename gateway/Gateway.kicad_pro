@@ -76,7 +76,44 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "courtyards_overlap|124755000|164025000|04f39b92-f365-4ccb-a33c-a1e7b6f89aeb|fd685919-0786-438c-9ac9-d4c7f5e0681b",
+          "Manuell überprüft und i. O."
+        ],
+        [
+          "courtyards_overlap|126755000|164025000|03bf291d-d417-4f65-8052-b329e3683bf9|04f39b92-f365-4ccb-a33c-a1e7b6f89aeb",
+          "Manuell überprüft und i. O."
+        ],
+        [
+          "courtyards_overlap|128755000|164025000|03510664-baec-457a-9d96-e59651262f06|04f39b92-f365-4ccb-a33c-a1e7b6f89aeb",
+          "Manuell überprüft und i. O."
+        ],
+        [
+          "courtyards_overlap|130755000|164025000|04f39b92-f365-4ccb-a33c-a1e7b6f89aeb|942f03b8-684d-40dc-9926-771773487b28",
+          "Manuell überprüft und i. O."
+        ],
+        [
+          "courtyards_overlap|132755000|164025000|04f39b92-f365-4ccb-a33c-a1e7b6f89aeb|8ef57235-99a6-4422-aff3-33d6b56dc71a",
+          "Manuell überprüft und i. O."
+        ],
+        [
+          "courtyards_overlap|177755000|164112500|04f39b92-f365-4ccb-a33c-a1e7b6f89aeb|9c403159-cf1c-4abe-8907-3fa443407705",
+          "Manuell überprüft und i. O."
+        ],
+        [
+          "courtyards_overlap|179955000|164112500|04f39b92-f365-4ccb-a33c-a1e7b6f89aeb|d49d8490-f113-4db8-804d-606c6ffadb2a",
+          "Manuell überprüft und i. O."
+        ],
+        [
+          "courtyards_overlap|271105000|186105000|069ac545-cc06-4720-84db-fa28134de898|8e848fc8-871d-46f4-831b-0b168d1e8483",
+          "Spacer für LoRa Modul"
+        ],
+        [
+          "courtyards_overlap|303695000|186205000|1a0db9f5-7bd3-4537-bc9a-f78eb5833ab1|8e848fc8-871d-46f4-831b-0b168d1e8483",
+          "Spacer für LoRa Modul"
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -496,6 +533,7 @@
       "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
+      "same_local_global_power": "warning",
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
@@ -767,6 +805,72 @@
           "label": "Config",
           "name": "Config",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturing Status",
+          "name": "Manufacturing Status",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mass",
+          "name": "Mass",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser SPN",
+          "name": "Mouser SPN",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer",
+          "name": "Manufacturer",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MPN",
+          "name": "MPN",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Part-DB Footprint",
+          "name": "Part-DB Footprint",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Part-DB ID",
+          "name": "Part-DB ID",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Part-DB URL",
+          "name": "Part-DB URL",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Stock",
+          "name": "Stock",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Storage Location",
+          "name": "Storage Location",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Category",
+          "name": "Category",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -900,7 +1004,7 @@
         "uuid": "d5742f03-3b1a-42e5-a384-018bd4b919aa"
       }
     ],
-    "used_designators": "",
+    "used_designators": "H1003,#PWR1004",
     "variants": []
   },
   "sheets": [
