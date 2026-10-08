@@ -7508,10 +7508,6 @@
 		(uuid "272e992f-bf78-477d-b59e-7fc6785717f7")
 	)
 	(no_connect
-		(at 173.99 82.55)
-		(uuid "2b97c04c-bcde-4a00-ab24-1d564d8ad8e5")
-	)
-	(no_connect
 		(at 148.59 156.21)
 		(uuid "2d0f803d-8419-485d-9b38-5df6276fa60b")
 	)
@@ -9692,6 +9688,16 @@
 	)
 	(wire
 		(pts
+			(xy 173.99 82.55) (xy 175.26 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "787f1039-d542-4213-80e0-efb0696432ff")
+	)
+	(wire
+		(pts
 			(xy 309.88 226.06) (xy 309.88 227.33)
 		)
 		(stroke
@@ -11646,7 +11652,7 @@
 		)
 		(uuid "3c5006aa-2b32-4bca-a4e3-6250e3aac553")
 	)
-	(hierarchical_label "Backup-Status"
+	(hierarchical_label "PowerMux-Status"
 		(shape input)
 		(at 269.24 102.87 0)
 		(effects
@@ -11744,6 +11750,17 @@
 			(justify right)
 		)
 		(uuid "8ea8d4ba-12a2-43de-b0cd-32b40525cad7")
+	)
+	(hierarchical_label "Battery-Backup-Enable"
+		(shape output)
+		(at 175.26 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9008ec13-165e-47c1-a2b0-63bd552fe710")
 	)
 	(hierarchical_label "ADC{ADC}"
 		(shape bidirectional)

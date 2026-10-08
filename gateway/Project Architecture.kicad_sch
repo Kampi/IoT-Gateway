@@ -242,6 +242,16 @@
 	)
 	(wire
 		(pts
+			(xy 148.59 129.54) (xy 176.53 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "07121dd5-2606-462f-a79c-d3b841cfd7b4")
+	)
+	(wire
+		(pts
 			(xy 148.59 153.67) (xy 176.53 153.67)
 		)
 		(stroke
@@ -1624,6 +1634,16 @@
 				(justify left)
 			)
 		)
+		(pin "Battery-Backup-Enable" input
+			(at 148.59 129.54 0)
+			(uuid "577580e3-1ee0-4874-9795-dad17650283d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e"
@@ -1792,7 +1812,7 @@
 				(justify right)
 			)
 		)
-		(pin "Backup-Status" input
+		(pin "PowerMux-Status" input
 			(at 176.53 88.9 180)
 			(uuid "6be79f8c-b790-4379-b768-9cb39ab461e4")
 			(effects
@@ -1932,6 +1952,16 @@
 				(justify right)
 			)
 		)
+		(pin "Battery-Backup-Enable" output
+			(at 176.53 129.54 180)
+			(uuid "0318d66b-4546-4171-a2bd-c01be5ff4a43")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(instances
 			(project "KDT_Hierarchical_KiBot"
 				(path "/f9e05184-c88b-4a88-ae9c-ab2bdb32be7c/c5103ceb-5325-4a84-a025-9638a412984e"
@@ -1995,16 +2025,6 @@
 				(justify right)
 			)
 		)
-		(pin "Backup-Status" output
-			(at 148.59 88.9 0)
-			(uuid "7e097170-d8c0-4ad4-9bde-8fff0fd2b555")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "PWR_1V8_MOCI" input
 			(at 148.59 91.44 0)
 			(uuid "248b2196-f1c6-462a-bdb0-96762bf4b219")
@@ -2033,6 +2053,16 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(pin "PowerMux-Status" output
+			(at 148.59 88.9 0)
+			(uuid "4c88fbf0-7dec-464c-9a38-b3c8d9bc2cd9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances
