@@ -496,6 +496,7 @@
       "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
+      "same_local_global_power": "warning",
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
@@ -766,6 +767,72 @@
           "group_by": false,
           "label": "Config",
           "name": "Config",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturing Status",
+          "name": "Manufacturing Status",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mass",
+          "name": "Mass",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser SPN",
+          "name": "Mouser SPN",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer",
+          "name": "Manufacturer",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MPN",
+          "name": "MPN",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Part-DB Footprint",
+          "name": "Part-DB Footprint",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Part-DB ID",
+          "name": "Part-DB ID",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Part-DB URL",
+          "name": "Part-DB URL",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Stock",
+          "name": "Stock",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Storage Location",
+          "name": "Storage Location",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Category",
+          "name": "Category",
           "show": false
         }
       ],
