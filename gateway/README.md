@@ -35,33 +35,40 @@
     │  ├─ colors             # Color theme for KiCad
     │  ├─ fonts              # Fonts used in the project
     │  ├─ scripts            # External scripts used with KiBot
-    │  ├─ templates          # Templates for KiBot generated reports
+    │  └─ templates          # Templates for KiBot generated reports
     ├─ kibot_yaml            # KiBot YAML config files
-    ├─ logos                 # Logos
+    ├─ Logos                 # Logos
     ├─ meta                  # Project metadata
     ├─ templates             # Title block templates
+    ├─ scripts               # Project scripts
     ├─ *.kicad_sch           # KiCad schematic files
     ├─ *.kicad_pcb           # KiCad PCB layout
     ├─ *.kicad_pro           # KiCad project file
+    ├─ fp-lib-table          # Project footprint libraries
+    ├─ *.xml                 # Netlist of the schematic (updated by the pipeline)
+    ├─ CHANGELOG.md          # Changelog of the hardware
     ├─ LICENSE               # Project license
-    ├─ README                # Project README
-    ├─ kibot_launch.sh       # KiBot automation script
+    ├─ README.md             # Project README
+    └─ kibot_launch.sh       # KiBot automation script
 
 ## OUTPUT DIRECTORY STRUCTURE
 
-    ├─ 3D                   # 3D export of the PCB
+    .
+    ├─ 3D                   # 3D export of the PCB (STEP)
     ├─ HTML                 # HTML files for generated webpage
     ├─ Images               # Pictures and renders
+    │  └─ Logos             # Logos
     ├─ KiRI                 # KiRI (PCB diff viewer) files
-    ├─ Logos                # Logos
     ├─ Manufacturing        # Assembly and fabrication documents
-    │  ├─ Assembly          # Assembly documents (BoM, pos, notes)
-    │  └─ Fabrication       # Fabrication documents (ZIP, notes)
+    │  ├─ Assembly          # Assembly documents (BoM, BoM check, Mouser cart, pos, notes)
+    │  └─ Fabrication       # Fabrication documents (Gerber / ODB++ ZIP, notes, impedance table)
     │     ├─ Drill Tables   # CSV drill tables
     │     └─ Gerbers        # Gerbers
     ├─ Netlist              # PCB netlist
     ├─ Reports              # Reports for ERC/DRC
     ├─ Schematic            # PDF of schematic
-    ├─ Testing
+    ├─ Testing              # Test documents
     │  └─ Testpoints        # Testpoints tables
-    └─ Variants             # Outputs for assembly variants, if available
+    ├─ Variants             # Outputs for assembly variants, if available
+    ├─ index.html           # Start page of the generated webpage
+    └─ README.md            # This README
