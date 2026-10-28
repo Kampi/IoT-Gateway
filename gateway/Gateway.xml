@@ -2,15 +2,15 @@
 <export version="E">
   <design>
     <source>/__w/IoT-Gateway/IoT-Gateway/gateway/Gateway.kicad_sch</source>
-    <date>2026-10-28T17:46:03</date>
+    <date>2026-10-28T19:08:21</date>
     <tool>Eeschema 10.0.1-10.0.1~ubuntu25.10.1</tool>
     <textvar name="ASSEMBLY_NOTES"/>
     <textvar name="BOARD_NAME">Gateway</textvar>
     <textvar name="COMPANY">null</textvar>
     <textvar name="DESIGNER">Daniel Kampert</textvar>
     <textvar name="FABRICATION_NOTES"/>
-    <textvar name="GIT_HASH_PCB">8c37e82</textvar>
-    <textvar name="GIT_HASH_SCH">11bb27a</textvar>
+    <textvar name="GIT_HASH_PCB">7f056b7</textvar>
+    <textvar name="GIT_HASH_SCH">7f056b7</textvar>
     <textvar name="GIT_URL">https://github.com/Kampi/IoT-Gateway</textvar>
     <textvar name="PCB_VARIANT">CHECKED</textvar>
     <textvar name="PROJECT_NAME">IoT-Gateway</textvar>
@@ -24,15 +24,15 @@
     <textvar name="RELEASE_TITLE_UNRELEASED">Version Unreleased not found.</textvar>
     <textvar name="REVISION"/>
     <textvar name="SHEET_NAME_1">Cover Page</textvar>
-    <textvar name="SHEET_NAME_10">System on Module</textvar>
-    <textvar name="SHEET_NAME_11">LoRa</textvar>
-    <textvar name="SHEET_NAME_12">Zigbee</textvar>
-    <textvar name="SHEET_NAME_13">Thread</textvar>
-    <textvar name="SHEET_NAME_14">wMBus</textvar>
-    <textvar name="SHEET_NAME_15">Peripherals</textvar>
-    <textvar name="SHEET_NAME_16">NVMe</textvar>
-    <textvar name="SHEET_NAME_17">Ethernet</textvar>
-    <textvar name="SHEET_NAME_18">Revision History</textvar>
+    <textvar name="SHEET_NAME_10">LoRa</textvar>
+    <textvar name="SHEET_NAME_11">Zigbee</textvar>
+    <textvar name="SHEET_NAME_12">Thread</textvar>
+    <textvar name="SHEET_NAME_13">wMBus</textvar>
+    <textvar name="SHEET_NAME_14">Peripherals</textvar>
+    <textvar name="SHEET_NAME_15">NVMe</textvar>
+    <textvar name="SHEET_NAME_16">Ethernet</textvar>
+    <textvar name="SHEET_NAME_17">Revision History</textvar>
+    <textvar name="SHEET_NAME_18">......................................</textvar>
     <textvar name="SHEET_NAME_19">......................................</textvar>
     <textvar name="SHEET_NAME_2">Block Diagram</textvar>
     <textvar name="SHEET_NAME_20">......................................</textvar>
@@ -56,13 +56,13 @@
     <textvar name="SHEET_NAME_37">......................................</textvar>
     <textvar name="SHEET_NAME_38">......................................</textvar>
     <textvar name="SHEET_NAME_39">......................................</textvar>
-    <textvar name="SHEET_NAME_4">Power - Sequencing</textvar>
+    <textvar name="SHEET_NAME_4">Interface - Tree</textvar>
     <textvar name="SHEET_NAME_40">......................................</textvar>
-    <textvar name="SHEET_NAME_5">Interface - Tree</textvar>
-    <textvar name="SHEET_NAME_6">Project Architecture</textvar>
-    <textvar name="SHEET_NAME_7">Power Input</textvar>
-    <textvar name="SHEET_NAME_8">Power</textvar>
-    <textvar name="SHEET_NAME_9">Battery</textvar>
+    <textvar name="SHEET_NAME_5">Project Architecture</textvar>
+    <textvar name="SHEET_NAME_6">Power Input</textvar>
+    <textvar name="SHEET_NAME_7">Power</textvar>
+    <textvar name="SHEET_NAME_8">Battery</textvar>
+    <textvar name="SHEET_NAME_9">System on Module</textvar>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title/>
@@ -117,25 +117,7 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="4" name="/Power - Sequencing/" tstamps="/5fb05893-0da3-4f58-a52b-cb6d6f4cb80b/">
-      <title_block>
-        <title>Power - Sequencing</title>
-        <company>null</company>
-        <rev/>
-        <date>2026-07-09</date>
-        <source>Power - Sequencing.kicad_sch</source>
-        <comment number="1" value=""/>
-        <comment number="2" value=""/>
-        <comment number="3" value=""/>
-        <comment number="4" value=""/>
-        <comment number="5" value=""/>
-        <comment number="6" value=""/>
-        <comment number="7" value=""/>
-        <comment number="8" value=""/>
-        <comment number="9" value=""/>
-      </title_block>
-    </sheet>
-    <sheet number="5" name="/Interface - Tree/" tstamps="/41d90350-625c-40a5-8e73-4cf5e8e03642/">
+    <sheet number="4" name="/Interface - Tree/" tstamps="/41d90350-625c-40a5-8e73-4cf5e8e03642/">
       <title_block>
         <title>Interface - Tree</title>
         <company>null</company>
@@ -153,7 +135,7 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="6" name="/Project Architecture/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/">
+    <sheet number="5" name="/Project Architecture/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/">
       <title_block>
         <title>Project Architecture</title>
         <company>null</company>
@@ -171,7 +153,7 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="7" name="/Project Architecture/Power Input/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0/">
+    <sheet number="6" name="/Project Architecture/Power Input/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0/">
       <title_block>
         <title>Power Input</title>
         <company>null</company>
@@ -189,7 +171,7 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="8" name="/Project Architecture/Power/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c/">
+    <sheet number="7" name="/Project Architecture/Power/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c/">
       <title_block>
         <title>Power</title>
         <company>null</company>
@@ -207,7 +189,7 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="9" name="/Project Architecture/Battery/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/a382d3a7-1839-425a-ad98-cfb69b49aae1/">
+    <sheet number="8" name="/Project Architecture/Battery/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/a382d3a7-1839-425a-ad98-cfb69b49aae1/">
       <title_block>
         <title>Battery</title>
         <company>null</company>
@@ -225,7 +207,7 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="10" name="/Project Architecture/System on Module/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a/">
+    <sheet number="9" name="/Project Architecture/System on Module/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a/">
       <title_block>
         <title>System on Module</title>
         <company>null</company>
@@ -243,7 +225,7 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="11" name="/Project Architecture/LoRa/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6/">
+    <sheet number="10" name="/Project Architecture/LoRa/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6/">
       <title_block>
         <title>LoRa</title>
         <company>null</company>
@@ -261,7 +243,7 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="12" name="/Project Architecture/Zigbee/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/3f9e85ea-c06e-4d87-98cf-dea3ce3fc587/">
+    <sheet number="11" name="/Project Architecture/Zigbee/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/3f9e85ea-c06e-4d87-98cf-dea3ce3fc587/">
       <title_block>
         <title>Zigbee</title>
         <company>null</company>
@@ -279,7 +261,7 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="13" name="/Project Architecture/Thread/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/38da7bfd-61a1-4734-9412-ab3ae9cd3f77/">
+    <sheet number="12" name="/Project Architecture/Thread/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/38da7bfd-61a1-4734-9412-ab3ae9cd3f77/">
       <title_block>
         <title>Thread Router</title>
         <company>null</company>
@@ -297,7 +279,7 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="14" name="/Project Architecture/wMBus/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/7a02d3a8-366e-4fb1-9f54-be0208da73cb/">
+    <sheet number="13" name="/Project Architecture/wMBus/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/7a02d3a8-366e-4fb1-9f54-be0208da73cb/">
       <title_block>
         <title>Wireless M-Bus</title>
         <company>null</company>
@@ -315,7 +297,7 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="15" name="/Project Architecture/Peripherals/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/80a97db3-ff4e-4b40-a5b0-8dd5c51e4d83/">
+    <sheet number="14" name="/Project Architecture/Peripherals/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/80a97db3-ff4e-4b40-a5b0-8dd5c51e4d83/">
       <title_block>
         <title>Peripherals</title>
         <company>null</company>
@@ -333,7 +315,7 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="16" name="/Project Architecture/NVMe/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7/">
+    <sheet number="15" name="/Project Architecture/NVMe/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7/">
       <title_block>
         <title>NVMe</title>
         <company>null</company>
@@ -351,7 +333,7 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="17" name="/Project Architecture/Ethernet/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/86891732-a753-4dcc-a58c-71e3fc99b0cd/">
+    <sheet number="16" name="/Project Architecture/Ethernet/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/86891732-a753-4dcc-a58c-71e3fc99b0cd/">
       <title_block>
         <title>Ethernet</title>
         <company>null</company>
@@ -369,7 +351,7 @@
         <comment number="9" value=""/>
       </title_block>
     </sheet>
-    <sheet number="18" name="/Revision History/" tstamps="/6e125bd6-2f99-4e5d-b3ea-4899f4540739/">
+    <sheet number="17" name="/Revision History/" tstamps="/6e125bd6-2f99-4e5d-b3ea-4899f4540739/">
       <title_block>
         <title>Revision History</title>
         <company>null</company>
