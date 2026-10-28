@@ -1,1 +1,4 @@
 Transmission Line,					Impedance [ohms],		Tolerance [%],	Layer,	Trace Width [mm],	Gap [mm],	Ref. Layers
+Ethernet,						100,				10,		F.Cu,	0.22,			0.24,		In1.Cu
+PCIe,							90,				10,		F.Cu,	0.239,			0.18,		In1.Cu
+USB,							90,				10,		F.Cu,	0.239,			0.18,		In1.Cu
