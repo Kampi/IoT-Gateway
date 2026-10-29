@@ -60,7 +60,7 @@
     │  └─ Logos             # Logos
     ├─ KiRI                 # KiRI (PCB diff viewer) files
     ├─ Manufacturing        # Assembly and fabrication documents
-    │  ├─ Assembly          # Assembly documents (BoM, BoM check, pos, notes)
+    │  ├─ Assembly          # Assembly documents (BoM, BoM check, Mouser cart, pos, notes)
     │  └─ Fabrication       # Fabrication documents (Gerber / ODB++ ZIP, notes, impedance table)
     │     ├─ Drill Tables   # CSV drill tables
     │     └─ Gerbers        # Gerbers
