@@ -6336,9 +6336,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
-		(in_pos_files no)
+		(in_pos_files yes)
 		(dnp yes)
 		(uuid "be1e1eae-d55a-4b53-a4f6-ae99b998a4c3")
 		(property "Reference" "R1001"

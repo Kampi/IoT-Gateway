@@ -6269,9 +6269,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
-		(in_pos_files no)
+		(in_pos_files yes)
 		(dnp yes)
 		(uuid "24986848-39ec-4f96-9e72-f26a100450bd")
 		(property "Reference" "R1101"

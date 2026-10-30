@@ -7424,6 +7424,17 @@
 				)
 			)
 		)
+		(property "Config" ""
+			(at 342.9 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ae0184a0-2e95-4256-b478-4eedfdab3fbf")
 		)
@@ -8756,6 +8767,17 @@
 				)
 			)
 		)
+		(property "Config" ""
+			(at 137.16 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1b1360b4-8883-4044-b152-d8d5062e7489")
 		)
@@ -9096,6 +9118,17 @@
 			)
 		)
 		(property "mouser#" "652-CR0805FX-1202ELF"
+			(at 342.9 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
 			(at 342.9 189.23 0)
 			(hide yes)
 			(show_name no)

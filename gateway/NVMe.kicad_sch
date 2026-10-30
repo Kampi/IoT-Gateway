@@ -7327,9 +7327,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
-		(in_pos_files no)
+		(in_pos_files yes)
 		(dnp yes)
 		(uuid "55cee655-deab-46cf-9da5-63cd78975192")
 		(property "Reference" "R1502"
@@ -10633,6 +10633,17 @@
 				)
 			)
 		)
+		(property "Config" ""
+			(at 62.23 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1433a713-5776-4e37-aad5-ab260112c78b")
 		)
@@ -10970,6 +10981,17 @@
 			)
 		)
 		(property "mouser#" "581-08051U151JAT2A"
+			(at 181.61 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
 			(at 181.61 80.01 0)
 			(hide yes)
 			(show_name no)
