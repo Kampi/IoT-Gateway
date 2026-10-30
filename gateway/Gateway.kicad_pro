@@ -860,8 +860,8 @@
       "group_symbols": true,
       "include_excluded_from_bom": false,
       "name": "",
-      "sort_asc": false,
-      "sort_field": "manf"
+      "sort_asc": true,
+      "sort_field": "Value"
     },
     "bus_aliases": {
       "ADC": [
@@ -1077,7 +1077,7 @@
     "RELEASE_DATE_NUM": "2026-10-08",
     "RELEASE_TITLE_2.2.0": "Version 2.2.0 not found.",
     "RELEASE_TITLE_UNRELEASED": "Version Unreleased not found.",
-    "REVISION": "",
+    "REVISION": "x.y.z",
     "SHEET_NAME_1": "Cover Page",
     "SHEET_NAME_10": "System on Module",
     "SHEET_NAME_11": "LoRa",

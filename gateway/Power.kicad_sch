@@ -4424,6 +4424,282 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "partdb:MLAST21GBB5226MTNC12"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "22u"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://inventory.lan/de/part/330/info"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "22u 25V 20% X5R"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB URL" "https://inventory.lan/de/part/330/info"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Category" "Kondensator/MLCC"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "TAIYO YUDEN"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "MLAST21GBB5226MTNC12"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturing Status" "Active"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB Footprint" "0805"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB ID" "330"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf" "TAIYO YUDEN"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf#" "MLAST21GBB5226MTNC12"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mouser SPN" "963-MLAST21GBB5226MT"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "mouser#" "963-MLAST21GBB5226MT"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Stock" "0"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Capacitor_SMD:C_0805_2012Metric"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MLAST21GBB5226MTNC12_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MLAST21GBB5226MTNC12_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "partdb:RC0805FR-071ML"
 			(pin_numbers
 				(hide yes)
@@ -15410,6 +15686,17 @@
 				)
 			)
 		)
+		(property "Config" ""
+			(at 46.99 232.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "03355a68-7bef-4e57-b314-7d0edd1ea250")
 		)
@@ -15541,7 +15828,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "partdb:MLAST21GBB5226MTNC12")
 		(at 146.05 116.84 180)
 		(unit 1)
 		(body_style 1)
@@ -15584,7 +15871,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf"
+		(property "Datasheet" "https://inventory.lan/de/part/330/info"
 			(at 146.05 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -15606,7 +15893,7 @@
 				)
 			)
 		)
-		(property "manf" "Murata Electronics"
+		(property "manf" "TAIYO YUDEN"
 			(at 146.05 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -15617,7 +15904,7 @@
 				)
 			)
 		)
-		(property "manf#" "GRM21BR61E226ME44L"
+		(property "manf#" "MLAST21GBB5226MTNC12"
 			(at 146.05 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -15628,7 +15915,117 @@
 				)
 			)
 		)
-		(property "mouser#" "81-GRM21BR61E226ME4L"
+		(property "mouser#" "963-MLAST21GBB5226MT"
+			(at 146.05 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 146.05 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/330/info"
+			(at 146.05 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Kondensator/MLCC"
+			(at 146.05 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TAIYO YUDEN"
+			(at 146.05 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "MLAST21GBB5226MTNC12"
+			(at 146.05 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 146.05 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 146.05 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "330"
+			(at 146.05 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "963-MLAST21GBB5226MT"
+			(at 146.05 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "0"
 			(at 146.05 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -17736,9 +18133,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
-		(in_pos_files no)
+		(in_pos_files yes)
 		(dnp yes)
 		(uuid "8daecb76-6107-4866-af0b-26b2000d3046")
 		(property "Reference" "R722"
@@ -19440,7 +19837,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "partdb:MLAST21GBB5226MTNC12")
 		(at 120.65 116.84 180)
 		(unit 1)
 		(body_style 1)
@@ -19483,7 +19880,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf"
+		(property "Datasheet" "https://inventory.lan/de/part/330/info"
 			(at 120.65 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -19505,7 +19902,7 @@
 				)
 			)
 		)
-		(property "manf" "Murata Electronics"
+		(property "manf" "TAIYO YUDEN"
 			(at 120.65 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -19516,7 +19913,7 @@
 				)
 			)
 		)
-		(property "manf#" "GRM21BR61E226ME44L"
+		(property "manf#" "MLAST21GBB5226MTNC12"
 			(at 120.65 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -19527,7 +19924,117 @@
 				)
 			)
 		)
-		(property "mouser#" "81-GRM21BR61E226ME4L"
+		(property "mouser#" "963-MLAST21GBB5226MT"
+			(at 120.65 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 120.65 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/330/info"
+			(at 120.65 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Kondensator/MLCC"
+			(at 120.65 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TAIYO YUDEN"
+			(at 120.65 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "MLAST21GBB5226MTNC12"
+			(at 120.65 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 120.65 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 120.65 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "330"
+			(at 120.65 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "963-MLAST21GBB5226MT"
+			(at 120.65 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "0"
 			(at 120.65 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -21684,7 +22191,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "partdb:MLAST21GBB5226MTNC12")
 		(at 133.35 116.84 180)
 		(unit 1)
 		(body_style 1)
@@ -21727,7 +22234,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf"
+		(property "Datasheet" "https://inventory.lan/de/part/330/info"
 			(at 133.35 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -21749,7 +22256,7 @@
 				)
 			)
 		)
-		(property "manf" "Murata Electronics"
+		(property "manf" "TAIYO YUDEN"
 			(at 133.35 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -21760,7 +22267,7 @@
 				)
 			)
 		)
-		(property "manf#" "GRM21BR61E226ME44L"
+		(property "manf#" "MLAST21GBB5226MTNC12"
 			(at 133.35 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -21771,7 +22278,117 @@
 				)
 			)
 		)
-		(property "mouser#" "81-GRM21BR61E226ME4L"
+		(property "mouser#" "963-MLAST21GBB5226MT"
+			(at 133.35 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 133.35 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/330/info"
+			(at 133.35 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Kondensator/MLCC"
+			(at 133.35 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TAIYO YUDEN"
+			(at 133.35 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "MLAST21GBB5226MTNC12"
+			(at 133.35 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 133.35 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 133.35 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "330"
+			(at 133.35 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "963-MLAST21GBB5226MT"
+			(at 133.35 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "0"
 			(at 133.35 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -21990,7 +22607,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "partdb:MLAST21GBB5226MTNC12")
 		(at 107.95 116.84 180)
 		(unit 1)
 		(body_style 1)
@@ -22033,7 +22650,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf"
+		(property "Datasheet" "https://inventory.lan/de/part/330/info"
 			(at 107.95 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -22055,7 +22672,7 @@
 				)
 			)
 		)
-		(property "manf" "Murata Electronics"
+		(property "manf" "TAIYO YUDEN"
 			(at 107.95 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -22066,7 +22683,7 @@
 				)
 			)
 		)
-		(property "manf#" "GRM21BR61E226ME44L"
+		(property "manf#" "MLAST21GBB5226MTNC12"
 			(at 107.95 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -22077,7 +22694,117 @@
 				)
 			)
 		)
-		(property "mouser#" "81-GRM21BR61E226ME4L"
+		(property "mouser#" "963-MLAST21GBB5226MT"
+			(at 107.95 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 107.95 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/330/info"
+			(at 107.95 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Kondensator/MLCC"
+			(at 107.95 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TAIYO YUDEN"
+			(at 107.95 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "MLAST21GBB5226MTNC12"
+			(at 107.95 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 107.95 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 107.95 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "330"
+			(at 107.95 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "963-MLAST21GBB5226MT"
+			(at 107.95 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "0"
 			(at 107.95 116.84 0)
 			(hide yes)
 			(show_name no)

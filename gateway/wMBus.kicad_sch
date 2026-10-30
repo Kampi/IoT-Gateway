@@ -9533,9 +9533,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
-		(in_pos_files no)
+		(in_pos_files yes)
 		(dnp yes)
 		(uuid "f65bc439-7223-406c-aa9e-692dade321c7")
 		(property "Reference" "R1301"

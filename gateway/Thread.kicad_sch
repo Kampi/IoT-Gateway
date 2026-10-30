@@ -7751,9 +7751,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
-		(in_pos_files no)
+		(in_pos_files yes)
 		(dnp yes)
 		(uuid "1c0dc2a3-393c-4177-80d1-71c1e5391b2a")
 		(property "Reference" "R1201"
