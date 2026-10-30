@@ -12667,7 +12667,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.com/catalog/specsheets/YAGEO_PYu_RC_Group_51_RoHS_L_12.pdf?_gl=1*fhe3uh*_gcl_aw*R0NMLjE3ODI3MzA5NDUuQ2owS0NRandyNGpTQmhDU0FSSXNBT1gxRS1LUThmcEJqR3FRZEJNWTR2SXJ6Um94MkktNTV6VU5hMWlqYTdVZEo4V0swYjExWGRCZHFIa2FBb2IxRUFMd193Y0I.*_gcl_au*MTUwNjE5MTk5Mi4xNzc1NjM4MTAxLjU0NTk4MzQwOC4xNzgyOTEwMDA5LjE3ODI5MTA5MjQ.*_ga*MTc4ODYxMjM2LjE3NDQ3MTM4Nzc.*_ga_15W4STQT4T*czE3ODI5MTAwMDIkbzE5NiRnMSR0MTc4MjkxMDkyNiRqNDMkbDAkaDA."
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/54/cr-1858361.pdf"
 			(at 57.15 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -12689,7 +12689,7 @@
 				)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manf" "Bourns"
 			(at 57.15 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -12700,7 +12700,7 @@
 				)
 			)
 		)
-		(property "manf#" "RC0805FR-07887KL"
+		(property "manf#" "CR0805-FX-8873ELF"
 			(at 57.15 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -12711,7 +12711,7 @@
 				)
 			)
 		)
-		(property "mouser#" "603-RC0805FR-07887KL"
+		(property "mouser#" "652-CR0805FX-8873ELF"
 			(at 57.15 193.04 0)
 			(hide yes)
 			(show_name no)

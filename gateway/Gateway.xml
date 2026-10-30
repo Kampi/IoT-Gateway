@@ -2,15 +2,15 @@
 <export version="E">
   <design>
     <source>/__w/IoT-Gateway/IoT-Gateway/gateway/Gateway.kicad_sch</source>
-    <date>2026-10-29T12:52:50</date>
+    <date>2026-10-30T09:14:52</date>
     <tool>Eeschema 10.0.1-10.0.1~ubuntu25.10.1</tool>
     <textvar name="ASSEMBLY_NOTES"/>
     <textvar name="BOARD_NAME">Gateway</textvar>
     <textvar name="COMPANY">null</textvar>
     <textvar name="DESIGNER">Daniel Kampert</textvar>
     <textvar name="FABRICATION_NOTES"/>
-    <textvar name="GIT_HASH_PCB">e57f8f8</textvar>
-    <textvar name="GIT_HASH_SCH">e57f8f8</textvar>
+    <textvar name="GIT_HASH_PCB">db46e19</textvar>
+    <textvar name="GIT_HASH_SCH">db46e19</textvar>
     <textvar name="GIT_URL">https://github.com/Kampi/IoT-Gateway</textvar>
     <textvar name="PCB_VARIANT">CHECKED</textvar>
     <textvar name="PROJECT_NAME">IoT-Gateway</textvar>
@@ -1696,41 +1696,24 @@
     <comp ref="C711">
       <value>22u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://inventory.lan/de/part/330/info</datasheet>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf</datasheet>
       <description>22u 25V 20% X5R</description>
       <fields>
-        <field name="manf">TAIYO YUDEN</field>
-        <field name="manf#">MLAST21GBB5226MTNC12</field>
-        <field name="mouser#">963-MLAST21GBB5226MT</field>
-        <field name="Part-DB URL">https://inventory.lan/de/part/330/info</field>
-        <field name="Category">Kondensator/MLCC</field>
-        <field name="Manufacturer">TAIYO YUDEN</field>
-        <field name="MPN">MLAST21GBB5226MTNC12</field>
-        <field name="Manufacturing Status">Active</field>
-        <field name="Part-DB Footprint">0805</field>
-        <field name="Part-DB ID">330</field>
-        <field name="Mouser SPN">963-MLAST21GBB5226MT</field>
-        <field name="Stock">0</field>
+        <field name="manf">Murata Electronics</field>
+        <field name="manf#">GRM21BR61E226ME44L</field>
+        <field name="mouser#">81-GRM21BR61E226ME4L</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://inventory.lan/de/part/330/info</field>
+        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf</field>
         <field name="Description">22u 25V 20% X5R</field>
       </fields>
-      <libsource lib="partdb" part="MLAST21GBB5226MTNC12" description="22u 25V 20% X5R"/>
-      <property name="manf" value="TAIYO YUDEN"/>
-      <property name="manf#" value="MLAST21GBB5226MTNC12"/>
-      <property name="mouser#" value="963-MLAST21GBB5226MT"/>
-      <property name="Part-DB URL" value="https://inventory.lan/de/part/330/info"/>
-      <property name="Category" value="Kondensator/MLCC"/>
-      <property name="Manufacturer" value="TAIYO YUDEN"/>
-      <property name="MPN" value="MLAST21GBB5226MTNC12"/>
-      <property name="Manufacturing Status" value="Active"/>
-      <property name="Part-DB Footprint" value="0805"/>
-      <property name="Part-DB ID" value="330"/>
-      <property name="Mouser SPN" value="963-MLAST21GBB5226MT"/>
-      <property name="Stock" value="0"/>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="manf" value="Murata Electronics"/>
+      <property name="manf#" value="GRM21BR61E226ME44L"/>
+      <property name="mouser#" value="81-GRM21BR61E226ME4L"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
-      <property name="ki_fp_filters" value="Capacitor_SMD:C_0805_2012Metric"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/Project Architecture/Power/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c/"/>
       <tstamps>d8dfdd52-5657-439d-a769-c83aae696bbf</tstamps>
       <units>
@@ -1777,41 +1760,24 @@
     <comp ref="C713">
       <value>22u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://inventory.lan/de/part/330/info</datasheet>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf</datasheet>
       <description>22u 25V 20% X5R</description>
       <fields>
-        <field name="manf">TAIYO YUDEN</field>
-        <field name="manf#">MLAST21GBB5226MTNC12</field>
-        <field name="mouser#">963-MLAST21GBB5226MT</field>
-        <field name="Part-DB URL">https://inventory.lan/de/part/330/info</field>
-        <field name="Category">Kondensator/MLCC</field>
-        <field name="Manufacturer">TAIYO YUDEN</field>
-        <field name="MPN">MLAST21GBB5226MTNC12</field>
-        <field name="Manufacturing Status">Active</field>
-        <field name="Part-DB Footprint">0805</field>
-        <field name="Part-DB ID">330</field>
-        <field name="Mouser SPN">963-MLAST21GBB5226MT</field>
-        <field name="Stock">0</field>
+        <field name="manf">Murata Electronics</field>
+        <field name="manf#">GRM21BR61E226ME44L</field>
+        <field name="mouser#">81-GRM21BR61E226ME4L</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://inventory.lan/de/part/330/info</field>
+        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf</field>
         <field name="Description">22u 25V 20% X5R</field>
       </fields>
-      <libsource lib="partdb" part="MLAST21GBB5226MTNC12" description="22u 25V 20% X5R"/>
-      <property name="manf" value="TAIYO YUDEN"/>
-      <property name="manf#" value="MLAST21GBB5226MTNC12"/>
-      <property name="mouser#" value="963-MLAST21GBB5226MT"/>
-      <property name="Part-DB URL" value="https://inventory.lan/de/part/330/info"/>
-      <property name="Category" value="Kondensator/MLCC"/>
-      <property name="Manufacturer" value="TAIYO YUDEN"/>
-      <property name="MPN" value="MLAST21GBB5226MTNC12"/>
-      <property name="Manufacturing Status" value="Active"/>
-      <property name="Part-DB Footprint" value="0805"/>
-      <property name="Part-DB ID" value="330"/>
-      <property name="Mouser SPN" value="963-MLAST21GBB5226MT"/>
-      <property name="Stock" value="0"/>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="manf" value="Murata Electronics"/>
+      <property name="manf#" value="GRM21BR61E226ME44L"/>
+      <property name="mouser#" value="81-GRM21BR61E226ME4L"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
-      <property name="ki_fp_filters" value="Capacitor_SMD:C_0805_2012Metric"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/Project Architecture/Power/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c/"/>
       <tstamps>aa94fcc1-4c10-4fa9-b80a-ce163b90413d</tstamps>
       <units>
@@ -1826,41 +1792,24 @@
     <comp ref="C714">
       <value>22u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://inventory.lan/de/part/330/info</datasheet>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf</datasheet>
       <description>22u 25V 20% X5R</description>
       <fields>
-        <field name="manf">TAIYO YUDEN</field>
-        <field name="manf#">MLAST21GBB5226MTNC12</field>
-        <field name="mouser#">963-MLAST21GBB5226MT</field>
-        <field name="Part-DB URL">https://inventory.lan/de/part/330/info</field>
-        <field name="Category">Kondensator/MLCC</field>
-        <field name="Manufacturer">TAIYO YUDEN</field>
-        <field name="MPN">MLAST21GBB5226MTNC12</field>
-        <field name="Manufacturing Status">Active</field>
-        <field name="Part-DB Footprint">0805</field>
-        <field name="Part-DB ID">330</field>
-        <field name="Mouser SPN">963-MLAST21GBB5226MT</field>
-        <field name="Stock">0</field>
+        <field name="manf">Murata Electronics</field>
+        <field name="manf#">GRM21BR61E226ME44L</field>
+        <field name="mouser#">81-GRM21BR61E226ME4L</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://inventory.lan/de/part/330/info</field>
+        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf</field>
         <field name="Description">22u 25V 20% X5R</field>
       </fields>
-      <libsource lib="partdb" part="MLAST21GBB5226MTNC12" description="22u 25V 20% X5R"/>
-      <property name="manf" value="TAIYO YUDEN"/>
-      <property name="manf#" value="MLAST21GBB5226MTNC12"/>
-      <property name="mouser#" value="963-MLAST21GBB5226MT"/>
-      <property name="Part-DB URL" value="https://inventory.lan/de/part/330/info"/>
-      <property name="Category" value="Kondensator/MLCC"/>
-      <property name="Manufacturer" value="TAIYO YUDEN"/>
-      <property name="MPN" value="MLAST21GBB5226MTNC12"/>
-      <property name="Manufacturing Status" value="Active"/>
-      <property name="Part-DB Footprint" value="0805"/>
-      <property name="Part-DB ID" value="330"/>
-      <property name="Mouser SPN" value="963-MLAST21GBB5226MT"/>
-      <property name="Stock" value="0"/>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="manf" value="Murata Electronics"/>
+      <property name="manf#" value="GRM21BR61E226ME44L"/>
+      <property name="mouser#" value="81-GRM21BR61E226ME4L"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
-      <property name="ki_fp_filters" value="Capacitor_SMD:C_0805_2012Metric"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/Project Architecture/Power/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c/"/>
       <tstamps>d4906f03-70f7-43bc-be6c-391b8d148735</tstamps>
       <units>
@@ -1924,41 +1873,24 @@
     <comp ref="C716">
       <value>22u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://inventory.lan/de/part/330/info</datasheet>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf</datasheet>
       <description>22u 25V 20% X5R</description>
       <fields>
-        <field name="manf">TAIYO YUDEN</field>
-        <field name="manf#">MLAST21GBB5226MTNC12</field>
-        <field name="mouser#">963-MLAST21GBB5226MT</field>
-        <field name="Part-DB URL">https://inventory.lan/de/part/330/info</field>
-        <field name="Category">Kondensator/MLCC</field>
-        <field name="Manufacturer">TAIYO YUDEN</field>
-        <field name="MPN">MLAST21GBB5226MTNC12</field>
-        <field name="Manufacturing Status">Active</field>
-        <field name="Part-DB Footprint">0805</field>
-        <field name="Part-DB ID">330</field>
-        <field name="Mouser SPN">963-MLAST21GBB5226MT</field>
-        <field name="Stock">0</field>
+        <field name="manf">Murata Electronics</field>
+        <field name="manf#">GRM21BR61E226ME44L</field>
+        <field name="mouser#">81-GRM21BR61E226ME4L</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://inventory.lan/de/part/330/info</field>
+        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf</field>
         <field name="Description">22u 25V 20% X5R</field>
       </fields>
-      <libsource lib="partdb" part="MLAST21GBB5226MTNC12" description="22u 25V 20% X5R"/>
-      <property name="manf" value="TAIYO YUDEN"/>
-      <property name="manf#" value="MLAST21GBB5226MTNC12"/>
-      <property name="mouser#" value="963-MLAST21GBB5226MT"/>
-      <property name="Part-DB URL" value="https://inventory.lan/de/part/330/info"/>
-      <property name="Category" value="Kondensator/MLCC"/>
-      <property name="Manufacturer" value="TAIYO YUDEN"/>
-      <property name="MPN" value="MLAST21GBB5226MTNC12"/>
-      <property name="Manufacturing Status" value="Active"/>
-      <property name="Part-DB Footprint" value="0805"/>
-      <property name="Part-DB ID" value="330"/>
-      <property name="Mouser SPN" value="963-MLAST21GBB5226MT"/>
-      <property name="Stock" value="0"/>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="manf" value="Murata Electronics"/>
+      <property name="manf#" value="GRM21BR61E226ME44L"/>
+      <property name="mouser#" value="81-GRM21BR61E226ME4L"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
-      <property name="ki_fp_filters" value="Capacitor_SMD:C_0805_2012Metric"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/Project Architecture/Power/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c/"/>
       <tstamps>71f7ec8e-d09c-42ec-99ce-a02b324f1e1e</tstamps>
       <units>
@@ -2523,16 +2455,16 @@
       <description>1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5</description>
       <fields>
         <field name="manf">Texas Instruments</field>
-        <field name="manf#">TLV75733PDBVR</field>
-        <field name="mouser#">595-TLV75733PDBVR</field>
+        <field name="manf#">TLV75733PDBVT</field>
+        <field name="mouser#">595-TLV75733PDBVT</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tlv757p.pdf</field>
         <field name="Description">1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5</field>
       </fields>
       <libsource lib="Regulator_Linear" part="TLV75733PDBV" description="1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5"/>
       <property name="manf" value="Texas Instruments"/>
-      <property name="manf#" value="TLV75733PDBVR"/>
-      <property name="mouser#" value="595-TLV75733PDBVR"/>
+      <property name="manf#" value="TLV75733PDBVT"/>
+      <property name="mouser#" value="595-TLV75733PDBVT"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
       <property name="ki_keywords" value="LDO Regulator Fixed Positive"/>
@@ -2598,16 +2530,16 @@
       <description>1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5</description>
       <fields>
         <field name="manf">Texas Instruments</field>
-        <field name="manf#">TLV75733PDBVR</field>
-        <field name="mouser#">595-TLV75733PDBVR</field>
+        <field name="manf#">TLV75733PDBVT</field>
+        <field name="mouser#">595-TLV75733PDBVT</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tlv757p.pdf</field>
         <field name="Description">1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5</field>
       </fields>
       <libsource lib="Regulator_Linear" part="TLV75733PDBV" description="1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5"/>
       <property name="manf" value="Texas Instruments"/>
-      <property name="manf#" value="TLV75733PDBVR"/>
-      <property name="mouser#" value="595-TLV75733PDBVR"/>
+      <property name="manf#" value="TLV75733PDBVT"/>
+      <property name="mouser#" value="595-TLV75733PDBVT"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
       <property name="exclude_from_bom"/>
@@ -3147,20 +3079,20 @@
     <comp ref="R711">
       <value>5k36</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <datasheet>https://www.mouser.de/datasheet/3/72/1/PYU_RT_1_TO_0_01_ROHS_L.pdf</datasheet>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</datasheet>
       <description>Resistor</description>
       <fields>
-        <field name="manf">YAGEO</field>
-        <field name="manf#">RT0805BRD075K36L</field>
-        <field name="mouser#">603-RT0805BRD075K36L</field>
+        <field name="manf">Panasonic</field>
+        <field name="manf#">ERA-6AEB5361V</field>
+        <field name="mouser#">667-ERA-6AEB5361V</field>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
-        <field name="Datasheet">https://www.mouser.de/datasheet/3/72/1/PYU_RT_1_TO_0_01_ROHS_L.pdf</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</field>
         <field name="Description">Resistor</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="manf" value="YAGEO"/>
-      <property name="manf#" value="RT0805BRD075K36L"/>
-      <property name="mouser#" value="603-RT0805BRD075K36L"/>
+      <property name="manf" value="Panasonic"/>
+      <property name="manf#" value="ERA-6AEB5361V"/>
+      <property name="mouser#" value="667-ERA-6AEB5361V"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -3211,20 +3143,20 @@
     <comp ref="R713">
       <value>5k36</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <datasheet>https://www.mouser.de/datasheet/3/72/1/PYU_RT_1_TO_0_01_ROHS_L.pdf</datasheet>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</datasheet>
       <description>Resistor</description>
       <fields>
-        <field name="manf">YAGEO</field>
-        <field name="manf#">RT0805BRD075K36L</field>
-        <field name="mouser#">603-RT0805BRD075K36L</field>
+        <field name="manf">Panasonic</field>
+        <field name="manf#">ERA-6AEB5361V</field>
+        <field name="mouser#">667-ERA-6AEB5361V</field>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
-        <field name="Datasheet">https://www.mouser.de/datasheet/3/72/1/PYU_RT_1_TO_0_01_ROHS_L.pdf</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</field>
         <field name="Description">Resistor</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="manf" value="YAGEO"/>
-      <property name="manf#" value="RT0805BRD075K36L"/>
-      <property name="mouser#" value="603-RT0805BRD075K36L"/>
+      <property name="manf" value="Panasonic"/>
+      <property name="manf#" value="ERA-6AEB5361V"/>
+      <property name="mouser#" value="667-ERA-6AEB5361V"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -6965,16 +6897,16 @@
       <description>1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5</description>
       <fields>
         <field name="manf">Texas Instruments</field>
-        <field name="manf#">TLV75733PDBVR</field>
-        <field name="mouser#">595-TLV75733PDBVR</field>
+        <field name="manf#">TLV75733PDBVT</field>
+        <field name="mouser#">595-TLV75733PDBVT</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tlv757p.pdf</field>
         <field name="Description">1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5</field>
       </fields>
       <libsource lib="Regulator_Linear" part="TLV75733PDBV" description="1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5"/>
       <property name="manf" value="Texas Instruments"/>
-      <property name="manf#" value="TLV75733PDBVR"/>
-      <property name="mouser#" value="595-TLV75733PDBVR"/>
+      <property name="manf#" value="TLV75733PDBVT"/>
+      <property name="mouser#" value="595-TLV75733PDBVT"/>
       <property name="Sheetname" value="LoRa"/>
       <property name="Sheetfile" value="LoRa.kicad_sch"/>
       <property name="ki_keywords" value="LDO Regulator Fixed Positive"/>
@@ -6996,20 +6928,20 @@
     <comp ref="IC1002">
       <value>74LVC1G07</value>
       <footprint>Package_TO_SOT_SMD:SOT-353_SC-70-5</footprint>
-      <datasheet>https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0010762260/DIOD-S-A0010762566-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6</datasheet>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/74LVC1G07.pdf</datasheet>
       <description>Single Buffer Gate, Open Drain, Low-Voltage CMOS</description>
       <fields>
-        <field name="manf">Diodes Incorporated</field>
-        <field name="manf#">74LVC1G07QSE-7</field>
-        <field name="mouser#">621-74LVC1G07QSE-7</field>
+        <field name="manf">Nexperia</field>
+        <field name="manf#">74LVC1G07GW,125</field>
+        <field name="mouser#">771-74LVC1G07GW-G</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-353_SC-70-5</field>
-        <field name="Datasheet">https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0010762260/DIOD-S-A0010762566-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/74LVC1G07.pdf</field>
         <field name="Description">Single Buffer Gate, Open Drain, Low-Voltage CMOS</field>
       </fields>
       <libsource lib="74xGxx" part="74LVC1G07" description="Single Buffer Gate, Open Drain, Low-Voltage CMOS"/>
-      <property name="manf" value="Diodes Incorporated"/>
-      <property name="manf#" value="74LVC1G07QSE-7"/>
-      <property name="mouser#" value="621-74LVC1G07QSE-7"/>
+      <property name="manf" value="Nexperia"/>
+      <property name="manf#" value="74LVC1G07GW,125"/>
+      <property name="mouser#" value="771-74LVC1G07GW-G"/>
       <property name="Sheetname" value="LoRa"/>
       <property name="Sheetfile" value="LoRa.kicad_sch"/>
       <property name="ki_keywords" value="Single Gate Buff LVC CMOS Open Drain"/>
@@ -7768,16 +7700,16 @@
       <description>1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5</description>
       <fields>
         <field name="manf">Texas Instruments</field>
-        <field name="manf#">TLV75733PDBVR</field>
-        <field name="mouser#">595-TLV75733PDBVR</field>
+        <field name="manf#">TLV75733PDBVT</field>
+        <field name="mouser#">595-TLV75733PDBVT</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tlv757p.pdf</field>
         <field name="Description">1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5</field>
       </fields>
       <libsource lib="Regulator_Linear" part="TLV75733PDBV" description="1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5"/>
       <property name="manf" value="Texas Instruments"/>
-      <property name="manf#" value="TLV75733PDBVR"/>
-      <property name="mouser#" value="595-TLV75733PDBVR"/>
+      <property name="manf#" value="TLV75733PDBVT"/>
+      <property name="mouser#" value="595-TLV75733PDBVT"/>
       <property name="Sheetname" value="Zigbee"/>
       <property name="Sheetfile" value="Zigbee.kicad_sch"/>
       <property name="ki_keywords" value="LDO Regulator Fixed Positive"/>
@@ -7855,20 +7787,20 @@
     <comp ref="IC1103">
       <value>74LVC1G07</value>
       <footprint>Package_TO_SOT_SMD:SOT-353_SC-70-5</footprint>
-      <datasheet>https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0010762260/DIOD-S-A0010762566-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6</datasheet>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/74LVC1G07.pdf</datasheet>
       <description>Single Buffer Gate, Open Drain, Low-Voltage CMOS</description>
       <fields>
-        <field name="manf">Diodes Incorporated</field>
-        <field name="manf#">74LVC1G07QSE-7</field>
-        <field name="mouser#">621-74LVC1G07QSE-7</field>
+        <field name="manf">Nexperia</field>
+        <field name="manf#">74LVC1G07GW,125</field>
+        <field name="mouser#">771-74LVC1G07GW-G</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-353_SC-70-5</field>
-        <field name="Datasheet">https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0010762260/DIOD-S-A0010762566-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/74LVC1G07.pdf</field>
         <field name="Description">Single Buffer Gate, Open Drain, Low-Voltage CMOS</field>
       </fields>
       <libsource lib="74xGxx" part="74LVC1G07" description="Single Buffer Gate, Open Drain, Low-Voltage CMOS"/>
-      <property name="manf" value="Diodes Incorporated"/>
-      <property name="manf#" value="74LVC1G07QSE-7"/>
-      <property name="mouser#" value="621-74LVC1G07QSE-7"/>
+      <property name="manf" value="Nexperia"/>
+      <property name="manf#" value="74LVC1G07GW,125"/>
+      <property name="mouser#" value="771-74LVC1G07GW-G"/>
       <property name="Sheetname" value="Zigbee"/>
       <property name="Sheetfile" value="Zigbee.kicad_sch"/>
       <property name="ki_keywords" value="Single Gate Buff LVC CMOS Open Drain"/>
@@ -7890,20 +7822,20 @@
     <comp ref="IC1104">
       <value>74LVC1G07</value>
       <footprint>Package_TO_SOT_SMD:SOT-353_SC-70-5</footprint>
-      <datasheet>https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0010762260/DIOD-S-A0010762566-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6</datasheet>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/74LVC1G07.pdf</datasheet>
       <description>Single Buffer Gate, Open Drain, Low-Voltage CMOS</description>
       <fields>
-        <field name="manf">Diodes Incorporated</field>
-        <field name="manf#">74LVC1G07QSE-7</field>
-        <field name="mouser#">621-74LVC1G07QSE-7</field>
+        <field name="manf">Nexperia</field>
+        <field name="manf#">74LVC1G07GW,125</field>
+        <field name="mouser#">771-74LVC1G07GW-G</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-353_SC-70-5</field>
-        <field name="Datasheet">https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0010762260/DIOD-S-A0010762566-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/74LVC1G07.pdf</field>
         <field name="Description">Single Buffer Gate, Open Drain, Low-Voltage CMOS</field>
       </fields>
       <libsource lib="74xGxx" part="74LVC1G07" description="Single Buffer Gate, Open Drain, Low-Voltage CMOS"/>
-      <property name="manf" value="Diodes Incorporated"/>
-      <property name="manf#" value="74LVC1G07QSE-7"/>
-      <property name="mouser#" value="621-74LVC1G07QSE-7"/>
+      <property name="manf" value="Nexperia"/>
+      <property name="manf#" value="74LVC1G07GW,125"/>
+      <property name="mouser#" value="771-74LVC1G07GW-G"/>
       <property name="Sheetname" value="Zigbee"/>
       <property name="Sheetfile" value="Zigbee.kicad_sch"/>
       <property name="ki_keywords" value="Single Gate Buff LVC CMOS Open Drain"/>
@@ -8815,16 +8747,16 @@
       <description>1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5</description>
       <fields>
         <field name="manf">Texas Instruments</field>
-        <field name="manf#">TLV75733PDBVR</field>
-        <field name="mouser#">595-TLV75733PDBVR</field>
+        <field name="manf#">TLV75733PDBVT</field>
+        <field name="mouser#">595-TLV75733PDBVT</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tlv757p.pdf</field>
         <field name="Description">1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5</field>
       </fields>
       <libsource lib="Regulator_Linear" part="TLV75733PDBV" description="1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5"/>
       <property name="manf" value="Texas Instruments"/>
-      <property name="manf#" value="TLV75733PDBVR"/>
-      <property name="mouser#" value="595-TLV75733PDBVR"/>
+      <property name="manf#" value="TLV75733PDBVT"/>
+      <property name="mouser#" value="595-TLV75733PDBVT"/>
       <property name="Sheetname" value="Thread"/>
       <property name="Sheetfile" value="Thread.kicad_sch"/>
       <property name="ki_keywords" value="LDO Regulator Fixed Positive"/>
@@ -8846,20 +8778,20 @@
     <comp ref="IC1202">
       <value>74LVC1G07</value>
       <footprint>Package_TO_SOT_SMD:SOT-353_SC-70-5</footprint>
-      <datasheet>https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0010762260/DIOD-S-A0010762566-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6</datasheet>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/74LVC1G07.pdf</datasheet>
       <description>Single Buffer Gate, Open Drain, Low-Voltage CMOS</description>
       <fields>
-        <field name="manf">Diodes Incorporated</field>
-        <field name="manf#">74LVC1G07QSE-7</field>
-        <field name="mouser#">621-74LVC1G07QSE-7</field>
+        <field name="manf">Nexperia</field>
+        <field name="manf#">74LVC1G07GW,125</field>
+        <field name="mouser#">771-74LVC1G07GW-G</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-353_SC-70-5</field>
-        <field name="Datasheet">https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0010762260/DIOD-S-A0010762566-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/74LVC1G07.pdf</field>
         <field name="Description">Single Buffer Gate, Open Drain, Low-Voltage CMOS</field>
       </fields>
       <libsource lib="74xGxx" part="74LVC1G07" description="Single Buffer Gate, Open Drain, Low-Voltage CMOS"/>
-      <property name="manf" value="Diodes Incorporated"/>
-      <property name="manf#" value="74LVC1G07QSE-7"/>
-      <property name="mouser#" value="621-74LVC1G07QSE-7"/>
+      <property name="manf" value="Nexperia"/>
+      <property name="manf#" value="74LVC1G07GW,125"/>
+      <property name="mouser#" value="771-74LVC1G07GW-G"/>
       <property name="Sheetname" value="Thread"/>
       <property name="Sheetfile" value="Thread.kicad_sch"/>
       <property name="ki_keywords" value="Single Gate Buff LVC CMOS Open Drain"/>
@@ -8881,20 +8813,20 @@
     <comp ref="IC1203">
       <value>74LVC1G07</value>
       <footprint>Package_TO_SOT_SMD:SOT-353_SC-70-5</footprint>
-      <datasheet>https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0010762260/DIOD-S-A0010762566-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6</datasheet>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/74LVC1G07.pdf</datasheet>
       <description>Single Buffer Gate, Open Drain, Low-Voltage CMOS</description>
       <fields>
-        <field name="manf">Diodes Incorporated</field>
-        <field name="manf#">74LVC1G07QSE-7</field>
-        <field name="mouser#">621-74LVC1G07QSE-7</field>
+        <field name="manf">Nexperia</field>
+        <field name="manf#">74LVC1G07GW,125</field>
+        <field name="mouser#">771-74LVC1G07GW-G</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-353_SC-70-5</field>
-        <field name="Datasheet">https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0010762260/DIOD-S-A0010762566-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/74LVC1G07.pdf</field>
         <field name="Description">Single Buffer Gate, Open Drain, Low-Voltage CMOS</field>
       </fields>
       <libsource lib="74xGxx" part="74LVC1G07" description="Single Buffer Gate, Open Drain, Low-Voltage CMOS"/>
-      <property name="manf" value="Diodes Incorporated"/>
-      <property name="manf#" value="74LVC1G07QSE-7"/>
-      <property name="mouser#" value="621-74LVC1G07QSE-7"/>
+      <property name="manf" value="Nexperia"/>
+      <property name="manf#" value="74LVC1G07GW,125"/>
+      <property name="mouser#" value="771-74LVC1G07GW-G"/>
       <property name="Sheetname" value="Thread"/>
       <property name="Sheetfile" value="Thread.kicad_sch"/>
       <property name="ki_keywords" value="Single Gate Buff LVC CMOS Open Drain"/>
@@ -8914,22 +8846,22 @@
       </units>
     </comp>
     <comp ref="IC1204">
-      <value>TXB0104PWR</value>
+      <value>NXB0104PW</value>
       <footprint>Package_SO:TSSOP-14_4.4x5mm_P0.65mm</footprint>
-      <datasheet>http://www.ti.com/lit/ds/symlink/txb0104.pdf</datasheet>
-      <description>4-Bit Bidirectional Voltage-Level Translator, Auto Direction Sensing and ±15-kV ESD Protection, 1.2 - 3.6V APort, 1.65 - 5.5V BPort, TSSOP-14</description>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/NXB0104.pdf</datasheet>
+      <description>4-bit dual supply translating transceiver with auto direction sensing, 1.2 - 3.6V A port, 1.65 - 5.5V B port, TSSOP-14</description>
       <fields>
-        <field name="manf">Texas Instruments</field>
-        <field name="manf#">TXB0104PWR</field>
-        <field name="mouser#">595-TXB0104PWR</field>
+        <field name="manf">Nexperia</field>
+        <field name="manf#">NXB0104PWJ</field>
+        <field name="mouser#">771-NXB0104PWJ</field>
         <field name="Footprint">Package_SO:TSSOP-14_4.4x5mm_P0.65mm</field>
-        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/txb0104.pdf</field>
-        <field name="Description">4-Bit Bidirectional Voltage-Level Translator, Auto Direction Sensing and ±15-kV ESD Protection, 1.2 - 3.6V APort, 1.65 - 5.5V BPort, TSSOP-14</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/NXB0104.pdf</field>
+        <field name="Description">4-bit dual supply translating transceiver with auto direction sensing, 1.2 - 3.6V A port, 1.65 - 5.5V B port, TSSOP-14</field>
       </fields>
       <libsource lib="Logic_LevelTranslator" part="TXB0104PW" description="4-Bit Bidirectional Voltage-Level Translator, Auto Direction Sensing and ±15-kV ESD Protection, 1.2 - 3.6V APort, 1.65 - 5.5V BPort, TSSOP-14"/>
-      <property name="manf" value="Texas Instruments"/>
-      <property name="manf#" value="TXB0104PWR"/>
-      <property name="mouser#" value="595-TXB0104PWR"/>
+      <property name="manf" value="Nexperia"/>
+      <property name="manf#" value="NXB0104PWJ"/>
+      <property name="mouser#" value="771-NXB0104PWJ"/>
       <property name="Sheetname" value="Thread"/>
       <property name="Sheetfile" value="Thread.kicad_sch"/>
       <property name="ki_keywords" value="Level-Shifter CMOS-TTL-Translation"/>
@@ -10304,8 +10236,8 @@
       <description>1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5</description>
       <fields>
         <field name="manf">Texas Instruments</field>
-        <field name="manf#">TLV75733PDBVR</field>
-        <field name="mouser#">595-TLV75733PDBVR</field>
+        <field name="manf#">TLV75733PDBVT</field>
+        <field name="mouser#">595-TLV75733PDBVT</field>
         <field name="Config">+WMBUS</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tlv757p.pdf</field>
@@ -10313,8 +10245,8 @@
       </fields>
       <libsource lib="Regulator_Linear" part="TLV75733PDBV" description="1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5"/>
       <property name="manf" value="Texas Instruments"/>
-      <property name="manf#" value="TLV75733PDBVR"/>
-      <property name="mouser#" value="595-TLV75733PDBVR"/>
+      <property name="manf#" value="TLV75733PDBVT"/>
+      <property name="mouser#" value="595-TLV75733PDBVT"/>
       <property name="Config" value="+WMBUS"/>
       <property name="Sheetname" value="wMBus"/>
       <property name="Sheetfile" value="wMBus.kicad_sch"/>
@@ -10337,21 +10269,21 @@
     <comp ref="IC1302">
       <value>74LVC1G07</value>
       <footprint>Package_TO_SOT_SMD:SOT-353_SC-70-5</footprint>
-      <datasheet>https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0010762260/DIOD-S-A0010762566-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6</datasheet>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/74LVC1G07.pdf</datasheet>
       <description>Single Buffer Gate, Open Drain, Low-Voltage CMOS</description>
       <fields>
-        <field name="manf">Diodes Incorporated</field>
-        <field name="manf#">74LVC1G07QSE-7</field>
-        <field name="mouser#">621-74LVC1G07QSE-7</field>
+        <field name="manf">Nexperia</field>
+        <field name="manf#">74LVC1G07GW,125</field>
+        <field name="mouser#">771-74LVC1G07GW-G</field>
         <field name="Config">+WMBUS</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-353_SC-70-5</field>
-        <field name="Datasheet">https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0010762260/DIOD-S-A0010762566-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/74LVC1G07.pdf</field>
         <field name="Description">Single Buffer Gate, Open Drain, Low-Voltage CMOS</field>
       </fields>
       <libsource lib="74xGxx" part="74LVC1G07" description="Single Buffer Gate, Open Drain, Low-Voltage CMOS"/>
-      <property name="manf" value="Diodes Incorporated"/>
-      <property name="manf#" value="74LVC1G07QSE-7"/>
-      <property name="mouser#" value="621-74LVC1G07QSE-7"/>
+      <property name="manf" value="Nexperia"/>
+      <property name="manf#" value="74LVC1G07GW,125"/>
+      <property name="mouser#" value="771-74LVC1G07GW-G"/>
       <property name="Config" value="+WMBUS"/>
       <property name="Sheetname" value="wMBus"/>
       <property name="Sheetfile" value="wMBus.kicad_sch"/>
@@ -11825,20 +11757,20 @@
     <comp ref="R1401">
       <value>887k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <datasheet>https://www.mouser.com/catalog/specsheets/YAGEO_PYu_RC_Group_51_RoHS_L_12.pdf?_gl=1*fhe3uh*_gcl_aw*R0NMLjE3ODI3MzA5NDUuQ2owS0NRandyNGpTQmhDU0FSSXNBT1gxRS1LUThmcEJqR3FRZEJNWTR2SXJ6Um94MkktNTV6VU5hMWlqYTdVZEo4V0swYjExWGRCZHFIa2FBb2IxRUFMd193Y0I.*_gcl_au*MTUwNjE5MTk5Mi4xNzc1NjM4MTAxLjU0NTk4MzQwOC4xNzgyOTEwMDA5LjE3ODI5MTA5MjQ.*_ga*MTc4ODYxMjM2LjE3NDQ3MTM4Nzc.*_ga_15W4STQT4T*czE3ODI5MTAwMDIkbzE5NiRnMSR0MTc4MjkxMDkyNiRqNDMkbDAkaDA.</datasheet>
+      <datasheet>https://www.mouser.com/datasheet/2/54/cr-1858361.pdf</datasheet>
       <description>Resistor</description>
       <fields>
-        <field name="manf">YAGEO</field>
-        <field name="manf#">RC0805FR-07887KL</field>
-        <field name="mouser#">603-RC0805FR-07887KL</field>
+        <field name="manf">Bourns</field>
+        <field name="manf#">CR0805-FX-8873ELF</field>
+        <field name="mouser#">652-CR0805FX-8873ELF</field>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
-        <field name="Datasheet">https://www.mouser.com/catalog/specsheets/YAGEO_PYu_RC_Group_51_RoHS_L_12.pdf?_gl=1*fhe3uh*_gcl_aw*R0NMLjE3ODI3MzA5NDUuQ2owS0NRandyNGpTQmhDU0FSSXNBT1gxRS1LUThmcEJqR3FRZEJNWTR2SXJ6Um94MkktNTV6VU5hMWlqYTdVZEo4V0swYjExWGRCZHFIa2FBb2IxRUFMd193Y0I.*_gcl_au*MTUwNjE5MTk5Mi4xNzc1NjM4MTAxLjU0NTk4MzQwOC4xNzgyOTEwMDA5LjE3ODI5MTA5MjQ.*_ga*MTc4ODYxMjM2LjE3NDQ3MTM4Nzc.*_ga_15W4STQT4T*czE3ODI5MTAwMDIkbzE5NiRnMSR0MTc4MjkxMDkyNiRqNDMkbDAkaDA.</field>
+        <field name="Datasheet">https://www.mouser.com/datasheet/2/54/cr-1858361.pdf</field>
         <field name="Description">Resistor</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="manf" value="YAGEO"/>
-      <property name="manf#" value="RC0805FR-07887KL"/>
-      <property name="mouser#" value="603-RC0805FR-07887KL"/>
+      <property name="manf" value="Bourns"/>
+      <property name="manf#" value="CR0805-FX-8873ELF"/>
+      <property name="mouser#" value="652-CR0805FX-8873ELF"/>
       <property name="Sheetname" value="Peripherals"/>
       <property name="Sheetfile" value="Peripherals.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -16490,36 +16422,6 @@
         <field name="manf#">MCJCT21GCB7225MTPA1J</field>
         <field name="Mouser SPN">963-T21GCB7225MTPA1J</field>
         <field name="mouser#">963-T21GCB7225MTPA1J</field>
-        <field name="Stock">0</field>
-      </fields>
-      <pins>
-        <pin num="1" name="" type="passive"/>
-        <pin num="2" name="" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="partdb" part="MLAST21GBB5226MTNC12">
-      <description>22u 25V 20% X5R</description>
-      <docs>https://inventory.lan/de/part/330/info</docs>
-      <footprints>
-        <fp>Capacitor_SMD:C_0805_2012Metric</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">C</field>
-        <field name="Value">22u</field>
-        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://inventory.lan/de/part/330/info</field>
-        <field name="Description">22u 25V 20% X5R</field>
-        <field name="Part-DB URL">https://inventory.lan/de/part/330/info</field>
-        <field name="Category">Kondensator/MLCC</field>
-        <field name="Manufacturer">TAIYO YUDEN</field>
-        <field name="MPN">MLAST21GBB5226MTNC12</field>
-        <field name="Manufacturing Status">Active</field>
-        <field name="Part-DB Footprint">0805</field>
-        <field name="Part-DB ID">330</field>
-        <field name="manf">TAIYO YUDEN</field>
-        <field name="manf#">MLAST21GBB5226MTNC12</field>
-        <field name="Mouser SPN">963-MLAST21GBB5226MT</field>
-        <field name="mouser#">963-MLAST21GBB5226MT</field>
         <field name="Stock">0</field>
       </fields>
       <pins>

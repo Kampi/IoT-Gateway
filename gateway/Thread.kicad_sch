@@ -8775,7 +8775,7 @@
 				)
 			)
 		)
-		(property "manf#" "TLV75733PDBVR"
+		(property "manf#" "TLV75733PDBVT"
 			(at 67.31 246.38 0)
 			(hide yes)
 			(show_name no)
@@ -8786,7 +8786,7 @@
 				)
 			)
 		)
-		(property "mouser#" "595-TLV75733PDBVR"
+		(property "mouser#" "595-TLV75733PDBVT"
 			(at 67.31 246.38 0)
 			(hide yes)
 			(show_name no)
@@ -11385,7 +11385,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0010762260/DIOD-S-A0010762566-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74LVC1G07.pdf"
 			(at 266.7 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -11407,7 +11407,7 @@
 				)
 			)
 		)
-		(property "manf" "Diodes Incorporated"
+		(property "manf" "Nexperia"
 			(at 266.7 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -11418,7 +11418,7 @@
 				)
 			)
 		)
-		(property "manf#" "74LVC1G07QSE-7"
+		(property "manf#" "74LVC1G07GW,125"
 			(at 266.7 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -11429,7 +11429,7 @@
 				)
 			)
 		)
-		(property "mouser#" "621-74LVC1G07QSE-7"
+		(property "mouser#" "771-74LVC1G07GW-G"
 			(at 266.7 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -11857,7 +11857,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0010762260/DIOD-S-A0010762566-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74LVC1G07.pdf"
 			(at 135.89 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -11879,7 +11879,7 @@
 				)
 			)
 		)
-		(property "manf" "Diodes Incorporated"
+		(property "manf" "Nexperia"
 			(at 135.89 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -11890,7 +11890,7 @@
 				)
 			)
 		)
-		(property "manf#" "74LVC1G07QSE-7"
+		(property "manf#" "74LVC1G07GW,125"
 			(at 135.89 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -11901,7 +11901,7 @@
 				)
 			)
 		)
-		(property "mouser#" "621-74LVC1G07QSE-7"
+		(property "mouser#" "771-74LVC1G07GW-G"
 			(at 135.89 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -11959,7 +11959,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "TXB0104PWR"
+		(property "Value" "NXB0104PW"
 			(at 265.43 135.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11981,7 +11981,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/txb0104.pdf"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/NXB0104.pdf"
 			(at 270.256 116.967 0)
 			(hide yes)
 			(show_name no)
@@ -11992,7 +11992,7 @@
 				)
 			)
 		)
-		(property "Description" "4-Bit Bidirectional Voltage-Level Translator, Auto Direction Sensing and ±15-kV ESD Protection, 1.2 - 3.6V APort, 1.65 - 5.5V BPort, TSSOP-14"
+		(property "Description" "4-bit dual supply translating transceiver with auto direction sensing, 1.2 - 3.6V A port, 1.65 - 5.5V B port, TSSOP-14"
 			(at 273.05 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -12003,7 +12003,7 @@
 				)
 			)
 		)
-		(property "manf" "Texas Instruments"
+		(property "manf" "Nexperia"
 			(at 273.05 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -12014,7 +12014,7 @@
 				)
 			)
 		)
-		(property "manf#" "TXB0104PWR"
+		(property "manf#" "NXB0104PWJ"
 			(at 273.05 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -12025,7 +12025,7 @@
 				)
 			)
 		)
-		(property "mouser#" "595-TXB0104PWR"
+		(property "mouser#" "771-NXB0104PWJ"
 			(at 273.05 119.38 0)
 			(hide yes)
 			(show_name no)

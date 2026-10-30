@@ -6932,7 +6932,7 @@
 				)
 			)
 		)
-		(property "manf#" "TLV75733PDBVR"
+		(property "manf#" "TLV75733PDBVT"
 			(at 67.31 246.38 0)
 			(hide yes)
 			(show_name no)
@@ -6943,7 +6943,7 @@
 				)
 			)
 		)
-		(property "mouser#" "595-TLV75733PDBVR"
+		(property "mouser#" "595-TLV75733PDBVT"
 			(at 67.31 246.38 0)
 			(hide yes)
 			(show_name no)
@@ -7318,7 +7318,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0010762260/DIOD-S-A0010762566-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74LVC1G07.pdf"
 			(at 148.59 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -7340,7 +7340,7 @@
 				)
 			)
 		)
-		(property "manf" "Diodes Incorporated"
+		(property "manf" "Nexperia"
 			(at 148.59 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -7351,7 +7351,7 @@
 				)
 			)
 		)
-		(property "manf#" "74LVC1G07QSE-7"
+		(property "manf#" "74LVC1G07GW,125"
 			(at 148.59 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -7362,7 +7362,7 @@
 				)
 			)
 		)
-		(property "mouser#" "621-74LVC1G07QSE-7"
+		(property "mouser#" "771-74LVC1G07GW-G"
 			(at 148.59 158.75 0)
 			(hide yes)
 			(show_name no)

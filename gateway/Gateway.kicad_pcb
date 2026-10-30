@@ -7222,7 +7222,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.de/datasheet/3/72/1/PYU_RT_1_TO_0_01_ROHS_L.pdf"
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7244,7 +7244,7 @@
 				)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manf" "Panasonic"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7257,7 +7257,7 @@
 				)
 			)
 		)
-		(property "manf#" "RT0805BRD075K36L"
+		(property "manf#" "ERA-6AEB5361V"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7270,7 +7270,7 @@
 				)
 			)
 		)
-		(property "mouser#" "603-RT0805BRD075K36L"
+		(property "mouser#" "667-ERA-6AEB5361V"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10478,7 +10478,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://inventory.lan/de/part/330/info"
+		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -10500,7 +10500,7 @@
 				)
 			)
 		)
-		(property "manf" "TAIYO YUDEN"
+		(property "manf" "Murata Electronics"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10513,7 +10513,7 @@
 				)
 			)
 		)
-		(property "mouser#" "963-MLAST21GBB5226MT"
+		(property "mouser#" "81-GRM21BR61E226ME4L"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10526,129 +10526,12 @@
 				)
 			)
 		)
-		(property "manf#" "MLAST21GBB5226MTNC12"
+		(property "manf#" "GRM21BR61E226ME44L"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "46f7d587-1794-4810-b7f9-4f60bdbd8f60")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Part-DB URL" "https://inventory.lan/de/part/330/info"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "59150ddc-d2a8-458d-917b-f0f0f7997beb")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Category" "Kondensator/MLCC"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "a8adce35-ba4a-4851-b17f-ec3feef213cd")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Manufacturer" "TAIYO YUDEN"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "fab8784a-88be-4207-9dfd-02ba42dde1bb")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "MPN" "MLAST21GBB5226MTNC12"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "afae9e4f-5330-4722-a071-bbfae7722b1d")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Manufacturing Status" "Active"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "6358f1c3-820c-4f60-a2fd-0bcae0043030")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Part-DB Footprint" "0805"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "b76d09fd-c484-4bef-8d59-820e487a60b3")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Part-DB ID" "330"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "d09118a1-4183-4e86-a17d-e4e2ef821b4d")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Mouser SPN" "963-MLAST21GBB5226MT"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "ca4d0520-cf0a-41c8-835e-01eaafc82ee3")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Stock" "0"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "d5e4bc71-bcae-4e3d-8af2-09952221fda7")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -17031,7 +16914,7 @@
 				)
 			)
 		)
-		(property "manf#" "TLV75733PDBVR"
+		(property "manf#" "TLV75733PDBVT"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17044,7 +16927,7 @@
 				)
 			)
 		)
-		(property "mouser#" "595-TLV75733PDBVR"
+		(property "mouser#" "595-TLV75733PDBVT"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37192,7 +37075,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0010762260/DIOD-S-A0010762566-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74LVC1G07.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -37214,7 +37097,7 @@
 				)
 			)
 		)
-		(property "manf" "Diodes Incorporated"
+		(property "manf" "Nexperia"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37227,7 +37110,7 @@
 				)
 			)
 		)
-		(property "manf#" "74LVC1G07QSE-7"
+		(property "manf#" "74LVC1G07GW,125"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37240,7 +37123,7 @@
 				)
 			)
 		)
-		(property "mouser#" "621-74LVC1G07QSE-7"
+		(property "mouser#" "771-74LVC1G07GW-G"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -38939,7 +38822,7 @@
 				)
 			)
 		)
-		(property "manf#" "TLV75733PDBVR"
+		(property "manf#" "TLV75733PDBVT"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -38952,7 +38835,7 @@
 				)
 			)
 		)
-		(property "mouser#" "595-TLV75733PDBVR"
+		(property "mouser#" "595-TLV75733PDBVT"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -41209,7 +41092,7 @@
 				)
 			)
 		)
-		(property "manf#" "TLV75733PDBVR"
+		(property "manf#" "TLV75733PDBVT"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -41222,7 +41105,7 @@
 				)
 			)
 		)
-		(property "mouser#" "595-TLV75733PDBVR"
+		(property "mouser#" "595-TLV75733PDBVT"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -47688,7 +47571,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://inventory.lan/de/part/330/info"
+		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -47710,7 +47593,7 @@
 				)
 			)
 		)
-		(property "manf" "TAIYO YUDEN"
+		(property "manf" "Murata Electronics"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -47723,7 +47606,7 @@
 				)
 			)
 		)
-		(property "mouser#" "963-MLAST21GBB5226MT"
+		(property "mouser#" "81-GRM21BR61E226ME4L"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -47736,129 +47619,12 @@
 				)
 			)
 		)
-		(property "manf#" "MLAST21GBB5226MTNC12"
+		(property "manf#" "GRM21BR61E226ME44L"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9fc85eb3-ede1-4543-bc14-61f3bc80d52f")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Part-DB URL" "https://inventory.lan/de/part/330/info"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "849436cd-e88a-4242-810b-24e97df4b976")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Category" "Kondensator/MLCC"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "1f335a94-99cc-4f2a-86da-2f9c2e34c357")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Manufacturer" "TAIYO YUDEN"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "459621f7-cc20-49da-af50-45ec227bb3fd")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "MPN" "MLAST21GBB5226MTNC12"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "d1b5e79e-cb66-4c95-b37b-3f8a6c30fbda")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Manufacturing Status" "Active"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "08c1c1b1-5b20-4a03-9bb9-2520462de897")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Part-DB Footprint" "0805"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "706eb99e-2dd6-43a9-a581-7375eefc0ed7")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Part-DB ID" "330"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "b3547822-73f8-4319-b6fa-7e8125a4936a")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Mouser SPN" "963-MLAST21GBB5226MT"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "b94bd6df-31e4-4f60-b86c-90f059b8dcb8")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Stock" "0"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "082b5d62-cc5f-4889-b63d-a222472be318")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -48014,7 +47780,7 @@
 				)
 			)
 		)
-		(property "manf#" "TLV75733PDBVR"
+		(property "manf#" "TLV75733PDBVT"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -48027,7 +47793,7 @@
 				)
 			)
 		)
-		(property "mouser#" "595-TLV75733PDBVR"
+		(property "mouser#" "595-TLV75733PDBVT"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -49748,7 +49514,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://inventory.lan/de/part/330/info"
+		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -49770,7 +49536,7 @@
 				)
 			)
 		)
-		(property "manf" "TAIYO YUDEN"
+		(property "manf" "Murata Electronics"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -49783,7 +49549,7 @@
 				)
 			)
 		)
-		(property "mouser#" "963-MLAST21GBB5226MT"
+		(property "mouser#" "81-GRM21BR61E226ME4L"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -49796,129 +49562,12 @@
 				)
 			)
 		)
-		(property "manf#" "MLAST21GBB5226MTNC12"
+		(property "manf#" "GRM21BR61E226ME44L"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c1535070-2965-46d6-85a3-ffa5359d641c")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Part-DB URL" "https://inventory.lan/de/part/330/info"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "4729d207-d54c-435c-9ebd-8026dfe5eb2a")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Category" "Kondensator/MLCC"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "30b83f9a-171a-41bc-9b8f-9192c8f1ba51")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Manufacturer" "TAIYO YUDEN"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "2453dfb9-b64c-4f2f-94d9-3ed25c58b0f7")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "MPN" "MLAST21GBB5226MTNC12"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "6bf3a789-c47c-4c99-baf7-46531fe805d8")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Manufacturing Status" "Active"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "f9639000-abb9-44d7-877f-f0c3c9b56939")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Part-DB Footprint" "0805"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "649169ad-d72f-42da-b119-0dba5dd54b16")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Part-DB ID" "330"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "1005d3f5-cc3f-43d8-a224-7ebe3b6c56fa")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Mouser SPN" "963-MLAST21GBB5226MT"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "5f30c9c2-d5c6-4cb4-83b8-4a43b56c9d5a")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Stock" "0"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "7a997f65-69dd-46e5-a630-524f0c0c50eb")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -60840,7 +60489,7 @@
 				)
 			)
 		)
-		(property "manf#" "TLV75733PDBVR"
+		(property "manf#" "TLV75733PDBVT"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -60853,7 +60502,7 @@
 				)
 			)
 		)
-		(property "mouser#" "595-TLV75733PDBVR"
+		(property "mouser#" "595-TLV75733PDBVT"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -62554,7 +62203,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.de/datasheet/3/72/1/PYU_RT_1_TO_0_01_ROHS_L.pdf"
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -62576,7 +62225,7 @@
 				)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manf" "Panasonic"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -62589,7 +62238,7 @@
 				)
 			)
 		)
-		(property "manf#" "RT0805BRD075K36L"
+		(property "manf#" "ERA-6AEB5361V"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -62602,7 +62251,7 @@
 				)
 			)
 		)
-		(property "mouser#" "603-RT0805BRD075K36L"
+		(property "mouser#" "667-ERA-6AEB5361V"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -63107,7 +62756,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0010762260/DIOD-S-A0010762566-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74LVC1G07.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -63129,7 +62778,7 @@
 				)
 			)
 		)
-		(property "manf" "Diodes Incorporated"
+		(property "manf" "Nexperia"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -63142,7 +62791,7 @@
 				)
 			)
 		)
-		(property "manf#" "74LVC1G07QSE-7"
+		(property "manf#" "74LVC1G07GW,125"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -63155,7 +62804,7 @@
 				)
 			)
 		)
-		(property "mouser#" "621-74LVC1G07QSE-7"
+		(property "mouser#" "771-74LVC1G07GW-G"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -63536,7 +63185,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0010762260/DIOD-S-A0010762566-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74LVC1G07.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -63558,7 +63207,7 @@
 				)
 			)
 		)
-		(property "manf" "Diodes Incorporated"
+		(property "manf" "Nexperia"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -63571,7 +63220,7 @@
 				)
 			)
 		)
-		(property "manf#" "74LVC1G07QSE-7"
+		(property "manf#" "74LVC1G07GW,125"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -63584,7 +63233,7 @@
 				)
 			)
 		)
-		(property "mouser#" "621-74LVC1G07QSE-7"
+		(property "mouser#" "771-74LVC1G07GW-G"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -71092,7 +70741,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0010762260/DIOD-S-A0010762566-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74LVC1G07.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -71114,7 +70763,7 @@
 				)
 			)
 		)
-		(property "manf" "Diodes Incorporated"
+		(property "manf" "Nexperia"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -71127,7 +70776,7 @@
 				)
 			)
 		)
-		(property "manf#" "74LVC1G07QSE-7"
+		(property "manf#" "74LVC1G07GW,125"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -71140,7 +70789,7 @@
 				)
 			)
 		)
-		(property "mouser#" "621-74LVC1G07QSE-7"
+		(property "mouser#" "771-74LVC1G07GW-G"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -72381,7 +72030,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0010762260/DIOD-S-A0010762566-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74LVC1G07.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -72403,7 +72052,7 @@
 				)
 			)
 		)
-		(property "manf" "Diodes Incorporated"
+		(property "manf" "Nexperia"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -72416,7 +72065,7 @@
 				)
 			)
 		)
-		(property "manf#" "74LVC1G07QSE-7"
+		(property "manf#" "74LVC1G07GW,125"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -72429,7 +72078,7 @@
 				)
 			)
 		)
-		(property "mouser#" "621-74LVC1G07QSE-7"
+		(property "mouser#" "771-74LVC1G07GW-G"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -75695,7 +75344,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.com/catalog/specsheets/YAGEO_PYu_RC_Group_51_RoHS_L_12.pdf?_gl=1*fhe3uh*_gcl_aw*R0NMLjE3ODI3MzA5NDUuQ2owS0NRandyNGpTQmhDU0FSSXNBT1gxRS1LUThmcEJqR3FRZEJNWTR2SXJ6Um94MkktNTV6VU5hMWlqYTdVZEo4V0swYjExWGRCZHFIa2FBb2IxRUFMd193Y0I.*_gcl_au*MTUwNjE5MTk5Mi4xNzc1NjM4MTAxLjU0NTk4MzQwOC4xNzgyOTEwMDA5LjE3ODI5MTA5MjQ.*_ga*MTc4ODYxMjM2LjE3NDQ3MTM4Nzc.*_ga_15W4STQT4T*czE3ODI5MTAwMDIkbzE5NiRnMSR0MTc4MjkxMDkyNiRqNDMkbDAkaDA."
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/54/cr-1858361.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -75717,7 +75366,7 @@
 				)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manf" "Bourns"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -75730,7 +75379,7 @@
 				)
 			)
 		)
-		(property "manf#" "RC0805FR-07887KL"
+		(property "manf#" "CR0805-FX-8873ELF"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -75743,7 +75392,7 @@
 				)
 			)
 		)
-		(property "mouser#" "603-RC0805FR-07887KL"
+		(property "mouser#" "652-CR0805FX-8873ELF"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -76853,7 +76502,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0010762260/DIOD-S-A0010762566-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74LVC1G07.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -76875,7 +76524,7 @@
 				)
 			)
 		)
-		(property "manf" "Diodes Incorporated"
+		(property "manf" "Nexperia"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -76888,7 +76537,7 @@
 				)
 			)
 		)
-		(property "manf#" "74LVC1G07QSE-7"
+		(property "manf#" "74LVC1G07GW,125"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -76901,7 +76550,7 @@
 				)
 			)
 		)
-		(property "mouser#" "621-74LVC1G07QSE-7"
+		(property "mouser#" "771-74LVC1G07GW-G"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -78284,7 +77933,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://inventory.lan/de/part/330/info"
+		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -78306,7 +77955,7 @@
 				)
 			)
 		)
-		(property "manf" "TAIYO YUDEN"
+		(property "manf" "Murata Electronics"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -78319,7 +77968,7 @@
 				)
 			)
 		)
-		(property "mouser#" "963-MLAST21GBB5226MT"
+		(property "mouser#" "81-GRM21BR61E226ME4L"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -78332,129 +77981,12 @@
 				)
 			)
 		)
-		(property "manf#" "MLAST21GBB5226MTNC12"
+		(property "manf#" "GRM21BR61E226ME44L"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "48ab089a-4b12-4727-b88d-1e93f04a2661")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Part-DB URL" "https://inventory.lan/de/part/330/info"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "d89bc36d-c187-47e5-abbc-d231d871d952")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Category" "Kondensator/MLCC"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "89438a3f-6daa-4c82-ab85-4b91628eae99")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Manufacturer" "TAIYO YUDEN"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "a4795016-5ab3-4611-ba19-97d93573a0ac")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "MPN" "MLAST21GBB5226MTNC12"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "c4bd5ba1-b527-4593-89be-f4c7f4e31fee")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Manufacturing Status" "Active"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "5243118f-4f60-4af0-96e6-2d45ecbcbdc8")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Part-DB Footprint" "0805"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "588a7aaf-bc58-4269-af45-38ef0d93c2c8")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Part-DB ID" "330"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "43de9623-574d-4e6e-a7e5-496a1327406d")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Mouser SPN" "963-MLAST21GBB5226MT"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "1f1ba95a-e62d-4f5a-938b-1c66db789475")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Stock" "0"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "e90017f8-1224-4c4b-8b80-3eb6800684ff")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -79452,7 +78984,7 @@
 				)
 			)
 		)
-		(property "manf#" "TLV75733PDBVR"
+		(property "manf#" "TLV75733PDBVT"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -79465,7 +78997,7 @@
 				)
 			)
 		)
-		(property "mouser#" "595-TLV75733PDBVR"
+		(property "mouser#" "595-TLV75733PDBVT"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -85570,7 +85102,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "TXB0104PWR"
+		(property "Value" "NXB0104PW"
 			(at 0 -3.449999 180)
 			(layer "B.Fab")
 			(hide yes)
@@ -85583,7 +85115,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/txb0104.pdf"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/NXB0104.pdf"
 			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
@@ -85595,7 +85127,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "4-Bit Bidirectional Voltage-Level Translator, Auto Direction Sensing and ±15-kV ESD Protection, 1.2 - 3.6V APort, 1.65 - 5.5V BPort, TSSOP-14"
+		(property "Description" "4-bit dual supply translating transceiver with auto direction sensing, 1.2 - 3.6V A port, 1.65 - 5.5V B port, TSSOP-14"
 			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
@@ -85607,7 +85139,7 @@
 				(justify mirror)
 			)
 		)
-		(property "manf#" "TXB0104PWR"
+		(property "manf#" "NXB0104PWJ"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -85621,7 +85153,7 @@
 				(justify mirror)
 			)
 		)
-		(property "mouser#" "595-TXB0104PWR"
+		(property "mouser#" "771-NXB0104PWJ"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -85635,7 +85167,7 @@
 				(justify mirror)
 			)
 		)
-		(property "manf" "Texas Instruments"
+		(property "manf" "Nexperia"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
