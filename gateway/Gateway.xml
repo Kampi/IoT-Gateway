@@ -2,14 +2,14 @@
 <export version="E">
   <design>
     <source>/__w/IoT-Gateway/IoT-Gateway/gateway/Gateway.kicad_sch</source>
-    <date>2026-10-30T09:14:52</date>
+    <date>2026-10-30T17:24:46</date>
     <tool>Eeschema 10.0.1-10.0.1~ubuntu25.10.1</tool>
     <textvar name="ASSEMBLY_NOTES"/>
     <textvar name="BOARD_NAME">Gateway</textvar>
     <textvar name="COMPANY">null</textvar>
     <textvar name="DESIGNER">Daniel Kampert</textvar>
     <textvar name="FABRICATION_NOTES"/>
-    <textvar name="GIT_HASH_PCB">db46e19</textvar>
+    <textvar name="GIT_HASH_PCB">f94d884</textvar>
     <textvar name="GIT_HASH_SCH">db46e19</textvar>
     <textvar name="GIT_URL">https://github.com/Kampi/IoT-Gateway</textvar>
     <textvar name="PCB_VARIANT">CHECKED</textvar>
@@ -17,8 +17,8 @@
     <textvar name="RELEASE_BODY_1.0.0">Version 1.0.0 not found.</textvar>
     <textvar name="RELEASE_BODY_2.2.0">Version 2.2.0 not found.</textvar>
     <textvar name="RELEASE_BODY_UNRELEASED">Version Unreleased not found.</textvar>
-    <textvar name="RELEASE_DATE">2026-10-28</textvar>
-    <textvar name="RELEASE_DATE_NUM">2026-10-28</textvar>
+    <textvar name="RELEASE_DATE">2026-10-30</textvar>
+    <textvar name="RELEASE_DATE_NUM">2026-10-30</textvar>
     <textvar name="RELEASE_TITLE_1.0.0">Version 1.0.0 not found.</textvar>
     <textvar name="RELEASE_TITLE_2.2.0">Version 2.2.0 not found.</textvar>
     <textvar name="RELEASE_TITLE_UNRELEASED">Version Unreleased not found.</textvar>
@@ -380,6 +380,7 @@
         <field name="manf">KYOCERA AVX</field>
         <field name="manf#">08055C103K4T4A</field>
         <field name="mouser#">581-08055C103K4T4A</field>
+        <field name="Config"/>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
         <field name="Datasheet">https://www.mouser.de/datasheet/3/5926/1/AutoMLCCKAM.pdf</field>
         <field name="Description">Unpolarized capacitor</field>
@@ -388,6 +389,7 @@
       <property name="manf" value="KYOCERA AVX"/>
       <property name="manf#" value="08055C103K4T4A"/>
       <property name="mouser#" value="581-08055C103K4T4A"/>
+      <property name="Config" value=""/>
       <property name="Sheetname" value="Power Input"/>
       <property name="Sheetfile" value="Power Input.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -1049,6 +1051,7 @@
         <field name="Mouser SPN">603-RT0805FRE13100KL</field>
         <field name="Stock">4</field>
         <field name="Storage Location">Sortierregal</field>
+        <field name="Config"/>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
         <field name="Datasheet">https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_15-3461507.pdf</field>
         <field name="Description">100k 125mW 1%</field>
@@ -1068,6 +1071,7 @@
       <property name="Mouser SPN" value="603-RT0805FRE13100KL"/>
       <property name="Stock" value="4"/>
       <property name="Storage Location" value="Sortierregal"/>
+      <property name="Config" value=""/>
       <property name="Sheetname" value="Power Input"/>
       <property name="Sheetfile" value="Power Input.kicad_sch"/>
       <property name="ki_fp_filters" value="Resistor_SMD:R_0805_2012Metric"/>
@@ -1091,6 +1095,7 @@
         <field name="manf">Bourns</field>
         <field name="manf#">CR0805-FX-1202ELF</field>
         <field name="mouser#">652-CR0805FX-1202ELF</field>
+        <field name="Config"/>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
         <field name="Datasheet">https://eu.mouser.com/datasheet/3/40/1/cr.pdf</field>
         <field name="Description">Resistor</field>
@@ -1099,6 +1104,7 @@
       <property name="manf" value="Bourns"/>
       <property name="manf#" value="CR0805-FX-1202ELF"/>
       <property name="mouser#" value="652-CR0805FX-1202ELF"/>
+      <property name="Config" value=""/>
       <property name="Sheetname" value="Power Input"/>
       <property name="Sheetfile" value="Power Input.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -1400,6 +1406,7 @@
         <field name="manf">KYOCERA AVX</field>
         <field name="manf#">08053C473K4T2A</field>
         <field name="mouser#">581-08053C473K4T2A</field>
+        <field name="Config"/>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
         <field name="Datasheet">https://datasheets.kyocera-avx.com/AutoMLCC.pdf</field>
         <field name="Description">Unpolarized capacitor</field>
@@ -1408,6 +1415,7 @@
       <property name="manf" value="KYOCERA AVX"/>
       <property name="manf#" value="08053C473K4T2A"/>
       <property name="mouser#" value="581-08053C473K4T2A"/>
+      <property name="Config" value=""/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -1696,24 +1704,43 @@
     <comp ref="C711">
       <value>22u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf</datasheet>
+      <datasheet>https://inventory.lan/de/part/330/info</datasheet>
       <description>22u 25V 20% X5R</description>
       <fields>
-        <field name="manf">Murata Electronics</field>
-        <field name="manf#">GRM21BR61E226ME44L</field>
-        <field name="mouser#">81-GRM21BR61E226ME4L</field>
+        <field name="manf">TAIYO YUDEN</field>
+        <field name="manf#">MLAST21GBB5226MTNC12</field>
+        <field name="mouser#">963-MLAST21GBB5226MT</field>
+        <field name="Config"/>
+        <field name="Part-DB URL">https://inventory.lan/de/part/330/info</field>
+        <field name="Category">Kondensator/MLCC</field>
+        <field name="Manufacturer">TAIYO YUDEN</field>
+        <field name="MPN">MLAST21GBB5226MTNC12</field>
+        <field name="Manufacturing Status">Active</field>
+        <field name="Part-DB Footprint">0805</field>
+        <field name="Part-DB ID">330</field>
+        <field name="Mouser SPN">963-MLAST21GBB5226MT</field>
+        <field name="Stock">0</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf</field>
+        <field name="Datasheet">https://inventory.lan/de/part/330/info</field>
         <field name="Description">22u 25V 20% X5R</field>
       </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="manf" value="Murata Electronics"/>
-      <property name="manf#" value="GRM21BR61E226ME44L"/>
-      <property name="mouser#" value="81-GRM21BR61E226ME4L"/>
+      <libsource lib="partdb" part="MLAST21GBB5226MTNC12" description="22u 25V 20% X5R"/>
+      <property name="manf" value="TAIYO YUDEN"/>
+      <property name="manf#" value="MLAST21GBB5226MTNC12"/>
+      <property name="mouser#" value="963-MLAST21GBB5226MT"/>
+      <property name="Config" value=""/>
+      <property name="Part-DB URL" value="https://inventory.lan/de/part/330/info"/>
+      <property name="Category" value="Kondensator/MLCC"/>
+      <property name="Manufacturer" value="TAIYO YUDEN"/>
+      <property name="MPN" value="MLAST21GBB5226MTNC12"/>
+      <property name="Manufacturing Status" value="Active"/>
+      <property name="Part-DB Footprint" value="0805"/>
+      <property name="Part-DB ID" value="330"/>
+      <property name="Mouser SPN" value="963-MLAST21GBB5226MT"/>
+      <property name="Stock" value="0"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
-      <property name="ki_keywords" value="cap capacitor"/>
-      <property name="ki_fp_filters" value="C_*"/>
+      <property name="ki_fp_filters" value="Capacitor_SMD:C_0805_2012Metric"/>
       <sheetpath names="/Project Architecture/Power/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c/"/>
       <tstamps>d8dfdd52-5657-439d-a769-c83aae696bbf</tstamps>
       <units>
@@ -1760,24 +1787,43 @@
     <comp ref="C713">
       <value>22u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf</datasheet>
+      <datasheet>https://inventory.lan/de/part/330/info</datasheet>
       <description>22u 25V 20% X5R</description>
       <fields>
-        <field name="manf">Murata Electronics</field>
-        <field name="manf#">GRM21BR61E226ME44L</field>
-        <field name="mouser#">81-GRM21BR61E226ME4L</field>
+        <field name="manf">TAIYO YUDEN</field>
+        <field name="manf#">MLAST21GBB5226MTNC12</field>
+        <field name="mouser#">963-MLAST21GBB5226MT</field>
+        <field name="Config"/>
+        <field name="Part-DB URL">https://inventory.lan/de/part/330/info</field>
+        <field name="Category">Kondensator/MLCC</field>
+        <field name="Manufacturer">TAIYO YUDEN</field>
+        <field name="MPN">MLAST21GBB5226MTNC12</field>
+        <field name="Manufacturing Status">Active</field>
+        <field name="Part-DB Footprint">0805</field>
+        <field name="Part-DB ID">330</field>
+        <field name="Mouser SPN">963-MLAST21GBB5226MT</field>
+        <field name="Stock">0</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf</field>
+        <field name="Datasheet">https://inventory.lan/de/part/330/info</field>
         <field name="Description">22u 25V 20% X5R</field>
       </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="manf" value="Murata Electronics"/>
-      <property name="manf#" value="GRM21BR61E226ME44L"/>
-      <property name="mouser#" value="81-GRM21BR61E226ME4L"/>
+      <libsource lib="partdb" part="MLAST21GBB5226MTNC12" description="22u 25V 20% X5R"/>
+      <property name="manf" value="TAIYO YUDEN"/>
+      <property name="manf#" value="MLAST21GBB5226MTNC12"/>
+      <property name="mouser#" value="963-MLAST21GBB5226MT"/>
+      <property name="Config" value=""/>
+      <property name="Part-DB URL" value="https://inventory.lan/de/part/330/info"/>
+      <property name="Category" value="Kondensator/MLCC"/>
+      <property name="Manufacturer" value="TAIYO YUDEN"/>
+      <property name="MPN" value="MLAST21GBB5226MTNC12"/>
+      <property name="Manufacturing Status" value="Active"/>
+      <property name="Part-DB Footprint" value="0805"/>
+      <property name="Part-DB ID" value="330"/>
+      <property name="Mouser SPN" value="963-MLAST21GBB5226MT"/>
+      <property name="Stock" value="0"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
-      <property name="ki_keywords" value="cap capacitor"/>
-      <property name="ki_fp_filters" value="C_*"/>
+      <property name="ki_fp_filters" value="Capacitor_SMD:C_0805_2012Metric"/>
       <sheetpath names="/Project Architecture/Power/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c/"/>
       <tstamps>aa94fcc1-4c10-4fa9-b80a-ce163b90413d</tstamps>
       <units>
@@ -1792,24 +1838,43 @@
     <comp ref="C714">
       <value>22u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf</datasheet>
+      <datasheet>https://inventory.lan/de/part/330/info</datasheet>
       <description>22u 25V 20% X5R</description>
       <fields>
-        <field name="manf">Murata Electronics</field>
-        <field name="manf#">GRM21BR61E226ME44L</field>
-        <field name="mouser#">81-GRM21BR61E226ME4L</field>
+        <field name="manf">TAIYO YUDEN</field>
+        <field name="manf#">MLAST21GBB5226MTNC12</field>
+        <field name="mouser#">963-MLAST21GBB5226MT</field>
+        <field name="Config"/>
+        <field name="Part-DB URL">https://inventory.lan/de/part/330/info</field>
+        <field name="Category">Kondensator/MLCC</field>
+        <field name="Manufacturer">TAIYO YUDEN</field>
+        <field name="MPN">MLAST21GBB5226MTNC12</field>
+        <field name="Manufacturing Status">Active</field>
+        <field name="Part-DB Footprint">0805</field>
+        <field name="Part-DB ID">330</field>
+        <field name="Mouser SPN">963-MLAST21GBB5226MT</field>
+        <field name="Stock">0</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf</field>
+        <field name="Datasheet">https://inventory.lan/de/part/330/info</field>
         <field name="Description">22u 25V 20% X5R</field>
       </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="manf" value="Murata Electronics"/>
-      <property name="manf#" value="GRM21BR61E226ME44L"/>
-      <property name="mouser#" value="81-GRM21BR61E226ME4L"/>
+      <libsource lib="partdb" part="MLAST21GBB5226MTNC12" description="22u 25V 20% X5R"/>
+      <property name="manf" value="TAIYO YUDEN"/>
+      <property name="manf#" value="MLAST21GBB5226MTNC12"/>
+      <property name="mouser#" value="963-MLAST21GBB5226MT"/>
+      <property name="Config" value=""/>
+      <property name="Part-DB URL" value="https://inventory.lan/de/part/330/info"/>
+      <property name="Category" value="Kondensator/MLCC"/>
+      <property name="Manufacturer" value="TAIYO YUDEN"/>
+      <property name="MPN" value="MLAST21GBB5226MTNC12"/>
+      <property name="Manufacturing Status" value="Active"/>
+      <property name="Part-DB Footprint" value="0805"/>
+      <property name="Part-DB ID" value="330"/>
+      <property name="Mouser SPN" value="963-MLAST21GBB5226MT"/>
+      <property name="Stock" value="0"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
-      <property name="ki_keywords" value="cap capacitor"/>
-      <property name="ki_fp_filters" value="C_*"/>
+      <property name="ki_fp_filters" value="Capacitor_SMD:C_0805_2012Metric"/>
       <sheetpath names="/Project Architecture/Power/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c/"/>
       <tstamps>d4906f03-70f7-43bc-be6c-391b8d148735</tstamps>
       <units>
@@ -1873,24 +1938,43 @@
     <comp ref="C716">
       <value>22u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf</datasheet>
+      <datasheet>https://inventory.lan/de/part/330/info</datasheet>
       <description>22u 25V 20% X5R</description>
       <fields>
-        <field name="manf">Murata Electronics</field>
-        <field name="manf#">GRM21BR61E226ME44L</field>
-        <field name="mouser#">81-GRM21BR61E226ME4L</field>
+        <field name="manf">TAIYO YUDEN</field>
+        <field name="manf#">MLAST21GBB5226MTNC12</field>
+        <field name="mouser#">963-MLAST21GBB5226MT</field>
+        <field name="Config"/>
+        <field name="Part-DB URL">https://inventory.lan/de/part/330/info</field>
+        <field name="Category">Kondensator/MLCC</field>
+        <field name="Manufacturer">TAIYO YUDEN</field>
+        <field name="MPN">MLAST21GBB5226MTNC12</field>
+        <field name="Manufacturing Status">Active</field>
+        <field name="Part-DB Footprint">0805</field>
+        <field name="Part-DB ID">330</field>
+        <field name="Mouser SPN">963-MLAST21GBB5226MT</field>
+        <field name="Stock">0</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf</field>
+        <field name="Datasheet">https://inventory.lan/de/part/330/info</field>
         <field name="Description">22u 25V 20% X5R</field>
       </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="manf" value="Murata Electronics"/>
-      <property name="manf#" value="GRM21BR61E226ME44L"/>
-      <property name="mouser#" value="81-GRM21BR61E226ME4L"/>
+      <libsource lib="partdb" part="MLAST21GBB5226MTNC12" description="22u 25V 20% X5R"/>
+      <property name="manf" value="TAIYO YUDEN"/>
+      <property name="manf#" value="MLAST21GBB5226MTNC12"/>
+      <property name="mouser#" value="963-MLAST21GBB5226MT"/>
+      <property name="Config" value=""/>
+      <property name="Part-DB URL" value="https://inventory.lan/de/part/330/info"/>
+      <property name="Category" value="Kondensator/MLCC"/>
+      <property name="Manufacturer" value="TAIYO YUDEN"/>
+      <property name="MPN" value="MLAST21GBB5226MTNC12"/>
+      <property name="Manufacturing Status" value="Active"/>
+      <property name="Part-DB Footprint" value="0805"/>
+      <property name="Part-DB ID" value="330"/>
+      <property name="Mouser SPN" value="963-MLAST21GBB5226MT"/>
+      <property name="Stock" value="0"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
-      <property name="ki_keywords" value="cap capacitor"/>
-      <property name="ki_fp_filters" value="C_*"/>
+      <property name="ki_fp_filters" value="Capacitor_SMD:C_0805_2012Metric"/>
       <sheetpath names="/Project Architecture/Power/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c/"/>
       <tstamps>71f7ec8e-d09c-42ec-99ce-a02b324f1e1e</tstamps>
       <units>
@@ -3524,8 +3608,6 @@
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
-      <property name="exclude_from_bom"/>
-      <property name="exclude_from_pos_files"/>
       <property name="dnp"/>
       <property name="ki_fp_filters" value="Resistor_SMD:R_0805_2012Metric"/>
       <sheetpath names="/Project Architecture/Power/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c/"/>
@@ -4663,8 +4745,6 @@
       <property name="Storage Location" value="Sortierregal"/>
       <property name="Sheetname" value="Battery"/>
       <property name="Sheetfile" value="Battery.kicad_sch"/>
-      <property name="exclude_from_bom"/>
-      <property name="exclude_from_pos_files"/>
       <property name="dnp"/>
       <property name="ki_fp_filters" value="Resistor_SMD:R_0805_2012Metric"/>
       <sheetpath names="/Project Architecture/Battery/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/a382d3a7-1839-425a-ad98-cfb69b49aae1/"/>
@@ -4802,8 +4882,6 @@
       <property name="Storage Location" value="Sortierregal"/>
       <property name="Sheetname" value="Battery"/>
       <property name="Sheetfile" value="Battery.kicad_sch"/>
-      <property name="exclude_from_bom"/>
-      <property name="exclude_from_pos_files"/>
       <property name="dnp"/>
       <property name="ki_fp_filters" value="Resistor_SMD:R_0805_2012Metric"/>
       <sheetpath names="/Project Architecture/Battery/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/a382d3a7-1839-425a-ad98-cfb69b49aae1/"/>
@@ -5094,8 +5172,6 @@
       <property name="Storage Location" value="Sortierregal"/>
       <property name="Sheetname" value="Battery"/>
       <property name="Sheetfile" value="Battery.kicad_sch"/>
-      <property name="exclude_from_bom"/>
-      <property name="exclude_from_pos_files"/>
       <property name="dnp"/>
       <property name="ki_fp_filters" value="Resistor_SMD:R_0805_2012Metric"/>
       <sheetpath names="/Project Architecture/Battery/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/a382d3a7-1839-425a-ad98-cfb69b49aae1/"/>
@@ -5163,24 +5239,26 @@
     <comp ref="TH801">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <datasheet>https://www.mouser.de/datasheet/3/40/1/cr.pdf</datasheet>
-      <description>Temperature dependent resistor, negative temperature coefficient</description>
+      <datasheet>https://www.mouser.com/datasheet/3/40/1/cr.pdf</datasheet>
+      <description>10k 125mW 1%</description>
       <fields>
         <field name="manf">Bourns</field>
-        <field name="manf#">CR0805-JW-103GLF</field>
-        <field name="mouser#">652-CR0805JW-103GLF</field>
+        <field name="manf#">CR0805-FX-1002ELF</field>
+        <field name="mouser#">652-CR0805FX-1002ELF</field>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
-        <field name="Datasheet">https://www.mouser.de/datasheet/3/40/1/cr.pdf</field>
-        <field name="Description">Temperature dependent resistor, negative temperature coefficient</field>
+        <field name="Datasheet">https://www.mouser.com/datasheet/3/40/1/cr.pdf</field>
+        <field name="Description">10k 125mW 1%</field>
       </fields>
-      <libsource lib="Device" part="Thermistor_NTC" description="Temperature dependent resistor, negative temperature coefficient"/>
+      <libsource lib="partdb" part="CR0805-FX-1002ELF" description="10k 125mW 1%"/>
       <property name="manf" value="Bourns"/>
-      <property name="manf#" value="CR0805-JW-103GLF"/>
-      <property name="mouser#" value="652-CR0805JW-103GLF"/>
+      <property name="manf#" value="CR0805-FX-1002ELF"/>
+      <property name="mouser#" value="652-CR0805FX-1002ELF"/>
       <property name="Sheetname" value="Battery"/>
       <property name="Sheetfile" value="Battery.kicad_sch"/>
-      <property name="ki_keywords" value="thermistor NTC resistor sensor RTD"/>
-      <property name="ki_fp_filters" value="R_* RV_*"/>
+      <property name="exclude_from_bom"/>
+      <property name="exclude_from_pos_files"/>
+      <property name="dnp"/>
+      <property name="ki_fp_filters" value="Resistor_SMD:R_0805_2012Metric"/>
       <sheetpath names="/Project Architecture/Battery/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/a382d3a7-1839-425a-ad98-cfb69b49aae1/"/>
       <tstamps>df70e11d-453e-4fdc-b1aa-b1b005bd6a23</tstamps>
       <units>
@@ -5322,23 +5400,51 @@
     <comp ref="BT901">
       <value>Backup</value>
       <footprint>Keystone:3030TR</footprint>
-      <datasheet>https://www.keyelco.com/product-pdf.cfm?p=14595</datasheet>
-      <description>Single-cell battery</description>
+      <datasheet>https://www.mouser.com/datasheet/3/201/1/3030TR.pdf</datasheet>
+      <description>Knopfzellen-Batteriehalter SM RETAINER TAPE/REEL 1500PC 10mm</description>
       <fields>
         <field name="manf">Keystone Electronics</field>
-        <field name="manf#">3030KTR</field>
-        <field name="mouser#">534-3030KTR</field>
+        <field name="manf#">3030TR</field>
+        <field name="mouser#">534-3030TR</field>
+        <field name="Config"/>
+        <field name="Sim.Device">V</field>
+        <field name="Sim.Type">DC</field>
+        <field name="Sim.Pins">1=+ 2=-</field>
+        <field name="Part-DB URL">https://inventory.lan/de/part/391/info</field>
+        <field name="Category">Batterie/Batteriehalter</field>
+        <field name="Manufacturer">Keystone Electronics</field>
+        <field name="MPN">3030TR</field>
+        <field name="Manufacturing Status">Active</field>
+        <field name="Part-DB Footprint">3030TR</field>
+        <field name="Mass">1 g</field>
+        <field name="Part-DB ID">391</field>
+        <field name="Mouser SPN">534-3030TR</field>
+        <field name="Stock">0</field>
         <field name="Footprint">Keystone:3030TR</field>
-        <field name="Datasheet">https://www.keyelco.com/product-pdf.cfm?p=14595</field>
-        <field name="Description">Single-cell battery</field>
+        <field name="Datasheet">https://www.mouser.com/datasheet/3/201/1/3030TR.pdf</field>
+        <field name="Description">Knopfzellen-Batteriehalter SM RETAINER TAPE/REEL 1500PC 10mm</field>
       </fields>
-      <libsource lib="Device" part="Battery_Cell" description="Single-cell battery"/>
+      <libsource lib="partdb" part="3030TR" description="Knopfzellen-Batteriehalter SM RETAINER TAPE/REEL 1500PC 10mm"/>
       <property name="manf" value="Keystone Electronics"/>
-      <property name="manf#" value="3030KTR"/>
-      <property name="mouser#" value="534-3030KTR"/>
+      <property name="manf#" value="3030TR"/>
+      <property name="mouser#" value="534-3030TR"/>
+      <property name="Config" value=""/>
+      <property name="Sim.Device" value="V"/>
+      <property name="Sim.Type" value="DC"/>
+      <property name="Sim.Pins" value="1=+ 2=-"/>
+      <property name="Part-DB URL" value="https://inventory.lan/de/part/391/info"/>
+      <property name="Category" value="Batterie/Batteriehalter"/>
+      <property name="Manufacturer" value="Keystone Electronics"/>
+      <property name="MPN" value="3030TR"/>
+      <property name="Manufacturing Status" value="Active"/>
+      <property name="Part-DB Footprint" value="3030TR"/>
+      <property name="Mass" value="1 g"/>
+      <property name="Part-DB ID" value="391"/>
+      <property name="Mouser SPN" value="534-3030TR"/>
+      <property name="Stock" value="0"/>
       <property name="Sheetname" value="System on Module"/>
       <property name="Sheetfile" value="SoM.kicad_sch"/>
-      <property name="ki_keywords" value="battery cell"/>
+      <property name="ki_fp_filters" value="Keystone:3030TR"/>
       <sheetpath names="/Project Architecture/System on Module/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a/"/>
       <tstamps>c8092f4d-23f6-4cea-aeb2-78c39ac46dab</tstamps>
       <units>
@@ -5925,7 +6031,6 @@
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="System on Module"/>
       <property name="Sheetfile" value="SoM.kicad_sch"/>
-      <property name="exclude_from_pos_files"/>
       <property name="dnp"/>
       <property name="ki_fp_filters" value="Resistor_SMD:R_0805_2012Metric"/>
       <sheetpath names="/Project Architecture/System on Module/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a/"/>
@@ -5978,7 +6083,6 @@
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="System on Module"/>
       <property name="Sheetfile" value="SoM.kicad_sch"/>
-      <property name="exclude_from_pos_files"/>
       <property name="dnp"/>
       <property name="ki_fp_filters" value="Resistor_SMD:R_0805_2012Metric"/>
       <sheetpath names="/Project Architecture/System on Module/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a/"/>
@@ -6011,6 +6115,7 @@
         <field name="Part-DB ID">343</field>
         <field name="Mouser SPN">652-CR0805FX-1002ELF</field>
         <field name="Stock">0</field>
+        <field name="Config"/>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
         <field name="Datasheet">https://www.mouser.com/datasheet/3/40/1/cr.pdf</field>
         <field name="Description">10k 125mW 1%</field>
@@ -6029,6 +6134,7 @@
       <property name="Part-DB ID" value="343"/>
       <property name="Mouser SPN" value="652-CR0805FX-1002ELF"/>
       <property name="Stock" value="0"/>
+      <property name="Config" value=""/>
       <property name="Sheetname" value="System on Module"/>
       <property name="Sheetfile" value="SoM.kicad_sch"/>
       <property name="ki_fp_filters" value="Resistor_SMD:R_0805_2012Metric"/>
@@ -6167,7 +6273,6 @@
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="System on Module"/>
       <property name="Sheetfile" value="SoM.kicad_sch"/>
-      <property name="exclude_from_pos_files"/>
       <property name="dnp"/>
       <property name="ki_fp_filters" value="Resistor_SMD:R_0805_2012Metric"/>
       <sheetpath names="/Project Architecture/System on Module/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a/"/>
@@ -6234,6 +6339,7 @@
         <field name="Part-DB ID">322</field>
         <field name="Mouser SPN">652-CR0805-J/-000ELF</field>
         <field name="Stock">0</field>
+        <field name="Config"/>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
         <field name="Datasheet">https://www.mouser.com/datasheet/3/40/1/cr.pdf</field>
         <field name="Description">0R 5%</field>
@@ -6252,6 +6358,7 @@
       <property name="Part-DB ID" value="322"/>
       <property name="Mouser SPN" value="652-CR0805-J/-000ELF"/>
       <property name="Stock" value="0"/>
+      <property name="Config" value=""/>
       <property name="Sheetname" value="System on Module"/>
       <property name="Sheetfile" value="SoM.kicad_sch"/>
       <property name="ki_fp_filters" value="Resistor_SMD:R_0805_2012Metric"/>
@@ -7076,8 +7183,6 @@
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="LoRa"/>
       <property name="Sheetfile" value="LoRa.kicad_sch"/>
-      <property name="exclude_from_bom"/>
-      <property name="exclude_from_pos_files"/>
       <property name="dnp"/>
       <property name="ki_fp_filters" value="Resistor_SMD:R_0805_2012Metric"/>
       <sheetpath names="/Project Architecture/LoRa/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6/"/>
@@ -8021,8 +8126,6 @@
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="Zigbee"/>
       <property name="Sheetfile" value="Zigbee.kicad_sch"/>
-      <property name="exclude_from_bom"/>
-      <property name="exclude_from_pos_files"/>
       <property name="dnp"/>
       <property name="ki_fp_filters" value="Resistor_SMD:R_0805_2012Metric"/>
       <sheetpath names="/Project Architecture/Zigbee/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/3f9e85ea-c06e-4d87-98cf-dea3ce3fc587/"/>
@@ -9154,8 +9257,6 @@
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="Thread"/>
       <property name="Sheetfile" value="Thread.kicad_sch"/>
-      <property name="exclude_from_bom"/>
-      <property name="exclude_from_pos_files"/>
       <property name="dnp"/>
       <property name="ki_fp_filters" value="Resistor_SMD:R_0805_2012Metric"/>
       <sheetpath names="/Project Architecture/Thread/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/38da7bfd-61a1-4734-9412-ab3ae9cd3f77/"/>
@@ -10548,8 +10649,6 @@
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="wMBus"/>
       <property name="Sheetfile" value="wMBus.kicad_sch"/>
-      <property name="exclude_from_bom"/>
-      <property name="exclude_from_pos_files"/>
       <property name="dnp"/>
       <property name="ki_fp_filters" value="Resistor_SMD:R_0805_2012Metric"/>
       <sheetpath names="/Project Architecture/wMBus/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/7a02d3a8-366e-4fb1-9f54-be0208da73cb/"/>
@@ -12148,7 +12247,7 @@
     </comp>
     <comp ref="X1401">
       <value>OTG</value>
-      <footprint>Connector_USB:USB_C_Receptacle_GCT_USB4110</footprint>
+      <footprint>GCT:USB4110</footprint>
       <datasheet>https://www.mouser.com/catalog/specsheets/GCT_USB4110%20Product%20Drawing%20-%2020k%20cycles.pdf</datasheet>
       <description>USB-C-Buchse USB 2.0 16-polig SMD liegend 5 A</description>
       <fields>
@@ -12165,11 +12264,12 @@
         <field name="Part-DB ID">369</field>
         <field name="Mouser SPN">640-USB4110-GF-A</field>
         <field name="Stock">0</field>
-        <field name="Footprint">Connector_USB:USB_C_Receptacle_GCT_USB4110</field>
+        <field name="Config"/>
+        <field name="Footprint">GCT:USB4110</field>
         <field name="Datasheet">https://www.mouser.com/catalog/specsheets/GCT_USB4110%20Product%20Drawing%20-%2020k%20cycles.pdf</field>
         <field name="Description">USB-C-Buchse USB 2.0 16-polig SMD liegend 5 A</field>
       </fields>
-      <libsource lib="Connector" part="USB_C_Receptacle_USB2.0_14P" description="USB 2.0-only 14P Type-C Receptacle connector"/>
+      <libsource lib="partdb" part="USB4110-GF-A" description="USB-C-Buchse USB 2.0 16-polig SMD liegend 5 A"/>
       <property name="manf" value="GCT"/>
       <property name="manf#" value="USB4110-GF-A"/>
       <property name="mouser#" value="640-USB4110-GF-A"/>
@@ -12183,30 +12283,32 @@
       <property name="Part-DB ID" value="369"/>
       <property name="Mouser SPN" value="640-USB4110-GF-A"/>
       <property name="Stock" value="0"/>
+      <property name="Config" value=""/>
       <property name="Sheetname" value="Peripherals"/>
       <property name="Sheetfile" value="Peripherals.kicad_sch"/>
-      <property name="ki_keywords" value="usb universal serial bus type-C USB2.0"/>
-      <property name="ki_fp_filters" value="USB*C*Receptacle*"/>
+      <property name="ki_fp_filters" value="GCT:USB4110"/>
       <sheetpath names="/Project Architecture/Peripherals/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/80a97db3-ff4e-4b40-a5b0-8dd5c51e4d83/"/>
       <tstamps>ba7fb217-ea30-45c2-8064-6e07a44cc5cf</tstamps>
       <units>
         <unit name="A">
           <pins>
             <pin num="SH"/>
-            <pin num="A1"/>
-            <pin num="A12"/>
             <pin num="B1"/>
             <pin num="B12"/>
-            <pin num="A4"/>
+            <pin num="A1"/>
+            <pin num="A12"/>
             <pin num="A9"/>
             <pin num="B4"/>
             <pin num="B9"/>
+            <pin num="A4"/>
             <pin num="A5"/>
             <pin num="B5"/>
             <pin num="A7"/>
             <pin num="B7"/>
             <pin num="A6"/>
             <pin num="B6"/>
+            <pin num="A8"/>
+            <pin num="B8"/>
           </pins>
         </unit>
       </units>
@@ -12525,6 +12627,7 @@
         <field name="manf">KYOCERA AVX</field>
         <field name="manf#">08055C683K4T4A</field>
         <field name="mouser#">581-08055C683K4T4A</field>
+        <field name="Config"/>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
         <field name="Datasheet">https://www.mouser.de/datasheet/3/5926/1/AutoMLCCKAM.pdf</field>
         <field name="Description">Unpolarized capacitor</field>
@@ -12533,6 +12636,7 @@
       <property name="manf" value="KYOCERA AVX"/>
       <property name="manf#" value="08055C683K4T4A"/>
       <property name="mouser#" value="581-08055C683K4T4A"/>
+      <property name="Config" value=""/>
       <property name="Sheetname" value="NVMe"/>
       <property name="Sheetfile" value="NVMe.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -12610,6 +12714,7 @@
         <field name="manf">KYOCERA AVX</field>
         <field name="manf#">08051U151JAT2A</field>
         <field name="mouser#">581-08051U151JAT2A</field>
+        <field name="Config"/>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
         <field name="Datasheet">https://datasheets.kyocera-avx.com/KGM_X7R.pdf</field>
         <field name="Description">Unpolarized capacitor</field>
@@ -12618,6 +12723,7 @@
       <property name="manf" value="KYOCERA AVX"/>
       <property name="manf#" value="08051U151JAT2A"/>
       <property name="mouser#" value="581-08051U151JAT2A"/>
+      <property name="Config" value=""/>
       <property name="Sheetname" value="NVMe"/>
       <property name="Sheetfile" value="NVMe.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -13097,8 +13203,6 @@
       <property name="Storage Location" value="Sortierregal"/>
       <property name="Sheetname" value="NVMe"/>
       <property name="Sheetfile" value="NVMe.kicad_sch"/>
-      <property name="exclude_from_bom"/>
-      <property name="exclude_from_pos_files"/>
       <property name="dnp"/>
       <property name="ki_fp_filters" value="Resistor_SMD:R_0805_2012Metric"/>
       <sheetpath names="/Project Architecture/NVMe/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7/"/>
@@ -14722,37 +14826,6 @@
         <pin num="1" name="1" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Connector" part="USB_C_Receptacle_USB2.0_14P">
-      <description>USB 2.0-only 14P Type-C Receptacle connector</description>
-      <docs>https://www.usb.org/sites/default/files/documents/usb_type-c.zip</docs>
-      <footprints>
-        <fp>USB*C*Receptacle*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">J</field>
-        <field name="Value">USB_C_Receptacle_USB2.0_14P</field>
-        <field name="Footprint"/>
-        <field name="Datasheet">https://www.usb.org/sites/default/files/documents/usb_type-c.zip</field>
-        <field name="Description">USB 2.0-only 14P Type-C Receptacle connector</field>
-      </fields>
-      <pins>
-        <pin num="A1" name="GND" type="passive"/>
-        <pin num="A4" name="VBUS" type="passive"/>
-        <pin num="A5" name="CC1" type="bidirectional"/>
-        <pin num="A6" name="D+" type="bidirectional"/>
-        <pin num="A7" name="D-" type="bidirectional"/>
-        <pin num="A9" name="VBUS" type="passive"/>
-        <pin num="A12" name="GND" type="passive"/>
-        <pin num="B1" name="GND" type="passive"/>
-        <pin num="B4" name="VBUS" type="passive"/>
-        <pin num="B5" name="CC2" type="bidirectional"/>
-        <pin num="B6" name="D+" type="bidirectional"/>
-        <pin num="B7" name="D-" type="bidirectional"/>
-        <pin num="B9" name="VBUS" type="passive"/>
-        <pin num="B12" name="GND" type="passive"/>
-        <pin num="SH" name="SHIELD" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="Connector SODIMM" part="Conn_02x130_Odd_Even">
       <description>Memory Socket DDR4 SODIMM 260P</description>
       <fields>
@@ -15203,24 +15276,6 @@
         <field name="Footprint"/>
         <field name="Datasheet"/>
         <field name="Description">Resistor</field>
-      </fields>
-      <pins>
-        <pin num="1" name="" type="passive"/>
-        <pin num="2" name="" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="Thermistor_NTC">
-      <description>Temperature dependent resistor, negative temperature coefficient</description>
-      <footprints>
-        <fp>R_*</fp>
-        <fp>RV_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">TH</field>
-        <field name="Value">Thermistor_NTC</field>
-        <field name="Footprint"/>
-        <field name="Datasheet"/>
-        <field name="Description">Temperature dependent resistor, negative temperature coefficient</field>
       </fields>
       <pins>
         <pin num="1" name="" type="passive"/>
@@ -16084,6 +16139,39 @@
         <pin num="2" name="" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="partdb" part="3030TR">
+      <description>Knopfzellen-Batteriehalter SM RETAINER TAPE/REEL 1500PC 10mm</description>
+      <docs>https://www.mouser.com/datasheet/3/201/1/3030TR.pdf</docs>
+      <footprints>
+        <fp>Keystone:3030TR</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">BT</field>
+        <field name="Value">3030TR</field>
+        <field name="Footprint">Keystone:3030TR</field>
+        <field name="Datasheet">https://www.mouser.com/datasheet/3/201/1/3030TR.pdf</field>
+        <field name="Description">Knopfzellen-Batteriehalter SM RETAINER TAPE/REEL 1500PC 10mm</field>
+        <field name="Sim.Device">V</field>
+        <field name="Sim.Type">DC</field>
+        <field name="Sim.Pins">1=+ 2=-</field>
+        <field name="Part-DB URL">https://inventory.lan/de/part/391/info</field>
+        <field name="Category">Batterie/Batteriehalter</field>
+        <field name="Manufacturer">Keystone Electronics</field>
+        <field name="MPN">3030TR</field>
+        <field name="Manufacturing Status">Active</field>
+        <field name="Part-DB Footprint">3030TR</field>
+        <field name="Part-DB ID">391</field>
+        <field name="manf">Keystone Electronics</field>
+        <field name="manf#">3030TR</field>
+        <field name="Mouser SPN">534-3030TR</field>
+        <field name="mouser#">534-3030TR</field>
+        <field name="Stock">0</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="partdb" part="9774015151R">
       <description>SMD-Abstandshalter M2.5 Innengewinde 1,5 mm Stahl</description>
       <docs>https://www.we-online.com/components/products/datasheet/9774015151R.pdf</docs>
@@ -16429,6 +16517,36 @@
         <pin num="2" name="" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="partdb" part="MLAST21GBB5226MTNC12">
+      <description>22u 25V 20% X5R</description>
+      <docs>https://inventory.lan/de/part/330/info</docs>
+      <footprints>
+        <fp>Capacitor_SMD:C_0805_2012Metric</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">22u</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet">https://inventory.lan/de/part/330/info</field>
+        <field name="Description">22u 25V 20% X5R</field>
+        <field name="Part-DB URL">https://inventory.lan/de/part/330/info</field>
+        <field name="Category">Kondensator/MLCC</field>
+        <field name="Manufacturer">TAIYO YUDEN</field>
+        <field name="MPN">MLAST21GBB5226MTNC12</field>
+        <field name="Manufacturing Status">Active</field>
+        <field name="Part-DB Footprint">0805</field>
+        <field name="Part-DB ID">330</field>
+        <field name="manf">TAIYO YUDEN</field>
+        <field name="manf#">MLAST21GBB5226MTNC12</field>
+        <field name="Mouser SPN">963-MLAST21GBB5226MT</field>
+        <field name="mouser#">963-MLAST21GBB5226MT</field>
+        <field name="Stock">0</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="partdb" part="RC0805FR-071ML">
       <description>1M 125mW 1%</description>
       <docs>https://www.mouser.com/catalog/specsheets/YAGEO_PYu_RC_Group_51_RoHS_L_12.pdf</docs>
@@ -16522,6 +16640,52 @@
       <pins>
         <pin num="1" name="K" type="passive"/>
         <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="partdb" part="USB4110-GF-A">
+      <description>USB-C-Buchse USB 2.0 16-polig SMD liegend 5 A</description>
+      <docs>https://www.mouser.com/catalog/specsheets/GCT_USB4110%20Product%20Drawing%20-%2020k%20cycles.pdf</docs>
+      <footprints>
+        <fp>GCT:USB4110</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">X</field>
+        <field name="Value">USB-C</field>
+        <field name="Footprint">GCT:USB4110</field>
+        <field name="Datasheet">https://www.mouser.com/catalog/specsheets/GCT_USB4110%20Product%20Drawing%20-%2020k%20cycles.pdf</field>
+        <field name="Description">USB-C-Buchse USB 2.0 16-polig SMD liegend 5 A</field>
+        <field name="Part-DB URL">https://inventory.lan/de/part/369/info</field>
+        <field name="Category">Steckverbinder/USB</field>
+        <field name="Manufacturer">GCT</field>
+        <field name="MPN">USB4110-GF-A</field>
+        <field name="Manufacturing Status">Active</field>
+        <field name="Part-DB Footprint">USB4110</field>
+        <field name="Mass">0.644 g</field>
+        <field name="Part-DB ID">369</field>
+        <field name="manf">GCT</field>
+        <field name="manf#">USB4110-GF-A</field>
+        <field name="Mouser SPN">640-USB4110-GF-A</field>
+        <field name="mouser#">640-USB4110-GF-A</field>
+        <field name="Stock">0</field>
+      </fields>
+      <pins>
+        <pin num="A1" name="GND" type="passive"/>
+        <pin num="A4" name="VBUS" type="passive"/>
+        <pin num="A5" name="CC1" type="bidirectional"/>
+        <pin num="A6" name="D+" type="bidirectional"/>
+        <pin num="A7" name="D-" type="bidirectional"/>
+        <pin num="A8" name="SBU1" type="bidirectional"/>
+        <pin num="A9" name="VBUS" type="passive"/>
+        <pin num="A12" name="GND" type="passive"/>
+        <pin num="B1" name="GND" type="passive"/>
+        <pin num="B4" name="VBUS" type="passive"/>
+        <pin num="B5" name="CC2" type="bidirectional"/>
+        <pin num="B6" name="D+" type="bidirectional"/>
+        <pin num="B7" name="D-" type="bidirectional"/>
+        <pin num="B8" name="SBU2" type="bidirectional"/>
+        <pin num="B9" name="VBUS" type="passive"/>
+        <pin num="B12" name="GND" type="passive"/>
+        <pin num="SH" name="SHIELD" type="passive"/>
       </pins>
     </libpart>
   </libparts>
@@ -16668,7 +16832,7 @@
     </net>
     <net code="7" name="/Project Architecture/Battery/Battery-Backup-Enable" class="Default">
       <node ref="IC802" pin="3" pinfunction="ON_3" pintype="input"/>
-      <node ref="R805" pin="1" pintype="passive"/>
+      <node ref="R805" pin="2" pintype="passive"/>
       <node ref="X902" pin="114" pinfunction="114_114" pintype="passive"/>
     </net>
     <net code="8" name="/Project Architecture/Battery/Battery-Charge-Enable" class="Default">
@@ -17367,7 +17531,7 @@
       <node ref="R801" pin="2" pintype="passive"/>
       <node ref="R802" pin="2" pintype="passive"/>
       <node ref="R803" pin="2" pintype="passive"/>
-      <node ref="R805" pin="2" pintype="passive"/>
+      <node ref="R805" pin="1" pintype="passive"/>
       <node ref="R807" pin="2" pintype="passive"/>
       <node ref="R808" pin="2" pintype="passive"/>
       <node ref="R809" pin="1" pintype="passive"/>
@@ -18952,109 +19116,115 @@
     <net code="539" name="unconnected-(X1201-SWO/TDO-Pad6)" class="Default">
       <node ref="X1201" pin="6" pinfunction="SWO/TDO_6" pintype="input+no_connect"/>
     </net>
-    <net code="540" name="unconnected-(X1501-DAS/~{DSS}/~{LED1}-Pad10)" class="Default">
+    <net code="540" name="unconnected-(X1401-SBU1-PadA8)" class="Default">
+      <node ref="X1401" pin="A8" pinfunction="SBU1_A8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="541" name="unconnected-(X1401-SBU2-PadB8)" class="Default">
+      <node ref="X1401" pin="B8" pinfunction="SBU2_B8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="542" name="unconnected-(X1501-DAS/~{DSS}/~{LED1}-Pad10)" class="Default">
       <node ref="X1501" pin="10" pinfunction="DAS/~{DSS}/~{LED1}_10" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="541" name="unconnected-(X1501-DEVSLP-Pad38)" class="Default">
+    <net code="543" name="unconnected-(X1501-DEVSLP-Pad38)" class="Default">
       <node ref="X1501" pin="38" pinfunction="DEVSLP_38" pintype="output+no_connect"/>
     </net>
-    <net code="542" name="unconnected-(X1501-NC-Pad6)" class="Default">
+    <net code="544" name="unconnected-(X1501-NC-Pad6)" class="Default">
       <node ref="X1501" pin="6" pinfunction="NC_6" pintype="no_connect"/>
     </net>
-    <net code="543" name="unconnected-(X1501-NC-Pad8)" class="Default">
+    <net code="545" name="unconnected-(X1501-NC-Pad8)" class="Default">
       <node ref="X1501" pin="8" pinfunction="NC_8" pintype="no_connect"/>
     </net>
-    <net code="544" name="unconnected-(X1501-NC-Pad20)" class="Default">
+    <net code="546" name="unconnected-(X1501-NC-Pad20)" class="Default">
       <node ref="X1501" pin="20" pinfunction="NC_20" pintype="no_connect"/>
     </net>
-    <net code="545" name="unconnected-(X1501-NC-Pad22)" class="Default">
+    <net code="547" name="unconnected-(X1501-NC-Pad22)" class="Default">
       <node ref="X1501" pin="22" pinfunction="NC_22" pintype="no_connect"/>
     </net>
-    <net code="546" name="unconnected-(X1501-NC-Pad24)" class="Default">
+    <net code="548" name="unconnected-(X1501-NC-Pad24)" class="Default">
       <node ref="X1501" pin="24" pinfunction="NC_24" pintype="no_connect"/>
     </net>
-    <net code="547" name="unconnected-(X1501-NC-Pad26)" class="Default">
+    <net code="549" name="unconnected-(X1501-NC-Pad26)" class="Default">
       <node ref="X1501" pin="26" pinfunction="NC_26" pintype="no_connect"/>
     </net>
-    <net code="548" name="unconnected-(X1501-NC-Pad28)" class="Default">
+    <net code="550" name="unconnected-(X1501-NC-Pad28)" class="Default">
       <node ref="X1501" pin="28" pinfunction="NC_28" pintype="no_connect"/>
     </net>
-    <net code="549" name="unconnected-(X1501-NC-Pad30)" class="Default">
+    <net code="551" name="unconnected-(X1501-NC-Pad30)" class="Default">
       <node ref="X1501" pin="30" pinfunction="NC_30" pintype="no_connect"/>
     </net>
-    <net code="550" name="unconnected-(X1501-NC-Pad32)" class="Default">
+    <net code="552" name="unconnected-(X1501-NC-Pad32)" class="Default">
       <node ref="X1501" pin="32" pinfunction="NC_32" pintype="no_connect"/>
     </net>
-    <net code="551" name="unconnected-(X1501-NC-Pad34)" class="Default">
+    <net code="553" name="unconnected-(X1501-NC-Pad34)" class="Default">
       <node ref="X1501" pin="34" pinfunction="NC_34" pintype="no_connect"/>
     </net>
-    <net code="552" name="unconnected-(X1501-NC-Pad36)" class="Default">
+    <net code="554" name="unconnected-(X1501-NC-Pad36)" class="Default">
       <node ref="X1501" pin="36" pinfunction="NC_36" pintype="no_connect"/>
     </net>
-    <net code="553" name="unconnected-(X1501-NC-Pad40)" class="Default">
+    <net code="555" name="unconnected-(X1501-NC-Pad40)" class="Default">
       <node ref="X1501" pin="40" pinfunction="NC_40" pintype="no_connect"/>
     </net>
-    <net code="554" name="unconnected-(X1501-NC-Pad42)" class="Default">
+    <net code="556" name="unconnected-(X1501-NC-Pad42)" class="Default">
       <node ref="X1501" pin="42" pinfunction="NC_42" pintype="no_connect"/>
     </net>
-    <net code="555" name="unconnected-(X1501-NC-Pad44)" class="Default">
+    <net code="557" name="unconnected-(X1501-NC-Pad44)" class="Default">
       <node ref="X1501" pin="44" pinfunction="NC_44" pintype="no_connect"/>
     </net>
-    <net code="556" name="unconnected-(X1501-NC-Pad46)" class="Default">
+    <net code="558" name="unconnected-(X1501-NC-Pad46)" class="Default">
       <node ref="X1501" pin="46" pinfunction="NC_46" pintype="no_connect"/>
     </net>
-    <net code="557" name="unconnected-(X1501-NC-Pad48)" class="Default">
+    <net code="559" name="unconnected-(X1501-NC-Pad48)" class="Default">
       <node ref="X1501" pin="48" pinfunction="NC_48" pintype="no_connect"/>
     </net>
-    <net code="558" name="unconnected-(X1501-NC-Pad56)" class="Default">
+    <net code="560" name="unconnected-(X1501-NC-Pad56)" class="Default">
       <node ref="X1501" pin="56" pinfunction="NC_56" pintype="no_connect"/>
     </net>
-    <net code="559" name="unconnected-(X1501-NC-Pad58)" class="Default">
+    <net code="561" name="unconnected-(X1501-NC-Pad58)" class="Default">
       <node ref="X1501" pin="58" pinfunction="NC_58" pintype="no_connect"/>
     </net>
-    <net code="560" name="unconnected-(X1501-NC-Pad67)" class="Default">
+    <net code="562" name="unconnected-(X1501-NC-Pad67)" class="Default">
       <node ref="X1501" pin="67" pinfunction="NC_67" pintype="no_connect"/>
     </net>
-    <net code="561" name="unconnected-(X1501-PEDET-Pad69)" class="Default">
+    <net code="563" name="unconnected-(X1501-PEDET-Pad69)" class="Default">
       <node ref="X1501" pin="69" pinfunction="PEDET_69" pintype="passive+no_connect"/>
     </net>
-    <net code="562" name="unconnected-(X1501-PERn1-Pad29)" class="Default">
+    <net code="564" name="unconnected-(X1501-PERn1-Pad29)" class="Default">
       <node ref="X1501" pin="29" pinfunction="PERn1_29" pintype="input+no_connect"/>
     </net>
-    <net code="563" name="unconnected-(X1501-PERn2-Pad17)" class="Default">
+    <net code="565" name="unconnected-(X1501-PERn2-Pad17)" class="Default">
       <node ref="X1501" pin="17" pinfunction="PERn2_17" pintype="input+no_connect"/>
     </net>
-    <net code="564" name="unconnected-(X1501-PERn3-Pad5)" class="Default">
+    <net code="566" name="unconnected-(X1501-PERn3-Pad5)" class="Default">
       <node ref="X1501" pin="5" pinfunction="PERn3_5" pintype="input+no_connect"/>
     </net>
-    <net code="565" name="unconnected-(X1501-PERp1-Pad31)" class="Default">
+    <net code="567" name="unconnected-(X1501-PERp1-Pad31)" class="Default">
       <node ref="X1501" pin="31" pinfunction="PERp1_31" pintype="input+no_connect"/>
     </net>
-    <net code="566" name="unconnected-(X1501-PERp2-Pad19)" class="Default">
+    <net code="568" name="unconnected-(X1501-PERp2-Pad19)" class="Default">
       <node ref="X1501" pin="19" pinfunction="PERp2_19" pintype="input+no_connect"/>
     </net>
-    <net code="567" name="unconnected-(X1501-PERp3-Pad7)" class="Default">
+    <net code="569" name="unconnected-(X1501-PERp3-Pad7)" class="Default">
       <node ref="X1501" pin="7" pinfunction="PERp3_7" pintype="input+no_connect"/>
     </net>
-    <net code="568" name="unconnected-(X1501-PETn1-Pad35)" class="Default">
+    <net code="570" name="unconnected-(X1501-PETn1-Pad35)" class="Default">
       <node ref="X1501" pin="35" pinfunction="PETn1_35" pintype="output+no_connect"/>
     </net>
-    <net code="569" name="unconnected-(X1501-PETn2-Pad23)" class="Default">
+    <net code="571" name="unconnected-(X1501-PETn2-Pad23)" class="Default">
       <node ref="X1501" pin="23" pinfunction="PETn2_23" pintype="output+no_connect"/>
     </net>
-    <net code="570" name="unconnected-(X1501-PETn3-Pad11)" class="Default">
+    <net code="572" name="unconnected-(X1501-PETn3-Pad11)" class="Default">
       <node ref="X1501" pin="11" pinfunction="PETn3_11" pintype="output+no_connect"/>
     </net>
-    <net code="571" name="unconnected-(X1501-PETp1-Pad37)" class="Default">
+    <net code="573" name="unconnected-(X1501-PETp1-Pad37)" class="Default">
       <node ref="X1501" pin="37" pinfunction="PETp1_37" pintype="output+no_connect"/>
     </net>
-    <net code="572" name="unconnected-(X1501-PETp2-Pad25)" class="Default">
+    <net code="574" name="unconnected-(X1501-PETp2-Pad25)" class="Default">
       <node ref="X1501" pin="25" pinfunction="PETp2_25" pintype="output+no_connect"/>
     </net>
-    <net code="573" name="unconnected-(X1501-PETp3-Pad13)" class="Default">
+    <net code="575" name="unconnected-(X1501-PETp3-Pad13)" class="Default">
       <node ref="X1501" pin="13" pinfunction="PETp3_13" pintype="output+no_connect"/>
     </net>
-    <net code="574" name="unconnected-(X1501-SUSCLK-Pad68)" class="Default">
+    <net code="576" name="unconnected-(X1501-SUSCLK-Pad68)" class="Default">
       <node ref="X1501" pin="68" pinfunction="SUSCLK_68" pintype="output+no_connect"/>
     </net>
   </nets>
