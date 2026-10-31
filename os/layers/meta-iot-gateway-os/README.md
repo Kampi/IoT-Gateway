@@ -42,6 +42,7 @@ gateway image.
     - [LoRaWAN - RAK5146 (USB, SX1302)](#lorawan---rak5146-usb-sx1302)
     - [Zigbee - CC2652P (UART\_2)](#zigbee---cc2652p-uart_2)
     - [Wireless M-Bus (UART\_1)](#wireless-m-bus-uart_1)
+    - [Bluetooth LE - on-module (SDIO)](#bluetooth-le---on-module-sdio)
     - [Thread - nRF5340 RCP (UART\_4)](#thread---nrf5340-rcp-uart_4)
     - [MQTT](#mqtt)
   - [Security](#security)
@@ -102,11 +103,19 @@ The resulting artifacts are located in `build/tmp/deploy/images/verdin-imx8mm/`.
 The following variables can be overridden in `build/conf/local.conf` to adapt
 the image to the target infrastructure without modifying any recipe.
 
+All MQTT clients default to `localhost`, i.e. the Mosquitto broker on the
+gateway itself. If Home Assistant / ChirpStack use a broker elsewhere (e.g. on
+a NAS), point **all** of them to it, otherwise their data never leaves the
+gateway.
+
 ```bitbake
 # Example local.conf entries
 CHIRPSTACK_MQTT_SERVER  = "tcp://192.168.1.10:1883"
 ZIGBEE2MQTT_MQTT_SERVER = "mqtt://192.168.1.10"
 WMBUSMETERS_MQTT_SERVER = "192.168.1.10"
+THEENGS_MQTT_HOST       = "192.168.1.10"
+TELEMETRY_MQTT_HOST     = "192.168.1.10"
+LORA_SERVER_ADDRESS     = "localhost"
 OTBR_INFRA_IFACE        = "end0"
 OTBR_RCP_DEVICE         = "/dev/thread"
 ```
@@ -120,10 +129,19 @@ OTBR_RCP_DEVICE         = "/dev/thread"
 | Variable | Default | Description | Recipe |
 | --- | --- | --- | --- |
 | `CHIRPSTACK_MQTT_SERVER` | `tcp://localhost:1883` | MQTT broker URL for ChirpStack Gateway Bridge (e.g. tcp://192.168.1.10:1883) | `chirpstack-gateway-bridge_4.0.11.bb` |
+| `LORA_SERVER_ADDRESS` | `localhost` | Address of the ChirpStack Gateway Bridge (Semtech UDP server) | `lora-packet-forwarder_2.1.0.bb` |
 | `OTBR_INFRA_IFACE` | `end0` | Network interface connected to the backbone (IP) network | `ot-br-posix_%.bbappend` |
 | `OTBR_RCP_DEVICE` | `/dev/thread` | Thread RCP device path (nRF5340 flashed with OpenThread RCP firmware, connected via UART_4) | `ot-br-posix_%.bbappend` |
+| `THEENGS_MQTT_HOST` | `localhost` | MQTT broker host for Theengs Gateway (Bluetooth LE to MQTT, e.g. 192.168.1.10) | `theengs-gateway_1.8.0.bb` |
 | `WMBUSMETERS_MQTT_SERVER` | `localhost` | MQTT broker hostname (or hostname:port) for wmbusmeters (e.g. 192.168.1.10 or 192.168.1.10:1883) | `wmbusmeters_1.18.0.bb` |
+| `WMBUSMETERS_DEVICE` | `/dev/wmbus:im871a:t1` | wM-Bus receiver for wmbusmeters (device:type:link modes, e.g. /dev/wmbus:im871a:t1) | `wmbusmeters_1.18.0.bb` |
 | `ZIGBEE2MQTT_MQTT_SERVER` | `mqtt://localhost` | MQTT broker URL for Zigbee2MQTT (e.g. mqtt://192.168.1.10) | `zigbee2mqtt_2.12.0.bb` |
+| `ZIGBEE2MQTT_HA_BRIDGE_NAME` | `IoT-Gateway (Zigbee)` | Name of the Zigbee bridge device in Home Assistant, parent of all Zigbee devices | `zigbee2mqtt_2.12.0.bb` |
+| `TELEMETRY_MQTT_HOST` | `localhost` | MQTT broker host for the gateway telemetry (Home Assistant device "IoT-Gateway") | `gateway-telemetry_1.0.bb` |
+| `TELEMETRY_DEVICE_NAME` | `IoT-Gateway` | Name of the gateway device in Home Assistant (CPU, memory, disk, battery, uptime) | `gateway-telemetry_1.0.bb` |
+| `TELEMETRY_LORA_DEVICE_NAME` | `IoT-Gateway (LoRa)` | Name of the LoRa gateway device in Home Assistant, parent of all LoRa sensors | `gateway-telemetry_1.0.bb` |
+| `TELEMETRY_BLE_DEVICE_NAME` | `IoT-Gateway (Bluetooth)` | Name of the Bluetooth gateway device in Home Assistant, parent of all BLE sensors | `gateway-telemetry_1.0.bb` |
+| `TELEMETRY_WMBUS_DEVICE_NAME` | `IoT-Gateway (wM-Bus)` | Name of the wM-Bus gateway device in Home Assistant (wmbusmeters status and version) | `gateway-telemetry_1.0.bb` |
 
 <!-- USER_CONFIG_END -->
 
@@ -456,6 +474,36 @@ SUBSYSTEM=="tty", KERNELS=="30880000.serial", SYMLINK+="zigbee"
 - **Config dir:** `/etc/wmbusmeters.d/`
 - **Service:** `wmbusmeters.service` (autostart)
 
+### Bluetooth LE - on-module (SDIO)
+
+- **Hardware:** Wi-Fi/Bluetooth combo chip of the Verdin module, Bluetooth
+  part via SDIO (driver `btmrvl_sdio`)
+- **Interface:** `hci0` (BlueZ 5, `bluetooth.service`)
+- **Tool:** [Theengs Gateway](https://gateway.theengs.io) 1.8.0 with Theengs
+  Decoder 2.5.0 - scans BLE advertisements and decodes several hundred sensor
+  types (Xiaomi, Govee, SwitchBot, Inkbird, BTHome-based devices, ...)
+- **MQTT topics:** `home/TheengsGateway/BTtoMQTT/<MAC>` (data),
+  `home/TheengsGateway/LWT` (online/offline)
+- **MQTT broker:** `THEENGS_MQTT_HOST` (see "Configuration Variables")
+- **Home Assistant:** MQTT discovery. Every decoded sensor is a device of its
+  own, linked to the gateway device `IoT-Gateway (Bluetooth)`
+  (`TELEMETRY_BLE_DEVICE_NAME`, announced by `gateway-telemetry` like the
+  LoRa and wM-Bus gateway devices), which shows connection state and version.
+  iBeacons (phones, trackers) are filtered out of discovery.
+- **Config:** `/var/lib/theengs-gateway/theengsgw.conf` (rewritten by Theengs
+  on every start, hence not in `/etc`)
+- **Service:** `theengs-gateway.service` (autostart, powers on `hci0` before
+  starting, see `bluetoothctl power on`)
+
+Python dependencies missing in scarthgap are packaged in
+`recipes-devtools/python/` (`bluetooth-adapters` is pinned to 0.20.2, the
+newest release that works with scarthgap's bleak 0.21 / dbus-fast 2.21 /
+poetry-core 1.9). Theengs Decoder's C++ extension is built directly with the
+target toolchain instead of scikit-build.
+
+Test firmware broadcasting random temperature/humidity values as BTHome v2:
+`firmware/ESP32_BLE` (shows up as `THB1/BTH01/TH05F`).
+
 ### Thread - nRF5340 RCP (UART_4)
 
 - **Hardware:** Nordic nRF5340 flashed with OpenThread RCP firmware
@@ -553,7 +601,7 @@ RAM (tmpfs) /run/log/journal/          <- journald writes here (volatile)
          |  journal-sync.timer (every 15 min, first after 5 min)
          v
 
-eMMC /var/log/journal-archive/         <- compressed archive files
+eMMC /var/lib/journal-archive/         <- compressed archive files
     journal-YYYYMMDD-HHMMSS.log.gz
     Ring buffer limit: 256 MB          <- oldest files deleted when exceeded
 ```
@@ -562,7 +610,7 @@ eMMC /var/log/journal-archive/         <- compressed archive files
 
 1. `journal-sync.timer` fires every 15 minutes (first time 5 minutes after boot)
 2. `journal-sync.service` runs `/usr/libexec/gateway-os/journal-sync`
-3. The script reads the cursor saved from the last run (`/var/log/journal-archive/.cursor`)
+3. The script reads the cursor saved from the last run (`/var/lib/journal-archive/.cursor`); a cursor from an earlier boot is ignored and the whole journal of the current boot is exported
 4. Only new journal entries since the last cursor are exported (`--after-cursor`)
 5. Output is compressed with `gzip` and written as a timestamped file on eMMC
 6. The new cursor position is saved for the next run
@@ -581,14 +629,33 @@ eMMC /var/log/journal-archive/         <- compressed archive files
 
 ```bash
 # List archive files
-ls -lh /var/log/journal-archive/
+ls -lh /var/lib/journal-archive/
 
 # Read a specific archive
-zcat /var/log/journal-archive/journal-20260621-120500.log.gz | less
+zcat /var/lib/journal-archive/journal-20260621-120500.log.gz | less
 
 # Live journal (RAM)
 journalctl -f
 ```
+
+### Log rotation
+
+`/var/log` is a tmpfs (RAM), so every log file needs a size limit:
+
+| Log | Location | Limit |
+| --- | --- | --- |
+| systemd journal | `/run/log/journal` (RAM) | `RuntimeMaxUse=64M` (journald) |
+| Journal archive | `/var/lib/journal-archive` (eMMC) | ring buffer, 256 MB (`journal-sync`) |
+| syslog (`/var/log/messages`) | RAM | busybox `syslogd`, 200 KB + 1 rotation |
+| wmbusmeters | `/var/log/wmbusmeters/` (RAM) | logrotate: 1 MB, 3 compressed generations |
+| Zigbee2MQTT | `/var/lib/zigbee2mqtt/log/` | Zigbee2MQTT keeps the last 10 log directories |
+
+`logrotate` runs **hourly** (`recipes-extended/logrotate/logrotate_%.bbappend`).
+Services with their own log file ship a rule in `/etc/logrotate.d/<service>`
+(see `recipes-connectivity/wmbusmeters/files/wmbusmeters.logrotate`). Use
+`copytruncate` for programs that keep the file open without a reopen signal.
+
+---
 
 ## Backup
 

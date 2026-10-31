@@ -6,8 +6,10 @@ gateway. New devices show up in Home Assistant automatically on their first
 uplink, with no per-device configuration.
 
 ```text
-ChirpStack ──application/+/device/+/event/up──► Node-RED ──► homeassistant/<component>/<id>/config  (discovery, retained)
-                                                         └─► chirpstack2ha/<devEui>/<field>          (state, retained)
+ChirpStack ──application/+/device/+/event/up─────┐
+Gateway Bridge ──<region>/gateway/+/state/conn──┼─► Node-RED ─┬─► homeassistant/<component>/<id>/config  (discovery, retained)
+Gateway Bridge ──<region>/gateway/+/event/stats─┘             ├─► chirpstack2ha/<devEui>/<field>         (state, retained)
+                                                              └─► chirpstack2ha/gateway/<id>/status      (ON/OFF, retained)
 ```
 
 ## Requirements
@@ -34,6 +36,14 @@ Adjust the broker config node if the broker address or credentials change.
   - booleans → `binary_sensor`
   - strings → `sensor` without unit
 - RSSI and SNR of the best receiving gateway as diagnostic entities.
+- One HA device per LoRa gateway (from the ChirpStack Gateway Bridge connection
+  state, `<region>/gateway/<id>/state/conn`) with an online/offline status.
+  Every LoRa device is linked to the gateway that received it first, so HA
+  lists it under the gateway's "Connected devices". Gateway display names are
+  set in `GATEWAY_NAMES` in the "Gateway → HA device + status" node; unknown
+  gateways are called `LoRa Gateway <id>`. The firmware version shown in HA is
+  `gateway_bridge_version` from the bridge's static metadata
+  (`[meta_data.static]`, sent with every `event/stats` message).
 
 ## Per-device tuning (ChirpStack device tags)
 

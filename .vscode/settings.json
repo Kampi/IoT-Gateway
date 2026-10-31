@@ -11,7 +11,7 @@
         "**/os/Verdin-iMX8MM_ToradexEasyInstaller_*/**": true,
         "**/os/layers/{openembedded-core,meta-arm,meta-freescale,meta-freescale-3rdparty,meta-freescale-distro,meta-openembedded,meta-qt5,meta-security,meta-ti,meta-toradex-bsp-common,meta-toradex-demos,meta-toradex-distro,meta-toradex-nxp,meta-toradex-ti,meta-yocto}/**": true,
         "**/firmware/nRF5340/{.west,zephyr,nrf,modules,bootloader,nrfxlib,test,tools,mbedtls,bsim,build,build_appcore,.venv}/**": true,
-        "**/firmware/ESP32/.pio/**": true
+        "**/firmware/ESP32_*/.pio/**": true
     },
 
     "search.exclude": {
@@ -22,7 +22,7 @@
         "os/Verdin-iMX8MM_ToradexEasyInstaller_*": true,
         "os/layers/{openembedded-core,meta-arm,meta-freescale,meta-freescale-3rdparty,meta-freescale-distro,meta-openembedded,meta-qt5,meta-security,meta-ti,meta-toradex-bsp-common,meta-toradex-demos,meta-toradex-distro,meta-toradex-nxp,meta-toradex-ti,meta-yocto}": true,
         "firmware/nRF5340/{.west,zephyr,nrf,modules,bootloader,nrfxlib,test,tools,mbedtls,bsim,build,build_appcore,.venv}": true,
-        "firmware/ESP32/.pio": true,
+        "firmware/ESP32_*/.pio": true,
         "**/npm-shrinkwrap.json": true
     },
 
@@ -31,7 +31,7 @@
     "C_Cpp.files.exclude": {
         "os/**": true,
         "firmware/nRF5340/{.west,zephyr,nrf,modules,bootloader,nrfxlib,test,tools,mbedtls,bsim,build,build_appcore,.venv}/**": true,
-        "firmware/ESP32/.pio/**": true
+        "firmware/ESP32_*/.pio/**": true
     },
 
     // Python (Pylance): only our own scripts.

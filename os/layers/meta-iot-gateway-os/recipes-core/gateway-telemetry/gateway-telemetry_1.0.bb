@@ -17,6 +17,21 @@ SRC_URI = " \
 
 inherit systemd
 
+# @USER_CONFIG: MQTT broker host for the gateway telemetry (Home Assistant device "IoT-Gateway")
+TELEMETRY_MQTT_HOST ?= "localhost"
+
+# @USER_CONFIG: Name of the gateway device in Home Assistant (CPU, memory, disk, battery, uptime)
+TELEMETRY_DEVICE_NAME ?= "IoT-Gateway"
+
+# @USER_CONFIG: Name of the LoRa gateway device in Home Assistant, parent of all LoRa sensors
+TELEMETRY_LORA_DEVICE_NAME ?= "IoT-Gateway (LoRa)"
+
+# @USER_CONFIG: Name of the Bluetooth gateway device in Home Assistant, parent of all BLE sensors
+TELEMETRY_BLE_DEVICE_NAME ?= "IoT-Gateway (Bluetooth)"
+
+# @USER_CONFIG: Name of the wM-Bus gateway device in Home Assistant (wmbusmeters status and version)
+TELEMETRY_WMBUS_DEVICE_NAME ?= "IoT-Gateway (wM-Bus)"
+
 RDEPENDS:${PN} = "python3-core python3-json python3-logging python3-paho-mqtt"
 
 SYSTEMD_SERVICE:${PN} = "gateway-telemetry.service"
@@ -27,7 +42,13 @@ do_install() {
     install -m 0755 ${WORKDIR}/gateway-telemetry.py ${D}${libexecdir}/gateway-os/gateway-telemetry.py
 
     install -d ${D}${sysconfdir}/default
-    install -m 0644 ${WORKDIR}/gateway-telemetry.conf ${D}${sysconfdir}/default/gateway-telemetry
+    sed -e 's|@TELEMETRY_MQTT_HOST@|${TELEMETRY_MQTT_HOST}|g' \
+        -e 's|@TELEMETRY_DEVICE_NAME@|${TELEMETRY_DEVICE_NAME}|g' \
+        -e 's|@TELEMETRY_LORA_DEVICE_NAME@|${TELEMETRY_LORA_DEVICE_NAME}|g' \
+        -e 's|@TELEMETRY_BLE_DEVICE_NAME@|${TELEMETRY_BLE_DEVICE_NAME}|g' \
+        -e 's|@TELEMETRY_WMBUS_DEVICE_NAME@|${TELEMETRY_WMBUS_DEVICE_NAME}|g' \
+        ${WORKDIR}/gateway-telemetry.conf > ${D}${sysconfdir}/default/gateway-telemetry
+    chmod 0644 ${D}${sysconfdir}/default/gateway-telemetry
 
     install -d ${D}${systemd_system_unitdir}
     install -m 0644 ${WORKDIR}/services/gateway-telemetry.service ${D}${systemd_system_unitdir}/

@@ -38,6 +38,7 @@ IMAGE_INSTALL:append = " \
     ot-br-posix \
     wmbusmeters \
     zigbee2mqtt \
+    theengs-gateway \
     lora-packet-forwarder \
     chirpstack-gateway-bridge \
     cryptoauthlib \

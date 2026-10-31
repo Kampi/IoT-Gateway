@@ -2,7 +2,8 @@
 Description=Publish gateway telemetry to Home Assistant via MQTT discovery
 After=network-online.target mosquitto.service
 Wants=network-online.target
-Requires=mosquitto.service
+# Only orders after the local broker - the broker may also be remote (TELEMETRY_MQTT_HOST)
+Wants=mosquitto.service
 
 [Service]
 Type=simple

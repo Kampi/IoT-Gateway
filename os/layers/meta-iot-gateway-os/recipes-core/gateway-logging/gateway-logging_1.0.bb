@@ -20,7 +20,7 @@ do_install() {
     install -d ${D}${sysconfdir}/systemd/journald.conf.d
     install -m 0644 ${WORKDIR}/00-gateway-journald.conf ${D}${sysconfdir}/systemd/journald.conf.d/
 
-    # tmpfiles.d: create archive directory on eMMC at boot
+    # tmpfiles.d: create archive directory on eMMC (/var/lib) at boot
     install -d ${D}${libdir}/tmpfiles.d
     install -m 0644 ${WORKDIR}/journal-archive.conf ${D}${libdir}/tmpfiles.d/
 

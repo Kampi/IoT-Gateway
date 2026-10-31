@@ -1,0 +1,10 @@
+# wmbusmeters keeps its log file open and has no reopen signal, hence
+# copytruncate. Without a receiver it logs a line every ~2 s.
+/var/log/wmbusmeters/*.log {
+    size 1M
+    rotate 3
+    compress
+    missingok
+    notifempty
+    copytruncate
+}

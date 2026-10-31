@@ -1,0 +1,9 @@
+# Bluetooth LE with the NimBLE host. The firmware only broadcasts, but the
+# roles stay at their defaults: with central + peripheral disabled, ESP-IDF 6.1
+# fails to link (ble_hs_resolv.c needs the security manager).
+CONFIG_BT_ENABLED=y
+CONFIG_BT_NIMBLE_ENABLED=y
+
+# Custom partition table (see partitions.csv)
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"

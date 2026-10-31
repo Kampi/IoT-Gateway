@@ -12,6 +12,7 @@ SRC_URI = " \
     file://services/wmbusmeters.service \
     file://wmbusmeters.conf \
     file://99-wmbus.rules \
+    file://wmbusmeters.logrotate \
 "
 
 S = "${WORKDIR}/git"
@@ -20,10 +21,13 @@ DEPENDS = "rtlsdr icu libxml2 mosquitto"
 
 inherit pkgconfig systemd
 
-RDEPENDS:${PN} = "rtlsdr icu libmosquitto1"
+RDEPENDS:${PN} = "rtlsdr icu libmosquitto1 mosquitto-clients logrotate"
 
 # @USER_CONFIG: MQTT broker hostname (or hostname:port) for wmbusmeters (e.g. 192.168.1.10 or 192.168.1.10:1883)
 WMBUSMETERS_MQTT_SERVER ?= "localhost"
+
+# @USER_CONFIG: wM-Bus receiver for wmbusmeters (device:type:link modes, e.g. /dev/wmbus:im871a:t1)
+WMBUSMETERS_DEVICE ?= "/dev/wmbus:im871a:t1"
 
 # The Makefile strips binaries itself; let Yocto handle stripping instead.
 EXTRA_OEMAKE += "STRIP=true"
@@ -45,7 +49,9 @@ do_install() {
     install -d ${D}${sysconfdir}/wmbusmeters.d
     install -d ${D}${sysconfdir}/wmbusmeters.drivers.d
     install -m 0644 ${WORKDIR}/wmbusmeters.conf ${D}${sysconfdir}/wmbusmeters.conf
-    sed -i 's|@WMBUSMETERS_MQTT_SERVER@|${WMBUSMETERS_MQTT_SERVER}|g' ${D}${sysconfdir}/wmbusmeters.conf
+    sed -i -e 's|@WMBUSMETERS_MQTT_SERVER@|${WMBUSMETERS_MQTT_SERVER}|g' \
+        -e 's|@WMBUSMETERS_DEVICE@|${WMBUSMETERS_DEVICE}|g' \
+        ${D}${sysconfdir}/wmbusmeters.conf
 
     # systemd service
     install -d ${D}${systemd_system_unitdir}
@@ -54,6 +60,10 @@ do_install() {
     # udev rule: /dev/wmbus symlink
     install -d ${D}${sysconfdir}/udev/rules.d
     install -m 0644 ${WORKDIR}/99-wmbus.rules ${D}${sysconfdir}/udev/rules.d/
+
+    # Log rotation for /var/log/wmbusmeters (tmpfs)
+    install -d ${D}${sysconfdir}/logrotate.d
+    install -m 0644 ${WORKDIR}/wmbusmeters.logrotate ${D}${sysconfdir}/logrotate.d/wmbusmeters
 }
 
 FILES:${PN} += " \
@@ -63,4 +73,5 @@ FILES:${PN} += " \
     ${sbindir}/wmbusmetersd \
     ${systemd_system_unitdir}/wmbusmeters.service \
     ${sysconfdir}/udev/rules.d/99-wmbus.rules \
+    ${sysconfdir}/logrotate.d/wmbusmeters \
 "

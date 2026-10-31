@@ -1,7 +1,8 @@
 #!/bin/sh
 set -e
 
-ARCHIVE_DIR=/var/log/journal-archive
+# On the eMMC (/var/log is a tmpfs), so the archive survives a reboot.
+ARCHIVE_DIR=/var/lib/journal-archive
 CURSOR_FILE=${ARCHIVE_DIR}/.cursor
 MAX_MB=256
 STAMP=$(date +%Y%m%d-%H%M%S)
@@ -9,8 +10,12 @@ TMP_LOG=/tmp/journal-sync-$$.log
 
 mkdir -p "${ARCHIVE_DIR}"
 
-# Export only new entries since last sync via stored cursor
-if [ -f "${CURSOR_FILE}" ] && [ -s "${CURSOR_FILE}" ]; then
+# Export only new entries since last sync via stored cursor. The journal is
+# volatile, so a cursor from an earlier boot (field b=<boot id>) points into a
+# journal that no longer exists - journalctl would fail and export nothing.
+# In that case export the whole journal of the current boot.
+BOOT_ID=$(tr -d '-' < /proc/sys/kernel/random/boot_id)
+if [ -s "${CURSOR_FILE}" ] && grep -q "b=${BOOT_ID}" "${CURSOR_FILE}"; then
     journalctl --no-pager -o short-iso \
         --after-cursor="$(cat "${CURSOR_FILE}")" \
         > "${TMP_LOG}" 2>/dev/null || true

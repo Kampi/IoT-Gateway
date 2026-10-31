@@ -25,8 +25,9 @@ OPTIONS="scripts/config/.astyle.cfg"
 
 # Own firmware sources only
 SOURCE_DIRS=(
-    firmware/ESP32/src
-    firmware/ESP32/include
+    firmware/ESP32_LoRa/src
+    firmware/ESP32_LoRa/include
+    firmware/ESP32_BLE/src
     firmware/nRF5340/app
 )
 

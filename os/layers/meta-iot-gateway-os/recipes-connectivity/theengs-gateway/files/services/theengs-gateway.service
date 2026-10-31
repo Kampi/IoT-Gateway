@@ -1,0 +1,18 @@
+[Unit]
+Description=Theengs Gateway (Bluetooth LE to MQTT)
+Documentation=https://gateway.theengs.io
+After=bluetooth.service network-online.target mosquitto.service
+Wants=bluetooth.service network-online.target
+Requires=bluetooth.service
+
+[Service]
+Type=simple
+# The adapter is not powered on at boot (no BlueZ AutoEnable). '-' = don't fail
+# if it's already on or bluetoothctl reports an error, Theengs then logs the cause.
+ExecStartPre=-/usr/bin/bluetoothctl power on
+ExecStart=/usr/bin/TheengsGateway --config /var/lib/theengs-gateway/theengsgw.conf
+Restart=on-failure
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target

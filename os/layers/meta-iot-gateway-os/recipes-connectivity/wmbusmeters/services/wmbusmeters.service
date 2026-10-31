@@ -8,6 +8,8 @@ StartLimitBurst=3
 [Service]
 Type=forking
 ExecStartPre=-/bin/mkdir -p /run/wmbusmeters
+# Log directory of logfile= in /etc/wmbusmeters.conf, wmbusmeters does not create it.
+ExecStartPre=-/bin/mkdir -p /var/log/wmbusmeters
 ExecStart=/usr/sbin/wmbusmetersd /run/wmbusmeters/wmbusmeters.pid
 PIDFile=/run/wmbusmeters/wmbusmeters.pid
 Restart=on-failure

@@ -33,7 +33,10 @@ SYSTEMD_AUTO_ENABLE:${PN} = "enable"
 do_compile() {
     cd ${S}/src/${GO_IMPORT}
     mkdir -p ${B}/bin
+    # main.version is what "chirpstack-gateway-bridge version" prints (upstream
+    # Makefile sets it the same way), read by gateway-telemetry for Home Assistant.
     ${GO} build -v -trimpath -buildmode=pie -mod=vendor \
+        -ldflags "-X main.version=${PV}" \
         -o ${B}/bin/${BPN} \
         ./cmd/chirpstack-gateway-bridge/
 }

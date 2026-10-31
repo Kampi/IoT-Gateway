@@ -228,6 +228,9 @@ inherit npm systemd
 # @USER_CONFIG: MQTT broker URL for Zigbee2MQTT (e.g. mqtt://192.168.1.10)
 ZIGBEE2MQTT_MQTT_SERVER ?= "mqtt://localhost"
 
+# @USER_CONFIG: Name of the Zigbee bridge device in Home Assistant, parent of all Zigbee devices
+ZIGBEE2MQTT_HA_BRIDGE_NAME ?= "IoT-Gateway (Zigbee)"
+
 SYSTEMD_SERVICE:${PN} = "zigbee2mqtt.service"
 
 # Powers the CC2652P before zigbee2mqtt starts (Requires=module-power@zigbee.service)
@@ -249,6 +252,17 @@ do_install:append() {
     install -d ${D}/var/lib/zigbee2mqtt
     install -m 0644 ${WORKDIR}/configuration.yaml ${D}/var/lib/zigbee2mqtt/
     sed -i 's|@ZIGBEE2MQTT_MQTT_SERVER@|${ZIGBEE2MQTT_MQTT_SERVER}|g' ${D}/var/lib/zigbee2mqtt/configuration.yaml
+
+    # The Home Assistant name of the bridge device is hard-coded in Zigbee2MQTT
+    # (no config option). Replace it, and fail loudly if an update moves it.
+    ha_js="${D}${prefix}/lib/node_modules/zigbee2mqtt/dist/extension/homeassistant.js"
+    grep -q 'name: "Zigbee2MQTT Bridge"' "${ha_js}" || bbfatal "Zigbee2MQTT bridge name not found in ${ha_js}"
+    sed -i 's|name: "Zigbee2MQTT Bridge"|name: "${ZIGBEE2MQTT_HA_BRIDGE_NAME}"|' "${ha_js}"
+
+    # Link the bridge to the gateway device "IoT-Gateway" (gateway-telemetry,
+    # identifier = /etc/machine-id), so HA shows it as one of its connected devices.
+    grep -q '// Link devices & groups to bridge.' "${ha_js}" || bbfatal "Zigbee2MQTT via_device hook not found in ${ha_js}"
+    sed -i 's|^\(\s*\)// Link devices & groups to bridge.|\1if (entity === this.bridge) { try { payload.via_device = require("node:fs").readFileSync("/etc/machine-id", "utf8").trim(); } catch (e) { } }\n&|' "${ha_js}"
 
     prebuild_dir="${D}${prefix}/lib/node_modules/zigbee2mqtt/node_modules/@serialport/bindings-cpp/prebuilds"
     if [ -d "${prebuild_dir}" ]; then
