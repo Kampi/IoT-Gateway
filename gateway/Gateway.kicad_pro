@@ -39,9 +39,9 @@
         "other_text_thickness": 0.12,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.25,
-          "height": 0.5,
-          "width": 0.5
+          "drill": 0.0,
+          "height": 1.0,
+          "width": 1.0
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -50,7 +50,23 @@
         "silk_text_thickness": 0.12,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.0
+          "border_display_style": 2,
+          "border_hatch_pitch": 0.5,
+          "corner_radius": 0.0,
+          "corner_smoothing": 0,
+          "fill_mode": 0,
+          "hatch_gap": 1.5,
+          "hatch_orientation": 0.0,
+          "hatch_smoothing_level": 0,
+          "hatch_smoothing_value": 0.1,
+          "hatch_thickness": 1.0,
+          "min_clearance": 0.125,
+          "min_island_area": 10.0,
+          "min_thickness": 0.125,
+          "pad_connection": 2,
+          "remove_islands": 0,
+          "thermal_relief_gap": 0.125,
+          "thermal_relief_spoke_width": 0.125
         }
       },
       "diff_pair_dimensions": [
@@ -60,7 +76,44 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "courtyards_overlap|124755000|164025000|04f39b92-f365-4ccb-a33c-a1e7b6f89aeb|fd685919-0786-438c-9ac9-d4c7f5e0681b",
+          "Manuell überprüft und i. O."
+        ],
+        [
+          "courtyards_overlap|126755000|164025000|03bf291d-d417-4f65-8052-b329e3683bf9|04f39b92-f365-4ccb-a33c-a1e7b6f89aeb",
+          "Manuell überprüft und i. O."
+        ],
+        [
+          "courtyards_overlap|128755000|164025000|03510664-baec-457a-9d96-e59651262f06|04f39b92-f365-4ccb-a33c-a1e7b6f89aeb",
+          "Manuell überprüft und i. O."
+        ],
+        [
+          "courtyards_overlap|130755000|164025000|04f39b92-f365-4ccb-a33c-a1e7b6f89aeb|942f03b8-684d-40dc-9926-771773487b28",
+          "Manuell überprüft und i. O."
+        ],
+        [
+          "courtyards_overlap|132755000|164025000|04f39b92-f365-4ccb-a33c-a1e7b6f89aeb|8ef57235-99a6-4422-aff3-33d6b56dc71a",
+          "Manuell überprüft und i. O."
+        ],
+        [
+          "courtyards_overlap|177755000|164112500|04f39b92-f365-4ccb-a33c-a1e7b6f89aeb|9c403159-cf1c-4abe-8907-3fa443407705",
+          "Manuell überprüft und i. O."
+        ],
+        [
+          "courtyards_overlap|179955000|164112500|04f39b92-f365-4ccb-a33c-a1e7b6f89aeb|d49d8490-f113-4db8-804d-606c6ffadb2a",
+          "Manuell überprüft und i. O."
+        ],
+        [
+          "courtyards_overlap|271105000|186105000|069ac545-cc06-4720-84db-fa28134de898|8e848fc8-871d-46f4-831b-0b168d1e8483",
+          "Spacer für LoRa Modul"
+        ],
+        [
+          "courtyards_overlap|303695000|186205000|1a0db9f5-7bd3-4537-bc9a-f78eb5833ab1|8e848fc8-871d-46f4-831b-0b168d1e8483",
+          "Spacer für LoRa Modul"
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -480,6 +533,7 @@
       "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
+      "same_local_global_power": "warning",
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
@@ -536,21 +590,15 @@
         "tuning_profile": ""
       },
       {
+        "clearance": 0.125,
         "name": "GND",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.4,
-        "tuning_profile": ""
-      },
-      {
-        "diff_pair_gap": 0.24,
-        "diff_pair_width": 0.22,
-        "name": "HDMI_100",
-        "pcb_color": "rgb(0, 132, 132)",
-        "priority": 6,
-        "schematic_color": "rgb(0, 132, 132)",
-        "tuning_profile": ""
+        "tuning_profile": "",
+        "via_diameter": 0.45,
+        "via_drill": 0.25
       },
       {
         "name": "I2C",
@@ -592,14 +640,6 @@
     "net_colors": null,
     "netclass_assignments": null,
     "netclass_patterns": [
-      {
-        "netclass": "HDMI_100",
-        "pattern": "*HDMI.CLK_*"
-      },
-      {
-        "netclass": "HDMI_100",
-        "pattern": "*HDMI.TX*_*"
-      },
       {
         "netclass": "Ethernet_100",
         "pattern": "*Ethernet.TRD*_P*"
@@ -654,7 +694,7 @@
       "svg": "",
       "vrml": "../cad/ZSWatch.wrl"
     },
-    "page_layout_descr_file": ""
+    "page_layout_descr_file": "kicad-embed://KDT_Template_PCB_GIT_A3.kicad_wks"
   },
   "schematic": {
     "annotate_start_num": 0,
@@ -675,8 +715,14 @@
     },
     "bom_presets": [],
     "bom_settings": {
-      "exclude_dnp": false,
+      "exclude_dnp": true,
       "fields_ordered": [
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": true
+        },
         {
           "group_by": false,
           "label": "Reference",
@@ -715,12 +761,6 @@
         },
         {
           "group_by": false,
-          "label": "#",
-          "name": "${ITEM_NUMBER}",
-          "show": false
-        },
-        {
-          "group_by": false,
           "label": "manf",
           "name": "manf",
           "show": true
@@ -742,14 +782,86 @@
           "label": "mouser#",
           "name": "mouser#",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Config",
+          "name": "Config",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturing Status",
+          "name": "Manufacturing Status",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mass",
+          "name": "Mass",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser SPN",
+          "name": "Mouser SPN",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer",
+          "name": "Manufacturer",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MPN",
+          "name": "MPN",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Part-DB Footprint",
+          "name": "Part-DB Footprint",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Part-DB ID",
+          "name": "Part-DB ID",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Part-DB URL",
+          "name": "Part-DB URL",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Stock",
+          "name": "Stock",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Storage Location",
+          "name": "Storage Location",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Category",
+          "name": "Category",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
-      "include_excluded_from_bom": true,
+      "include_excluded_from_bom": false,
       "name": "",
       "sort_asc": true,
-      "sort_field": "Reference"
+      "sort_field": "Value"
     },
     "bus_aliases": {
       "ADC": [
@@ -875,7 +987,7 @@
         "uuid": "d5742f03-3b1a-42e5-a384-018bd4b919aa"
       }
     ],
-    "used_designators": "C1601-1605,C1608,R1601,R1607",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
@@ -890,10 +1002,6 @@
     [
       "d997d29b-5865-4812-975d-af678b9a12da",
       "Power - Topology"
-    ],
-    [
-      "5fb05893-0da3-4f58-a52b-cb6d6f4cb80b",
-      "Power - Sequencing"
     ],
     [
       "41d90350-625c-40a5-8e73-4cf5e8e03642",
@@ -958,18 +1066,18 @@
     "COMPANY": "null",
     "DESIGNER": "Daniel Kampert",
     "FABRICATION_NOTES": "",
-    "GIT_HASH_PCB": "20c7ac5",
+    "GIT_HASH_PCB": "6504e44",
     "GIT_HASH_SCH": "11bb27a",
     "GIT_URL": "https://github.com/Kampi/IoT-Gateway",
-    "PCB_VARIANT": "DRAFT",
+    "PCB_VARIANT": "PRELIMINARY",
     "PROJECT_NAME": "IoT-Gateway",
     "RELEASE_BODY_2.2.0": "Version 2.2.0 not found.",
     "RELEASE_BODY_UNRELEASED": "Version Unreleased not found.",
-    "RELEASE_DATE": "2026-07-14",
-    "RELEASE_DATE_NUM": "2026-07-14",
+    "RELEASE_DATE": "2026-10-08",
+    "RELEASE_DATE_NUM": "2026-10-08",
     "RELEASE_TITLE_2.2.0": "Version 2.2.0 not found.",
     "RELEASE_TITLE_UNRELEASED": "Version Unreleased not found.",
-    "REVISION": "",
+    "REVISION": "x.y.z",
     "SHEET_NAME_1": "Cover Page",
     "SHEET_NAME_10": "System on Module",
     "SHEET_NAME_11": "LoRa",

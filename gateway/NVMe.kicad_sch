@@ -2129,125 +2129,14 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Mechanical_Kampi:Light_Pipe"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "MP"
-				(at -2.032 2.286 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Light_Pipe_1_1"
-				(rectangle
-					(start -3.175 1.27)
-					(end 2.54 -1.27)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.175 -1.27) (xy -3.175 -3.175) (xy -1.905 -3.175) (xy -1.905 -1.27) (xy 1.27 -1.27) (xy 1.27 -3.175)
-						(xy 2.54 -3.175) (xy 2.54 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(arc
-					(start 2.54 1.27)
-					(mid 3.438 0.898)
-					(end 3.81 0)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(arc
-					(start 3.81 0)
-					(mid 3.438 -0.898)
-					(end 2.54 -1.27)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Mechanical_Kampi:MountingHole"
+		(symbol "Mechanical:Spacer_1.5mm"
 			(pin_names
 				(offset 1.016)
 			)
 			(exclude_from_sim no)
-			(in_bom no)
+			(in_bom yes)
 			(on_board yes)
-			(in_pos_files no)
+			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "H1004"
 				(at 2.54 1.2701 0)
@@ -2260,7 +2149,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "MountingHole"
+			(property "Value" "Spacer"
 				(at 2.54 -1.2699 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2293,7 +2182,7 @@
 					)
 				)
 			)
-			(property "Description" "Mounting Hole without connection"
+			(property "Description" "Spacer 1.5 mm M2.5"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2337,7 +2226,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "mounting hole"
+			(property "ki_fp_filters" "Spacer*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2348,18 +2237,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "MountingHole*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "MountingHole_0_1"
+			(symbol "Spacer_1.5mm_0_1"
 				(circle
 					(center 0 0)
 					(radius 1.27)
@@ -2776,6 +2654,1379 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "partdb:08055C104K4Z4A"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "100n"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://inventory.lan/de/part/109/info"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "100n 50V 10% X7R"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB URL" "https://inventory.lan/de/part/109/info"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Category" "Kondensator/MLCC"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "KYOCERA AVX"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "08055C104K4Z4A"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturing Status" "Active"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB Footprint" "0805"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mass" "0.006 g"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB ID" "109"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf" "KYOCERA AVX"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf#" "08055C104K4Z4A"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mouser SPN" "581-08055C104K4Z4A"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "mouser#" "581-08055C104K4Z4A"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Stock" "6"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Storage Location" "Sortierregal"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Capacitor_SMD:C_0805_2012Metric"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "08055C104K4Z4A_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "08055C104K4Z4A_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "partdb:0805X7R106KT1AT"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "10u"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://inventory.lan/de/part/331/info"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "10u 25V 10% X7R"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB URL" "https://inventory.lan/de/part/331/info"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Category" "Kondensator/MLCC"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "KYOCERA AVX"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "0805X7R106KT1AT"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturing Status" "Active"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB Footprint" "0805"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB ID" "331"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf" "KYOCERA AVX"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf#" "0805X7R106KT1AT"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mouser SPN" "581-0805X7R106KT1AT"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "mouser#" "581-0805X7R106KT1AT"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Stock" "0"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Capacitor_SMD:C_0805_2012Metric"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "0805X7R106KT1AT_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "0805X7R106KT1AT_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "partdb:9774025151R"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "H"
+				(at 2.54 1.2701 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Spacer"
+				(at 2.54 -1.2699 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Wuerth:9774025151R"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.we-online.com/components/products/datasheet/9774025151R.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "SMD-Abstandshalter M2.5 Innengewinde 2,5 mm Stahl"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf" "Wurth Elektronik"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf#" "9774025151R"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "mouser#" "710-9774025151R"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB URL" "https://inventory.lan/de/part/374/info"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Category" "Mechanik/Abstandshalter"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "Wurth Elektronik"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "9774025151R"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturing Status" "Active"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB Footprint" "WA-SMSI M2.5"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mass" "0.371 g"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB ID" "374"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mouser SPN" "710-9774025151R"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Stock" "0"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Wuerth:9774025151R"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "9774025151R_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "partdb:CR0805-JW-472ELF"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "4k7"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.mouser.com/datasheet/2/54/cr-1858361.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "4k7 100mW 5%"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB URL" "https://inventory.lan/de/part/78/info"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Category" "Widerstand/Dickfilmwiderstand"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "Bourns"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "CR0805-JW-472ELF"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturing Status" "Active"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB Footprint" "0805"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mass" "0.006 g"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB ID" "78"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf" "Bourns"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf#" "CR0805-JW-472ELF"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mouser SPN" "652-CR0805JW-472ELF"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "mouser#" "652-CR0805JW-472ELF"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Stock" "50"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Storage Location" "Sortierregal"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Resistor_SMD:R_0805_2012Metric"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CR0805-JW-472ELF_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "CR0805-JW-472ELF_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "partdb:RT0805FRE13100KL"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "100k"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_15-3461507.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "100k 125mW 1%"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB URL" "https://inventory.lan/de/part/66/info"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Category" "Widerstand/Dünnfilmwiderstand"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "YAGEO"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "RT0805FRE13100KL"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturing Status" "Active"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB Footprint" "0805"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mass" "0.006 g"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB ID" "66"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf" "YAGEO"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf#" "RT0805FRE13100KL"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mouser SPN" "603-RT0805FRE13100KL"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "mouser#" "603-RT0805FRE13100KL"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Stock" "4"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Storage Location" "Sortierregal"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Resistor_SMD:R_0805_2012Metric"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RT0805FRE13100KL_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "RT0805FRE13100KL_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+1V8"
 			(power global)
 			(pin_numbers
@@ -3147,6 +4398,19 @@
 		)
 	)
 	(rectangle
+		(start 74.93 60.96)
+		(end 90.17 72.39)
+		(stroke
+			(width 0.254)
+			(type dot)
+			(color 255 0 0 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "1c19c423-320f-4907-b698-d8355bce5792")
+	)
+	(rectangle
 		(start 165.1 74.93)
 		(end 179.07 107.95)
 		(stroke
@@ -3267,6 +4531,29 @@
 			(justify left top)
 		)
 		(uuid "c4147ff0-cff6-4c02-931d-6da051e474ca")
+	)
+	(text_box "DESIGN NOTE:\nEnabled by default."
+		(exclude_from_sim no)
+		(at 100.33 46.656 0)
+		(size 30.48 10.494)
+		(margins 2 2 2 2)
+		(stroke
+			(width 1)
+			(type solid)
+			(color 200 200 200 1)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(face "Arial")
+				(size 2 2)
+				(color 0 0 0 1)
+			)
+			(justify left top)
+		)
+		(uuid "e31e3929-12c9-4f72-b4e9-22ccdc8120a8")
 	)
 	(junction
 		(at 220.98 113.03)
@@ -3688,6 +4975,16 @@
 	)
 	(wire
 		(pts
+			(xy 85.09 69.85) (xy 85.09 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a8671da-a515-4ddf-9d64-a0ce5af5e0fd")
+	)
+	(wire
+		(pts
 			(xy 161.29 86.36) (xy 168.91 86.36)
 		)
 		(stroke
@@ -3888,16 +5185,6 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 72.39) (xy 62.23 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5ad798d9-8105-48ac-ade9-206699c78428")
-	)
-	(wire
-		(pts
 			(xy 123.19 73.66) (xy 138.43 73.66)
 		)
 		(stroke
@@ -3925,6 +5212,16 @@
 			(type default)
 		)
 		(uuid "61d1e053-9eef-4258-82d3-b2022954a941")
+	)
+	(wire
+		(pts
+			(xy 85.09 60.96) (xy 85.09 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66ad1b62-5887-4693-ba38-ba5e26ab3666")
 	)
 	(bus
 		(pts
@@ -4206,6 +5503,17 @@
 			(type default)
 		)
 		(uuid "a40630c0-1022-43aa-bbf7-8e90a4d4d9af")
+	)
+	(polyline
+		(pts
+			(xy 100.33 57.15) (xy 90.17 60.96)
+		)
+		(stroke
+			(width 0.254)
+			(type dot)
+			(color 255 0 0 1)
+		)
+		(uuid "a8cb30a8-a609-4aaf-9686-33680edade32")
 	)
 	(wire
 		(pts
@@ -4594,7 +5902,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "00391dc4-6f59-43d8-a4d5-cf2746d2f76a")
-		(property "Reference" "C1610"
+		(property "Reference" "C1510"
 			(at 229.87 78.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4691,7 +5999,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "C1610")
+					(reference "C1510")
 					(unit 1)
 				)
 			)
@@ -4709,7 +6017,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "038149e0-8a66-4014-be97-16a3b1fd2837")
-		(property "Reference" "R1605"
+		(property "Reference" "R1505"
 			(at 171.45 91.4399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4786,7 +6094,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805-FX-4872ELF"
+		(property "mouser#" "652-CR0805FX-4872ELF"
 			(at 168.91 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -4806,7 +6114,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "R1605")
+					(reference "R1505")
 					(unit 1)
 				)
 			)
@@ -4824,7 +6132,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "183e77f9-2b8e-4079-bd90-835c973ea3cb")
-		(property "Reference" "#PWR01610"
+		(property "Reference" "#PWR01511"
 			(at 181.61 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -4884,14 +6192,14 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "#PWR01610")
+					(reference "#PWR01511")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "partdb:RT0805FRE13100KL")
 		(at 96.52 87.63 0)
 		(mirror x)
 		(unit 1)
@@ -4902,7 +6210,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "227d7da2-64f5-4d13-9227-90b4bc4396ca")
-		(property "Reference" "R1601"
+		(property "Reference" "R1503"
 			(at 93.98 86.3599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4935,7 +6243,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_15-3461507.pdf"
 			(at 96.52 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -4946,7 +6254,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "100k 125mW 1%"
 			(at 96.52 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -4957,7 +6265,7 @@
 				)
 			)
 		)
-		(property "manf" "Bourns"
+		(property "manf" "YAGEO"
 			(at 96.52 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -4968,7 +6276,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0805-JW-104GLF"
+		(property "manf#" "RT0805FRE13100KL"
 			(at 96.52 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -4979,7 +6287,128 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805-JW-104GLF"
+		(property "mouser#" "603-RT0805FRE13100KL"
+			(at 96.52 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/66/info"
+			(at 96.52 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Widerstand/Dünnfilmwiderstand"
+			(at 96.52 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 96.52 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RT0805FRE13100KL"
+			(at 96.52 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 96.52 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 96.52 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mass" "0.006 g"
+			(at 96.52 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "66"
+			(at 96.52 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "603-RT0805FRE13100KL"
+			(at 96.52 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "4"
+			(at 96.52 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Storage Location" "Sortierregal"
 			(at 96.52 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -4999,7 +6428,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "R1601")
+					(reference "R1503")
 					(unit 1)
 				)
 			)
@@ -5017,7 +6446,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "22ab4f0e-01db-479a-89d0-bfe8460f0d8d")
-		(property "Reference" "#PWR01614"
+		(property "Reference" "#PWR01515"
 			(at 220.98 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -5077,7 +6506,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "#PWR01614")
+					(reference "#PWR01515")
 					(unit 1)
 				)
 			)
@@ -5094,7 +6523,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "26276096-1d6f-4769-aaa2-0334a78b1e90")
-		(property "Reference" "TP1602"
+		(property "Reference" "TP1501"
 			(at 161.29 96.52 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5186,7 +6615,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "TP1602")
+					(reference "TP1501")
 					(unit 1)
 				)
 			)
@@ -5203,7 +6632,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "274ab880-b55c-403e-8ac5-89ada41241f4")
-		(property "Reference" "X1601"
+		(property "Reference" "X1501"
 			(at 192.786 133.35 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5236,7 +6665,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://web.archive.org/web/20200613074028/http://read.pudn.com/downloads794/doc/project/3133918/PCIe_M.2_Electromechanical_Spec_Rev1.0_Final_11012013_RS_Clean.pdf#page=155"
+		(property "Datasheet" "https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/mdtxxxxxx001.pdf"
 			(at 215.9 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -5495,123 +6924,14 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "X1601")
+					(reference "X1501")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 62.23 72.39 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2cd6a3f6-15a3-445f-81ca-2d3a433d7721")
-		(property "Reference" "TP1601"
-			(at 62.23 64.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "~"
-			(at 62.23 66.675 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Testpoints_Kampi:TestPoint_Pad_1.0x1.0mm"
-			(at 67.31 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 67.31 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 62.23 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manf" ""
-			(at 62.23 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manf#" ""
-			(at 62.23 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "mouser#" ""
-			(at 62.23 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6297387b-8f63-4ab7-a374-1fbb59aa2afc")
-		)
-		(instances
-			(project "Gateway"
-				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "TP1601")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
+		(lib_id "partdb:CR0805-JW-472ELF")
 		(at 181.61 130.81 0)
 		(unit 1)
 		(body_style 1)
@@ -5621,7 +6941,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "32fd2d48-2dab-4af4-aba0-42fc8bf3fa5e")
-		(property "Reference" "R1606"
+		(property "Reference" "R1506"
 			(at 179.07 129.5399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5654,7 +6974,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/54/cr-1858361.pdf"
 			(at 181.61 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -5665,7 +6985,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "4k7 100mW 5%"
 			(at 181.61 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -5698,7 +7018,128 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805-JW-472ELF"
+		(property "mouser#" "652-CR0805JW-472ELF"
+			(at 181.61 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/78/info"
+			(at 181.61 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Widerstand/Dickfilmwiderstand"
+			(at 181.61 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Bourns"
+			(at 181.61 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CR0805-JW-472ELF"
+			(at 181.61 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 181.61 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 181.61 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mass" "0.006 g"
+			(at 181.61 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "78"
+			(at 181.61 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "652-CR0805JW-472ELF"
+			(at 181.61 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "50"
+			(at 181.61 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Storage Location" "Sortierregal"
 			(at 181.61 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -5718,7 +7159,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "R1606")
+					(reference "R1506")
 					(unit 1)
 				)
 			)
@@ -5736,7 +7177,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "43f7897c-75de-4cd5-b976-06387157c43f")
-		(property "Reference" "#PWR01613"
+		(property "Reference" "#PWR01514"
 			(at 215.9 236.22 0)
 			(hide yes)
 			(show_name no)
@@ -5796,7 +7237,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "#PWR01613")
+					(reference "#PWR01514")
 					(unit 1)
 				)
 			)
@@ -5813,7 +7254,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4879fb2c-1b1d-4ad0-a4f3-31136366b655")
-		(property "Reference" "#PWR01604"
+		(property "Reference" "#PWR01504"
 			(at 62.23 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -5873,14 +7314,14 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "#PWR01604")
+					(reference "#PWR01504")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "partdb:RT0805FRE13100KL")
 		(at 85.09 87.63 0)
 		(mirror x)
 		(unit 1)
@@ -5889,9 +7330,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "55cee655-deab-46cf-9da5-63cd78975192")
-		(property "Reference" "R1607"
+		(property "Reference" "R1502"
 			(at 82.55 86.3599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5924,7 +7365,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_15-3461507.pdf"
 			(at 85.09 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -5935,7 +7376,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "100k 125mW 1%"
 			(at 85.09 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -5946,7 +7387,7 @@
 				)
 			)
 		)
-		(property "manf" "Bourns"
+		(property "manf" "YAGEO"
 			(at 85.09 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -5957,7 +7398,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0805-JW-104GLF"
+		(property "manf#" "RT0805FRE13100KL"
 			(at 85.09 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -5968,7 +7409,128 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805-JW-104GLF"
+		(property "mouser#" "603-RT0805FRE13100KL"
+			(at 85.09 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/66/info"
+			(at 85.09 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Widerstand/Dünnfilmwiderstand"
+			(at 85.09 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 85.09 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RT0805FRE13100KL"
+			(at 85.09 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 85.09 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 85.09 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mass" "0.006 g"
+			(at 85.09 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "66"
+			(at 85.09 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "603-RT0805FRE13100KL"
+			(at 85.09 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "4"
+			(at 85.09 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Storage Location" "Sortierregal"
 			(at 85.09 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -5988,7 +7550,85 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "R1607")
+					(reference "R1502")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+1V8")
+		(at 85.09 60.96 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5b0a09af-a286-439c-8fe3-d1a5b62b1f25")
+		(property "Reference" "#PWR01505"
+			(at 85.09 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+1V8"
+			(at 85.09 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 85.09 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 85.09 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+1V8\""
+			(at 85.09 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "813f72d9-c48c-4f74-a73b-b49046c688b4")
+		)
+		(instances
+			(project "Gateway"
+				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
+					(reference "#PWR01505")
 					(unit 1)
 				)
 			)
@@ -6005,7 +7645,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "619dfb78-47f2-441b-8a95-b3e49a06b758")
-		(property "Reference" "#PWR01603"
+		(property "Reference" "#PWR01503"
 			(at 57.15 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -6065,7 +7705,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "#PWR01603")
+					(reference "#PWR01503")
 					(unit 1)
 				)
 			)
@@ -6083,7 +7723,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "63c56e08-ac28-4d77-97ca-476e2fc821b3")
-		(property "Reference" "L1601"
+		(property "Reference" "L1501"
 			(at 147.32 68.58 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6178,7 +7818,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "L1601")
+					(reference "L1501")
 					(unit 1)
 				)
 			)
@@ -6195,7 +7835,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "68f4ad2e-eec5-4445-b0e5-a3462e907857")
-		(property "Reference" "#PWR01608"
+		(property "Reference" "#PWR01509"
 			(at 138.43 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -6255,14 +7895,14 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "#PWR01608")
+					(reference "#PWR01509")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "partdb:08055C104K4Z4A")
 		(at 57.15 85.09 0)
 		(mirror y)
 		(unit 1)
@@ -6273,7 +7913,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "71caa86e-5578-4784-8ec3-e1b7be0fd779")
-		(property "Reference" "C1603"
+		(property "Reference" "C1503"
 			(at 53.34 83.8199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6306,7 +7946,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://datasheets.kyocera-avx.com/AutoMLCC.pdf"
+		(property "Datasheet" "https://inventory.lan/de/part/109/info"
 			(at 57.15 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -6317,7 +7957,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "100n 50V 10% X7R"
 			(at 57.15 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -6339,7 +7979,7 @@
 				)
 			)
 		)
-		(property "manf#" "08053C104M4T4A"
+		(property "manf#" "08055C104K4Z4A"
 			(at 57.15 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -6350,7 +7990,128 @@
 				)
 			)
 		)
-		(property "mouser#" "581-08053C104M4T4A"
+		(property "mouser#" "581-08055C104K4Z4A"
+			(at 57.15 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/109/info"
+			(at 57.15 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Kondensator/MLCC"
+			(at 57.15 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KYOCERA AVX"
+			(at 57.15 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "08055C104K4Z4A"
+			(at 57.15 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 57.15 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 57.15 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mass" "0.006 g"
+			(at 57.15 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "109"
+			(at 57.15 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "581-08055C104K4Z4A"
+			(at 57.15 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "6"
+			(at 57.15 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Storage Location" "Sortierregal"
 			(at 57.15 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -6370,14 +8131,14 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "C1603")
+					(reference "C1503")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "partdb:08055C104K4Z4A")
 		(at 212.09 80.01 0)
 		(unit 1)
 		(body_style 1)
@@ -6388,7 +8149,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "79084142-0b3b-4249-aebc-08c42d64fff8")
-		(property "Reference" "C1608"
+		(property "Reference" "C1508"
 			(at 215.9 78.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6421,7 +8182,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://datasheets.kyocera-avx.com/AutoMLCC.pdf"
+		(property "Datasheet" "https://inventory.lan/de/part/109/info"
 			(at 212.09 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -6432,7 +8193,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "100n 50V 10% X7R"
 			(at 212.09 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -6454,7 +8215,7 @@
 				)
 			)
 		)
-		(property "manf#" "08053C104M4T4A"
+		(property "manf#" "08055C104K4Z4A"
 			(at 212.09 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -6465,7 +8226,128 @@
 				)
 			)
 		)
-		(property "mouser#" "581-08053C104M4T4A"
+		(property "mouser#" "581-08055C104K4Z4A"
+			(at 212.09 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/109/info"
+			(at 212.09 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Kondensator/MLCC"
+			(at 212.09 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KYOCERA AVX"
+			(at 212.09 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "08055C104K4Z4A"
+			(at 212.09 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 212.09 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 212.09 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mass" "0.006 g"
+			(at 212.09 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "109"
+			(at 212.09 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "581-08055C104K4Z4A"
+			(at 212.09 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "6"
+			(at 212.09 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Storage Location" "Sortierregal"
 			(at 212.09 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -6485,14 +8367,14 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "C1608")
+					(reference "C1508")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "partdb:0805X7R106KT1AT")
 		(at 236.22 119.38 0)
 		(unit 1)
 		(body_style 1)
@@ -6502,7 +8384,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7ad97ceb-2592-4274-920e-6f3ed5b5d229")
-		(property "Reference" "C1611"
+		(property "Reference" "C1511"
 			(at 240.03 118.1099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6535,7 +8417,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://datasheets.kyocera-avx.com/General-Purpose-Capacitors.pdf"
+		(property "Datasheet" "https://inventory.lan/de/part/331/info"
 			(at 236.22 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -6546,7 +8428,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "10u 25V 10% X7R"
 			(at 236.22 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -6590,6 +8472,105 @@
 				)
 			)
 		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/331/info"
+			(at 236.22 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Kondensator/MLCC"
+			(at 236.22 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KYOCERA AVX"
+			(at 236.22 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0805X7R106KT1AT"
+			(at 236.22 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 236.22 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 236.22 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "331"
+			(at 236.22 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "581-0805X7R106KT1AT"
+			(at 236.22 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "0"
+			(at 236.22 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0c8d5b46-229c-420b-b54e-2c9f53f03798")
 		)
@@ -6599,7 +8580,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "C1611")
+					(reference "C1511")
 					(unit 1)
 				)
 			)
@@ -6616,7 +8597,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9241b22c-555c-419e-8643-67ea9129c2f0")
-		(property "Reference" "#PWR01602"
+		(property "Reference" "#PWR01502"
 			(at 33.02 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -6676,25 +8657,24 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "#PWR01602")
+					(reference "#PWR01502")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Mechanical_Kampi:MountingHole")
+		(lib_id "partdb:9774025151R")
 		(at 201.93 278.13 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
-		(in_pos_files no)
+		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "93dc651f-97f9-4a14-9ad8-0e58bf1f637c")
-		(property "Reference" "H1601"
+		(property "Reference" "H1501"
 			(at 204.47 276.8599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6705,7 +8685,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MountingHole"
+		(property "Value" "Spacer"
 			(at 204.47 279.3999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6716,7 +8696,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Wuerth:9774015151R"
+		(property "Footprint" "Wuerth:9774025151R"
 			(at 201.93 278.13 0)
 			(hide yes)
 			(show_name no)
@@ -6727,7 +8707,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/9774015151R.pdf"
+		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/9774025151R.pdf"
 			(at 201.93 278.13 0)
 			(hide yes)
 			(show_name no)
@@ -6738,7 +8718,7 @@
 				)
 			)
 		)
-		(property "Description" "Mounting Hole without connection"
+		(property "Description" "SMD-Abstandshalter M2.5 Innengewinde 2,5 mm Stahl"
 			(at 201.93 278.13 0)
 			(hide yes)
 			(show_name no)
@@ -6760,7 +8740,7 @@
 				)
 			)
 		)
-		(property "manf#" "9774015151R"
+		(property "manf#" "9774025151R"
 			(at 201.93 278.13 0)
 			(hide yes)
 			(show_name no)
@@ -6771,7 +8751,128 @@
 				)
 			)
 		)
-		(property "mouser#" "710-9774015151R"
+		(property "mouser#" "710-9774025151R"
+			(at 201.93 278.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 201.93 278.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/374/info"
+			(at 201.93 278.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Mechanik/Abstandshalter"
+			(at 201.93 278.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Wurth Elektronik"
+			(at 201.93 278.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "9774025151R"
+			(at 201.93 278.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 201.93 278.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "WA-SMSI M2.5"
+			(at 201.93 278.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mass" "0.371 g"
+			(at 201.93 278.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "374"
+			(at 201.93 278.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "710-9774025151R"
+			(at 201.93 278.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "0"
 			(at 201.93 278.13 0)
 			(hide yes)
 			(show_name no)
@@ -6785,14 +8886,14 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "H1601")
+					(reference "H1501")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "partdb:08055C104K4Z4A")
 		(at 130.81 76.2 90)
 		(unit 1)
 		(body_style 1)
@@ -6803,7 +8904,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "95726196-c1f4-4281-b491-d6baa5c236ed")
-		(property "Reference" "C1605"
+		(property "Reference" "C1505"
 			(at 130.81 68.58 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6834,7 +8935,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://datasheets.kyocera-avx.com/AutoMLCC.pdf"
+		(property "Datasheet" "https://inventory.lan/de/part/109/info"
 			(at 130.81 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -6845,7 +8946,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "100n 50V 10% X7R"
 			(at 130.81 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -6867,7 +8968,7 @@
 				)
 			)
 		)
-		(property "manf#" "08053C104M4T4A"
+		(property "manf#" "08055C104K4Z4A"
 			(at 130.81 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -6878,7 +8979,128 @@
 				)
 			)
 		)
-		(property "mouser#" "581-08053C104M4T4A"
+		(property "mouser#" "581-08055C104K4Z4A"
+			(at 130.81 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/109/info"
+			(at 130.81 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Kondensator/MLCC"
+			(at 130.81 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KYOCERA AVX"
+			(at 130.81 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "08055C104K4Z4A"
+			(at 130.81 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 130.81 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 130.81 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mass" "0.006 g"
+			(at 130.81 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "109"
+			(at 130.81 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "581-08055C104K4Z4A"
+			(at 130.81 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "6"
+			(at 130.81 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Storage Location" "Sortierregal"
 			(at 130.81 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -6898,14 +9120,14 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "C1605")
+					(reference "C1505")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "partdb:08055C104K4Z4A")
 		(at 220.98 119.38 0)
 		(unit 1)
 		(body_style 1)
@@ -6916,7 +9138,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "99413966-ce9d-4fa7-ae43-582be6ecb800")
-		(property "Reference" "C1609"
+		(property "Reference" "C1509"
 			(at 224.79 118.1099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6949,7 +9171,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://datasheets.kyocera-avx.com/AutoMLCC.pdf"
+		(property "Datasheet" "https://inventory.lan/de/part/109/info"
 			(at 220.98 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -6960,7 +9182,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "100n 50V 10% X7R"
 			(at 220.98 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -6982,7 +9204,7 @@
 				)
 			)
 		)
-		(property "manf#" "08053C104M4T4A"
+		(property "manf#" "08055C104K4Z4A"
 			(at 220.98 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -6993,7 +9215,128 @@
 				)
 			)
 		)
-		(property "mouser#" "581-08053C104M4T4A"
+		(property "mouser#" "581-08055C104K4Z4A"
+			(at 220.98 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/109/info"
+			(at 220.98 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Kondensator/MLCC"
+			(at 220.98 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KYOCERA AVX"
+			(at 220.98 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "08055C104K4Z4A"
+			(at 220.98 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 220.98 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 220.98 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mass" "0.006 g"
+			(at 220.98 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "109"
+			(at 220.98 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "581-08055C104K4Z4A"
+			(at 220.98 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "6"
+			(at 220.98 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Storage Location" "Sortierregal"
 			(at 220.98 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -7013,7 +9356,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "C1609")
+					(reference "C1509")
 					(unit 1)
 				)
 			)
@@ -7030,7 +9373,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9fb7951f-1bf0-406c-92bf-fde4067c60f0")
-		(property "Reference" "IC1601"
+		(property "Reference" "IC1501"
 			(at 103.505 69.85 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7146,7 +9489,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "IC1601")
+					(reference "IC1501")
 					(unit 1)
 				)
 			)
@@ -7163,7 +9506,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a6b40213-a22e-4965-a660-b47cc0781e8c")
-		(property "Reference" "TP1603"
+		(property "Reference" "TP1502"
 			(at 181.61 64.77 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7255,7 +9598,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "TP1603")
+					(reference "TP1502")
 					(unit 1)
 				)
 			)
@@ -7272,7 +9615,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "aa42eebd-173e-47e7-b53f-84f5e95031db")
-		(property "Reference" "#PWR01601"
+		(property "Reference" "#PWR01501"
 			(at 27.94 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -7332,7 +9675,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "#PWR01601")
+					(reference "#PWR01501")
 					(unit 1)
 				)
 			)
@@ -7350,7 +9693,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b67430fb-fd90-4f09-a9ed-195dc7385823")
-		(property "Reference" "#FLG01601"
+		(property "Reference" "#FLG01501"
 			(at 226.06 70.485 0)
 			(hide yes)
 			(show_name no)
@@ -7410,7 +9753,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "#FLG01601")
+					(reference "#FLG01501")
 					(unit 1)
 				)
 			)
@@ -7427,7 +9770,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bc40abbb-73c4-4b4f-a233-0d771e230d10")
-		(property "Reference" "#PWR01605"
+		(property "Reference" "#PWR01506"
 			(at 85.09 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -7487,14 +9830,14 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "#PWR01605")
+					(reference "#PWR01506")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "partdb:0805X7R106KT1AT")
 		(at 33.02 85.09 0)
 		(unit 1)
 		(body_style 1)
@@ -7504,7 +9847,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c14029f8-4640-4714-bdc5-db18694e8527")
-		(property "Reference" "C1601"
+		(property "Reference" "C1502"
 			(at 36.83 83.8199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7537,7 +9880,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://datasheets.kyocera-avx.com/General-Purpose-Capacitors.pdf"
+		(property "Datasheet" "https://inventory.lan/de/part/331/info"
 			(at 33.02 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -7548,7 +9891,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "10u 25V 10% X7R"
 			(at 33.02 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -7592,6 +9935,105 @@
 				)
 			)
 		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/331/info"
+			(at 33.02 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Kondensator/MLCC"
+			(at 33.02 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KYOCERA AVX"
+			(at 33.02 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0805X7R106KT1AT"
+			(at 33.02 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 33.02 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 33.02 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "331"
+			(at 33.02 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "581-0805X7R106KT1AT"
+			(at 33.02 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "0"
+			(at 33.02 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "94207d25-48ba-4883-b715-2d7fd3d71b01")
 		)
@@ -7601,7 +10043,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "C1601")
+					(reference "C1502")
 					(unit 1)
 				)
 			)
@@ -7619,7 +10061,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c243fb5d-a434-48c3-a1c0-a0bc56fdcbe4")
-		(property "Reference" "#PWR01615"
+		(property "Reference" "#PWR01516"
 			(at 226.06 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -7679,14 +10121,14 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "#PWR01615")
+					(reference "#PWR01516")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "partdb:0805X7R106KT1AT")
 		(at 27.94 85.09 0)
 		(mirror y)
 		(unit 1)
@@ -7697,7 +10139,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c36b85bd-2d53-43be-a858-b771cfede7eb")
-		(property "Reference" "C1602"
+		(property "Reference" "C1501"
 			(at 24.13 83.8199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7730,7 +10172,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://datasheets.kyocera-avx.com/General-Purpose-Capacitors.pdf"
+		(property "Datasheet" "https://inventory.lan/de/part/331/info"
 			(at 27.94 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -7741,7 +10183,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "10u 25V 10% X7R"
 			(at 27.94 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -7785,6 +10227,105 @@
 				)
 			)
 		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/331/info"
+			(at 27.94 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Kondensator/MLCC"
+			(at 27.94 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KYOCERA AVX"
+			(at 27.94 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0805X7R106KT1AT"
+			(at 27.94 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 27.94 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 27.94 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "331"
+			(at 27.94 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "581-0805X7R106KT1AT"
+			(at 27.94 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "0"
+			(at 27.94 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d152aad7-139e-44f6-81c2-0259560f0261")
 		)
@@ -7794,7 +10335,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "C1602")
+					(reference "C1501")
 					(unit 1)
 				)
 			)
@@ -7811,7 +10352,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c3a3760e-b985-4b12-8c36-23375ec2cca9")
-		(property "Reference" "#PWR01606"
+		(property "Reference" "#PWR01507"
 			(at 96.52 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -7871,7 +10412,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "#PWR01606")
+					(reference "#PWR01507")
 					(unit 1)
 				)
 			)
@@ -7889,7 +10430,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c747e2ca-0be2-4d67-9cd4-2b516d25ea2a")
-		(property "Reference" "D1601"
+		(property "Reference" "D1501"
 			(at 140.97 80.0099 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7986,7 +10527,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "D1601")
+					(reference "D1501")
 					(unit 1)
 				)
 			)
@@ -8004,7 +10545,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d4345d08-7824-4c29-8ea6-c3f8144c8b75")
-		(property "Reference" "C1604"
+		(property "Reference" "C1504"
 			(at 66.04 83.8199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8092,6 +10633,17 @@
 				)
 			)
 		)
+		(property "Config" ""
+			(at 62.23 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1433a713-5776-4e37-aad5-ab260112c78b")
 		)
@@ -8101,7 +10653,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "C1604")
+					(reference "C1504")
 					(unit 1)
 				)
 			)
@@ -8119,7 +10671,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d5731cbf-8294-434c-afa9-ff47500e2886")
-		(property "Reference" "#PWR01611"
+		(property "Reference" "#PWR01512"
 			(at 196.85 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -8179,7 +10731,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "#PWR01611")
+					(reference "#PWR01512")
 					(unit 1)
 				)
 			)
@@ -8196,7 +10748,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e067cfb9-08a3-4f26-8435-ba944122bc02")
-		(property "Reference" "#PWR01607"
+		(property "Reference" "#PWR01508"
 			(at 110.49 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -8256,114 +10808,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "#PWR01607")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical_Kampi:Light_Pipe")
-		(at 187.96 278.13 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files no)
-		(dnp no)
-		(uuid "e5381e9b-d875-4cb2-9ce3-ea951019c1d1")
-		(property "Reference" "MP1601"
-			(at 184.404 275.59 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" ""
-			(at 187.96 278.13 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Bivar:SLP3-300-100-F"
-			(at 187.96 278.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.de/datasheet/3/112/1/SLP3_XXX_XXX_X.pdf"
-			(at 187.96 278.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 187.96 278.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manf" "Bivar"
-			(at 187.96 278.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manf#" "SLP3-300-100-F"
-			(at 187.96 278.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "mouser#" "749-SLP3-300-100-F"
-			(at 187.96 278.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "Gateway"
-				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "MP1601")
+					(reference "#PWR01508")
 					(unit 1)
 				)
 			)
@@ -8380,7 +10825,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e8862eba-98e5-4766-93a8-2e3857760f32")
-		(property "Reference" "#PWR01609"
+		(property "Reference" "#PWR01510"
 			(at 168.91 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -8440,7 +10885,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "#PWR01609")
+					(reference "#PWR01510")
 					(unit 1)
 				)
 			)
@@ -8458,7 +10903,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ecb6c2c7-36d6-4e23-9867-4721f6ffdd9b")
-		(property "Reference" "C1606"
+		(property "Reference" "C1506"
 			(at 185.42 78.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8546,6 +10991,17 @@
 				)
 			)
 		)
+		(property "Config" ""
+			(at 181.61 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b32b8fca-0a69-40fb-8e78-bc91ce7a2b1a")
 		)
@@ -8555,7 +11011,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "C1606")
+					(reference "C1506")
 					(unit 1)
 				)
 			)
@@ -8572,7 +11028,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ee9fd135-587e-4901-b033-bb8e787bce85")
-		(property "Reference" "C1607"
+		(property "Reference" "C1507"
 			(at 200.66 78.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8669,7 +11125,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "C1607")
+					(reference "C1507")
 					(unit 1)
 				)
 			)
@@ -8687,7 +11143,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f7e203f0-7a91-471f-aadd-159b6734ee0e")
-		(property "Reference" "#PWR01616"
+		(property "Reference" "#PWR01517"
 			(at 236.22 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -8747,7 +11203,243 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "#PWR01616")
+					(reference "#PWR01517")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "partdb:RT0805FRE13100KL")
+		(at 85.09 66.04 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f9070947-e0e7-4608-b77a-30f3654b7d90")
+		(property "Reference" "R1501"
+			(at 82.55 64.7699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100k"
+			(at 82.55 67.3099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 83.312 66.04 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_15-3461507.pdf"
+			(at 85.09 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "100k 125mW 1%"
+			(at 85.09 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "manf" "YAGEO"
+			(at 85.09 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "manf#" "RT0805FRE13100KL"
+			(at 85.09 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "mouser#" "603-RT0805FRE13100KL"
+			(at 85.09 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/66/info"
+			(at 85.09 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Widerstand/Dünnfilmwiderstand"
+			(at 85.09 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 85.09 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RT0805FRE13100KL"
+			(at 85.09 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 85.09 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 85.09 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mass" "0.006 g"
+			(at 85.09 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "66"
+			(at 85.09 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "603-RT0805FRE13100KL"
+			(at 85.09 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "4"
+			(at 85.09 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Storage Location" "Sortierregal"
+			(at 85.09 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "81f37dc9-72b1-4288-9d3e-57dc07ce2105")
+		)
+		(pin "1"
+			(uuid "9db87b83-46e1-4bb4-96c7-c2a1d03736a0")
+		)
+		(instances
+			(project "Gateway"
+				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
+					(reference "R1501")
 					(unit 1)
 				)
 			)
@@ -8765,7 +11457,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f9dd02cc-4cc6-4cb5-965e-261fc7349c6d")
-		(property "Reference" "R1604"
+		(property "Reference" "R1504"
 			(at 171.45 78.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8862,7 +11554,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "R1604")
+					(reference "R1504")
 					(unit 1)
 				)
 			)
@@ -8880,7 +11572,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fb0b7946-438b-4d34-bc86-b7ec5d6f1c5e")
-		(property "Reference" "#PWR01612"
+		(property "Reference" "#PWR01513"
 			(at 212.09 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -8940,7 +11632,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/527d94e0-3076-40e1-9f59-f07ec93bb0e7"
-					(reference "#PWR01612")
+					(reference "#PWR01513")
 					(unit 1)
 				)
 			)

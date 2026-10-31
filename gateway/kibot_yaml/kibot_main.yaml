@@ -96,6 +96,7 @@ groups:
   - name: bom
     outputs:
       - @CSV_BOM_OUTPUT@
+      - @CSV_MOUSER_CART_OUTPUT@
     # - @XLSX_BOM_OUTPUT@
       - @HTML_IBOM_OUTPUT@
       - @HTML_BOM_OUTPUT@
@@ -320,6 +321,17 @@ import:
       NAME: @HTML_BOM_OUTPUT@
       COMMENT: Bill of Materials in HTML format
       DIR: @ASSEMBLY_DIR@
+      MPN_FIELD: @MPN_FIELD@
+      MAN_FIELD: @MAN_FIELD@
+
+  # Mouser cart for the BoM import (CSV)
+  - file: kibot_out_csv_mouser_cart.yaml
+    definitions:
+      NAME: @CSV_MOUSER_CART_OUTPUT@
+      COMMENT: Mouser cart in CSV format
+      DIR: @ASSEMBLY_DIR@
+      FILTER: @FILT_MOUSER_ONLY@
+      MOUSER_FIELD: @MOUSER_FIELD@
       MPN_FIELD: @MPN_FIELD@
       MAN_FIELD: @MAN_FIELD@
 
@@ -570,6 +582,9 @@ definitions:
   MPN_FIELD: 'manf#'
   MAN_FIELD: 'manf'
 
+  # Field with the Mouser part number for the Mouser cart
+  MOUSER_FIELD: 'mouser#'
+
   # Drill table and drill map parameters =======================================
 
   GROUP_ROUND_SLOTS: true  # whether or not to group round holes and slots
@@ -642,6 +657,7 @@ definitions:
   FILT_FIELD_RENAME: field_rename
   FILT_TP_ONLY: only_testpoints
   FILT_TP_EXCLUDE: exclude_testpoints
+  FILT_MOUSER_ONLY: only_mouser
   FILT_TP_TOP_ONLY: only_testpoints_top
   FILT_TP_BOTTOM_ONLY: only_testpoints_bottom
 
@@ -664,6 +680,7 @@ definitions:
   CSV_TP_BOTTOM_OUTPUT: csv_testpoints_bottom
 
   CSV_BOM_OUTPUT: csv_bom
+  CSV_MOUSER_CART_OUTPUT: csv_mouser_cart
   XLSX_BOM_OUTPUT: xlsx_bom
   HTML_IBOM_OUTPUT: html_bom_interactive
   HTML_BOM_OUTPUT: html_bom

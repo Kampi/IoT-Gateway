@@ -485,158 +485,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:Fuse"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "F"
-				(at 2.032 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Fuse"
-				(at -1.905 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at -1.778 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Fuse"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "fuse"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "*Fuse*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Fuse_0_1"
-				(rectangle
-					(start -0.762 -2.54)
-					(end 0.762 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Fuse_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -1056,7 +904,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps2120.pdf?ts=1776877495931"
+			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps2120.pdf"
 				(at 24.13 -187.3 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1127,7 +975,7 @@
 					)
 				)
 				(pin input line
-					(at 11.43 -6.35 180)
+					(at -11.43 -10.16 0)
 					(length 2.54)
 					(name "CP2"
 						(effects
@@ -1163,7 +1011,7 @@
 					)
 				)
 				(pin input line
-					(at -11.43 -1.27 0)
+					(at -11.43 6.35 0)
 					(length 2.54)
 					(name "OV1"
 						(effects
@@ -1181,7 +1029,7 @@
 					)
 				)
 				(pin input line
-					(at 11.43 3.81 180)
+					(at -11.43 11.43 0)
 					(length 2.54)
 					(name "PR1"
 						(effects
@@ -1199,7 +1047,7 @@
 					)
 				)
 				(pin input line
-					(at -11.43 8.89 0)
+					(at -11.43 15.24 0)
 					(length 2.54)
 					(name "IN1"
 						(effects
@@ -1615,6 +1463,1446 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "partdb:08055C104K4Z4A"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "100n"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://inventory.lan/de/part/109/info"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "100n 50V 10% X7R"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB URL" "https://inventory.lan/de/part/109/info"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Category" "Kondensator/MLCC"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "KYOCERA AVX"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "08055C104K4Z4A"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturing Status" "Active"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB Footprint" "0805"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mass" "0.006 g"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB ID" "109"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf" "KYOCERA AVX"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf#" "08055C104K4Z4A"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mouser SPN" "581-08055C104K4Z4A"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "mouser#" "581-08055C104K4Z4A"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Stock" "6"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Storage Location" "Sortierregal"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Capacitor_SMD:C_0805_2012Metric"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "08055C104K4Z4A_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "08055C104K4Z4A_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "partdb:BSS138"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "BSS138"
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 5.08 -1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+				)
+			)
+			(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/bss138-d.pdf"
+				(at 5.08 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Description" "N-Kanal Vds 50 V Vgs ±20 V Id 220 mA"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "N-Channel MOSFET"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "BSS138_0_1"
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.921 0.381) (xy 3.683 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "BSS138_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "partdb:CR0805-FX-1002ELF"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "10k"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.mouser.com/datasheet/3/40/1/cr.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "10k 125mW 1%"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB URL" "https://inventory.lan/de/part/343/info"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Category" "Widerstand/Dickfilmwiderstand"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "Bourns"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "CR0805-FX-1002ELF"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturing Status" "Active"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB Footprint" "0805"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mass" "0.006 g"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB ID" "343"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf" "Bourns"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf#" "CR0805-FX-1002ELF"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mouser SPN" "652-CR0805FX-1002ELF"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "mouser#" "652-CR0805FX-1002ELF"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Stock" "0"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Resistor_SMD:R_0805_2012Metric"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CR0805-FX-1002ELF_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "CR0805-FX-1002ELF_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "partdb:CR0805-J/-000ELF"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "0"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.mouser.com/datasheet/3/40/1/cr.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "0R 5%"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB URL" "https://inventory.lan/de/part/322/info"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Category" "Widerstand/Dickfilmwiderstand"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "Bourns"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "CR0805-J/-000ELF"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturing Status" "Active"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB Footprint" "0805"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mass" "0.006 g"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB ID" "322"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf" "Bourns"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf#" "CR0805-J/-000ELF"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mouser SPN" "652-CR0805-J/-000ELF"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "mouser#" "652-CR0805-J/-000ELF"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Stock" "0"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Resistor_SMD:R_0805_2012Metric"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CR0805-J/-000ELF_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "CR0805-J/-000ELF_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "partdb:RT0805FRE13100KL"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "100k"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_15-3461507.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "100k 125mW 1%"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB URL" "https://inventory.lan/de/part/66/info"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Category" "Widerstand/Dünnfilmwiderstand"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "YAGEO"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "RT0805FRE13100KL"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturing Status" "Active"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB Footprint" "0805"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mass" "0.006 g"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB ID" "66"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf" "YAGEO"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf#" "RT0805FRE13100KL"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mouser SPN" "603-RT0805FRE13100KL"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "mouser#" "603-RT0805FRE13100KL"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Stock" "4"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Storage Location" "Sortierregal"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Resistor_SMD:R_0805_2012Metric"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RT0805FRE13100KL_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "RT0805FRE13100KL_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2135,8 +3423,8 @@
 		)
 	)
 	(rectangle
-		(start 90.17 135.89)
-		(end 229.87 237.49)
+		(start 63.5 135.89)
+		(end 229.87 241.3)
 		(stroke
 			(width 1)
 			(type default)
@@ -2146,6 +3434,19 @@
 			(type none)
 		)
 		(uuid "2ecb5582-75a0-43ac-ab8a-42ef11960cca")
+	)
+	(rectangle
+		(start 146.05 193.04)
+		(end 158.75 217.17)
+		(stroke
+			(width 0.254)
+			(type dot)
+			(color 255 0 0 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "8aae7cb7-5268-4342-b5c4-6b64354cdaa4")
 	)
 	(rectangle
 		(start 231.14 83.82)
@@ -2172,6 +3473,19 @@
 			(type none)
 		)
 		(uuid "8e95c863-f016-4506-88cb-27f609b85a55")
+	)
+	(rectangle
+		(start 80.01 171.45)
+		(end 96.52 205.74)
+		(stroke
+			(width 0.254)
+			(type dot)
+			(color 255 0 0 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "ba8927ba-76b9-4da8-997b-63e81488e50b")
 	)
 	(rectangle
 		(start 331.47 172.72)
@@ -2201,8 +3515,8 @@
 	)
 	(text_box "Input selection"
 		(exclude_from_sim no)
-		(at 91.44 227.33 0)
-		(size 137.16 8.89)
+		(at 64.77 231.14 0)
+		(size 163.83 8.89)
 		(margins 1.9049 1.9049 1.9049 1.9049)
 		(stroke
 			(width -0.0001)
@@ -2295,7 +3609,7 @@
 	)
 	(text_box "DESIGN NOTE:\nDefault is IN1."
 		(exclude_from_sim no)
-		(at 92.71 138.43 0)
+		(at 66.04 138.43 0)
 		(size 25.4 10.16)
 		(margins 2 2 2 2)
 		(stroke
@@ -2340,6 +3654,52 @@
 		)
 		(uuid "ba81ad1d-d68c-4ce1-beb7-bca2f10a9aaa")
 	)
+	(text_box "DESIGN NOTE:\nOvervoltage set to 17 V."
+		(exclude_from_sim no)
+		(at 66.04 218.44 0)
+		(size 36.83 11.43)
+		(margins 2 2 2 2)
+		(stroke
+			(width 1)
+			(type solid)
+			(color 200 200 200 1)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(face "Arial")
+				(size 2 2)
+				(color 0 0 0 1)
+			)
+			(justify left top)
+		)
+		(uuid "c038cece-a622-42c8-bf16-201d15b1f892")
+	)
+	(text_box "DESIGN NOTE:\nMax. current set to 3.4 A."
+		(exclude_from_sim no)
+		(at 165.1 218.44 0)
+		(size 36.83 11.43)
+		(margins 2 2 2 2)
+		(stroke
+			(width 1)
+			(type solid)
+			(color 200 200 200 1)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(face "Arial")
+				(size 2 2)
+				(color 0 0 0 1)
+			)
+			(justify left top)
+		)
+		(uuid "dd507f5f-ebf7-48bd-a45e-601a60b630e7")
+	)
 	(text_box "DESIGN NOTE:\nSpecified for ~1.8 V @ 16 V."
 		(exclude_from_sim no)
 		(at 326.39 142.24 0)
@@ -2376,6 +3736,12 @@
 		(uuid "0f2288ba-2e2a-49e3-80cf-541a0a884547")
 	)
 	(junction
+		(at 90.17 184.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "21d2320e-9aef-40ff-9ebf-cc155bf84cc1")
+	)
+	(junction
 		(at 196.85 187.96)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2406,10 +3772,16 @@
 		(uuid "939ff38e-dec5-4d19-85a3-fb408512cadf")
 	)
 	(junction
-		(at 137.16 167.64)
+		(at 90.17 173.99)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "95456158-83d1-40f0-9ea4-3963cb041289")
+		(uuid "994d448c-854e-4504-9377-cdd790f3efdb")
+	)
+	(junction
+		(at 100.33 193.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a1f0af37-aac0-4b50-bad2-5daeacf40415")
 	)
 	(junction
 		(at 342.9 167.64)
@@ -2440,6 +3812,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d96a558b-19bf-48d5-9ade-0ab295449fd0")
+	)
+	(junction
+		(at 100.33 199.39)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f90dfad5-7893-4bd8-a72d-e4c4994d87a6")
 	)
 	(bus_entry
 		(at 295.91 110.49)
@@ -2490,7 +3868,27 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 194.31) (xy 187.96 194.31)
+			(xy 109.22 176.53) (xy 105.41 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e01c20c-523e-4a17-8883-890bd7ee86b2")
+	)
+	(wire
+		(pts
+			(xy 90.17 167.64) (xy 90.17 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12d843d5-0924-4bfc-a79c-8fd04dad0fb2")
+	)
+	(wire
+		(pts
+			(xy 166.37 194.31) (xy 187.96 194.31)
 		)
 		(stroke
 			(width 0)
@@ -2550,16 +3948,6 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 199.39) (xy 100.33 209.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2a4486bf-5795-45ed-bca4-c1ff403c1656")
-	)
-	(wire
-		(pts
 			(xy 275.59 128.27) (xy 275.59 129.54)
 		)
 		(stroke
@@ -2577,6 +3965,16 @@
 			(type default)
 		)
 		(uuid "35207da6-6328-4587-b7e8-129167b42be8")
+	)
+	(wire
+		(pts
+			(xy 166.37 173.99) (xy 166.37 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3548bbee-4ab1-417a-a692-ad85178ecabd")
 	)
 	(wire
 		(pts
@@ -2600,7 +3998,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 199.39) (xy 100.33 199.39)
+			(xy 109.22 193.04) (xy 100.33 193.04)
 		)
 		(stroke
 			(width 0)
@@ -2617,6 +4015,16 @@
 			(type default)
 		)
 		(uuid "3ee7e001-038d-45ee-9e25-772c72e65f2d")
+	)
+	(wire
+		(pts
+			(xy 90.17 173.99) (xy 90.17 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "402474f5-7343-4971-9a7d-e9654f9a87c3")
 	)
 	(wire
 		(pts
@@ -2688,6 +4096,17 @@
 		)
 		(uuid "493aeade-7fdc-403a-b1db-0657be64d5d4")
 	)
+	(polyline
+		(pts
+			(xy 158.75 217.17) (xy 165.1 218.44)
+		)
+		(stroke
+			(width 0.254)
+			(type dot)
+			(color 255 0 0 1)
+		)
+		(uuid "4ac675a3-d326-45a9-9236-f42b04d1eeab")
+	)
 	(wire
 		(pts
 			(xy 275.59 91.44) (xy 275.59 92.71)
@@ -2697,16 +4116,6 @@
 			(type default)
 		)
 		(uuid "51b16930-12ec-44d0-af6f-4c05bbd6424c")
-	)
-	(wire
-		(pts
-			(xy 132.08 179.07) (xy 133.35 179.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "54831b70-c15a-4aa7-b31d-7ed463caeb5d")
 	)
 	(bus
 		(pts
@@ -2730,7 +4139,7 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 173.99) (xy 109.22 173.99)
+			(xy 48.26 173.99) (xy 90.17 173.99)
 		)
 		(stroke
 			(width 0)
@@ -2760,16 +4169,6 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 173.99) (xy 170.18 194.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "67a0b960-9c6b-48aa-994a-c2f5156461fe")
-	)
-	(wire
-		(pts
 			(xy 196.85 187.96) (xy 198.12 187.96)
 		)
 		(stroke
@@ -2790,23 +4189,23 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 179.07) (xy 78.74 180.34)
+			(xy 100.33 199.39) (xy 100.33 209.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69a545b8-c647-48bc-9aac-77081b07bb7b")
+	)
+	(wire
+		(pts
+			(xy 49.53 179.07) (xy 49.53 180.34)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "6a1a4e7f-e1ce-4960-a368-bd0bc16fea39")
-	)
-	(wire
-		(pts
-			(xy 137.16 167.64) (xy 232.41 167.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f2a2409-5d6f-4405-b05e-f2512fee9375")
 	)
 	(wire
 		(pts
@@ -2880,13 +4279,23 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 179.07) (xy 133.35 180.34)
+			(xy 76.2 184.15) (xy 76.2 182.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "857f5a52-d6e3-426a-9864-3b2ee677f13b")
+		(uuid "859f4999-d3f0-49f7-8830-2470f7465f9a")
+	)
+	(wire
+		(pts
+			(xy 100.33 199.39) (xy 109.22 199.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "887a2b7c-95df-4ffe-8599-45f803dbbfd2")
 	)
 	(wire
 		(pts
@@ -2900,13 +4309,34 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 189.23) (xy 109.22 189.23)
+			(xy 55.88 189.23) (xy 109.22 189.23)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "90a10d02-c66f-4525-a61b-b093c2bd0291")
+	)
+	(polyline
+		(pts
+			(xy 85.09 205.74) (xy 83.82 218.44)
+		)
+		(stroke
+			(width 0.254)
+			(type dot)
+			(color 255 0 0 1)
+		)
+		(uuid "91a9d7ab-19b0-4219-91d3-8b395dc37d5d")
+	)
+	(wire
+		(pts
+			(xy 109.22 171.45) (xy 100.33 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "948297df-4567-43b3-b91b-ad41c4b7205a")
 	)
 	(wire
 		(pts
@@ -2940,6 +4370,16 @@
 	)
 	(wire
 		(pts
+			(xy 100.33 193.04) (xy 100.33 199.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99046e83-99a6-429a-986b-2ed8144e44fb")
+	)
+	(wire
+		(pts
 			(xy 342.9 193.04) (xy 342.9 194.31)
 		)
 		(stroke
@@ -2950,7 +4390,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 184.15) (xy 95.25 184.15)
+			(xy 90.17 184.15) (xy 105.41 184.15)
 		)
 		(stroke
 			(width 0)
@@ -3000,13 +4440,23 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 184.15) (xy 95.25 209.55)
+			(xy 100.33 171.45) (xy 100.33 193.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "aae7f1a8-e10c-48b7-961c-fa5b94b50dd4")
+		(uuid "a91fbf59-c11c-47c6-b073-9e932be78459")
+	)
+	(wire
+		(pts
+			(xy 105.41 176.53) (xy 105.41 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab744435-92ec-41a3-9915-8e64d4db153e")
 	)
 	(bus
 		(pts
@@ -3020,6 +4470,26 @@
 	)
 	(wire
 		(pts
+			(xy 132.08 173.99) (xy 166.37 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2812dcd-8b6d-4db8-b05b-2357bff224cc")
+	)
+	(wire
+		(pts
+			(xy 132.08 167.64) (xy 241.3 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b28c8630-a313-4037-8ebb-da5ac03e01de")
+	)
+	(wire
+		(pts
 			(xy 304.8 130.81) (xy 311.15 130.81)
 		)
 		(stroke
@@ -3030,23 +4500,13 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 179.07) (xy 78.74 179.07)
+			(xy 48.26 179.07) (xy 49.53 179.07)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "b8be213f-b27c-468f-a31d-bdd1fa0b8c22")
-	)
-	(wire
-		(pts
-			(xy 160.02 189.23) (xy 160.02 209.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b9478f95-6f28-4c07-8bcb-e154b435fd4f")
 	)
 	(wire
 		(pts
@@ -3078,16 +4538,6 @@
 			(color 255 0 0 1)
 		)
 		(uuid "bbfa706f-dea1-4c15-ae43-a326c784079e")
-	)
-	(wire
-		(pts
-			(xy 137.16 166.37) (xy 137.16 167.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bf28c4f7-3b4c-406c-b3cb-5288422f3190")
 	)
 	(polyline
 		(pts
@@ -3142,13 +4592,23 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 167.64) (xy 241.3 167.64)
+			(xy 90.17 182.88) (xy 90.17 184.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "df8caa6b-14d9-42d2-8000-3aa95023f26c")
+		(uuid "e178fba4-111f-4290-9b73-e2b4ffd2054d")
+	)
+	(wire
+		(pts
+			(xy 90.17 167.64) (xy 109.22 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3fe7b3d-a24c-4f31-a6f3-d3c99b9f4047")
 	)
 	(wire
 		(pts
@@ -3172,13 +4632,13 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 167.64) (xy 137.16 167.64)
+			(xy 90.17 199.39) (xy 90.17 209.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ec2e5c2d-fc1a-4d04-8469-35f0da03c373")
+		(uuid "ebb7df90-68e3-4ec9-8713-66f9987d63b5")
 	)
 	(wire
 		(pts
@@ -3199,6 +4659,16 @@
 			(type default)
 		)
 		(uuid "eece72a5-9c42-4ad6-b8bd-6a0c6be1d57b")
+	)
+	(wire
+		(pts
+			(xy 90.17 184.15) (xy 76.2 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0552bd7-01c3-4ff1-bf80-6c656347df03")
 	)
 	(wire
 		(pts
@@ -3282,23 +4752,13 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 173.99) (xy 170.18 173.99)
+			(xy 90.17 184.15) (xy 90.17 191.77)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f944a2b8-ad77-4494-973b-61c6ba0a49d6")
-	)
-	(wire
-		(pts
-			(xy 132.08 189.23) (xy 160.02 189.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fd91bd4a-cbc8-4810-990c-eb2964fd9121")
+		(uuid "ff21c04d-31be-4328-bacc-8f6c3da10f09")
 	)
 	(wire
 		(pts
@@ -3375,7 +4835,7 @@
 	)
 	(hierarchical_label "PoE"
 		(shape input)
-		(at 85.09 189.23 180)
+		(at 55.88 189.23 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3396,7 +4856,7 @@
 		(uuid "cc276083-5baf-4507-8140-2e0363c86839")
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "partdb:CR0805-FX-1002ELF")
 		(at 196.85 182.88 0)
 		(unit 1)
 		(body_style 1)
@@ -3406,7 +4866,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "09775dbb-1f3e-47e7-8249-cdc6040308f3")
-		(property "Reference" "R703"
+		(property "Reference" "R605"
 			(at 194.31 181.6099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3439,7 +4899,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
+		(property "Datasheet" "https://www.mouser.com/datasheet/3/40/1/cr.pdf"
 			(at 196.85 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -3450,7 +4910,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "10k 125mW 1%"
 			(at 196.85 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -3472,7 +4932,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0805-JW-103GLF"
+		(property "manf#" "CR0805-FX-1002ELF"
 			(at 196.85 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -3483,7 +4943,117 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805-JW-103GLF"
+		(property "mouser#" "652-CR0805FX-1002ELF"
+			(at 196.85 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/343/info"
+			(at 196.85 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Widerstand/Dickfilmwiderstand"
+			(at 196.85 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Bourns"
+			(at 196.85 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CR0805-FX-1002ELF"
+			(at 196.85 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 196.85 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 196.85 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mass" "0.006 g"
+			(at 196.85 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "343"
+			(at 196.85 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "652-CR0805FX-1002ELF"
+			(at 196.85 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "0"
 			(at 196.85 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -3503,85 +5073,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "R703")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 95.25 209.55 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0a04bcef-d683-4850-a05c-2d9c923a8f43")
-		(property "Reference" "#PWR0702"
-			(at 95.25 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 95.25 214.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 95.25 209.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 95.25 209.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 95.25 209.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a4b5fc5e-0ce6-40d8-8d3c-7f180e317381")
-		)
-		(instances
-			(project "Gateway"
-				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "#PWR0702")
+					(reference "R605")
 					(unit 1)
 				)
 			)
@@ -3599,7 +5091,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0a84dec4-41b8-454d-9ceb-f88a32fb4231")
-		(property "Reference" "#PWR0709"
+		(property "Reference" "#PWR0607"
 			(at 187.96 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -3659,85 +5151,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "#PWR0709")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 160.02 209.55 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0bcf6be4-7ce3-40ee-a509-5bd02420bd69")
-		(property "Reference" "#PWR0708"
-			(at 160.02 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 160.02 214.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 160.02 209.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 160.02 209.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 160.02 209.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3353f1ab-2448-4ad4-931e-bdbf15e717aa")
-		)
-		(instances
-			(project "Gateway"
-				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "#PWR0708")
+					(reference "#PWR0607")
 					(unit 1)
 				)
 			)
@@ -3755,7 +5169,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0daa1fec-5b2f-4226-b1a3-deee175bdd16")
-		(property "Reference" "#PWR0704"
+		(property "Reference" "#PWR0604"
 			(at 120.65 215.9 0)
 			(hide yes)
 			(show_name no)
@@ -3815,7 +5229,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "#PWR0704")
+					(reference "#PWR0604")
 					(unit 1)
 				)
 			)
@@ -3833,7 +5247,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "115eb401-a3a0-445e-9474-af2dcb7c5bfc")
-		(property "Reference" "#PWR0713"
+		(property "Reference" "#PWR0612"
 			(at 275.59 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -3893,7 +5307,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "#PWR0713")
+					(reference "#PWR0612")
 					(unit 1)
 				)
 			)
@@ -3911,7 +5325,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "11b86d8e-e1a8-4ee0-9d9c-541df939cbbc")
-		(property "Reference" "#FLG0701"
+		(property "Reference" "#FLG0601"
 			(at 214.63 274.955 0)
 			(hide yes)
 			(show_name no)
@@ -3971,14 +5385,14 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "#FLG0701")
+					(reference "#FLG0601")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:BSS123")
+		(lib_id "partdb:BSS138")
 		(at 194.31 194.31 0)
 		(unit 1)
 		(body_style 1)
@@ -3989,7 +5403,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "12973d04-d2f8-4784-90ef-27bf0ba872fc")
-		(property "Reference" "Q701"
+		(property "Reference" "Q601"
 			(at 200.66 193.0399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4000,7 +5414,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BSS123"
+		(property "Value" "BSS138"
 			(at 200.66 195.5799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4024,7 +5438,7 @@
 				(justify left)
 			)
 		)
-		(property "Datasheet" "http://www.diodes.com/assets/Datasheets/ds30366.pdf"
+		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/bss138-d.pdf"
 			(at 199.39 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -4036,7 +5450,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" "0.17A Id, 100V Vds, N-Channel MOSFET, SOT-23"
+		(property "Description" "N-Kanal Vds 50 V Vgs ±20 V Id 220 mA"
 			(at 194.31 194.31 0)
 			(hide yes)
 			(show_name no)
@@ -4047,7 +5461,7 @@
 				)
 			)
 		)
-		(property "manf" "onsemi"
+		(property "manf" "onsemi / Fairchild"
 			(at 194.31 194.31 0)
 			(hide yes)
 			(show_name no)
@@ -4058,7 +5472,7 @@
 				)
 			)
 		)
-		(property "manf#" "BSS123"
+		(property "manf#" "BSS138"
 			(at 194.31 194.31 0)
 			(hide yes)
 			(show_name no)
@@ -4069,7 +5483,117 @@
 				)
 			)
 		)
-		(property "mouser#" "512-BSS123"
+		(property "mouser#" "512-BSS138"
+			(at 194.31 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/353/info"
+			(at 194.31 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Transistor/N-Kanal"
+			(at 194.31 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "onsemi / Fairchild"
+			(at 194.31 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "BSS138"
+			(at 194.31 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 194.31 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "SOT-23-3"
+			(at 194.31 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mass" "0.008 g"
+			(at 194.31 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "353"
+			(at 194.31 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "512-BSS138"
+			(at 194.31 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "0"
 			(at 194.31 194.31 0)
 			(hide yes)
 			(show_name no)
@@ -4092,7 +5616,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "Q701")
+					(reference "Q601")
 					(unit 1)
 				)
 			)
@@ -4100,7 +5624,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Barrel_Jack")
-		(at 69.85 176.53 0)
+		(at 40.64 176.53 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4110,8 +5634,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "35cc661f-0d71-468b-88cb-edb1a2bf81f4")
-		(property "Reference" "X701"
-			(at 69.85 167.64 0)
+		(property "Reference" "X601"
+			(at 40.64 167.64 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4121,7 +5645,7 @@
 			)
 		)
 		(property "Value" "DC In"
-			(at 69.85 170.18 0)
+			(at 40.64 170.18 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4131,7 +5655,7 @@
 			)
 		)
 		(property "Footprint" "Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002"
-			(at 71.12 177.546 0)
+			(at 41.91 177.546 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4142,7 +5666,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.we-online.com/catalog/datasheet/694102303002.pdf"
-			(at 71.12 177.546 0)
+			(at 41.91 177.546 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4153,7 +5677,7 @@
 			)
 		)
 		(property "Description" "DC Barrel Jack"
-			(at 69.85 176.53 0)
+			(at 40.64 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4164,7 +5688,7 @@
 			)
 		)
 		(property "manf" "Wurth Elektronik"
-			(at 69.85 176.53 0)
+			(at 40.64 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4175,7 +5699,7 @@
 			)
 		)
 		(property "manf#" "694106301002"
-			(at 69.85 176.53 0)
+			(at 40.64 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4186,7 +5710,7 @@
 			)
 		)
 		(property "mouser#" "710-694106301002"
-			(at 69.85 176.53 0)
+			(at 40.64 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4205,7 +5729,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "X701")
+					(reference "X601")
 					(unit 1)
 				)
 			)
@@ -4223,7 +5747,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "40aa7d09-4242-459a-8e77-1137424cf565")
-		(property "Reference" "R704"
+		(property "Reference" "R606"
 			(at 246.38 161.29 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4318,7 +5842,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "R704")
+					(reference "R606")
 					(unit 1)
 				)
 			)
@@ -4336,7 +5860,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "462407d2-7f99-4d7f-91bf-c9e7d10bab9b")
-		(property "Reference" "#PWR0716"
+		(property "Reference" "#PWR0615"
 			(at 311.15 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -4396,7 +5920,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "#PWR0716")
+					(reference "#PWR0615")
 					(unit 1)
 				)
 			)
@@ -4414,7 +5938,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4693142f-a969-4735-add6-b1c2f688e956")
-		(property "Reference" "#PWR0706"
+		(property "Reference" "#PWR0605"
 			(at 137.16 215.9 0)
 			(hide yes)
 			(show_name no)
@@ -4474,14 +5998,14 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "#PWR0706")
+					(reference "#PWR0605")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "partdb:CR0805-J/-000ELF")
 		(at 300.99 135.89 270)
 		(unit 1)
 		(body_style 1)
@@ -4491,7 +6015,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4967c07c-dfa5-46fc-8b2b-ec575ae9e738")
-		(property "Reference" "R708"
+		(property "Reference" "R610"
 			(at 300.99 140.97 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4522,7 +6046,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
+		(property "Datasheet" "https://www.mouser.com/datasheet/3/40/1/cr.pdf"
 			(at 300.99 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -4533,7 +6057,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "0R 5%"
 			(at 300.99 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -4577,6 +6101,116 @@
 				)
 			)
 		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/322/info"
+			(at 300.99 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Widerstand/Dickfilmwiderstand"
+			(at 300.99 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Bourns"
+			(at 300.99 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CR0805-J/-000ELF"
+			(at 300.99 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 300.99 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 300.99 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mass" "0.006 g"
+			(at 300.99 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "322"
+			(at 300.99 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "652-CR0805-J/-000ELF"
+			(at 300.99 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "0"
+			(at 300.99 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5ac6fdc9-ceea-4db6-9fae-948072883662")
 		)
@@ -4586,7 +6220,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "R708")
+					(reference "R610")
 					(unit 1)
 				)
 			)
@@ -4604,7 +6238,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "498b58e0-f2f2-4479-a3c5-3548a45d404a")
-		(property "Reference" "#PWR0718"
+		(property "Reference" "#PWR0610"
 			(at 214.63 284.48 0)
 			(hide yes)
 			(show_name no)
@@ -4664,7 +6298,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "#PWR0718")
+					(reference "#PWR0610")
 					(unit 1)
 				)
 			)
@@ -4683,7 +6317,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4a1a42f0-7995-4cf7-a902-967af0a59b79")
-		(property "Reference" "#PWR0715"
+		(property "Reference" "#PWR0614"
 			(at 308.61 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -4743,7 +6377,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "#PWR0715")
+					(reference "#PWR0614")
 					(unit 1)
 				)
 			)
@@ -4761,7 +6395,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4c39acd2-1f74-4645-bf65-95d603bfecff")
-		(property "Reference" "#PWR0717"
+		(property "Reference" "#PWR0616"
 			(at 342.9 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -4821,7 +6455,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "#PWR0717")
+					(reference "#PWR0616")
 					(unit 1)
 				)
 			)
@@ -4839,7 +6473,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "507eaa91-be99-4473-82ee-87fba071b862")
-		(property "Reference" "#PWR0714"
+		(property "Reference" "#PWR0613"
 			(at 279.4 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -4899,14 +6533,14 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "#PWR0714")
+					(reference "#PWR0613")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "partdb:08055C104K4Z4A")
 		(at 279.4 97.79 0)
 		(mirror y)
 		(unit 1)
@@ -4918,7 +6552,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5912ca3b-0564-4055-8801-21fce6344997")
-		(property "Reference" "C702"
+		(property "Reference" "C602"
 			(at 283.21 96.5199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4951,7 +6585,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://datasheets.kyocera-avx.com/AutoMLCC.pdf"
+		(property "Datasheet" "https://inventory.lan/de/part/109/info"
 			(at 279.4 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -4962,7 +6596,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "100n 50V 10% X7R"
 			(at 279.4 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -4984,7 +6618,7 @@
 				)
 			)
 		)
-		(property "manf#" "08053C104M4T4A"
+		(property "manf#" "08055C104K4Z4A"
 			(at 279.4 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -4995,7 +6629,139 @@
 				)
 			)
 		)
-		(property "mouser#" "581-08053C104M4T4A"
+		(property "mouser#" "581-08055C104K4Z4A"
+			(at 279.4 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/109/info"
+			(at 279.4 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Kondensator/MLCC"
+			(at 279.4 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KYOCERA AVX"
+			(at 279.4 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "08055C104K4Z4A"
+			(at 279.4 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 279.4 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 279.4 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mass" "0.006 g"
+			(at 279.4 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "109"
+			(at 279.4 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "581-08055C104K4Z4A"
+			(at 279.4 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "6"
+			(at 279.4 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Storage Location" "Sortierregal"
+			(at 279.4 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
 			(at 279.4 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -5015,7 +6781,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "C702")
+					(reference "C602")
 					(unit 1)
 				)
 			)
@@ -5033,7 +6799,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "69de23e3-54d3-44f3-b1c3-d768775c342e")
-		(property "Reference" "#PWR0711"
+		(property "Reference" "#PWR0609"
 			(at 196.85 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -5093,7 +6859,121 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "#PWR0711")
+					(reference "#PWR0609")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 90.17 195.58 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7674fc22-4ac2-4b8c-92b3-e49aaf8f3ced")
+		(property "Reference" "R602"
+			(at 87.63 194.3099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "2k"
+			(at 87.63 196.8499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 88.392 195.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
+			(at 90.17 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 90.17 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "manf" "Bourns"
+			(at 90.17 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "manf#" "CR0805-FX-2001ELF"
+			(at 90.17 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "mouser#" "652-CR0805FX-2001ELF"
+			(at 90.17 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cc85852a-0d70-4718-8256-b07cbe243b86")
+		)
+		(pin "2"
+			(uuid "168676ba-c032-42f9-8ef8-d9142450da8d")
+		)
+		(instances
+			(project "Gateway"
+				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
+					(reference "R602")
 					(unit 1)
 				)
 			)
@@ -5111,7 +6991,7 @@
 		(in_pos_files no)
 		(dnp no)
 		(uuid "7c72d708-c7a1-4e31-a1fb-23b34d1890d7")
-		(property "Reference" "TP702"
+		(property "Reference" "TP602"
 			(at 185.42 188.4679 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5205,14 +7085,126 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "TP702")
+					(reference "TP602")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "Connector:TestPoint")
+		(at 76.2 182.88 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "7ccb77bf-f540-4805-b708-a1ec5df1de83")
+		(property "Reference" "TP601"
+			(at 73.66 178.3079 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 73.66 180.8479 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Testpoints_Kampi:TestPoint_Pad_1.0x1.0mm"
+			(at 71.12 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 76.2 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "manf" ""
+			(at 76.2 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "manf#" ""
+			(at 76.2 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "mouser#" ""
+			(at 76.2 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7e7f44ae-b0a1-49c5-b58d-089a7bc4aff4")
+		)
+		(instances
+			(project "Gateway"
+				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
+					(reference "TP601")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "partdb:RT0805FRE13100KL")
 		(at 342.9 179.07 0)
 		(mirror x)
 		(unit 1)
@@ -5223,7 +7215,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "86409bcb-4321-40e9-a5cb-2b36d9127d5d")
-		(property "Reference" "R709"
+		(property "Reference" "R611"
 			(at 340.36 177.7999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5256,7 +7248,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_15-3461507.pdf"
 			(at 342.9 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -5267,7 +7259,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "100k 125mW 1%"
 			(at 342.9 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -5278,7 +7270,7 @@
 				)
 			)
 		)
-		(property "manf" "Bourns"
+		(property "manf" "YAGEO"
 			(at 342.9 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -5289,7 +7281,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0805-JW-104GLF"
+		(property "manf#" "RT0805FRE13100KL"
 			(at 342.9 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -5300,7 +7292,139 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805-JW-104GLF"
+		(property "mouser#" "603-RT0805FRE13100KL"
+			(at 342.9 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/66/info"
+			(at 342.9 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Widerstand/Dünnfilmwiderstand"
+			(at 342.9 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 342.9 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RT0805FRE13100KL"
+			(at 342.9 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 342.9 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 342.9 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mass" "0.006 g"
+			(at 342.9 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "66"
+			(at 342.9 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "603-RT0805FRE13100KL"
+			(at 342.9 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "4"
+			(at 342.9 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Storage Location" "Sortierregal"
+			(at 342.9 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
 			(at 342.9 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -5320,7 +7444,121 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "R709")
+					(reference "R611")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 90.17 179.07 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "87d751cc-7859-4950-9aea-0f3bc01d1b35")
+		(property "Reference" "R601"
+			(at 87.63 177.7999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "30k"
+			(at 87.63 180.3399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 88.392 179.07 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
+			(at 90.17 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 90.17 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "manf" "Bourns"
+			(at 90.17 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "manf#" "CR0805-JW-303ELF"
+			(at 90.17 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "mouser#" "652-CR0805JW-303ELF"
+			(at 90.17 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "048deb4c-be6c-47d8-8771-7fb3d414238e")
+		)
+		(pin "2"
+			(uuid "69415a66-96c9-4514-a16f-52c2bb2478ea")
+		)
+		(instances
+			(project "Gateway"
+				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
+					(reference "R601")
 					(unit 1)
 				)
 			)
@@ -5338,7 +7576,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "90f15913-1dc4-429c-92d4-41808676e7e3")
-		(property "Reference" "#PWR0710"
+		(property "Reference" "#PWR0608"
 			(at 196.85 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -5398,14 +7636,14 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "#PWR0710")
+					(reference "#PWR0608")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "partdb:CR0805-FX-1002ELF")
 		(at 187.96 199.39 0)
 		(unit 1)
 		(body_style 1)
@@ -5415,7 +7653,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9336a37f-4c14-438f-805c-db197af7f34a")
-		(property "Reference" "R702"
+		(property "Reference" "R604"
 			(at 185.42 198.1199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5448,7 +7686,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
+		(property "Datasheet" "https://www.mouser.com/datasheet/3/40/1/cr.pdf"
 			(at 187.96 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -5459,7 +7697,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "10k 125mW 1%"
 			(at 187.96 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -5481,7 +7719,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0805-JW-103GLF"
+		(property "manf#" "CR0805-FX-1002ELF"
 			(at 187.96 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -5492,7 +7730,117 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805-JW-103GLF"
+		(property "mouser#" "652-CR0805FX-1002ELF"
+			(at 187.96 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/343/info"
+			(at 187.96 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Widerstand/Dickfilmwiderstand"
+			(at 187.96 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Bourns"
+			(at 187.96 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CR0805-FX-1002ELF"
+			(at 187.96 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 187.96 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 187.96 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mass" "0.006 g"
+			(at 187.96 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "343"
+			(at 187.96 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "652-CR0805FX-1002ELF"
+			(at 187.96 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "0"
 			(at 187.96 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -5512,7 +7860,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "R702")
+					(reference "R604")
 					(unit 1)
 				)
 			)
@@ -5529,7 +7877,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9bee7d86-03fa-4413-ac0f-241e59d88869")
-		(property "Reference" "IC702"
+		(property "Reference" "IC602"
 			(at 267.716 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5644,14 +7992,14 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "IC702")
+					(reference "IC602")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "partdb:CR0805-J/-000ELF")
 		(at 300.99 133.35 270)
 		(unit 1)
 		(body_style 1)
@@ -5661,7 +8009,7 @@
 		(in_pos_files no)
 		(dnp yes)
 		(uuid "9d013860-c425-477e-b2e9-67bb4aa205c4")
-		(property "Reference" "R707"
+		(property "Reference" "R609"
 			(at 300.99 138.43 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5692,7 +8040,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
+		(property "Datasheet" "https://www.mouser.com/datasheet/3/40/1/cr.pdf"
 			(at 300.99 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -5703,7 +8051,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "0R 5%"
 			(at 300.99 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -5747,6 +8095,116 @@
 				)
 			)
 		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/322/info"
+			(at 300.99 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Widerstand/Dickfilmwiderstand"
+			(at 300.99 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Bourns"
+			(at 300.99 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CR0805-J/-000ELF"
+			(at 300.99 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 300.99 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 300.99 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mass" "0.006 g"
+			(at 300.99 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "322"
+			(at 300.99 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "652-CR0805-J/-000ELF"
+			(at 300.99 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "0"
+			(at 300.99 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ffb51b2a-cfab-46cb-b178-bf6a2f7a507f")
 		)
@@ -5756,7 +8214,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "R707")
+					(reference "R609")
 					(unit 1)
 				)
 			)
@@ -5773,7 +8231,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a293f3ed-a2e2-46c7-a7d2-52eb0e67d193")
-		(property "Reference" "R701"
+		(property "Reference" "R603"
 			(at 152.4 201.9299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5784,7 +8242,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "51k1"
+		(property "Value" "33k"
 			(at 152.4 204.4699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5839,7 +8297,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0805-FX-5112GLF"
+		(property "manf#" "CR0805-JW-333ELF"
 			(at 149.86 203.2 0)
 			(hide yes)
 			(show_name no)
@@ -5850,7 +8308,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805-FX-5112GLF"
+		(property "mouser#" "652-CR0805JW-333ELF"
 			(at 149.86 203.2 0)
 			(hide yes)
 			(show_name no)
@@ -5870,14 +8328,14 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "R701")
+					(reference "R603")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "partdb:CR0805-J/-000ELF")
 		(at 300.99 128.27 90)
 		(unit 1)
 		(body_style 1)
@@ -5887,7 +8345,7 @@
 		(in_pos_files no)
 		(dnp yes)
 		(uuid "ae3ff128-ba87-465f-9e08-85fe30cfe66c")
-		(property "Reference" "R705"
+		(property "Reference" "R607"
 			(at 300.99 118.618 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5918,7 +8376,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
+		(property "Datasheet" "https://www.mouser.com/datasheet/3/40/1/cr.pdf"
 			(at 300.99 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -5929,7 +8387,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "0R 5%"
 			(at 300.99 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -5973,6 +8431,116 @@
 				)
 			)
 		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/322/info"
+			(at 300.99 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Widerstand/Dickfilmwiderstand"
+			(at 300.99 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Bourns"
+			(at 300.99 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CR0805-J/-000ELF"
+			(at 300.99 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 300.99 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 300.99 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mass" "0.006 g"
+			(at 300.99 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "322"
+			(at 300.99 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "652-CR0805-J/-000ELF"
+			(at 300.99 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "0"
+			(at 300.99 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "740f67ca-cb0b-48fe-b8f7-be28ec63118f")
 		)
@@ -5982,7 +8550,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "R705")
+					(reference "R607")
 					(unit 1)
 				)
 			)
@@ -6000,7 +8568,7 @@
 		(in_pos_files no)
 		(dnp no)
 		(uuid "b00d98dd-865a-46b7-91f0-1adfc27759d0")
-		(property "Reference" "TP703"
+		(property "Reference" "TP603"
 			(at 355.6 161.7979 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6094,7 +8662,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "TP703")
+					(reference "TP603")
 					(unit 1)
 				)
 			)
@@ -6111,7 +8679,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b625b5d5-7e1e-4514-8603-8cc0e01bfcb3")
-		(property "Reference" "C701"
+		(property "Reference" "C601"
 			(at 140.97 201.9299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6199,6 +8767,17 @@
 				)
 			)
 		)
+		(property "Config" ""
+			(at 137.16 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1b1360b4-8883-4044-b152-d8d5062e7489")
 		)
@@ -6208,7 +8787,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "C701")
+					(reference "C601")
 					(unit 1)
 				)
 			)
@@ -6226,7 +8805,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b752e954-9920-4c6d-8670-c00e91434975")
-		(property "Reference" "#PWR0707"
+		(property "Reference" "#PWR0606"
 			(at 149.86 215.9 0)
 			(hide yes)
 			(show_name no)
@@ -6286,7 +8865,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "#PWR0707")
+					(reference "#PWR0606")
 					(unit 1)
 				)
 			)
@@ -6304,7 +8883,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bfe25661-b9e3-4ec2-aa8f-c3cb53f24926")
-		(property "Reference" "#PWR0703"
+		(property "Reference" "#PWR0603"
 			(at 100.33 215.9 0)
 			(hide yes)
 			(show_name no)
@@ -6364,7 +8943,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "#PWR0703")
+					(reference "#PWR0603")
 					(unit 1)
 				)
 			)
@@ -6383,7 +8962,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c65db224-797c-4407-9f61-e7dc4d7a1484")
-		(property "Reference" "#PWR0712"
+		(property "Reference" "#PWR0611"
 			(at 275.59 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -6443,85 +9022,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "#PWR0712")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 133.35 180.34 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c87d6681-6b3c-4b67-8d1b-0f810ddd49bd")
-		(property "Reference" "#PWR0705"
-			(at 133.35 186.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 133.35 185.42 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 133.35 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 133.35 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 133.35 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3f96e1c6-9841-44ae-aac9-5d427ba815d9")
-		)
-		(instances
-			(project "Gateway"
-				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "#PWR0705")
+					(reference "#PWR0611")
 					(unit 1)
 				)
 			)
@@ -6539,7 +9040,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cc075ae3-7334-4c53-a5df-cf917592a6ab")
-		(property "Reference" "R710"
+		(property "Reference" "R612"
 			(at 340.36 187.9599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6616,7 +9117,18 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805-FX-1202ELF"
+		(property "mouser#" "652-CR0805FX-1202ELF"
+			(at 342.9 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
 			(at 342.9 189.23 0)
 			(hide yes)
 			(show_name no)
@@ -6636,14 +9148,14 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "R710")
+					(reference "R612")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "partdb:CR0805-J/-000ELF")
 		(at 300.99 130.81 90)
 		(unit 1)
 		(body_style 1)
@@ -6653,7 +9165,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e573c245-921a-44d7-b450-bfe300101f2b")
-		(property "Reference" "R706"
+		(property "Reference" "R608"
 			(at 300.99 121.158 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6684,7 +9196,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
+		(property "Datasheet" "https://www.mouser.com/datasheet/3/40/1/cr.pdf"
 			(at 300.99 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -6695,7 +9207,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "0R 5%"
 			(at 300.99 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -6739,6 +9251,116 @@
 				)
 			)
 		)
+		(property "Part-DB URL" "https://inventory.lan/de/part/322/info"
+			(at 300.99 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Category" "Widerstand/Dickfilmwiderstand"
+			(at 300.99 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Bourns"
+			(at 300.99 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CR0805-J/-000ELF"
+			(at 300.99 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturing Status" "Active"
+			(at 300.99 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB Footprint" "0805"
+			(at 300.99 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mass" "0.006 g"
+			(at 300.99 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part-DB ID" "322"
+			(at 300.99 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser SPN" "652-CR0805-J/-000ELF"
+			(at 300.99 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Stock" "0"
+			(at 300.99 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3359588d-ba6b-4fb1-8894-6920449e4e0b")
 		)
@@ -6748,229 +9370,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "R706")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 137.16 166.37 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files no)
-		(dnp no)
-		(uuid "ea203dc0-a727-4c46-b625-c4d856b9e78f")
-		(property "Reference" "TP701"
-			(at 137.16 158.75 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "~"
-			(at 137.16 160.655 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Testpoints_Kampi:TestPoint_Pad_1.0x1.0mm"
-			(at 142.24 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 142.24 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 137.16 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manf" ""
-			(at 137.16 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manf#" ""
-			(at 137.16 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "mouser#" ""
-			(at 137.16 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ac8282fd-6672-49fe-a76d-2363c32b54d5")
-		)
-		(instances
-			(project "Gateway"
-				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "TP701")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Fuse")
-		(at 236.22 167.64 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ebc116c9-450c-42b1-b5ce-b0fe71277b2c")
-		(property "Reference" "F701"
-			(at 236.22 161.29 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "3 A"
-			(at 236.22 163.83 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 236.22 169.418 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 236.22 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Fuse"
-			(at 236.22 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manf" ""
-			(at 236.22 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manf#" ""
-			(at 236.22 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "mouser#" ""
-			(at 236.22 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "3f2d9f41-6ff3-4086-969f-6ea5e4898e15")
-		)
-		(pin "1"
-			(uuid "f37a902e-2233-4ccf-a110-91bd9609cd61")
-		)
-		(instances
-			(project "Gateway"
-				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "F701")
+					(reference "R608")
 					(unit 1)
 				)
 			)
@@ -6978,7 +9378,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 78.74 180.34 0)
+		(at 49.53 180.34 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6988,8 +9388,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f1e936be-8194-4161-b7d5-42145cd45912")
-		(property "Reference" "#PWR0701"
-			(at 78.74 186.69 0)
+		(property "Reference" "#PWR0601"
+			(at 49.53 186.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7000,7 +9400,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 78.74 185.42 0)
+			(at 49.53 185.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7010,7 +9410,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 78.74 180.34 0)
+			(at 49.53 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7021,7 +9421,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 78.74 180.34 0)
+			(at 49.53 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7032,7 +9432,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 78.74 180.34 0)
+			(at 49.53 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7048,7 +9448,85 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "#PWR0701")
+					(reference "#PWR0601")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 90.17 209.55 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f5642739-4157-47af-97bb-a4b93d89532e")
+		(property "Reference" "#PWR0602"
+			(at 90.17 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 90.17 214.63 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 90.17 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 90.17 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 90.17 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4325fd04-f5f7-4c6f-b3c1-cc17a010be9f")
+		)
+		(instances
+			(project "Gateway"
+				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
+					(reference "#PWR0602")
 					(unit 1)
 				)
 			)
@@ -7065,7 +9543,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f869f8f5-25b5-4fe3-a50b-a7f384f8d02f")
-		(property "Reference" "IC701"
+		(property "Reference" "IC601"
 			(at 114.3 162.56 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7096,7 +9574,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps2120.pdf?ts=1776877495931"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps2120.pdf"
 			(at 144.78 370.18 0)
 			(hide yes)
 			(show_name no)
@@ -7190,7 +9668,7 @@
 		(instances
 			(project "Gateway"
 				(path "/d5742f03-3b1a-42e5-a384-018bd4b919aa/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0"
-					(reference "IC701")
+					(reference "IC601")
 					(unit 1)
 				)
 			)

@@ -1663,7 +1663,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 55.372 262.89 90)
 			(hide yes)
 			(show_name no)
@@ -1674,7 +1674,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.com/catalog/specsheets/YAGEO_PYu_RC_Group_51_RoHS_L_12.pdf"
 			(at 57.15 262.89 0)
 			(hide yes)
 			(show_name no)
@@ -1696,7 +1696,7 @@
 				)
 			)
 		)
-		(property "manf" ""
+		(property "manf" "YAGEO"
 			(at 57.15 262.89 0)
 			(hide yes)
 			(show_name no)
@@ -1707,7 +1707,7 @@
 				)
 			)
 		)
-		(property "manf#" ""
+		(property "manf#" "RC0805FR-075K1L"
 			(at 57.15 262.89 0)
 			(hide yes)
 			(show_name no)
@@ -1718,7 +1718,7 @@
 				)
 			)
 		)
-		(property "mouser#" ""
+		(property "mouser#" "603-RC0805FR-075K1L"
 			(at 57.15 262.89 0)
 			(hide yes)
 			(show_name no)
@@ -1856,7 +1856,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 212.598 261.62 90)
 			(hide yes)
 			(show_name no)
@@ -1867,7 +1867,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.com/catalog/specsheets/YAGEO_PYu_RC_Group_51_RoHS_L_12.pdf"
 			(at 210.82 261.62 0)
 			(hide yes)
 			(show_name no)
@@ -1889,7 +1889,7 @@
 				)
 			)
 		)
-		(property "manf" ""
+		(property "manf" "YAGEO"
 			(at 210.82 261.62 0)
 			(hide yes)
 			(show_name no)
@@ -1900,7 +1900,7 @@
 				)
 			)
 		)
-		(property "manf#" ""
+		(property "manf#" "RC0805FR-073KL"
 			(at 210.82 261.62 0)
 			(hide yes)
 			(show_name no)
@@ -1911,7 +1911,7 @@
 				)
 			)
 		)
-		(property "mouser#" ""
+		(property "mouser#" "603-RC0805FR-073KL"
 			(at 210.82 261.62 0)
 			(hide yes)
 			(show_name no)
