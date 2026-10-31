@@ -1,0 +1,171 @@
+# =============================================================================
+# Workflow: nRF5340 Firmware
+# =============================================================================
+#
+# Trigger:
+#   - push / pull_request touching firmware/nRF5340/** or this workflow
+#   - tags 'nrf5340-v*' (e.g. nrf5340-v1.0.0): build + GitHub release
+#   - workflow_dispatch: manual run
+#
+# Function:
+#   Builds the OpenThread RCP firmware (incl. MCUboot) for every TARGET of
+#   firmware/nRF5340/Makefile inside Nordic's nRF Connect SDK toolchain
+#   container, using the same `make setup` / `make build` as a local build.
+#   The west workspace (nrf/, zephyr/, modules/, ...) is cached per
+#   app/west.yml revision. Build outputs are uploaded as artifacts and, for
+#   tags, attached to a GitHub release.
+#
+# Variables:
+#   NCS_VERSION   - nRF Connect SDK version, must match app/west.yml
+#
+# Secrets:
+#   NRF5340_DFU_SIGNING_KEY - Content of app/dfu_signing_key.pem (ed25519).
+#                             Without it, every run signs with a throwaway
+#                             key: fine for SWD flashing, but such images
+#                             are rejected by MCUboot on devices in the field.
+#                             Required for release tags.
+# =============================================================================
+
+name: nRF5340 Firmware
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - dev
+    tags:
+      - "nrf5340-v*"
+    paths:
+      - "firmware/nRF5340/**"
+      - ".github/workflows/nrf5340-firmware.yaml"
+  pull_request:
+    branches:
+      - main
+      - master
+    paths:
+      - "firmware/nRF5340/**"
+      - ".github/workflows/nrf5340-firmware.yaml"
+  workflow_dispatch:
+
+env:
+  # nRF Connect SDK version (keep in sync with firmware/nRF5340/app/west.yml)
+  NCS_VERSION: v2.7.0
+
+jobs:
+  build:
+    name: Build (${{ matrix.target }})
+    runs-on: ubuntu-latest
+    container:
+      # Same version as NCS_VERSION above (env is not available here)
+      image: ghcr.io/nrfconnect/sdk-nrf-toolchain:v2.7.0
+
+    # The toolchain environment is only loaded in bash sessions
+    defaults:
+      run:
+        shell: bash
+        working-directory: firmware/nRF5340
+
+    strategy:
+      fail-fast: false
+      matrix:
+        target:
+          - gateway
+          - dk
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v5
+
+      - name: Trust Workspace Repositories
+        run: git config --global --add safe.directory '*'
+
+      - name: Restore West Workspace Cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            firmware/nRF5340/.west
+            firmware/nRF5340/zephyr
+            firmware/nRF5340/nrf
+            firmware/nRF5340/modules
+            firmware/nRF5340/bootloader
+            firmware/nRF5340/nrfxlib
+            firmware/nRF5340/test
+            firmware/nRF5340/tools
+          key: west-${{ env.NCS_VERSION }}-${{ hashFiles('firmware/nRF5340/app/west.yml') }}
+
+      - name: Set Up West Workspace
+        run: |
+          make setup
+          pip3 install imgtool
+
+      - name: Install DFU Signing Key
+        env:
+          DFU_SIGNING_KEY: ${{ secrets.NRF5340_DFU_SIGNING_KEY }}
+        run: |
+          if [ -n "${DFU_SIGNING_KEY}" ]; then
+            printf '%s\n' "${DFU_SIGNING_KEY}" > app/dfu_signing_key.pem
+            echo "Using DFU signing key from secrets"
+          elif [[ "${GITHUB_REF}" == refs/tags/* ]]; then
+            echo "::error::NRF5340_DFU_SIGNING_KEY secret is required for release builds"
+            exit 1
+          else
+            echo "::warning::NRF5340_DFU_SIGNING_KEY not set - signing with a throwaway key (not usable for DFU on field devices)"
+          fi
+
+      - name: Build Firmware
+        run: make build TARGET=${{ matrix.target }}
+
+      - name: Collect Build Outputs
+        run: |
+          OUT="${GITHUB_WORKSPACE}/artifacts/${{ matrix.target }}"
+          mkdir -p "${OUT}"
+          cp build/merged*.hex "${OUT}/"
+          cp build/dfu_application.zip "${OUT}/" 2>/dev/null || true
+          find build -name zephyr.signed.bin ! -path "*/mcuboot/*" -exec cp {} "${OUT}/" \;
+          # App-core companion (TARGET=dk only). NCS >= 2.7 builds it with
+          # sysbuild by default, so the hex may sit in a sub-image folder.
+          if [ -d build_appcore ]; then
+            APPCORE_HEX=$(ls build_appcore/merged.hex 2>/dev/null || find build_appcore -path "*/zephyr/zephyr.hex" | head -n1)
+            cp "${APPCORE_HEX}" "${OUT}/appcore.hex"
+          fi
+          ls -l "${OUT}"
+
+      - name: Upload Build Outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: nrf5340-${{ matrix.target }}
+          path: artifacts/${{ matrix.target }}
+          if-no-files-found: error
+
+  release:
+    name: Release
+    if: startsWith(github.ref, 'refs/tags/nrf5340-v')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Download Build Outputs
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Prefix Files With Target
+        shell: bash
+        run: |
+          for dir in artifacts/nrf5340-*; do
+            target="${dir#artifacts/}"
+            for f in "${dir}"/*; do
+              mv "${f}" "artifacts/${target}-$(basename "${f}")"
+            done
+            rmdir "${dir}"
+          done
+          ls -l artifacts
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: artifacts/*
+          generate_release_notes: true

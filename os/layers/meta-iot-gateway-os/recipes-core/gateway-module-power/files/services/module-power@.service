@@ -1,0 +1,15 @@
+[Unit]
+Description=Power and release the %i module
+# Pulled in by the module's own service (Requires=module-power@<name>.service).
+# Stopping this unit releases the lines, the pull-downs then switch the module off.
+StopWhenUnneeded=yes
+
+[Service]
+Type=simple
+# gpioset (libgpiod v2) holds the lines for as long as it runs. Line names come
+# from gpio-line-names in the devicetree (<module>-power-enable/-reset/-boot).
+# Reset and boot go through 74LVC1G07 open-drain buffers, so low = asserted:
+# drive both high for a normal boot (out of reset, no bootloader).
+ExecStart=/usr/bin/gpioset --consumer module-power-%i %i-power-enable=1 %i-reset=1 %i-boot=1
+Restart=on-failure
+RestartSec=5s

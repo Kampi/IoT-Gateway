@@ -1,11 +1,21 @@
 [Unit]
 Description=Form/attach the gateway's Thread network
 After=dbus.service otbr-agent.service
-Requires=otbr-agent.service
+# Wants instead of Requires: a crash-looping otbr-agent (e.g. RCP not
+# responding) must not keep stopping/restarting this unit.
+Wants=otbr-agent.service
+# Keep retrying forever - the RCP may come up late or after a firmware flash.
+StartLimitIntervalSec=0
 
 [Service]
-Type=oneshot
+# Not oneshot: multi-user.target waits for oneshot units to finish, so a
+# broken Thread radio would block the boot (and everything ordered after
+# multi-user.target, like the ready-LED). With Type=simple the unit counts
+# as started immediately and the boot continues.
+Type=simple
 ExecStart=/usr/libexec/gateway-os/thread-network-init.sh
+Restart=on-failure
+RestartSec=30
 
 [Install]
 WantedBy=multi-user.target

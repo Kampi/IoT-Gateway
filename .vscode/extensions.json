@@ -1,0 +1,36 @@
+{
+    "recommendations": [
+        // Firmware (nRF5340 / Zephyr / nRF Connect SDK)
+        "nordic-semiconductor.nrf-connect-extension-pack",
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools",
+
+        // Firmware (ESP32 / ESP-IDF)
+        "platformio.platformio-ide",
+
+        // OS (Yocto / Toradex)
+        "yocto-project.yocto-bitbake",
+        "plorefice.devicetree",
+        "coolbear.systemd-unit-file",
+
+        // Skripte
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "timonwong.shellcheck",
+        "foxundermoon.shell-format",
+        "redhat.vscode-yaml",
+
+        // Zugriff auf das Gateway
+        "ms-vscode-remote.remote-ssh",
+
+        // Dokumentation
+        "davidanson.vscode-markdownlint",
+        "yzhang.markdown-all-in-one",
+
+        // Allgemein
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        "usernamehw.errorlens",
+        "gruntfuggly.todo-tree"
+    ]
+}

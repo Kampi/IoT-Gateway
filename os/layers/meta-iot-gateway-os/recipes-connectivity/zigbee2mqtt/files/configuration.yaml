@@ -7,4 +7,5 @@ serial:
   port: /dev/zigbee
   adapter: zstack
 frontend:
-  enabled: false
+  enabled: true
+  port: 8080

@@ -1,0 +1,85 @@
+[
+  {
+    "id": "c2ha_tab",
+    "type": "tab",
+    "label": "ChirpStack → Home Assistant",
+    "disabled": false,
+    "info": "Turns ChirpStack v4 uplinks into Home Assistant entities via MQTT discovery.\nSee scripts/node-red/README.md in the IoT-Gateway repo."
+  },
+  {
+    "id": "c2ha_in",
+    "type": "mqtt in",
+    "z": "c2ha_tab",
+    "name": "ChirpStack uplinks",
+    "topic": "application/+/device/+/event/up",
+    "qos": "0",
+    "datatype": "json",
+    "broker": "c2ha_broker",
+    "nl": false,
+    "rap": true,
+    "rh": 0,
+    "inputs": 0,
+    "x": 150,
+    "y": 100,
+    "wires": [
+      [
+        "c2ha_func"
+      ]
+    ]
+  },
+  {
+    "id": "c2ha_func",
+    "type": "function",
+    "z": "c2ha_tab",
+    "name": "Uplink → HA discovery + states",
+    "func": "// ChirpStack v4 uplink -> Home Assistant (MQTT discovery + per-field state topics).\n//\n// Every field of the decoded payload (\"object\", from the device profile codec)\n// becomes its own HA entity. Discovery configs are only re-sent when they change.\n//\n// Optional ChirpStack device tags (Device -> Tags) to tune the result:\n//   ha_ignore        = true            skip this device completely\n//   ha_skip          = a,b.c           skip these fields (flattened names)\n//   ha_expire_after  = 7200            mark entities unavailable after N s without data\n//   ha_unit_<field>  = °F              override the unit of a field\n//   ha_class_<field> = temperature     override the HA device_class of a field\n\nconst DISCOVERY_PREFIX = 'homeassistant';\nconst STATE_PREFIX = 'chirpstack2ha';\n\n// Field name pattern -> HA metadata (first match wins, only used for numbers).\n// Covers common vendor spellings like \"TempC_SHT\", \"Hum_SHT\", \"BatV\".\n// Anything unmatched becomes a plain sensor; fix outliers with device tags.\nconst RULES = [\n    [/^rssi$/,                       { device_class: 'signal_strength', unit: 'dBm', diag: true }],\n    [/^snr$/,                        { unit: 'dB', diag: true }],\n    [/bat.*(v|volt)|vbat/,           { device_class: 'voltage', unit: 'V', diag: true }],\n    [/bat/,                          { device_class: 'battery', unit: '%', diag: true }],\n    [/temp/,                         { device_class: 'temperature', unit: '°C' }],\n    [/hum/,                          { device_class: 'humidity', unit: '%' }],\n    [/co2/,                          { device_class: 'carbon_dioxide', unit: 'ppm' }],\n    [/tvoc/,                         { device_class: 'volatile_organic_compounds_parts', unit: 'ppb' }],\n    [/press|baro/,                   { device_class: 'atmospheric_pressure', unit: 'hPa' }],\n    [/lux|illum/,                    { device_class: 'illuminance', unit: 'lx' }],\n    [/pm2_?5/,                       { device_class: 'pm25', unit: 'µg/m³' }],\n    [/pm10/,                         { device_class: 'pm10', unit: 'µg/m³' }],\n    [/energy|kwh/,                   { device_class: 'energy', unit: 'kWh', state_class: 'total_increasing' }],\n    [/power|watt/,                   { device_class: 'power', unit: 'W' }],\n    [/current|amp/,                  { device_class: 'current', unit: 'A' }],\n    [/volt/,                         { device_class: 'voltage', unit: 'V' }],\n];\n\nconst up = msg.payload;\nif (!up || !up.deviceInfo || !up.deviceInfo.devEui) {\n    return null;\n}\n\nconst info = up.deviceInfo;\nconst tags = info.tags || {};\nif (String(tags.ha_ignore).toLowerCase() === 'true') {\n    return null;\n}\n\nconst devEui = info.devEui.toLowerCase();\nconst skip = new Set(String(tags.ha_skip || '').split(',').map(s => s.trim()).filter(Boolean));\nconst expireAfter = parseInt(tags.ha_expire_after, 10);\n\n// Decoded fields, nested objects flattened to \"a_b\". Arrays are skipped.\nconst fields = {};\nfunction flatten(obj, prefix) {\n    for (const [k, v] of Object.entries(obj)) {\n        const key = (prefix ? prefix + '_' : '') + String(k).toLowerCase().replace(/[^a-z0-9_]/g, '_');\n        if (v !== null && typeof v === 'object' && !Array.isArray(v)) {\n            flatten(v, key);\n        } else if (v !== null && !Array.isArray(v)) {\n            fields[key] = v;\n        }\n    }\n}\nif (up.object && typeof up.object === 'object') {\n    flatten(up.object, '');\n} else if (typeof up.data === 'string' && up.data.length > 0) {\n    // No codec in the device profile: accept payloads that are plain JSON text,\n    // e.g. {\"temperature\": 22.18}. Anything else only yields RSSI/SNR.\n    try {\n        const decoded = JSON.parse(Buffer.from(up.data, 'base64').toString('utf8'));\n        if (decoded && typeof decoded === 'object' && !Array.isArray(decoded)) {\n            flatten(decoded, '');\n        }\n    } catch (e) {\n        // Binary payload - needs a codec in ChirpStack.\n    }\n}\n\n// Radio quality of the best receiving gateway.\nif (Array.isArray(up.rxInfo) && up.rxInfo.length > 0) {\n    const best = up.rxInfo.reduce((a, b) => ((b.rssi ?? -999) > (a.rssi ?? -999) ? b : a));\n    if (typeof best.rssi === 'number') fields.rssi = best.rssi;\n    if (typeof best.snr === 'number') fields.snr = best.snr;\n}\n\n// Entity name from the field name: \"battery_voltage\" -> \"Battery voltage\",\n// abbreviations fully uppercase (\"rssi\" -> \"RSSI\", \"ext_co2\" -> \"Ext CO2\").\nconst ACRONYMS = new Set(['rssi', 'snr', 'co2', 'tvoc', 'voc', 'pm1', 'pm25', 'pm10', 'uv', 'gps', 'id', 'eui']);\nfunction displayName(key) {\n    return key.split('_').map((word, i) => {\n        if (ACRONYMS.has(word)) return word.toUpperCase();\n        return i === 0 ? word.charAt(0).toUpperCase() + word.slice(1) : word;\n    }).join(' ');\n}\n\nconst device = {\n    identifiers: ['chirpstack_' + devEui],\n    name: info.deviceName || devEui,\n    model: info.deviceProfileName,\n    manufacturer: 'LoRaWAN (' + (info.applicationName || 'ChirpStack') + ')',\n    serial_number: devEui,\n};\n\nconst published = context.get('discovery') || {};\nconst out = [];\n\nfor (const [key, value] of Object.entries(fields)) {\n    if (skip.has(key)) {\n        continue;\n    }\n\n    const isBool = typeof value === 'boolean';\n    const isNumber = typeof value === 'number';\n    const rule = isNumber ? RULES.find(([re]) => re.test(key)) : undefined;\n    const meta = rule ? rule[1] : {};\n    const component = isBool ? 'binary_sensor' : 'sensor';\n    const uid = 'chirpstack_' + devEui + '_' + key;\n    const stateTopic = STATE_PREFIX + '/' + devEui + '/' + key;\n\n    const config = {\n        name: displayName(key),\n        unique_id: uid,\n        object_id: uid,\n        state_topic: stateTopic,\n        device: device,\n    };\n\n    // HA rejects non-numeric states for most device classes, so overrides only apply to numbers too.\n    const deviceClass = isNumber ? (tags['ha_class_' + key] || meta.device_class) : undefined;\n    const unit = isNumber ? (tags['ha_unit_' + key] || meta.unit) : undefined;\n    if (deviceClass) config.device_class = deviceClass;\n    if (meta.diag) config.entity_category = 'diagnostic';\n    if (Number.isFinite(expireAfter) && expireAfter > 0) config.expire_after = expireAfter;\n\n    if (isBool) {\n        config.payload_on = 'ON';\n        config.payload_off = 'OFF';\n    } else if (isNumber) {\n        if (unit) config.unit_of_measurement = unit;\n        config.state_class = meta.state_class || 'measurement';\n    }\n\n    // Discovery: only when new or changed (retained, so HA finds it after a restart).\n    const configJson = JSON.stringify(config);\n    if (published[uid] !== configJson) {\n        out.push({\n            topic: DISCOVERY_PREFIX + '/' + component + '/' + uid + '/config',\n            payload: configJson,\n            retain: true,\n        });\n        published[uid] = configJson;\n    }\n\n    // State: retained, so sensors that send rarely still show a value after an HA restart.\n    out.push({\n        topic: stateTopic,\n        payload: isBool ? (value ? 'ON' : 'OFF') : String(value),\n        retain: true,\n    });\n}\n\ncontext.set('discovery', published);\nnode.status({ fill: 'green', shape: 'dot', text: (info.deviceName || devEui) + ': ' + Object.keys(fields).length + ' Felder' });\n\nreturn [out];\n",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 420,
+    "y": 100,
+    "wires": [
+      [
+        "c2ha_out"
+      ]
+    ]
+  },
+  {
+    "id": "c2ha_out",
+    "type": "mqtt out",
+    "z": "c2ha_tab",
+    "name": "Home Assistant",
+    "topic": "",
+    "qos": "0",
+    "retain": "",
+    "respTopic": "",
+    "contentType": "",
+    "userProps": "",
+    "correl": "",
+    "expiry": "",
+    "broker": "c2ha_broker",
+    "x": 680,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "c2ha_broker",
+    "type": "mqtt-broker",
+    "name": "ChirpStack / HA broker",
+    "broker": "192.168.178.103",
+    "port": "1883",
+    "clientid": "",
+    "autoConnect": true,
+    "usetls": false,
+    "protocolVersion": "4",
+    "keepalive": "60",
+    "cleansession": true,
+    "autoUnsubscribe": true,
+    "birthTopic": "",
+    "closeTopic": "",
+    "willTopic": ""
+  }
+]

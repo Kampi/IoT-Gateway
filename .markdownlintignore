@@ -1,0 +1,11 @@
+# Only lint our own Markdown - skip generated, downloaded and third-party files.
+os/.repo/
+os/build/
+os/downloads/
+os/sstate-cache/
+os/Verdin-iMX8MM_ToradexEasyInstaller_*/
+os/layers/*
+!os/layers/meta-iot-gateway-os/
+firmware/nRF5340/*
+!firmware/nRF5340/app/
+!firmware/nRF5340/README.md

@@ -18,6 +18,14 @@ while ! ot-ctl state >/dev/null 2>&1 && [ "${i}" -lt 30 ]; do
     i=$((i + 1))
 done
 
+# otbr-agent not reachable (e.g. no response from the RCP): give up for now,
+# systemd restarts this script later. Without this check the dataset test
+# below would also fail and we'd try to form a new network for nothing.
+if ! ot-ctl state >/dev/null 2>&1; then
+    echo "otbr-agent not reachable - retrying later" >&2
+    exit 1
+fi
+
 if ! ot-ctl dataset active >/dev/null 2>&1; then
     echo "No active Thread dataset found - forming a new network"
     ot-ctl dataset init new

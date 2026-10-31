@@ -1,11 +1,15 @@
 [Unit]
 Description=Zigbee2MQTT
-After=network.target mosquitto.service
+After=network.target mosquitto.service module-power@zigbee.service
 Wants=mosquitto.service
+# Switches on the CC2652P (power, out of reset, normal boot) - see gateway-module-power.
+Requires=module-power@zigbee.service
 
 [Service]
 Type=simple
 Environment=ZIGBEE2MQTT_DATA=/var/lib/zigbee2mqtt
+# Give the CC2652P time to boot after power-up.
+ExecStartPre=/bin/sleep 2
 ExecStart=/usr/bin/node /usr/lib/node_modules/zigbee2mqtt/index.js
 WorkingDirectory=/usr/lib/node_modules/zigbee2mqtt
 Restart=on-failure

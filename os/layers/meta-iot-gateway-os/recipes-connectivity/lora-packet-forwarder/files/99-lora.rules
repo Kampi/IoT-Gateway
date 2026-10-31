@@ -1,1 +1,8 @@
-SUBSYSTEM=="tty", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5740", SYMLINK+="lora", MODE="0660"
+# RAK5146 USB concentrator -> /dev/lora
+#
+# SYSTEMD_WANTS (re)starts the packet forwarder whenever the concentrator
+# appears. Needed because lora-packet-forwarder.service has
+# BindsTo=dev-lora.device: a USB disconnect stops the service for good
+# (Restart= doesn't apply), and without this nothing starts it again once
+# the device is back.
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5740", SYMLINK+="lora", MODE="0660", TAG+="systemd", ENV{SYSTEMD_WANTS}+="lora-packet-forwarder.service"

@@ -1,0 +1,65 @@
+{
+    // Own code: os/layers/meta-iot-gateway-os, firmware/nRF5340/app, scripts.
+    // Everything below is generated, downloaded or third-party (~40 GB) and is
+    // kept away from file watching, search and the linters.
+
+    "files.watcherExclude": {
+        "**/os/.repo/**": true,
+        "**/os/build/**": true,
+        "**/os/downloads/**": true,
+        "**/os/sstate-cache/**": true,
+        "**/os/Verdin-iMX8MM_ToradexEasyInstaller_*/**": true,
+        "**/os/layers/{openembedded-core,meta-arm,meta-freescale,meta-freescale-3rdparty,meta-freescale-distro,meta-openembedded,meta-qt5,meta-security,meta-ti,meta-toradex-bsp-common,meta-toradex-demos,meta-toradex-distro,meta-toradex-nxp,meta-toradex-ti,meta-yocto}/**": true,
+        "**/firmware/nRF5340/{.west,zephyr,nrf,modules,bootloader,nrfxlib,test,tools,mbedtls,bsim,build,build_appcore,.venv}/**": true,
+        "**/firmware/ESP32/.pio/**": true
+    },
+
+    "search.exclude": {
+        "os/.repo": true,
+        "os/build": true,
+        "os/downloads": true,
+        "os/sstate-cache": true,
+        "os/Verdin-iMX8MM_ToradexEasyInstaller_*": true,
+        "os/layers/{openembedded-core,meta-arm,meta-freescale,meta-freescale-3rdparty,meta-freescale-distro,meta-openembedded,meta-qt5,meta-security,meta-ti,meta-toradex-bsp-common,meta-toradex-demos,meta-toradex-distro,meta-toradex-nxp,meta-toradex-ti,meta-yocto}": true,
+        "firmware/nRF5340/{.west,zephyr,nrf,modules,bootloader,nrfxlib,test,tools,mbedtls,bsim,build,build_appcore,.venv}": true,
+        "firmware/ESP32/.pio": true,
+        "**/npm-shrinkwrap.json": true
+    },
+
+    // C/C++: only index our own sources. The Zephyr/NCS SDK is still found
+    // through the nRF Connect build (compile_commands.json).
+    "C_Cpp.files.exclude": {
+        "os/**": true,
+        "firmware/nRF5340/{.west,zephyr,nrf,modules,bootloader,nrfxlib,test,tools,mbedtls,bsim,build,build_appcore,.venv}/**": true,
+        "firmware/ESP32/.pio/**": true
+    },
+
+    // Python (Pylance): only our own scripts.
+    "python.analysis.include": [
+        "scripts/python",
+        "os/layers/meta-iot-gateway-os"
+    ],
+    "python.analysis.exclude": [
+        "**/build",
+        "**/.venv"
+    ],
+
+    // ShellCheck: skip everything that isn't ours.
+    "shellcheck.ignorePatterns": {
+        "os/build/**": true,
+        "os/downloads/**": true,
+        "os/sstate-cache/**": true,
+        "os/.repo/**": true,
+        "os/Verdin-iMX8MM_ToradexEasyInstaller_*/**": true,
+        "os/layers/{openembedded-core,meta-arm,meta-freescale,meta-freescale-3rdparty,meta-freescale-distro,meta-openembedded,meta-qt5,meta-security,meta-ti,meta-toradex-bsp-common,meta-toradex-demos,meta-toradex-distro,meta-toradex-nxp,meta-toradex-ti,meta-yocto}/**": true,
+        "firmware/nRF5340/{zephyr,nrf,modules,bootloader,nrfxlib,test,tools,mbedtls,bsim}/**": true
+    },
+
+    // Yocto BitBake extension: point it at the real build setup.
+    "bitbake.pathToBitbakeFolder": "${workspaceFolder}/os/layers/openembedded-core/bitbake",
+    "bitbake.pathToEnvScript": "${workspaceFolder}/os/layers/openembedded-core/oe-init-build-env",
+    "bitbake.pathToBuildFolder": "${workspaceFolder}/os/build",
+
+    // Todo-Tree: reuse the search excludes above.
+    "todo-tree.filtering.useBuiltInExcludes": "file and search excludes"
+}

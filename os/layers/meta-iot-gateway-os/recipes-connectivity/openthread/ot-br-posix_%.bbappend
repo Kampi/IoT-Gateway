@@ -13,7 +13,11 @@ EXTRA_OECMAKE:append = " -DOTBR_INFRA_IF_NAME=${OTBR_INFRA_IFACE}"
 SRC_URI:append = " \
     file://otbr-agent-gateway.conf \
     file://99-thread.rules \
+    file://10-module-power.conf \
 "
+
+# Powers the nRF5340 before otbr-agent starts (see 10-module-power.conf)
+RDEPENDS:${PN} += "gateway-module-power"
 
 do_install:append() {
     install -d ${D}${sysconfdir}/default
@@ -23,9 +27,13 @@ do_install:append() {
 
     install -d ${D}${nonarch_base_libdir}/udev/rules.d
     install -m 0644 ${WORKDIR}/99-thread.rules ${D}${nonarch_base_libdir}/udev/rules.d/99-thread.rules
+
+    install -d ${D}${systemd_system_unitdir}/otbr-agent.service.d
+    install -m 0644 ${WORKDIR}/10-module-power.conf ${D}${systemd_system_unitdir}/otbr-agent.service.d/
 }
 
 FILES:${PN} += " \
     ${sysconfdir}/default/otbr-agent \
     ${nonarch_base_libdir}/udev/rules.d/99-thread.rules \
+    ${systemd_system_unitdir}/otbr-agent.service.d/10-module-power.conf \
 "

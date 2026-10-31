@@ -229,6 +229,9 @@ inherit npm systemd
 ZIGBEE2MQTT_MQTT_SERVER ?= "mqtt://localhost"
 
 SYSTEMD_SERVICE:${PN} = "zigbee2mqtt.service"
+
+# Powers the CC2652P before zigbee2mqtt starts (Requires=module-power@zigbee.service)
+RDEPENDS:${PN} += "gateway-module-power"
 SYSTEMD_AUTO_ENABLE:${PN} = "enable"
 
 # @serialport/bindings-cpp ships pre-built native .node binaries for multiple
