@@ -1,0 +1,11 @@
+[Unit]
+Description=Power and release the %i module (no-op on the Dahlia dev setup)
+# The module power/reset/boot GPIOs only exist on the IoT-Gateway mainboard.
+# On Dahlia the modules are dev kits with their own supply, so this unit just
+# satisfies the Requires= of zigbee2mqtt.service and otbr-agent.service.
+StopWhenUnneeded=yes
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/true

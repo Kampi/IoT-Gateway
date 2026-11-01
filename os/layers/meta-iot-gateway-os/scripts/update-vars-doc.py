@@ -32,7 +32,8 @@ _DOC_RE = re.compile(r'^#\s*@USER_CONFIG:\s*(.*)')
 def collect_vars():
     rows = []
     bb_files = sorted(
-        list(LAYER_DIR.rglob("recipes-*/**/*.bb"))
+        list(LAYER_DIR.rglob("conf/**/*.conf"))
+        + list(LAYER_DIR.rglob("recipes-*/**/*.bb"))
         + list(LAYER_DIR.rglob("recipes-*/**/*.bbappend"))
     )
     for bb in bb_files:

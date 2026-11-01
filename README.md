@@ -117,6 +117,22 @@ make build TARGET=gateway
 See [firmware/nRF5340/README.md](firmware/nRF5340/README.md) for the full
 workspace layout, prerequisites, and board overlay details.
 
+## Firmware - nRF54L15 (Matter test light)
+
+`firmware/nRF54L15_Matter` turns an nRF54L15-DK into a Matter-over-Thread
+light bulb that joins the gateway's Thread network and is added to Home
+Assistant via Matter. It builds against an installed nRF Connect SDK
+(`~/ncs/v3.3.4` by default).
+
+```bash
+cd firmware/nRF54L15_Matter
+make build
+make erase-flash
+```
+
+See [firmware/nRF54L15_Matter/README.md](firmware/nRF54L15_Matter/README.md)
+for commissioning with Home Assistant.
+
 ## Ressources
 
 - [KiBot Template](https://github.com/nguyen-v/KDT_Hierarchical_KiBot)

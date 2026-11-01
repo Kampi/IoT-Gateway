@@ -1,0 +1,5 @@
+Build the gateway image with:
+    bitbake gateway-os-image
+
+Gateway settings (board, MQTT broker, Thread route) are at the end of
+conf/local.conf, see layers/meta-iot-gateway-os/README.md.

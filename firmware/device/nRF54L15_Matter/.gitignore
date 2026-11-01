@@ -1,0 +1,5 @@
+# Build output
+/build/
+
+# Machine-local toolchain environment (see toolchain.mk.example)
+/toolchain.mk

@@ -237,6 +237,15 @@ SYSTEMD_SERVICE:${PN} = "zigbee2mqtt.service"
 RDEPENDS:${PN} += "gateway-module-power"
 SYSTEMD_AUTO_ENABLE:${PN} = "enable"
 
+# Dahlia dev setup: the coordinator is a USB stick, matched by VID/PID
+# (files/board-dahlia/99-zigbee.rules -> /dev/zigbee). Default: Sonoff
+# ZBDongle-P (CC2652P, CP2102N bridge), fits "adapter: zstack" in
+# configuration.yaml. For a ZBDongle-E (EFR32) also change the adapter to "ember".
+# @USER_CONFIG: USB vendor ID of the Zigbee USB stick (Dahlia dev setup only)
+ZIGBEE2MQTT_USB_VID ?= "10c4"
+# @USER_CONFIG: USB product ID of the Zigbee USB stick (Dahlia dev setup only)
+ZIGBEE2MQTT_USB_PID ?= "ea60"
+
 # @serialport/bindings-cpp ships pre-built native .node binaries for multiple
 # architectures/libcs. These arrive already stripped; suppress the QA error
 # and remove prebuilds that don't match the target to save space.
@@ -247,7 +256,10 @@ do_install:append() {
     install -m 0644 ${WORKDIR}/services/zigbee2mqtt.service ${D}${systemd_system_unitdir}/
 
     install -d ${D}${sysconfdir}/udev/rules.d
-    install -m 0644 ${WORKDIR}/99-zigbee.rules ${D}${sysconfdir}/udev/rules.d/
+    sed -e 's|@ZIGBEE2MQTT_USB_VID@|${ZIGBEE2MQTT_USB_VID}|g' \
+        -e 's|@ZIGBEE2MQTT_USB_PID@|${ZIGBEE2MQTT_USB_PID}|g' \
+        ${WORKDIR}/99-zigbee.rules > ${D}${sysconfdir}/udev/rules.d/99-zigbee.rules
+    chmod 0644 ${D}${sysconfdir}/udev/rules.d/99-zigbee.rules
 
     install -d ${D}/var/lib/zigbee2mqtt
     install -m 0644 ${WORKDIR}/configuration.yaml ${D}/var/lib/zigbee2mqtt/

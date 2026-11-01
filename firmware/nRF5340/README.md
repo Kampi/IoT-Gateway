@@ -10,6 +10,7 @@
   - [Toolchain](#toolchain)
   - [Setup](#setup)
   - [Building](#building)
+  - [Dev setup: nRF5340-DK on the Verdin Dahlia](#dev-setup-nrf5340-dk-on-the-verdin-dahlia)
   - [Heartbeat LED](#heartbeat-led)
   - [DFU / Bootloader](#dfu--bootloader)
   - [Notes](#notes)
@@ -167,6 +168,31 @@ For `TARGET=dk`, `make build`/`make flash` additionally build and flash a
 third, separate image to the **application core**
 (`nrf/samples/nrf5340/empty_app_core`, into `build_appcore/`) - see
 "Heartbeat LED" below for why this is needed.
+
+## Dev setup: nRF5340-DK on the Verdin Dahlia
+
+`TARGET=dk` is used as Thread RCP for the gateway dev setup (Yocto
+`GATEWAY_BOARD = "dahlia"`, see the meta-iot-gateway-os README):
+
+| DK (net core UART0) | | Dahlia X20 / Verdin |
+| --- | --- | --- |
+| P1.01 TxD | → | pin 12/13, UART_1 RxD (`/dev/ttymxc1` = `/dev/thread`) |
+| P1.00 RxD | ← | pin 12/13, UART_1 TxD |
+| GND | — | GND |
+
+Level shifter in between (DK 3.3 V, Verdin 1.8 V). Only TxD/RxD: 115200 baud,
+no flow control (otbr-agent default `spinel+hdlc+uart:///dev/thread`).
+
+- **Disable the DK's J-Link VCOM** once: J-Link Commander `vcom disable`, then
+  power-cycle the DK. Otherwise the onboard J-Link drives P1.00 through its
+  virtual COM port and nothing from the gateway reaches the RCP.
+- **The RCP runs on the network core** (radio local) with `empty_app_core` on
+  the application core. The alternative - OpenThread on the app core with the
+  radio on the net core (`ipc_radio`) - crashes on otbr-agent's Spinel RESET:
+  `otPlatReset` only reboots the app core, the net core keeps its IPC session
+  and both cores halt with "802.15.4 serialization error".
+- Logs without a console (the UART is Spinel-only): SEGGER RTT
+  (`CONFIG_LOG_BACKEND_RTT`), read via the J-Link.
 
 ## Heartbeat LED
 

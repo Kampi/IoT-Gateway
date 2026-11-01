@@ -1,0 +1,28 @@
+#!/bin/sh
+# NetworkManager dispatcher: fixed IPv6 address on the Thread backbone
+# interface (OTBR_INFRA_IFACE). It is the next hop of the LAN router's static
+# route to the Thread OMR prefix (OTBR_OMR_PREFIX), so that route stays valid
+# when the gateway is re-flashed (NM's own SLAAC address would change).
+# Values from ot-br-posix_%.bbappend (OTBR_INFRA_IPV6_ADDRESS, empty = off).
+IFACE="$1"
+ACTION="$2"
+ADDR="@OTBR_INFRA_IPV6_ADDRESS@"
+
+[ "${IFACE}" = "@OTBR_INFRA_IFACE@" ] || exit 0
+
+case "${ACTION}" in
+    up|reapply|dhcp6-change)
+        if [ -n "${ADDR}" ]; then
+            ip -6 addr replace "${ADDR}" dev "${IFACE}"
+        fi
+        # "nmcli device reapply" can drop the kernel's local route for the
+        # link-local address. Packets to it (neighbor advertisements from the
+        # LAN router) are then answered with "address unreachable":
+        # otbr-agent marks the router unreachable and Matter controllers in
+        # the LAN lose the Thread devices. Re-add it if missing.
+        for ll in $(ip -6 -o addr show dev "${IFACE}" scope link | awk '{print $4}' | cut -d/ -f1); do
+            ip -6 route show table local | grep -q "^local ${ll} " ||
+                ip -6 route add local "${ll}" dev "${IFACE}" table local proto kernel metric 0
+        done
+        ;;
+esac

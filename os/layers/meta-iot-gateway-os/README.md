@@ -1,142 +1,101 @@
 # meta-iot-gateway-os
 
-Yocto/OpenEmbedded layer for the IoT Gateway OS. Targets the
-[Toradex Verdin iMX8MM][som] and provides a hardened, multi-protocol IoT
-gateway image.
+Yocto/OpenEmbedded layer for the IoT Gateway OS on the
+[Toradex Verdin iMX8MM][som]: a headless, multi-protocol IoT gateway
+(LoRaWAN, Zigbee, Wireless M-Bus, Bluetooth LE, Thread/Matter) that publishes
+everything via MQTT to Home Assistant.
 
 [som]: https://www.toradex.com/computer-on-modules/verdin-arm-family/nxp-imx-8m-mini-nano
 
 - **Yocto release:** Scarthgap (5.0)
-- **Distro:** `gateway-os`
-- **Image:** `gateway-os-image`
+- **Distro:** `gateway-os` (`conf/distro/gateway-os.conf`)
+- **Image:** `gateway-os-image` (`recipes-core/images/gateway-os-image.bb`)
 
 ---
 
 ## Table of Contents
 
 - [meta-iot-gateway-os](#meta-iot-gateway-os)
-  - [Table of Contents](#table-of-contents)
-  - [Dependencies](#dependencies)
-  - [Adding the Layer](#adding-the-layer)
   - [Building](#building)
   - [Configuration Variables](#configuration-variables)
+  - [Board variants](#board-variants)
   - [Hardware](#hardware)
     - [SODIMM Pin Mapping](#sodimm-pin-mapping)
-    - [GPIO](#gpio)
-    - [LED](#led)
-    - [Battery Management](#battery-management)
-    - [On-module Sensors](#on-module-sensors)
-  - [Distro Configuration](#distro-configuration)
-    - [DISTRO\_FEATURES](#distro_features)
-    - [systemd](#systemd)
-  - [Kernel](#kernel)
-    - [Custom DTS](#custom-dts)
-    - [Kernel Config Fragment](#kernel-config-fragment)
-  - [Device Tree](#device-tree)
-    - [Nodes enabled / added](#nodes-enabled--added)
-    - [Nodes explicitly disabled](#nodes-explicitly-disabled)
-  - [Image Contents](#image-contents)
-    - [IMAGE\_FEATURES](#image_features)
-    - [IMAGE\_INSTALL](#image_install)
+    - [Battery and sensors](#battery-and-sensors)
   - [Protocol Stack](#protocol-stack)
-    - [LoRaWAN - RAK5146 (USB, SX1302)](#lorawan---rak5146-usb-sx1302)
-    - [Zigbee - CC2652P (UART\_2)](#zigbee---cc2652p-uart_2)
-    - [Wireless M-Bus (UART\_1)](#wireless-m-bus-uart_1)
-    - [Bluetooth LE - on-module (SDIO)](#bluetooth-le---on-module-sdio)
-    - [Thread - nRF5340 RCP (UART\_4)](#thread---nrf5340-rcp-uart_4)
+    - [LoRaWAN](#lorawan)
+    - [Zigbee](#zigbee)
+    - [Wireless M-Bus](#wireless-m-bus)
+    - [Bluetooth LE](#bluetooth-le)
+    - [Thread](#thread)
     - [MQTT](#mqtt)
-  - [Security](#security)
-    - [SSH - Certificate-only authentication](#ssh---certificate-only-authentication)
-    - [Secure Element - ATECC608B](#secure-element---atecc608b)
-    - [Battery Fuel Gauge - MAX17048](#battery-fuel-gauge---max17048)
   - [Networking](#networking)
-  - [System Logging](#system-logging)
-    - [Architecture](#architecture)
-    - [How the sync works](#how-the-sync-works)
-    - [Configuration](#configuration)
-    - [Reading archived logs](#reading-archived-logs)
+  - [Security](#security)
+  - [Logging](#logging)
   - [Backup](#backup)
-    - [How it works](#how-it-works)
-    - [What's backed up / not backed up](#whats-backed-up--not-backed-up)
-    - [Backup Configuration](#backup-configuration)
-    - [First-time setup](#first-time-setup)
-    - [Restoring](#restoring)
   - [Maintainer](#maintainer)
-
----
-
-## Dependencies
-
-| Layer | Branch | Purpose |
-| --- | --- | --- |
-| `openembedded-core` (poky) | scarthgap | Base layer |
-| `meta-arm` | scarthgap | ARM toolchain |
-| `meta-toradex-nxp` | scarthgap | Toradex BSP (iMX8MM) |
-| `meta-toradex-demos` | scarthgap | Toradex demo configs |
-| `meta-security` | scarthgap | Security hardening |
-
----
-
-## Adding the Layer
-
-```bash
-bitbake-layers add-layer layers/meta-iot-gateway-os
-```
-
-The layer priority is **6** (`BBFILE_PRIORITY_meta-iot-gateway-os = "6"`).
 
 ---
 
 ## Building
 
+Dependencies (all `scarthgap`): `openembedded-core`, `meta-arm`,
+`meta-toradex-nxp`, `meta-toradex-demos`, `meta-security`.
+
 ```bash
+bitbake-layers add-layer layers/meta-iot-gateway-os   # layer priority 6
 source layers/poky/oe-init-build-env build
 bitbake gateway-os-image
 ```
 
-The resulting artifacts are located in `build/tmp/deploy/images/verdin-imx8mm/`.
+Artifacts: `build/tmp/deploy/images/verdin-imx8mm/`.
+
+Example configuration (Dahlia dev setup, MQTT broker on the NAS):
+`conf/templates/gateway-os/` (`local.conf.sample`, `bblayers.conf.sample`).
+Create a new build directory from it with:
+
+```bash
+TEMPLATECONF=$PWD/layers/meta-iot-gateway-os/conf/templates/gateway-os \
+    source layers/openembedded-core/oe-init-build-env build
+```
+
+The gateway settings are at the end of `local.conf`.
 
 ---
 
 ## Configuration Variables
 
-The following variables can be overridden in `build/conf/local.conf` to adapt
-the image to the target infrastructure without modifying any recipe.
-
-All MQTT clients default to `localhost`, i.e. the Mosquitto broker on the
-gateway itself. If Home Assistant / ChirpStack use a broker elsewhere (e.g. on
-a NAS), point **all** of them to it, otherwise their data never leaves the
-gateway.
+Set in `build/conf/local.conf`. All MQTT clients default to the Mosquitto
+broker on the gateway (`localhost`). If Home Assistant / ChirpStack use a
+broker elsewhere, point **all** of them to it:
 
 ```bitbake
-# Example local.conf entries
+GATEWAY_BOARD           = "dahlia"
 CHIRPSTACK_MQTT_SERVER  = "tcp://192.168.1.10:1883"
 ZIGBEE2MQTT_MQTT_SERVER = "mqtt://192.168.1.10"
 WMBUSMETERS_MQTT_SERVER = "192.168.1.10"
 THEENGS_MQTT_HOST       = "192.168.1.10"
 TELEMETRY_MQTT_HOST     = "192.168.1.10"
-LORA_SERVER_ADDRESS     = "localhost"
-OTBR_INFRA_IFACE        = "end0"
-OTBR_RCP_DEVICE         = "/dev/thread"
 ```
-
-> **Updating this table:** run `python3 scripts/update-vars-doc.py` from the
-> layer root after adding a new `# @USER_CONFIG: <description>` marker above
-> any `VARIABLE ?= "default"` line in a recipe.
 
 <!-- USER_CONFIG_START -->
 
 | Variable | Default | Description | Recipe |
 | --- | --- | --- | --- |
+| `GATEWAY_BOARD` | `mainboard` | Target hardware: "mainboard" (IoT-Gateway PCB, see gateway/) or "dahlia" (Verdin Dahlia dev setup with nRF5340-DK as Thread RCP on UART_1) | `gateway-os.conf` |
 | `CHIRPSTACK_MQTT_SERVER` | `tcp://localhost:1883` | MQTT broker URL for ChirpStack Gateway Bridge (e.g. tcp://192.168.1.10:1883) | `chirpstack-gateway-bridge_4.0.11.bb` |
 | `LORA_SERVER_ADDRESS` | `localhost` | Address of the ChirpStack Gateway Bridge (Semtech UDP server) | `lora-packet-forwarder_2.1.0.bb` |
-| `OTBR_INFRA_IFACE` | `end0` | Network interface connected to the backbone (IP) network | `ot-br-posix_%.bbappend` |
+| `OTBR_INFRA_IFACE` | `mlan0` | Network interface connected to the backbone (IP) network with IPv6 | `ot-br-posix_%.bbappend` |
+| `OTBR_INFRA_IPV6_ADDRESS` | `fd8f:e72d:8065:0:3f1e:f55:3464:19db/64` | Fixed IPv6 address/prefix length of the gateway on OTBR_INFRA_IFACE, next hop of the LAN router's route to OTBR_OMR_PREFIX (empty = none) | `ot-br-posix_%.bbappend` |
 | `OTBR_RCP_DEVICE` | `/dev/thread` | Thread RCP device path (nRF5340 flashed with OpenThread RCP firmware, connected via UART_4) | `ot-br-posix_%.bbappend` |
 | `THEENGS_MQTT_HOST` | `localhost` | MQTT broker host for Theengs Gateway (Bluetooth LE to MQTT, e.g. 192.168.1.10) | `theengs-gateway_1.8.0.bb` |
+| `OTBR_OMR_PREFIX` | `fdf2:83ec:1caf:1::/64` | Fixed OMR (off-mesh routable) IPv6 prefix of the Thread network, e.g. "fdxx:xxxx:xxxx:1::/64" (random ULA, RFC 4193). Empty = border router picks a random one that changes with every new Thread network. A fixed prefix lets the LAN router keep one static route to the gateway. | `thread-network-init_1.0.bb` |
 | `WMBUSMETERS_MQTT_SERVER` | `localhost` | MQTT broker hostname (or hostname:port) for wmbusmeters (e.g. 192.168.1.10 or 192.168.1.10:1883) | `wmbusmeters_1.18.0.bb` |
 | `WMBUSMETERS_DEVICE` | `/dev/wmbus:im871a:t1` | wM-Bus receiver for wmbusmeters (device:type:link modes, e.g. /dev/wmbus:im871a:t1) | `wmbusmeters_1.18.0.bb` |
 | `ZIGBEE2MQTT_MQTT_SERVER` | `mqtt://localhost` | MQTT broker URL for Zigbee2MQTT (e.g. mqtt://192.168.1.10) | `zigbee2mqtt_2.12.0.bb` |
 | `ZIGBEE2MQTT_HA_BRIDGE_NAME` | `IoT-Gateway (Zigbee)` | Name of the Zigbee bridge device in Home Assistant, parent of all Zigbee devices | `zigbee2mqtt_2.12.0.bb` |
+| `ZIGBEE2MQTT_USB_VID` | `10c4` | USB vendor ID of the Zigbee USB stick (Dahlia dev setup only) | `zigbee2mqtt_2.12.0.bb` |
+| `ZIGBEE2MQTT_USB_PID` | `ea60` | USB product ID of the Zigbee USB stick (Dahlia dev setup only) | `zigbee2mqtt_2.12.0.bb` |
 | `TELEMETRY_MQTT_HOST` | `localhost` | MQTT broker host for the gateway telemetry (Home Assistant device "IoT-Gateway") | `gateway-telemetry_1.0.bb` |
 | `TELEMETRY_DEVICE_NAME` | `IoT-Gateway` | Name of the gateway device in Home Assistant (CPU, memory, disk, battery, uptime) | `gateway-telemetry_1.0.bb` |
 | `TELEMETRY_LORA_DEVICE_NAME` | `IoT-Gateway (LoRa)` | Name of the LoRa gateway device in Home Assistant, parent of all LoRa sensors | `gateway-telemetry_1.0.bb` |
@@ -145,19 +104,54 @@ OTBR_RCP_DEVICE         = "/dev/thread"
 
 <!-- USER_CONFIG_END -->
 
+The table is generated: run `python3 scripts/update-vars-doc.py` after adding
+a `# @USER_CONFIG: <description>` line directly above a `VAR ?= "default"`.
+
+---
+
+## Board variants
+
+`GATEWAY_BOARD` adds the override `board-<name>`: recipes use
+`VAR:board-dahlia = ...`, and files in `files/board-dahlia/` replace the
+default ones.
+
+| | `mainboard` (default) | `dahlia` (dev setup) |
+| --- | --- | --- |
+| Hardware | IoT-Gateway PCB (`gateway/`) | Verdin Dahlia + nRF5340-DK |
+| Module power/reset/boot GPIOs | `module-power@<module>.service` drives them | no-op unit (dev kits have their own supply) |
+| `end0` (Ethernet) | DHCP | static `192.168.0.2/24`, point-to-point link to the build host, no default route |
+| Thread RCP | Fanstel BT40 on UART_4, `/dev/thread` | nRF5340-DK on UART_1, `/dev/thread` |
+| Zigbee | CC2652P module on UART_2, `/dev/zigbee`, powered via `module-power@zigbee` | USB stick, `/dev/zigbee` by VID/PID (`ZIGBEE2MQTT_USB_VID`/`_PID`, default `10c4:ea60`). `zigbee2mqtt` starts when it is plugged in, skipped without it |
+| LoRa | RAK5146 USB concentrator (`0483:5740`), `/dev/lora`. `lora-packet-forwarder` starts when it is plugged in | same |
+| wM-Bus | iM871A on UART_1, `/dev/wmbus` | none, wmbusmeters disabled (UART_1 is the Thread RCP) |
+
+| Verdin UART | `mainboard` (default) | `dahlia` (dev setup) |
+| --- | --- | --- |
+| UART_1 | wM-Bus | Thread RCP (Dahlia X20 pin 12/13, TxD/RxD only, 115200 baud) |
+| UART_2 | Zigbee | unused |
+| UART_3 | Linux console (`console=ttymxc0,115200`) | Linux console |
+| UART_4 | Thread RCP (with RTS/CTS) | unused |
+
+The services always use the same device names (`/dev/thread`, `/dev/zigbee`,
+`/dev/lora`, `/dev/wmbus`); only the udev rules differ per board.
+
+The nRF5340-DK's J-Link drives P1.00 through its virtual COM port, which
+blocks the RCP's RxD on Dahlia. Disable it once with J-Link Commander
+(`vcom disable`) and power-cycle the DK.
+
 ---
 
 ## Hardware
 
-**SoM**
-Toradex Verdin iMX8MM (NXP i.MX 8M Mini, Cortex-A53 quad-core, aarch64)
+Toradex Verdin iMX8MM (NXP i.MX 8M Mini, Cortex-A53 quad-core, aarch64).
+Custom devicetree: `recipes-kernel/linux/linux-toradex/iot-gateway-imx8mm.dts`
+(unused SoM peripherals disabled), kernel fragment `atecc608b.cfg`
+(I2C chardev, ATECC/SHA204A crypto, MAX17040 fuel gauge).
 
 ### SODIMM Pin Mapping
 
-**Verdin UART_N labels (Toradex schematic notation) do not match NXP/Linux's
-`&uartN` devicetree node numbers.** Toradex's own base devicetree
-(`imx8mm-verdin.dtsi`) documents the real mapping directly above each
-`&uartN` node:
+**Verdin UART_N labels do not match the NXP/Linux `&uartN` node numbers**
+(see the comments in Toradex's `imx8mm-verdin.dtsi`):
 
 | Verdin UART (schematic) | NXP/Linux devicetree node | `serial` alias | Linux device |
 | --- | --- | --- | --- |
@@ -165,11 +159,6 @@ Toradex Verdin iMX8MM (NXP i.MX 8M Mini, Cortex-A53 quad-core, aarch64)
 | UART_1 | `&uart2` | `serial1` | `/dev/ttymxc1` |
 | UART_2 | `&uart3` | `serial2` | `/dev/ttymxc2` |
 | UART_4 | `&uart4` | `serial3` | `/dev/ttymxc3` |
-
-Only UART_4 happens to line up by coincidence. `/dev/ttymxc<N>` comes from
-the SoC-level `aliases { serialN = &uartX; }` node
-(`imx8mm.dtsi`) - the driver assigns the minor number from the alias
-index, independent of which UARTs are enabled.
 
 | Signal | SODIMM | iMX8MM pad | Linux device | Purpose |
 | --- | --- | --- | --- | --- |
@@ -214,433 +203,144 @@ index, independent of which UARTs are enabled.
 | SSD-Power-Enable | 187 | GPIO1_IO15 | `gpiochip0` line 15 | NVMe SSD power enable |
 | PowerMux-Status | 210 | GPIO5_IO26 | `gpiochip4` line 26 | Power mux status |
 
-### GPIO
+GPIOs with a `gpio-line-names` label can be used by name with libgpiod
+(`gpioget --by-name gpiochip3 lora-power-enable`). The ready-LED uses the LED
+subsystem (`/sys/class/leds/ready/brightness`), set by
+`gateway-ready-led.service` once the boot completes.
 
-GPIO lines with a `gpio-line-names` label in the DTS can be addressed by
-name via `libgpiod`:
+On the mainboard `uart4` (Thread RCP) is still `status = "disabled"`: UART_4 is
+shared with the Cortex-M4. Enable it once the M4 firmware no longer claims it.
 
-```bash
-gpioget --by-name gpiochip3 lora-power-enable
-gpioset gpiochip3 25=1   # LoRa power on
-```
-
-### LED
-
-The ready-LED is managed by the kernel `gpio-leds` driver and is accessible
-via the LED subsystem — not via `libgpiod`:
-
-```bash
-cat /sys/class/leds/ready/brightness   # 0 = off, 1 = on
-echo 1 > /sys/class/leds/ready/brightness
-```
-
-The LED is driven by `gateway-ready-led.service` once the boot completes.
-
-### Battery Management
+### Battery and sensors
 
 | Device | Interface | Purpose | sysfs / named line |
 | --- | --- | --- | --- |
-| MAX17048 fuel gauge | i2c1 `0x36` | State of charge | `/sys/class/power_supply/max17040-0/` |
+| MAX17048 fuel gauge | `&i2c4` (`/dev/i2c-3`) `0x36` | State of charge | `/sys/class/power_supply/max17040-0/` |
 | Charge enable | GPIO3_IO23 `battery-charge-enable` | Enable/disable charging | `gpioset gpiochip2 23=1` |
 | Charge status | GPIO3_IO22 `battery-charge` | Charging active (input) | `gpioget gpiochip2 22` |
 | Alert | GPIO3_IO24 `battery-alert` | Low-battery alert (input) | `gpioget gpiochip2 24` |
 
-```bash
-# State of charge (percent)
-cat /sys/class/power_supply/max17040-0/capacity
-# Cell voltage (µV)
-cat /sys/class/power_supply/max17040-0/voltage_now
-```
-
-### On-module Sensors
-
-On two different on-SoM I2C buses - `verdin_som_adc` on `&i2c1` (`/dev/i2c-0`,
-the SoM-internal bus that also carries the PMIC), `hwmon` on `&i2c4`
-(`/dev/i2c-3`, the same bus as the carrier's ATECC608B/MAX17048 - see
-"SODIMM Pin Mapping" for why `&i2c4` is "Verdin I2C_1" and `&i2c1` isn't):
-
-**INA219 — Module supply current (`hwmon`)**
-
-```bash
-# Current into module VCC (mA), bus voltage (mV), power (µW)
-cat /sys/class/hwmon/hwmon*/curr1_input
-cat /sys/class/hwmon/hwmon*/in1_input
-cat /sys/class/hwmon/hwmon*/power1_input
-```
-
-**ADS1015 — On-module ADC (`verdin_som_adc`)**
-
-4 differential / 8 single-ended channels exposed via the IIO subsystem:
-
-```bash
-ls /sys/bus/iio/devices/iio\:device*/in_voltage*_raw
-cat /sys/bus/iio/devices/iio\:device0/in_voltage4_raw  # ADC_4 single-ended
-```
-
----
-
-## Distro Configuration
-
-`conf/distro/gateway-os.conf`
-
-```text
-DISTRO_VERSION  = "1.0.0"
-INIT_MANAGER    = "systemd"
-```
-
-### DISTRO_FEATURES
-
-| Added | Removed |
-| --- | --- |
-| `pam` | `x11` |
-| `virtualization` | `wayland` |
-| `wifi` | `3g` |
-| `bluetooth` | `alsa` |
-| `overlayfs` | `opengl` |
-| | `vulkan` |
-
-Multimedia (audio, display, GPU) is fully removed. Only headless operation.
-
-### systemd
-
-- Network management: `systemd-networkd`
-- DNS resolution: `systemd-resolved`
-- `VIRTUAL-RUNTIME_net_manager = "systemd"`
-
----
-
-## Kernel
-
-**Recipe:** `recipes-kernel/linux/linux-toradex_%.bbappend`
-
-### Custom DTS
-
-The file `linux-toradex/iot-gateway-imx8mm.dts` is injected into the kernel
-source tree at build time via `do_configure:append()`:
-
-```text
-arch/arm64/boot/dts/freescale/iot-gateway-imx8mm.dts
-```
-
-The corresponding DTB is registered via:
-
-```bitbake
-KERNEL_DEVICETREE:append = " freescale/iot-gateway-imx8mm.dtb"
-```
-
-### Kernel Config Fragment
-
-`linux-toradex/atecc608b.cfg` enables:
-
-| Option | Purpose |
-| --- | --- |
-| `CONFIG_I2C_CHARDEV=y` | `/dev/i2c-X` character devices for cryptoauthlib |
-| `CONFIG_CRYPTO_DEV_ATMEL_ECC=y` | ATECC508A/608A kernel crypto driver |
-| `CONFIG_CRYPTO_DEV_ATMEL_SHA204A=y` | SHA204A kernel crypto driver |
-| `CONFIG_BATTERY_MAX17040=y` | MAX17048 fuel gauge driver |
-
----
-
-## Device Tree
-
-`recipes-kernel/linux/linux-toradex/iot-gateway-imx8mm.dts`
-
-Includes the Toradex base overlays:
-
-- `imx8mm-verdin.dtsi`
-- `imx8mm-verdin-wifi.dtsi`
-- `imx8mm-verdin-dev.dtsi`
-
-### Nodes enabled / added
-
-| Node | Bus / Interface | Address | Purpose |
-| --- | --- | --- | --- |
-| `atecc608b` | i2c1 | `0x60` | Secure element (cryptoauthlib userspace) |
-| `max17048` (fuel-gauge) | i2c1 | `0x36` | Battery fuel gauge (`max17040_battery`) |
-| `hwmon` (INA219) | i2c4 | `0x40` | Current measurement into module VCC |
-| `verdin_som_adc` (ADS1015) | i2c1 | `0x49` | On-module ADC channels |
-| `gpio-leds` (led-ready) | GPIO3_IO4 | - | Ready-LED on SODIMM 206 |
-| `uart1` | SODIMM 133/135 | - | Console (stdout-path) |
-| `uart2` | SODIMM 129/131 | - | wmBus transceiver |
-| `uart3` | SODIMM 137/139 | - | Zigbee adapter |
-
-### Nodes explicitly disabled
-
-| Node | Reason |
-| --- | --- |
-| `sai2` | SAI2 pins repurposed as power-enable GPIOs |
-| `ecspi2` | ECSPI2 pins repurposed as UART_4 (Thread RCP) |
-| `flexspi` | No QSPI flash on carrier |
-| `usdhc2` | No SD card slot on carrier |
-| `uart4` | Prepared for Thread RCP (nRF5340) but reserved for M4 core by default |
-| `i2c2` | No devices on Verdin I2C_2_DSI |
-| `i2c3` | No devices on Verdin I2C_4_CSI |
-| `i2c4` | Carrier board I2C unused |
-| `pwm1` / `pwm2` / `pwm3` | No PWM consumers |
-| `sound_card` | No audio hardware |
-| `nau8822_1a` | No audio codec |
-| `lcdif` | No display |
-| `gpio_expander_21` | No GPIO expander on carrier |
-| `lvds_ti_sn65dsi84` | No DSI display adapter |
-| `hdmi_lontium_lt8912` | No HDMI adapter |
-| `atmel_mxt_ts` | No touchscreen |
-| `eeprom_display_adapter` | No display adapter EEPROM |
-| `eeprom_carrier_board` | Carrier EEPROM not used |
-| `hwmon_temp` | No temperature sensor on carrier |
-
----
-
-## Image Contents
-
-`recipes-core/images/gateway-os-image.bb`
-
-### IMAGE_FEATURES
-
-| Feature | Package |
-| --- | --- |
-| `ssh-server-openssh` | OpenSSH server |
-
-### IMAGE_INSTALL
-
-| Package | Version | Purpose |
-| --- | --- | --- |
-| `htop` | - | System monitor |
-| `curl` | - | HTTP client |
-| `tmux` | - | Terminal multiplexer |
-| `nano` | - | Text editor |
-| `i2c-tools` | - | I2C bus utilities (`i2cdetect`, `i2cget`, `i2cset`) |
-| `libgpiod` | - | GPIO library |
-| `libgpiod-tools` | - | GPIO CLI tools (`gpioget`, `gpioset`, `gpioinfo`) |
-| `avahi-daemon` | - | mDNS/DNS-SD service discovery |
-| `mosquitto` | - | MQTT broker |
-| `mosquitto-clients` | - | MQTT CLI tools |
-| `ot-br-posix` | 0.3.0+git | OpenThread Border Router (Thread ↔ IP) |
-| `wmbusmeters` | 1.18.0 | Wireless M-Bus meter reader |
-| `zigbee2mqtt` | 2.12.0 | Zigbee ↔ MQTT bridge |
-| `lora-packet-forwarder` | 2.1.0 | LoRaWAN packet forwarder (SX1302/SX1303) |
-| `chirpstack-gateway-bridge` | 4.0.11 | LoRaWAN gateway bridge to ChirpStack |
-| `cryptoauthlib` | 3.7.4 | Microchip crypto library for ATECC608B |
-| `gateway-logging` | 1.0 | RAM journal + eMMC ring buffer logging |
-| `gateway-ready-led` | - | Drives ready-LED via systemd service |
-| `networkmanager` | - | Network manager |
-| `networkmanager-nmcli` | - | NetworkManager CLI |
-| `wifi-captive-portal` | - | Wi-Fi provisioning captive portal |
-| `iw` | - | Wireless configuration tool |
-| `linux-firmware` | - | Firmware for on-module Wi-Fi/BT |
-| `bluez5` | - | Bluetooth stack |
-| `mcumgr` | git (apache/mynewt-mcumgr-cli) | MCUmgr/SMP CLI - MCUboot serial recovery/DFU for the nRF5340 (see `firmware/nRF5340/`) |
+Fuel gauge MAX17048 (`max17040_battery`): `/sys/class/power_supply/max17040-0/{capacity,voltage_now}`.
+On-module: INA219 supply current (`/sys/class/hwmon/hwmon*/curr1_input`),
+ADS1015 ADC (`/sys/bus/iio/devices/iio:device0/in_voltage*_raw`).
 
 ---
 
 ## Protocol Stack
 
-### LoRaWAN - RAK5146 (USB, SX1302)
+The services only use the device names below. Which hardware sits behind
+them per board: see [Board variants](#board-variants).
 
-- **Hardware:** RAK5146 USB concentrator module (SX1302/SX1303)
-- **Connection:** USB CDC-ACM - `VID:0483 PID:5740`
-- **udev symlink:** `/dev/lora`
-- **Config:** `global_conf.json.RAK-USB-EU868` (EU868 band plan)
-- **Install path:** `/opt/lora-packet-forwarder/`
-- **Service:** `lora-packet-forwarder.service` (autostart)
+### LoRaWAN
 
-```text
-SUBSYSTEM=="tty", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5740", SYMLINK+="lora"
-```
+- **Hardware / device:** RAK5146 USB concentrator (SX1302), `/dev/lora`
+- **Services:** `lora-packet-forwarder` (`/opt/lora-packet-forwarder/`, EU868)
+  → `chirpstack-gateway-bridge` → MQTT
+- Started by udev when the concentrator appears, stopped when it disappears.
+  `gateway-telemetry` restarts the forwarder if the bridge stops publishing
+  stats (`LORA_WATCHDOG_TIMEOUT`)
 
-### Zigbee - CC2652P (UART_2)
+### Zigbee
 
-- **Hardware:** CC2652P coordinator via Verdin UART_2 (NXP/Linux `&uart3` -
-  Verdin's UART_N labels don't match NXP's `&uartN` node numbers, see
-  "SODIMM Pin Mapping")
-- **Connection:** `/dev/ttymxc2` (iMX8MM `uart3`, SODIMM 137/139)
-- **udev symlink:** `/dev/zigbee`
-- **Adapter type:** `zstack`
-- **MQTT base topic:** `zigbee2mqtt`
-- **MQTT broker:** `mqtt://localhost`
-- **Service:** `zigbee2mqtt.service` (autostart, depends on `mosquitto.service`)
-- **Data directory:** `/var/lib/zigbee2mqtt/`
+- **Device:** `/dev/zigbee`, adapter `zstack` (EFR32 sticks such as the
+  ZBDongle-E: `ember`)
+- **Service:** `zigbee2mqtt`, data in `/var/lib/zigbee2mqtt/`, base topic
+  `zigbee2mqtt`. On Dahlia started when the USB stick is plugged in
 
-```text
-SUBSYSTEM=="tty", KERNELS=="30880000.serial", SYMLINK+="zigbee"
-```
+### Wireless M-Bus
 
-### Wireless M-Bus (UART_1)
+- **Device:** `/dev/wmbus` (iM871A, mainboard only), mode `auto:t1`
+- **Service:** `wmbusmeters`, config in `/etc/wmbusmeters.d/`, log in
+  `/var/log/wmbusmeters/`
 
-- **Hardware:** wmBus transceiver via Verdin UART_1 (NXP/Linux `&uart2`)
-- **Connection:** `/dev/ttymxc1` (iMX8MM `uart2`, SODIMM 129/131)
-- **Tool:** `wmbusmeters` 1.18.0
-- **Mode:** `auto:t1`
-- **Log:** `/var/log/wmbusmeters/wmbusmeters.log`
-- **Config dir:** `/etc/wmbusmeters.d/`
-- **Service:** `wmbusmeters.service` (autostart)
+### Bluetooth LE
 
-### Bluetooth LE - on-module (SDIO)
+- **Hardware:** Wi-Fi/BT chip of the Verdin module (SDIO, `hci0`)
+- **Service:** `theengs-gateway` 1.8.0 (Theengs Decoder 2.5.0) decodes BLE
+  sensor advertisements, MQTT topics `home/TheengsGateway/BTtoMQTT/<MAC>`
+- **Home Assistant:** every sensor is a device of its own under
+  `IoT-Gateway (Bluetooth)`. iBeacons are filtered out
+- Python dependencies missing in scarthgap: `recipes-devtools/python/`
+- Test firmware: `firmware/ESP32_BLE` (BTHome v2)
 
-- **Hardware:** Wi-Fi/Bluetooth combo chip of the Verdin module, Bluetooth
-  part via SDIO (driver `btmrvl_sdio`)
-- **Interface:** `hci0` (BlueZ 5, `bluetooth.service`)
-- **Tool:** [Theengs Gateway](https://gateway.theengs.io) 1.8.0 with Theengs
-  Decoder 2.5.0 - scans BLE advertisements and decodes several hundred sensor
-  types (Xiaomi, Govee, SwitchBot, Inkbird, BTHome-based devices, ...)
-- **MQTT topics:** `home/TheengsGateway/BTtoMQTT/<MAC>` (data),
-  `home/TheengsGateway/LWT` (online/offline)
-- **MQTT broker:** `THEENGS_MQTT_HOST` (see "Configuration Variables")
-- **Home Assistant:** MQTT discovery. Every decoded sensor is a device of its
-  own, linked to the gateway device `IoT-Gateway (Bluetooth)`
-  (`TELEMETRY_BLE_DEVICE_NAME`, announced by `gateway-telemetry` like the
-  LoRa and wM-Bus gateway devices), which shows connection state and version.
-  iBeacons (phones, trackers) are filtered out of discovery.
-- **Config:** `/var/lib/theengs-gateway/theengsgw.conf` (rewritten by Theengs
-  on every start, hence not in `/etc`)
-- **Service:** `theengs-gateway.service` (autostart, powers on `hci0` before
-  starting, see `bluetoothctl power on`)
+### Thread
 
-Python dependencies missing in scarthgap are packaged in
-`recipes-devtools/python/` (`bluetooth-adapters` is pinned to 0.20.2, the
-newest release that works with scarthgap's bleak 0.21 / dbus-fast 2.21 /
-poetry-core 1.9). Theengs Decoder's C++ extension is built directly with the
-target toolchain instead of scikit-build.
-
-Test firmware broadcasting random temperature/humidity values as BTHome v2:
-`firmware/ESP32_BLE` (shows up as `THB1/BTH01/TH05F`).
-
-### Thread - nRF5340 RCP (UART_4)
-
-- **Hardware:** Nordic nRF5340 flashed with OpenThread RCP firmware
-- **Connection:** UART_4, SODIMM 196/198/200/202 (via ECSPI2 pad mux, with RTS/CTS)
-- **udev symlink:** `/dev/thread` (maps `30a60000.serial` → `/dev/thread`)
-- **Protocol:** Spinel/HDLC over UART
-- **Border Router daemon:** `otbr-agent` (ot-br-posix)
-- **Thread interface:** `wpan0`
-- **Backbone interface:** `end0` (configurable via `OTBR_INFRA_IFACE`)
-- **Service:** `otbr-agent.service`
-
-> **Note:** `uart4` is currently `status = "disabled"` because UART_4 is
-> shared with the Cortex-M4 core. Enable it by setting `status = "okay"`
-> once the M4 firmware no longer claims the UART.
+- **Hardware / device:** nRF5340 RCP (`firmware/nRF5340`), `/dev/thread`,
+  Spinel/HDLC, 115200 baud
+- **Border router:** `otbr-agent`, ot-br-posix `thread-reference-20250612`
+  (announces the Thread role via mDNS, last version with Avahi support),
+  `wpan0`, backbone `mlan0` with IPv6 (`OTBR_INFRA_IFACE`), TREL enabled,
+  IPv6 forwarding on
+- **Network start:** `thread-network-init` attaches the network on every
+  `otbr-agent` start, sets the fixed OMR prefix and keeps a copy of the
+  dataset in `/var/lib/gateway-os/thread-dataset.hex`. A missing dataset is
+  restored from it; a new network is only formed on the very first start
 
 ```text
-OTBR_AGENT_OPTS="-I wpan0 -B end0 spinel+hdlc+uart:///dev/thread trel://end0"
+OTBR_AGENT_OPTS="-I wpan0 -B mlan0 spinel+hdlc+uart:///dev/thread?uart-baudrate=115200 trel://mlan0"
 ```
 
-TREL (Thread Radio Encapsulation Link) is enabled for Thread-over-IP fallback.
+#### LAN route to the Thread network
+
+Thread devices get addresses from the OMR prefix. Not every LAN host learns
+the route from the gateway's Router Advertisements (Android does, Synology
+DSM does not), so the LAN router needs one static IPv6 route. Both values
+are fixed by variables, so the route stays valid when the Thread network is
+recreated or the gateway is re-flashed:
+
+| Route field (FritzBox: *Home Network → Network → Network Settings → IPv6 Routes*) | Value | Variable |
+| --- | --- | --- |
+| IPv6 network / prefix length | `fdf2:83ec:1caf:1::` / `64` | `OTBR_OMR_PREFIX` (`thread-network-init`) |
+| Gateway | `fd8f:e72d:8065:0:3f1e:f55:3464:19db` | `OTBR_INFRA_IPV6_ADDRESS` (`ot-br-posix`), set on `mlan0` by a NetworkManager dispatcher script |
+
+`OTBR_INFRA_IPV6_ADDRESS` must lie in the LAN's IPv6 prefix. With several
+gateways in one LAN, give each its own OMR prefix and address. Check:
+`ot-ctl br omrprefix` (fixed prefix as `Favored`), `ip -6 addr show mlan0`.
 
 ### MQTT
 
-- **Broker:** Mosquitto (localhost)
-- **Config:** `recipes-connectivity/mosquitto/files/mosquitto.conf`
-
----
-
-## Security
-
-### SSH - Certificate-only authentication
-
-`recipes-connectivity/openssh/openssh_%.bbappend` installs a drop-in into
-`/etc/ssh/sshd_config.d/00-gateway-hardening.conf`:
-
-```text
-PasswordAuthentication no
-KbdInteractiveAuthentication no
-PubkeyAuthentication yes
-AuthenticationMethods publickey
-```
-
-Password login is completely disabled. Only SSH public key authentication is accepted.
-
-### Secure Element - ATECC608B
-
-- **Device:** Microchip ATECC608B (I2C, address `0x60`)
-- **Bus:** iMX8MM `i2c1` → `/dev/i2c-0`
-- **Library:** `cryptoauthlib` 3.7.4 (CMake, shared library)
-- **Interface:** userspace via `/dev/i2c-X` (no kernel crypto offload)
-- **Library path:** `${libdir}/libcryptoauth.so`
-
-Build options:
-
-```cmake
--DATCA_HAL_I2C=ON
--DATCA_BUILD_SHARED_LIBS=ON
--DBUILD_TESTS=OFF
-```
-
-### Battery Fuel Gauge - MAX17048
-
-- **Device:** Maxim MAX17048 (I2C, address `0x36`)
-- **Bus:** iMX8MM `i2c1` (shared with ATECC608B)
-- **Driver:** `max17040_battery` (`CONFIG_BATTERY_MAX17040=y`)
-- **sysfs:** `/sys/class/power_supply/max17040-0/{voltage_now,capacity}`
+Local broker: Mosquitto (`recipes-connectivity/mosquitto/files/mosquitto.conf`).
+`gateway-telemetry` publishes gateway status, service states and restart
+buttons to Home Assistant via MQTT discovery.
 
 ---
 
 ## Networking
 
-`recipes-core/systemd/systemd-conf_%.bbappend` installs a `systemd-networkd`
-configuration for all wired Ethernet interfaces:
+NetworkManager manages all interfaces (`systemd-networkd`/`resolved` are
+removed).
 
-- **Primary:** DHCP (preferred when available, metric 10)
-- **Fallback:** Static `192.168.0.2/24` (always active in parallel)
+| Interface | Configuration | Purpose |
+| --- | --- | --- |
+| `mlan0` (Wi-Fi) | profile created by `wifi-captive-portal` | LAN uplink, Thread backbone |
+| `end0` (Ethernet) | `eth-dhcp`: DHCP plus static `192.168.0.2/24`. Dahlia: static only, no default route | wired LAN / direct PC connection |
+| `uap0` | unmanaged, captive portal access point | Wi-Fi setup |
+| `wpan0` | `otbr-agent` | Thread |
 
-The static fallback allows direct PC-to-device Ethernet connection without a
-DHCP server. Configure the PC with any address in `192.168.0.0/24`.
+**Wi-Fi setup:** without stored credentials, or if the connection fails,
+`wifi-captive-portal` opens the access point `Gateway-Setup` with a captive
+portal to choose a network. **Direct Ethernet:** give the PC an address in
+`192.168.0.0/24` and connect to `192.168.0.2`.
 
 ---
 
-## System Logging
+## Security
 
-`recipes-core/gateway-logging/gateway-logging_1.0.bb`
+- **SSH:** public key only (`/etc/ssh/sshd_config.d/00-gateway-hardening.conf`,
+  password and keyboard-interactive login disabled)
+- **Secure element:** ATECC608B at `0x60` on `&i2c4` (`/dev/i2c-3`), used from
+  userspace via `cryptoauthlib` 3.7.4
 
-### Architecture
+---
 
-```text
-RAM (tmpfs) /run/log/journal/          <- journald writes here (volatile)
-    RuntimeMaxUse     = 64 MB          <- RAM ring buffer limit
-    RuntimeMaxFileSize =  8 MB
-    RuntimeKeepFree   = 32 MB
+## Logging
 
-         |  journal-sync.timer (every 15 min, first after 5 min)
-         v
-
-eMMC /var/lib/journal-archive/         <- compressed archive files
-    journal-YYYYMMDD-HHMMSS.log.gz
-    Ring buffer limit: 256 MB          <- oldest files deleted when exceeded
-```
-
-### How the sync works
-
-1. `journal-sync.timer` fires every 15 minutes (first time 5 minutes after boot)
-2. `journal-sync.service` runs `/usr/libexec/gateway-os/journal-sync`
-3. The script reads the cursor saved from the last run (`/var/lib/journal-archive/.cursor`); a cursor from an earlier boot is ignored and the whole journal of the current boot is exported
-4. Only new journal entries since the last cursor are exported (`--after-cursor`)
-5. Output is compressed with `gzip` and written as a timestamped file on eMMC
-6. The new cursor position is saved for the next run
-7. If the archive directory exceeds 256 MB, the oldest files are deleted
-
-### Configuration
-
-| Parameter | Value | Location |
-| --- | --- | --- |
-| RAM buffer size | 64 MB | `00-gateway-journald.conf` → `RuntimeMaxUse` |
-| eMMC ring buffer | 256 MB | `journal-sync` → `MAX_MB` |
-| Sync interval | 15 min | `journal-sync.timer` → `OnUnitActiveSec` |
-| First sync after boot | 5 min | `journal-sync.timer` → `OnBootSec` |
-
-### Reading archived logs
-
-```bash
-# List archive files
-ls -lh /var/lib/journal-archive/
-
-# Read a specific archive
-zcat /var/lib/journal-archive/journal-20260621-120500.log.gz | less
-
-# Live journal (RAM)
-journalctl -f
-```
-
-### Log rotation
-
-`/var/log` is a tmpfs (RAM), so every log file needs a size limit:
+- **Journal:** in RAM (`/run/log/journal`, 64 MB), archived every 15 min to
+  eMMC `/var/lib/journal-archive/` (gzip, 256 MB ring buffer,
+  `journal-sync.timer`). Read with `zcat /var/lib/journal-archive/<file>.log.gz`
+- **`/var/log` is RAM**, every log has a size limit. `logrotate` runs hourly,
+  services ship their rule in `/etc/logrotate.d/` (`copytruncate` for programs
+  without a reopen signal):
 
 | Log | Location | Limit |
 | --- | --- | --- |
@@ -650,86 +350,37 @@ journalctl -f
 | wmbusmeters | `/var/log/wmbusmeters/` (RAM) | logrotate: 1 MB, 3 compressed generations |
 | Zigbee2MQTT | `/var/lib/zigbee2mqtt/log/` | Zigbee2MQTT keeps the last 10 log directories |
 
-`logrotate` runs **hourly** (`recipes-extended/logrotate/logrotate_%.bbappend`).
-Services with their own log file ship a rule in `/etc/logrotate.d/<service>`
-(see `recipes-connectivity/wmbusmeters/files/wmbusmeters.logrotate`). Use
-`copytruncate` for programs that keep the file open without a reopen signal.
-
 ---
 
 ## Backup
 
-`recipes-core/gateway-backup/gateway-backup_1.0.bb`
+`gateway-backup.timer` (daily) packs `/var/lib/zigbee2mqtt/` and the Thread
+state (`/var/lib/thread/*.data`, `/var/lib/gateway-os/thread-dataset.hex`)
+and pushes it via `rsync`/ssh to `GATEWAY_BACKUP_REMOTE`
+(`/etc/default/gateway-backup`). Without a destination the run is skipped.
 
-### How it works
+Setup: after the first boot, `journalctl -u gateway-backup-keygen` shows the
+device's public key (`/etc/gateway-backup/id_ed25519.pub`). Add it to the
+backup host's `authorized_keys`, set `GATEWAY_BACKUP_REMOTE` (e.g.
+`backup@host:/srv/gateway-backups/`) and test with
+`systemctl start gateway-backup`.
 
-1. On first boot, `gateway-backup-keygen.service` generates a per-device
-   ed25519 key at `/etc/gateway-backup/id_ed25519` (skipped on later boots
-   once the key exists - `ConditionPathExists=!...`)
-2. `gateway-backup.timer` fires daily (`RandomizedDelaySec=30m`), catching up
-   a missed run after boot via `Persistent=true`
-3. `gateway-backup.service` runs `/usr/libexec/gateway-os/gateway-backup.sh`
-4. The script stages a snapshot of `/var/lib/zigbee2mqtt/` and the
-   OpenThread dataset under `/var/lib/gateway-backup/<timestamp>/`
-5. The snapshot is tarred (`<timestamp>.tar.gz`) and pushed via
-   `rsync -e ssh` to `GATEWAY_BACKUP_REMOTE`
-6. Local staging files are deleted after a successful transfer
-
-### What's backed up / not backed up
-
-| Included | Not included |
-| --- | --- |
-| `/var/lib/zigbee2mqtt/` (coordinator DB + network backup - re-pairing every Zigbee device otherwise) | ATECC608B secure element keys (hardware, non-extractable by design) |
-| OpenThread dataset (`/tmp/0_*.data`, `.swap` - network key/PAN ID/channel for the Thread mesh, e.g. the Onvis plug) | mosquitto (`persistence false`, nothing to save) |
-| | anything not explicitly listed above |
-
-> The OpenThread dataset path assumes `otbr-agent`'s working directory
-> resolves `tmp` (`OPENTHREAD_CONFIG_POSIX_SETTINGS_PATH`) to `/tmp`. Not yet
-> verified whether `/tmp` is persistent or tmpfs on this image - that only
-> matters for surviving a reboot (see [Thread - nRF5340 RCP](#thread---nrf5340-rcp-uart_4)
-> / `thread-network-init`, which re-attaches on every boot regardless), not
-> for this backup, which just needs the file to exist while the timer runs.
-> Verify with `ls /tmp/0_*` after the Thread network has formed.
-
-### Backup Configuration
-
-| Parameter | Location |
-| --- | --- |
-| Remote destination | `/etc/default/gateway-backup` → `GATEWAY_BACKUP_REMOTE` (e.g. `backup@host:/srv/gateway-backups/`) |
-| SSH key | `/etc/gateway-backup/id_ed25519` (generated on first boot, add the `.pub` to the remote host's `authorized_keys`) |
-| Known hosts | `/etc/gateway-backup/known_hosts` (`StrictHostKeyChecking=accept-new` - trusted on first connect, verified after) |
-| Schedule | Daily, `RandomizedDelaySec=30m` (`gateway-backup.timer`) |
-
-### First-time setup
+Restore:
 
 ```bash
-# 1. Let the gateway boot once so gateway-backup-keygen runs, then fetch the public key:
-journalctl -u gateway-backup-keygen
-
-# 2. Add it to the backup host:
-ssh backup@host "mkdir -p ~/.ssh && echo '<pasted pubkey>' >> ~/.ssh/authorized_keys"
-
-# 3. Set the destination:
-echo 'GATEWAY_BACKUP_REMOTE="backup@host:/srv/gateway-backups/"' > /etc/default/gateway-backup
-
-# 4. Trigger a manual run to verify:
-systemctl start gateway-backup.service
-journalctl -u gateway-backup.service
-```
-
-### Restoring
-
-```bash
-# On the backup host, list snapshots for this device:
-ls /srv/gateway-backups/
-
-# On the gateway (stop the affected services first):
 systemctl stop zigbee2mqtt otbr-agent
-tar -xzf <timestamp>.tar.gz -C /tmp/restore
+mkdir -p /tmp/restore && tar -xzf <timestamp>.tar.gz -C /tmp/restore
 cp -a /tmp/restore/<timestamp>/zigbee2mqtt/. /var/lib/zigbee2mqtt/
-cp -a /tmp/restore/<timestamp>/0_*.data /tmp/   # OpenThread settings path
+cp -a /tmp/restore/<timestamp>/thread/thread-dataset.hex /var/lib/gateway-os/
 systemctl start otbr-agent zigbee2mqtt
 ```
+
+`thread-network-init` restores the Thread dataset if `otbr-agent` has none.
+On a gateway that already runs another network, set it with
+`ot-ctl dataset set active $(cat /var/lib/gateway-os/thread-dataset.hex)`
+(between `ot-ctl thread stop` / `ifconfig down` and `ifconfig up` / `thread start`).
+
+---
 
 ## Maintainer
 

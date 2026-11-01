@@ -4,7 +4,12 @@ set -e
 CONF=/etc/default/gateway-backup
 [ -r "${CONF}" ] && . "${CONF}"
 
-: "${GATEWAY_BACKUP_REMOTE:?set GATEWAY_BACKUP_REMOTE in /etc/default/gateway-backup, e.g. user@host:/path/}"
+# No destination configured (e.g. Dahlia dev setup): nothing to do. Not an
+# error, otherwise the unit shows up as failed every day.
+if [ -z "${GATEWAY_BACKUP_REMOTE}" ]; then
+    echo "GATEWAY_BACKUP_REMOTE not set in ${CONF} - skipping backup"
+    exit 0
+fi
 
 KEY_DIR=/etc/gateway-backup
 SSH_KEY=${KEY_DIR}/id_ed25519
@@ -20,12 +25,12 @@ mkdir -p "${STAGE}"
 [ -d /var/lib/zigbee2mqtt ] && cp -a /var/lib/zigbee2mqtt "${STAGE}/zigbee2mqtt"
 
 # OpenThread dataset (network key/PAN ID/channel - what the Onvis plug and
-# any other Thread device is joined to). Path is
-# OPENTHREAD_CONFIG_POSIX_SETTINGS_PATH="tmp" resolved against otbr-agent's
-# working directory (unset -> "/"), see thread-network-init for the same
-# assumption. Glob because the filename embeds the RCP's EUI64.
-for f in /tmp/0_*.data /tmp/0_*.swap; do
-    [ -e "${f}" ] && cp -a "${f}" "${STAGE}/"
+# any other Thread device is joined to): otbr-agent's settings in
+# /var/lib/thread (filename embeds the RCP's EUI64) plus the plain dataset
+# copy kept by thread-network-init.sh (restore: ot-ctl dataset set active).
+mkdir -p "${STAGE}/thread"
+for f in /var/lib/thread/*.data /var/lib/gateway-os/thread-dataset.hex; do
+    [ -e "${f}" ] && cp -a "${f}" "${STAGE}/thread/"
 done
 
 tar -C "${STAGE_ROOT}" -czf "${STAGE}.tar.gz" "${STAMP}"

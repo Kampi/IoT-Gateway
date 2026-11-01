@@ -4,6 +4,9 @@ After=dbus.service otbr-agent.service
 # Wants instead of Requires: a crash-looping otbr-agent (e.g. RCP not
 # responding) must not keep stopping/restarting this unit.
 Wants=otbr-agent.service
+# Re-run when otbr-agent restarts: otbr-agent neither auto-attaches nor keeps
+# the custom OMR prefix across restarts.
+PartOf=otbr-agent.service
 # Keep retrying forever - the RCP may come up late or after a firmware flash.
 StartLimitIntervalSec=0
 
@@ -13,6 +16,8 @@ StartLimitIntervalSec=0
 # multi-user.target, like the ready-LED). With Type=simple the unit counts
 # as started immediately and the boot continues.
 Type=simple
+# Stay "active" after the script exits, so PartOf= restarts reach this unit.
+RemainAfterExit=yes
 ExecStart=/usr/libexec/gateway-os/thread-network-init.sh
 Restart=on-failure
 RestartSec=30

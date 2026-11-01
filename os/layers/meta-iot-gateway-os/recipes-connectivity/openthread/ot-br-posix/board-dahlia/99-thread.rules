@@ -1,0 +1,3 @@
+# Dahlia dev setup: nRF5340-DK (Thread RCP) on Verdin UART_1 = Dahlia X20 pin 12/13
+# (i.MX8MM uart2, /dev/ttymxc1). Only TxD/RxD wired: 115200 baud, no flow control.
+SUBSYSTEM=="tty", KERNELS=="30890000.serial", SYMLINK+="thread", MODE="0660"

@@ -7,4 +7,8 @@
     missingok
     notifempty
     copytruncate
+    # Numbered files instead of the global dateext: logrotate runs hourly,
+    # a second size-triggered rotation on the same day would fail with
+    # "destination ...-YYYYMMDD.gz already exists".
+    nodateext
 }

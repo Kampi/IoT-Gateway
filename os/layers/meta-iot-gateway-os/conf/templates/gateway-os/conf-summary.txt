@@ -1,0 +1,1 @@
+IoT-Gateway OS (gateway-os) build configuration for the Toradex Verdin iMX8MM.

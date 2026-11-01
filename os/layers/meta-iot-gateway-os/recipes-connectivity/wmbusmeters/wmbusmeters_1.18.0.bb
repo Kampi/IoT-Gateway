@@ -35,6 +35,8 @@ CXXFLAGS += "-DLIBXML_DOCB_ENABLED"
 
 SYSTEMD_SERVICE:${PN} = "wmbusmeters.service"
 SYSTEMD_AUTO_ENABLE:${PN} = "enable"
+# Dahlia dev setup: UART_1 carries the Thread RCP, no wM-Bus receiver
+SYSTEMD_AUTO_ENABLE:${PN}:board-dahlia = "disable"
 
 do_install() {
     # Binary: /usr/bin/wmbusmeters

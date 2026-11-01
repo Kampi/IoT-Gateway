@@ -1,0 +1,3 @@
+# Dahlia dev setup: no wM-Bus receiver. Verdin UART_1 (/dev/ttymxc1), the
+# mainboard's wM-Bus UART, carries the Thread RCP here (see 99-thread.rules),
+# so there is no /dev/wmbus and wmbusmeters is not enabled.

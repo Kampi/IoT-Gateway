@@ -1,0 +1,21 @@
+# Dahlia dev setup: end0 is a point-to-point link to the build host, which
+# runs no DHCP server. A static address instead of DHCP: with method=auto NM
+# retries DHCP every 15 s forever, never reports "startup complete", and
+# NetworkManager-wait-online.service (nm-online -s) fails on every boot.
+[connection]
+id=eth-dhcp
+type=ethernet
+interface-name=end0
+autoconnect=true
+autoconnect-priority=10
+autoconnect-retries=0
+
+[ethernet]
+
+[ipv4]
+method=manual
+address1=192.168.0.2/24
+never-default=true
+
+[ipv6]
+method=disabled

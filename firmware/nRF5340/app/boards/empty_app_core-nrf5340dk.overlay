@@ -1,0 +1,9 @@
+/* App-core companion for TARGET=dk (nrf/samples/nrf5340/empty_app_core).
+ * The DK's gpio_fwd only hands the net-core UART pins to the network core
+ * (P1.00/P1.01/P0.10/P0.11). Also hand over LED1 (P0.28), otherwise the
+ * net core's heartbeat LED (app/heartbeat_led) can't drive it. */
+&gpio_fwd {
+	led {
+		gpios = <&gpio0 28 0>;
+	};
+};

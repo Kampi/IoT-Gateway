@@ -1,0 +1,8 @@
+# Dahlia dev setup: Zigbee coordinator as USB stick -> /dev/zigbee
+# (mainboard: CC2652P module on UART, see files/99-zigbee.rules).
+# VID/PID from ZIGBEE2MQTT_USB_VID / ZIGBEE2MQTT_USB_PID (zigbee2mqtt recipe).
+#
+# SYSTEMD_WANTS starts Zigbee2MQTT whenever the stick appears (also at boot
+# via coldplug). Without the stick, zigbee2mqtt.service is skipped by its
+# ConditionPathExists=/dev/zigbee instead of failing.
+SUBSYSTEM=="tty", ATTRS{idVendor}=="@ZIGBEE2MQTT_USB_VID@", ATTRS{idProduct}=="@ZIGBEE2MQTT_USB_PID@", SYMLINK+="zigbee", MODE="0660", TAG+="systemd", ENV{SYSTEMD_WANTS}+="zigbee2mqtt.service"

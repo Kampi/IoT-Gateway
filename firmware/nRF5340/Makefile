@@ -97,7 +97,8 @@ build: dfu-keygen
 		-Dmcuboot_EXTRA_CONF_FILE=$(MCUBOOT_CONF) \
 		-Dmcuboot_EXTRA_DTC_OVERLAY_FILE="$(OVERLAY) $(MCUBOOT_OVERLAY) $(PARTITIONS_OVERLAY)"
 ifeq ($(TARGET),dk)
-	west build -b $(APPCORE_BOARD) -d $(APPCORE_BUILD_DIR) -s $(APPCORE_SAMPLE)
+	west build -b $(APPCORE_BOARD) -d $(APPCORE_BUILD_DIR) -s $(APPCORE_SAMPLE) -- \
+		-DEXTRA_DTC_OVERLAY_FILE=$(CURDIR)/app/boards/empty_app_core-nrf5340dk.overlay
 endif
 
 # First flash (via SWD/J-Link) writes MCUboot + the signed app image,

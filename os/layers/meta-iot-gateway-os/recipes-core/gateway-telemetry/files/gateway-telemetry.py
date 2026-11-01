@@ -24,6 +24,9 @@ RESTART_BUTTONS = {
     "bluetooth": ("Restart Bluetooth", ["theengs-gateway.service"]),
     "zigbee": ("Restart Zigbee2MQTT", ["zigbee2mqtt.service"]),
     "wmbus": ("Restart wM-Bus", ["wmbusmeters.service"]),
+    # thread-network-init.service follows via PartOf= (re-attaches the network
+    # and sets the fixed OMR prefix), see recipes-connectivity/thread-network-init
+    "thread": ("Restart Thread", ["otbr-agent.service"]),
 }
 
 # Status sensors in Home Assistant: key -> (name, systemd units). A service
@@ -42,17 +45,43 @@ RECEIVER_DEVICES = {
     "wmbus": ("wmbusmeters.service", "/dev/wmbus"),
 }
 
+# LoRa only counts as running while the gateway bridge publishes stats for this
+# gateway (packet forwarder sends them every 30 s). A hung concentrator keeps
+# both services "active" but stops the stats - and ChirpStack shows the
+# gateway offline.
+LORA_STATS_TIMEOUT_S = 90
+
 SYSTEMD_UNIT_DIRS = ("/etc/systemd/system", "/usr/lib/systemd/system", "/lib/systemd/system")
 
 
 def unit_installed(unit):
-    return any(os.path.exists(os.path.join(d, unit)) for d in SYSTEMD_UNIT_DIRS)
+    """Installed and not disabled/masked. A disabled service (e.g. wmbusmeters
+    on the Dahlia dev setup, where its UART carries the Thread RCP) gets no
+    status sensor, restart button or gateway device - pressing "restart"
+    would start it."""
+    if not any(os.path.exists(os.path.join(d, unit)) for d in SYSTEMD_UNIT_DIRS):
+        return False
+    state = subprocess.run(["systemctl", "is-enabled", unit], capture_output=True, text=True).stdout.strip()
+    return state not in ("disabled", "masked", "masked-runtime")
 
 
 # A unit only counts as running once it has been active without interruption
 # for this long. A crash-looping service (e.g. Zigbee2MQTT without adapter:
 # ~30 s active, 10 s restart delay) would otherwise show up as running.
 STABLE_RUNNING_S = 60
+
+
+def unit_active_seconds(unit):
+    """Seconds the unit has been active without interruption, None if not active."""
+    out = subprocess.run(
+        ["systemctl", "show", unit, "-p", "ActiveState", "-p", "ActiveEnterTimestampMonotonic"],
+        capture_output=True, text=True,
+    ).stdout
+    props = dict(line.split("=", 1) for line in out.splitlines() if "=" in line)
+    if props.get("ActiveState") != "active":
+        return None
+    since_us = int(props.get("ActiveEnterTimestampMonotonic", "0") or 0)
+    return time.monotonic() - since_us / 1e6
 
 
 def unit_active(unit):
@@ -243,6 +272,10 @@ class GatewayTelemetry:
             key: units for key, (_, units) in SERVICE_STATUS.items() if all(unit_installed(u) for u in units)
         }
         self.sensors = build_sensors()
+        self.lora_gateway_id = read_lora_gateway_id()
+        self.lora_stats_topic = f"+/gateway/{self.lora_gateway_id}/event/stats" if self.lora_gateway_id else None
+        self.lora_last_stats = None
+        self.connected_since = None
 
         self.client = mqtt.Client(
             mqtt.CallbackAPIVersion.VERSION2,
@@ -425,6 +458,10 @@ class GatewayTelemetry:
         self.client.publish(self.state_topic, json.dumps(state), qos=1, retain=False)
 
         running = {key: service_running(key, units) for key, units in self.status_services.items()}
+        if "lora" in running:
+            fresh = self.lora_last_stats is not None and time.monotonic() - self.lora_last_stats < LORA_STATS_TIMEOUT_S
+            running["lora"] = running["lora"] and fresh
+            self.lora_watchdog()
         for key, value in running.items():
             self.client.publish(f"{self.service_topic}/{key}", "ON" if value else "OFF", qos=1, retain=True)
 
@@ -434,20 +471,51 @@ class GatewayTelemetry:
                 self.client.publish(self.gateway_topic(key, "status"), "ON" if running[key] else "OFF",
                                     qos=1, retain=True)
 
+    def lora_watchdog(self):
+        """Restart the packet forwarder if the concentrator hangs: the forwarder
+        keeps running but stops sending stats (ChirpStack: gateway offline).
+        Only acts while we are connected to the broker long enough to have
+        seen stats - otherwise missing stats say nothing about the gateway.
+        Rate limit: the forwarder must have run for the full timeout again."""
+        timeout = self.args.lora_watchdog_timeout
+        if timeout <= 0 or self.connected_since is None:
+            return
+        now = time.monotonic()
+        if now - self.connected_since < timeout:
+            return
+        if self.lora_last_stats is not None and now - self.lora_last_stats < timeout:
+            return
+        running_for = unit_active_seconds("lora-packet-forwarder.service")
+        if running_for is None or running_for < timeout:
+            return
+        last = "never" if self.lora_last_stats is None else f"{now - self.lora_last_stats:.0f} s ago"
+        log.warning("LoRa watchdog: no gateway stats for %d s (last: %s), restarting lora-packet-forwarder",
+                    timeout, last)
+        result = subprocess.run(["systemctl", "restart", "--no-block", "lora-packet-forwarder.service"],
+                                capture_output=True, text=True)
+        if result.returncode != 0:
+            log.error("LoRa watchdog: restart failed: %s", result.stderr.strip())
+
     def on_connect(self, client, userdata, flags, reason_code, properties):
         if reason_code != 0:
             log.error("Failed to connect to MQTT broker: %s", reason_code)
             return
         log.info("Connected to MQTT broker at %s:%d", self.args.host, self.args.port)
+        self.connected_since = time.monotonic()
         # Device is (re-)created/discovered in Home Assistant right here,
         # on every successful connection.
         client.publish(self.availability_topic, "online", qos=1, retain=True)
         client.subscribe(self.restart_topic, qos=1)
+        if self.lora_stats_topic:
+            client.subscribe(self.lora_stats_topic, qos=0)
         self.publish_discovery()
         self.publish_radio_gateways()
         self.publish_state()
 
     def on_message(self, client, userdata, msg):
+        if self.lora_stats_topic and mqtt.topic_matches_sub(self.lora_stats_topic, msg.topic):
+            self.lora_last_stats = time.monotonic()
+            return
         if msg.topic != self.restart_topic:
             return
         key = msg.payload.decode(errors="replace").strip()
@@ -463,6 +531,7 @@ class GatewayTelemetry:
 
     def on_disconnect(self, client, userdata, disconnect_flags, reason_code, properties):
         log.warning("Disconnected from MQTT broker: %s", reason_code)
+        self.connected_since = None
 
     def run(self):
         self.client.connect(self.args.host, self.args.port, keepalive=self.args.timeout)
@@ -507,6 +576,12 @@ if __name__ == "__main__":
         help="Friendly device name shown in Home Assistant",
     )
 
+    parser.add_argument(
+        "--lora-watchdog-timeout",
+        type=int,
+        default=int(os.environ.get("LORA_WATCHDOG_TIMEOUT", "300")),
+        help="Restart the LoRa packet forwarder after this many seconds without gateway stats (0 = off)",
+    )
     parser.add_argument(
         "--lora-device-name",
         default=os.environ.get("LORA_DEVICE_NAME", "IoT-Gateway (LoRa)"),

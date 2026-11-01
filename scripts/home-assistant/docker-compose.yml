@@ -1,0 +1,45 @@
+# Home Assistant + Matter server for use with the IoT-Gateway Thread border
+# router (Matter over Thread). Tested on a Synology NAS (Container Manager).
+#
+# Machine-specific values come from .env next to this file:
+#   cp .env.example .env    and adjust it (see README.md).
+#
+# Both containers MUST use the host network:
+#   - Matter needs IPv6 + mDNS (multicast) in the LAN. An IPv4-only bridge or
+#     macvlan network fails with "Cannot assign requested address" as soon as
+#     the Matter server talks to a Thread device.
+#   - Thread devices are reached via the gateway's OMR prefix, which needs a
+#     route on the host (see README.md, "Network prerequisites").
+
+services:
+    Home-Assistant:
+        image: homeassistant/home-assistant:latest
+        container_name: Home-Assistant
+        restart: always
+        network_mode: host
+        volumes:
+            - ./config:/config
+            - /etc/localtime:/etc/localtime:ro
+            # Optional: lets HA integrations inspect/control other containers.
+            # Remove if not needed - it grants full Docker (= root) access.
+            - /var/run/docker.sock:/var/run/docker.sock
+
+    Matter-Server:
+        image: ghcr.io/home-assistant-libs/python-matter-server:stable
+        container_name: Matter-Server
+        restart: always
+        network_mode: host
+        security_opt:
+            - apparmor=unconfined
+        volumes:
+            # Fabric, node list and certificates. Back this up - losing it
+            # means re-commissioning every Matter device.
+            - ./matter/data:/data
+            # Only needed for Bluetooth commissioning on the host (requires
+            # BlueZ + an adapter + --bluetooth-adapter below). Harmless otherwise.
+            - /run/dbus:/run/dbus:ro
+        # Listens on port 5580 (websocket). Nothing else on the host may use it.
+        command: >
+            --storage-path /data
+            --paa-root-cert-dir /data/credentials
+            --primary-interface ${MATTER_PRIMARY_INTERFACE:?set MATTER_PRIMARY_INTERFACE in .env}

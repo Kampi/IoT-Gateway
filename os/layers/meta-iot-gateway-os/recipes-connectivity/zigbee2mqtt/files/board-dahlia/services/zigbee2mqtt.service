@@ -1,0 +1,20 @@
+[Unit]
+Description=Zigbee2MQTT
+# Dahlia dev setup: Zigbee coordinator as USB stick (/dev/zigbee, see
+# 99-zigbee.rules). No module power control (mainboard only). Without the
+# stick the unit is skipped instead of failing, the udev rule starts it as
+# soon as the stick is plugged in.
+ConditionPathExists=/dev/zigbee
+After=network.target mosquitto.service dev-zigbee.device
+Wants=mosquitto.service
+
+[Service]
+Type=simple
+Environment=ZIGBEE2MQTT_DATA=/var/lib/zigbee2mqtt
+ExecStart=/usr/bin/node /usr/lib/node_modules/zigbee2mqtt/index.js
+WorkingDirectory=/usr/lib/node_modules/zigbee2mqtt
+Restart=on-failure
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target
