@@ -227,6 +227,9 @@ inherit npm systemd
 
 # @USER_CONFIG: MQTT broker URL for Zigbee2MQTT (e.g. mqtt://192.168.1.10)
 ZIGBEE2MQTT_MQTT_SERVER ?= "mqtt://localhost"
+# MQTT base topic. Must be unique per broker: a second Zigbee2MQTT with the
+# same base topic deletes the other one's Home Assistant entities.
+ZIGBEE2MQTT_BASE_TOPIC ?= "zigbee2mqtt"
 
 # @USER_CONFIG: Name of the Zigbee bridge device in Home Assistant, parent of all Zigbee devices
 ZIGBEE2MQTT_HA_BRIDGE_NAME ?= "IoT-Gateway (Zigbee)"
@@ -263,13 +266,21 @@ do_install:append() {
 
     install -d ${D}/var/lib/zigbee2mqtt
     install -m 0644 ${WORKDIR}/configuration.yaml ${D}/var/lib/zigbee2mqtt/
-    sed -i 's|@ZIGBEE2MQTT_MQTT_SERVER@|${ZIGBEE2MQTT_MQTT_SERVER}|g' ${D}/var/lib/zigbee2mqtt/configuration.yaml
+    sed -i -e 's|@ZIGBEE2MQTT_MQTT_SERVER@|${ZIGBEE2MQTT_MQTT_SERVER}|g' \
+        -e 's|@ZIGBEE2MQTT_BASE_TOPIC@|${ZIGBEE2MQTT_BASE_TOPIC}|g' \
+        ${D}/var/lib/zigbee2mqtt/configuration.yaml
 
     # The Home Assistant name of the bridge device is hard-coded in Zigbee2MQTT
     # (no config option). Replace it, and fail loudly if an update moves it.
     ha_js="${D}${prefix}/lib/node_modules/zigbee2mqtt/dist/extension/homeassistant.js"
     grep -q 'name: "Zigbee2MQTT Bridge"' "${ha_js}" || bbfatal "Zigbee2MQTT bridge name not found in ${ha_js}"
     sed -i 's|name: "Zigbee2MQTT Bridge"|name: "${ZIGBEE2MQTT_HA_BRIDGE_NAME}"|' "${ha_js}"
+
+    # Zigbee2MQTT derives the bridge's entity IDs from that name. Reduce them
+    # to [a-z0-9_] so names like "IoT-Gateway (Zigbee)" give valid HA entity
+    # IDs (iot_gateway_zigbee_...).
+    grep -q 'payload.object_id = devicePayload.name.replace(' "${ha_js}" || bbfatal "Zigbee2MQTT object_id hook not found in ${ha_js}"
+    sed -i '/payload.object_id = devicePayload.name.replace(/a\            if (entity === this.bridge) { payload.object_id = payload.object_id.replace(/[^a-z0-9_]+/g, "_").replace(/_+/g, "_").replace(/^_|_$/g, ""); }' "${ha_js}"
 
     # Link the bridge to the gateway device "IoT-Gateway" (gateway-telemetry,
     # identifier = /etc/machine-id), so HA shows it as one of its connected devices.

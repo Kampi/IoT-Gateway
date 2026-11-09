@@ -353,6 +353,11 @@ LORA_SERVER_ADDRESS     = "localhost"
 #OTBR_OMR_PREFIX         = "fdf2:83ec:1caf:1::/64"
 #OTBR_INFRA_IPV6_ADDRESS = "fd8f:e72d:8065:0:3f1e:f55:3464:19db/64"
 
-# Zigbee USB stick on Dahlia (defaults: Sonoff ZBDongle-P)
+# Zigbee USB stick on Dahlia (defaults: Sonoff ZBDongle-P, TI CC2531: 0451/16a8)
 #ZIGBEE2MQTT_USB_VID     = "10c4"
 #ZIGBEE2MQTT_USB_PID     = "ea60"
+
+# Zigbee2MQTT base topic (default "zigbee2mqtt"). Must be unique on the
+# broker: a second Zigbee2MQTT with the same base topic deletes the other
+# one's Home Assistant entities.
+#ZIGBEE2MQTT_BASE_TOPIC  = "zigbee2mqtt_gateway"

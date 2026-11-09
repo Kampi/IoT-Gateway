@@ -93,6 +93,7 @@ TELEMETRY_MQTT_HOST     = "192.168.1.10"
 | `WMBUSMETERS_MQTT_SERVER` | `localhost` | MQTT broker hostname (or hostname:port) for wmbusmeters (e.g. 192.168.1.10 or 192.168.1.10:1883) | `wmbusmeters_1.18.0.bb` |
 | `WMBUSMETERS_DEVICE` | `/dev/wmbus:im871a:t1` | wM-Bus receiver for wmbusmeters (device:type:link modes, e.g. /dev/wmbus:im871a:t1) | `wmbusmeters_1.18.0.bb` |
 | `ZIGBEE2MQTT_MQTT_SERVER` | `mqtt://localhost` | MQTT broker URL for Zigbee2MQTT (e.g. mqtt://192.168.1.10) | `zigbee2mqtt_2.12.0.bb` |
+| `ZIGBEE2MQTT_BASE_TOPIC` | `zigbee2mqtt` | MQTT base topic of Zigbee2MQTT. Must be unique on the broker: a second Zigbee2MQTT with the same base topic removes the other one's Home Assistant entities | `zigbee2mqtt_2.12.0.bb` |
 | `ZIGBEE2MQTT_HA_BRIDGE_NAME` | `IoT-Gateway (Zigbee)` | Name of the Zigbee bridge device in Home Assistant, parent of all Zigbee devices | `zigbee2mqtt_2.12.0.bb` |
 | `ZIGBEE2MQTT_USB_VID` | `10c4` | USB vendor ID of the Zigbee USB stick (Dahlia dev setup only) | `zigbee2mqtt_2.12.0.bb` |
 | `ZIGBEE2MQTT_USB_PID` | `ea60` | USB product ID of the Zigbee USB stick (Dahlia dev setup only) | `zigbee2mqtt_2.12.0.bb` |
@@ -245,7 +246,7 @@ them per board: see [Board variants](#board-variants).
 - **Device:** `/dev/zigbee`, adapter `zstack` (EFR32 sticks such as the
   ZBDongle-E: `ember`)
 - **Service:** `zigbee2mqtt`, data in `/var/lib/zigbee2mqtt/`, base topic
-  `zigbee2mqtt`. On Dahlia started when the USB stick is plugged in
+  `ZIGBEE2MQTT_BASE_TOPIC` (default `zigbee2mqtt`). On Dahlia started when the USB stick is plugged in
 
 ### Wireless M-Bus
 

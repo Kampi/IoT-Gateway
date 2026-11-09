@@ -2,7 +2,7 @@ homeassistant:
   enabled: true
 permit_join: false
 mqtt:
-  base_topic: zigbee2mqtt
+  base_topic: @ZIGBEE2MQTT_BASE_TOPIC@
   server: @ZIGBEE2MQTT_MQTT_SERVER@
 serial:
   port: /dev/zigbee
