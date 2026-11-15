@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 SUMMARY = "Bluetooth numbers: company IDs, service and characteristic UUIDs"
 HOMEPAGE = "https://github.com/koenvervloesem/bluetooth-numbers"
 LICENSE = "MIT"

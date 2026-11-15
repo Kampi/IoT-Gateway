@@ -1,6 +1,12 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 /dev/root            /                    auto       defaults              1  1
 proc                 /proc                proc       defaults              0  0
 devpts               /dev/pts             devpts     mode=0620,ptmxmode=0666,gid=5      0  0
 tmpfs                /run                 tmpfs      mode=0755,nodev,nosuid,strictatime 0  0
 tmpfs                /var/volatile        tmpfs      defaults              0  0
-LABEL=BOOT           /boot                vfat       defaults              0  2
+# /boot is part of the rootfs slot (kernel + devicetree, see boot.cmd.in);
+# the BOOT partition only holds the U-Boot boot script and is not mounted.
+# /data (DATA partition) and the /etc, /var/lib, /home overlays are mounted by
+# /sbin/preinit before systemd starts (gateway-os-image.bb).

@@ -1,4 +1,7 @@
 #!/bin/sh
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 set -e
 
 KEY_DIR=/etc/gateway-backup

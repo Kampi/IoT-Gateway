@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 SUMMARY = "Async OUI (MAC vendor) lookups"
 HOMEPAGE = "https://github.com/Bluetooth-Devices/aiooui"
 LICENSE = "MIT"

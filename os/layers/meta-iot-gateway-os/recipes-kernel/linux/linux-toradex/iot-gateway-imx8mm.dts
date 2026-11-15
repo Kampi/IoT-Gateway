@@ -38,7 +38,7 @@
 				<&pinctrl_gpio8>, <&pinctrl_battery>, <&pinctrl_power_enable>,
 		    	<&pinctrl_zigbee_ctrl>, <&pinctrl_thread_ctrl>,
 		    	<&pinctrl_wmbus_ctrl>, <&pinctrl_ssd>,
-		    	<&pinctrl_powermux>, <&pinctrl_gpio_header>;
+		    	<&pinctrl_powermux>, <&pinctrl_input_status>, <&pinctrl_gpio_header>;
 
 	pinctrl_version_resistors: versionresistorsgrp {
 		fsl,pins = <
@@ -94,6 +94,13 @@
 	pinctrl_powermux: powermuxgrp {
 		fsl,pins = <
 			MX8MM_IOMUXC_UART3_RXD_GPIO5_IO26			0x1c6	/* SODIMM 210 - PowerMux-Status (in, pull-up) */
+		>;
+	};
+
+	/* TPS2121 IC601 (DC jack IN1 / PoE IN2) status via inverting BSS138 Q601, R605 to +1V8: 0 = DC, 1 = PoE */
+	pinctrl_input_status: inputstatusgrp {
+		fsl,pins = <
+			MX8MM_IOMUXC_SAI2_MCLK_GPIO4_IO27			0x1c6	/* SODIMM 38 - Input-Status (in, pull-up) */
 		>;
 	};
 
@@ -153,7 +160,7 @@
 	                  "", "", "", "zigbee-reset", "zigbee-boot", "thread-reset", "thread-boot", "",
 	                  "", "", "", "s", "", "", "", "thread-power-enable",
 	                  "zigbee-power-enable", "lora-power-enable",
-	                  "wmbus-power-enable", "", "";
+	                  "wmbus-power-enable", "input-status", "";
 };
 
 &gpio5 {

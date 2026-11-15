@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 #
 # This file is your local configuration file and is where all local user settings
 # are placed. The comments in this file give some guide to the options a new user
@@ -337,7 +340,7 @@ ACCEPT_FSL_EULA = "1"
 GATEWAY_BOARD           = "dahlia"
 
 # MQTT broker on the NAS - ChirpStack and Home Assistant use the same broker.
-# Without these lines every client uses the Mosquitto broker on the gateway.
+# The gateway has no broker of its own, all clients need these settings.
 CHIRPSTACK_MQTT_SERVER  = "tcp://192.168.178.103:1883"
 ZIGBEE2MQTT_MQTT_SERVER = "mqtt://192.168.178.103"
 WMBUSMETERS_MQTT_SERVER = "192.168.178.103"
@@ -357,7 +360,23 @@ LORA_SERVER_ADDRESS     = "localhost"
 #ZIGBEE2MQTT_USB_VID     = "10c4"
 #ZIGBEE2MQTT_USB_PID     = "ea60"
 
-# Zigbee2MQTT base topic (default "zigbee2mqtt"). Must be unique on the
-# broker: a second Zigbee2MQTT with the same base topic deletes the other
-# one's Home Assistant entities.
-#ZIGBEE2MQTT_BASE_TOPIC  = "zigbee2mqtt_gateway"
+# Zigbee2MQTT base topic, unique per gateway by default:
+# <gateway ID>/zigbee, e.g. iot-gateway-07219303/zigbee (module serial number)
+#ZIGBEE2MQTT_BASE_TOPIC  = "@GATEWAY_ID@/zigbee"
+
+# A/B updates (RAUC): size of each rootfs slot in MiB, the DATA partition
+# gets the rest of the eMMC. Changing it needs a new Easy Installer flash.
+#GATEWAY_ROOTFS_SLOT_SIZE = "4096"
+
+# Keys (SSH root login, RAUC, nRF5340 MCUboot): default are the PUBLIC debug
+# keys in os/keys (os/keys/README.md). Own keys for gateways in the field:
+#GATEWAY_KEYS_DIR = "/secure/gateway-keys"
+
+# Daily backup of all persistent data via rsync/ssh (README "Backup")
+#GATEWAY_BACKUP_REMOTE = "backup@192.168.178.103:/volume1/backups/gateway/"
+
+# OTA updates from Home Assistant (update entity "GatewayOS", docs/ota-rauc.md)
+# Update server, the bundle is expected at <server>/bundles/gateway-os-bundle-<MACHINE>.raucb
+#GATEWAY_UPDATE_SERVER = "http://192.168.0.1"
+# Alternatively the full bundle URL (overrides GATEWAY_UPDATE_SERVER)
+#GATEWAY_UPDATE_URL = "http://192.168.0.1/bundles/gateway-os-bundle-verdin-imx8mm.raucb"

@@ -1,0 +1,138 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
+"""Health check of a newly installed RAUC slot, before it is marked good.
+
+Runs before boot-complete.target, which rauc-mark-good.service requires: the
+slot is only marked good when this check succeeds.
+
+- First boot of a slot with a new bundle (bundle hash not yet recorded in
+  /data/gateway-health/<bootname>): wait until the required units are active
+  (HEALTH_UNITS, plus HEALTH_DEVICE_UNITS whose device exists). If they are
+  not active within HEALTH_TIMEOUT seconds, mark the slot bad and reboot:
+  U-Boot then starts the previous slot (rollback).
+- Later boots of the same bundle: already verified, pass immediately. A
+  missing peripheral or a broker outage therefore never causes a rollback of
+  a system that has worked before.
+- Never rolls back when the other slot is not "good" (no boot loop).
+"""
+
+import json
+import logging
+import os
+import subprocess
+import sys
+import time
+
+log = logging.getLogger("gateway-health-check")
+
+STATE_DIR = "/data/gateway-health"
+UNITS = os.environ.get("HEALTH_UNITS", "").split()
+# "<device>:<unit>": the unit is only required while the device exists
+DEVICE_UNITS = [entry.split(":", 1) for entry in os.environ.get("HEALTH_DEVICE_UNITS", "").split() if ":" in entry]
+TIMEOUT = int(os.environ.get("HEALTH_TIMEOUT", "300"))
+
+
+def rauc_status():
+    out = subprocess.run(["rauc", "status", "--detailed", "--output-format=json"],
+                         capture_output=True, text=True, timeout=60)
+    if out.returncode != 0:
+        raise RuntimeError(out.stderr.strip() or "rauc status failed")
+    return json.loads(out.stdout)
+
+
+def slots(status):
+    for entry in status.get("slots", []):
+        for name, slot in entry.items():
+            yield name, slot
+
+
+# A unit counts as healthy once it has been active for this long without
+# interruption (a crash-looping service is briefly "active" too).
+STABLE_S = int(os.environ.get("HEALTH_STABLE", "30"))
+
+
+def unit_state(unit):
+    out = subprocess.run(["systemctl", "show", unit, "-p", "ActiveState", "-p", "ActiveEnterTimestampMonotonic"],
+                         capture_output=True, text=True).stdout
+    props = dict(line.split("=", 1) for line in out.splitlines() if "=" in line)
+    state = props.get("ActiveState", "unknown")
+    if state != "active":
+        return state
+    since = int(props.get("ActiveEnterTimestampMonotonic", "0") or 0) / 1e6
+    return "active" if time.monotonic() - since >= STABLE_S else "starting"
+
+
+def required_units():
+    units = list(UNITS)
+    for device, unit in DEVICE_UNITS:
+        if os.path.exists(device):
+            units.append(unit)
+    # Only units that exist and are enabled on this board
+    result = []
+    for unit in units:
+        enabled = subprocess.run(["systemctl", "is-enabled", unit], capture_output=True, text=True).stdout.strip()
+        if enabled not in ("", "disabled", "masked", "not-found"):
+            result.append(unit)
+    return result
+
+
+def main():
+    logging.basicConfig(level=logging.INFO, format="%(message)s", stream=sys.stdout)
+
+    status = rauc_status()
+    booted = status.get("booted")
+    booted_slot = other_slot = None
+    for name, slot in slots(status):
+        if slot.get("bootname") == booted:
+            booted_slot = slot
+        elif slot.get("bootname"):
+            other_slot = slot
+    if booted_slot is None:
+        log.info("Not booted from a RAUC slot, nothing to check")
+        return 0
+
+    bundle = booted_slot.get("slot_status", {}).get("bundle", {})
+    key = bundle.get("hash") or "image"
+    marker = os.path.join(STATE_DIR, booted)
+    try:
+        with open(marker) as f:
+            if f.read().strip() == key:
+                log.info("Slot %s (bundle %s) verified before", booted, key[:12])
+                return 0
+    except OSError:
+        pass
+
+    units = required_units()
+    log.info("New system in slot %s (bundle %s %s), waiting up to %d s for: %s",
+             booted, bundle.get("version", "?"), key[:12], TIMEOUT, " ".join(units))
+    deadline = time.monotonic() + TIMEOUT
+    while True:
+        states = {unit: unit_state(unit) for unit in units}
+        missing = [u for u, s in states.items() if s != "active"]
+        if not missing:
+            os.makedirs(STATE_DIR, exist_ok=True)
+            with open(marker + ".tmp", "w") as f:
+                f.write(key + "\n")
+            os.replace(marker + ".tmp", marker)
+            log.info("Health check passed, slot %s will be marked good", booted)
+            return 0
+        if time.monotonic() > deadline:
+            break
+        time.sleep(5)
+
+    log.error("Health check failed, not active: %s",
+              ", ".join(f"{u} ({states[u]})" for u in missing))
+    if other_slot is None or other_slot.get("boot_status") != "good":
+        log.error("No good slot to fall back to, keeping slot %s running (not marked good)", booted)
+        return 1
+
+    log.error("Rolling back: marking slot %s bad and rebooting into slot %s", booted, other_slot.get("bootname"))
+    subprocess.run(["rauc", "status", "mark-bad", "booted"])
+    subprocess.run(["systemctl", "reboot"])
+    return 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())

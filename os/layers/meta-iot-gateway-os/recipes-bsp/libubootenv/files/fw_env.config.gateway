@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
+# U-Boot environment of the Verdin iMX8M Mini (u-boot-toradex, verdin-imx8mm_defconfig):
+# eMMC hardware boot partition 0, CONFIG_ENV_OFFSET=0xFFFFDE00 (-0x2200 from
+# the end), CONFIG_ENV_SIZE=0x2000. libubootenv clears force_ro itself.
+# Used by RAUC (BOOT_ORDER, BOOT_A_LEFT, BOOT_B_LEFT) and fw_printenv/fw_setenv.
+# Device           Offset    Size
+/dev/mmcblk0boot0  -0x2200   0x2000

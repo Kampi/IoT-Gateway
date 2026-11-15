@@ -1,0 +1,84 @@
+#!/bin/sh
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
+# Flash the nRF5340 Thread RCP firmware over UART (MCUboot serial recovery,
+# mcumgr/SMP on the RCP UART /dev/thread). No SWD needed.
+#
+#   flash-nrf5340 [image]      default: @NRF5340_FW_DIR@/rcp.signed.bin
+#
+# MCUboot only accepts images signed with its own key (NRF5340_DFU_KEY of the
+# build that produced MCUboot, see os/keys/README.md).
+#
+# Recovery mode = MCUboot recovery pin P1.15 low at reset:
+#   mainboard: thread-boot / thread-reset GPIOs (74LVC1G07, low = asserted)
+#   dahlia:    nRF5340-DK, by hand: P1.15 to GND, press RESET on the DK
+set -eu
+
+IMAGE=${1:-@NRF5340_FW_DIR@/rcp.signed.bin}
+DEV=@NRF5340_DFU_DEVICE@
+BAUD=@NRF5340_DFU_BAUD@
+BOARD=@GATEWAY_BOARD@
+CONN="dev=${DEV},baud=${BAUD},mtu=512"
+GPIO_PID=""
+
+log() { echo "[flash-nrf5340] $*"; }
+
+[ -f "${IMAGE}" ] || { log "image ${IMAGE} not found"; exit 1; }
+
+hold_lines() {
+    # gpioset (libgpiod v2) keeps the lines driven while it runs
+    [ -n "${GPIO_PID}" ] && kill "${GPIO_PID}" 2>/dev/null && wait "${GPIO_PID}" 2>/dev/null || true
+    gpioset --consumer flash-nrf5340 thread-power-enable=1 thread-reset="$1" thread-boot="$2" &
+    GPIO_PID=$!
+    sleep 1
+}
+
+cleanup() {
+    [ -n "${GPIO_PID}" ] && kill "${GPIO_PID}" 2>/dev/null || true
+    log "starting otbr-agent again"
+    systemctl start otbr-agent || true
+}
+trap cleanup EXIT
+
+wait_for_bootloader() {
+    i=0
+    while [ $i -lt "$1" ]; do
+        if mcumgr --conntype serial --connstring "${CONN}" --timeout 1 echo hello > /dev/null 2>&1; then
+            return 0
+        fi
+        i=$((i + 1))
+    done
+    return 1
+}
+
+log "stopping otbr-agent (releases ${DEV})"
+systemctl stop otbr-agent
+
+if [ "${BOARD}" = "mainboard" ]; then
+    log "entering MCUboot recovery (thread-boot low, reset pulse)"
+    systemctl stop module-power@thread || true
+    hold_lines 0 0          # in reset, recovery pin asserted
+    hold_lines 1 0          # out of reset, MCUboot sees P1.15 low
+    wait_for_bootloader 10 || { log "MCUboot does not answer on ${DEV} at ${BAUD} baud"; exit 1; }
+else
+    log "nRF5340-DK: connect P1.15 to GND and press RESET on the DK (60 s)"
+    wait_for_bootloader 60 || { log "MCUboot does not answer on ${DEV} at ${BAUD} baud"; exit 1; }
+    log "MCUboot answers, P1.15 can be released"
+fi
+
+log "uploading ${IMAGE}"
+mcumgr --conntype serial --connstring "${CONN}" image upload "${IMAGE}"
+mcumgr --conntype serial --connstring "${CONN}" image list || true
+
+log "resetting into the new firmware"
+if [ "${BOARD}" = "mainboard" ]; then
+    hold_lines 0 1          # reset with recovery pin released
+    kill "${GPIO_PID}" 2>/dev/null || true
+    GPIO_PID=""
+    # otbr-agent pulls module-power@thread in again (normal boot)
+else
+    mcumgr --conntype serial --connstring "${CONN}" reset || true
+    log "release P1.15 if it is still connected to GND"
+fi
+log "done"

@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 SUMMARY = "Theengs Decoder - decodes BLE advertisements of many sensors"
 HOMEPAGE = "https://decoder.theengs.io"
 # TheengsDecoder itself is GPL-3.0 (no license file in the sdist), the bundled

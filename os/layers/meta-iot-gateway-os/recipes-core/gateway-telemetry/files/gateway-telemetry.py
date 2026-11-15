@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 import argparse
 import glob
 import json
@@ -8,6 +11,7 @@ import re
 import signal
 import subprocess
 import sys
+import threading
 import time
 import paho.mqtt.client as mqtt
 
@@ -155,7 +159,7 @@ def read_bridge_version():
 def read_lora_gateway_id():
     # Set from the Ethernet MAC by lora-gateway-id.service
     try:
-        with open("/opt/lora-packet-forwarder/config/global_conf.json") as f:
+        with open("/run/lora-packet-forwarder/global_conf.json") as f:
             return json.load(f)["gateway_conf"]["gateway_ID"].lower()
     except (OSError, ValueError, KeyError):
         return None
@@ -193,6 +197,173 @@ def find_battery_capacity_path():
     # registers under, so discover it instead of hardcoding it.
     paths = glob.glob("/sys/class/power_supply/*/capacity")
     return paths[0] if paths else None
+
+
+def read_kernel_version():
+    return os.uname().release
+
+
+def read_bootloader_version():
+    # Set by U-Boot in the devicetree it passes to the kernel
+    try:
+        with open("/proc/device-tree/chosen/u-boot,version") as f:
+            return "U-Boot " + f.read().strip("\0\n ")
+    except OSError:
+        return None
+
+
+def read_os_release():
+    values = {}
+    try:
+        with open("/etc/os-release") as f:
+            for line in f:
+                key, _, value = line.strip().partition("=")
+                values[key] = value.strip('"')
+    except OSError:
+        pass
+    return values
+
+
+def read_layer_version():
+    # DISTRO_VERSION + git revision of meta-iot-gateway-os (os-release bbappend)
+    release = read_os_release()
+    version = release.get("VERSION_ID")
+    if not version:
+        return None
+    build = release.get("BUILD_ID")
+    return f"{version} ({build})" if build else version
+
+
+def read_hardware_version():
+    # Board revision strapped on SODIMM 212/216/218 (version-bit0..2,
+    # bit 0 = LSB; Dahlia: X20 pins 30/32/33). Empty HARDWARE_VERSION_LINES = none.
+    lines = os.environ.get("HARDWARE_VERSION_LINES", "").split()
+    if not lines:
+        return None
+    try:
+        out = subprocess.run(["gpioget", "--numeric"] + lines, capture_output=True, text=True, timeout=5)
+        bits = [int(b) for b in out.stdout.split()]
+    except (OSError, ValueError, subprocess.SubprocessError):
+        return None
+    if out.returncode != 0 or len(bits) != len(lines):
+        return None
+    return str(sum(bit << i for i, bit in enumerate(bits)))
+
+
+def read_gateway_serial():
+    # Module serial number, from gateway-id.service (/run/gateway-id.env)
+    try:
+        with open("/run/gateway-id.env") as f:
+            for line in f:
+                key, _, value = line.strip().partition("=")
+                if key == "GATEWAY_SERIAL":
+                    return value
+    except OSError:
+        pass
+    return None
+
+
+# Version entities (diagnostic): key -> (name, read function)
+VERSION_INFO = {
+    "kernel_version": ("Linux Kernel", read_kernel_version),
+    "bootloader_version": ("Bootloader", read_bootloader_version),
+    "layer_version": ("GatewayOS Layer", read_layer_version),
+    "hardware_version": ("Hardware Version", read_hardware_version),
+}
+
+
+# OTA updates from Home Assistant (MQTT update entity "GatewayOS"): bundle URL
+# (rauc install streams it), check interval, reboot after a successful install.
+UPDATE_URL = os.environ.get("UPDATE_URL", "")
+UPDATE_CHECK_INTERVAL = int(os.environ.get("UPDATE_CHECK_INTERVAL", "3600") or 3600)
+UPDATE_REBOOT = os.environ.get("UPDATE_REBOOT", "1") == "1"
+
+
+def rauc_json(args, timeout=120):
+    out = subprocess.run(["rauc", *args, "--output-format=json"], capture_output=True, text=True, timeout=timeout)
+    if out.returncode != 0:
+        raise RuntimeError(out.stderr.strip().splitlines()[-1] if out.stderr.strip() else "rauc failed")
+    return json.loads(out.stdout)
+
+
+def bundle_version(bundle):
+    version = bundle.get("version") or "?"
+    build = bundle.get("build")
+    return f"{version} ({build})" if build else version
+
+
+def read_installed_bundle():
+    """Bundle of the booted slot (rauc status), fallback /etc/os-release for a
+    slot written by the Easy Installer (no bundle information)."""
+    try:
+        status = rauc_json(["status", "--detailed"], timeout=60)
+        for entry in status.get("slots", []):
+            for _, slot in entry.items():
+                if slot.get("bootname") == status.get("booted"):
+                    bundle = slot.get("slot_status", {}).get("bundle", {})
+                    if bundle.get("version"):
+                        return bundle
+    except (OSError, RuntimeError, ValueError, subprocess.SubprocessError) as exc:
+        log.warning("rauc status failed: %s", exc)
+    release = read_os_release()
+    return {"version": release.get("VERSION_ID", "?"), "build": release.get("BUILD_ID"), "hash": None}
+
+
+# Power source written by gateway-power-monitor (mainboard): "mains" / "battery"
+POWER_STATE_FILE = "/run/gateway-power/state"
+
+
+def read_power_source():
+    try:
+        with open(POWER_STATE_FILE) as f:
+            return f.read().strip()
+    except OSError:
+        return None
+
+
+def gpio_values(lines):
+    out = subprocess.run(["gpioget", "--numeric"] + lines, capture_output=True, text=True, timeout=5)
+    if out.returncode != 0:
+        raise OSError(out.stderr.strip() or "gpioget failed")
+    return [int(v) for v in out.stdout.split()]
+
+
+def read_supply_source():
+    """Mainboard supply: TPS2121 IC704 (mains / battery, POWER_SOURCE_LINES
+    first line, 1 = battery) and IC601 (DC jack / PoE, second line, 1 = PoE)."""
+    lines = os.environ.get("POWER_SOURCE_LINES", "").split()
+    if len(lines) != 2:
+        return None
+    try:
+        battery, poe = gpio_values(lines)
+    except (OSError, ValueError, subprocess.SubprocessError):
+        return None
+    if battery:
+        return "Battery"
+    return "PoE" if poe else "DC"
+
+
+def find_iio(name):
+    for path in sorted(glob.glob("/sys/bus/iio/devices/iio:device*")):
+        try:
+            with open(os.path.join(path, "name")) as f:
+                if f.read().strip() == name:
+                    return path
+        except OSError:
+            continue
+    return None
+
+
+def find_hwmon(name):
+    # hwmon numbering depends on probe order, so look the device up by name.
+    for path in sorted(glob.glob("/sys/class/hwmon/hwmon*")):
+        try:
+            with open(os.path.join(path, "name")) as f:
+                if f.read().strip() == name:
+                    return path
+        except OSError:
+            continue
+    return None
 
 
 def read_cpu_temp_c():
@@ -249,6 +420,39 @@ def build_sensors():
         Sensor("uptime", "Uptime", "s", read_uptime_seconds, device_class="duration", precision=0),
     ]
 
+    # INA219 power monitor (ina2xx hwmon driver): bus voltage in mV (in1),
+    # current in mA (curr1), power in uW (power1)
+    ina = find_hwmon("ina219")
+    if ina:
+        sensors += [
+            Sensor("supply_voltage", "Supply Voltage", "V",
+                   lambda: read_int(os.path.join(ina, "in1_input")) / 1000.0, device_class="voltage", precision=2),
+            Sensor("supply_current", "Supply Current", "mA",
+                   lambda: read_int(os.path.join(ina, "curr1_input")), device_class="current", precision=0),
+            Sensor("supply_power", "Supply Power", "W",
+                   lambda: read_int(os.path.join(ina, "power1_input")) / 1000000.0, device_class="power", precision=2),
+        ]
+    else:
+        log.info("No INA219 power monitor found under /sys/class/hwmon, skipping supply sensors")
+
+    # Input voltage: ADC channel of the module ADC (TLA2024, ads1015 driver)
+    # behind a resistor divider (mainboard: ADC_1 = in_voltage3, 100k/12k)
+    channel = os.environ.get("INPUT_VOLTAGE_CHANNEL", "")
+    adc = find_iio("ads1015") if channel else None
+    if adc:
+        divider = float(os.environ.get("INPUT_VOLTAGE_DIVIDER", "1"))
+        raw = os.path.join(adc, f"in_voltage{channel}_raw")
+        scale = os.path.join(adc, f"in_voltage{channel}_scale")
+
+        def read_input_voltage():
+            with open(raw) as f_raw, open(scale) as f_scale:
+                return int(f_raw.read()) * float(f_scale.read()) * divider / 1000.0
+
+        sensors.append(Sensor("input_voltage", "Input Voltage", "V", read_input_voltage,
+                              device_class="voltage", precision=2))
+    elif channel:
+        log.info("No ads1015 ADC found under /sys/bus/iio, skipping input voltage sensor")
+
     battery_path = find_battery_capacity_path()
     if battery_path:
         sensors.append(
@@ -268,10 +472,19 @@ class GatewayTelemetry:
         self.availability_topic = f"gateway/{self.device_id}/telemetry/availability"
         self.restart_topic = f"gateway/{self.device_id}/command/restart"
         self.service_topic = f"gateway/{self.device_id}/service"
+        self.power_topic = f"gateway/{self.device_id}/power"
         self.status_services = {
             key: units for key, (_, units) in SERVICE_STATUS.items() if all(unit_installed(u) for u in units)
         }
         self.sensors = build_sensors()
+        self.versions = {key: fn() for key, (_, fn) in VERSION_INFO.items()}
+        self.info_topic = f"gateway/{self.device_id}/info"
+        self.update_topic = f"gateway/{self.device_id}/update"
+        self.update_command_topic = f"{self.update_topic}/install"
+        self.update_lock = threading.Lock()
+        self.update_state = {"title": "GatewayOS", "in_progress": False}
+        self.update_installing = False
+        self.update_last_check = None
         self.lora_gateway_id = read_lora_gateway_id()
         self.lora_stats_topic = f"+/gateway/{self.lora_gateway_id}/event/stats" if self.lora_gateway_id else None
         self.lora_last_stats = None
@@ -292,13 +505,45 @@ class GatewayTelemetry:
         self.client.on_message = self.on_message
 
     def device_info(self):
-        return {
+        # Device card in Home Assistant: one line each for Firmware (GatewayOS
+        # layer), Hardware (board revision) and Serial number
+        # (module). It shows no line breaks inside a field, so kernel and
+        # bootloader are diagnostic entities only (VERSION_INFO).
+        v = self.versions
+        info = {
             "identifiers": [self.device_id],
             "name": self.args.device_name,
             "manufacturer": DEVICE_MANUFACTURER,
             "model": DEVICE_MODEL,
-            "sw_version": os.uname().release,
         }
+        if v["layer_version"]:
+            info["sw_version"] = f"GatewayOS {v['layer_version']}"
+        if v["hardware_version"] is not None:
+            info["hw_version"] = f"Rev. {v['hardware_version']}"
+        serial = read_gateway_serial()
+        if serial:
+            info["serial_number"] = serial
+        return info
+
+    def publish_versions(self):
+        device = self.device_info()
+        for key, (name, _) in VERSION_INFO.items():
+            topic = f"{self.args.discovery_prefix}/sensor/{self.device_id}/{key}/config"
+            value = self.versions[key]
+            if value is None:
+                self.client.publish(topic, "", qos=1, retain=True)
+                continue
+            payload = {
+                "name": name,
+                "unique_id": f"{self.device_id}_{key}",
+                "state_topic": f"{self.info_topic}/{key}",
+                "availability_topic": self.availability_topic,
+                "entity_category": "diagnostic",
+                "icon": "mdi:information-outline",
+                "device": device,
+            }
+            self.client.publish(topic, json.dumps(payload), qos=1, retain=True)
+            self.client.publish(f"{self.info_topic}/{key}", value, qos=1, retain=True)
 
     def publish_discovery(self):
         device = self.device_info()
@@ -338,6 +583,59 @@ class GatewayTelemetry:
                 "device": device,
             }
             self.client.publish(topic, json.dumps(payload), qos=1, retain=True)
+
+        # Mains/battery (gateway-power-monitor): binary sensor + events
+        # (on_battery, mains_restored, shutdown) for Home Assistant automations
+        power = [
+            (f"{self.args.discovery_prefix}/binary_sensor/{self.device_id}/mains_power/config", {
+                "name": "Mains Power",
+                "unique_id": f"{self.device_id}_mains_power",
+                "state_topic": f"{self.power_topic}/mains",
+                "availability_topic": self.availability_topic,
+                "device_class": "power",
+                "device": device,
+            }),
+            (f"{self.args.discovery_prefix}/event/{self.device_id}/power_event/config", {
+                "name": "Power Event",
+                "unique_id": f"{self.device_id}_power_event",
+                "state_topic": f"{self.power_topic}/event",
+                "event_types": ["on_battery", "mains_restored", "shutdown"],
+                "device": device,
+            }),
+        ]
+        monitored = os.path.exists(POWER_STATE_FILE)
+        topic = f"{self.args.discovery_prefix}/sensor/{self.device_id}/power_source/config"
+        if read_supply_source():
+            self.client.publish(topic, json.dumps({
+                "name": "Power Source",
+                "unique_id": f"{self.device_id}_power_source",
+                "state_topic": f"{self.power_topic}/source",
+                "availability_topic": self.availability_topic,
+                "device_class": "enum",
+                "options": ["DC", "PoE", "Battery"],
+                "icon": "mdi:power-plug",
+                "device": device,
+            }), qos=1, retain=True)
+        else:
+            self.client.publish(topic, "", qos=1, retain=True)
+        for topic, payload in power:
+            self.client.publish(topic, json.dumps(payload) if monitored else "", qos=1, retain=True)
+
+        # OTA update entity (UPDATE_URL): install button + progress in Home Assistant
+        topic = f"{self.args.discovery_prefix}/update/{self.device_id}/os_update/config"
+        if UPDATE_URL:
+            self.client.publish(topic, json.dumps({
+                "name": "GatewayOS",
+                "unique_id": f"{self.device_id}_os_update",
+                "device_class": "firmware",
+                "state_topic": self.update_topic,
+                "command_topic": self.update_command_topic,
+                "payload_install": "install",
+                "availability_topic": self.availability_topic,
+                "device": device,
+            }), qos=1, retain=True)
+        else:
+            self.client.publish(topic, "", qos=1, retain=True)
 
         for key, (name, units) in RESTART_BUTTONS.items():
             topic = f"{self.args.discovery_prefix}/button/{self.device_id}/restart_{key}/config"
@@ -457,6 +755,15 @@ class GatewayTelemetry:
                 log.warning("Failed to read sensor '%s': %s", sensor.key, exc)
         self.client.publish(self.state_topic, json.dumps(state), qos=1, retain=False)
 
+        supply = read_supply_source()
+        if supply:
+            self.client.publish(f"{self.power_topic}/source", supply, qos=1, retain=True)
+
+        source = read_power_source()
+        if source:
+            self.client.publish(f"{self.power_topic}/mains", "ON" if source == "mains" else "OFF",
+                                qos=1, retain=True)
+
         running = {key: service_running(key, units) for key, units in self.status_services.items()}
         if "lora" in running:
             fresh = self.lora_last_stats is not None and time.monotonic() - self.lora_last_stats < LORA_STATS_TIMEOUT_S
@@ -506,15 +813,23 @@ class GatewayTelemetry:
         # on every successful connection.
         client.publish(self.availability_topic, "online", qos=1, retain=True)
         client.subscribe(self.restart_topic, qos=1)
+        if UPDATE_URL:
+            client.subscribe(self.update_command_topic, qos=1)
+            self.check_update_async()
         if self.lora_stats_topic:
             client.subscribe(self.lora_stats_topic, qos=0)
         self.publish_discovery()
+        self.publish_versions()
         self.publish_radio_gateways()
         self.publish_state()
 
     def on_message(self, client, userdata, msg):
         if self.lora_stats_topic and mqtt.topic_matches_sub(self.lora_stats_topic, msg.topic):
             self.lora_last_stats = time.monotonic()
+            return
+        if msg.topic == self.update_command_topic:
+            if msg.payload.decode(errors="replace").strip() == "install":
+                self.install_update_async()
             return
         if msg.topic != self.restart_topic:
             return
@@ -528,6 +843,77 @@ class GatewayTelemetry:
         result = subprocess.run(["systemctl", "restart", "--no-block", *units], capture_output=True, text=True)
         if result.returncode != 0:
             log.error("Restart of %s failed: %s", " ".join(units), result.stderr.strip())
+
+    # ---- OTA update (RAUC) -------------------------------------------------
+
+    def publish_update_state(self, **changes):
+        with self.update_lock:
+            self.update_state.update(changes)
+            payload = json.dumps(self.update_state)
+        self.client.publish(self.update_topic, payload, qos=1, retain=True)
+
+    def check_update(self):
+        installed = read_installed_bundle()
+        state = {"installed_version": bundle_version(installed)}
+        try:
+            remote = rauc_json(["info", UPDATE_URL], timeout=120)
+            if remote.get("hash") and remote.get("hash") == installed.get("hash"):
+                state["latest_version"] = state["installed_version"]
+            else:
+                state["latest_version"] = bundle_version(remote)
+            state["release_summary"] = f"Bundle {UPDATE_URL} ({remote.get('compatible', '?')})"
+        except (OSError, RuntimeError, ValueError, subprocess.SubprocessError) as exc:
+            log.warning("Update check failed: %s", exc)
+            state["latest_version"] = state["installed_version"]
+            state["release_summary"] = f"Update check failed: {exc}"
+        self.update_last_check = time.monotonic()
+        if not self.update_installing:
+            self.publish_update_state(**state)
+
+    def check_update_async(self):
+        threading.Thread(target=self.check_update, daemon=True).start()
+
+    def install_update(self):
+        log.info("Installing update from %s", UPDATE_URL)
+        self.publish_update_state(in_progress=True, update_percentage=0, release_summary="Installing")
+        proc = subprocess.Popen(["rauc", "install", UPDATE_URL], stdout=subprocess.PIPE,
+                                stderr=subprocess.STDOUT, text=True, bufsize=1)
+        output, line = [], ""
+        while True:
+            ch = proc.stdout.read(1)
+            if not ch:
+                break
+            if ch in "\r\n":
+                match = re.match(r"\s*(\d+)%", line)
+                if match:
+                    self.publish_update_state(update_percentage=int(match.group(1)))
+                if line.strip():
+                    output.append(line.strip())
+                line = ""
+            else:
+                line += ch
+        rc = proc.wait()
+        self.update_installing = False
+        if rc == 0:
+            log.info("Update installed%s", ", rebooting" if UPDATE_REBOOT else "")
+            self.publish_update_state(in_progress=False, update_percentage=None,
+                                      release_summary="Installed, rebooting" if UPDATE_REBOOT
+                                      else "Installed, active after the next reboot")
+            if UPDATE_REBOOT:
+                time.sleep(5)
+                subprocess.run(["systemctl", "reboot"])
+        else:
+            error = output[-1] if output else f"rauc install exit code {rc}"
+            log.error("Update failed: %s", error)
+            self.publish_update_state(in_progress=False, update_percentage=None,
+                                      release_summary=f"Update failed: {error}")
+
+    def install_update_async(self):
+        if self.update_installing:
+            log.warning("Update already running")
+            return
+        self.update_installing = True
+        threading.Thread(target=self.install_update, daemon=True).start()
 
     def on_disconnect(self, client, userdata, disconnect_flags, reason_code, properties):
         log.warning("Disconnected from MQTT broker: %s", reason_code)
@@ -549,6 +935,10 @@ class GatewayTelemetry:
         while True:
             time.sleep(self.args.interval)
             self.publish_state()
+            if UPDATE_URL and not self.update_installing and (
+                    self.update_last_check is None or time.monotonic() - self.update_last_check >= UPDATE_CHECK_INTERVAL):
+                self.update_last_check = time.monotonic()
+                self.check_update_async()
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(message)s", stream=sys.stdout)

@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 SUMMARY = "mcumgr - CLI for the MCUmgr/SMP management protocol (MCUboot serial recovery, DFU)"
 HOMEPAGE = "https://github.com/apache/mynewt-mcumgr-cli"
 LICENSE = "Apache-2.0"

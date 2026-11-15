@@ -50,7 +50,9 @@ MCUBOOT_OVERLAY    := $(CURDIR)/app/boards/mcuboot-$(OVERLAY_BASENAME).overlay
 # the app and MCUboot must agree on the same flash layout, so this is
 # appended to both images' devicetree overlays below.
 PARTITIONS_OVERLAY := $(CURDIR)/app/boards/partitions.overlay
-DFU_KEY  ?= app/dfu_signing_key.pem
+# Shared with the Yocto build (nrf5340-rcp-firmware, NRF5340_DFU_KEY): public debug
+# key in os/keys/nrf5340/, see os/keys/README.md
+DFU_KEY  ?= ../../os/keys/nrf5340/dfu_signing_key.pem
 DFU_PORT ?= /dev/ttyACM0
 DFU_BAUD ?= 115200
 NRFJPROG_SNR ?=

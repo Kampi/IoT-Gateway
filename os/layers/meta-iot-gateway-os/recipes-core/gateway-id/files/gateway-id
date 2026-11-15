@@ -1,0 +1,41 @@
+#!/bin/sh
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
+# Writes the gateway ID to /run/gateway-id.env:
+#   GATEWAY_SERIAL=07219303
+#   GATEWAY_ID=iot-gateway-07219303
+# and sets the hostname to the gateway ID (see below).
+# Source: serial number of the Verdin module (set by U-Boot in the devicetree),
+# fallback /etc/machine-id. Services use GATEWAY_ID for names that must be
+# unique per gateway, e.g. MQTT topics.
+set -e
+
+PREFIX="@GATEWAY_ID_PREFIX@"
+OUT=/run/gateway-id.env
+
+serial=""
+if [ -r /proc/device-tree/serial-number ]; then
+    serial=$(tr -d '\0' < /proc/device-tree/serial-number)
+fi
+if [ -z "${serial}" ] && [ -r /etc/machine-id ]; then
+    serial=$(head -c 8 /etc/machine-id)
+fi
+# Only characters valid in MQTT topics, hostnames and file names
+serial=$(printf '%s' "${serial}" | tr -cd 'A-Za-z0-9-' | tr 'A-Z' 'a-z')
+[ -n "${serial}" ] || serial=unknown
+
+id="${PREFIX}-${serial}"
+printf 'GATEWAY_SERIAL=%s\nGATEWAY_ID=%s\n' "${serial}" "${id}" > "${OUT}.tmp"
+mv "${OUT}.tmp" "${OUT}"
+
+# Hostname = gateway ID (mDNS: <id>.local), so several gateways in one LAN do
+# not collide. Only replaces the image default (hostname "@GATEWAY_ID_PREFIX@"):
+# a hostname set on the gateway, or restored from a backup, is kept.
+# /etc/hostname lives in the /etc overlay on DATA and survives updates.
+if [ "$(cat /etc/hostname 2>/dev/null)" = "${PREFIX}" ]; then
+    echo "${id}" > /etc/hostname
+fi
+if [ -s /etc/hostname ]; then
+    cat /etc/hostname > /proc/sys/kernel/hostname
+fi

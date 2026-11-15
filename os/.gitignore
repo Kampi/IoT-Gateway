@@ -3,9 +3,8 @@ build/
 sstate-cache/
 downloads/
 
-# SSH private keys - public keys (*.pub) are intentionally tracked
-keys/
-!keys/*.pub
+# keys/ holds public DEBUG keys and is tracked (keys/README.md). Own keys
+# for the field belong outside the repository (GATEWAY_KEYS_DIR).
 
 # Toradex Easy Installer artifacts
 *.zip
@@ -21,6 +20,7 @@ layers/meta-freescale-3rdparty/
 layers/meta-freescale-distro/
 layers/meta-openembedded/
 layers/meta-qt5/
+layers/meta-rauc/
 layers/meta-security/
 layers/meta-ti/
 layers/meta-toradex-bsp-common/

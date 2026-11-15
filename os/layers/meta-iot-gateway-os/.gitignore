@@ -1,0 +1,28 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
+# Python bytecode (from running or syntax-checking the scripts locally)
+__pycache__/
+*.py[cod]
+
+# Leftovers from patching and merging
+*.orig
+*.rej
+*.bak
+*.patch.new
+
+# Local test output
+*.log
+*.tmp
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.history/
+
+# OS artifacts
+.DS_Store
+Thumbs.db

@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
 SRC_URI:append = " \
@@ -6,6 +9,8 @@ SRC_URI:append = " \
     file://peripherals.cfg \
     file://multimedia.cfg \
     file://networking.cfg \
+    file://rauc.cfg \
+    file://system.cfg \
 "
 
 KERNEL_DEVICETREE:append = " freescale/iot-gateway-imx8mm.dtb"

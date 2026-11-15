@@ -1,0 +1,7 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
+# zram swap (zram-swap-init of meta-oe zram): compressed swap in RAM, no
+# writes to the eMMC. Size relative to the RAM; lz4 is fast with low CPU load.
+ZRAM_SIZE_PERCENT=50
+ZRAM_ALGORITHM=lz4

@@ -1,4 +1,7 @@
 #!/bin/bash
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 # WiFi orchestrator: scans on mlan0 (STA), runs portal on uap0 (AP).
 # mlan0 is managed by NetworkManager; uap0 is NM-unmanaged (AP only).
 

@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 SUMMARY = "The program acquires utility meter readings from wired m-bus or wireless wm-bus meters."
 HOMEPAGE = "https://github.com/wmbusmeters/wmbusmeters"
 LICENSE = "GPL-3.0-only"

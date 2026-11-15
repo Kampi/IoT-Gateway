@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 SUMMARY = "UART device enumeration helpers"
 HOMEPAGE = "https://github.com/bdraco/uart-devices"
 LICENSE = "MIT"

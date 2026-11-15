@@ -1,0 +1,16 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
+[Unit]
+Description=Gateway ID from the module serial number (/run/gateway-id.env, hostname)
+DefaultDependencies=no
+After=local-fs.target
+Before=sysinit.target systemd-hostnamed.service NetworkManager.service avahi-daemon.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/libexec/gateway-os/gateway-id
+
+[Install]
+WantedBy=sysinit.target

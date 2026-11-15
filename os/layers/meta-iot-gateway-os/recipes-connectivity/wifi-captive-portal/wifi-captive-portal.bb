@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 SUMMARY = "WiFi captive portal for initial network configuration"
 DESCRIPTION = "On boot, tries to connect to a configured WiFi network via NetworkManager. \
 If no credentials are stored or the connection fails, raises an open \

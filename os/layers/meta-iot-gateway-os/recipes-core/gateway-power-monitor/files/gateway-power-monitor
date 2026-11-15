@@ -1,0 +1,171 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
+"""Mains / battery supervision of the IoT-Gateway mainboard.
+
+The TPS2121 power mux (IC704) switches between mains (IN1, LM62460 buck) and
+the battery (IN2, ADP1614 boost). Its ST output reaches SODIMM pin 210
+(GPIO5_IO26, gpio-line-names "powermux-status") through an inverting BSS138:
+low = mains, high = battery (POWER_BATTERY_LEVEL).
+
+- writes the power source to /run/gateway-power/state ("mains" / "battery"),
+  read by gateway-telemetry (Home Assistant binary sensor "Mains Power")
+- sends Home Assistant events (gateway-telemetry "Power Event" entity) when
+  the source changes and before a shutdown
+- shuts the gateway down cleanly when it runs on battery and the battery
+  (MAX17048 fuel gauge) drops to POWER_SHUTDOWN_PERCENT, or after
+  POWER_SHUTDOWN_DELAY seconds on battery (0 = off)
+
+Works without MQTT: the events are best effort, the shutdown does not depend
+on the broker.
+"""
+
+import glob
+import json
+import logging
+import os
+import shlex
+import subprocess
+import sys
+import time
+
+log = logging.getLogger("gateway-power-monitor")
+
+STATE_DIR = "/run/gateway-power"
+STATE_FILE = os.path.join(STATE_DIR, "state")
+TELEMETRY_CONF = "/etc/default/gateway-telemetry"
+
+
+def env_int(name, default):
+    try:
+        return int(os.environ.get(name, default))
+    except ValueError:
+        return default
+
+
+LINE = os.environ.get("POWER_GPIO_LINE", "powermux-status")
+BATTERY_LEVEL = env_int("POWER_BATTERY_LEVEL", 1)
+SHUTDOWN_PERCENT = env_int("POWER_SHUTDOWN_PERCENT", 10)
+SHUTDOWN_DELAY = env_int("POWER_SHUTDOWN_DELAY", 0)
+INTERVAL = env_int("POWER_POLL_INTERVAL", 5)
+# A source change must be seen this many times in a row (debounce)
+DEBOUNCE = 2
+
+
+def read_source():
+    out = subprocess.run(["gpioget", "--numeric", LINE], capture_output=True, text=True, timeout=5)
+    if out.returncode != 0:
+        raise OSError(out.stderr.strip() or "gpioget failed")
+    return "battery" if int(out.stdout.strip()) == BATTERY_LEVEL else "mains"
+
+
+def read_battery_percent():
+    for path in glob.glob("/sys/class/power_supply/*/capacity"):
+        try:
+            with open(path) as f:
+                return int(f.read().strip())
+        except (OSError, ValueError):
+            continue
+    return None
+
+
+def write_state(source):
+    os.makedirs(STATE_DIR, exist_ok=True)
+    tmp = STATE_FILE + ".tmp"
+    with open(tmp, "w") as f:
+        f.write(source + "\n")
+    os.replace(tmp, STATE_FILE)
+
+
+def mqtt_settings():
+    """Broker settings of gateway-telemetry (shell style KEY="value" file)."""
+    conf = {}
+    try:
+        with open(TELEMETRY_CONF) as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                key, _, value = line.partition("=")
+                conf[key.strip()] = " ".join(shlex.split(value)) if value.strip() else ""
+    except OSError:
+        pass
+    return conf
+
+
+def machine_id():
+    with open("/etc/machine-id") as f:
+        return f.read().strip()
+
+
+def send_event(event_type, **extra):
+    """Home Assistant MQTT event (best effort, never blocks the shutdown)."""
+    conf = mqtt_settings()
+    host = conf.get("MQTT_HOST")
+    if not host:
+        return
+    payload = json.dumps({"event_type": event_type, **extra})
+    cmd = ["mosquitto_pub", "-h", host, "-p", conf.get("MQTT_PORT", "1883") or "1883",
+           "-q", "1", "-t", f"gateway/{machine_id()}/power/event", "-m", payload]
+    if conf.get("MQTT_USERNAME"):
+        cmd += ["-u", conf["MQTT_USERNAME"], "-P", conf.get("MQTT_PASSWORD", "")]
+    try:
+        subprocess.run(cmd, timeout=5, capture_output=True)
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        log.warning("Could not send event %s: %s", event_type, exc)
+
+
+def shutdown(reason, percent):
+    log.warning("Shutting down: %s", reason)
+    send_event("shutdown", reason=reason, battery=percent)
+    subprocess.run(["systemctl", "poweroff"])
+    # systemd stops this service now
+    time.sleep(60)
+
+
+def main():
+    logging.basicConfig(level=logging.INFO, format="%(message)s", stream=sys.stdout)
+    log.info("Line %s, battery level %d, shutdown at %d %% or after %d s on battery",
+             LINE, BATTERY_LEVEL, SHUTDOWN_PERCENT, SHUTDOWN_DELAY)
+
+    source = None
+    candidate, seen = None, 0
+    on_battery_since = None
+
+    while True:
+        try:
+            current = read_source()
+        except (OSError, ValueError, subprocess.TimeoutExpired) as exc:
+            log.error("Cannot read %s: %s", LINE, exc)
+            time.sleep(INTERVAL)
+            continue
+
+        if current != source:
+            seen = seen + 1 if current == candidate else 1
+            candidate = current
+            if source is None or seen >= DEBOUNCE:
+                if source is not None:
+                    log.warning("Power source: %s -> %s", source, current)
+                    send_event("on_battery" if current == "battery" else "mains_restored",
+                               battery=read_battery_percent())
+                else:
+                    log.info("Power source: %s", current)
+                source = current
+                write_state(source)
+                on_battery_since = time.monotonic() if source == "battery" else None
+        else:
+            candidate, seen = None, 0
+
+        if source == "battery":
+            percent = read_battery_percent()
+            if percent is not None and percent <= SHUTDOWN_PERCENT:
+                shutdown(f"battery at {percent} %", percent)
+            elif SHUTDOWN_DELAY > 0 and time.monotonic() - on_battery_since >= SHUTDOWN_DELAY:
+                shutdown(f"{SHUTDOWN_DELAY} s on battery", percent)
+
+        time.sleep(INTERVAL)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,6 +1,9 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 [Unit]
-Description=Back up Zigbee/Thread state to the remote backup host
-After=network-online.target zigbee2mqtt.service otbr-agent.service gateway-backup-keygen.service
+Description=Back up the persistent gateway data (/data overlays) to the remote backup host
+After=network-online.target zigbee2mqtt.service otbr-agent.service gateway-backup-keygen.service gateway-id.service
 Wants=network-online.target
 Requires=gateway-backup-keygen.service
 

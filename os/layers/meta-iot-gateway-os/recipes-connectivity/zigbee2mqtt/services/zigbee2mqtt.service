@@ -1,13 +1,21 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 [Unit]
 Description=Zigbee2MQTT
-After=network.target mosquitto.service module-power@zigbee.service
-Wants=mosquitto.service
+After=network-online.target gateway-id.service module-power@zigbee.service
+Wants=network-online.target
+Requires=gateway-id.service
 # Switches on the CC2652P (power, out of reset, normal boot) - see gateway-module-power.
 Requires=module-power@zigbee.service
 
 [Service]
 Type=simple
 Environment=ZIGBEE2MQTT_DATA=/var/lib/zigbee2mqtt
+# Gateway ID (e.g. iot-gateway-07219303) for the default base topic
+# "@GATEWAY_ID@/zigbee", filled in once at the first start.
+EnvironmentFile=/run/gateway-id.env
+ExecStartPre=/bin/sed -i "s|@GATEWAY_ID@|${GATEWAY_ID}|g" /var/lib/zigbee2mqtt/configuration.yaml
 # Give the CC2652P time to boot after power-up.
 ExecStartPre=/bin/sleep 2
 ExecStart=/usr/bin/node /usr/lib/node_modules/zigbee2mqtt/index.js

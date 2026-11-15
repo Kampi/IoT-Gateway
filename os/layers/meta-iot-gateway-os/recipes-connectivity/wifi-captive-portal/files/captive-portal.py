@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 """
 Captive portal web server for WiFi configuration.
 
@@ -121,7 +124,9 @@ def _save_credentials(ssid: str, password: str) -> None:
         "wifi-sec.key-mgmt", "wpa-psk",
         "wifi-sec.psk", password,
         "ipv4.method", "auto",
-        "ipv6.method", "disabled",
+        # IPv6 is required: mlan0 is the Thread backbone (otbr-agent -B mlan0),
+        # border routing and Matter need IPv6 on it
+        "ipv6.method", "auto",
         "connection.autoconnect", "yes",
         "connection.autoconnect-priority", "20",
     ], check=True)

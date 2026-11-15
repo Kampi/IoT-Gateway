@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 # Recipe created by recipetool
 # This is the basis of a recipe and may need further editing in order to be fully functional.
 # (Feel free to remove these comments when editing.)
@@ -228,8 +231,11 @@ inherit npm systemd
 # @USER_CONFIG: MQTT broker URL for Zigbee2MQTT (e.g. mqtt://192.168.1.10)
 ZIGBEE2MQTT_MQTT_SERVER ?= "mqtt://localhost"
 # MQTT base topic. Must be unique per broker: a second Zigbee2MQTT with the
-# same base topic deletes the other one's Home Assistant entities.
-ZIGBEE2MQTT_BASE_TOPIC ?= "zigbee2mqtt"
+# same base topic deletes the other one's Home Assistant entities. The default
+# contains the gateway ID (@GATEWAY_ID@, e.g. iot-gateway-07219303, from the
+# module serial number), which zigbee2mqtt.service fills in at the first start.
+# @USER_CONFIG: MQTT base topic of Zigbee2MQTT, unique per broker. @GATEWAY_ID@ = gateway ID from the module serial number (gateway-id)
+ZIGBEE2MQTT_BASE_TOPIC ?= "@GATEWAY_ID@/zigbee"
 
 # @USER_CONFIG: Name of the Zigbee bridge device in Home Assistant, parent of all Zigbee devices
 ZIGBEE2MQTT_HA_BRIDGE_NAME ?= "IoT-Gateway (Zigbee)"
@@ -237,7 +243,7 @@ ZIGBEE2MQTT_HA_BRIDGE_NAME ?= "IoT-Gateway (Zigbee)"
 SYSTEMD_SERVICE:${PN} = "zigbee2mqtt.service"
 
 # Powers the CC2652P before zigbee2mqtt starts (Requires=module-power@zigbee.service)
-RDEPENDS:${PN} += "gateway-module-power"
+RDEPENDS:${PN} += "gateway-module-power gateway-id"
 SYSTEMD_AUTO_ENABLE:${PN} = "enable"
 
 # Dahlia dev setup: the coordinator is a USB stick, matched by VID/PID

@@ -1,4 +1,7 @@
 #!/bin/sh
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 # NetworkManager dispatcher: fixed IPv6 address on the Thread backbone
 # interface (OTBR_INFRA_IFACE). It is the next hop of the LAN router's static
 # route to the Thread OMR prefix (OTBR_OMR_PREFIX), so that route stays valid

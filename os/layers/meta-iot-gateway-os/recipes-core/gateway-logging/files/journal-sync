@@ -1,4 +1,7 @@
 #!/bin/sh
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 set -e
 
 # On the eMMC (/var/log is a tmpfs), so the archive survives a reboot.

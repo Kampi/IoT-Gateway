@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 SUMMARY = "ChirpStack Gateway Bridge — Semtech UDP to MQTT bridge for ChirpStack"
 HOMEPAGE = "https://www.chirpstack.io/docs/chirpstack-gateway-bridge/"
 LICENSE = "MIT"

@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 SUMMARY = "Power on the Zigbee/Thread modules before their services start"
 DESCRIPTION = "Template unit module-power@<name>.service drives the \
 <name>-power-enable, <name>-reset and <name>-boot GPIOs so the module runs \

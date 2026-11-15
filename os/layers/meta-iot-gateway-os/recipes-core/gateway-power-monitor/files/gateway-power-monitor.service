@@ -1,0 +1,16 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
+[Unit]
+Description=Mains/battery supervision (TPS2121 power mux, MAX17048), clean shutdown on low battery
+After=sysinit.target
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/default/gateway-power-monitor
+ExecStart=/usr/libexec/gateway-os/gateway-power-monitor
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

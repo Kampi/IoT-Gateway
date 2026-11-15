@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 # LAYER_CONF_VERSION is increased each time build/conf/bblayers.conf
 # changes incompatibly
 LCONF_VERSION = "7"
@@ -35,5 +38,6 @@ BBLAYERS ?= " \
   ${TOPDIR}/../layers/meta-toradex-distro \
   ${TOPDIR}/../layers/meta-yocto/meta-poky \
   ${TOPDIR}/../layers/openembedded-core/meta \
+  ${TOPDIR}/../layers/meta-rauc \
   ${TOPDIR}/../layers/meta-iot-gateway-os \
 "

@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
+[Unit]
+Description=Generate NVMe host NQN and ID (/etc/nvme/hostnqn, hostid)
+ConditionPathExists=!/etc/nvme/hostnqn
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'mkdir -p /etc/nvme && /usr/sbin/nvme gen-hostnqn > /etc/nvme/hostnqn && cat /proc/sys/kernel/random/uuid > /etc/nvme/hostid'
+
+[Install]
+WantedBy=multi-user.target

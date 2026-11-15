@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-.PHONY: clean repo setup dtb
+.PHONY: clean repo setup dtb tezi-feed tezi-usb
 
 CONFIG_FILE := ${PWD}/build/conf/auto.conf
 LAYERS_DIR := ${PWD}/layers/
@@ -53,3 +53,15 @@ repo:
 	repo sync; \
 	echo "Removing local manifest file..."; \
 	rm -f .repo/local_manifests/local_manifest.xml
+
+# Easy Installer network feed of the latest gateway-os-image (scripts/tezi-feed.sh).
+# Easy Installer: Feeds -> add $(TEZI_FEED_URL)/image_list.json
+TEZI_FEED_PORT ?= 8080
+TEZI_FEED_URL ?= http://192.168.0.1:$(TEZI_FEED_PORT)
+tezi-feed:
+	@TEZI_FEED_PORT=$(TEZI_FEED_PORT) ./scripts/tezi-feed.sh serve $(TEZI_FEED_URL)
+
+# Unpack the latest gateway-os-image onto a USB stick: make tezi-usb USB=/media/<user>/<stick>
+tezi-usb:
+	@./scripts/tezi-feed.sh usb "$(USB)"
+

@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 SUMMARY = "LoRa Packet Forwarder for SX1302/SX1303 concentrators (USB and SPI)"
 HOMEPAGE = "https://github.com/Lora-net/sx1302_hal"
 LICENSE = "BSD-2-Clause"

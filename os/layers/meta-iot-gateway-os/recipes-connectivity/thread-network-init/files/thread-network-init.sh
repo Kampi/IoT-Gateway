@@ -1,4 +1,7 @@
 #!/bin/sh
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 set -e
 
 # otbr-agent is built with -DOTBR_NO_AUTO_ATTACH=1 (see ot-br-posix_git.bb),

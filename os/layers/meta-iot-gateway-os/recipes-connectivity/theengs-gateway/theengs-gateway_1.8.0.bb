@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 SUMMARY = "Theengs Gateway - Bluetooth Low Energy to MQTT"
 DESCRIPTION = "Scans for BLE advertisements, decodes several hundred sensor types \
 with Theengs Decoder and publishes them via MQTT, including Home Assistant \

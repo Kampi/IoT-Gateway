@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 SUMMARY = "Tools to enumerate and find Bluetooth adapters"
 HOMEPAGE = "https://github.com/Bluetooth-Devices/bluetooth-adapters"
 LICENSE = "Apache-2.0"

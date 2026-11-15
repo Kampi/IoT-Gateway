@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 SUMMARY = "Driver for RTL-SDR device maintained by REDHAWK SDR."
 HOMEPAGE = "http://sdr.osmocom.org/trac/wiki/rtl-sdr"
 LICENSE = "GPL-2.0-only"

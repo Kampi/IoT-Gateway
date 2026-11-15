@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 # By default UART4's RDC (Resource Domain Controller) master domain and

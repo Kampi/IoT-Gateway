@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 do_configure:append() {
     # Remove existing fdtfile, if present
     sed -i '/"fdtfile=.*\\0" \\/d' ${S}/include/configs/verdin-imx8mm.h

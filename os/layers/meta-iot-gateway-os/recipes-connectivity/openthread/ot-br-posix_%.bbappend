@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 FILESEXTRAPATHS:prepend := "${THISDIR}/ot-br-posix:"
 
 # Newer ot-br-posix than meta-oe scarthgap (a35cc682, 2024-03).

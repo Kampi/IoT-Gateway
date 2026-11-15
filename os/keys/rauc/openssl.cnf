@@ -1,0 +1,19 @@
+[ req ]
+distinguished_name = req_dn
+prompt = no
+[ req_dn ]
+O = IoT-Gateway
+CN = IoT-Gateway RAUC CA
+[ v3_ca ]
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid:always,issuer:always
+basicConstraints = critical,CA:true
+keyUsage = critical,keyCertSign,cRLSign
+[ v3_leaf ]
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid,issuer
+basicConstraints = critical,CA:false
+keyUsage = critical,digitalSignature
+# No extendedKeyUsage: RAUC checks the S/MIME signing purpose by default
+# (no [keyring] check-purpose), a codeSigning-only certificate fails with
+# "unsuitable certificate purpose".

@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 """Update the Configuration Variables section in README.md.
 
 Scans all recipes in the layer for @USER_CONFIG markers:

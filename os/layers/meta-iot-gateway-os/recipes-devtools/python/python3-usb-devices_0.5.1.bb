@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 SUMMARY = "USB device enumeration helpers"
 HOMEPAGE = "https://github.com/Bluetooth-Devices/usb-devices"
 LICENSE = "MIT"

@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 SUMMARY = "Z-Stack 3.x coordinator firmware for CC2652P"
 DESCRIPTION = "Pre-compiled Z-Stack 3.x coordinator firmware for TI CC2652P \
 used with Zigbee2MQTT (launchpad build, no external PA switch control needed). \

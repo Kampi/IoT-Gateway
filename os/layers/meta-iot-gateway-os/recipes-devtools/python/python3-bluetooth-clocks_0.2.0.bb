@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 SUMMARY = "Library to set the time of Bluetooth Low Energy devices"
 HOMEPAGE = "https://github.com/koenvervloesem/bluetooth-clocks"
 LICENSE = "MIT"

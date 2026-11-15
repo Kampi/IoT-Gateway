@@ -1,3 +1,6 @@
+<!-- SPDX-License-Identifier: MIT -->
+<!-- Copyright (c) 2026 Daniel Kampert -->
+
 # meta-iot-gateway-os
 
 Yocto/OpenEmbedded layer for the IoT Gateway OS on the
@@ -29,8 +32,12 @@ everything via MQTT to Home Assistant.
     - [Bluetooth LE](#bluetooth-le)
     - [Thread](#thread)
     - [MQTT](#mqtt)
+    - [CAN](#can)
   - [Networking](#networking)
   - [Security](#security)
+  - [Updates (RAUC)](#updates-rauc)
+  - [System](#system)
+  - [Watchdog](#watchdog)
   - [Logging](#logging)
   - [Backup](#backup)
   - [Maintainer](#maintainer)
@@ -40,13 +47,21 @@ everything via MQTT to Home Assistant.
 ## Building
 
 Dependencies (all `scarthgap`): `openembedded-core`, `meta-arm`,
-`meta-toradex-nxp`, `meta-toradex-demos`, `meta-security`.
+`meta-toradex-nxp`, `meta-toradex-demos`, `meta-security`, `meta-rauc`
+(`os/local_manifest.xml`, fetched by `make repo`).
 
 ```bash
 bitbake-layers add-layer layers/meta-iot-gateway-os   # layer priority 6
 source layers/poky/oe-init-build-env build
-bitbake gateway-os-image
+bitbake gateway-os-image       # Easy Installer image (first flash)
+bitbake gateway-os-bundle      # RAUC update bundle, see "Updates (RAUC)"
 ```
+
+Flashing: Easy Installer image from a USB stick (`make tezi-usb USB=<mount point>`)
+or over the network from a Raspberry Pi next to the gateway, see
+[docs/tezi-feed-raspberry-pi.md](docs/tezi-feed-raspberry-pi.md) (DHCP/DNS,
+nginx feed, USB recovery with `uuu`, starting the Easy Installer from a
+running gateway).
 
 Artifacts: `build/tmp/deploy/images/verdin-imx8mm/`.
 
@@ -65,9 +80,10 @@ The gateway settings are at the end of `local.conf`.
 
 ## Configuration Variables
 
-Set in `build/conf/local.conf`. All MQTT clients default to the Mosquitto
-broker on the gateway (`localhost`). If Home Assistant / ChirpStack use a
-broker elsewhere, point **all** of them to it:
+Set in `build/conf/local.conf`. The gateway has no MQTT broker of its own,
+only clients. Point **all** of them to the broker that Home Assistant /
+ChirpStack use (the defaults `localhost` only work with a broker added to the
+image):
 
 ```bitbake
 GATEWAY_BOARD           = "dahlia"
@@ -83,8 +99,16 @@ TELEMETRY_MQTT_HOST     = "192.168.1.10"
 | Variable | Default | Description | Recipe |
 | --- | --- | --- | --- |
 | `GATEWAY_BOARD` | `mainboard` | Target hardware: "mainboard" (IoT-Gateway PCB, see gateway/) or "dahlia" (Verdin Dahlia dev setup with nRF5340-DK as Thread RCP on UART_1) | `gateway-os.conf` |
+| `GATEWAY_KEYS_DIR` | `${TOPDIR}/../keys` | Folder with the signing keys (rauc/, nrf5340/), default: public debug keys in os/keys | `gateway-os.conf` |
+| `GATEWAY_ROOTFS_SLOT_SIZE` | `4096` | Size of each of the two rootfs slots in MiB (A/B updates with RAUC) | `gateway-os.conf` |
 | `CHIRPSTACK_MQTT_SERVER` | `tcp://localhost:1883` | MQTT broker URL for ChirpStack Gateway Bridge (e.g. tcp://192.168.1.10:1883) | `chirpstack-gateway-bridge_4.0.11.bb` |
+| `GATEWAY_CAN_INTERFACES` | `can0` | CAN interfaces brought up at boot (space separated, empty = none) | `gateway-can_1.0.bb` |
+| `GATEWAY_CAN_BITRATE` | `500000` | CAN bitrate in bit/s | `gateway-can_1.0.bb` |
+| `GATEWAY_CAN_RESTART_MS` | `100` | CAN automatic restart after bus-off in ms (0 = off) | `gateway-can_1.0.bb` |
 | `LORA_SERVER_ADDRESS` | `localhost` | Address of the ChirpStack Gateway Bridge (Semtech UDP server) | `lora-packet-forwarder_2.1.0.bb` |
+| `NRF5340_FW_SRC` | `${TOPDIR}/../../firmware/nRF5340` | nRF5340 firmware sources (west manifest app/west.yml, configs, overlays) | `nrf5340-rcp-firmware_2.7.0.bb` |
+| `NRF5340_DFU_KEY` | `${GATEWAY_KEYS_DIR}/nrf5340/dfu_signing_key.pem` | MCUboot signing key of the nRF5340 (Ed25519, see os/keys/README.md) | `nrf5340-rcp-firmware_2.7.0.bb` |
+| `GATEWAY_SSH_AUTHORIZED_KEYS` | `${GATEWAY_KEYS_DIR}/gateway_ed25519.pub` | Public SSH key(s) allowed to log in as root (authorized_keys format) | `openssh_%.bbappend` |
 | `OTBR_INFRA_IFACE` | `mlan0` | Network interface connected to the backbone (IP) network with IPv6 | `ot-br-posix_%.bbappend` |
 | `OTBR_INFRA_IPV6_ADDRESS` | `fd8f:e72d:8065:0:3f1e:f55:3464:19db/64` | Fixed IPv6 address/prefix length of the gateway on OTBR_INFRA_IFACE, next hop of the LAN router's route to OTBR_OMR_PREFIX (empty = none) | `ot-br-posix_%.bbappend` |
 | `OTBR_RCP_DEVICE` | `/dev/thread` | Thread RCP device path (nRF5340 flashed with OpenThread RCP firmware, connected via UART_4) | `ot-br-posix_%.bbappend` |
@@ -93,15 +117,31 @@ TELEMETRY_MQTT_HOST     = "192.168.1.10"
 | `WMBUSMETERS_MQTT_SERVER` | `localhost` | MQTT broker hostname (or hostname:port) for wmbusmeters (e.g. 192.168.1.10 or 192.168.1.10:1883) | `wmbusmeters_1.18.0.bb` |
 | `WMBUSMETERS_DEVICE` | `/dev/wmbus:im871a:t1` | wM-Bus receiver for wmbusmeters (device:type:link modes, e.g. /dev/wmbus:im871a:t1) | `wmbusmeters_1.18.0.bb` |
 | `ZIGBEE2MQTT_MQTT_SERVER` | `mqtt://localhost` | MQTT broker URL for Zigbee2MQTT (e.g. mqtt://192.168.1.10) | `zigbee2mqtt_2.12.0.bb` |
-| `ZIGBEE2MQTT_BASE_TOPIC` | `zigbee2mqtt` | MQTT base topic of Zigbee2MQTT. Must be unique on the broker: a second Zigbee2MQTT with the same base topic removes the other one's Home Assistant entities | `zigbee2mqtt_2.12.0.bb` |
+| `ZIGBEE2MQTT_BASE_TOPIC` | `@GATEWAY_ID@/zigbee` | MQTT base topic of Zigbee2MQTT, unique per broker. @GATEWAY_ID@ = gateway ID from the module serial number (gateway-id) | `zigbee2mqtt_2.12.0.bb` |
 | `ZIGBEE2MQTT_HA_BRIDGE_NAME` | `IoT-Gateway (Zigbee)` | Name of the Zigbee bridge device in Home Assistant, parent of all Zigbee devices | `zigbee2mqtt_2.12.0.bb` |
 | `ZIGBEE2MQTT_USB_VID` | `10c4` | USB vendor ID of the Zigbee USB stick (Dahlia dev setup only) | `zigbee2mqtt_2.12.0.bb` |
 | `ZIGBEE2MQTT_USB_PID` | `ea60` | USB product ID of the Zigbee USB stick (Dahlia dev setup only) | `zigbee2mqtt_2.12.0.bb` |
+| `RAUC_KEY_FILE` | `${GATEWAY_KEYS_DIR}/rauc/development-1.key.pem` | Private key that signs the RAUC bundles | `gateway-os-bundle.bb` |
+| `RAUC_CERT_FILE` | `${GATEWAY_KEYS_DIR}/rauc/development-1.cert.pem` | Certificate of the RAUC bundle signing key | `gateway-os-bundle.bb` |
+| `GATEWAY_BACKUP_REMOTE` | `` | rsync/ssh destination of the daily backup, e.g. "backup@192.168.1.10:/volume1/backups/gateway/" (empty = no backup) | `gateway-backup_1.0.bb` |
+| `GATEWAY_HEALTH_UNITS` | `NetworkManager.service otbr-agent.service gateway-telemetry.service` | Units that must be active on the first boot of a new system, otherwise rollback to the previous slot | `gateway-health-check_1.0.bb` |
+| `GATEWAY_HEALTH_DEVICE_UNITS` | `/dev/zigbee:zigbee2mqtt.service /dev/lora:lora-packet-forwarder.service` | "<device>:<unit>" pairs, unit only required while the device exists (USB peripherals) | `gateway-health-check_1.0.bb` |
+| `GATEWAY_HEALTH_TIMEOUT` | `300` | Seconds the health check waits for the units before it rolls back | `gateway-health-check_1.0.bb` |
+| `GATEWAY_ID_PREFIX` | `iot-gateway` | Prefix of the gateway ID (<prefix>-<module serial number>), used as hostname and e.g. in the Zigbee2MQTT base topic | `gateway-id_1.0.bb` |
+| `POWER_BATTERY_LEVEL` | `1` | Level of powermux-status (SODIMM 210) on battery (TPS2121 ST via inverting BSS138: 1 = battery, 0 = mains) | `gateway-power-monitor_1.0.bb` |
+| `POWER_SHUTDOWN_PERCENT` | `10` | Clean shutdown when the gateway runs on battery and the battery is at or below this charge in % | `gateway-power-monitor_1.0.bb` |
+| `POWER_SHUTDOWN_DELAY` | `0` | Clean shutdown after this many seconds on battery, regardless of the charge (0 = off) | `gateway-power-monitor_1.0.bb` |
 | `TELEMETRY_MQTT_HOST` | `localhost` | MQTT broker host for the gateway telemetry (Home Assistant device "IoT-Gateway") | `gateway-telemetry_1.0.bb` |
 | `TELEMETRY_DEVICE_NAME` | `IoT-Gateway` | Name of the gateway device in Home Assistant (CPU, memory, disk, battery, uptime) | `gateway-telemetry_1.0.bb` |
 | `TELEMETRY_LORA_DEVICE_NAME` | `IoT-Gateway (LoRa)` | Name of the LoRa gateway device in Home Assistant, parent of all LoRa sensors | `gateway-telemetry_1.0.bb` |
 | `TELEMETRY_BLE_DEVICE_NAME` | `IoT-Gateway (Bluetooth)` | Name of the Bluetooth gateway device in Home Assistant, parent of all BLE sensors | `gateway-telemetry_1.0.bb` |
 | `TELEMETRY_WMBUS_DEVICE_NAME` | `IoT-Gateway (wM-Bus)` | Name of the wM-Bus gateway device in Home Assistant (wmbusmeters status and version) | `gateway-telemetry_1.0.bb` |
+| `TELEMETRY_INPUT_VOLTAGE_CHANNEL` | `3` | ads1015 channel of the input voltage divider (empty = no Input Voltage sensor) | `gateway-telemetry_1.0.bb` |
+| `TELEMETRY_INPUT_VOLTAGE_DIVIDER` | `9.3333` | Ratio of the input voltage divider, (R_top + R_bottom) / R_bottom | `gateway-telemetry_1.0.bb` |
+| `GATEWAY_UPDATE_SERVER` | `` | Update server (base URL, e.g. http://192.168.0.1), bundle expected at <server>/bundles/gateway-os-bundle-<MACHINE>.raucb; GATEWAY_UPDATE_URL overrides the full URL (both empty = no update entity) | `gateway-telemetry_1.0.bb` |
+| `GATEWAY_UPDATE_CHECK_INTERVAL` | `3600` | Seconds between checks for a new bundle on the update server | `gateway-telemetry_1.0.bb` |
+| `GATEWAY_UPDATE_REBOOT` | `1` | Reboot into the new system after an install from Home Assistant (1/0) | `gateway-telemetry_1.0.bb` |
+| `RAUC_KEYRING_FILE_PATH` | `${GATEWAY_KEYS_DIR}/rauc/ca.cert.pem` | RAUC keyring (CA certificate) installed on the gateway | `rauc-conf.bbappend` |
 
 <!-- USER_CONFIG_END -->
 
@@ -222,8 +262,51 @@ shared with the Cortex-M4. Enable it once the M4 firmware no longer claims it.
 | Alert | GPIO3_IO24 `battery-alert` | Low-battery alert (input) | `gpioget gpiochip2 24` |
 
 Fuel gauge MAX17048 (`max17040_battery`): `/sys/class/power_supply/max17040-0/{capacity,voltage_now}`.
-On-module: INA219 supply current (`/sys/class/hwmon/hwmon*/curr1_input`),
-ADS1015 ADC (`/sys/bus/iio/devices/iio:device0/in_voltage*_raw`).
+On-module: INA219 supply monitor (`ina2xx`, hwmon `ina219`: `in1_input` bus
+voltage mV, `curr1_input` mA, `power1_input` µW), ADS1015 ADC
+(`/sys/bus/iio/devices/iio:device0/in_voltage*_raw`). `sensors` (lm-sensors)
+shows all hwmon devices.
+
+**Power source (mainboard):** two TPS2121 power muxes. Their ST output is
+high for IN1 and low for IN2 (internal pull-up, TPS2121 datasheet) and
+reaches the SoM through an inverting BSS138 each:
+
+| Mux | IN1 / IN2 | SoM line | Level |
+| --- | --- | --- | --- |
+| IC601 | DC jack (X601) / PoE | SODIMM 38 `input-status` (GPIO4_IO27, R605 to +1V8) | **0 = DC, 1 = PoE** |
+| IC704 | mains (LM62460 buck) / battery (ADP1614 boost) | SODIMM 210 `powermux-status` (GPIO5_IO26, R723 to +1V8) | **0 = mains, 1 = battery** (`POWER_BATTERY_LEVEL`) |
+
+IC601's ST also has a 10k pull-down (R604), which forms a divider with the
+internal 6–20k pull-up: ST must stay above the BSS138 threshold for IN1 (check
+on the board). Home Assistant sensor "Power Source": `DC` / `PoE` / `Battery`
+(`TELEMETRY_POWER_SOURCE_LINES`).
+
+**Input voltage (mainboard):** `V_In` through R611 100k / R612 12k to ADC_1
+(module ADC TLA2024, `ads1015`, `in_voltage3`): `V_In = ADC × 112/12`
+(`TELEMETRY_INPUT_VOLTAGE_CHANNEL`, `TELEMETRY_INPUT_VOLTAGE_DIVIDER`), Home
+Assistant sensor "Input Voltage". ADC_1 reads up to 1.8 V, i.e. `V_In` up to
+about 16.8 V.
+
+Dahlia: both sensors are off (`:board-dahlia` empty), the inputs are not
+wired there.
+
+`gateway-power-monitor` (mains / battery, not enabled on Dahlia: no TPS2121
+there, SODIMM 210 floats with a pull-up):
+
+- writes the source to `/run/gateway-power/state`, Home Assistant binary
+  sensor "Mains Power"
+- sends Home Assistant events "Power Event" (`on_battery`, `mains_restored`,
+  `shutdown`) for automations, e.g. a notification
+- shuts down cleanly on battery at `POWER_SHUTDOWN_PERCENT` (default 10 %)
+  or after `POWER_SHUTDOWN_DELAY` seconds on battery (0 = off), also
+  without MQTT
+
+**Hardware version:** straps on SODIMM 212/216/218 (`version-bit0..2`,
+bit 0 = LSB, pads with pull-down: open = 0), shown as "Hardware" in Home
+Assistant. Dahlia: `GPIO_4` / `GPIO_5_R` / `GPIO_6_R` on extension header X20
+pins 30 / 32 / 33 (R339/R340 assembled), open = Rev. 0, bridge to +1.8 V
+(X20 pin 26) for other values. SODIMM 210 (power mux status) is `GPIO_3` on
+X20 pin 29 with a pull-up, so `gateway-power-monitor` stays disabled there.
 
 ---
 
@@ -245,8 +328,20 @@ them per board: see [Board variants](#board-variants).
 
 - **Device:** `/dev/zigbee`, adapter `zstack` (EFR32 sticks such as the
   ZBDongle-E: `ember`)
-- **Service:** `zigbee2mqtt`, data in `/var/lib/zigbee2mqtt/`, base topic
-  `ZIGBEE2MQTT_BASE_TOPIC` (default `zigbee2mqtt`). On Dahlia started when the USB stick is plugged in
+- **Service:** `zigbee2mqtt`, data in `/var/lib/zigbee2mqtt/`. On Dahlia
+  started when the USB stick is plugged in
+- **Base topic:** `<gateway ID>/zigbee`, e.g. `iot-gateway-07219303/zigbee`
+  (`ZIGBEE2MQTT_BASE_TOPIC`, default `@GATEWAY_ID@/zigbee`). Two Zigbee2MQTT
+  instances with the same base topic on one broker delete each other's Home
+  Assistant entities, the gateway ID keeps it unique without per-gateway
+  settings. `zigbee2mqtt.service` fills in `@GATEWAY_ID@` at the first start
+  (`/var/lib/zigbee2mqtt/configuration.yaml`)
+- **Gateway ID:** `gateway-id.service` writes `/run/gateway-id.env` at boot:
+  `GATEWAY_SERIAL` (serial number of the Verdin module from the devicetree,
+  fallback `/etc/machine-id`) and `GATEWAY_ID=<GATEWAY_ID_PREFIX>-<serial>`.
+  Services load it with `EnvironmentFile=/run/gateway-id.env`. It is also
+  the hostname (`iot-gateway-07219303.local` via mDNS), as long as
+  `/etc/hostname` still has the image default `iot-gateway`
 
 ### Wireless M-Bus
 
@@ -281,6 +376,35 @@ them per board: see [Board variants](#board-variants).
 OTBR_AGENT_OPTS="-I wpan0 -B mlan0 spinel+hdlc+uart:///dev/thread?uart-baudrate=115200 trel://mlan0"
 ```
 
+**RCP firmware** (`nrf5340-rcp-firmware`): built from `firmware/nRF5340`
+with the nRF Connect SDK of `app/west.yml` (fetched once into `downloads/`
+by `do_fetch_ncs`, with the Zephyr SDK ARM toolchain and a Python venv, no
+local NCS needed), variant `dk` on Dahlia, `gateway` on the mainboard. Signed
+with `NRF5340_DFU_KEY` (debug key `os/keys/nrf5340/dfu_signing_key.pem`).
+
+| File on the gateway (`/usr/share/nrf5340-rcp/`) | Use |
+| --- | --- |
+| `rcp.signed.bin` | update over UART: `flash-nrf5340` |
+| `netcore-merged.hex` | MCUboot + RCP for a full flash over SWD (first flash, new key) |
+| `appcore-merged.hex` | Dahlia/DK only: app-core companion (releases the network core), SWD |
+
+The same files are in `deploy/images/verdin-imx8mm/nrf5340-rcp/` for
+flashing from a PC (`nrfjprog --program <file> --chiperase --verify`, net
+core: `--coprocessor CP_NETWORK`).
+
+`flash-nrf5340 [image]` stops `otbr-agent`, brings MCUboot into serial
+recovery and uploads the image with `mcumgr` over `/dev/thread`, then starts
+`otbr-agent` again:
+
+- **mainboard:** recovery via the `thread-boot` / `thread-reset` GPIOs, no
+  interaction
+- **Dahlia:** connect P1.15 of the nRF5340-DK to GND and press RESET on the
+  DK when asked (115200 baud)
+
+MCUboot only accepts images signed with its own key: a nRF5340 flashed with
+another key (e.g. the old `app/dfu_signing_key.pem`) needs one full flash of
+`netcore-merged.hex` (and on the DK `appcore-merged.hex`) over SWD first.
+
 #### LAN route to the Thread network
 
 Thread devices get addresses from the OMR prefix. Not every LAN host learns
@@ -300,9 +424,32 @@ gateways in one LAN, give each its own OMR prefix and address. Check:
 
 ### MQTT
 
-Local broker: Mosquitto (`recipes-connectivity/mosquitto/files/mosquitto.conf`).
+No broker on the gateway: all services are clients of an external broker
+(`*_MQTT_SERVER` / `*_MQTT_HOST`, see [Configuration Variables](#configuration-variables)).
+`mosquitto-clients` (`mosquitto_pub`) is installed for wmbusmeters and tests.
 `gateway-telemetry` publishes gateway status, service states and restart
-buttons to Home Assistant via MQTT discovery.
+buttons to Home Assistant via MQTT discovery:
+
+| Home Assistant | Content |
+| --- | --- |
+| Firmware (device card) | `GatewayOS <DISTRO_VERSION> (<layer git revision>)` |
+| Hardware (device card) | `Rev. <n>` from the version straps (Dahlia: X20 pins 30/32/33) |
+| Serial number (device card) | serial number of the Verdin module (`GATEWAY_SERIAL`, gateway-id) |
+| Diagnostic entities (one per line; the device card shows no line breaks inside a field) | Linux Kernel, Bootloader (`/proc/device-tree/chosen/u-boot,version`), GatewayOS Layer (`/etc/os-release`: `VERSION_ID` = `DISTRO_VERSION`, `BUILD_ID` = git revision of this layer), Hardware Version |
+| Sensors | CPU temperature/load, memory, disk, uptime, battery (MAX17048), Supply Voltage/Current/Power (INA219), Input Voltage (ADC_1, mainboard) |
+| Power Source | `DC` / `PoE` / `Battery` from the two TPS2121 power muxes (mainboard) |
+| Mains Power, Power Event | power source and events of `gateway-power-monitor` (mainboard) |
+| GatewayOS (update) | installed / latest version, install button (`GATEWAY_UPDATE_SERVER`, see Updates) |
+
+---
+
+### CAN
+
+MCP2518FD on the Verdin module (`mcp251xfd`, `can0`). `can@can0.service`
+(`gateway-can`) brings it up at boot with `GATEWAY_CAN_BITRATE` (default
+500 kbit/s) and automatic restart after bus-off (`GATEWAY_CAN_RESTART_MS`),
+`GATEWAY_CAN_INTERFACES` lists the interfaces. Tools: `can-utils`
+(`candump can0`, `cansend can0 123#DEADBEEF`), `ip -details link show can0`.
 
 ---
 
@@ -327,10 +474,110 @@ portal to choose a network. **Direct Ethernet:** give the PC an address in
 
 ## Security
 
+- **Keys:** all keys in `os/keys/` (`GATEWAY_KEYS_DIR`,
+  [os/keys/README.md](../../keys/README.md)): SSH root login, RAUC CA and
+  signing key, nRF5340 MCUboot key. The keys in the repository are **public
+  debug keys**: anybody with the repository can log in as root on a gateway
+  built with them and sign updates it accepts. Gateways in the field need own
+  keys outside git (`GATEWAY_KEYS_DIR` in `local.conf`)
 - **SSH:** public key only (`/etc/ssh/sshd_config.d/00-gateway-hardening.conf`,
-  password and keyboard-interactive login disabled)
+  password and keyboard-interactive login disabled), key from
+  `GATEWAY_SSH_AUTHORIZED_KEYS` (default `os/keys/gateway_ed25519.pub`)
 - **Secure element:** ATECC608B at `0x60` on `&i2c4` (`/dev/i2c-3`), used from
   userspace via `cryptoauthlib` 3.7.4
+
+---
+
+## Updates (RAUC)
+
+A/B updates with [RAUC](https://rauc.io) (`meta-rauc`, `scarthgap`). The first
+installation of this layout uses the Easy Installer
+([docs/tezi-feed-raspberry-pi.md](docs/tezi-feed-raspberry-pi.md)). Each
+rootfs slot contains its own kernel and devicetree (`/boot`), so a bundle
+updates both. The layout is created by the Toradex Easy Installer image
+(`gateway_tezi_ab_layout` in `gateway-os-image.bb`), switching from the old
+single-rootfs layout needs one Easy Installer flash:
+
+| Partition | Label | Content |
+| --- | --- | --- |
+| `mmcblk0p1` | `BOOT` | U-Boot boot script only (`recipes-bsp/u-boot/u-boot-distro-boot/boot.cmd.in`) |
+| `mmcblk0p2` | `RFS_A` | rootfs slot A, `GATEWAY_ROOTFS_SLOT_SIZE` MiB |
+| `mmcblk0p3` | `RFS_B` | rootfs slot B, same size, flashed with the same image |
+| `mmcblk0p4` | `DATA` | rest of the eMMC, mounted on `/data` |
+
+- **Persistent data:** `/sbin/preinit` (kernel argument `init=/sbin/preinit`,
+  template `recipes-core/images/files/gateway-preinit.sh.in`) mounts `DATA`
+  on `/data` and overlays `/etc`, `/var/lib`, `/home` and `/root` before systemd starts
+  (the rootfs is read-only, see [System](#system))
+  (`/data/overlay-<dir>/upper`). Wi-Fi and network settings, SSH host keys,
+  `machine-id`, Zigbee and Thread networks, the backup key and the journal
+  archive survive updates. Files from the new image appear unless they were
+  changed on the gateway.
+- **Slot selection:** U-Boot variables `BOOT_ORDER` (default `A B`),
+  `BOOT_A_LEFT` / `BOOT_B_LEFT` (3 attempts each). Every boot takes one
+  attempt, `rauc-mark-good.service` confirms the slot after a successful boot.
+  A slot that fails 3 times is skipped, the gateway falls back to the other
+  one. Environment: `/dev/mmcblk0boot0` (`/etc/fw_env.config`, `fw_printenv`).
+- **Kernel:** `recipes-kernel/linux/linux-toradex/rauc.cfg` (overlayfs built
+  in for preinit; loop, squashfs, dm-verity for bundles; nbd for streaming).
+- **Watchdog:** a hanging kernel or systemd resets the SoC (see
+  [Watchdog](#watchdog)) and counts as a failed attempt.
+- **Health check:** on the first boot of a new bundle
+  `gateway-health-check` waits for the important services before the slot is
+  marked good, otherwise it rolls back to the previous slot right away.
+- **From Home Assistant:** update entity "GatewayOS" with installed/latest
+  version and install button (`GATEWAY_UPDATE_SERVER`).
+- **Update process:** building, signing, installing (streaming over HTTP,
+  from Home Assistant), health check, rollback, persistent data and keys:
+  [docs/ota-rauc.md](docs/ota-rauc.md).
+- **Bundle:** `bitbake gateway-os-bundle` →
+  `deploy/images/verdin-imx8mm/gateway-os-bundle-verdin-imx8mm.raucb`
+  (format `verity`, adaptive `block-hash-index`: streaming installs only
+  download blocks not already on the gateway; compatible
+  `iot-gateway-<GATEWAY_BOARD>`, so a Dahlia bundle is rejected by a
+  mainboard gateway and vice versa).
+
+```bash
+scp gateway-os-bundle-verdin-imx8mm.raucb root@<gateway>:/data/
+ssh root@<gateway> rauc install /data/gateway-os-bundle-verdin-imx8mm.raucb
+ssh root@<gateway> reboot
+ssh root@<gateway> rauc status        # booted slot, both slots "good"
+```
+
+**Signing keys** (`os/keys/rauc/`, public debug keys, see "Security"):
+`ca.key.pem` / `ca.cert.pem` (CA, valid until 2046) and
+`development-1.key.pem` / `development-1.cert.pem` (signing key issued by the
+CA, `RAUC_KEY_FILE` / `RAUC_CERT_FILE`). The gateway only accepts bundles
+signed by a key of this CA (`RAUC_KEYRING_FILE_PATH` → `/etc/rauc/ca.cert.pem`).
+
+---
+
+## System
+
+- **Read-only rootfs** (`read-only-rootfs`): `/` is mounted read-only, the
+  gateway writes only to `DATA` (overlays `/etc`, `/var/lib`, `/home`,
+  `/root`) and tmpfs (`/run`, `/tmp`, `/var/volatile` with `/var/log`). A power
+  loss cannot damage the system, every slot is exactly its image. Generated
+  files go to `/run` (e.g. `/run/lora-packet-forwarder/global_conf.json`,
+  `/run/gateway-id.env`). Changes outside the overlays need a new image
+  (RAUC bundle).
+- **zram swap** (`zram`, `/etc/default/zram`): compressed swap in RAM,
+  50 % of the RAM, lz4. Buffer for memory peaks (Zigbee2MQTT/Node.js,
+  Python), no swap writes to the eMMC. Check: `swapon`, `zramctl`.
+- **Diagnostics:** `nvme-cli` / `smartmontools` (`nvme smart-log /dev/nvme0`,
+  `smartctl -a /dev/nvme0`, NVMe temperature in hwmon), `mmc-utils`
+  (`mmc extcsd read /dev/mmcblk0 | grep -i life` = eMMC wear), `sensors`,
+  `can-utils`.
+
+---
+
+## Watchdog
+
+systemd drives the i.MX watchdog (`imx2+ watchdog`, `/dev/watchdog0`):
+`RuntimeWatchdogSec=30s`, `RebootWatchdogSec=5min`
+(`recipes-core/systemd/systemd-conf/10-gateway-watchdog.conf`). If the kernel
+or PID 1 hang for 30 s, the SoC resets. Check:
+`systemctl show -p RuntimeWatchdogUSec`.
 
 ---
 
@@ -355,26 +602,41 @@ portal to choose a network. **Direct Ethernet:** give the PC an address in
 
 ## Backup
 
-`gateway-backup.timer` (daily) packs `/var/lib/zigbee2mqtt/` and the Thread
-state (`/var/lib/thread/*.data`, `/var/lib/gateway-os/thread-dataset.hex`)
-and pushes it via `rsync`/ssh to `GATEWAY_BACKUP_REMOTE`
-(`/etc/default/gateway-backup`). Without a destination the run is skipped.
+`gateway-backup.timer` (daily) packs all persistent data, the changes in the
+`/etc`, `/var/lib`, `/home` and `/root` overlays on `DATA`
+(`/data/overlay-<dir>/upper`): Wi-Fi and network settings, SSH host keys,
+`machine-id` (identifies the gateway in Home Assistant), hostname,
+Zigbee2MQTT (coordinator DB and network backup), Thread dataset and the
+backup key. Not included: the journal archive. The archive
+`<GATEWAY_ID>-<timestamp>.tar.gz` (e.g. `iot-gateway-07219303-20261114-000030.tar.gz`,
+GNU tar with xattrs, a few MB) is pushed via `rsync`/ssh to
+`GATEWAY_BACKUP_REMOTE` (`local.conf`, on the gateway
+`/etc/default/gateway-backup`). Without a destination the run is skipped.
+Old archives are not deleted on the backup host.
 
-Setup: after the first boot, `journalctl -u gateway-backup-keygen` shows the
-device's public key (`/etc/gateway-backup/id_ed25519.pub`). Add it to the
-backup host's `authorized_keys`, set `GATEWAY_BACKUP_REMOTE` (e.g.
-`backup@host:/srv/gateway-backups/`) and test with
-`systemctl start gateway-backup`.
+Setup:
 
-Restore:
+1. Backup host (e.g. the NAS): user with SSH access and a target directory.
+2. After the first boot, `journalctl -u gateway-backup-keygen` shows the
+   gateway's public key (`/etc/gateway-backup/id_ed25519.pub`). Add it to the
+   backup user's `authorized_keys`. A new Easy Installer flash creates a new
+   key; restoring a backup brings the old one back.
+3. `GATEWAY_BACKUP_REMOTE = "backup@192.168.178.103:/volume1/backups/gateway/"`
+   in `local.conf` (or in `/etc/default/gateway-backup` on the gateway).
+4. Test: `systemctl start gateway-backup`, `journalctl -u gateway-backup`.
+
+Restore (same or replacement gateway, also after an Easy Installer flash):
 
 ```bash
-systemctl stop zigbee2mqtt otbr-agent
-mkdir -p /tmp/restore && tar -xzf <timestamp>.tar.gz -C /tmp/restore
-cp -a /tmp/restore/<timestamp>/zigbee2mqtt/. /var/lib/zigbee2mqtt/
-cp -a /tmp/restore/<timestamp>/thread/thread-dataset.hex /var/lib/gateway-os/
-systemctl start otbr-agent zigbee2mqtt
+scp iot-gateway-07219303-<timestamp>.tar.gz root@<gateway>:/data/restore.tar.gz
+ssh root@<gateway> reboot
 ```
+
+`/sbin/preinit` unpacks it before the overlays are mounted, replaces their
+contents and renames the archive to `restore.tar.gz.done` (`.failed` if it
+cannot be unpacked, the current data stay). The gateway then has the backed
+up identity (`machine-id`, hostname, Zigbee2MQTT base topic), so Home
+Assistant keeps its devices and entities.
 
 `thread-network-init` restores the Thread dataset if `otbr-agent` has none.
 On a gateway that already runs another network, set it with

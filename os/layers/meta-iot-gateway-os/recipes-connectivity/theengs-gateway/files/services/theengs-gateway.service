@@ -1,7 +1,10 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 [Unit]
 Description=Theengs Gateway (Bluetooth LE to MQTT)
 Documentation=https://gateway.theengs.io
-After=bluetooth.service network-online.target mosquitto.service
+After=bluetooth.service network-online.target
 Wants=bluetooth.service network-online.target
 Requires=bluetooth.service
 

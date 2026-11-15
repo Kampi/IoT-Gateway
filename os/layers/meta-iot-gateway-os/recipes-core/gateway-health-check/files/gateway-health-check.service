@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
+[Unit]
+Description=Health check of a newly installed slot before RAUC marks it good
+# rauc-mark-good.service requires boot-complete.target: no "good" without a
+# passed check. A failed check rolls back to the previous slot.
+ConditionKernelCommandLine=rauc.slot
+After=basic.target network-online.target
+Before=boot-complete.target rauc-mark-good.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+EnvironmentFile=/etc/default/gateway-health-check
+ExecStart=/usr/libexec/gateway-os/gateway-health-check
+TimeoutStartSec=infinity
+
+[Install]
+RequiredBy=boot-complete.target

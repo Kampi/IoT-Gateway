@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 SUMMARY = "Microchip CryptoAuthLib — authentication device library for ATECC608B"
 HOMEPAGE = "https://github.com/MicrochipTech/cryptoauthlib"
 LICENSE = "Apache-2.0"

@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 SUMMARY = "Form/attach the gateway's Thread network on every boot"
 DESCRIPTION = "otbr-agent is built with OTBR_NO_AUTO_ATTACH, so it never \
 brings the Thread interface up by itself. This service does that on every \

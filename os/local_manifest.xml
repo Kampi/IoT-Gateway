@@ -1,3 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <!-- RAUC A/B update framework (meta-iot-gateway-os depends on it) -->
+  <remote name="rauc" fetch="https://github.com/rauc"/>
+  <project name="meta-rauc" path="layers/meta-rauc" remote="rauc" revision="d63878f20eba7a85ecf53566e7a3377e78bb46ac" upstream="scarthgap"/>
 </manifest>

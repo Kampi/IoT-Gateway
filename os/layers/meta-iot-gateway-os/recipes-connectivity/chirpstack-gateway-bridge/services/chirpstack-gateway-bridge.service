@@ -1,8 +1,11 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 [Unit]
 Description=ChirpStack Gateway Bridge
 Documentation=https://www.chirpstack.io/docs/chirpstack-gateway-bridge/
-After=network.target mosquitto.service
-Wants=mosquitto.service
+After=network-online.target
+Wants=network-online.target
 
 [Service]
 ExecStart=/usr/bin/chirpstack-gateway-bridge --config /etc/chirpstack-gateway-bridge/chirpstack-gateway-bridge.toml

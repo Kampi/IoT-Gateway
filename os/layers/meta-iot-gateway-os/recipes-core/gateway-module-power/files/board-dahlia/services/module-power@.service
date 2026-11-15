@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Daniel Kampert
+
 [Unit]
 Description=Power and release the %i module (no-op on the Dahlia dev setup)
 # The module power/reset/boot GPIOs only exist on the IoT-Gateway mainboard.
