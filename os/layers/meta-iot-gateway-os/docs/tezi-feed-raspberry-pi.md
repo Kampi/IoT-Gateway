@@ -23,6 +23,11 @@ Wi-Fi (`wlan0`), the gateway on `eth0`.
 | `192.168.10.1/24` (Pi `eth0`) | network of the Easy Installer, DHCP `192.168.10.50–150` |
 | `192.168.0.1/24` (Pi `eth0`) | reaches the flashed gateway on Dahlia (static `192.168.0.2`, see README "Networking") |
 
+**Quick setup:** `scripts/raspberry-pi/setup-tezi-server.sh` in the project
+repository does steps 1–4 (and with `--with-uuu` the `uuu` build of 6b) in one
+go: copy it to the Pi and run `sudo ./setup-tezi-server.sh --with-uuu`. The
+sections below describe the same steps manually.
+
 ---
 
 ## 1. Network on eth0

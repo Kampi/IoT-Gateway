@@ -12,6 +12,7 @@
   - [Directory Breakdown](#directory-breakdown)
   - [Building the OS](#building-the-os)
   - [Wi-Fi Configuration (nmcli)](#wi-fi-configuration-nmcli)
+  - [Easy Installer Server (Raspberry Pi)](#easy-installer-server-raspberry-pi)
   - [Firmware - nRF5340 (OpenThread RCP)](#firmware---nrf5340-openthread-rcp)
   - [Firmware - nRF54L15 (Matter test light)](#firmware---nrf54l15-matter-test-light)
   - [Firmware - ESP32 LoRa (LoRaWAN test sensor)](#firmware---esp32-lora-lorawan-test-sensor)
@@ -95,6 +96,26 @@ nmcli connection show
 # Check Wi-Fi radio status
 nmcli radio wifi
 ```
+
+## Easy Installer Server (Raspberry Pi)
+
+`scripts/raspberry-pi/setup-tezi-server.sh` turns a Raspberry Pi (Raspberry Pi
+OS / Debian 12 with NetworkManager) into the network feed for the Toradex Easy
+Installer and the server for RAUC OTA bundles: a static network on `eth0`
+(no default route), dnsmasq (DHCP + DNS, answers `tezi.toradex.com` with the
+Pi), nginx (`/var/www/html`, bundles in `bundles/`) and an avahi announcement.
+`--with-uuu` also builds `uuu` for USB recovery. It can be run again at any
+time.
+
+```bash
+# on the Pi (uplink via Wi-Fi, gateway on eth0)
+sudo ./setup-tezi-server.sh --with-uuu
+```
+
+Settings such as `ETH_IFACE` or `TEZI_ADDRESS` via environment variables
+(`--help`). See
+[os/layers/meta-iot-gateway-os/docs/tezi-feed-raspberry-pi.md](os/layers/meta-iot-gateway-os/docs/tezi-feed-raspberry-pi.md)
+for the manual steps, copying images and starting the Easy Installer.
 
 ## Firmware - nRF5340 (OpenThread RCP)
 
