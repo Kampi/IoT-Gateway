@@ -2,26 +2,30 @@
 <export version="E">
   <design>
     <source>/__w/IoT-Gateway/IoT-Gateway/gateway/Gateway.kicad_sch</source>
-    <date>2026-10-30T17:24:46</date>
+    <date>2026-11-21T23:20:48</date>
     <tool>Eeschema 10.0.1-10.0.1~ubuntu25.10.1</tool>
     <textvar name="ASSEMBLY_NOTES"/>
     <textvar name="BOARD_NAME">Gateway</textvar>
     <textvar name="COMPANY">null</textvar>
     <textvar name="DESIGNER">Daniel Kampert</textvar>
     <textvar name="FABRICATION_NOTES"/>
-    <textvar name="GIT_HASH_PCB">f94d884</textvar>
-    <textvar name="GIT_HASH_SCH">db46e19</textvar>
+    <textvar name="GIT_HASH_PCB">6c9363d</textvar>
+    <textvar name="GIT_HASH_SCH">7f056b7</textvar>
     <textvar name="GIT_URL">https://github.com/Kampi/IoT-Gateway</textvar>
-    <textvar name="PCB_VARIANT">CHECKED</textvar>
+    <textvar name="PCB_VARIANT">PRELIMINARY</textvar>
     <textvar name="PROJECT_NAME">IoT-Gateway</textvar>
-    <textvar name="RELEASE_BODY_1.0.0">Version 1.0.0 not found.</textvar>
+    <textvar name="RELEASE_BODY_1.0.0">**Added:**
+
+- Initial release</textvar>
     <textvar name="RELEASE_BODY_2.2.0">Version 2.2.0 not found.</textvar>
     <textvar name="RELEASE_BODY_UNRELEASED">Version Unreleased not found.</textvar>
-    <textvar name="RELEASE_DATE">2026-10-30</textvar>
-    <textvar name="RELEASE_DATE_NUM">2026-10-30</textvar>
-    <textvar name="RELEASE_TITLE_1.0.0">Version 1.0.0 not found.</textvar>
+    <textvar name="RELEASE_BODY_x.y.z">Version x.y.z not found.</textvar>
+    <textvar name="RELEASE_DATE">2026-11-22</textvar>
+    <textvar name="RELEASE_DATE_NUM">2026-11-22</textvar>
+    <textvar name="RELEASE_TITLE_1.0.0">Version 1.0.0 - 2026-10-30</textvar>
     <textvar name="RELEASE_TITLE_2.2.0">Version 2.2.0 not found.</textvar>
     <textvar name="RELEASE_TITLE_UNRELEASED">Version Unreleased not found.</textvar>
+    <textvar name="RELEASE_TITLE_x.y.z">Version x.y.z not found.</textvar>
     <textvar name="REVISION"/>
     <textvar name="SHEET_NAME_1">Cover Page</textvar>
     <textvar name="SHEET_NAME_10">LoRa</textvar>
@@ -540,7 +544,7 @@
     </comp>
     <comp ref="Q601">
       <value>BSS138</value>
-      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <footprint>Package_TO_SOT_SMD:SOT-23-3</footprint>
       <datasheet>https://www.onsemi.com/pdf/datasheet/bss138-d.pdf</datasheet>
       <description>N-Kanal Vds 50 V Vgs ±20 V Id 220 mA</description>
       <fields>
@@ -557,7 +561,8 @@
         <field name="Part-DB ID">353</field>
         <field name="Mouser SPN">512-BSS138</field>
         <field name="Stock">0</field>
-        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Config"/>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-3</field>
         <field name="Datasheet">https://www.onsemi.com/pdf/datasheet/bss138-d.pdf</field>
         <field name="Description">N-Kanal Vds 50 V Vgs ±20 V Id 220 mA</field>
       </fields>
@@ -575,10 +580,11 @@
       <property name="Part-DB ID" value="353"/>
       <property name="Mouser SPN" value="512-BSS138"/>
       <property name="Stock" value="0"/>
+      <property name="Config" value=""/>
       <property name="Sheetname" value="Power Input"/>
       <property name="Sheetfile" value="Power Input.kicad_sch"/>
-      <property name="ki_keywords" value="N-Channel MOSFET"/>
-      <property name="ki_fp_filters" value="SOT?23*"/>
+      <property name="ki_keywords" value="transistor NMOS N-MOS N-MOSFET"/>
+      <property name="ki_fp_filters" value="Package_TO_SOT_SMD:SOT-23-3"/>
       <sheetpath names="/Project Architecture/Power Input/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0/"/>
       <tstamps>12973d04-d2f8-4784-90ef-27bf0ba872fc</tstamps>
       <units>
@@ -1219,14 +1225,14 @@
     <comp ref="X601">
       <value>DC In</value>
       <footprint>Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002</footprint>
-      <datasheet>https://www.we-online.com/catalog/datasheet/694102303002.pdf</datasheet>
+      <datasheet>https://www.we-online.com/components/products/datasheet/694106301002.pdf</datasheet>
       <description>DC Barrel Jack</description>
       <fields>
         <field name="manf">Wurth Elektronik</field>
         <field name="manf#">694106301002</field>
         <field name="mouser#">710-694106301002</field>
         <field name="Footprint">Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002</field>
-        <field name="Datasheet">https://www.we-online.com/catalog/datasheet/694102303002.pdf</field>
+        <field name="Datasheet">https://www.we-online.com/components/products/datasheet/694106301002.pdf</field>
         <field name="Description">DC Barrel Jack</field>
       </fields>
       <libsource lib="Connector" part="Barrel_Jack" description="DC Barrel Jack"/>
@@ -1251,37 +1257,37 @@
     <comp ref="C701">
       <value>10u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://inventory.lan/de/part/331/info</datasheet>
-      <description>10u 25V 10% X7R</description>
+      <datasheet>https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</datasheet>
+      <description>10u 25V 10% X6S</description>
       <fields>
         <field name="manf">KYOCERA AVX</field>
-        <field name="manf#">0805X7R106KT1AT</field>
-        <field name="mouser#">581-0805X7R106KT1AT</field>
-        <field name="Part-DB URL">https://inventory.lan/de/part/331/info</field>
+        <field name="manf#">KGM21FS61E106KU</field>
+        <field name="mouser#">581-KGM21FS61E106KU</field>
+        <field name="Part-DB URL">https://inventory.lan/de/part/393/info</field>
         <field name="Category">Kondensator/MLCC</field>
         <field name="Manufacturer">KYOCERA AVX</field>
-        <field name="MPN">0805X7R106KT1AT</field>
+        <field name="MPN">KGM21FS61E106KU</field>
         <field name="Manufacturing Status">Active</field>
         <field name="Part-DB Footprint">0805</field>
-        <field name="Part-DB ID">331</field>
-        <field name="Mouser SPN">581-0805X7R106KT1AT</field>
+        <field name="Part-DB ID">393</field>
+        <field name="Mouser SPN">581-KGM21FS61E106KU</field>
         <field name="Stock">0</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://inventory.lan/de/part/331/info</field>
-        <field name="Description">10u 25V 10% X7R</field>
+        <field name="Datasheet">https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</field>
+        <field name="Description">10u 25V 10% X6S</field>
       </fields>
-      <libsource lib="partdb" part="0805X7R106KT1AT" description="10u 25V 10% X7R"/>
+      <libsource lib="partdb" part="KGM21FS61E106KU" description="10u 25V 10% X6S"/>
       <property name="manf" value="KYOCERA AVX"/>
-      <property name="manf#" value="0805X7R106KT1AT"/>
-      <property name="mouser#" value="581-0805X7R106KT1AT"/>
-      <property name="Part-DB URL" value="https://inventory.lan/de/part/331/info"/>
+      <property name="manf#" value="KGM21FS61E106KU"/>
+      <property name="mouser#" value="581-KGM21FS61E106KU"/>
+      <property name="Part-DB URL" value="https://inventory.lan/de/part/393/info"/>
       <property name="Category" value="Kondensator/MLCC"/>
       <property name="Manufacturer" value="KYOCERA AVX"/>
-      <property name="MPN" value="0805X7R106KT1AT"/>
+      <property name="MPN" value="KGM21FS61E106KU"/>
       <property name="Manufacturing Status" value="Active"/>
       <property name="Part-DB Footprint" value="0805"/>
-      <property name="Part-DB ID" value="331"/>
-      <property name="Mouser SPN" value="581-0805X7R106KT1AT"/>
+      <property name="Part-DB ID" value="393"/>
+      <property name="Mouser SPN" value="581-KGM21FS61E106KU"/>
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
@@ -1351,37 +1357,37 @@
     <comp ref="C703">
       <value>10u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://inventory.lan/de/part/331/info</datasheet>
-      <description>10u 25V 10% X7R</description>
+      <datasheet>https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</datasheet>
+      <description>10u 25V 10% X6S</description>
       <fields>
         <field name="manf">KYOCERA AVX</field>
-        <field name="manf#">0805X7R106KT1AT</field>
-        <field name="mouser#">581-0805X7R106KT1AT</field>
-        <field name="Part-DB URL">https://inventory.lan/de/part/331/info</field>
+        <field name="manf#">KGM21FS61E106KU</field>
+        <field name="mouser#">581-KGM21FS61E106KU</field>
+        <field name="Part-DB URL">https://inventory.lan/de/part/393/info</field>
         <field name="Category">Kondensator/MLCC</field>
         <field name="Manufacturer">KYOCERA AVX</field>
-        <field name="MPN">0805X7R106KT1AT</field>
+        <field name="MPN">KGM21FS61E106KU</field>
         <field name="Manufacturing Status">Active</field>
         <field name="Part-DB Footprint">0805</field>
-        <field name="Part-DB ID">331</field>
-        <field name="Mouser SPN">581-0805X7R106KT1AT</field>
+        <field name="Part-DB ID">393</field>
+        <field name="Mouser SPN">581-KGM21FS61E106KU</field>
         <field name="Stock">0</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://inventory.lan/de/part/331/info</field>
-        <field name="Description">10u 25V 10% X7R</field>
+        <field name="Datasheet">https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</field>
+        <field name="Description">10u 25V 10% X6S</field>
       </fields>
-      <libsource lib="partdb" part="0805X7R106KT1AT" description="10u 25V 10% X7R"/>
+      <libsource lib="partdb" part="KGM21FS61E106KU" description="10u 25V 10% X6S"/>
       <property name="manf" value="KYOCERA AVX"/>
-      <property name="manf#" value="0805X7R106KT1AT"/>
-      <property name="mouser#" value="581-0805X7R106KT1AT"/>
-      <property name="Part-DB URL" value="https://inventory.lan/de/part/331/info"/>
+      <property name="manf#" value="KGM21FS61E106KU"/>
+      <property name="mouser#" value="581-KGM21FS61E106KU"/>
+      <property name="Part-DB URL" value="https://inventory.lan/de/part/393/info"/>
       <property name="Category" value="Kondensator/MLCC"/>
       <property name="Manufacturer" value="KYOCERA AVX"/>
-      <property name="MPN" value="0805X7R106KT1AT"/>
+      <property name="MPN" value="KGM21FS61E106KU"/>
       <property name="Manufacturing Status" value="Active"/>
       <property name="Part-DB Footprint" value="0805"/>
-      <property name="Part-DB ID" value="331"/>
-      <property name="Mouser SPN" value="581-0805X7R106KT1AT"/>
+      <property name="Part-DB ID" value="393"/>
+      <property name="Mouser SPN" value="581-KGM21FS61E106KU"/>
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
@@ -1435,38 +1441,36 @@
       <value>470n</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>https://www.mouser.com/datasheet/3/5926/1/AutoMLCCKAF.pdf</datasheet>
-      <description>470n 50V 10% X7</description>
+      <description>470n 50V 20% X7R</description>
       <fields>
         <field name="manf">KYOCERA AVX</field>
-        <field name="manf#">08055C474K4Z2A</field>
-        <field name="mouser#">581-08055C474K4Z2A</field>
-        <field name="Part-DB URL">https://inventory.lan/de/part/329/info</field>
+        <field name="manf#">KAF21KR71H474MU</field>
+        <field name="mouser#">581-KAF21KR71H474MU</field>
+        <field name="Part-DB URL">https://inventory.lan/de/part/392/info</field>
         <field name="Category">Kondensator/MLCC</field>
         <field name="Manufacturer">KYOCERA AVX</field>
-        <field name="MPN">08055C474K4Z2A</field>
+        <field name="MPN">KAF21KR71H474MU</field>
         <field name="Manufacturing Status">Active</field>
         <field name="Part-DB Footprint">0805</field>
-        <field name="Mass">0.006 g</field>
-        <field name="Part-DB ID">329</field>
-        <field name="Mouser SPN">581-08055C474K4Z2A</field>
+        <field name="Part-DB ID">392</field>
+        <field name="Mouser SPN">581-KAF21KR71H474MU</field>
         <field name="Stock">0</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
         <field name="Datasheet">https://www.mouser.com/datasheet/3/5926/1/AutoMLCCKAF.pdf</field>
-        <field name="Description">470n 50V 10% X7</field>
+        <field name="Description">470n 50V 20% X7R</field>
       </fields>
-      <libsource lib="partdb" part="08055C474K4Z2A" description="470n 50V 10% X7"/>
+      <libsource lib="partdb" part="KAF21KR71H474MU" description="470n 50V 20% X7R"/>
       <property name="manf" value="KYOCERA AVX"/>
-      <property name="manf#" value="08055C474K4Z2A"/>
-      <property name="mouser#" value="581-08055C474K4Z2A"/>
-      <property name="Part-DB URL" value="https://inventory.lan/de/part/329/info"/>
+      <property name="manf#" value="KAF21KR71H474MU"/>
+      <property name="mouser#" value="581-KAF21KR71H474MU"/>
+      <property name="Part-DB URL" value="https://inventory.lan/de/part/392/info"/>
       <property name="Category" value="Kondensator/MLCC"/>
       <property name="Manufacturer" value="KYOCERA AVX"/>
-      <property name="MPN" value="08055C474K4Z2A"/>
+      <property name="MPN" value="KAF21KR71H474MU"/>
       <property name="Manufacturing Status" value="Active"/>
       <property name="Part-DB Footprint" value="0805"/>
-      <property name="Mass" value="0.006 g"/>
-      <property name="Part-DB ID" value="329"/>
-      <property name="Mouser SPN" value="581-08055C474K4Z2A"/>
+      <property name="Part-DB ID" value="392"/>
+      <property name="Mouser SPN" value="581-KAF21KR71H474MU"/>
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
@@ -1486,39 +1490,39 @@
       <value>470n</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <datasheet>https://www.mouser.com/datasheet/3/5926/1/AutoMLCCKAF.pdf</datasheet>
-      <description>470n 50V 10% X7</description>
+      <description>470n 50V 20% X7R</description>
       <fields>
         <field name="manf">KYOCERA AVX</field>
-        <field name="manf#">08055C474K4Z2A</field>
-        <field name="mouser#">581-08055C474K4Z2A</field>
-        <field name="Part-DB URL">https://inventory.lan/de/part/329/info</field>
+        <field name="manf#">KAF21KR71H474MU</field>
+        <field name="mouser#">581-KAF21KR71H474MU</field>
+        <field name="Part-DB URL">https://inventory.lan/de/part/392/info</field>
         <field name="Category">Kondensator/MLCC</field>
         <field name="Manufacturer">KYOCERA AVX</field>
-        <field name="MPN">08055C474K4Z2A</field>
+        <field name="MPN">KAF21KR71H474MU</field>
         <field name="Manufacturing Status">Active</field>
         <field name="Part-DB Footprint">0805</field>
-        <field name="Mass">0.006 g</field>
-        <field name="Part-DB ID">329</field>
-        <field name="Mouser SPN">581-08055C474K4Z2A</field>
+        <field name="Part-DB ID">392</field>
+        <field name="Mouser SPN">581-KAF21KR71H474MU</field>
         <field name="Stock">0</field>
+        <field name="Config"/>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
         <field name="Datasheet">https://www.mouser.com/datasheet/3/5926/1/AutoMLCCKAF.pdf</field>
-        <field name="Description">470n 50V 10% X7</field>
+        <field name="Description">470n 50V 20% X7R</field>
       </fields>
-      <libsource lib="partdb" part="08055C474K4Z2A" description="470n 50V 10% X7"/>
+      <libsource lib="partdb" part="KAF21KR71H474MU" description="470n 50V 20% X7R"/>
       <property name="manf" value="KYOCERA AVX"/>
-      <property name="manf#" value="08055C474K4Z2A"/>
-      <property name="mouser#" value="581-08055C474K4Z2A"/>
-      <property name="Part-DB URL" value="https://inventory.lan/de/part/329/info"/>
+      <property name="manf#" value="KAF21KR71H474MU"/>
+      <property name="mouser#" value="581-KAF21KR71H474MU"/>
+      <property name="Part-DB URL" value="https://inventory.lan/de/part/392/info"/>
       <property name="Category" value="Kondensator/MLCC"/>
       <property name="Manufacturer" value="KYOCERA AVX"/>
-      <property name="MPN" value="08055C474K4Z2A"/>
+      <property name="MPN" value="KAF21KR71H474MU"/>
       <property name="Manufacturing Status" value="Active"/>
       <property name="Part-DB Footprint" value="0805"/>
-      <property name="Mass" value="0.006 g"/>
-      <property name="Part-DB ID" value="329"/>
-      <property name="Mouser SPN" value="581-08055C474K4Z2A"/>
+      <property name="Part-DB ID" value="392"/>
+      <property name="Mouser SPN" value="581-KAF21KR71H474MU"/>
       <property name="Stock" value="0"/>
+      <property name="Config" value=""/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
       <property name="ki_fp_filters" value="Capacitor_SMD:C_0805_2012Metric"/>
@@ -1536,38 +1540,40 @@
     <comp ref="C707">
       <value>10u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://inventory.lan/de/part/331/info</datasheet>
-      <description>10u 25V 10% X7R</description>
+      <datasheet>https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</datasheet>
+      <description>10u 25V 10% X6S</description>
       <fields>
         <field name="manf">KYOCERA AVX</field>
-        <field name="manf#">0805X7R106KT1AT</field>
-        <field name="mouser#">581-0805X7R106KT1AT</field>
-        <field name="Part-DB URL">https://inventory.lan/de/part/331/info</field>
+        <field name="manf#">KGM21FS61E106KU</field>
+        <field name="mouser#">581-KGM21FS61E106KU</field>
+        <field name="Part-DB URL">https://inventory.lan/de/part/393/info</field>
         <field name="Category">Kondensator/MLCC</field>
         <field name="Manufacturer">KYOCERA AVX</field>
-        <field name="MPN">0805X7R106KT1AT</field>
+        <field name="MPN">KGM21FS61E106KU</field>
         <field name="Manufacturing Status">Active</field>
         <field name="Part-DB Footprint">0805</field>
-        <field name="Part-DB ID">331</field>
-        <field name="Mouser SPN">581-0805X7R106KT1AT</field>
+        <field name="Part-DB ID">393</field>
+        <field name="Mouser SPN">581-KGM21FS61E106KU</field>
         <field name="Stock">0</field>
+        <field name="Config"/>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://inventory.lan/de/part/331/info</field>
-        <field name="Description">10u 25V 10% X7R</field>
+        <field name="Datasheet">https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</field>
+        <field name="Description">10u 25V 10% X6S</field>
       </fields>
-      <libsource lib="partdb" part="0805X7R106KT1AT" description="10u 25V 10% X7R"/>
+      <libsource lib="partdb" part="KGM21FS61E106KU" description="10u 25V 10% X6S"/>
       <property name="manf" value="KYOCERA AVX"/>
-      <property name="manf#" value="0805X7R106KT1AT"/>
-      <property name="mouser#" value="581-0805X7R106KT1AT"/>
-      <property name="Part-DB URL" value="https://inventory.lan/de/part/331/info"/>
+      <property name="manf#" value="KGM21FS61E106KU"/>
+      <property name="mouser#" value="581-KGM21FS61E106KU"/>
+      <property name="Part-DB URL" value="https://inventory.lan/de/part/393/info"/>
       <property name="Category" value="Kondensator/MLCC"/>
       <property name="Manufacturer" value="KYOCERA AVX"/>
-      <property name="MPN" value="0805X7R106KT1AT"/>
+      <property name="MPN" value="KGM21FS61E106KU"/>
       <property name="Manufacturing Status" value="Active"/>
       <property name="Part-DB Footprint" value="0805"/>
-      <property name="Part-DB ID" value="331"/>
-      <property name="Mouser SPN" value="581-0805X7R106KT1AT"/>
+      <property name="Part-DB ID" value="393"/>
+      <property name="Mouser SPN" value="581-KGM21FS61E106KU"/>
       <property name="Stock" value="0"/>
+      <property name="Config" value=""/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
       <property name="ki_fp_filters" value="Capacitor_SMD:C_0805_2012Metric"/>
@@ -1889,37 +1895,37 @@
     <comp ref="C715">
       <value>10u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://inventory.lan/de/part/331/info</datasheet>
-      <description>10u 25V 10% X7R</description>
+      <datasheet>https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</datasheet>
+      <description>10u 25V 10% X6S</description>
       <fields>
         <field name="manf">KYOCERA AVX</field>
-        <field name="manf#">0805X7R106KT1AT</field>
-        <field name="mouser#">581-0805X7R106KT1AT</field>
-        <field name="Part-DB URL">https://inventory.lan/de/part/331/info</field>
+        <field name="manf#">KGM21FS61E106KU</field>
+        <field name="mouser#">581-KGM21FS61E106KU</field>
+        <field name="Part-DB URL">https://inventory.lan/de/part/393/info</field>
         <field name="Category">Kondensator/MLCC</field>
         <field name="Manufacturer">KYOCERA AVX</field>
-        <field name="MPN">0805X7R106KT1AT</field>
+        <field name="MPN">KGM21FS61E106KU</field>
         <field name="Manufacturing Status">Active</field>
         <field name="Part-DB Footprint">0805</field>
-        <field name="Part-DB ID">331</field>
-        <field name="Mouser SPN">581-0805X7R106KT1AT</field>
+        <field name="Part-DB ID">393</field>
+        <field name="Mouser SPN">581-KGM21FS61E106KU</field>
         <field name="Stock">0</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://inventory.lan/de/part/331/info</field>
-        <field name="Description">10u 25V 10% X7R</field>
+        <field name="Datasheet">https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</field>
+        <field name="Description">10u 25V 10% X6S</field>
       </fields>
-      <libsource lib="partdb" part="0805X7R106KT1AT" description="10u 25V 10% X7R"/>
+      <libsource lib="partdb" part="KGM21FS61E106KU" description="10u 25V 10% X6S"/>
       <property name="manf" value="KYOCERA AVX"/>
-      <property name="manf#" value="0805X7R106KT1AT"/>
-      <property name="mouser#" value="581-0805X7R106KT1AT"/>
-      <property name="Part-DB URL" value="https://inventory.lan/de/part/331/info"/>
+      <property name="manf#" value="KGM21FS61E106KU"/>
+      <property name="mouser#" value="581-KGM21FS61E106KU"/>
+      <property name="Part-DB URL" value="https://inventory.lan/de/part/393/info"/>
       <property name="Category" value="Kondensator/MLCC"/>
       <property name="Manufacturer" value="KYOCERA AVX"/>
-      <property name="MPN" value="0805X7R106KT1AT"/>
+      <property name="MPN" value="KGM21FS61E106KU"/>
       <property name="Manufacturing Status" value="Active"/>
       <property name="Part-DB Footprint" value="0805"/>
-      <property name="Part-DB ID" value="331"/>
-      <property name="Mouser SPN" value="581-0805X7R106KT1AT"/>
+      <property name="Part-DB ID" value="393"/>
+      <property name="Mouser SPN" value="581-KGM21FS61E106KU"/>
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
@@ -1989,37 +1995,37 @@
     <comp ref="C717">
       <value>10u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://inventory.lan/de/part/331/info</datasheet>
-      <description>10u 25V 10% X7R</description>
+      <datasheet>https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</datasheet>
+      <description>10u 25V 10% X6S</description>
       <fields>
         <field name="manf">KYOCERA AVX</field>
-        <field name="manf#">0805X7R106KT1AT</field>
-        <field name="mouser#">581-0805X7R106KT1AT</field>
-        <field name="Part-DB URL">https://inventory.lan/de/part/331/info</field>
+        <field name="manf#">KGM21FS61E106KU</field>
+        <field name="mouser#">581-KGM21FS61E106KU</field>
+        <field name="Part-DB URL">https://inventory.lan/de/part/393/info</field>
         <field name="Category">Kondensator/MLCC</field>
         <field name="Manufacturer">KYOCERA AVX</field>
-        <field name="MPN">0805X7R106KT1AT</field>
+        <field name="MPN">KGM21FS61E106KU</field>
         <field name="Manufacturing Status">Active</field>
         <field name="Part-DB Footprint">0805</field>
-        <field name="Part-DB ID">331</field>
-        <field name="Mouser SPN">581-0805X7R106KT1AT</field>
+        <field name="Part-DB ID">393</field>
+        <field name="Mouser SPN">581-KGM21FS61E106KU</field>
         <field name="Stock">0</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://inventory.lan/de/part/331/info</field>
-        <field name="Description">10u 25V 10% X7R</field>
+        <field name="Datasheet">https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</field>
+        <field name="Description">10u 25V 10% X6S</field>
       </fields>
-      <libsource lib="partdb" part="0805X7R106KT1AT" description="10u 25V 10% X7R"/>
+      <libsource lib="partdb" part="KGM21FS61E106KU" description="10u 25V 10% X6S"/>
       <property name="manf" value="KYOCERA AVX"/>
-      <property name="manf#" value="0805X7R106KT1AT"/>
-      <property name="mouser#" value="581-0805X7R106KT1AT"/>
-      <property name="Part-DB URL" value="https://inventory.lan/de/part/331/info"/>
+      <property name="manf#" value="KGM21FS61E106KU"/>
+      <property name="mouser#" value="581-KGM21FS61E106KU"/>
+      <property name="Part-DB URL" value="https://inventory.lan/de/part/393/info"/>
       <property name="Category" value="Kondensator/MLCC"/>
       <property name="Manufacturer" value="KYOCERA AVX"/>
-      <property name="MPN" value="0805X7R106KT1AT"/>
+      <property name="MPN" value="KGM21FS61E106KU"/>
       <property name="Manufacturing Status" value="Active"/>
       <property name="Part-DB Footprint" value="0805"/>
-      <property name="Part-DB ID" value="331"/>
-      <property name="Mouser SPN" value="581-0805X7R106KT1AT"/>
+      <property name="Part-DB ID" value="393"/>
+      <property name="Mouser SPN" value="581-KGM21FS61E106KU"/>
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
@@ -2257,37 +2263,37 @@
     <comp ref="C723">
       <value>10u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://inventory.lan/de/part/331/info</datasheet>
-      <description>10u 25V 10% X7R</description>
+      <datasheet>https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</datasheet>
+      <description>10u 25V 10% X6S</description>
       <fields>
         <field name="manf">KYOCERA AVX</field>
-        <field name="manf#">0805X7R106KT1AT</field>
-        <field name="mouser#">581-0805X7R106KT1AT</field>
-        <field name="Part-DB URL">https://inventory.lan/de/part/331/info</field>
+        <field name="manf#">KGM21FS61E106KU</field>
+        <field name="mouser#">581-KGM21FS61E106KU</field>
+        <field name="Part-DB URL">https://inventory.lan/de/part/393/info</field>
         <field name="Category">Kondensator/MLCC</field>
         <field name="Manufacturer">KYOCERA AVX</field>
-        <field name="MPN">0805X7R106KT1AT</field>
+        <field name="MPN">KGM21FS61E106KU</field>
         <field name="Manufacturing Status">Active</field>
         <field name="Part-DB Footprint">0805</field>
-        <field name="Part-DB ID">331</field>
-        <field name="Mouser SPN">581-0805X7R106KT1AT</field>
+        <field name="Part-DB ID">393</field>
+        <field name="Mouser SPN">581-KGM21FS61E106KU</field>
         <field name="Stock">0</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://inventory.lan/de/part/331/info</field>
-        <field name="Description">10u 25V 10% X7R</field>
+        <field name="Datasheet">https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</field>
+        <field name="Description">10u 25V 10% X6S</field>
       </fields>
-      <libsource lib="partdb" part="0805X7R106KT1AT" description="10u 25V 10% X7R"/>
+      <libsource lib="partdb" part="KGM21FS61E106KU" description="10u 25V 10% X6S"/>
       <property name="manf" value="KYOCERA AVX"/>
-      <property name="manf#" value="0805X7R106KT1AT"/>
-      <property name="mouser#" value="581-0805X7R106KT1AT"/>
-      <property name="Part-DB URL" value="https://inventory.lan/de/part/331/info"/>
+      <property name="manf#" value="KGM21FS61E106KU"/>
+      <property name="mouser#" value="581-KGM21FS61E106KU"/>
+      <property name="Part-DB URL" value="https://inventory.lan/de/part/393/info"/>
       <property name="Category" value="Kondensator/MLCC"/>
       <property name="Manufacturer" value="KYOCERA AVX"/>
-      <property name="MPN" value="0805X7R106KT1AT"/>
+      <property name="MPN" value="KGM21FS61E106KU"/>
       <property name="Manufacturing Status" value="Active"/>
       <property name="Part-DB Footprint" value="0805"/>
-      <property name="Part-DB ID" value="331"/>
-      <property name="Mouser SPN" value="581-0805X7R106KT1AT"/>
+      <property name="Part-DB ID" value="393"/>
+      <property name="Mouser SPN" value="581-KGM21FS61E106KU"/>
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
@@ -2539,16 +2545,16 @@
       <description>1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5</description>
       <fields>
         <field name="manf">Texas Instruments</field>
-        <field name="manf#">TLV75733PDBVT</field>
-        <field name="mouser#">595-TLV75733PDBVT</field>
+        <field name="manf#">TLV75733PDYDR</field>
+        <field name="mouser#">595-TLV75733PDYDR</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tlv757p.pdf</field>
         <field name="Description">1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5</field>
       </fields>
       <libsource lib="Regulator_Linear" part="TLV75733PDBV" description="1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5"/>
       <property name="manf" value="Texas Instruments"/>
-      <property name="manf#" value="TLV75733PDBVT"/>
-      <property name="mouser#" value="595-TLV75733PDBVT"/>
+      <property name="manf#" value="TLV75733PDYDR"/>
+      <property name="mouser#" value="595-TLV75733PDYDR"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
       <property name="ki_keywords" value="LDO Regulator Fixed Positive"/>
@@ -2711,7 +2717,7 @@
     </comp>
     <comp ref="Q701">
       <value>BSS138</value>
-      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <footprint>Package_TO_SOT_SMD:SOT-23-3</footprint>
       <datasheet>https://www.onsemi.com/pdf/datasheet/bss138-d.pdf</datasheet>
       <description>N-Kanal Vds 50 V Vgs ±20 V Id 220 mA</description>
       <fields>
@@ -2728,7 +2734,7 @@
         <field name="Part-DB ID">353</field>
         <field name="Mouser SPN">512-BSS138</field>
         <field name="Stock">0</field>
-        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-3</field>
         <field name="Datasheet">https://www.onsemi.com/pdf/datasheet/bss138-d.pdf</field>
         <field name="Description">N-Kanal Vds 50 V Vgs ±20 V Id 220 mA</field>
       </fields>
@@ -2748,8 +2754,8 @@
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
-      <property name="ki_keywords" value="N-Channel MOSFET"/>
-      <property name="ki_fp_filters" value="SOT?23*"/>
+      <property name="ki_keywords" value="transistor NMOS N-MOS N-MOSFET"/>
+      <property name="ki_fp_filters" value="Package_TO_SOT_SMD:SOT-23-3"/>
       <sheetpath names="/Project Architecture/Power/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c/"/>
       <tstamps>65d06d12-e7f8-46b4-a5f8-d095cfdd60da</tstamps>
       <units>
@@ -2935,16 +2941,18 @@
       <description>Resistor</description>
       <fields>
         <field name="manf">Bourns</field>
-        <field name="manf#">CR0805-FX-3092GLF</field>
-        <field name="mouser#">652-CR0805FX-3092GLF</field>
+        <field name="manf#">CR0805-FX-3092ELF</field>
+        <field name="mouser#">652-CR0805FX-3092ELF</field>
+        <field name="Config"/>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
         <field name="Datasheet">https://www.mouser.de/datasheet/3/40/1/cr.pdf</field>
         <field name="Description">Resistor</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="manf" value="Bourns"/>
-      <property name="manf#" value="CR0805-FX-3092GLF"/>
-      <property name="mouser#" value="652-CR0805FX-3092GLF"/>
+      <property name="manf#" value="CR0805-FX-3092ELF"/>
+      <property name="mouser#" value="652-CR0805FX-3092ELF"/>
+      <property name="Config" value=""/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="Power.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -4013,37 +4021,37 @@
     <comp ref="C801">
       <value>10u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://inventory.lan/de/part/331/info</datasheet>
-      <description>10u 25V 10% X7R</description>
+      <datasheet>https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</datasheet>
+      <description>10u 25V 10% X6S</description>
       <fields>
         <field name="manf">KYOCERA AVX</field>
-        <field name="manf#">0805X7R106KT1AT</field>
-        <field name="mouser#">581-0805X7R106KT1AT</field>
-        <field name="Part-DB URL">https://inventory.lan/de/part/331/info</field>
+        <field name="manf#">KGM21FS61E106KU</field>
+        <field name="mouser#">581-KGM21FS61E106KU</field>
+        <field name="Part-DB URL">https://inventory.lan/de/part/393/info</field>
         <field name="Category">Kondensator/MLCC</field>
         <field name="Manufacturer">KYOCERA AVX</field>
-        <field name="MPN">0805X7R106KT1AT</field>
+        <field name="MPN">KGM21FS61E106KU</field>
         <field name="Manufacturing Status">Active</field>
         <field name="Part-DB Footprint">0805</field>
-        <field name="Part-DB ID">331</field>
-        <field name="Mouser SPN">581-0805X7R106KT1AT</field>
+        <field name="Part-DB ID">393</field>
+        <field name="Mouser SPN">581-KGM21FS61E106KU</field>
         <field name="Stock">0</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://inventory.lan/de/part/331/info</field>
-        <field name="Description">10u 25V 10% X7R</field>
+        <field name="Datasheet">https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</field>
+        <field name="Description">10u 25V 10% X6S</field>
       </fields>
-      <libsource lib="partdb" part="0805X7R106KT1AT" description="10u 25V 10% X7R"/>
+      <libsource lib="partdb" part="KGM21FS61E106KU" description="10u 25V 10% X6S"/>
       <property name="manf" value="KYOCERA AVX"/>
-      <property name="manf#" value="0805X7R106KT1AT"/>
-      <property name="mouser#" value="581-0805X7R106KT1AT"/>
-      <property name="Part-DB URL" value="https://inventory.lan/de/part/331/info"/>
+      <property name="manf#" value="KGM21FS61E106KU"/>
+      <property name="mouser#" value="581-KGM21FS61E106KU"/>
+      <property name="Part-DB URL" value="https://inventory.lan/de/part/393/info"/>
       <property name="Category" value="Kondensator/MLCC"/>
       <property name="Manufacturer" value="KYOCERA AVX"/>
-      <property name="MPN" value="0805X7R106KT1AT"/>
+      <property name="MPN" value="KGM21FS61E106KU"/>
       <property name="Manufacturing Status" value="Active"/>
       <property name="Part-DB Footprint" value="0805"/>
-      <property name="Part-DB ID" value="331"/>
-      <property name="Mouser SPN" value="581-0805X7R106KT1AT"/>
+      <property name="Part-DB ID" value="393"/>
+      <property name="Mouser SPN" value="581-KGM21FS61E106KU"/>
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="Battery"/>
       <property name="Sheetfile" value="Battery.kicad_sch"/>
@@ -4194,39 +4202,39 @@
     <comp ref="C805">
       <value>10u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://inventory.lan/de/part/331/info</datasheet>
-      <description>10u 25V 10% X7R</description>
+      <datasheet>https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</datasheet>
+      <description>10u 25V 10% X6S</description>
       <fields>
         <field name="manf">KYOCERA AVX</field>
-        <field name="manf#">0805X7R106KT1AT</field>
-        <field name="mouser#">581-0805X7R106KT1AT</field>
+        <field name="manf#">KGM21FS61E106KU</field>
+        <field name="mouser#">581-KGM21FS61E106KU</field>
         <field name="Config"/>
-        <field name="Part-DB URL">https://inventory.lan/de/part/331/info</field>
+        <field name="Part-DB URL">https://inventory.lan/de/part/393/info</field>
         <field name="Category">Kondensator/MLCC</field>
         <field name="Manufacturer">KYOCERA AVX</field>
-        <field name="MPN">0805X7R106KT1AT</field>
+        <field name="MPN">KGM21FS61E106KU</field>
         <field name="Manufacturing Status">Active</field>
         <field name="Part-DB Footprint">0805</field>
-        <field name="Part-DB ID">331</field>
-        <field name="Mouser SPN">581-0805X7R106KT1AT</field>
+        <field name="Part-DB ID">393</field>
+        <field name="Mouser SPN">581-KGM21FS61E106KU</field>
         <field name="Stock">0</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://inventory.lan/de/part/331/info</field>
-        <field name="Description">10u 25V 10% X7R</field>
+        <field name="Datasheet">https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</field>
+        <field name="Description">10u 25V 10% X6S</field>
       </fields>
-      <libsource lib="partdb" part="0805X7R106KT1AT" description="10u 25V 10% X7R"/>
+      <libsource lib="partdb" part="KGM21FS61E106KU" description="10u 25V 10% X6S"/>
       <property name="manf" value="KYOCERA AVX"/>
-      <property name="manf#" value="0805X7R106KT1AT"/>
-      <property name="mouser#" value="581-0805X7R106KT1AT"/>
+      <property name="manf#" value="KGM21FS61E106KU"/>
+      <property name="mouser#" value="581-KGM21FS61E106KU"/>
       <property name="Config" value=""/>
-      <property name="Part-DB URL" value="https://inventory.lan/de/part/331/info"/>
+      <property name="Part-DB URL" value="https://inventory.lan/de/part/393/info"/>
       <property name="Category" value="Kondensator/MLCC"/>
       <property name="Manufacturer" value="KYOCERA AVX"/>
-      <property name="MPN" value="0805X7R106KT1AT"/>
+      <property name="MPN" value="KGM21FS61E106KU"/>
       <property name="Manufacturing Status" value="Active"/>
       <property name="Part-DB Footprint" value="0805"/>
-      <property name="Part-DB ID" value="331"/>
-      <property name="Mouser SPN" value="581-0805X7R106KT1AT"/>
+      <property name="Part-DB ID" value="393"/>
+      <property name="Mouser SPN" value="581-KGM21FS61E106KU"/>
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="Battery"/>
       <property name="Sheetfile" value="Battery.kicad_sch"/>
@@ -4422,14 +4430,14 @@
     <comp ref="IC801">
       <value>BQ25300</value>
       <footprint>Package_DFN_QFN:WQFN-16-1EP_3x3mm_P0.5mm_EP1.68x1.68mm</footprint>
-      <datasheet>https://www.ti.com/lit/ds/symlink/bq25308.pdf</datasheet>
+      <datasheet>https://www.ti.com/lit/ds/symlink/bq25300.pdf</datasheet>
       <description>Battery Management Standalone, 1-cell 17V 3A battery charger</description>
       <fields>
         <field name="manf">Texas Instruments</field>
         <field name="manf#">BQ25300RTER</field>
         <field name="mouser#">595-BQ25300RTER</field>
         <field name="Footprint">Package_DFN_QFN:WQFN-16-1EP_3x3mm_P0.5mm_EP1.68x1.68mm</field>
-        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/bq25308.pdf</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/bq25300.pdf</field>
         <field name="Description">Battery Management Standalone, 1-cell 17V 3A battery charger</field>
       </fields>
       <libsource lib="Texas Instruments" part="BQ25300" description="Battery Management Standalone, 1-cell 17V 3A battery charger"/>
@@ -4816,16 +4824,18 @@
       <description>Resistor</description>
       <fields>
         <field name="manf">Bourns</field>
-        <field name="manf#">CR0805-JW-183GLF</field>
-        <field name="mouser#">652-CR0805JW-183GLF</field>
+        <field name="manf#">CR0805-FX-1802ELF</field>
+        <field name="mouser#">652-CR0805FX-1802ELF</field>
+        <field name="Config"/>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
         <field name="Datasheet">https://www.mouser.de/datasheet/3/40/1/cr.pdf</field>
         <field name="Description">Resistor</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="manf" value="Bourns"/>
-      <property name="manf#" value="CR0805-JW-183GLF"/>
-      <property name="mouser#" value="652-CR0805JW-183GLF"/>
+      <property name="manf#" value="CR0805-FX-1802ELF"/>
+      <property name="mouser#" value="652-CR0805FX-1802ELF"/>
+      <property name="Config" value=""/>
       <property name="Sheetname" value="Battery"/>
       <property name="Sheetfile" value="Battery.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -4957,16 +4967,18 @@
       <description>Resistor</description>
       <fields>
         <field name="manf">Bourns</field>
-        <field name="manf#">CR0805-FX-4531GLF</field>
-        <field name="mouser#">652-CR0805FX-4531GLF</field>
+        <field name="manf#">CR0805-FX-4531ELF</field>
+        <field name="mouser#">652-CR0805FX-4531ELF</field>
+        <field name="Config"/>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
         <field name="Datasheet">https://www.mouser.de/datasheet/3/40/1/cr.pdf</field>
         <field name="Description">Resistor</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="manf" value="Bourns"/>
-      <property name="manf#" value="CR0805-FX-4531GLF"/>
-      <property name="mouser#" value="652-CR0805FX-4531GLF"/>
+      <property name="manf#" value="CR0805-FX-4531ELF"/>
+      <property name="mouser#" value="652-CR0805FX-4531ELF"/>
+      <property name="Config" value=""/>
       <property name="Sheetname" value="Battery"/>
       <property name="Sheetfile" value="Battery.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -4985,20 +4997,22 @@
     <comp ref="R807">
       <value>22k6</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <datasheet>https://www.mouser.de/datasheet/3/40/1/cr.pdf</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/3/508/1/PYu-AC_51_RoHS_L_11.pdf</datasheet>
       <description>Resistor</description>
       <fields>
-        <field name="manf">Bourns</field>
-        <field name="manf#">CR0805-FX-2262GLF</field>
-        <field name="mouser#">652-CR0805FX-2262GLF</field>
+        <field name="manf">YAGEO</field>
+        <field name="manf#">AC0805FR-0722K6L</field>
+        <field name="mouser#">603-AC0805FR-0722K6L</field>
+        <field name="Config"/>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
-        <field name="Datasheet">https://www.mouser.de/datasheet/3/40/1/cr.pdf</field>
+        <field name="Datasheet">https://www.mouser.de/datasheet/3/508/1/PYu-AC_51_RoHS_L_11.pdf</field>
         <field name="Description">Resistor</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="manf" value="Bourns"/>
-      <property name="manf#" value="CR0805-FX-2262GLF"/>
-      <property name="mouser#" value="652-CR0805FX-2262GLF"/>
+      <property name="manf" value="YAGEO"/>
+      <property name="manf#" value="AC0805FR-0722K6L"/>
+      <property name="mouser#" value="603-AC0805FR-0722K6L"/>
+      <property name="Config" value=""/>
       <property name="Sheetname" value="Battery"/>
       <property name="Sheetfile" value="Battery.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -5407,9 +5421,6 @@
         <field name="manf#">3030TR</field>
         <field name="mouser#">534-3030TR</field>
         <field name="Config"/>
-        <field name="Sim.Device">V</field>
-        <field name="Sim.Type">DC</field>
-        <field name="Sim.Pins">1=+ 2=-</field>
         <field name="Part-DB URL">https://inventory.lan/de/part/391/info</field>
         <field name="Category">Batterie/Batteriehalter</field>
         <field name="Manufacturer">Keystone Electronics</field>
@@ -5429,9 +5440,6 @@
       <property name="manf#" value="3030TR"/>
       <property name="mouser#" value="534-3030TR"/>
       <property name="Config" value=""/>
-      <property name="Sim.Device" value="V"/>
-      <property name="Sim.Type" value="DC"/>
-      <property name="Sim.Pins" value="1=+ 2=-"/>
       <property name="Part-DB URL" value="https://inventory.lan/de/part/391/info"/>
       <property name="Category" value="Batterie/Batteriehalter"/>
       <property name="Manufacturer" value="Keystone Electronics"/>
@@ -5756,7 +5764,7 @@
     </comp>
     <comp ref="Q901">
       <value>BSS138</value>
-      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <footprint>Package_TO_SOT_SMD:SOT-23-3</footprint>
       <datasheet>https://www.onsemi.com/pdf/datasheet/bss138-d.pdf</datasheet>
       <description>N-Kanal Vds 50 V Vgs ±20 V Id 220 mA</description>
       <fields>
@@ -5773,7 +5781,7 @@
         <field name="Part-DB ID">353</field>
         <field name="Mouser SPN">512-BSS138</field>
         <field name="Stock">0</field>
-        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-3</field>
         <field name="Datasheet">https://www.onsemi.com/pdf/datasheet/bss138-d.pdf</field>
         <field name="Description">N-Kanal Vds 50 V Vgs ±20 V Id 220 mA</field>
       </fields>
@@ -5793,8 +5801,8 @@
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="System on Module"/>
       <property name="Sheetfile" value="SoM.kicad_sch"/>
-      <property name="ki_keywords" value="N-Channel MOSFET"/>
-      <property name="ki_fp_filters" value="SOT?23*"/>
+      <property name="ki_keywords" value="transistor NMOS N-MOS N-MOSFET"/>
+      <property name="ki_fp_filters" value="Package_TO_SOT_SMD:SOT-23-3"/>
       <sheetpath names="/Project Architecture/System on Module/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a/"/>
       <tstamps>3b8120db-5294-4bb0-a8ab-65eb97286b26</tstamps>
       <units>
@@ -5865,16 +5873,18 @@
       <description>Resistor</description>
       <fields>
         <field name="manf">Bourns</field>
-        <field name="manf#">CR0805-JW-152GLF</field>
-        <field name="mouser#">652-CR0805JW-152GLF</field>
+        <field name="manf#">CR0805-FX-1501ELF</field>
+        <field name="mouser#">652-CR0805FX-1501ELF</field>
+        <field name="Config"/>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
         <field name="Datasheet">https://www.mouser.de/datasheet/3/40/1/cr.pdf</field>
         <field name="Description">Resistor</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="manf" value="Bourns"/>
-      <property name="manf#" value="CR0805-JW-152GLF"/>
-      <property name="mouser#" value="652-CR0805JW-152GLF"/>
+      <property name="manf#" value="CR0805-FX-1501ELF"/>
+      <property name="mouser#" value="652-CR0805FX-1501ELF"/>
+      <property name="Config" value=""/>
       <property name="Sheetname" value="System on Module"/>
       <property name="Sheetfile" value="SoM.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -6920,6 +6930,7 @@
         <field name="Part-DB ID">384</field>
         <field name="Mouser SPN">710-9774015151R</field>
         <field name="Stock">0</field>
+        <field name="Config"/>
         <field name="Footprint">Wuerth:9774015151R</field>
         <field name="Datasheet">https://www.we-online.com/components/products/datasheet/9774015151R.pdf</field>
         <field name="Description">SMD-Abstandshalter M2.5 Innengewinde 1,5 mm Stahl</field>
@@ -6938,9 +6949,10 @@
       <property name="Part-DB ID" value="384"/>
       <property name="Mouser SPN" value="710-9774015151R"/>
       <property name="Stock" value="0"/>
+      <property name="Config" value=""/>
       <property name="Sheetname" value="LoRa"/>
       <property name="Sheetfile" value="LoRa.kicad_sch"/>
-      <property name="ki_fp_filters" value="Spacer*"/>
+      <property name="ki_fp_filters" value="Wuerth:9774015151R"/>
       <sheetpath names="/Project Architecture/LoRa/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6/"/>
       <tstamps>d1721bf2-8993-4b05-a47b-2544a3b9516e</tstamps>
       <units>
@@ -6988,7 +7000,7 @@
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="LoRa"/>
       <property name="Sheetfile" value="LoRa.kicad_sch"/>
-      <property name="ki_fp_filters" value="Spacer*"/>
+      <property name="ki_fp_filters" value="Wuerth:9774015151R"/>
       <sheetpath names="/Project Architecture/LoRa/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6/"/>
       <tstamps>9b5c3aec-3d15-4835-87d5-171a23147c03</tstamps>
       <units>
@@ -7004,16 +7016,16 @@
       <description>1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5</description>
       <fields>
         <field name="manf">Texas Instruments</field>
-        <field name="manf#">TLV75733PDBVT</field>
-        <field name="mouser#">595-TLV75733PDBVT</field>
+        <field name="manf#">TLV75733PDYDR</field>
+        <field name="mouser#">595-TLV75733PDYDR</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tlv757p.pdf</field>
         <field name="Description">1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5</field>
       </fields>
       <libsource lib="Regulator_Linear" part="TLV75733PDBV" description="1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5"/>
       <property name="manf" value="Texas Instruments"/>
-      <property name="manf#" value="TLV75733PDBVT"/>
-      <property name="mouser#" value="595-TLV75733PDBVT"/>
+      <property name="manf#" value="TLV75733PDYDR"/>
+      <property name="mouser#" value="595-TLV75733PDYDR"/>
       <property name="Sheetname" value="LoRa"/>
       <property name="Sheetfile" value="LoRa.kicad_sch"/>
       <property name="ki_keywords" value="LDO Regulator Fixed Positive"/>
@@ -7203,16 +7215,16 @@
       <description>Resistor</description>
       <fields>
         <field name="manf">Bourns</field>
-        <field name="manf#">CR0805-JW-680GLF</field>
-        <field name="mouser#">652-CR0805JW-680GLF</field>
+        <field name="manf#">CR0805-JW-680ELF</field>
+        <field name="mouser#">652-CR0805JW-680ELF</field>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
         <field name="Datasheet">https://www.mouser.de/datasheet/3/40/1/cr.pdf</field>
         <field name="Description">Resistor</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="manf" value="Bourns"/>
-      <property name="manf#" value="CR0805-JW-680GLF"/>
-      <property name="mouser#" value="652-CR0805JW-680GLF"/>
+      <property name="manf#" value="CR0805-JW-680ELF"/>
+      <property name="mouser#" value="652-CR0805JW-680ELF"/>
       <property name="Sheetname" value="LoRa"/>
       <property name="Sheetfile" value="LoRa.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -7752,37 +7764,37 @@
     <comp ref="C1106">
       <value>10u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://inventory.lan/de/part/331/info</datasheet>
-      <description>10u 25V 10% X7R</description>
+      <datasheet>https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</datasheet>
+      <description>10u 25V 10% X6S</description>
       <fields>
         <field name="manf">KYOCERA AVX</field>
-        <field name="manf#">0805X7R106KT1AT</field>
-        <field name="mouser#">581-0805X7R106KT1AT</field>
-        <field name="Part-DB URL">https://inventory.lan/de/part/331/info</field>
+        <field name="manf#">KGM21FS61E106KU</field>
+        <field name="mouser#">581-KGM21FS61E106KU</field>
+        <field name="Part-DB URL">https://inventory.lan/de/part/393/info</field>
         <field name="Category">Kondensator/MLCC</field>
         <field name="Manufacturer">KYOCERA AVX</field>
-        <field name="MPN">0805X7R106KT1AT</field>
+        <field name="MPN">KGM21FS61E106KU</field>
         <field name="Manufacturing Status">Active</field>
         <field name="Part-DB Footprint">0805</field>
-        <field name="Part-DB ID">331</field>
-        <field name="Mouser SPN">581-0805X7R106KT1AT</field>
+        <field name="Part-DB ID">393</field>
+        <field name="Mouser SPN">581-KGM21FS61E106KU</field>
         <field name="Stock">0</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://inventory.lan/de/part/331/info</field>
-        <field name="Description">10u 25V 10% X7R</field>
+        <field name="Datasheet">https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</field>
+        <field name="Description">10u 25V 10% X6S</field>
       </fields>
-      <libsource lib="partdb" part="0805X7R106KT1AT" description="10u 25V 10% X7R"/>
+      <libsource lib="partdb" part="KGM21FS61E106KU" description="10u 25V 10% X6S"/>
       <property name="manf" value="KYOCERA AVX"/>
-      <property name="manf#" value="0805X7R106KT1AT"/>
-      <property name="mouser#" value="581-0805X7R106KT1AT"/>
-      <property name="Part-DB URL" value="https://inventory.lan/de/part/331/info"/>
+      <property name="manf#" value="KGM21FS61E106KU"/>
+      <property name="mouser#" value="581-KGM21FS61E106KU"/>
+      <property name="Part-DB URL" value="https://inventory.lan/de/part/393/info"/>
       <property name="Category" value="Kondensator/MLCC"/>
       <property name="Manufacturer" value="KYOCERA AVX"/>
-      <property name="MPN" value="0805X7R106KT1AT"/>
+      <property name="MPN" value="KGM21FS61E106KU"/>
       <property name="Manufacturing Status" value="Active"/>
       <property name="Part-DB Footprint" value="0805"/>
-      <property name="Part-DB ID" value="331"/>
-      <property name="Mouser SPN" value="581-0805X7R106KT1AT"/>
+      <property name="Part-DB ID" value="393"/>
+      <property name="Mouser SPN" value="581-KGM21FS61E106KU"/>
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="Zigbee"/>
       <property name="Sheetfile" value="Zigbee.kicad_sch"/>
@@ -7805,16 +7817,16 @@
       <description>1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5</description>
       <fields>
         <field name="manf">Texas Instruments</field>
-        <field name="manf#">TLV75733PDBVT</field>
-        <field name="mouser#">595-TLV75733PDBVT</field>
+        <field name="manf#">TLV75733PDYDR</field>
+        <field name="mouser#">595-TLV75733PDYDR</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tlv757p.pdf</field>
         <field name="Description">1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5</field>
       </fields>
       <libsource lib="Regulator_Linear" part="TLV75733PDBV" description="1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5"/>
       <property name="manf" value="Texas Instruments"/>
-      <property name="manf#" value="TLV75733PDBVT"/>
-      <property name="mouser#" value="595-TLV75733PDBVT"/>
+      <property name="manf#" value="TLV75733PDYDR"/>
+      <property name="mouser#" value="595-TLV75733PDYDR"/>
       <property name="Sheetname" value="Zigbee"/>
       <property name="Sheetfile" value="Zigbee.kicad_sch"/>
       <property name="ki_keywords" value="LDO Regulator Fixed Positive"/>
@@ -7836,7 +7848,7 @@
     <comp ref="IC1102">
       <value>TXB0102DCU</value>
       <footprint>Package_SO:VSSOP-8_2.3x2mm_P0.5mm</footprint>
-      <datasheet>https://www.ti.com/lit/gpn/TXB0102</datasheet>
+      <datasheet>https://www.ti.com/lit/ds/symlink/txb0102.pdf?ts=1795259659813</datasheet>
       <description>2-Bit Bidirectional Voltage-Level Translator With Auto Direction Sensing and ±15-kV ESD Protection, VSSOP-8 / Übersetzungsspannungs-Pegel 2B Bidir Vltg-Level Translator A 595-TXB A 595-TXB0102DCUT</description>
       <fields>
         <field name="manf">Texas Instruments</field>
@@ -7852,10 +7864,10 @@
         <field name="Mouser SPN">595-TXB0102DCUR</field>
         <field name="Stock">0</field>
         <field name="Footprint">Package_SO:VSSOP-8_2.3x2mm_P0.5mm</field>
-        <field name="Datasheet">https://www.ti.com/lit/gpn/TXB0102</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/txb0102.pdf?ts=1795259659813</field>
         <field name="Description">2-Bit Bidirectional Voltage-Level Translator With Auto Direction Sensing and ±15-kV ESD Protection, VSSOP-8 / Übersetzungsspannungs-Pegel 2B Bidir Vltg-Level Translator A 595-TXB A 595-TXB0102DCUT</field>
       </fields>
-      <libsource lib="Logic_LevelTranslator" part="TXB0102DCT" description="2-Bit Bidirectional Voltage-Level Translator With Auto Direction Sensing and ±15-kV ESD Protection, TSSOP-8"/>
+      <libsource lib="Logic_LevelTranslator" part="TXB0102DCU" description="2-Bit Bidirectional Voltage-Level Translator With Auto Direction Sensing and ±15-kV ESD Protection, VSSOP-8"/>
       <property name="manf" value="Texas Instruments"/>
       <property name="manf#" value="TXB0102DCUR"/>
       <property name="mouser#" value="595-TXB0102DCUR"/>
@@ -7871,7 +7883,7 @@
       <property name="Sheetname" value="Zigbee"/>
       <property name="Sheetfile" value="Zigbee.kicad_sch"/>
       <property name="ki_keywords" value="Level-Shifter CMOS-TTL-Translation"/>
-      <property name="ki_fp_filters" value="TSSOP*P0.65mm*"/>
+      <property name="ki_fp_filters" value="VSSOP*2.3x2mm*P0.5mm*"/>
       <sheetpath names="/Project Architecture/Zigbee/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/3f9e85ea-c06e-4d87-98cf-dea3ce3fc587/"/>
       <tstamps>35f76c88-ab95-4f7c-891b-6dca1ef0332c</tstamps>
       <units>
@@ -8248,16 +8260,16 @@
       <description>Resistor</description>
       <fields>
         <field name="manf">Bourns</field>
-        <field name="manf#">CR0805-JW-680GLF</field>
-        <field name="mouser#">652-CR0805JW-680GLF</field>
+        <field name="manf#">CR0805-JW-680ELF</field>
+        <field name="mouser#">652-CR0805JW-680ELF</field>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
         <field name="Datasheet">https://www.mouser.de/datasheet/3/40/1/cr.pdf</field>
         <field name="Description">Resistor</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="manf" value="Bourns"/>
-      <property name="manf#" value="CR0805-JW-680GLF"/>
-      <property name="mouser#" value="652-CR0805JW-680GLF"/>
+      <property name="manf#" value="CR0805-JW-680ELF"/>
+      <property name="mouser#" value="652-CR0805JW-680ELF"/>
       <property name="Sheetname" value="Zigbee"/>
       <property name="Sheetfile" value="Zigbee.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -8850,16 +8862,16 @@
       <description>1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5</description>
       <fields>
         <field name="manf">Texas Instruments</field>
-        <field name="manf#">TLV75733PDBVT</field>
-        <field name="mouser#">595-TLV75733PDBVT</field>
+        <field name="manf#">TLV75733PDYDR</field>
+        <field name="mouser#">595-TLV75733PDYDR</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tlv757p.pdf</field>
         <field name="Description">1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5</field>
       </fields>
       <libsource lib="Regulator_Linear" part="TLV75733PDBV" description="1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5"/>
       <property name="manf" value="Texas Instruments"/>
-      <property name="manf#" value="TLV75733PDBVT"/>
-      <property name="mouser#" value="595-TLV75733PDBVT"/>
+      <property name="manf#" value="TLV75733PDYDR"/>
+      <property name="mouser#" value="595-TLV75733PDYDR"/>
       <property name="Sheetname" value="Thread"/>
       <property name="Sheetfile" value="Thread.kicad_sch"/>
       <property name="ki_keywords" value="LDO Regulator Fixed Positive"/>
@@ -9277,16 +9289,16 @@
       <description>Resistor</description>
       <fields>
         <field name="manf">Bourns</field>
-        <field name="manf#">CR0805-JW-680GLF</field>
-        <field name="mouser#">652-CR0805JW-680GLF</field>
+        <field name="manf#">CR0805-JW-680ELF</field>
+        <field name="mouser#">652-CR0805JW-680ELF</field>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
         <field name="Datasheet">https://www.mouser.de/datasheet/3/40/1/cr.pdf</field>
         <field name="Description">Resistor</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="manf" value="Bourns"/>
-      <property name="manf#" value="CR0805-JW-680GLF"/>
-      <property name="mouser#" value="652-CR0805JW-680GLF"/>
+      <property name="manf#" value="CR0805-JW-680ELF"/>
+      <property name="mouser#" value="652-CR0805JW-680ELF"/>
       <property name="Sheetname" value="Thread"/>
       <property name="Sheetfile" value="Thread.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -10337,8 +10349,8 @@
       <description>1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5</description>
       <fields>
         <field name="manf">Texas Instruments</field>
-        <field name="manf#">TLV75733PDBVT</field>
-        <field name="mouser#">595-TLV75733PDBVT</field>
+        <field name="manf#">TLV75733PDYDR</field>
+        <field name="mouser#">595-TLV75733PDYDR</field>
         <field name="Config">+WMBUS</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tlv757p.pdf</field>
@@ -10346,8 +10358,8 @@
       </fields>
       <libsource lib="Regulator_Linear" part="TLV75733PDBV" description="1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5"/>
       <property name="manf" value="Texas Instruments"/>
-      <property name="manf#" value="TLV75733PDBVT"/>
-      <property name="mouser#" value="595-TLV75733PDBVT"/>
+      <property name="manf#" value="TLV75733PDYDR"/>
+      <property name="mouser#" value="595-TLV75733PDYDR"/>
       <property name="Config" value="+WMBUS"/>
       <property name="Sheetname" value="wMBus"/>
       <property name="Sheetfile" value="wMBus.kicad_sch"/>
@@ -10407,7 +10419,7 @@
     <comp ref="IC1303">
       <value>TXB0102DCU</value>
       <footprint>Package_SO:VSSOP-8_2.3x2mm_P0.5mm</footprint>
-      <datasheet>https://www.ti.com/lit/gpn/TXB0102</datasheet>
+      <datasheet>https://www.ti.com/lit/ds/symlink/txb0102.pdf?ts=1795259659813</datasheet>
       <description>2-Bit Bidirectional Voltage-Level Translator With Auto Direction Sensing and ±15-kV ESD Protection, VSSOP-8 / Übersetzungsspannungs-Pegel 2B Bidir Vltg-Level Translator A 595-TXB A 595-TXB0102DCUT</description>
       <fields>
         <field name="manf">Texas Instruments</field>
@@ -10424,10 +10436,10 @@
         <field name="Mouser SPN">595-TXB0102DCUR</field>
         <field name="Stock">0</field>
         <field name="Footprint">Package_SO:VSSOP-8_2.3x2mm_P0.5mm</field>
-        <field name="Datasheet">https://www.ti.com/lit/gpn/TXB0102</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/txb0102.pdf?ts=1795259659813</field>
         <field name="Description">2-Bit Bidirectional Voltage-Level Translator With Auto Direction Sensing and ±15-kV ESD Protection, VSSOP-8 / Übersetzungsspannungs-Pegel 2B Bidir Vltg-Level Translator A 595-TXB A 595-TXB0102DCUT</field>
       </fields>
-      <libsource lib="Logic_LevelTranslator" part="TXB0102DCT" description="2-Bit Bidirectional Voltage-Level Translator With Auto Direction Sensing and ±15-kV ESD Protection, TSSOP-8"/>
+      <libsource lib="Logic_LevelTranslator" part="TXB0102DCU" description="2-Bit Bidirectional Voltage-Level Translator With Auto Direction Sensing and ±15-kV ESD Protection, VSSOP-8"/>
       <property name="manf" value="Texas Instruments"/>
       <property name="manf#" value="TXB0102DCUR"/>
       <property name="mouser#" value="595-TXB0102DCUR"/>
@@ -10444,7 +10456,7 @@
       <property name="Sheetname" value="wMBus"/>
       <property name="Sheetfile" value="wMBus.kicad_sch"/>
       <property name="ki_keywords" value="Level-Shifter CMOS-TTL-Translation"/>
-      <property name="ki_fp_filters" value="TSSOP*P0.65mm*"/>
+      <property name="ki_fp_filters" value="VSSOP*2.3x2mm*P0.5mm*"/>
       <sheetpath names="/Project Architecture/wMBus/" tstamps="/c5103ceb-5325-4a84-a025-9638a412984e/7a02d3a8-366e-4fb1-9f54-be0208da73cb/"/>
       <tstamps>08a71232-dc4b-4d59-bca7-c940dd2279d6</tstamps>
       <units>
@@ -10669,8 +10681,8 @@
       <description>Resistor</description>
       <fields>
         <field name="manf">Bourns</field>
-        <field name="manf#">CR0805-JW-680GLF</field>
-        <field name="mouser#">652-CR0805JW-680GLF</field>
+        <field name="manf#">CR0805-JW-680ELF</field>
+        <field name="mouser#">652-CR0805JW-680ELF</field>
         <field name="Config">+WMBUS</field>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
         <field name="Datasheet">https://www.mouser.de/datasheet/3/40/1/cr.pdf</field>
@@ -10678,8 +10690,8 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="manf" value="Bourns"/>
-      <property name="manf#" value="CR0805-JW-680GLF"/>
-      <property name="mouser#" value="652-CR0805JW-680GLF"/>
+      <property name="manf#" value="CR0805-JW-680ELF"/>
+      <property name="mouser#" value="652-CR0805JW-680ELF"/>
       <property name="Config" value="+WMBUS"/>
       <property name="Sheetname" value="wMBus"/>
       <property name="Sheetfile" value="wMBus.kicad_sch"/>
@@ -11678,16 +11690,18 @@
       <description>Bidirectional  level-shifting voltage translator, TSSOP-20</description>
       <fields>
         <field name="manf">Texas Instruments</field>
-        <field name="manf#">TXS0108EPWRG4</field>
-        <field name="mouser#">595-TXS0108EPWRG4</field>
+        <field name="manf#">TXS0108EPWR</field>
+        <field name="mouser#">595-TXS0108EPWR</field>
+        <field name="Config"/>
         <field name="Footprint">Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm</field>
         <field name="Datasheet">www.ti.com/lit/ds/symlink/txs0108e.pdf</field>
         <field name="Description">Bidirectional  level-shifting voltage translator, TSSOP-20</field>
       </fields>
       <libsource lib="Logic_LevelTranslator" part="TXS0108EPW" description="Bidirectional  level-shifting voltage translator, TSSOP-20"/>
       <property name="manf" value="Texas Instruments"/>
-      <property name="manf#" value="TXS0108EPWRG4"/>
-      <property name="mouser#" value="595-TXS0108EPWRG4"/>
+      <property name="manf#" value="TXS0108EPWR"/>
+      <property name="mouser#" value="595-TXS0108EPWR"/>
+      <property name="Config" value=""/>
       <property name="Sheetname" value="Peripherals"/>
       <property name="Sheetfile" value="Peripherals.kicad_sch"/>
       <property name="ki_keywords" value="8-bit"/>
@@ -11762,7 +11776,7 @@
     <comp ref="IC1405">
       <value>TXB0102DCU</value>
       <footprint>Package_SO:VSSOP-8_2.3x2mm_P0.5mm</footprint>
-      <datasheet>http://www.ti.com/lit/ds/symlink/txb0102.pdf</datasheet>
+      <datasheet>https://www.ti.com/lit/ds/symlink/txb0102.pdf?ts=1795259659813</datasheet>
       <description>2-Bit Bidirectional Voltage-Level Translator With Auto Direction Sensing and ±15-kV ESD Protection, VSSOP-8 / Übersetzungsspannungs-Pegel 2B Bidir Vltg-Level Translator A 595-TXB A 595-TXB0102DCUT</description>
       <fields>
         <field name="manf">Texas Instruments</field>
@@ -11778,7 +11792,7 @@
         <field name="Mouser SPN">595-TXB0102DCUR</field>
         <field name="Stock">0</field>
         <field name="Footprint">Package_SO:VSSOP-8_2.3x2mm_P0.5mm</field>
-        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/txb0102.pdf</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/txb0102.pdf?ts=1795259659813</field>
         <field name="Description">2-Bit Bidirectional Voltage-Level Translator With Auto Direction Sensing and ±15-kV ESD Protection, VSSOP-8 / Übersetzungsspannungs-Pegel 2B Bidir Vltg-Level Translator A 595-TXB A 595-TXB0102DCUT</field>
       </fields>
       <libsource lib="Logic_LevelTranslator" part="TXB0102DCU" description="2-Bit Bidirectional Voltage-Level Translator With Auto Direction Sensing and ±15-kV ESD Protection, VSSOP-8"/>
@@ -11944,7 +11958,7 @@
       <fields>
         <field name="manf">Bourns</field>
         <field name="manf#">CR0805-JW-472ELF</field>
-        <field name="mouser#">652-CR0805JW-472ELF</field>
+        <field name="mouser#">652-CR0805-JW-472ELF</field>
         <field name="Part-DB URL">https://inventory.lan/de/part/78/info</field>
         <field name="Category">Widerstand/Dickfilmwiderstand</field>
         <field name="Manufacturer">Bourns</field>
@@ -11953,7 +11967,7 @@
         <field name="Part-DB Footprint">0805</field>
         <field name="Mass">0.006 g</field>
         <field name="Part-DB ID">78</field>
-        <field name="Mouser SPN">652-CR0805JW-472ELF</field>
+        <field name="Mouser SPN">652-CR0805-JW-472ELF</field>
         <field name="Stock">50</field>
         <field name="Storage Location">Sortierregal</field>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
@@ -11963,7 +11977,7 @@
       <libsource lib="partdb" part="CR0805-JW-472ELF" description="4k7 100mW 5%"/>
       <property name="manf" value="Bourns"/>
       <property name="manf#" value="CR0805-JW-472ELF"/>
-      <property name="mouser#" value="652-CR0805JW-472ELF"/>
+      <property name="mouser#" value="652-CR0805-JW-472ELF"/>
       <property name="Part-DB URL" value="https://inventory.lan/de/part/78/info"/>
       <property name="Category" value="Widerstand/Dickfilmwiderstand"/>
       <property name="Manufacturer" value="Bourns"/>
@@ -11972,7 +11986,7 @@
       <property name="Part-DB Footprint" value="0805"/>
       <property name="Mass" value="0.006 g"/>
       <property name="Part-DB ID" value="78"/>
-      <property name="Mouser SPN" value="652-CR0805JW-472ELF"/>
+      <property name="Mouser SPN" value="652-CR0805-JW-472ELF"/>
       <property name="Stock" value="50"/>
       <property name="Storage Location" value="Sortierregal"/>
       <property name="Sheetname" value="Peripherals"/>
@@ -11997,7 +12011,7 @@
       <fields>
         <field name="manf">Bourns</field>
         <field name="manf#">CR0805-JW-332ELF</field>
-        <field name="mouser#">652-CR0805JW-332ELF</field>
+        <field name="mouser#">652-CR0805-JW-332ELF</field>
         <field name="Part-DB URL">https://inventory.lan/de/part/79/info</field>
         <field name="Category">Widerstand/Dickfilmwiderstand</field>
         <field name="Manufacturer">Bourns</field>
@@ -12006,7 +12020,7 @@
         <field name="Part-DB Footprint">0805</field>
         <field name="Mass">0.006 g</field>
         <field name="Part-DB ID">79</field>
-        <field name="Mouser SPN">652-CR0805JW-332ELF</field>
+        <field name="Mouser SPN">652-CR0805-JW-332ELF</field>
         <field name="Stock">50</field>
         <field name="Storage Location">Sortierregal</field>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
@@ -12016,7 +12030,7 @@
       <libsource lib="partdb" part="CR0805-JW-332ELF" description="3k3 100mW 5%"/>
       <property name="manf" value="Bourns"/>
       <property name="manf#" value="CR0805-JW-332ELF"/>
-      <property name="mouser#" value="652-CR0805JW-332ELF"/>
+      <property name="mouser#" value="652-CR0805-JW-332ELF"/>
       <property name="Part-DB URL" value="https://inventory.lan/de/part/79/info"/>
       <property name="Category" value="Widerstand/Dickfilmwiderstand"/>
       <property name="Manufacturer" value="Bourns"/>
@@ -12025,7 +12039,7 @@
       <property name="Part-DB Footprint" value="0805"/>
       <property name="Mass" value="0.006 g"/>
       <property name="Part-DB ID" value="79"/>
-      <property name="Mouser SPN" value="652-CR0805JW-332ELF"/>
+      <property name="Mouser SPN" value="652-CR0805-JW-332ELF"/>
       <property name="Stock" value="50"/>
       <property name="Storage Location" value="Sortierregal"/>
       <property name="Sheetname" value="Peripherals"/>
@@ -12053,7 +12067,7 @@
       <fields>
         <field name="manf">Bourns</field>
         <field name="manf#">CR0805-JW-332ELF</field>
-        <field name="mouser#">652-CR0805JW-332ELF</field>
+        <field name="mouser#">652-CR0805-JW-332ELF</field>
         <field name="Part-DB URL">https://inventory.lan/de/part/79/info</field>
         <field name="Category">Widerstand/Dickfilmwiderstand</field>
         <field name="Manufacturer">Bourns</field>
@@ -12062,9 +12076,10 @@
         <field name="Part-DB Footprint">0805</field>
         <field name="Mass">0.006 g</field>
         <field name="Part-DB ID">79</field>
-        <field name="Mouser SPN">652-CR0805JW-332ELF</field>
+        <field name="Mouser SPN">652-CR0805-JW-332ELF</field>
         <field name="Stock">50</field>
         <field name="Storage Location">Sortierregal</field>
+        <field name="Config"/>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
         <field name="Datasheet">https://www.mouser.com/datasheet/2/54/cr-1858361.pdf</field>
         <field name="Description">3k3 100mW 5%</field>
@@ -12072,7 +12087,7 @@
       <libsource lib="partdb" part="CR0805-JW-332ELF" description="3k3 100mW 5%"/>
       <property name="manf" value="Bourns"/>
       <property name="manf#" value="CR0805-JW-332ELF"/>
-      <property name="mouser#" value="652-CR0805JW-332ELF"/>
+      <property name="mouser#" value="652-CR0805-JW-332ELF"/>
       <property name="Part-DB URL" value="https://inventory.lan/de/part/79/info"/>
       <property name="Category" value="Widerstand/Dickfilmwiderstand"/>
       <property name="Manufacturer" value="Bourns"/>
@@ -12081,9 +12096,10 @@
       <property name="Part-DB Footprint" value="0805"/>
       <property name="Mass" value="0.006 g"/>
       <property name="Part-DB ID" value="79"/>
-      <property name="Mouser SPN" value="652-CR0805JW-332ELF"/>
+      <property name="Mouser SPN" value="652-CR0805-JW-332ELF"/>
       <property name="Stock" value="50"/>
       <property name="Storage Location" value="Sortierregal"/>
+      <property name="Config" value=""/>
       <property name="Sheetname" value="Peripherals"/>
       <property name="Sheetfile" value="Peripherals.kicad_sch"/>
       <property name="exclude_from_bom"/>
@@ -12109,7 +12125,7 @@
       <fields>
         <field name="manf">Bourns</field>
         <field name="manf#">CR0805-JW-332ELF</field>
-        <field name="mouser#">652-CR0805JW-332ELF</field>
+        <field name="mouser#">652-CR0805-JW-332ELF</field>
         <field name="Part-DB URL">https://inventory.lan/de/part/79/info</field>
         <field name="Category">Widerstand/Dickfilmwiderstand</field>
         <field name="Manufacturer">Bourns</field>
@@ -12118,7 +12134,7 @@
         <field name="Part-DB Footprint">0805</field>
         <field name="Mass">0.006 g</field>
         <field name="Part-DB ID">79</field>
-        <field name="Mouser SPN">652-CR0805JW-332ELF</field>
+        <field name="Mouser SPN">652-CR0805-JW-332ELF</field>
         <field name="Stock">50</field>
         <field name="Storage Location">Sortierregal</field>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
@@ -12128,7 +12144,7 @@
       <libsource lib="partdb" part="CR0805-JW-332ELF" description="3k3 100mW 5%"/>
       <property name="manf" value="Bourns"/>
       <property name="manf#" value="CR0805-JW-332ELF"/>
-      <property name="mouser#" value="652-CR0805JW-332ELF"/>
+      <property name="mouser#" value="652-CR0805-JW-332ELF"/>
       <property name="Part-DB URL" value="https://inventory.lan/de/part/79/info"/>
       <property name="Category" value="Widerstand/Dickfilmwiderstand"/>
       <property name="Manufacturer" value="Bourns"/>
@@ -12137,7 +12153,7 @@
       <property name="Part-DB Footprint" value="0805"/>
       <property name="Mass" value="0.006 g"/>
       <property name="Part-DB ID" value="79"/>
-      <property name="Mouser SPN" value="652-CR0805JW-332ELF"/>
+      <property name="Mouser SPN" value="652-CR0805-JW-332ELF"/>
       <property name="Stock" value="50"/>
       <property name="Storage Location" value="Sortierregal"/>
       <property name="Sheetname" value="Peripherals"/>
@@ -12165,7 +12181,7 @@
       <fields>
         <field name="manf">Bourns</field>
         <field name="manf#">CR0805-JW-332ELF</field>
-        <field name="mouser#">652-CR0805JW-332ELF</field>
+        <field name="mouser#">652-CR0805-JW-332ELF</field>
         <field name="Part-DB URL">https://inventory.lan/de/part/79/info</field>
         <field name="Category">Widerstand/Dickfilmwiderstand</field>
         <field name="Manufacturer">Bourns</field>
@@ -12174,7 +12190,7 @@
         <field name="Part-DB Footprint">0805</field>
         <field name="Mass">0.006 g</field>
         <field name="Part-DB ID">79</field>
-        <field name="Mouser SPN">652-CR0805JW-332ELF</field>
+        <field name="Mouser SPN">652-CR0805-JW-332ELF</field>
         <field name="Stock">50</field>
         <field name="Storage Location">Sortierregal</field>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
@@ -12184,7 +12200,7 @@
       <libsource lib="partdb" part="CR0805-JW-332ELF" description="3k3 100mW 5%"/>
       <property name="manf" value="Bourns"/>
       <property name="manf#" value="CR0805-JW-332ELF"/>
-      <property name="mouser#" value="652-CR0805JW-332ELF"/>
+      <property name="mouser#" value="652-CR0805-JW-332ELF"/>
       <property name="Part-DB URL" value="https://inventory.lan/de/part/79/info"/>
       <property name="Category" value="Widerstand/Dickfilmwiderstand"/>
       <property name="Manufacturer" value="Bourns"/>
@@ -12193,7 +12209,7 @@
       <property name="Part-DB Footprint" value="0805"/>
       <property name="Mass" value="0.006 g"/>
       <property name="Part-DB ID" value="79"/>
-      <property name="Mouser SPN" value="652-CR0805JW-332ELF"/>
+      <property name="Mouser SPN" value="652-CR0805-JW-332ELF"/>
       <property name="Stock" value="50"/>
       <property name="Storage Location" value="Sortierregal"/>
       <property name="Sheetname" value="Peripherals"/>
@@ -12470,37 +12486,37 @@
     <comp ref="C1501">
       <value>10u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://inventory.lan/de/part/331/info</datasheet>
-      <description>10u 25V 10% X7R</description>
+      <datasheet>https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</datasheet>
+      <description>10u 25V 10% X6S</description>
       <fields>
         <field name="manf">KYOCERA AVX</field>
-        <field name="manf#">0805X7R106KT1AT</field>
-        <field name="mouser#">581-0805X7R106KT1AT</field>
-        <field name="Part-DB URL">https://inventory.lan/de/part/331/info</field>
+        <field name="manf#">KGM21FS61E106KU</field>
+        <field name="mouser#">581-KGM21FS61E106KU</field>
+        <field name="Part-DB URL">https://inventory.lan/de/part/393/info</field>
         <field name="Category">Kondensator/MLCC</field>
         <field name="Manufacturer">KYOCERA AVX</field>
-        <field name="MPN">0805X7R106KT1AT</field>
+        <field name="MPN">KGM21FS61E106KU</field>
         <field name="Manufacturing Status">Active</field>
         <field name="Part-DB Footprint">0805</field>
-        <field name="Part-DB ID">331</field>
-        <field name="Mouser SPN">581-0805X7R106KT1AT</field>
+        <field name="Part-DB ID">393</field>
+        <field name="Mouser SPN">581-KGM21FS61E106KU</field>
         <field name="Stock">0</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://inventory.lan/de/part/331/info</field>
-        <field name="Description">10u 25V 10% X7R</field>
+        <field name="Datasheet">https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</field>
+        <field name="Description">10u 25V 10% X6S</field>
       </fields>
-      <libsource lib="partdb" part="0805X7R106KT1AT" description="10u 25V 10% X7R"/>
+      <libsource lib="partdb" part="KGM21FS61E106KU" description="10u 25V 10% X6S"/>
       <property name="manf" value="KYOCERA AVX"/>
-      <property name="manf#" value="0805X7R106KT1AT"/>
-      <property name="mouser#" value="581-0805X7R106KT1AT"/>
-      <property name="Part-DB URL" value="https://inventory.lan/de/part/331/info"/>
+      <property name="manf#" value="KGM21FS61E106KU"/>
+      <property name="mouser#" value="581-KGM21FS61E106KU"/>
+      <property name="Part-DB URL" value="https://inventory.lan/de/part/393/info"/>
       <property name="Category" value="Kondensator/MLCC"/>
       <property name="Manufacturer" value="KYOCERA AVX"/>
-      <property name="MPN" value="0805X7R106KT1AT"/>
+      <property name="MPN" value="KGM21FS61E106KU"/>
       <property name="Manufacturing Status" value="Active"/>
       <property name="Part-DB Footprint" value="0805"/>
-      <property name="Part-DB ID" value="331"/>
-      <property name="Mouser SPN" value="581-0805X7R106KT1AT"/>
+      <property name="Part-DB ID" value="393"/>
+      <property name="Mouser SPN" value="581-KGM21FS61E106KU"/>
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="NVMe"/>
       <property name="Sheetfile" value="NVMe.kicad_sch"/>
@@ -12519,37 +12535,37 @@
     <comp ref="C1502">
       <value>10u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://inventory.lan/de/part/331/info</datasheet>
-      <description>10u 25V 10% X7R</description>
+      <datasheet>https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</datasheet>
+      <description>10u 25V 10% X6S</description>
       <fields>
         <field name="manf">KYOCERA AVX</field>
-        <field name="manf#">0805X7R106KT1AT</field>
-        <field name="mouser#">581-0805X7R106KT1AT</field>
-        <field name="Part-DB URL">https://inventory.lan/de/part/331/info</field>
+        <field name="manf#">KGM21FS61E106KU</field>
+        <field name="mouser#">581-KGM21FS61E106KU</field>
+        <field name="Part-DB URL">https://inventory.lan/de/part/393/info</field>
         <field name="Category">Kondensator/MLCC</field>
         <field name="Manufacturer">KYOCERA AVX</field>
-        <field name="MPN">0805X7R106KT1AT</field>
+        <field name="MPN">KGM21FS61E106KU</field>
         <field name="Manufacturing Status">Active</field>
         <field name="Part-DB Footprint">0805</field>
-        <field name="Part-DB ID">331</field>
-        <field name="Mouser SPN">581-0805X7R106KT1AT</field>
+        <field name="Part-DB ID">393</field>
+        <field name="Mouser SPN">581-KGM21FS61E106KU</field>
         <field name="Stock">0</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://inventory.lan/de/part/331/info</field>
-        <field name="Description">10u 25V 10% X7R</field>
+        <field name="Datasheet">https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</field>
+        <field name="Description">10u 25V 10% X6S</field>
       </fields>
-      <libsource lib="partdb" part="0805X7R106KT1AT" description="10u 25V 10% X7R"/>
+      <libsource lib="partdb" part="KGM21FS61E106KU" description="10u 25V 10% X6S"/>
       <property name="manf" value="KYOCERA AVX"/>
-      <property name="manf#" value="0805X7R106KT1AT"/>
-      <property name="mouser#" value="581-0805X7R106KT1AT"/>
-      <property name="Part-DB URL" value="https://inventory.lan/de/part/331/info"/>
+      <property name="manf#" value="KGM21FS61E106KU"/>
+      <property name="mouser#" value="581-KGM21FS61E106KU"/>
+      <property name="Part-DB URL" value="https://inventory.lan/de/part/393/info"/>
       <property name="Category" value="Kondensator/MLCC"/>
       <property name="Manufacturer" value="KYOCERA AVX"/>
-      <property name="MPN" value="0805X7R106KT1AT"/>
+      <property name="MPN" value="KGM21FS61E106KU"/>
       <property name="Manufacturing Status" value="Active"/>
       <property name="Part-DB Footprint" value="0805"/>
-      <property name="Part-DB ID" value="331"/>
-      <property name="Mouser SPN" value="581-0805X7R106KT1AT"/>
+      <property name="Part-DB ID" value="393"/>
+      <property name="Mouser SPN" value="581-KGM21FS61E106KU"/>
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="NVMe"/>
       <property name="Sheetfile" value="NVMe.kicad_sch"/>
@@ -12912,37 +12928,37 @@
     <comp ref="C1511">
       <value>10u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <datasheet>https://inventory.lan/de/part/331/info</datasheet>
-      <description>10u 25V 10% X7R</description>
+      <datasheet>https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</datasheet>
+      <description>10u 25V 10% X6S</description>
       <fields>
         <field name="manf">KYOCERA AVX</field>
-        <field name="manf#">0805X7R106KT1AT</field>
-        <field name="mouser#">581-0805X7R106KT1AT</field>
-        <field name="Part-DB URL">https://inventory.lan/de/part/331/info</field>
+        <field name="manf#">KGM21FS61E106KU</field>
+        <field name="mouser#">581-KGM21FS61E106KU</field>
+        <field name="Part-DB URL">https://inventory.lan/de/part/393/info</field>
         <field name="Category">Kondensator/MLCC</field>
         <field name="Manufacturer">KYOCERA AVX</field>
-        <field name="MPN">0805X7R106KT1AT</field>
+        <field name="MPN">KGM21FS61E106KU</field>
         <field name="Manufacturing Status">Active</field>
         <field name="Part-DB Footprint">0805</field>
-        <field name="Part-DB ID">331</field>
-        <field name="Mouser SPN">581-0805X7R106KT1AT</field>
+        <field name="Part-DB ID">393</field>
+        <field name="Mouser SPN">581-KGM21FS61E106KU</field>
         <field name="Stock">0</field>
         <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://inventory.lan/de/part/331/info</field>
-        <field name="Description">10u 25V 10% X7R</field>
+        <field name="Datasheet">https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</field>
+        <field name="Description">10u 25V 10% X6S</field>
       </fields>
-      <libsource lib="partdb" part="0805X7R106KT1AT" description="10u 25V 10% X7R"/>
+      <libsource lib="partdb" part="KGM21FS61E106KU" description="10u 25V 10% X6S"/>
       <property name="manf" value="KYOCERA AVX"/>
-      <property name="manf#" value="0805X7R106KT1AT"/>
-      <property name="mouser#" value="581-0805X7R106KT1AT"/>
-      <property name="Part-DB URL" value="https://inventory.lan/de/part/331/info"/>
+      <property name="manf#" value="KGM21FS61E106KU"/>
+      <property name="mouser#" value="581-KGM21FS61E106KU"/>
+      <property name="Part-DB URL" value="https://inventory.lan/de/part/393/info"/>
       <property name="Category" value="Kondensator/MLCC"/>
       <property name="Manufacturer" value="KYOCERA AVX"/>
-      <property name="MPN" value="0805X7R106KT1AT"/>
+      <property name="MPN" value="KGM21FS61E106KU"/>
       <property name="Manufacturing Status" value="Active"/>
       <property name="Part-DB Footprint" value="0805"/>
-      <property name="Part-DB ID" value="331"/>
-      <property name="Mouser SPN" value="581-0805X7R106KT1AT"/>
+      <property name="Part-DB ID" value="393"/>
+      <property name="Mouser SPN" value="581-KGM21FS61E106KU"/>
       <property name="Stock" value="0"/>
       <property name="Sheetname" value="NVMe"/>
       <property name="Sheetfile" value="NVMe.kicad_sch"/>
@@ -13080,20 +13096,20 @@
     <comp ref="L1501">
       <value>10u</value>
       <footprint>Inductor_SMD:L_Wuerth_HCI-7050</footprint>
-      <datasheet>https://www.we-online.com/components/products/datasheet/744314850.pdf</datasheet>
+      <datasheet>https://www.we-online.com/components/products/datasheet/744314101.pdf</datasheet>
       <description>Inductor</description>
       <fields>
         <field name="manf">Wurth Elektronik</field>
-        <field name="manf#">744314850</field>
-        <field name="mouser#">710-744314850</field>
+        <field name="manf#">744314101</field>
+        <field name="mouser#">710-744314101</field>
         <field name="Footprint">Inductor_SMD:L_Wuerth_HCI-7050</field>
-        <field name="Datasheet">https://www.we-online.com/components/products/datasheet/744314850.pdf</field>
+        <field name="Datasheet">https://www.we-online.com/components/products/datasheet/744314101.pdf</field>
         <field name="Description">Inductor</field>
       </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
       <property name="manf" value="Wurth Elektronik"/>
-      <property name="manf#" value="744314850"/>
-      <property name="mouser#" value="710-744314850"/>
+      <property name="manf#" value="744314101"/>
+      <property name="mouser#" value="710-744314101"/>
       <property name="Sheetname" value="NVMe"/>
       <property name="Sheetfile" value="NVMe.kicad_sch"/>
       <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
@@ -13341,7 +13357,7 @@
       <fields>
         <field name="manf">Bourns</field>
         <field name="manf#">CR0805-JW-472ELF</field>
-        <field name="mouser#">652-CR0805JW-472ELF</field>
+        <field name="mouser#">652-CR0805-JW-472ELF</field>
         <field name="Part-DB URL">https://inventory.lan/de/part/78/info</field>
         <field name="Category">Widerstand/Dickfilmwiderstand</field>
         <field name="Manufacturer">Bourns</field>
@@ -13350,7 +13366,7 @@
         <field name="Part-DB Footprint">0805</field>
         <field name="Mass">0.006 g</field>
         <field name="Part-DB ID">78</field>
-        <field name="Mouser SPN">652-CR0805JW-472ELF</field>
+        <field name="Mouser SPN">652-CR0805-JW-472ELF</field>
         <field name="Stock">50</field>
         <field name="Storage Location">Sortierregal</field>
         <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
@@ -13360,7 +13376,7 @@
       <libsource lib="partdb" part="CR0805-JW-472ELF" description="4k7 100mW 5%"/>
       <property name="manf" value="Bourns"/>
       <property name="manf#" value="CR0805-JW-472ELF"/>
-      <property name="mouser#" value="652-CR0805JW-472ELF"/>
+      <property name="mouser#" value="652-CR0805-JW-472ELF"/>
       <property name="Part-DB URL" value="https://inventory.lan/de/part/78/info"/>
       <property name="Category" value="Widerstand/Dickfilmwiderstand"/>
       <property name="Manufacturer" value="Bourns"/>
@@ -13369,7 +13385,7 @@
       <property name="Part-DB Footprint" value="0805"/>
       <property name="Mass" value="0.006 g"/>
       <property name="Part-DB ID" value="78"/>
-      <property name="Mouser SPN" value="652-CR0805JW-472ELF"/>
+      <property name="Mouser SPN" value="652-CR0805-JW-472ELF"/>
       <property name="Stock" value="50"/>
       <property name="Storage Location" value="Sortierregal"/>
       <property name="Sheetname" value="NVMe"/>
@@ -15498,30 +15514,6 @@
         <pin num="2" name="B" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Logic_LevelTranslator" part="TXB0102DCT">
-      <description>2-Bit Bidirectional Voltage-Level Translator With Auto Direction Sensing and ±15-kV ESD Protection, TSSOP-8</description>
-      <docs>http://www.ti.com/lit/ds/symlink/txb0102.pdf</docs>
-      <footprints>
-        <fp>TSSOP*P0.65mm*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">TXB0102DCT</field>
-        <field name="Footprint">Package_SO:TSSOP-8_3x3mm_P0.65mm</field>
-        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/txb0102.pdf</field>
-        <field name="Description">2-Bit Bidirectional Voltage-Level Translator With Auto Direction Sensing and ±15-kV ESD Protection, TSSOP-8</field>
-      </fields>
-      <pins>
-        <pin num="1" name="B2" type="bidirectional"/>
-        <pin num="2" name="GND" type="power_in"/>
-        <pin num="3" name="VCCA" type="power_in"/>
-        <pin num="4" name="A2" type="bidirectional"/>
-        <pin num="5" name="A1" type="bidirectional"/>
-        <pin num="6" name="OE" type="input"/>
-        <pin num="7" name="VCCB" type="power_in"/>
-        <pin num="8" name="B1" type="bidirectional"/>
-      </pins>
-    </libpart>
     <libpart lib="Logic_LevelTranslator" part="TXB0102DCU">
       <description>2-Bit Bidirectional Voltage-Level Translator With Auto Direction Sensing and ±15-kV ESD Protection, VSSOP-8</description>
       <docs>http://www.ti.com/lit/ds/symlink/txb0102.pdf</docs>
@@ -16078,67 +16070,6 @@
         <pin num="2" name="" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="partdb" part="08055C474K4Z2A">
-      <description>470n 50V 10% X7</description>
-      <docs>https://www.mouser.com/datasheet/3/5926/1/AutoMLCCKAF.pdf</docs>
-      <footprints>
-        <fp>Capacitor_SMD:C_0805_2012Metric</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">C</field>
-        <field name="Value">470n</field>
-        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://www.mouser.com/datasheet/3/5926/1/AutoMLCCKAF.pdf</field>
-        <field name="Description">470n 50V 10% X7</field>
-        <field name="Part-DB URL">https://inventory.lan/de/part/329/info</field>
-        <field name="Category">Kondensator/MLCC</field>
-        <field name="Manufacturer">KYOCERA AVX</field>
-        <field name="MPN">08055C474K4Z2A</field>
-        <field name="Manufacturing Status">Active</field>
-        <field name="Part-DB Footprint">0805</field>
-        <field name="Mass">0.006 g</field>
-        <field name="Part-DB ID">329</field>
-        <field name="manf">KYOCERA AVX</field>
-        <field name="manf#">08055C474K4Z2A</field>
-        <field name="Mouser SPN">581-08055C474K4Z2A</field>
-        <field name="mouser#">581-08055C474K4Z2A</field>
-        <field name="Stock">0</field>
-      </fields>
-      <pins>
-        <pin num="1" name="" type="passive"/>
-        <pin num="2" name="" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="partdb" part="0805X7R106KT1AT">
-      <description>10u 25V 10% X7R</description>
-      <docs>https://inventory.lan/de/part/331/info</docs>
-      <footprints>
-        <fp>Capacitor_SMD:C_0805_2012Metric</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">C</field>
-        <field name="Value">10u</field>
-        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
-        <field name="Datasheet">https://inventory.lan/de/part/331/info</field>
-        <field name="Description">10u 25V 10% X7R</field>
-        <field name="Part-DB URL">https://inventory.lan/de/part/331/info</field>
-        <field name="Category">Kondensator/MLCC</field>
-        <field name="Manufacturer">KYOCERA AVX</field>
-        <field name="MPN">0805X7R106KT1AT</field>
-        <field name="Manufacturing Status">Active</field>
-        <field name="Part-DB Footprint">0805</field>
-        <field name="Part-DB ID">331</field>
-        <field name="manf">KYOCERA AVX</field>
-        <field name="manf#">0805X7R106KT1AT</field>
-        <field name="Mouser SPN">581-0805X7R106KT1AT</field>
-        <field name="mouser#">581-0805X7R106KT1AT</field>
-        <field name="Stock">0</field>
-      </fields>
-      <pins>
-        <pin num="1" name="" type="passive"/>
-        <pin num="2" name="" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="partdb" part="3030TR">
       <description>Knopfzellen-Batteriehalter SM RETAINER TAPE/REEL 1500PC 10mm</description>
       <docs>https://www.mouser.com/datasheet/3/201/1/3030TR.pdf</docs>
@@ -16176,10 +16107,10 @@
       <description>SMD-Abstandshalter M2.5 Innengewinde 1,5 mm Stahl</description>
       <docs>https://www.we-online.com/components/products/datasheet/9774015151R.pdf</docs>
       <footprints>
-        <fp>Spacer*</fp>
+        <fp>Wuerth:9774015151R</fp>
       </footprints>
       <fields>
-        <field name="Reference">H1004</field>
+        <field name="Reference">H</field>
         <field name="Value">Spacer</field>
         <field name="Footprint">Wuerth:9774015151R</field>
         <field name="Datasheet">https://www.we-online.com/components/products/datasheet/9774015151R.pdf</field>
@@ -16187,6 +16118,16 @@
         <field name="manf">Wurth Elektronik</field>
         <field name="manf#">9774015151R</field>
         <field name="mouser#">710-9774015151R</field>
+        <field name="Part-DB URL">https://inventory.lan/de/part/384/info</field>
+        <field name="Category">Mechanik/Abstandshalter</field>
+        <field name="Manufacturer">Wurth Elektronik</field>
+        <field name="MPN">9774015151R</field>
+        <field name="Manufacturing Status">Active</field>
+        <field name="Part-DB Footprint">WA-SMSI M2.5</field>
+        <field name="Mass">0.238 g</field>
+        <field name="Part-DB ID">384</field>
+        <field name="Mouser SPN">710-9774015151R</field>
+        <field name="Stock">0</field>
       </fields>
     </libpart>
     <libpart lib="partdb" part="9774025151R">
@@ -16220,14 +16161,27 @@
       <description>N-Kanal Vds 50 V Vgs ±20 V Id 220 mA</description>
       <docs>https://www.onsemi.com/pdf/datasheet/bss138-d.pdf</docs>
       <footprints>
-        <fp>SOT?23*</fp>
+        <fp>Package_TO_SOT_SMD:SOT-23-3</fp>
       </footprints>
       <fields>
         <field name="Reference">Q</field>
         <field name="Value">BSS138</field>
-        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-3</field>
         <field name="Datasheet">https://www.onsemi.com/pdf/datasheet/bss138-d.pdf</field>
         <field name="Description">N-Kanal Vds 50 V Vgs ±20 V Id 220 mA</field>
+        <field name="Part-DB URL">https://inventory.lan/de/part/353/info</field>
+        <field name="Category">Transistor/N-Kanal</field>
+        <field name="Manufacturer">onsemi / Fairchild</field>
+        <field name="MPN">BSS138</field>
+        <field name="Manufacturing Status">Active</field>
+        <field name="Part-DB Footprint">SOT-23-3</field>
+        <field name="Mass">0.008 g</field>
+        <field name="Part-DB ID">353</field>
+        <field name="manf">onsemi / Fairchild</field>
+        <field name="manf#">BSS138</field>
+        <field name="Mouser SPN">512-BSS138</field>
+        <field name="mouser#">512-BSS138</field>
+        <field name="Stock">0</field>
       </fields>
       <pins>
         <pin num="1" name="G" type="input"/>
@@ -16413,8 +16367,8 @@
         <field name="Part-DB ID">79</field>
         <field name="manf">Bourns</field>
         <field name="manf#">CR0805-JW-332ELF</field>
-        <field name="Mouser SPN">652-CR0805JW-332ELF</field>
-        <field name="mouser#">652-CR0805JW-332ELF</field>
+        <field name="Mouser SPN">652-CR0805-JW-332ELF</field>
+        <field name="mouser#">652-CR0805-JW-332ELF</field>
         <field name="Stock">50</field>
         <field name="Storage Location">Sortierregal</field>
       </fields>
@@ -16477,10 +16431,70 @@
         <field name="Part-DB ID">78</field>
         <field name="manf">Bourns</field>
         <field name="manf#">CR0805-JW-472ELF</field>
-        <field name="Mouser SPN">652-CR0805JW-472ELF</field>
-        <field name="mouser#">652-CR0805JW-472ELF</field>
+        <field name="Mouser SPN">652-CR0805-JW-472ELF</field>
+        <field name="mouser#">652-CR0805-JW-472ELF</field>
         <field name="Stock">50</field>
         <field name="Storage Location">Sortierregal</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="partdb" part="KAF21KR71H474MU">
+      <description>470n 50V 20% X7R</description>
+      <docs>https://www.mouser.com/datasheet/3/5926/1/AutoMLCCKAF.pdf</docs>
+      <footprints>
+        <fp>Capacitor_SMD:C_0805_2012Metric</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">470n</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet">https://www.mouser.com/datasheet/3/5926/1/AutoMLCCKAF.pdf</field>
+        <field name="Description">470n 50V 20% X7R</field>
+        <field name="Part-DB URL">https://inventory.lan/de/part/392/info</field>
+        <field name="Category">Kondensator/MLCC</field>
+        <field name="Manufacturer">KYOCERA AVX</field>
+        <field name="MPN">KAF21KR71H474MU</field>
+        <field name="Manufacturing Status">Active</field>
+        <field name="Part-DB Footprint">0805</field>
+        <field name="Part-DB ID">392</field>
+        <field name="manf">KYOCERA AVX</field>
+        <field name="manf#">KAF21KR71H474MU</field>
+        <field name="Mouser SPN">581-KAF21KR71H474MU</field>
+        <field name="mouser#">581-KAF21KR71H474MU</field>
+        <field name="Stock">0</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="partdb" part="KGM21FS61E106KU">
+      <description>10u 25V 10% X6S</description>
+      <docs>https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</docs>
+      <footprints>
+        <fp>Capacitor_SMD:C_0805_2012Metric</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">10u</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet">https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf</field>
+        <field name="Description">10u 25V 10% X6S</field>
+        <field name="Part-DB URL">https://inventory.lan/de/part/393/info</field>
+        <field name="Category">Kondensator/MLCC</field>
+        <field name="Manufacturer">KYOCERA AVX</field>
+        <field name="MPN">KGM21FS61E106KU</field>
+        <field name="Manufacturing Status">Active</field>
+        <field name="Part-DB Footprint">0805</field>
+        <field name="Part-DB ID">393</field>
+        <field name="manf">KYOCERA AVX</field>
+        <field name="manf#">KGM21FS61E106KU</field>
+        <field name="Mouser SPN">581-KGM21FS61E106KU</field>
+        <field name="mouser#">581-KGM21FS61E106KU</field>
+        <field name="Stock">0</field>
       </fields>
       <pins>
         <pin num="1" name="" type="passive"/>
