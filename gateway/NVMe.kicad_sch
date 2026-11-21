@@ -3360,7 +3360,7 @@
 					)
 				)
 			)
-			(property "Mouser SPN" "652-CR0805JW-472ELF"
+			(property "Mouser SPN" "652-CR0805-JW-472ELF"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3371,7 +3371,7 @@
 					)
 				)
 			)
-			(property "mouser#" "652-CR0805JW-472ELF"
+			(property "mouser#" "652-CR0805-JW-472ELF"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -7018,7 +7018,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805JW-472ELF"
+		(property "mouser#" "652-CR0805-JW-472ELF"
 			(at 181.61 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -7117,7 +7117,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "652-CR0805JW-472ELF"
+		(property "Mouser SPN" "652-CR0805-JW-472ELF"
 			(at 181.61 130.81 0)
 			(hide yes)
 			(show_name no)

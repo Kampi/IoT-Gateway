@@ -26025,7 +26025,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805JW-472ELF"
+		(property "mouser#" "652-CR0805-JW-472ELF"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -26155,7 +26155,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "652-CR0805JW-472ELF"
+		(property "Mouser SPN" "652-CR0805-JW-472ELF"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -70280,7 +70280,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805JW-472ELF"
+		(property "mouser#" "652-CR0805-JW-472ELF"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -70410,7 +70410,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "652-CR0805JW-472ELF"
+		(property "Mouser SPN" "652-CR0805-JW-472ELF"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
