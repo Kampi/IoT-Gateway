@@ -13,6 +13,9 @@
   - [Building the OS](#building-the-os)
   - [Wi-Fi Configuration (nmcli)](#wi-fi-configuration-nmcli)
   - [Firmware - nRF5340 (OpenThread RCP)](#firmware---nrf5340-openthread-rcp)
+  - [Firmware - nRF54L15 (Matter test light)](#firmware---nrf54l15-matter-test-light)
+  - [Firmware - ESP32 LoRa (LoRaWAN test sensor)](#firmware---esp32-lora-lorawan-test-sensor)
+  - [Firmware - ESP32 BLE (BLE test sensor)](#firmware---esp32-ble-ble-test-sensor)
   - [Ressources](#ressources)
   - [Maintainer](#maintainer)
 
@@ -119,19 +122,51 @@ workspace layout, prerequisites, and board overlay details.
 
 ## Firmware - nRF54L15 (Matter test light)
 
-`firmware/nRF54L15_Matter` turns an nRF54L15-DK into a Matter-over-Thread
+`firmware/device/nRF54L15_Matter` turns an nRF54L15-DK into a Matter-over-Thread
 light bulb that joins the gateway's Thread network and is added to Home
 Assistant via Matter. It builds against an installed nRF Connect SDK
 (`~/ncs/v3.3.4` by default).
 
 ```bash
-cd firmware/nRF54L15_Matter
+cd firmware/device/nRF54L15_Matter
 make build
 make erase-flash
 ```
 
-See [firmware/nRF54L15_Matter/README.md](firmware/nRF54L15_Matter/README.md)
+See [firmware/device/nRF54L15_Matter/README.md](firmware/device/nRF54L15_Matter/README.md)
 for commissioning with Home Assistant.
+
+## Firmware - ESP32 LoRa (LoRaWAN test sensor)
+
+`firmware/device/ESP32_LoRa` turns an ESP-WROVER-KIT with a RAK3172 module
+into a LoRaWAN sensor that joins ChirpStack via OTAA (EU868, class A) through
+the gateway's RAK5146 concentrator and sends a random temperature every 20 s
+(deep sleep in between). PlatformIO with ESP-IDF, RAK3172 driver as git
+submodule.
+
+```bash
+cd firmware/device/ESP32_LoRa
+git submodule update --init components/RAK3172
+pio run -e debug -t upload --upload-port /dev/ttyUSB1
+```
+
+See [firmware/device/ESP32_LoRa/README.md](firmware/device/ESP32_LoRa/README.md)
+for the wiring, the OTAA keys and the ChirpStack device profile.
+
+## Firmware - ESP32 BLE (BLE test sensor)
+
+`firmware/device/ESP32_BLE` turns an ESP-WROVER-KIT into a BLE temperature
+and humidity sensor that broadcasts BTHome v2 advertisements every 10 s.
+Theengs Gateway on the gateway decodes them and publishes the sensor to Home
+Assistant via MQTT discovery. PlatformIO with ESP-IDF.
+
+```bash
+cd firmware/device/ESP32_BLE
+pio run -e debug -t upload --upload-port /dev/ttyUSB1
+```
+
+See [firmware/device/ESP32_BLE/README.md](firmware/device/ESP32_BLE/README.md)
+for the advertisement format.
 
 ## Ressources
 

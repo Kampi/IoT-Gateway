@@ -440,7 +440,7 @@ them per board: see [Board variants](#board-variants).
 - **Home Assistant:** every sensor is a device of its own under
   `IoT-Gateway (Bluetooth)`. iBeacons are filtered out
 - Python dependencies missing in scarthgap: `recipes-devtools/python/`
-- Test firmware: `firmware/ESP32_BLE` (BTHome v2)
+- Test firmware: `firmware/device/ESP32_BLE` (BTHome v2)
 
 ### Thread
 

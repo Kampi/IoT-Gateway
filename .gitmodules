@@ -1,0 +1,4 @@
+[submodule "firmware/device/ESP32_LoRa/components/RAK3172"]
+	path = firmware/device/ESP32_LoRa/components/RAK3172
+	url = https://github.com/Kampi/ESP32-RAK3172.git
+	branch = master

@@ -27,7 +27,7 @@ existing SDK install instead of its own west workspace:
 | `SNR` | - | J-Link serial of the DK, required with several probes |
 
 ```bash
-cd firmware/nRF54L15_Matter
+cd firmware/device/nRF54L15_Matter
 cp toolchain.mk.example toolchain.mk   # set NCS_TC (toolchain for NCS_DIR) and SNR
 make build          # ~3-4 min clean build
 make erase-flash    # first flash, wipes fabric + Thread credentials

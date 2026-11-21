@@ -97,4 +97,4 @@ Bluetooth commissioning through the Matter server is not set up here (needs
 BlueZ, an adapter and `--bluetooth-adapter`). Use the Home Assistant
 companion app on a phone, or join the device to Thread first and commission
 on-network, see
-[firmware/nRF54L15_Matter/README.md](../../firmware/nRF54L15_Matter/README.md).
+[firmware/device/nRF54L15_Matter/README.md](../../firmware/device/nRF54L15_Matter/README.md).
