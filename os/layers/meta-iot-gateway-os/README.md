@@ -24,6 +24,8 @@ everything via MQTT to Home Assistant.
   - [Board variants](#board-variants)
   - [Hardware](#hardware)
     - [SODIMM Pin Mapping](#sodimm-pin-mapping)
+    - [UARTs](#uarts)
+    - [Module power](#module-power)
     - [Battery and sensors](#battery-and-sensors)
   - [Protocol Stack](#protocol-stack)
     - [LoRaWAN](#lorawan)
@@ -33,6 +35,7 @@ everything via MQTT to Home Assistant.
     - [Thread](#thread)
     - [MQTT](#mqtt)
     - [CAN](#can)
+    - [Radio channels](#radio-channels)
   - [Networking](#networking)
   - [Security](#security)
   - [Updates (RAUC)](#updates-rauc)
@@ -114,11 +117,13 @@ TELEMETRY_MQTT_HOST     = "192.168.1.10"
 | `OTBR_RCP_DEVICE` | `/dev/thread` | Thread RCP device path (nRF5340 flashed with OpenThread RCP firmware, connected via UART_4) | `ot-br-posix_%.bbappend` |
 | `THEENGS_MQTT_HOST` | `localhost` | MQTT broker host for Theengs Gateway (Bluetooth LE to MQTT, e.g. 192.168.1.10) | `theengs-gateway_1.8.0.bb` |
 | `OTBR_OMR_PREFIX` | `fdf2:83ec:1caf:1::/64` | Fixed OMR (off-mesh routable) IPv6 prefix of the Thread network, e.g. "fdxx:xxxx:xxxx:1::/64" (random ULA, RFC 4193). Empty = border router picks a random one that changes with every new Thread network. A fixed prefix lets the LAN router keep one static route to the gateway. | `thread-network-init_1.0.bb` |
+| `OTBR_CHANNEL` | `20` | Thread channel (11-26). A new network is formed on it; an existing network on another channel is moved there with a pending dataset (5 min delay, devices follow without re-commissioning). Empty = keep the channel of the network | `thread-network-init_1.0.bb` |
 | `WMBUSMETERS_MQTT_SERVER` | `localhost` | MQTT broker hostname (or hostname:port) for wmbusmeters (e.g. 192.168.1.10 or 192.168.1.10:1883) | `wmbusmeters_1.18.0.bb` |
 | `WMBUSMETERS_DEVICE` | `/dev/wmbus:im871a:t1` | wM-Bus receiver for wmbusmeters (device:type:link modes, e.g. /dev/wmbus:im871a:t1) | `wmbusmeters_1.18.0.bb` |
 | `ZIGBEE2MQTT_MQTT_SERVER` | `mqtt://localhost` | MQTT broker URL for Zigbee2MQTT (e.g. mqtt://192.168.1.10) | `zigbee2mqtt_2.12.0.bb` |
 | `ZIGBEE2MQTT_BASE_TOPIC` | `@GATEWAY_ID@/zigbee` | MQTT base topic of Zigbee2MQTT, unique per broker. @GATEWAY_ID@ = gateway ID from the module serial number (gateway-id) | `zigbee2mqtt_2.12.0.bb` |
 | `ZIGBEE2MQTT_HA_BRIDGE_NAME` | `IoT-Gateway (Zigbee)` | Name of the Zigbee bridge device in Home Assistant, parent of all Zigbee devices | `zigbee2mqtt_2.12.0.bb` |
+| `ZIGBEE2MQTT_CHANNEL` | `25` | Zigbee channel (11-26), set on every start and overrides configuration.yaml; a change moves the existing network. Empty = configuration.yaml / Zigbee2MQTT default (11) | `zigbee2mqtt_2.12.0.bb` |
 | `ZIGBEE2MQTT_USB_VID` | `10c4` | USB vendor ID of the Zigbee USB stick (Dahlia dev setup only) | `zigbee2mqtt_2.12.0.bb` |
 | `ZIGBEE2MQTT_USB_PID` | `ea60` | USB product ID of the Zigbee USB stick (Dahlia dev setup only) | `zigbee2mqtt_2.12.0.bb` |
 | `RAUC_KEY_FILE` | `${GATEWAY_KEYS_DIR}/rauc/development-1.key.pem` | Private key that signs the RAUC bundles | `gateway-os-bundle.bb` |
@@ -159,19 +164,15 @@ default ones.
 | | `mainboard` (default) | `dahlia` (dev setup) |
 | --- | --- | --- |
 | Hardware | IoT-Gateway PCB (`gateway/`) | Verdin Dahlia + nRF5340-DK |
-| Module power/reset/boot GPIOs | `module-power@<module>.service` drives them | no-op unit (dev kits have their own supply) |
+| Module power/reset/boot GPIOs | `module-power@<module>.service` drives them for LoRa, Zigbee, Thread and wM-Bus ([Module power](#module-power)) | no-op unit (dev kits and USB sticks have their own supply) |
 | `end0` (Ethernet) | DHCP | static `192.168.0.2/24`, point-to-point link to the build host, no default route |
-| Thread RCP | Fanstel BT40 on UART_4, `/dev/thread` | nRF5340-DK on UART_1, `/dev/thread` |
-| Zigbee | CC2652P module on UART_2, `/dev/zigbee`, powered via `module-power@zigbee` | USB stick, `/dev/zigbee` by VID/PID (`ZIGBEE2MQTT_USB_VID`/`_PID`, default `10c4:ea60`). `zigbee2mqtt` starts when it is plugged in, skipped without it |
-| LoRa | RAK5146 USB concentrator (`0483:5740`), `/dev/lora`. `lora-packet-forwarder` starts when it is plugged in | same |
-| wM-Bus | iM871A on UART_1, `/dev/wmbus` | none, wmbusmeters disabled (UART_1 is the Thread RCP) |
+| LoRa | RAK5146 USB concentrator (`0483:5740`), `/dev/lora`, powered via `module-power@lora`. `lora-packet-forwarder` starts when it enumerates | RAK5146 USB concentrator, own supply. `lora-packet-forwarder` starts when it is plugged in |
+| Zigbee | CC2652P module on UART_3, `/dev/zigbee`, powered via `module-power@zigbee` | USB stick, `/dev/zigbee` by VID/PID (`ZIGBEE2MQTT_USB_VID`/`_PID`, default `10c4:ea60`), own supply. `zigbee2mqtt` starts when it is plugged in, skipped without it |
+| Thread RCP | Fanstel BT40 (nRF5340) on UART_4, `/dev/thread`, powered via `module-power@thread` | nRF5340-DK on UART_1, `/dev/thread`, own supply |
+| wM-Bus | iM871A on UART_2, `/dev/wmbus`, powered via `module-power@wmbus` | none, wmbusmeters disabled |
+| Debug console | UART_1, header X901 (`ttymxc1`, U-Boot patched) | UART_3, FTDI on USB-C X18 (`ttymxc0`, Toradex default) |
 
-| Verdin UART | `mainboard` (default) | `dahlia` (dev setup) |
-| --- | --- | --- |
-| UART_1 | wM-Bus | Thread RCP (Dahlia X20 pin 12/13, TxD/RxD only, 115200 baud) |
-| UART_2 | Zigbee | unused |
-| UART_3 | Linux console (`console=ttymxc0,115200`) | Linux console |
-| UART_4 | Thread RCP (with RTS/CTS) | unused |
+UART assignment of both boards: see [UARTs](#uarts).
 
 The services always use the same device names (`/dev/thread`, `/dev/zigbee`,
 `/dev/lora`, `/dev/wmbus`); only the udev rules differ per board.
@@ -203,12 +204,12 @@ Custom devicetree: `recipes-kernel/linux/linux-toradex/iot-gateway-imx8mm.dts`
 
 | Signal | SODIMM | iMX8MM pad | Linux device | Purpose |
 | --- | --- | --- | --- | --- |
-| UART_3_RX | 133 | SAI3_RXC | `/dev/ttymxc0` | Console (`&uart1`) |
-| UART_3_TX | 135 | SAI3_RXD | `/dev/ttymxc0` | Console (`&uart1`) |
-| UART_1_TX | 131 | SAI3_TXC | `/dev/ttymxc1` | wM-Bus transceiver (`&uart2`) |
-| UART_1_RX | 129 | SAI3_TXFS | `/dev/ttymxc1` | wM-Bus transceiver (`&uart2`) |
-| UART_2_TX | 139 | ECSPI1_MOSI | `/dev/ttymxc2` | CC2652P Zigbee adapter (`&uart3`) |
-| UART_2_RX | 137 | ECSPI1_SCLK | `/dev/ttymxc2` | CC2652P Zigbee adapter (`&uart3`) |
+| UART_3_RX | 147 | SAI2_RXC | `/dev/ttymxc0` | CC2652P Zigbee adapter (`&uart1`) |
+| UART_3_TX | 149 | SAI2_RXFS | `/dev/ttymxc0` | CC2652P Zigbee adapter (`&uart1`) |
+| UART_1_TX | 131 | SAI3_TXC | `/dev/ttymxc1` | Debug console, header X901 (`&uart2`) |
+| UART_1_RX | 129 | SAI3_TXFS | `/dev/ttymxc1` | Debug console, header X901 (`&uart2`) |
+| UART_2_TX | 139 | ECSPI1_MOSI | `/dev/ttymxc2` | iM871A wM-Bus transceiver (`&uart3`) |
+| UART_2_RX | 137 | ECSPI1_SCLK | `/dev/ttymxc2` | iM871A wM-Bus transceiver (`&uart3`) |
 | UART_2_CTS | 141 | ECSPI1_MISO | `/dev/ttymxc2` | pin-muxed but unused (`&uart3` deletes `uart-has-rtscts`) |
 | UART_2_RTS | 143 | ECSPI1_SS0 | `/dev/ttymxc2` | pin-muxed but unused (`&uart3` deletes `uart-has-rtscts`) |
 | UART_4_RX | 196 | ECSPI2_SCLK | `/dev/ttymxc3` | nRF5340 Thread RCP (`&uart4`), M4-reserved |
@@ -249,8 +250,78 @@ GPIOs with a `gpio-line-names` label can be used by name with libgpiod
 subsystem (`/sys/class/leds/ready/brightness`), set by
 `gateway-ready-led.service` once the boot completes.
 
-On the mainboard `uart4` (Thread RCP) is still `status = "disabled"`: UART_4 is
-shared with the Cortex-M4. Enable it once the M4 firmware no longer claims it.
+`uart4` (Thread RCP) is muxed to SODIMM 196/198/200/202 (Verdin SPI_1 pins,
+with RTS/CTS) instead of the standard UART_4 pins 151/153. UART_4 is reserved
+for the Cortex-M4 by default; the TF-A RDC configuration (`recipes-bsp/imx-atf`)
+assigns it to the A53, no M4 firmware is used.
+
+### UARTs
+
+Both boards use the same devicetree; the role of each UART is set by udev
+rules (`/dev/zigbee`, `/dev/wmbus`, `/dev/thread`) and the console by U-Boot
+(`console=`). The SoM UART pins are 1.8 V; the level after each entry is
+SoM side ↔ peripheral side.
+
+| Verdin UART | i.MX / Linux | SODIMM TxD / RxD (RTS / CTS) | `mainboard` (default) | `dahlia` (dev setup) |
+| --- | --- | --- | --- | --- |
+| UART_1 | `uart2`, `/dev/ttymxc1` (`30890000`) | 131 / 129 (133 / 135, unused) | **Debug console**, header X901, 115200 8N1 — **1.8 V**, no level shifter: use a 1.8 V USB-UART adapter | **Thread RCP** (nRF5340-DK), X20 pin 13 TxD / 12 RxD, 115200, no flow control (RTS/CTS on X20 pin 14/15 not used) — **1.8 V**, no level shifter: the DK's nRF VDD must be 1.8 V |
+| UART_2 | `uart3`, `/dev/ttymxc2` (`30880000`) | 139 / 137 (143 / 141, unused) | **wM-Bus** iM871A, `/dev/wmbus`, no flow control — **1.8 V ↔ 3.3 V** (TXB0102 IC1303, 3.3 V from the module LDO) | unused (X19 pin 15 TxD / 14 RxD, 16 RTS / 17 CTS) — **1.8 V** |
+| UART_3 | `uart1`, `/dev/ttymxc0` (`30860000`) | 149 / 147 | **Zigbee** CC2652P, `/dev/zigbee`, 115200, no flow control — **1.8 V ↔ 3.3 V** (TXB0102 IC1102, 3.3 V from the module LDO) | **Debug console**, FTDI FT4232 on USB-C X18 (default assembly), 115200 8N1 — **1.8 V ↔ FTDI** via the level shifter on the Dahlia, host side USB |
+| UART_4 | `uart4`, `/dev/ttymxc3` (`30a60000`) | 200 / 196 (202 / 198), muxed to the SPI_1 pins | **Thread RCP** Fanstel BT40 (nRF5340), `/dev/thread`, 115200, RTS/CTS — **1.8 V ↔ 3.3 V** (NXB0104 IC1204, 3.3 V from the module LDO) | unused (the standard UART_4 pins 151/153 to the FTDI are not muxed) |
+
+**Debug console on the mainboard:** Verdin modules have their console on
+UART_3, but the mainboard routes header X901 to UART_1 and the Zigbee module
+to UART_3. With `GATEWAY_BOARD = "mainboard"` everything after the boot ROM
+prints on UART_1:
+
+| Stage | Change | Where |
+| --- | --- | --- |
+| TF-A (BL31) | `ATF_BOOT_UART_BASE = 0x30890000` | `recipes-bsp/imx-atf/imx-atf_%.bbappend` |
+| U-Boot SPL + U-Boot | UART2 clock in SPL, `stdout-path = &uart2` and pre-relocation pinmux in the U-Boot devicetree, `console=ttymxc1` | `recipes-bsp/u-boot/u-boot-toradex/0001-verdin-imx8mm-debug-console-on-UART_1.patch` |
+| Linux | `console=ttymxc1,115200` from U-Boot, getty on `ttymxc1` (`SERIAL_CONSOLES`) | `conf/distro/gateway-os.conf` |
+| Peripherals | Zigbee on `ttymxc0`, wM-Bus on `ttymxc2` | udev rules `99-zigbee.rules`, `99-wmbus.rules` |
+
+Limits:
+
+- The Toradex Easy Installer and USB recovery bring their own U-Boot and
+  kernel and print on UART_3, i.e. towards the Zigbee module: no output on
+  X901 while flashing. The CC2652P is unpowered then (LDO enable pulled down)
+  and isolated by its TXB0102, so this does no harm.
+- A U-Boot environment saved before the switch keeps `console=ttymxc0`:
+  `env default -a; saveenv` or `fw_setenv console ttymxc1`.
+- The bootloader is not part of the RAUC bundle, it changes only with a full
+  flash (Easy Installer).
+- On updates of the Toradex BSP, check that the U-Boot patch still applies.
+
+### Module power
+
+The radio modules on the mainboard are switched by the SoM. Each has a
+TLV75733 LDO (3.3 V) whose enable input has a 10 kΩ pull-down, so the module
+is **off** until Linux drives the line. Reset and boot go through 74LVC1G07
+open-drain buffers: SoM line low = asserted, high = released (module side
+pulled up).
+
+| Module | Power enable | Reset | Boot (bootloader) | Unit | Pulled in by |
+| --- | --- | --- | --- | --- | --- |
+| Zigbee (CC2652P) | SODIMM 32 `zigbee-power-enable` | 104 `zigbee-reset` | 106 `zigbee-boot` | `module-power@zigbee` | `zigbee2mqtt.service` (`Requires=`) |
+| Thread (nRF5340, Fanstel BT40) | 36 `thread-power-enable` | 108 `thread-reset` | 112 `thread-boot` (MCUboot serial recovery) | `module-power@thread` | `otbr-agent.service` (drop-in `10-module-power.conf`) |
+| wM-Bus (iM871A) | 34 `wmbus-power-enable` | 102 `wmbus-reset` | – | `module-power@wmbus` (drop-in `lines.conf`, no boot line) | `wmbusmeters.service` (`Requires=`) |
+| LoRa (RAK5146, USB) | 30 `lora-power-enable` | 185 = Verdin `USB_2_EN`, driven high (released) by the kernel's USB_2 VBUS regulator once the USB host runs | – | `module-power@lora` (drop-in `lines.conf`, power only) | `multi-user.target` at boot: `lora-packet-forwarder` is started by udev when the concentrator enumerates |
+
+`module-power@<module>.service` (`gateway-module-power`) runs
+`gpioset <module>-power-enable=1 <module>-reset=1 <module>-boot=1` and holds
+the lines while it runs (`MODULE_POWER_LINES` in a drop-in for other lines).
+It has `StopWhenUnneeded=yes`: when the module's service stops, the lines
+are released and the pull-downs switch the module off; the next start
+power-cycles it. `module-power@lora` stays on as long as the system runs. The services wait briefly after power-up (Thread 2 s for
+MCUboot + RCP, wM-Bus 1 s). `flash-nrf5340` stops `otbr-agent` and drives
+`thread-boot` / `thread-reset` itself for serial recovery.
+
+Check: `systemctl status module-power@thread`, `gpioinfo | grep -E
+"power-enable|reset|boot"` (consumer `module-power-<module>`).
+
+On Dahlia, `module-power@.service` is a no-op unit (`files/board-dahlia/`):
+the dev kits and USB sticks have their own supply.
 
 ### Battery and sensors
 
@@ -318,6 +389,10 @@ them per board: see [Board variants](#board-variants).
 ### LoRaWAN
 
 - **Hardware / device:** RAK5146 USB concentrator (SX1302), `/dev/lora`
+- **Power (mainboard):** `module-power@lora` switches the RAK5146 on and
+  releases its reset/boot lines (power enable `lora-power-enable`, reset
+  `USB_2_EN` via the kernel) at boot, before it enumerates on USB. Stopping
+  the unit switches the module off again. On Dahlia a no-op ([Module power](#module-power))
 - **Services:** `lora-packet-forwarder` (`/opt/lora-packet-forwarder/`, EU868)
   → `chirpstack-gateway-bridge` → MQTT
 - Started by udev when the concentrator appears, stopped when it disappears.
@@ -328,6 +403,10 @@ them per board: see [Board variants](#board-variants).
 
 - **Device:** `/dev/zigbee`, adapter `zstack` (EFR32 sticks such as the
   ZBDongle-E: `ember`)
+- **Power (mainboard):** `module-power@zigbee` switches the CC2652P on and
+  releases its reset/boot lines (power enable `zigbee-power-enable`, reset
+  `zigbee-reset`, boot `zigbee-boot`) before `zigbee2mqtt` starts. Stopping
+  the unit switches the module off again. On Dahlia a no-op ([Module power](#module-power))
 - **Service:** `zigbee2mqtt`, data in `/var/lib/zigbee2mqtt/`. On Dahlia
   started when the USB stick is plugged in
 - **Base topic:** `<gateway ID>/zigbee`, e.g. `iot-gateway-07219303/zigbee`
@@ -346,6 +425,10 @@ them per board: see [Board variants](#board-variants).
 ### Wireless M-Bus
 
 - **Device:** `/dev/wmbus` (iM871A, mainboard only), mode `auto:t1`
+- **Power (mainboard):** `module-power@wmbus` switches the iM871A on and
+  releases its reset/boot lines (power enable `wmbus-power-enable`, reset
+  `wmbus-reset`) before `wmbusmeters` starts. Stopping the unit switches the
+  module off again. On Dahlia a no-op ([Module power](#module-power))
 - **Service:** `wmbusmeters`, config in `/etc/wmbusmeters.d/`, log in
   `/var/log/wmbusmeters/`
 
@@ -363,6 +446,10 @@ them per board: see [Board variants](#board-variants).
 
 - **Hardware / device:** nRF5340 RCP (`firmware/nRF5340`), `/dev/thread`,
   Spinel/HDLC, 115200 baud
+- **Power (mainboard):** `module-power@thread` switches the nRF5340 on and
+  releases its reset/boot lines (power enable `thread-power-enable`, reset
+  `thread-reset`, boot `thread-boot`) before `otbr-agent` starts. Stopping the
+  unit switches the module off again. On Dahlia a no-op ([Module power](#module-power))
 - **Border router:** `otbr-agent`, ot-br-posix `thread-reference-20250612`
   (announces the Thread role via mDNS, last version with Avahi support),
   `wpan0`, backbone `mlan0` with IPv6 (`OTBR_INFRA_IFACE`), TREL enabled,
@@ -450,6 +537,53 @@ MCP2518FD on the Verdin module (`mcp251xfd`, `can0`). `can@can0.service`
 500 kbit/s) and automatic restart after bus-off (`GATEWAY_CAN_RESTART_MS`),
 `GATEWAY_CAN_INTERFACES` lists the interfaces. Tools: `can-utils`
 (`candump can0`, `cansend can0 123#DEADBEEF`), `ip -details link show can0`.
+
+---
+
+### Radio channels
+
+Four radios share the 2.4 GHz band (Wi-Fi, Bluetooth, Zigbee, Thread). The
+channels are planned so that they do not overlap:
+
+| Radio | Channel | Frequency | Set by |
+|---|---|---|---|
+| Wi-Fi (home network) | 1 | 2401–2423 MHz | access point (router) |
+| Bluetooth LE | adaptive | 2402–2480 MHz | hops around busy channels by itself |
+| Thread | 20 | 2450 MHz | `OTBR_CHANNEL` (`thread-network-init`) |
+| Zigbee | 25 | 2475 MHz | `ZIGBEE2MQTT_CHANNEL` (`zigbee2mqtt`) |
+| LoRaWAN | EU868 | 863–870 MHz | `global_conf.json` (no conflict with 2.4 GHz) |
+
+802.15.4 channel *n* (Zigbee, Thread) is at 2405 + 5 × (*n* − 11) MHz, 2 MHz
+wide. Wi-Fi channels are 20 MHz wide, so Wi-Fi 1 covers 802.15.4 channels
+11–14, Wi-Fi 6 covers 16–19 and Wi-Fi 11 covers 21–24.
+
+- **Zigbee 25** is one of the Zigbee Light Link channels (11, 15, 20, 25)
+  that Hue, IKEA, Ledvance etc. use, every common device supports it. Avoid
+  26: many devices send with reduced power there or do not support it.
+- **Thread 20** sits between Wi-Fi 1 and Zigbee 25 with 25 MHz to each side.
+- **Wi-Fi:** best on 5 GHz. On 2.4 GHz keep it on channel 1. With another
+  Wi-Fi channel re-plan: Wi-Fi 6 → Thread 11, Zigbee 25; Wi-Fi 11 → Thread 11,
+  Zigbee 15.
+- **Other Zigbee networks** nearby (e.g. a second coordinator, a Hue bridge)
+  should use a different channel than the gateway.
+
+**Changing the channels:**
+
+- `ZIGBEE2MQTT_CHANNEL` is passed to Zigbee2MQTT as
+  `ZIGBEE2MQTT_CONFIG_ADVANCED_CHANNEL` on every start (overrides
+  `configuration.yaml`, also on existing installations with configuration in
+  `/data`). If the coordinator runs on another channel, zigbee-herdsman moves
+  the network (`Mgmt_NWK_Update_req` broadcast). Mains-powered routers
+  (bulbs, plugs) follow right away. Sleeping battery devices (buttons,
+  sensors) often miss the broadcast: many find the network again with a
+  rejoin when they wake up, some (older or Tuya/Aqara devices) have to be
+  paired again. Change the channel once, when setting up the network.
+- `OTBR_CHANNEL` is used when a new Thread network is formed. An existing
+  network on another channel is moved by `thread-network-init` with a pending
+  dataset (5 min delay), like "change channel" in Home Assistant. All Thread
+  devices switch without being commissioned again. Check with
+  `ot-ctl channel` and `ot-ctl dataset pending`.
+- Empty variables keep the current channel.
 
 ---
 

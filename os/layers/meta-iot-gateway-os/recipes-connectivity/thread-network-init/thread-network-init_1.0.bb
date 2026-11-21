@@ -23,6 +23,10 @@ inherit systemd
 # @USER_CONFIG: Fixed OMR (off-mesh routable) IPv6 prefix of the Thread network, e.g. "fdxx:xxxx:xxxx:1::/64" (random ULA, RFC 4193). Empty = border router picks a random one that changes with every new Thread network. A fixed prefix lets the LAN router keep one static route to the gateway.
 OTBR_OMR_PREFIX ?= "fdf2:83ec:1caf:1::/64"
 
+# Channel plan (README "Radio channels"): Wi-Fi 1, Thread 20, Zigbee 25.
+# @USER_CONFIG: Thread channel (11-26). A new network is formed on it; an existing network on another channel is moved there with a pending dataset (5 min delay, devices follow without re-commissioning). Empty = keep the channel of the network
+OTBR_CHANNEL ?= "20"
+
 RDEPENDS:${PN} = "ot-br-posix"
 
 SYSTEMD_SERVICE:${PN} = "thread-network-init.service"
@@ -31,6 +35,7 @@ SYSTEMD_AUTO_ENABLE:${PN} = "enable"
 do_install() {
     install -d ${D}${libexecdir}/gateway-os
     sed -e 's|@OTBR_OMR_PREFIX@|${OTBR_OMR_PREFIX}|g' \
+        -e 's|@OTBR_CHANNEL@|${OTBR_CHANNEL}|g' \
         ${WORKDIR}/thread-network-init.sh > ${D}${libexecdir}/gateway-os/thread-network-init.sh
     chmod 0755 ${D}${libexecdir}/gateway-os/thread-network-init.sh
 

@@ -118,12 +118,13 @@
 		>;
 	};
 
-	pinctrl_uart1: uart1grp {
-		fsl,pins = <
-			MX8MM_IOMUXC_SAI3_RXC_GPIO4_IO29			0x106	/* SODIMM 133 */
-			MX8MM_IOMUXC_SAI3_RXD_GPIO4_IO30			0x106	/* SODIMM 135 */
-		>;
-	};
+	/*
+	 * pinctrl_uart1 (SODIMM 147/149) stays as in imx8mm-verdin.dtsi. It was
+	 * overridden here with SODIMM 133/135 as GPIOs, which left UART1 without
+	 * its own pins (it only worked because U-Boot had muxed them).
+	 * SODIMM 133/135 (UART_1 RTS/CTS) are unused: pinctrl_uart2 below muxes
+	 * only TxD/RxD.
+	 */
 
 	pinctrl_uart2: uart2grp {
 		fsl,pins = <
@@ -170,14 +171,21 @@
 	                  "", "", "powermux-status", "version-bit0";
 };
 
-/* Used for Console */
+/*
+ * UART roles (README "UARTs"):
+ *   uart1 = Verdin UART_3 (SODIMM 147/149): mainboard Zigbee, Dahlia console
+ *   uart2 = Verdin UART_1 (SODIMM 129/131): mainboard console (X901),
+ *           Dahlia Thread RCP (X20)
+ *   uart3 = Verdin UART_2 (SODIMM 137/139): mainboard wM-Bus, Dahlia unused
+ *   uart4 = SODIMM 196/198/200/202 with RTS/CTS: mainboard Thread RCP
+ * The console follows console= from U-Boot (ttymxc1 on the mainboard).
+ */
 &uart1 {
 	status = "okay";
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_uart1>;
 };
 
-/* Used for wM-Bus */
 &uart2 {
 	/delete-property/ linux,rs485-enabled-at-boot-time;
 	/delete-property/ rs485-rts-active-low;
@@ -188,7 +196,6 @@
 	pinctrl-0 = <&pinctrl_uart2>;
 };
 
-/* Used for Zigbee */
 &uart3 {
 	/delete-property/ uart-has-rtscts;
 	status = "okay";

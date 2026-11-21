@@ -69,12 +69,18 @@ def required_units():
     for device, unit in DEVICE_UNITS:
         if os.path.exists(device):
             units.append(unit)
-    # Only units that exist and are enabled on this board
+    # Only units that exist and are not disabled on this board. "bad" or
+    # unusual unit file states still count: the unit is installed.
     result = []
     for unit in units:
-        enabled = subprocess.run(["systemctl", "is-enabled", unit], capture_output=True, text=True).stdout.strip()
-        if enabled not in ("", "disabled", "masked", "not-found"):
-            result.append(unit)
+        out = subprocess.run(["systemctl", "show", unit, "-p", "LoadState", "-p", "UnitFileState"],
+                             capture_output=True, text=True).stdout
+        props = dict(line.split("=", 1) for line in out.splitlines() if "=" in line)
+        if props.get("LoadState") != "loaded":
+            continue
+        if props.get("UnitFileState") in ("disabled", "masked", "masked-runtime"):
+            continue
+        result.append(unit)
     return result
 
 

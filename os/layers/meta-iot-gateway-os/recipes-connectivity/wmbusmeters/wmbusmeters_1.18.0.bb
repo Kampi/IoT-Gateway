@@ -25,6 +25,8 @@ DEPENDS = "rtlsdr icu libxml2 mosquitto"
 inherit pkgconfig systemd
 
 RDEPENDS:${PN} = "rtlsdr icu libmosquitto1 mosquitto-clients logrotate"
+# Powers the iM871A before wmbusmeters starts (Requires=module-power@wmbus.service)
+RDEPENDS:${PN} += "gateway-module-power"
 
 # @USER_CONFIG: MQTT broker hostname (or hostname:port) for wmbusmeters (e.g. 192.168.1.10 or 192.168.1.10:1883)
 WMBUSMETERS_MQTT_SERVER ?= "localhost"

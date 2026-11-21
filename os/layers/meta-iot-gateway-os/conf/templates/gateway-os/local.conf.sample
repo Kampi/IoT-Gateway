@@ -360,6 +360,11 @@ LORA_SERVER_ADDRESS     = "localhost"
 #ZIGBEE2MQTT_USB_VID     = "10c4"
 #ZIGBEE2MQTT_USB_PID     = "ea60"
 
+# Radio channels (README "Radio channels"): Wi-Fi 1, Thread 20, Zigbee 25.
+# A change moves the existing network (Zigbee battery devices may need re-pairing)
+#ZIGBEE2MQTT_CHANNEL     = "25"
+#OTBR_CHANNEL            = "20"
+
 # Zigbee2MQTT base topic, unique per gateway by default:
 # <gateway ID>/zigbee, e.g. iot-gateway-07219303/zigbee (module serial number)
 #ZIGBEE2MQTT_BASE_TOPIC  = "@GATEWAY_ID@/zigbee"

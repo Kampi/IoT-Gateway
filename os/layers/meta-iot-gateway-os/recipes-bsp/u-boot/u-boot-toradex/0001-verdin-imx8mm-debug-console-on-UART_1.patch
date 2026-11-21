@@ -1,0 +1,78 @@
+From: Daniel Kampert
+Subject: [PATCH] verdin-imx8mm: debug console on UART_1 (IoT-Gateway mainboard)
+
+The IoT-Gateway mainboard routes the debug console header (X901) to
+Verdin UART_1 (i.MX UART2, SODIMM 129/131). UART_3 (i.MX UART1, the
+Verdin default console) connects to the Zigbee module.
+
+Move the SPL and U-Boot console to UART2: UART2 clock in SPL,
+stdout-path and pre-relocation pinmux in the U-Boot devicetree, and
+console=ttymxc1 for the kernel.
+
+Upstream-Status: Inappropriate [board specific]
+Signed-off-by: Daniel Kampert
+---
+ arch/arm/dts/imx8mm-verdin-wifi-dev-u-boot.dtsi | 24 ++++++++++++++++++++++++
+ board/toradex/verdin-imx8mm/spl.c               |  3 ++-
+ include/configs/verdin-imx8mm.h                 |  2 +-
+ 3 files changed, 27 insertions(+), 2 deletions(-)
+
+diff --git a/arch/arm/dts/imx8mm-verdin-wifi-dev-u-boot.dtsi b/arch/arm/dts/imx8mm-verdin-wifi-dev-u-boot.dtsi
+index 90183aff8bc..51015c2076f 100644
+--- a/arch/arm/dts/imx8mm-verdin-wifi-dev-u-boot.dtsi
++++ b/arch/arm/dts/imx8mm-verdin-wifi-dev-u-boot.dtsi
+@@ -162,3 +162,27 @@
+ &wdog1 {
+ 	bootph-pre-ram;
+ };
++
++/*
++ * IoT-Gateway mainboard: debug console on Verdin UART_1 (i.MX UART2,
++ * SODIMM 129/131, header X901) instead of UART_3. UART_3 (SODIMM 147/149)
++ * is the Zigbee module there.
++ */
++/ {
++	chosen {
++		stdout-path = &uart2;
++	};
++};
++
++&pinctrl_uart2 {
++	bootph-pre-ram;
++};
++
++&uart2 {
++	/delete-property/ linux,rs485-enabled-at-boot-time;
++	/delete-property/ rs485-rts-active-low;
++	/delete-property/ rs485-rx-during-tx;
++	/delete-property/ uart-has-rtscts;
++	bootph-pre-ram;
++	status = "okay";
++};
+diff --git a/board/toradex/verdin-imx8mm/spl.c b/board/toradex/verdin-imx8mm/spl.c
+index afa3686083a..ae73620d351 100644
+--- a/board/toradex/verdin-imx8mm/spl.c
++++ b/board/toradex/verdin-imx8mm/spl.c
+@@ -69,7 +69,8 @@ int board_fit_config_name_match(const char *name)
+ 
+ __weak void board_early_init(void)
+ {
+-	init_uart_clk(0);
++	/* IoT-Gateway mainboard: debug console on Verdin UART_1 (i.MX UART2) */
++	init_uart_clk(1);
+ }
+ 
+ int power_init_board(void)
+diff --git a/include/configs/verdin-imx8mm.h b/include/configs/verdin-imx8mm.h
+index 34238d3b505..64497634180 100644
+--- a/include/configs/verdin-imx8mm.h
++++ b/include/configs/verdin-imx8mm.h
+@@ -38,7 +38,7 @@
+ 	BOOTENV \
+ 	MEM_LAYOUT_ENV_SETTINGS \
+ 	"boot_script_dhcp=boot.scr\0" \
+-	"console=ttymxc0\0" \
++	"console=ttymxc1\0" \
+ 	"fdt_board=dev\0" \
+ 	"initrd_addr=0x43800000\0" \
+ 	"initrd_high=0xffffffffffffffff\0" \

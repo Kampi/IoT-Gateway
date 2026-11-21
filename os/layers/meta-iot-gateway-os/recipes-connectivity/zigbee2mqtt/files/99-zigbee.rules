@@ -1,4 +1,4 @@
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2026 Daniel Kampert
 
-SUBSYSTEM=="tty", KERNELS=="30880000.serial", SYMLINK+="zigbee", MODE="0660"
+SUBSYSTEM=="tty", KERNELS=="30860000.serial", SYMLINK+="zigbee", MODE="0660"

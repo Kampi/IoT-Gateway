@@ -240,6 +240,12 @@ ZIGBEE2MQTT_BASE_TOPIC ?= "@GATEWAY_ID@/zigbee"
 # @USER_CONFIG: Name of the Zigbee bridge device in Home Assistant, parent of all Zigbee devices
 ZIGBEE2MQTT_HA_BRIDGE_NAME ?= "IoT-Gateway (Zigbee)"
 
+# Channel plan (README "Radio channels"): Wi-Fi 1, Thread 20, Zigbee 25.
+# 11/15/20/25 are the Zigbee Light Link channels every common device
+# supports; avoid 26 (reduced TX power, unsupported by some devices).
+# @USER_CONFIG: Zigbee channel (11-26), set on every start and overrides configuration.yaml; a change moves the existing network. Empty = configuration.yaml / Zigbee2MQTT default (11)
+ZIGBEE2MQTT_CHANNEL ?= "25"
+
 SYSTEMD_SERVICE:${PN} = "zigbee2mqtt.service"
 
 # Powers the CC2652P before zigbee2mqtt starts (Requires=module-power@zigbee.service)
@@ -263,6 +269,11 @@ INSANE_SKIP:${PN} += "already-stripped"
 do_install:append() {
     install -d ${D}${systemd_system_unitdir}
     install -m 0644 ${WORKDIR}/services/zigbee2mqtt.service ${D}${systemd_system_unitdir}/
+    if [ -n "${ZIGBEE2MQTT_CHANNEL}" ]; then
+        sed -i 's|@ZIGBEE2MQTT_CHANNEL@|${ZIGBEE2MQTT_CHANNEL}|' ${D}${systemd_system_unitdir}/zigbee2mqtt.service
+    else
+        sed -i '/@ZIGBEE2MQTT_CHANNEL@/d' ${D}${systemd_system_unitdir}/zigbee2mqtt.service
+    fi
 
     install -d ${D}${sysconfdir}/udev/rules.d
     sed -e 's|@ZIGBEE2MQTT_USB_VID@|${ZIGBEE2MQTT_USB_VID}|g' \

@@ -13,6 +13,9 @@ Type=simple
 # from gpio-line-names in the devicetree (<module>-power-enable/-reset/-boot).
 # Reset and boot go through 74LVC1G07 open-drain buffers, so low = asserted:
 # drive both high for a normal boot (out of reset, no bootloader).
-ExecStart=/usr/bin/gpioset --consumer module-power-%i %i-power-enable=1 %i-reset=1 %i-boot=1
+# Modules without some of these lines override MODULE_POWER_LINES in a
+# drop-in (module-power@wmbus.service.d/lines.conf: no boot line).
+Environment="MODULE_POWER_LINES=%i-power-enable=1 %i-reset=1 %i-boot=1"
+ExecStart=/usr/bin/gpioset --consumer module-power-%i $MODULE_POWER_LINES
 Restart=on-failure
 RestartSec=5s

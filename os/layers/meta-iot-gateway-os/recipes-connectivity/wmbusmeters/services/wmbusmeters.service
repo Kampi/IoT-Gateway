@@ -4,12 +4,16 @@
 [Unit]
 Description=wmbusmeters service
 Documentation=https://github.com/wmbusmeters/wmbusmeters
-After=network.target
+After=network.target module-power@wmbus.service
+# Switches on the iM871A (power, out of reset) - see gateway-module-power.
+Requires=module-power@wmbus.service
 StartLimitIntervalSec=10
 StartLimitBurst=3
 
 [Service]
 Type=forking
+# Give the iM871A time to start after power-up / reset release.
+ExecStartPre=/bin/sleep 1
 ExecStartPre=-/bin/mkdir -p /run/wmbusmeters
 # Log directory of logfile= in /etc/wmbusmeters.conf, wmbusmeters does not create it.
 ExecStartPre=-/bin/mkdir -p /var/log/wmbusmeters

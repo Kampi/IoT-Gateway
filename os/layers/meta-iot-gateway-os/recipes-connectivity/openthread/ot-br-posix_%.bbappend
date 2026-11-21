@@ -70,6 +70,11 @@ SRC_URI:append = " \
 RDEPENDS:${PN} += "gateway-module-power"
 
 do_install:append() {
+    # Upstream unit aliases itself (Alias=otbr-agent.service): systemctl
+    # creates a self-link in /etc/systemd/system and reports the unit file
+    # state as "bad" (is-enabled fails, health check skips it)
+    sed -i '/^Alias=otbr-agent\.service$/d' ${D}${systemd_system_unitdir}/otbr-agent.service
+
     install -d ${D}${sysconfdir}/default
     sed -e 's|@OTBR_INFRA_IFACE@|${OTBR_INFRA_IFACE}|g' \
         -e 's|@OTBR_RCP_DEVICE@|${OTBR_RCP_DEVICE}|g' \

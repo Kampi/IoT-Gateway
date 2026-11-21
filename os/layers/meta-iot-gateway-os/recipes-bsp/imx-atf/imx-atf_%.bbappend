@@ -11,3 +11,7 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 SRC_URI:append:verdin-imx8mm = " \
     file://0001-imx8mm-assign-UART4-RDC-domain-to-A53.patch \
 "
+
+# Console of BL31: Verdin UART_3 (i.MX UART1, 0x30860000) by default, on the
+# IoT-Gateway mainboard Verdin UART_1 (i.MX UART2), see u-boot-toradex.
+ATF_BOOT_UART_BASE:board-mainboard = "0x30890000"

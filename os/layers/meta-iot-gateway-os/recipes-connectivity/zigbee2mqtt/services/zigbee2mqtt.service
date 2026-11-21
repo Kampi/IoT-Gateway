@@ -12,6 +12,10 @@ Requires=module-power@zigbee.service
 [Service]
 Type=simple
 Environment=ZIGBEE2MQTT_DATA=/var/lib/zigbee2mqtt
+# Zigbee channel from the image (ZIGBEE2MQTT_CHANNEL), overrides
+# configuration.yaml. A different channel than the coordinator's makes
+# zigbee-herdsman move the network (Mgmt_NWK_Update broadcast).
+Environment=ZIGBEE2MQTT_CONFIG_ADVANCED_CHANNEL=@ZIGBEE2MQTT_CHANNEL@
 # Gateway ID (e.g. iot-gateway-07219303) for the default base topic
 # "@GATEWAY_ID@/zigbee", filled in once at the first start.
 EnvironmentFile=/run/gateway-id.env

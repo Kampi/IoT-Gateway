@@ -29,6 +29,9 @@ if ! ot-ctl state >/dev/null 2>&1; then
     exit 1
 fi
 
+# Thread channel from the image (OTBR_CHANNEL, see thread-network-init_1.0.bb)
+CHANNEL="@OTBR_CHANNEL@"
+
 # Copy of the active dataset, written after every successful start. Used to
 # restore the network instead of forming a new one if otbr-agent comes up
 # without its dataset (seen right after an otbr-agent restart and after an
@@ -61,6 +64,9 @@ if ! has_dataset; then
     else
         echo "No active Thread dataset and no backup - forming a new network"
         ot-ctl dataset init new
+        if [ -n "${CHANNEL}" ]; then
+            ot-ctl dataset channel "${CHANNEL}"
+        fi
         ot-ctl dataset commit active
     fi
 fi
@@ -83,6 +89,39 @@ case "$(ot-ctl state)" in
         ot-ctl thread start
         ;;
 esac
+
+# Channel migration (OTBR_CHANNEL): an existing network on another channel is
+# moved with a pending dataset, like Home Assistant's "change channel". The
+# leader distributes it, all devices switch after the delay (5 min) without
+# re-commissioning. Needs a joined node (leader/router), so wait for it.
+dataset_field() {
+    sed -n "s/^$1: //p" | tr -d '\r' | sed -n 1p
+}
+if [ -n "${CHANNEL}" ]; then
+    i=0
+    while ! ot-ctl state | grep -q -E 'leader|router' && [ "${i}" -lt 120 ]; do
+        sleep 1
+        i=$((i + 1))
+    done
+    current=$(ot-ctl dataset active | dataset_field Channel)
+    pending=$(ot-ctl dataset pending 2>/dev/null | dataset_field Channel)
+    if [ -n "${current}" ] && [ "${current}" != "${CHANNEL}" ] && [ "${pending}" != "${CHANNEL}" ]; then
+        if ot-ctl state | grep -q -E 'leader|router'; then
+            timestamp=$(ot-ctl dataset active | dataset_field "Active Timestamp")
+            echo "Moving the Thread network from channel ${current} to ${CHANNEL} in 5 minutes"
+            ot-ctl dataset clear
+            ot-ctl dataset init active
+            ot-ctl dataset channel "${CHANNEL}"
+            ot-ctl dataset activetimestamp $((${timestamp:-0} + 1))
+            ot-ctl dataset pendingtimestamp "$(date +%s)"
+            ot-ctl dataset delay 300000
+            ot-ctl dataset commit pending
+            ot-ctl dataset clear
+        else
+            echo "Thread not attached - channel ${CHANNEL} is applied on a later start" >&2
+        fi
+    fi
+fi
 
 # Keep the backup in sync (e.g. after HA recreated the network via REST).
 mkdir -p "$(dirname "${DATASET_BACKUP}")"
