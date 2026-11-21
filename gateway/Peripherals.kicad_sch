@@ -3442,7 +3442,7 @@
 					)
 				)
 			)
-			(property "Mouser SPN" "652-CR0805JW-332ELF"
+			(property "Mouser SPN" "652-CR0805-JW-332ELF"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3453,7 +3453,7 @@
 					)
 				)
 			)
-			(property "mouser#" "652-CR0805JW-332ELF"
+			(property "mouser#" "652-CR0805-JW-332ELF"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -8257,7 +8257,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/txb0102.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/txb0102.pdf?ts=1795259659813"
 			(at 335.28 153.162 0)
 			(hide yes)
 			(show_name no)
@@ -8770,7 +8770,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805JW-332ELF"
+		(property "mouser#" "652-CR0805-JW-332ELF"
 			(at 364.49 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -8869,7 +8869,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "652-CR0805JW-332ELF"
+		(property "Mouser SPN" "652-CR0805-JW-332ELF"
 			(at 364.49 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -13339,7 +13339,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805JW-332ELF"
+		(property "mouser#" "652-CR0805-JW-332ELF"
 			(at 364.49 204.47 0)
 			(hide yes)
 			(show_name no)
@@ -13438,7 +13438,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "652-CR0805JW-332ELF"
+		(property "Mouser SPN" "652-CR0805-JW-332ELF"
 			(at 364.49 204.47 0)
 			(hide yes)
 			(show_name no)
@@ -14968,7 +14968,7 @@
 				)
 			)
 		)
-		(property "manf#" "TXS0108EPWRG4"
+		(property "manf#" "TXS0108EPWR"
 			(at 252.73 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -14979,7 +14979,18 @@
 				)
 			)
 		)
-		(property "mouser#" "595-TXS0108EPWRG4"
+		(property "mouser#" "595-TXS0108EPWR"
+			(at 252.73 193.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
 			(at 252.73 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -15672,7 +15683,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805JW-332ELF"
+		(property "mouser#" "652-CR0805-JW-332ELF"
 			(at 361.95 204.47 0)
 			(hide yes)
 			(show_name no)
@@ -15771,7 +15782,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "652-CR0805JW-332ELF"
+		(property "Mouser SPN" "652-CR0805-JW-332ELF"
 			(at 361.95 204.47 0)
 			(hide yes)
 			(show_name no)
@@ -15794,6 +15805,17 @@
 			)
 		)
 		(property "Storage Location" "Sortierregal"
+			(at 361.95 204.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
 			(at 361.95 204.47 0)
 			(hide yes)
 			(show_name no)
@@ -16221,7 +16243,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805JW-332ELF"
+		(property "mouser#" "652-CR0805-JW-332ELF"
 			(at 361.95 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -16320,7 +16342,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "652-CR0805JW-332ELF"
+		(property "Mouser SPN" "652-CR0805-JW-332ELF"
 			(at 361.95 83.82 0)
 			(hide yes)
 			(show_name no)

@@ -5880,7 +5880,20 @@
 				)
 			)
 		)
-		(property ki_fp_filters "Spacer*")
+		(property "Config" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7a48c9a3-b0c7-49cf-8f57-f0bde0ccfb50")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property ki_fp_filters "Wuerth:9774015151R")
 		(path "/c5103ceb-5325-4a84-a025-9638a412984e/3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6/d1721bf2-8993-4b05-a47b-2544a3b9516e")
 		(sheetname "/Project Architecture/LoRa/")
 		(sheetfile "LoRa.kicad_sch")
@@ -9528,7 +9541,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.de/datasheet/3/40/1/cr.pdf"
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/508/1/PYu-AC_51_RoHS_L_11.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -9550,7 +9563,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0805-FX-2262GLF"
+		(property "manf#" "AC0805FR-0722K6L"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9563,7 +9576,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805FX-2262GLF"
+		(property "mouser#" "603-AC0805FR-0722K6L"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9576,12 +9589,25 @@
 				)
 			)
 		)
-		(property "manf" "Bourns"
+		(property "manf" "YAGEO"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "996d0be6-d854-4bb2-b67d-7b37f87b7831")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bd319fdd-302f-45bb-b6f5-e7de9b328a0e")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -11522,7 +11548,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://inventory.lan/de/part/331/info"
+		(property "Datasheet" "https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11533,7 +11559,7 @@
 				)
 			)
 		)
-		(property "Description" "10u 25V 10% X7R"
+		(property "Description" "10u 25V 10% X6S"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11557,7 +11583,7 @@
 				)
 			)
 		)
-		(property "manf#" "0805X7R106KT1AT"
+		(property "manf#" "KGM21FS61E106KU"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11570,7 +11596,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-0805X7R106KT1AT"
+		(property "mouser#" "581-KGM21FS61E106KU"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11583,7 +11609,7 @@
 				)
 			)
 		)
-		(property "Part-DB URL" "https://inventory.lan/de/part/331/info"
+		(property "Part-DB URL" "https://inventory.lan/de/part/393/info"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11622,7 +11648,7 @@
 				)
 			)
 		)
-		(property "MPN" "0805X7R106KT1AT"
+		(property "MPN" "KGM21FS61E106KU"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11661,7 +11687,7 @@
 				)
 			)
 		)
-		(property "Part-DB ID" "331"
+		(property "Part-DB ID" "393"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11674,7 +11700,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "581-0805X7R106KT1AT"
+		(property "Mouser SPN" "581-KGM21FS61E106KU"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12087,7 +12113,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0805-JW-152GLF"
+		(property "manf#" "CR0805-FX-1501ELF"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12100,7 +12126,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805JW-152GLF"
+		(property "mouser#" "652-CR0805FX-1501ELF"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12119,6 +12145,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2347f1c2-2575-42b4-9455-74612bd8bc2e")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3a5b5ff4-796d-4b89-93a3-f7fd7088b86d")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -12444,7 +12483,7 @@
 				)
 			)
 		)
-		(property ki_fp_filters "Spacer*")
+		(property ki_fp_filters "Wuerth:9774015151R")
 		(path "/c5103ceb-5325-4a84-a025-9638a412984e/3c9d5f3c-b2fb-4756-9da0-aea6b09e18b6/9b5c3aec-3d15-4835-87d5-171a23147c03")
 		(sheetname "/Project Architecture/LoRa/")
 		(sheetfile "LoRa.kicad_sch")
@@ -15035,16 +15074,15 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Package_TO_SOT_SMD:SOT-23"
+	(footprint "Package_TO_SOT_SMD:SOT-23-3"
 		(layer "F.Cu")
 		(uuid "2393f3c3-7719-4668-9461-b799a29e36d1")
 		(at 227.137501 117.4 180)
-		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236)")
+		(descr "SOT, 3 Pin (JEDEC MO-178 inferred 3-pin variant https://www.jedec.org/document_search?search_api_views_fulltext=MO-178)")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "Q701"
-			(at 0 -2.4 0)
+			(at 0 -2.4 180)
 			(layer "F.SilkS")
-			(hide yes)
 			(uuid "e4a69120-c4d4-4313-8e71-90f7656d3718")
 			(effects
 				(font
@@ -15054,9 +15092,8 @@
 			)
 		)
 		(property "Value" "BSS138"
-			(at 0 2.4 0)
+			(at 0 2.4 180)
 			(layer "F.Fab")
-			(hide yes)
 			(uuid "e2c57c9c-d4c1-432d-8c51-b996a3a00b94")
 			(effects
 				(font
@@ -15066,7 +15103,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/bss138-d.pdf"
-			(at 0 0 0)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "78966a2d-453a-447a-a45a-ffc3689569de")
@@ -15077,7 +15114,7 @@
 			)
 		)
 		(property "Description" "N-Kanal Vds 50 V Vgs ±20 V Id 220 mA"
-			(at 0 0 0)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e156bb26-6e5f-450d-ab70-608e030f434a")
@@ -15087,12 +15124,25 @@
 				)
 			)
 		)
+		(property "manf" "onsemi / Fairchild"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a5978aa2-0100-4aef-9a9a-ef3dc1e84dd9")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.12)
+				)
+			)
+		)
 		(property "manf#" "BSS138"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "6eb1d9ec-130c-41f3-b88d-db60b4ac1f75")
+			(uuid "2ff1be9a-e34b-4f6d-a4bf-5ffe93a91181")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -15105,20 +15155,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "01b6fec6-d9ba-47b0-b9ae-51a38330846a")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "manf" "onsemi / Fairchild"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "3dc13596-58f0-4033-aa07-bb52dfa5f425")
+			(uuid "1d48908d-f311-4b3c-9b4d-ac886739cb3a")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -15131,7 +15168,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "0de460cf-3ecc-42e7-96ff-0bc14bbe27cc")
+			(uuid "f6da7520-d74d-44c0-aeaf-6d476552bfcc")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -15144,7 +15181,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "c8e5bf89-c2ff-4401-89df-f9d1afcea72c")
+			(uuid "11c551f5-2010-4ee6-bb95-6bbb6b24021e")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -15157,7 +15194,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "44bfd2ff-6a9b-4783-8b71-2e63e8384ccc")
+			(uuid "70daf602-7225-4a45-9abf-590875a70596")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -15170,7 +15207,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "2d94246b-7d92-46d9-8efc-0475002c8ac1")
+			(uuid "8a0c4dad-9eca-4a48-91e3-bfbfe66c75f3")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -15183,7 +15220,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "9e5ae7ae-4fde-41ed-b532-e7f87b98d8d9")
+			(uuid "9536c6ac-9f88-4f0b-bed2-f83f0a270bf9")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -15196,7 +15233,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "05fdc1dc-fc82-4fe9-aaa9-ddc1af9dff9e")
+			(uuid "c6863920-a18f-423d-8d3e-71d2eccb9427")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -15209,7 +15246,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "1464bd31-6808-466c-a9a4-75596521a530")
+			(uuid "b03da152-8516-4364-a933-ebe8edf7d406")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -15222,7 +15259,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "a00a902d-1c87-4b73-81fb-4d1e91296a47")
+			(uuid "87e925f8-b905-4367-aa92-27c97c9e24da")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -15235,7 +15272,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "e81fdca4-c16f-4436-9039-22c96f4cd25b")
+			(uuid "163a608a-8d87-42f7-b6ad-f4145da84f6f")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -15248,7 +15285,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "983aabe6-b117-494c-a009-fb5431d87e6e")
+			(uuid "cfeb2b8e-4594-4e97-96a0-286c772001bc")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -15256,7 +15293,7 @@
 				)
 			)
 		)
-		(property ki_fp_filters "SOT?23*")
+		(property ki_fp_filters "Package_TO_SOT_SMD:SOT-23-3")
 		(path "/c5103ceb-5325-4a84-a025-9638a412984e/f06537ee-772d-44d3-8c50-e0ba41038c9c/65d06d12-e7f8-46b4-a5f8-d095cfdd60da")
 		(sheetname "/Project Architecture/Power/")
 		(sheetfile "Power.kicad_sch")
@@ -15269,58 +15306,8 @@
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start 0.76 1.56)
-			(end -0.76 1.56)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "4f7826a8-43e8-4279-a520-19f73f6741e6")
-		)
-		(fp_line
-			(start 0.76 0.56)
-			(end 0.76 1.56)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "947dc0e2-8a2d-410c-a13e-10dba1dc7a3b")
-		)
-		(fp_line
-			(start 0.76 -1.56)
-			(end 0.76 -0.56)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "70fe1282-ea7f-459a-9705-c06db4922d50")
-		)
-		(fp_line
-			(start -0.76 1.56)
-			(end -0.76 1.51)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "ceb2c21c-7617-41bc-9ac8-829262879559")
-		)
-		(fp_line
-			(start -0.76 0.39)
-			(end -0.76 -0.39)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "9482fab1-516f-4da6-8918-c8cecdeb1005")
-		)
-		(fp_line
-			(start -0.76 -1.51)
-			(end -0.76 -1.56)
+			(start 0.91 1.56)
+			(end -0.91 1.56)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -15329,8 +15316,8 @@
 			(uuid "d603478a-05b1-42cf-860a-cea767cbfe81")
 		)
 		(fp_line
-			(start -0.76 -1.56)
-			(end 0.76 -1.56)
+			(start 0.91 0.56)
+			(end 0.91 1.56)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -15338,9 +15325,59 @@
 			(layer "F.SilkS")
 			(uuid "73d172e8-dc1c-4c2a-ba74-78b1aafcc0b2")
 		)
+		(fp_line
+			(start 0.91 -1.56)
+			(end 0.91 -0.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "70fe1282-ea7f-459a-9705-c06db4922d50")
+		)
+		(fp_line
+			(start -0.91 1.56)
+			(end -0.91 1.51)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "947dc0e2-8a2d-410c-a13e-10dba1dc7a3b")
+		)
+		(fp_line
+			(start -0.91 0.39)
+			(end -0.91 -0.39)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "4f7826a8-43e8-4279-a520-19f73f6741e6")
+		)
+		(fp_line
+			(start -0.91 -1.51)
+			(end -0.91 -1.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "9482fab1-516f-4da6-8918-c8cecdeb1005")
+		)
+		(fp_line
+			(start -0.91 -1.56)
+			(end 0.91 -1.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "ceb2c21c-7617-41bc-9ac8-829262879559")
+		)
 		(fp_poly
 			(pts
-				(xy -1.3 -0.38) (xy -1.06 -0.05) (xy -1.54 -0.05)
+				(xy -1.45 -0.38) (xy -1.21 -0.05) (xy -1.69 -0.05)
 			)
 			(stroke
 				(width 0.12)
@@ -15351,118 +15388,8 @@
 			(uuid "d496931a-8fa3-4f04-9274-466e6068fa63")
 		)
 		(fp_line
-			(start 1.93 0.55)
-			(end 0.9 0.55)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "a7426c4c-7b87-4d66-b8e7-8904cc42615b")
-		)
-		(fp_line
-			(start 1.93 -0.55)
-			(end 1.93 0.55)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "c1a25ec8-8570-4aad-b2a4-de2ca63eb31c")
-		)
-		(fp_line
-			(start 0.9 1.7)
-			(end -0.9 1.7)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "d3c381f7-ae2e-4e58-8f36-8a473e3fdbfa")
-		)
-		(fp_line
-			(start 0.9 0.55)
-			(end 0.9 1.7)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "feb72853-e08a-44fc-88f9-61b71992312d")
-		)
-		(fp_line
-			(start 0.9 -0.55)
-			(end 1.93 -0.55)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "18fcecb8-2f3e-428f-85d1-899c6fa785b9")
-		)
-		(fp_line
-			(start 0.9 -1.7)
-			(end 0.9 -0.55)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "62c2ac53-8b93-466e-a42c-c0199541722f")
-		)
-		(fp_line
-			(start -0.9 1.7)
-			(end -0.9 1.5)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "50987e1a-eacb-4127-9446-487a54aeb74f")
-		)
-		(fp_line
-			(start -0.9 1.5)
-			(end -1.93 1.5)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "efb4052a-71e3-4555-93d9-03035cdfefc5")
-		)
-		(fp_line
-			(start -0.9 0.39)
-			(end -0.9 -0.39)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "475dab09-75db-4381-a83e-171db8b32a56")
-		)
-		(fp_line
-			(start -0.9 -0.39)
-			(end -1.93 -0.39)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "dc0dc6f7-268e-470e-85ae-f22f216061cc")
-		)
-		(fp_line
-			(start -0.9 -1.5)
-			(end -0.9 -1.7)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "d426b952-d37d-41df-97a5-809d548283d4")
-		)
-		(fp_line
-			(start -0.9 -1.7)
-			(end 0.9 -1.7)
+			(start 2.05 0.55)
+			(end 1.05 0.55)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -15471,28 +15398,18 @@
 			(uuid "4cd197ae-8749-4582-8b05-90ccc35b006a")
 		)
 		(fp_line
-			(start -1.93 1.5)
-			(end -1.93 0.39)
+			(start 2.05 -0.55)
+			(end 2.05 0.55)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "c37282c6-2e73-463e-a0d3-b3b45b45b070")
+			(uuid "475dab09-75db-4381-a83e-171db8b32a56")
 		)
 		(fp_line
-			(start -1.93 0.39)
-			(end -0.9 0.39)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "3ba2e560-0f7e-49ab-95c9-2fe8a26fc78d")
-		)
-		(fp_line
-			(start -1.93 -0.39)
-			(end -1.93 -1.5)
+			(start 1.05 1.7)
+			(end -1.05 1.7)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -15501,8 +15418,8 @@
 			(uuid "691b2a7e-efda-45a1-a1fd-8dd678f3a1eb")
 		)
 		(fp_line
-			(start -1.93 -1.5)
-			(end -0.9 -1.5)
+			(start 1.05 0.55)
+			(end 1.05 1.7)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -15510,9 +15427,129 @@
 			(layer "F.CrtYd")
 			(uuid "1beb7c41-d49d-4833-ba8f-2c44cdac53b5")
 		)
+		(fp_line
+			(start 1.05 -0.55)
+			(end 2.05 -0.55)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "3ba2e560-0f7e-49ab-95c9-2fe8a26fc78d")
+		)
+		(fp_line
+			(start 1.05 -1.7)
+			(end 1.05 -0.55)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "c37282c6-2e73-463e-a0d3-b3b45b45b070")
+		)
+		(fp_line
+			(start -1.05 1.7)
+			(end -1.05 1.5)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "d426b952-d37d-41df-97a5-809d548283d4")
+		)
+		(fp_line
+			(start -1.05 1.5)
+			(end -2.05 1.5)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "efb4052a-71e3-4555-93d9-03035cdfefc5")
+		)
+		(fp_line
+			(start -1.05 0.39)
+			(end -1.05 -0.39)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "50987e1a-eacb-4127-9446-487a54aeb74f")
+		)
+		(fp_line
+			(start -1.05 -0.39)
+			(end -2.05 -0.39)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "62c2ac53-8b93-466e-a42c-c0199541722f")
+		)
+		(fp_line
+			(start -1.05 -1.5)
+			(end -1.05 -1.7)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "feb72853-e08a-44fc-88f9-61b71992312d")
+		)
+		(fp_line
+			(start -1.05 -1.7)
+			(end 1.05 -1.7)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "d3c381f7-ae2e-4e58-8f36-8a473e3fdbfa")
+		)
+		(fp_line
+			(start -2.05 1.5)
+			(end -2.05 0.39)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "c1a25ec8-8570-4aad-b2a4-de2ca63eb31c")
+		)
+		(fp_line
+			(start -2.05 0.39)
+			(end -1.05 0.39)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "18fcecb8-2f3e-428f-85d1-899c6fa785b9")
+		)
+		(fp_line
+			(start -2.05 -0.39)
+			(end -2.05 -1.5)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "a7426c4c-7b87-4d66-b8e7-8904cc42615b")
+		)
+		(fp_line
+			(start -2.05 -1.5)
+			(end -1.05 -1.5)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "dc0dc6f7-268e-470e-85ae-f22f216061cc")
+		)
 		(fp_poly
 			(pts
-				(xy -0.325 -1.45) (xy 0.65 -1.45) (xy 0.65 1.45) (xy -0.65 1.45) (xy -0.65 -1.125)
+				(xy -0.4 -1.45) (xy 0.8 -1.45) (xy 0.8 1.45) (xy -0.8 1.45) (xy -0.8 -1.05)
 			)
 			(stroke
 				(width 0.1)
@@ -15523,7 +15560,7 @@
 			(uuid "bd8a978f-59a1-4db9-86b0-2d84f9d5a62d")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(uuid "0ae38b30-d89d-4521-8b9a-d7e20a1e5227")
 			(effects
@@ -15534,8 +15571,8 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9375 -0.95 180)
-			(size 1.475 0.6)
+			(at -1.1375 -0.95 180)
+			(size 1.325 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "Net-(IC704-ST)")
@@ -15544,8 +15581,8 @@
 			(uuid "d45f5d97-886a-4548-a5d9-0113935691ea")
 		)
 		(pad "2" smd roundrect
-			(at -0.9375 0.95 180)
-			(size 1.475 0.6)
+			(at -1.1375 0.95 180)
+			(size 1.325 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "GND")
@@ -15554,8 +15591,8 @@
 			(uuid "dc827ad3-ac3b-4f6d-8714-d83b23f61f79")
 		)
 		(pad "3" smd roundrect
-			(at 0.9375 0 180)
-			(size 1.475 0.6)
+			(at 1.1375 0 180)
+			(size 1.325 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/Project Architecture/Power/PowerMux-Status")
@@ -15564,7 +15601,7 @@
 			(uuid "0a9e5fa8-e8a6-4d88-be25-7c22b48aa49e")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23.step"
+		(model "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -16330,7 +16367,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0805-JW-183GLF"
+		(property "manf#" "CR0805-FX-1802ELF"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16343,7 +16380,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805JW-183GLF"
+		(property "mouser#" "652-CR0805FX-1802ELF"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16362,6 +16399,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "77a53ec3-1ec1-4ce1-a852-11de02463491")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "be133b48-0d27-4617-80aa-43ef65d6e6e8")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -17047,7 +17097,7 @@
 				)
 			)
 		)
-		(property "manf#" "TLV75733PDBVT"
+		(property "manf#" "TLV75733PDYDR"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17060,7 +17110,7 @@
 				)
 			)
 		)
-		(property "mouser#" "595-TLV75733PDBVT"
+		(property "mouser#" "595-TLV75733PDYDR"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18703,7 +18753,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.we-online.com/catalog/datasheet/694102303002.pdf"
+		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/694106301002.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19496,7 +19546,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/bq25308.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/bq25300.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -20788,7 +20838,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://inventory.lan/de/part/331/info"
+		(property "Datasheet" "https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -20799,7 +20849,7 @@
 				)
 			)
 		)
-		(property "Description" "10u 25V 10% X7R"
+		(property "Description" "10u 25V 10% X6S"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -20823,7 +20873,7 @@
 				)
 			)
 		)
-		(property "manf#" "0805X7R106KT1AT"
+		(property "manf#" "KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20836,7 +20886,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-0805X7R106KT1AT"
+		(property "mouser#" "581-KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20849,7 +20899,7 @@
 				)
 			)
 		)
-		(property "Part-DB URL" "https://inventory.lan/de/part/331/info"
+		(property "Part-DB URL" "https://inventory.lan/de/part/393/info"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20888,7 +20938,7 @@
 				)
 			)
 		)
-		(property "MPN" "0805X7R106KT1AT"
+		(property "MPN" "KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20927,7 +20977,7 @@
 				)
 			)
 		)
-		(property "Part-DB ID" "331"
+		(property "Part-DB ID" "393"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20940,7 +20990,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "581-0805X7R106KT1AT"
+		(property "Mouser SPN" "581-KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21946,7 +21996,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://inventory.lan/de/part/331/info"
+		(property "Datasheet" "https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -21957,7 +22007,7 @@
 				)
 			)
 		)
-		(property "Description" "10u 25V 10% X7R"
+		(property "Description" "10u 25V 10% X6S"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -21981,7 +22031,7 @@
 				)
 			)
 		)
-		(property "manf#" "0805X7R106KT1AT"
+		(property "manf#" "KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21994,7 +22044,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-0805X7R106KT1AT"
+		(property "mouser#" "581-KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22020,7 +22070,7 @@
 				)
 			)
 		)
-		(property "Part-DB URL" "https://inventory.lan/de/part/331/info"
+		(property "Part-DB URL" "https://inventory.lan/de/part/393/info"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22059,7 +22109,7 @@
 				)
 			)
 		)
-		(property "MPN" "0805X7R106KT1AT"
+		(property "MPN" "KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22098,7 +22148,7 @@
 				)
 			)
 		)
-		(property "Part-DB ID" "331"
+		(property "Part-DB ID" "393"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22111,7 +22161,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "581-0805X7R106KT1AT"
+		(property "Mouser SPN" "581-KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22861,7 +22911,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://inventory.lan/de/part/331/info"
+		(property "Datasheet" "https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -22872,7 +22922,7 @@
 				)
 			)
 		)
-		(property "Description" "10u 25V 10% X7R"
+		(property "Description" "10u 25V 10% X6S"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -22896,7 +22946,7 @@
 				)
 			)
 		)
-		(property "manf#" "0805X7R106KT1AT"
+		(property "manf#" "KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22909,7 +22959,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-0805X7R106KT1AT"
+		(property "mouser#" "581-KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22922,7 +22972,7 @@
 				)
 			)
 		)
-		(property "Part-DB URL" "https://inventory.lan/de/part/331/info"
+		(property "Part-DB URL" "https://inventory.lan/de/part/393/info"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22961,7 +23011,7 @@
 				)
 			)
 		)
-		(property "MPN" "0805X7R106KT1AT"
+		(property "MPN" "KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -23000,7 +23050,7 @@
 				)
 			)
 		)
-		(property "Part-DB ID" "331"
+		(property "Part-DB ID" "393"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -23013,7 +23063,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "581-0805X7R106KT1AT"
+		(property "Mouser SPN" "581-KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -23187,7 +23237,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0805-JW-680GLF"
+		(property "manf#" "CR0805-JW-680ELF"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -23200,7 +23250,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805JW-680GLF"
+		(property "mouser#" "652-CR0805JW-680ELF"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27126,7 +27176,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0805-JW-680GLF"
+		(property "manf#" "CR0805-JW-680ELF"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27139,7 +27189,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805JW-680GLF"
+		(property "mouser#" "652-CR0805JW-680ELF"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27608,7 +27658,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://inventory.lan/de/part/331/info"
+		(property "Datasheet" "https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -27619,7 +27669,7 @@
 				)
 			)
 		)
-		(property "Description" "10u 25V 10% X7R"
+		(property "Description" "10u 25V 10% X6S"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -27643,7 +27693,7 @@
 				)
 			)
 		)
-		(property "manf#" "0805X7R106KT1AT"
+		(property "manf#" "KGM21FS61E106KU"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27656,7 +27706,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-0805X7R106KT1AT"
+		(property "mouser#" "581-KGM21FS61E106KU"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27669,7 +27719,7 @@
 				)
 			)
 		)
-		(property "Part-DB URL" "https://inventory.lan/de/part/331/info"
+		(property "Part-DB URL" "https://inventory.lan/de/part/393/info"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27708,7 +27758,7 @@
 				)
 			)
 		)
-		(property "MPN" "0805X7R106KT1AT"
+		(property "MPN" "KGM21FS61E106KU"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27747,7 +27797,7 @@
 				)
 			)
 		)
-		(property "Part-DB ID" "331"
+		(property "Part-DB ID" "393"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27760,7 +27810,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "581-0805X7R106KT1AT"
+		(property "Mouser SPN" "581-KGM21FS61E106KU"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -30019,16 +30069,15 @@
 			)
 		)
 	)
-	(footprint "Package_TO_SOT_SMD:SOT-23"
+	(footprint "Package_TO_SOT_SMD:SOT-23-3"
 		(layer "F.Cu")
 		(uuid "5541ae49-e1a1-4485-8c92-0473a19189e1")
 		(at 250.812498 112.4 90)
-		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236)")
+		(descr "SOT, 3 Pin (JEDEC MO-178 inferred 3-pin variant https://www.jedec.org/document_search?search_api_views_fulltext=MO-178)")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "Q601"
 			(at 0 -2.4 90)
 			(layer "F.SilkS")
-			(hide yes)
 			(uuid "00990ee0-cceb-4f18-b123-d293bfe8f874")
 			(effects
 				(font
@@ -30040,7 +30089,6 @@
 		(property "Value" "BSS138"
 			(at 0 2.4 90)
 			(layer "F.Fab")
-			(hide yes)
 			(uuid "cacd4b93-9705-42a6-975c-03858f924720")
 			(effects
 				(font
@@ -30071,12 +30119,25 @@
 				)
 			)
 		)
+		(property "manf" "onsemi / Fairchild"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f34d91ab-c23e-461d-967e-a93f1d7311db")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.12)
+				)
+			)
+		)
 		(property "manf#" "BSS138"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "a7c36f6c-425c-4522-ad82-c8137e5e6635")
+			(uuid "c543b406-80e4-4c29-bca0-64ee497ac76f")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -30089,20 +30150,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "293522b1-7de6-4799-8f5b-04358b5c1d4d")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "manf" "onsemi / Fairchild"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "92a128de-afd8-4516-a5b6-1aece377ed7e")
+			(uuid "0835a7e1-ac89-4955-9e29-d3cea19a6a4f")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -30115,7 +30163,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "f01312d0-1d0e-4405-8f3c-b02243cc3737")
+			(uuid "590dd180-e52f-4f04-9e6d-dd2b8f41a16d")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -30128,7 +30176,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "446d6282-00d8-47f9-8b06-af71137f18d1")
+			(uuid "86f6ecf2-b5d8-4ad9-8426-3731ef8fc3bf")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -30141,7 +30189,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "ced66ccf-93d2-4d10-8bcd-a6a7e3c12623")
+			(uuid "6b01e5fc-5899-4f21-82d9-201e14052e82")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -30154,7 +30202,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "84fe1262-ae19-4973-a4bb-e180591f6afa")
+			(uuid "70bb80c8-f980-4332-926c-4457a745a455")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -30167,7 +30215,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "3d2363be-919c-4963-a345-e7bd1e71b5f0")
+			(uuid "639501af-0718-4468-8432-778fc19d5bc2")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -30180,7 +30228,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "c93a47d9-0b08-47fd-8e89-4980b3f6fbb0")
+			(uuid "6770e44b-a792-42e5-916a-6879fbf56fbf")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -30193,7 +30241,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "400dc92c-a564-475a-a538-493001a1a7b3")
+			(uuid "c394eb70-c7c6-4cda-b83f-d7610a2df2e8")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -30206,7 +30254,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "05535572-4b0b-4756-a91a-d6af83a5685a")
+			(uuid "aed9790f-cead-4ac5-88cd-a276af07b325")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -30219,7 +30267,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "c1c34859-d216-4825-a863-178b6e0dd3d1")
+			(uuid "eb2b36cb-9e9b-4cd4-9783-7a48eae462e4")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -30232,7 +30280,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "6bed6db2-bfad-48bb-9afa-9c0295a6dce1")
+			(uuid "43465c50-89ab-4009-b454-3c301720916e")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -30240,7 +30288,20 @@
 				)
 			)
 		)
-		(property ki_fp_filters "SOT?23*")
+		(property "Config" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9ddcfe85-6861-4507-b648-d7dcb0b8a429")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property ki_fp_filters "Package_TO_SOT_SMD:SOT-23-3")
 		(path "/c5103ceb-5325-4a84-a025-9638a412984e/277a9678-4850-4629-990a-e464d709b0b0/12973d04-d2f8-4784-90ef-27bf0ba872fc")
 		(sheetname "/Project Architecture/Power Input/")
 		(sheetfile "Power Input.kicad_sch")
@@ -30253,58 +30314,8 @@
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start 0.76 -1.56)
-			(end 0.76 -0.56)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "a6082d66-265a-40f9-9b81-4a660df38d9b")
-		)
-		(fp_line
-			(start -0.76 -1.56)
-			(end 0.76 -1.56)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "6435e2b4-b479-4a1c-baf4-65ced54b3a51")
-		)
-		(fp_line
-			(start -0.76 -1.51)
-			(end -0.76 -1.56)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "9e2befbd-e60e-420a-8177-4cf3e5089b4c")
-		)
-		(fp_line
-			(start -0.76 0.39)
-			(end -0.76 -0.39)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "c2283df1-a0c7-49c7-b1a3-d7a372deca88")
-		)
-		(fp_line
-			(start 0.76 0.56)
-			(end 0.76 1.56)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "11a0913c-231e-4f36-931b-4b12e7ddfe5c")
-		)
-		(fp_line
-			(start 0.76 1.56)
-			(end -0.76 1.56)
+			(start 0.91 -1.56)
+			(end 0.91 -0.56)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -30313,8 +30324,38 @@
 			(uuid "4eec7a73-4361-4701-93b1-f752bacd0c49")
 		)
 		(fp_line
-			(start -0.76 1.56)
-			(end -0.76 1.51)
+			(start -0.91 -1.56)
+			(end 0.91 -1.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "11a0913c-231e-4f36-931b-4b12e7ddfe5c")
+		)
+		(fp_line
+			(start -0.91 -1.51)
+			(end -0.91 -1.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "9e2befbd-e60e-420a-8177-4cf3e5089b4c")
+		)
+		(fp_line
+			(start -0.91 0.39)
+			(end -0.91 -0.39)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "a6082d66-265a-40f9-9b81-4a660df38d9b")
+		)
+		(fp_line
+			(start 0.91 0.56)
+			(end 0.91 1.56)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -30322,9 +30363,29 @@
 			(layer "F.SilkS")
 			(uuid "424e1a2e-0f25-45c8-8e77-9e77f5716286")
 		)
+		(fp_line
+			(start 0.91 1.56)
+			(end -0.91 1.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "6435e2b4-b479-4a1c-baf4-65ced54b3a51")
+		)
+		(fp_line
+			(start -0.91 1.56)
+			(end -0.91 1.51)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "c2283df1-a0c7-49c7-b1a3-d7a372deca88")
+		)
 		(fp_poly
 			(pts
-				(xy -1.3 -0.38) (xy -1.06 -0.05) (xy -1.54 -0.05)
+				(xy -1.45 -0.38) (xy -1.21 -0.05) (xy -1.69 -0.05)
 			)
 			(stroke
 				(width 0.12)
@@ -30335,18 +30396,8 @@
 			(uuid "35dd0c03-6a17-4437-b0be-82524e018ac8")
 		)
 		(fp_line
-			(start 0.9 -1.7)
-			(end 0.9 -0.55)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "dc41551a-8353-4931-b10d-b5c00c4a0bb2")
-		)
-		(fp_line
-			(start -0.9 -1.7)
-			(end 0.9 -1.7)
+			(start 1.05 -1.7)
+			(end 1.05 -0.55)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -30355,28 +30406,8 @@
 			(uuid "2a6a94c1-99d6-4fac-921e-c39ff0eef779")
 		)
 		(fp_line
-			(start -0.9 -1.5)
-			(end -0.9 -1.7)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "46785dc2-1bf1-4f29-8f90-ef9c723ceb12")
-		)
-		(fp_line
-			(start -1.93 -1.5)
-			(end -0.9 -1.5)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "06985ad6-9b9f-432b-886f-9866c47be812")
-		)
-		(fp_line
-			(start 1.93 -0.55)
-			(end 1.93 0.55)
+			(start -1.05 -1.7)
+			(end 1.05 -1.7)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -30385,28 +30416,8 @@
 			(uuid "ed1fe735-4313-4ab3-8b18-51f036583a5b")
 		)
 		(fp_line
-			(start 0.9 -0.55)
-			(end 1.93 -0.55)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "c9fb35d6-f05c-4170-b99a-c358c5f43890")
-		)
-		(fp_line
-			(start -0.9 -0.39)
-			(end -1.93 -0.39)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "a3ae0fe5-28aa-4dff-89da-cdb5c26be7da")
-		)
-		(fp_line
-			(start -1.93 -0.39)
-			(end -1.93 -1.5)
+			(start -1.05 -1.5)
+			(end -1.05 -1.7)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -30415,8 +30426,8 @@
 			(uuid "813caef9-3cae-491f-80f3-3cce1e1b8dbc")
 		)
 		(fp_line
-			(start -0.9 0.39)
-			(end -0.9 -0.39)
+			(start -2.05 -1.5)
+			(end -1.05 -1.5)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -30425,38 +30436,8 @@
 			(uuid "8684d926-c36b-4469-9990-eceb580ffe9c")
 		)
 		(fp_line
-			(start -1.93 0.39)
-			(end -0.9 0.39)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "ff9ece12-9969-4b18-98bf-a11893f0f684")
-		)
-		(fp_line
-			(start 1.93 0.55)
-			(end 0.9 0.55)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "506d88ab-f851-45a2-9585-6ff0e9d4f31f")
-		)
-		(fp_line
-			(start 0.9 0.55)
-			(end 0.9 1.7)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "628545f5-7d04-41ed-bfdd-273c4b386a45")
-		)
-		(fp_line
-			(start -0.9 1.5)
-			(end -1.93 1.5)
+			(start 2.05 -0.55)
+			(end 2.05 0.55)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -30465,8 +30446,8 @@
 			(uuid "d846b179-1b63-4138-9dd8-41a1bfb3b6eb")
 		)
 		(fp_line
-			(start -1.93 1.5)
-			(end -1.93 0.39)
+			(start 1.05 -0.55)
+			(end 2.05 -0.55)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -30475,8 +30456,58 @@
 			(uuid "2b035c94-0afa-4127-8d53-d8231a636352")
 		)
 		(fp_line
-			(start 0.9 1.7)
-			(end -0.9 1.7)
+			(start -1.05 -0.39)
+			(end -2.05 -0.39)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "506d88ab-f851-45a2-9585-6ff0e9d4f31f")
+		)
+		(fp_line
+			(start -2.05 -0.39)
+			(end -2.05 -1.5)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "46785dc2-1bf1-4f29-8f90-ef9c723ceb12")
+		)
+		(fp_line
+			(start -1.05 0.39)
+			(end -1.05 -0.39)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "fd1344de-a43f-422e-a6ef-fe8ba40d214a")
+		)
+		(fp_line
+			(start -2.05 0.39)
+			(end -1.05 0.39)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "c9fb35d6-f05c-4170-b99a-c358c5f43890")
+		)
+		(fp_line
+			(start 2.05 0.55)
+			(end 1.05 0.55)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "a3ae0fe5-28aa-4dff-89da-cdb5c26be7da")
+		)
+		(fp_line
+			(start 1.05 0.55)
+			(end 1.05 1.7)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -30485,18 +30516,48 @@
 			(uuid "3583e860-d48e-4d94-b609-6fcb3098563a")
 		)
 		(fp_line
-			(start -0.9 1.7)
-			(end -0.9 1.5)
+			(start -1.05 1.5)
+			(end -2.05 1.5)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "fd1344de-a43f-422e-a6ef-fe8ba40d214a")
+			(uuid "628545f5-7d04-41ed-bfdd-273c4b386a45")
+		)
+		(fp_line
+			(start -2.05 1.5)
+			(end -2.05 0.39)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "06985ad6-9b9f-432b-886f-9866c47be812")
+		)
+		(fp_line
+			(start 1.05 1.7)
+			(end -1.05 1.7)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "dc41551a-8353-4931-b10d-b5c00c4a0bb2")
+		)
+		(fp_line
+			(start -1.05 1.7)
+			(end -1.05 1.5)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "ff9ece12-9969-4b18-98bf-a11893f0f684")
 		)
 		(fp_poly
 			(pts
-				(xy -0.325 -1.45) (xy 0.65 -1.45) (xy 0.65 1.45) (xy -0.65 1.45) (xy -0.65 -1.125)
+				(xy -0.4 -1.45) (xy 0.8 -1.45) (xy 0.8 1.45) (xy -0.8 1.45) (xy -0.8 -1.05)
 			)
 			(stroke
 				(width 0.1)
@@ -30507,7 +30568,7 @@
 			(uuid "a8b05a56-d626-4b20-b54b-040e0d9e57bd")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 0)
+			(at 0 0 180)
 			(layer "F.Fab")
 			(uuid "314137b0-76e4-42c4-89c7-48e4588ef265")
 			(effects
@@ -30518,8 +30579,8 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9375 -0.95 90)
-			(size 1.475 0.6)
+			(at -1.1375 -0.95 90)
+			(size 1.325 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "Net-(IC601-ST)")
@@ -30528,8 +30589,8 @@
 			(uuid "5c138a64-8ddd-4638-b294-2a1317045b3f")
 		)
 		(pad "2" smd roundrect
-			(at -0.9375 0.95 90)
-			(size 1.475 0.6)
+			(at -1.1375 0.95 90)
+			(size 1.325 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "GND")
@@ -30538,8 +30599,8 @@
 			(uuid "aaadb5b4-82e2-420b-b61b-0d962fd1aee9")
 		)
 		(pad "3" smd roundrect
-			(at 0.9375 0 90)
-			(size 1.475 0.6)
+			(at 1.1375 0 90)
+			(size 1.325 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/Project Architecture/Power Input/Input-Status")
@@ -30548,7 +30609,7 @@
 			(uuid "72140389-5661-42dc-8ef2-c3cff1e8507c")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23.step"
+		(model "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -32692,7 +32753,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0805-JW-680GLF"
+		(property "manf#" "CR0805-JW-680ELF"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -32705,7 +32766,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805JW-680GLF"
+		(property "mouser#" "652-CR0805JW-680ELF"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -38642,7 +38703,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://inventory.lan/de/part/331/info"
+		(property "Datasheet" "https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -38653,7 +38714,7 @@
 				)
 			)
 		)
-		(property "Description" "10u 25V 10% X7R"
+		(property "Description" "10u 25V 10% X6S"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -38677,7 +38738,7 @@
 				)
 			)
 		)
-		(property "manf#" "0805X7R106KT1AT"
+		(property "manf#" "KGM21FS61E106KU"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -38690,7 +38751,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-0805X7R106KT1AT"
+		(property "mouser#" "581-KGM21FS61E106KU"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -38703,7 +38764,7 @@
 				)
 			)
 		)
-		(property "Part-DB URL" "https://inventory.lan/de/part/331/info"
+		(property "Part-DB URL" "https://inventory.lan/de/part/393/info"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -38742,7 +38803,7 @@
 				)
 			)
 		)
-		(property "MPN" "0805X7R106KT1AT"
+		(property "MPN" "KGM21FS61E106KU"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -38781,7 +38842,7 @@
 				)
 			)
 		)
-		(property "Part-DB ID" "331"
+		(property "Part-DB ID" "393"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -38794,7 +38855,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "581-0805X7R106KT1AT"
+		(property "Mouser SPN" "581-KGM21FS61E106KU"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -38968,7 +39029,7 @@
 				)
 			)
 		)
-		(property "manf#" "TLV75733PDBVT"
+		(property "manf#" "TLV75733PDYDR"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -38981,7 +39042,7 @@
 				)
 			)
 		)
-		(property "mouser#" "595-TLV75733PDBVT"
+		(property "mouser#" "595-TLV75733PDYDR"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -41264,7 +41325,7 @@
 				)
 			)
 		)
-		(property "manf#" "TLV75733PDBVT"
+		(property "manf#" "TLV75733PDYDR"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -41277,7 +41338,7 @@
 				)
 			)
 		)
-		(property "mouser#" "595-TLV75733PDBVT"
+		(property "mouser#" "595-TLV75733PDYDR"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -46351,16 +46412,15 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Package_TO_SOT_SMD:SOT-23"
+	(footprint "Package_TO_SOT_SMD:SOT-23-3"
 		(layer "F.Cu")
 		(uuid "886fbc60-7c04-47cb-97cc-66d1f731ded1")
 		(at 270.9 224.500001 -90)
-		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236)")
+		(descr "SOT, 3 Pin (JEDEC MO-178 inferred 3-pin variant https://www.jedec.org/document_search?search_api_views_fulltext=MO-178)")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "Q901"
-			(at 0 -2.4 90)
+			(at 0 -2.4 270)
 			(layer "F.SilkS")
-			(hide yes)
 			(uuid "3f8ad9ff-bc98-428f-8d50-406436c9a40b")
 			(effects
 				(font
@@ -46370,9 +46430,8 @@
 			)
 		)
 		(property "Value" "BSS138"
-			(at 0 2.4 90)
+			(at 0 2.4 270)
 			(layer "F.Fab")
-			(hide yes)
 			(uuid "419d29bd-d32f-4f08-9c3e-1e484c467edb")
 			(effects
 				(font
@@ -46382,7 +46441,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/bss138-d.pdf"
-			(at 0 0 90)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0a993455-1b14-456b-9b7b-7e0d41f951ff")
@@ -46393,7 +46452,7 @@
 			)
 		)
 		(property "Description" "N-Kanal Vds 50 V Vgs ±20 V Id 220 mA"
-			(at 0 0 90)
+			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "27582546-ca71-46c4-aafd-91e5f67ca22c")
@@ -46403,12 +46462,25 @@
 				)
 			)
 		)
+		(property "manf" "onsemi / Fairchild"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1575e48b-9ef5-4772-ad00-7121cab5b0df")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.12)
+				)
+			)
+		)
 		(property "manf#" "BSS138"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "883e4d16-e973-4815-be9f-8af380dc43d7")
+			(uuid "fcda3a27-d68e-434c-b204-936db1414026")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -46421,20 +46493,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "c0fec241-df5b-49b9-9ec8-c052f9175c31")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "manf" "onsemi / Fairchild"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "50d99a1e-638c-4b9f-ab4e-3b32dee2b78c")
+			(uuid "687834c7-695a-4d91-9d3b-988db0c3a509")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -46447,7 +46506,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "0a04d3d7-90d9-4928-b802-425df9ed2dd0")
+			(uuid "f85a553a-685f-4ab0-a5b6-596ac5a5c463")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -46460,7 +46519,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "a22bbdac-a8b9-4c69-8ecf-8d06b8e30a3d")
+			(uuid "9bdbf2dd-eb4a-473f-b403-96f72ea878f0")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -46473,7 +46532,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "e9197655-f445-4dde-9c66-44a5f81fc625")
+			(uuid "ded6eb48-7f80-42a4-aabc-73dad4c00548")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -46486,7 +46545,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "3fdda309-52b3-4004-a198-c8bb5a7fc18b")
+			(uuid "ae94b380-44ca-466a-b721-b720483be5c0")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -46499,7 +46558,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "85fd3c36-32c0-4af0-8068-e67e19999731")
+			(uuid "d222fd58-79a6-48d7-99ef-6d5b747c2146")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -46512,7 +46571,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "096c907a-bfcc-41ad-815d-e7ff51af8404")
+			(uuid "62448f33-3e75-4aae-8274-d2ab66f2ef9e")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -46525,7 +46584,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "2bfe98a6-e26a-48e9-af88-998a7c6b82b1")
+			(uuid "26d73eaa-10f6-49c1-a751-d3dcff603175")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -46538,7 +46597,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "18783d62-8578-4ff8-9654-613fcda65720")
+			(uuid "f483190d-005a-4eb1-9aa7-04cec88c8158")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -46551,7 +46610,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "52ea8a88-8b85-4349-87f4-b0ef21906bf8")
+			(uuid "2f8a8606-5acc-464a-947f-0c9851efcd89")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -46564,7 +46623,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "17a682bc-f80f-4275-a654-b3111b73b407")
+			(uuid "e1ef38f6-2978-4912-a751-aa28814cc7a2")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -46572,7 +46631,7 @@
 				)
 			)
 		)
-		(property ki_fp_filters "SOT?23*")
+		(property ki_fp_filters "Package_TO_SOT_SMD:SOT-23-3")
 		(path "/c5103ceb-5325-4a84-a025-9638a412984e/e744f3ce-03a6-44a6-8792-1447ef232b9a/3b8120db-5294-4bb0-a8ab-65eb97286b26")
 		(sheetname "/Project Architecture/System on Module/")
 		(sheetfile "SoM.kicad_sch")
@@ -46585,48 +46644,8 @@
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start -0.76 1.56)
-			(end -0.76 1.51)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "999e1d84-83c1-4fe2-ba2c-7e0f2cd29b9b")
-		)
-		(fp_line
-			(start 0.76 1.56)
-			(end -0.76 1.56)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "e4417199-ea81-44d3-9437-321818487f4d")
-		)
-		(fp_line
-			(start 0.76 0.56)
-			(end 0.76 1.56)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "4e2891ca-0675-4a95-9e36-ba04d2868ea5")
-		)
-		(fp_line
-			(start -0.76 0.39)
-			(end -0.76 -0.39)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "25aaee11-1e48-4458-a28b-443ccf0a74f7")
-		)
-		(fp_line
-			(start -0.76 -1.51)
-			(end -0.76 -1.56)
+			(start -0.91 1.56)
+			(end -0.91 1.51)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -46635,8 +46654,28 @@
 			(uuid "848035bf-968b-471e-b604-43bb2c8ef974")
 		)
 		(fp_line
-			(start -0.76 -1.56)
-			(end 0.76 -1.56)
+			(start 0.91 1.56)
+			(end -0.91 1.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "999e1d84-83c1-4fe2-ba2c-7e0f2cd29b9b")
+		)
+		(fp_line
+			(start 0.91 0.56)
+			(end 0.91 1.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "25aaee11-1e48-4458-a28b-443ccf0a74f7")
+		)
+		(fp_line
+			(start -0.91 0.39)
+			(end -0.91 -0.39)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -46645,8 +46684,28 @@
 			(uuid "77ab2d75-c553-47be-8f9a-a21283d28673")
 		)
 		(fp_line
-			(start 0.76 -1.56)
-			(end 0.76 -0.56)
+			(start -0.91 -1.51)
+			(end -0.91 -1.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "4e2891ca-0675-4a95-9e36-ba04d2868ea5")
+		)
+		(fp_line
+			(start -0.91 -1.56)
+			(end 0.91 -1.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "e4417199-ea81-44d3-9437-321818487f4d")
+		)
+		(fp_line
+			(start 0.91 -1.56)
+			(end 0.91 -0.56)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -46656,7 +46715,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy -1.3 -0.38) (xy -1.06 -0.05) (xy -1.54 -0.05)
+				(xy -1.45 -0.38) (xy -1.21 -0.05) (xy -1.69 -0.05)
 			)
 			(stroke
 				(width 0.12)
@@ -46667,118 +46726,8 @@
 			(uuid "d88e3909-ca26-473f-b0a7-f501f71545c2")
 		)
 		(fp_line
-			(start -0.9 1.7)
-			(end -0.9 1.5)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "5ecc5870-901f-4591-924e-6709f9ee8be0")
-		)
-		(fp_line
-			(start 0.9 1.7)
-			(end -0.9 1.7)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "f4f2b690-1155-434a-9b08-5ba9090caee3")
-		)
-		(fp_line
-			(start -1.93 1.5)
-			(end -1.93 0.39)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "9994afe2-849e-453a-a761-2c6a26743c12")
-		)
-		(fp_line
-			(start -0.9 1.5)
-			(end -1.93 1.5)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "cd1257e8-ef36-48b4-b700-bd2adb044251")
-		)
-		(fp_line
-			(start 0.9 0.55)
-			(end 0.9 1.7)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "870bb563-cf6c-4d15-a137-b8320b426c1b")
-		)
-		(fp_line
-			(start 1.93 0.55)
-			(end 0.9 0.55)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "f1b0a591-529a-4bef-83c4-d510b692368b")
-		)
-		(fp_line
-			(start -1.93 0.39)
-			(end -0.9 0.39)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "c88fed42-5dba-43d5-8eb5-df71395ad1af")
-		)
-		(fp_line
-			(start -0.9 0.39)
-			(end -0.9 -0.39)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "907cff2a-e348-453b-8698-11bcc0df2604")
-		)
-		(fp_line
-			(start -1.93 -0.39)
-			(end -1.93 -1.5)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "86a479d1-a05e-430a-ac9f-f3bab9540d21")
-		)
-		(fp_line
-			(start -0.9 -0.39)
-			(end -1.93 -0.39)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "9177dd4a-4ec8-41c0-b402-58ffda928601")
-		)
-		(fp_line
-			(start 0.9 -0.55)
-			(end 1.93 -0.55)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "a5eeaacd-ce8c-452c-8500-874b773d4d1e")
-		)
-		(fp_line
-			(start 1.93 -0.55)
-			(end 1.93 0.55)
+			(start -1.05 1.7)
+			(end -1.05 1.5)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -46787,18 +46736,8 @@
 			(uuid "0331a2fc-20d1-41ee-8c11-630f9ccb357b")
 		)
 		(fp_line
-			(start -1.93 -1.5)
-			(end -0.9 -1.5)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "5aede1e2-29df-44fc-8329-ab4f80b70ed9")
-		)
-		(fp_line
-			(start -0.9 -1.5)
-			(end -0.9 -1.7)
+			(start 1.05 1.7)
+			(end -1.05 1.7)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -46807,8 +46746,128 @@
 			(uuid "25a28cee-15fd-4405-a9fc-fa094fc63f3a")
 		)
 		(fp_line
-			(start -0.9 -1.7)
-			(end 0.9 -1.7)
+			(start -2.05 1.5)
+			(end -2.05 0.39)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "870bb563-cf6c-4d15-a137-b8320b426c1b")
+		)
+		(fp_line
+			(start -1.05 1.5)
+			(end -2.05 1.5)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "9994afe2-849e-453a-a761-2c6a26743c12")
+		)
+		(fp_line
+			(start 1.05 0.55)
+			(end 1.05 1.7)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "c88fed42-5dba-43d5-8eb5-df71395ad1af")
+		)
+		(fp_line
+			(start 2.05 0.55)
+			(end 1.05 0.55)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "e507877d-24a0-4559-a5d8-102eeb36d734")
+		)
+		(fp_line
+			(start -2.05 0.39)
+			(end -1.05 0.39)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "9177dd4a-4ec8-41c0-b402-58ffda928601")
+		)
+		(fp_line
+			(start -1.05 0.39)
+			(end -1.05 -0.39)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "5ecc5870-901f-4591-924e-6709f9ee8be0")
+		)
+		(fp_line
+			(start -2.05 -0.39)
+			(end -2.05 -1.5)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "86a479d1-a05e-430a-ac9f-f3bab9540d21")
+		)
+		(fp_line
+			(start -1.05 -0.39)
+			(end -2.05 -0.39)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "a5eeaacd-ce8c-452c-8500-874b773d4d1e")
+		)
+		(fp_line
+			(start 1.05 -0.55)
+			(end 2.05 -0.55)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "f4f2b690-1155-434a-9b08-5ba9090caee3")
+		)
+		(fp_line
+			(start 2.05 -0.55)
+			(end 2.05 0.55)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "907cff2a-e348-453b-8698-11bcc0df2604")
+		)
+		(fp_line
+			(start -2.05 -1.5)
+			(end -1.05 -1.5)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "f1b0a591-529a-4bef-83c4-d510b692368b")
+		)
+		(fp_line
+			(start -1.05 -1.5)
+			(end -1.05 -1.7)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "5aede1e2-29df-44fc-8329-ab4f80b70ed9")
+		)
+		(fp_line
+			(start -1.05 -1.7)
+			(end 1.05 -1.7)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -46817,18 +46876,18 @@
 			(uuid "08e6ce01-99e4-40e6-b922-c2af07de4ff0")
 		)
 		(fp_line
-			(start 0.9 -1.7)
-			(end 0.9 -0.55)
+			(start 1.05 -1.7)
+			(end 1.05 -0.55)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "e507877d-24a0-4559-a5d8-102eeb36d734")
+			(uuid "cd1257e8-ef36-48b4-b700-bd2adb044251")
 		)
 		(fp_poly
 			(pts
-				(xy -0.325 -1.45) (xy 0.65 -1.45) (xy 0.65 1.45) (xy -0.65 1.45) (xy -0.65 -1.125)
+				(xy -0.4 -1.45) (xy 0.8 -1.45) (xy 0.8 1.45) (xy -0.8 1.45) (xy -0.8 -1.05)
 			)
 			(stroke
 				(width 0.1)
@@ -46850,8 +46909,8 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9375 -0.95 270)
-			(size 1.475 0.6)
+			(at -1.1375 -0.95 270)
+			(size 1.325 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/Project Architecture/System on Module/Ready")
@@ -46860,8 +46919,8 @@
 			(uuid "62c0e9da-ffa1-4d0f-80d2-b99b5f97830f")
 		)
 		(pad "2" smd roundrect
-			(at -0.9375 0.95 270)
-			(size 1.475 0.6)
+			(at -1.1375 0.95 270)
+			(size 1.325 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "GND")
@@ -46870,8 +46929,8 @@
 			(uuid "5a814b5b-f235-48b2-b5b1-0e675339862b")
 		)
 		(pad "3" smd roundrect
-			(at 0.9375 0 270)
-			(size 1.475 0.6)
+			(at 1.1375 0 270)
+			(size 1.325 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "Net-(Q901-D)")
@@ -46880,7 +46939,7 @@
 			(uuid "ad4b7343-59b3-4ef0-84c8-a2cd1c9681f2")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23.step"
+		(model "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -48095,7 +48154,7 @@
 				)
 			)
 		)
-		(property "manf#" "TLV75733PDBVT"
+		(property "manf#" "TLV75733PDYDR"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -48108,7 +48167,7 @@
 				)
 			)
 		)
-		(property "mouser#" "595-TLV75733PDBVT"
+		(property "mouser#" "595-TLV75733PDYDR"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -48504,7 +48563,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://inventory.lan/de/part/331/info"
+		(property "Datasheet" "https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -48515,7 +48574,7 @@
 				)
 			)
 		)
-		(property "Description" "10u 25V 10% X7R"
+		(property "Description" "10u 25V 10% X6S"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -48539,7 +48598,7 @@
 				)
 			)
 		)
-		(property "manf#" "0805X7R106KT1AT"
+		(property "manf#" "KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -48552,7 +48611,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-0805X7R106KT1AT"
+		(property "mouser#" "581-KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -48565,7 +48624,7 @@
 				)
 			)
 		)
-		(property "Part-DB URL" "https://inventory.lan/de/part/331/info"
+		(property "Part-DB URL" "https://inventory.lan/de/part/393/info"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -48604,7 +48663,7 @@
 				)
 			)
 		)
-		(property "MPN" "0805X7R106KT1AT"
+		(property "MPN" "KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -48643,7 +48702,7 @@
 				)
 			)
 		)
-		(property "Part-DB ID" "331"
+		(property "Part-DB ID" "393"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -48656,7 +48715,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "581-0805X7R106KT1AT"
+		(property "Mouser SPN" "581-KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -51102,7 +51161,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0805-FX-3092GLF"
+		(property "manf#" "CR0805-FX-3092ELF"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -51115,7 +51174,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805FX-3092GLF"
+		(property "mouser#" "652-CR0805FX-3092ELF"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -51134,6 +51193,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4ee73284-524a-43e8-93e5-8b9f3c6cb6e9")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "17d57215-7a4c-4427-8e8a-9e7d994a9c46")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -52149,7 +52221,7 @@
 				)
 			)
 		)
-		(property "Description" "470n 50V 10% X7"
+		(property "Description" "470n 50V 20% X7R"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -52173,7 +52245,7 @@
 				)
 			)
 		)
-		(property "manf#" "08055C474K4Z2A"
+		(property "manf#" "KAF21KR71H474MU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -52186,7 +52258,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-08055C474K4Z2A"
+		(property "mouser#" "581-KAF21KR71H474MU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -52199,7 +52271,7 @@
 				)
 			)
 		)
-		(property "Part-DB URL" "https://inventory.lan/de/part/329/info"
+		(property "Part-DB URL" "https://inventory.lan/de/part/392/info"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -52238,7 +52310,7 @@
 				)
 			)
 		)
-		(property "MPN" "08055C474K4Z2A"
+		(property "MPN" "KAF21KR71H474MU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -52277,20 +52349,7 @@
 				)
 			)
 		)
-		(property "Mass" "0.006 g"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "b5a34459-4988-4d1e-8372-a5e5ffef7889")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Part-DB ID" "329"
+		(property "Part-DB ID" "392"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -52303,7 +52362,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "581-08055C474K4Z2A"
+		(property "Mouser SPN" "581-KAF21KR71H474MU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -56316,7 +56375,7 @@
 				)
 			)
 		)
-		(property "Description" "470n 50V 10% X7"
+		(property "Description" "470n 50V 20% X7R"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -56340,7 +56399,7 @@
 				)
 			)
 		)
-		(property "manf#" "08055C474K4Z2A"
+		(property "manf#" "KAF21KR71H474MU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -56353,7 +56412,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-08055C474K4Z2A"
+		(property "mouser#" "581-KAF21KR71H474MU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -56366,7 +56425,7 @@
 				)
 			)
 		)
-		(property "Part-DB URL" "https://inventory.lan/de/part/329/info"
+		(property "Part-DB URL" "https://inventory.lan/de/part/392/info"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -56405,7 +56464,7 @@
 				)
 			)
 		)
-		(property "MPN" "08055C474K4Z2A"
+		(property "MPN" "KAF21KR71H474MU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -56444,20 +56503,7 @@
 				)
 			)
 		)
-		(property "Mass" "0.006 g"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "fa1cb24e-abd0-438c-a995-dd8767e3514d")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-			)
-		)
-		(property "Part-DB ID" "329"
+		(property "Part-DB ID" "392"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -56470,7 +56516,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "581-08055C474K4Z2A"
+		(property "Mouser SPN" "581-KAF21KR71H474MU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -56489,6 +56535,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "18a72438-f212-4ca8-82c7-4532ee1b8140")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e2b02e9d-2446-4333-8ffc-782090d3e3e7")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -56801,7 +56860,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://inventory.lan/de/part/331/info"
+		(property "Datasheet" "https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -56812,7 +56871,7 @@
 				)
 			)
 		)
-		(property "Description" "10u 25V 10% X7R"
+		(property "Description" "10u 25V 10% X6S"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -56836,7 +56895,7 @@
 				)
 			)
 		)
-		(property "manf#" "0805X7R106KT1AT"
+		(property "manf#" "KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -56849,7 +56908,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-0805X7R106KT1AT"
+		(property "mouser#" "581-KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -56862,7 +56921,7 @@
 				)
 			)
 		)
-		(property "Part-DB URL" "https://inventory.lan/de/part/331/info"
+		(property "Part-DB URL" "https://inventory.lan/de/part/393/info"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -56901,7 +56960,7 @@
 				)
 			)
 		)
-		(property "MPN" "0805X7R106KT1AT"
+		(property "MPN" "KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -56940,7 +56999,7 @@
 				)
 			)
 		)
-		(property "Part-DB ID" "331"
+		(property "Part-DB ID" "393"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -56953,7 +57012,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "581-0805X7R106KT1AT"
+		(property "Mouser SPN" "581-KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -56972,6 +57031,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cc7280f8-9a0b-461c-b135-066b497a6d75")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d8cedf57-ffc5-4d44-905c-a45fb255f059")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -58904,7 +58976,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://inventory.lan/de/part/331/info"
+		(property "Datasheet" "https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -58915,7 +58987,7 @@
 				)
 			)
 		)
-		(property "Description" "10u 25V 10% X7R"
+		(property "Description" "10u 25V 10% X6S"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -58939,7 +59011,7 @@
 				)
 			)
 		)
-		(property "manf#" "0805X7R106KT1AT"
+		(property "manf#" "KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -58952,7 +59024,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-0805X7R106KT1AT"
+		(property "mouser#" "581-KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -58965,7 +59037,7 @@
 				)
 			)
 		)
-		(property "Part-DB URL" "https://inventory.lan/de/part/331/info"
+		(property "Part-DB URL" "https://inventory.lan/de/part/393/info"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -59004,7 +59076,7 @@
 				)
 			)
 		)
-		(property "MPN" "0805X7R106KT1AT"
+		(property "MPN" "KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -59043,7 +59115,7 @@
 				)
 			)
 		)
-		(property "Part-DB ID" "331"
+		(property "Part-DB ID" "393"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -59056,7 +59128,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "581-0805X7R106KT1AT"
+		(property "Mouser SPN" "581-KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -60934,7 +61006,7 @@
 				)
 			)
 		)
-		(property "manf#" "TLV75733PDBVT"
+		(property "manf#" "TLV75733PDYDR"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -60947,7 +61019,7 @@
 				)
 			)
 		)
-		(property "mouser#" "595-TLV75733PDBVT"
+		(property "mouser#" "595-TLV75733PDYDR"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -62165,7 +62237,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://inventory.lan/de/part/331/info"
+		(property "Datasheet" "https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -62176,7 +62248,7 @@
 				)
 			)
 		)
-		(property "Description" "10u 25V 10% X7R"
+		(property "Description" "10u 25V 10% X6S"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -62200,7 +62272,7 @@
 				)
 			)
 		)
-		(property "manf#" "0805X7R106KT1AT"
+		(property "manf#" "KGM21FS61E106KU"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -62213,7 +62285,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-0805X7R106KT1AT"
+		(property "mouser#" "581-KGM21FS61E106KU"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -62226,7 +62298,7 @@
 				)
 			)
 		)
-		(property "Part-DB URL" "https://inventory.lan/de/part/331/info"
+		(property "Part-DB URL" "https://inventory.lan/de/part/393/info"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -62265,7 +62337,7 @@
 				)
 			)
 		)
-		(property "MPN" "0805X7R106KT1AT"
+		(property "MPN" "KGM21FS61E106KU"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -62304,7 +62376,7 @@
 				)
 			)
 		)
-		(property "Part-DB ID" "331"
+		(property "Part-DB ID" "393"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -62317,7 +62389,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "581-0805X7R106KT1AT"
+		(property "Mouser SPN" "581-KGM21FS61E106KU"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -72939,7 +73011,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0805-FX-4531GLF"
+		(property "manf#" "CR0805-FX-4531ELF"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -72952,7 +73024,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805FX-4531GLF"
+		(property "mouser#" "652-CR0805FX-4531ELF"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -72971,6 +73043,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "23895936-4eb2-455a-9ab3-9b7bd9d57277")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2351561f-46cb-462c-864f-8d7b8c603d50")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -73755,7 +73840,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://inventory.lan/de/part/331/info"
+		(property "Datasheet" "https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -73766,7 +73851,7 @@
 				)
 			)
 		)
-		(property "Description" "10u 25V 10% X7R"
+		(property "Description" "10u 25V 10% X6S"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -73790,7 +73875,7 @@
 				)
 			)
 		)
-		(property "manf#" "0805X7R106KT1AT"
+		(property "manf#" "KGM21FS61E106KU"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -73803,7 +73888,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-0805X7R106KT1AT"
+		(property "mouser#" "581-KGM21FS61E106KU"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -73816,7 +73901,7 @@
 				)
 			)
 		)
-		(property "Part-DB URL" "https://inventory.lan/de/part/331/info"
+		(property "Part-DB URL" "https://inventory.lan/de/part/393/info"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -73855,7 +73940,7 @@
 				)
 			)
 		)
-		(property "MPN" "0805X7R106KT1AT"
+		(property "MPN" "KGM21FS61E106KU"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -73894,7 +73979,7 @@
 				)
 			)
 		)
-		(property "Part-DB ID" "331"
+		(property "Part-DB ID" "393"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -73907,7 +73992,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "581-0805X7R106KT1AT"
+		(property "Mouser SPN" "581-KGM21FS61E106KU"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -74081,7 +74166,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0805-JW-680GLF"
+		(property "manf#" "CR0805-JW-680ELF"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -74094,7 +74179,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805JW-680GLF"
+		(property "mouser#" "652-CR0805JW-680ELF"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -79025,7 +79110,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/744314850.pdf"
+		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/744314101.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -79047,7 +79132,7 @@
 				)
 			)
 		)
-		(property "manf#" "744314850"
+		(property "manf#" "744314101"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -79060,7 +79145,7 @@
 				)
 			)
 		)
-		(property "mouser#" "710-744314850"
+		(property "mouser#" "710-744314101"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -80311,7 +80396,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://inventory.lan/de/part/331/info"
+		(property "Datasheet" "https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -80322,7 +80407,7 @@
 				)
 			)
 		)
-		(property "Description" "10u 25V 10% X7R"
+		(property "Description" "10u 25V 10% X6S"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -80346,7 +80431,7 @@
 				)
 			)
 		)
-		(property "manf#" "0805X7R106KT1AT"
+		(property "manf#" "KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -80359,7 +80444,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-0805X7R106KT1AT"
+		(property "mouser#" "581-KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -80372,7 +80457,7 @@
 				)
 			)
 		)
-		(property "Part-DB URL" "https://inventory.lan/de/part/331/info"
+		(property "Part-DB URL" "https://inventory.lan/de/part/393/info"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -80411,7 +80496,7 @@
 				)
 			)
 		)
-		(property "MPN" "0805X7R106KT1AT"
+		(property "MPN" "KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -80450,7 +80535,7 @@
 				)
 			)
 		)
-		(property "Part-DB ID" "331"
+		(property "Part-DB ID" "393"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -80463,7 +80548,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "581-0805X7R106KT1AT"
+		(property "Mouser SPN" "581-KGM21FS61E106KU"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -84329,7 +84414,7 @@
 				(justify mirror)
 			)
 		)
-		(property "mouser#" "652-CR0805JW-332ELF"
+		(property "mouser#" "652-CR0805-JW-332ELF"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -84469,7 +84554,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Mouser SPN" "652-CR0805JW-332ELF"
+		(property "Mouser SPN" "652-CR0805-JW-332ELF"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -84503,6 +84588,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "5d180cf0-1753-46d1-a324-1d5bf44ddb10")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.12)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Config" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "834296c4-73d8-43d4-bc35-4244b29266a2")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -87201,7 +87300,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/gpn/TXB0102"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/txb0102.pdf?ts=1795259659813"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -87407,7 +87506,7 @@
 				(justify mirror)
 			)
 		)
-		(property ki_fp_filters "TSSOP*P0.65mm*")
+		(property ki_fp_filters "VSSOP*2.3x2mm*P0.5mm*")
 		(path "/c5103ceb-5325-4a84-a025-9638a412984e/7a02d3a8-366e-4fb1-9f54-be0208da73cb/08a71232-dc4b-4d59-bca7-c940dd2279d6")
 		(sheetname "/Project Architecture/wMBus/")
 		(sheetfile "wMBus.kicad_sch")
@@ -88302,7 +88401,7 @@
 				(justify mirror)
 			)
 		)
-		(property "mouser#" "652-CR0805JW-332ELF"
+		(property "mouser#" "652-CR0805-JW-332ELF"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -88442,7 +88541,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Mouser SPN" "652-CR0805JW-332ELF"
+		(property "Mouser SPN" "652-CR0805-JW-332ELF"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -91810,7 +91909,7 @@
 				(justify mirror)
 			)
 		)
-		(property "manf#" "TXS0108EPWRG4"
+		(property "manf#" "TXS0108EPWR"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -91824,7 +91923,7 @@
 				(justify mirror)
 			)
 		)
-		(property "mouser#" "595-TXS0108EPWRG4"
+		(property "mouser#" "595-TXS0108EPWR"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -91844,6 +91943,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "c564d84f-bd99-4b5d-a890-132ec682fb34")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.12)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Config" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1810f369-7902-47cd-b713-c388b8fd83a3")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -94004,7 +94117,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/gpn/TXB0102"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/txb0102.pdf?ts=1795259659813"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -94196,7 +94309,7 @@
 				(justify mirror)
 			)
 		)
-		(property ki_fp_filters "TSSOP*P0.65mm*")
+		(property ki_fp_filters "VSSOP*2.3x2mm*P0.5mm*")
 		(path "/c5103ceb-5325-4a84-a025-9638a412984e/3f9e85ea-c06e-4d87-98cf-dea3ce3fc587/35f76c88-ab95-4f7c-891b-6dca1ef0332c")
 		(sheetname "/Project Architecture/Zigbee/")
 		(sheetfile "Zigbee.kicad_sch")
@@ -94547,7 +94660,7 @@
 				(justify mirror)
 			)
 		)
-		(property "mouser#" "652-CR0805JW-332ELF"
+		(property "mouser#" "652-CR0805-JW-332ELF"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -94687,7 +94800,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Mouser SPN" "652-CR0805JW-332ELF"
+		(property "Mouser SPN" "652-CR0805-JW-332ELF"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -96240,7 +96353,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/txb0102.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/txb0102.pdf?ts=1795259659813"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -97900,48 +98013,6 @@
 				(justify mirror)
 			)
 		)
-		(property "Sim.Device" "V"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "70b98240-bc92-412d-b116-bbf2a20a6b67")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Sim.Type" "DC"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "54c7c290-c521-459e-85d1-7f83d4232b9d")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Sim.Pins" "1=+ 2=-"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "5a42c9ee-84e4-4859-be91-75a96cce406a")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.12)
-				)
-				(justify mirror)
-			)
-		)
 		(property "Part-DB URL" "https://inventory.lan/de/part/391/info"
 			(at 0 0 0)
 			(unlocked yes)
@@ -98377,7 +98448,7 @@
 				(justify mirror)
 			)
 		)
-		(property "mouser#" "652-CR0805JW-332ELF"
+		(property "mouser#" "652-CR0805-JW-332ELF"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -98517,7 +98588,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Mouser SPN" "652-CR0805JW-332ELF"
+		(property "Mouser SPN" "652-CR0805-JW-332ELF"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")

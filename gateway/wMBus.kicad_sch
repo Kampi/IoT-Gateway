@@ -1344,7 +1344,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Logic_LevelTranslator:TXB0102DCT"
+		(symbol "Logic_LevelTranslator:TXB0102DCU"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1360,7 +1360,7 @@
 					)
 				)
 			)
-			(property "Value" "TXB0102DCT"
+			(property "Value" "TXB0102DCU"
 				(at 3.81 11.43 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1371,7 +1371,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_SO:TSSOP-8_3x3mm_P0.65mm"
+			(property "Footprint" "Package_SO:VSSOP-8_2.3x2mm_P0.5mm"
 				(at 0 -13.97 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1393,7 +1393,7 @@
 					)
 				)
 			)
-			(property "Description" "2-Bit Bidirectional Voltage-Level Translator With Auto Direction Sensing and ±15-kV ESD Protection, TSSOP-8"
+			(property "Description" "2-Bit Bidirectional Voltage-Level Translator With Auto Direction Sensing and ±15-kV ESD Protection, VSSOP-8"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1415,7 +1415,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "TSSOP*P0.65mm*"
+			(property "ki_fp_filters" "VSSOP*2.3x2mm*P0.5mm*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1426,7 +1426,7 @@
 					)
 				)
 			)
-			(symbol "TXB0102DCT_0_1"
+			(symbol "TXB0102DCU_0_1"
 				(rectangle
 					(start -7.62 10.16)
 					(end 7.62 -10.16)
@@ -1495,7 +1495,7 @@
 						(type default)
 					)
 					(fill
-						(type background)
+						(type none)
 					)
 				)
 				(polyline
@@ -1583,7 +1583,7 @@
 					)
 				)
 			)
-			(symbol "TXB0102DCT_1_1"
+			(symbol "TXB0102DCU_1_1"
 				(pin bidirectional line
 					(at 10.16 -2.54 180)
 					(length 2.54)
@@ -4783,7 +4783,7 @@
 		(uuid "b3dea2f7-70f3-4e39-a845-fe7d3ffa840b")
 	)
 	(symbol
-		(lib_id "Logic_LevelTranslator:TXB0102DCT")
+		(lib_id "Logic_LevelTranslator:TXB0102DCU")
 		(at 185.42 171.45 0)
 		(unit 1)
 		(body_style 1)
@@ -4826,7 +4826,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/gpn/TXB0102"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/txb0102.pdf?ts=1795259659813"
 			(at 185.42 172.212 0)
 			(hide yes)
 			(show_name no)
@@ -7038,7 +7038,7 @@
 				)
 			)
 		)
-		(property "manf#" "TLV75733PDBVT"
+		(property "manf#" "TLV75733PDYDR"
 			(at 72.39 246.38 0)
 			(hide yes)
 			(show_name no)
@@ -7049,7 +7049,7 @@
 				)
 			)
 		)
-		(property "mouser#" "595-TLV75733PDBVT"
+		(property "mouser#" "595-TLV75733PDYDR"
 			(at 72.39 246.38 0)
 			(hide yes)
 			(show_name no)
@@ -9479,7 +9479,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0805-JW-680GLF"
+		(property "manf#" "CR0805-JW-680ELF"
 			(at 109.22 257.81 0)
 			(hide yes)
 			(show_name no)
@@ -9490,7 +9490,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805JW-680GLF"
+		(property "mouser#" "652-CR0805JW-680ELF"
 			(at 109.22 257.81 0)
 			(hide yes)
 			(show_name no)

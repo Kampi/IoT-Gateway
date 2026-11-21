@@ -2403,7 +2403,7 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "H1004"
+			(property "Reference" "H"
 				(at 2.54 1.2701 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2491,7 +2491,117 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "Spacer*"
+			(property "Part-DB URL" "https://inventory.lan/de/part/384/info"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Category" "Mechanik/Abstandshalter"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "Wurth Elektronik"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "9774015151R"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturing Status" "Active"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB Footprint" "WA-SMSI M2.5"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mass" "0.238 g"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB ID" "384"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mouser SPN" "710-9774015151R"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Stock" "0"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Wuerth:9774015151R"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4553,7 +4663,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0805-JW-680GLF"
+		(property "manf#" "CR0805-JW-680ELF"
 			(at 101.6 257.81 0)
 			(hide yes)
 			(show_name no)
@@ -4564,7 +4674,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805JW-680GLF"
+		(property "mouser#" "652-CR0805JW-680ELF"
 			(at 101.6 257.81 0)
 			(hide yes)
 			(show_name no)
@@ -6932,7 +7042,7 @@
 				)
 			)
 		)
-		(property "manf#" "TLV75733PDBVT"
+		(property "manf#" "TLV75733PDYDR"
 			(at 67.31 246.38 0)
 			(hide yes)
 			(show_name no)
@@ -6943,7 +7053,7 @@
 				)
 			)
 		)
-		(property "mouser#" "595-TLV75733PDBVT"
+		(property "mouser#" "595-TLV75733PDYDR"
 			(at 67.31 246.38 0)
 			(hide yes)
 			(show_name no)
@@ -7256,6 +7366,17 @@
 			)
 		)
 		(property "Stock" "0"
+			(at 173.99 278.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
 			(at 173.99 278.13 0)
 			(hide yes)
 			(show_name no)

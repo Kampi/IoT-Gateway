@@ -8775,7 +8775,7 @@
 				)
 			)
 		)
-		(property "manf#" "TLV75733PDBVT"
+		(property "manf#" "TLV75733PDYDR"
 			(at 67.31 246.38 0)
 			(hide yes)
 			(show_name no)
@@ -8786,7 +8786,7 @@
 				)
 			)
 		)
-		(property "mouser#" "595-TLV75733PDBVT"
+		(property "mouser#" "595-TLV75733PDYDR"
 			(at 67.31 246.38 0)
 			(hide yes)
 			(show_name no)
@@ -11699,7 +11699,7 @@
 				)
 			)
 		)
-		(property "manf#" "CR0805-JW-680GLF"
+		(property "manf#" "CR0805-JW-680ELF"
 			(at 101.6 257.81 0)
 			(hide yes)
 			(show_name no)
@@ -11710,7 +11710,7 @@
 				)
 			)
 		)
-		(property "mouser#" "652-CR0805JW-680GLF"
+		(property "mouser#" "652-CR0805JW-680ELF"
 			(at 101.6 257.81 0)
 			(hide yes)
 			(show_name no)

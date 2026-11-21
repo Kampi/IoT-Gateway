@@ -2952,282 +2952,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "partdb:0805X7R106KT1AT"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "C"
-				(at 0.635 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "10u"
-				(at 0.635 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-				(at 0.9652 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://inventory.lan/de/part/331/info"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "10u 25V 10% X7R"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Part-DB URL" "https://inventory.lan/de/part/331/info"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Category" "Kondensator/MLCC"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer" "KYOCERA AVX"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "MPN" "0805X7R106KT1AT"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturing Status" "Active"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Part-DB Footprint" "0805"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Part-DB ID" "331"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "manf" "KYOCERA AVX"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "manf#" "0805X7R106KT1AT"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Mouser SPN" "581-0805X7R106KT1AT"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "mouser#" "581-0805X7R106KT1AT"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Stock" "0"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Capacitor_SMD:C_0805_2012Metric"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "0805X7R106KT1AT_0_1"
-				(polyline
-					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "0805X7R106KT1AT_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "partdb:9774025151R"
 			(pin_names
 				(offset 1.016)
@@ -3726,6 +3450,282 @@
 				(pin passive line
 					(at 0 -3.81 90)
 					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "partdb:KGM21FS61E106KU"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "10u"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "10u 25V 10% X6S"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB URL" "https://inventory.lan/de/part/393/info"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Category" "Kondensator/MLCC"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "KYOCERA AVX"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "KGM21FS61E106KU"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturing Status" "Active"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB Footprint" "0805"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Part-DB ID" "393"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf" "KYOCERA AVX"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "manf#" "KGM21FS61E106KU"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Mouser SPN" "581-KGM21FS61E106KU"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "mouser#" "581-KGM21FS61E106KU"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Stock" "0"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Capacitor_SMD:C_0805_2012Metric"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "KGM21FS61E106KU_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "KGM21FS61E106KU_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
 					(name ""
 						(effects
 							(font
@@ -7754,7 +7754,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/744314850.pdf"
+		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/744314101.pdf"
 			(at 147.32 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -7787,7 +7787,7 @@
 				)
 			)
 		)
-		(property "manf#" "744314850"
+		(property "manf#" "744314101"
 			(at 147.32 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -7798,7 +7798,7 @@
 				)
 			)
 		)
-		(property "mouser#" "710-744314850"
+		(property "mouser#" "710-744314101"
 			(at 147.32 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -8374,7 +8374,7 @@
 		)
 	)
 	(symbol
-		(lib_id "partdb:0805X7R106KT1AT")
+		(lib_id "partdb:KGM21FS61E106KU")
 		(at 236.22 119.38 0)
 		(unit 1)
 		(body_style 1)
@@ -8417,7 +8417,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://inventory.lan/de/part/331/info"
+		(property "Datasheet" "https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf"
 			(at 236.22 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -8428,7 +8428,7 @@
 				)
 			)
 		)
-		(property "Description" "10u 25V 10% X7R"
+		(property "Description" "10u 25V 10% X6S"
 			(at 236.22 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -8450,7 +8450,7 @@
 				)
 			)
 		)
-		(property "manf#" "0805X7R106KT1AT"
+		(property "manf#" "KGM21FS61E106KU"
 			(at 236.22 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -8461,7 +8461,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-0805X7R106KT1AT"
+		(property "mouser#" "581-KGM21FS61E106KU"
 			(at 236.22 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -8472,7 +8472,7 @@
 				)
 			)
 		)
-		(property "Part-DB URL" "https://inventory.lan/de/part/331/info"
+		(property "Part-DB URL" "https://inventory.lan/de/part/393/info"
 			(at 236.22 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -8505,7 +8505,7 @@
 				)
 			)
 		)
-		(property "MPN" "0805X7R106KT1AT"
+		(property "MPN" "KGM21FS61E106KU"
 			(at 236.22 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -8538,7 +8538,7 @@
 				)
 			)
 		)
-		(property "Part-DB ID" "331"
+		(property "Part-DB ID" "393"
 			(at 236.22 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -8549,7 +8549,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "581-0805X7R106KT1AT"
+		(property "Mouser SPN" "581-KGM21FS61E106KU"
 			(at 236.22 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -9837,7 +9837,7 @@
 		)
 	)
 	(symbol
-		(lib_id "partdb:0805X7R106KT1AT")
+		(lib_id "partdb:KGM21FS61E106KU")
 		(at 33.02 85.09 0)
 		(unit 1)
 		(body_style 1)
@@ -9880,7 +9880,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://inventory.lan/de/part/331/info"
+		(property "Datasheet" "https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf"
 			(at 33.02 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -9891,7 +9891,7 @@
 				)
 			)
 		)
-		(property "Description" "10u 25V 10% X7R"
+		(property "Description" "10u 25V 10% X6S"
 			(at 33.02 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -9913,7 +9913,7 @@
 				)
 			)
 		)
-		(property "manf#" "0805X7R106KT1AT"
+		(property "manf#" "KGM21FS61E106KU"
 			(at 33.02 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -9924,7 +9924,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-0805X7R106KT1AT"
+		(property "mouser#" "581-KGM21FS61E106KU"
 			(at 33.02 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -9935,7 +9935,7 @@
 				)
 			)
 		)
-		(property "Part-DB URL" "https://inventory.lan/de/part/331/info"
+		(property "Part-DB URL" "https://inventory.lan/de/part/393/info"
 			(at 33.02 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -9968,7 +9968,7 @@
 				)
 			)
 		)
-		(property "MPN" "0805X7R106KT1AT"
+		(property "MPN" "KGM21FS61E106KU"
 			(at 33.02 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -10001,7 +10001,7 @@
 				)
 			)
 		)
-		(property "Part-DB ID" "331"
+		(property "Part-DB ID" "393"
 			(at 33.02 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -10012,7 +10012,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "581-0805X7R106KT1AT"
+		(property "Mouser SPN" "581-KGM21FS61E106KU"
 			(at 33.02 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -10128,7 +10128,7 @@
 		)
 	)
 	(symbol
-		(lib_id "partdb:0805X7R106KT1AT")
+		(lib_id "partdb:KGM21FS61E106KU")
 		(at 27.94 85.09 0)
 		(mirror y)
 		(unit 1)
@@ -10172,7 +10172,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://inventory.lan/de/part/331/info"
+		(property "Datasheet" "https://www.mouser.com/datasheet/3/5926/1/KGM_Series_e.pdf"
 			(at 27.94 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -10183,7 +10183,7 @@
 				)
 			)
 		)
-		(property "Description" "10u 25V 10% X7R"
+		(property "Description" "10u 25V 10% X6S"
 			(at 27.94 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -10205,7 +10205,7 @@
 				)
 			)
 		)
-		(property "manf#" "0805X7R106KT1AT"
+		(property "manf#" "KGM21FS61E106KU"
 			(at 27.94 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -10216,7 +10216,7 @@
 				)
 			)
 		)
-		(property "mouser#" "581-0805X7R106KT1AT"
+		(property "mouser#" "581-KGM21FS61E106KU"
 			(at 27.94 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -10227,7 +10227,7 @@
 				)
 			)
 		)
-		(property "Part-DB URL" "https://inventory.lan/de/part/331/info"
+		(property "Part-DB URL" "https://inventory.lan/de/part/393/info"
 			(at 27.94 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -10260,7 +10260,7 @@
 				)
 			)
 		)
-		(property "MPN" "0805X7R106KT1AT"
+		(property "MPN" "KGM21FS61E106KU"
 			(at 27.94 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -10293,7 +10293,7 @@
 				)
 			)
 		)
-		(property "Part-DB ID" "331"
+		(property "Part-DB ID" "393"
 			(at 27.94 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -10304,7 +10304,7 @@
 				)
 			)
 		)
-		(property "Mouser SPN" "581-0805X7R106KT1AT"
+		(property "Mouser SPN" "581-KGM21FS61E106KU"
 			(at 27.94 85.09 0)
 			(hide yes)
 			(show_name no)
