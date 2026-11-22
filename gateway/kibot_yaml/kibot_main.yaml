@@ -566,7 +566,7 @@ definitions:
   PROJECT_NAME: IoT-Gateway
   BOARD_NAME: Gateway
 
-  COMPANY: 
+  COMPANY: Kampis-Elektroecke
   DESIGNER: Daniel Kampert
 
   LOGO: 'Logos/Logo.png'
